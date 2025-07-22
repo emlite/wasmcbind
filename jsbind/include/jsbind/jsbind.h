@@ -4,61 +4,61 @@
 
 typedef struct {
     em_Val inner;
-} Any;
+} jb_Any;
 
 typedef struct {
     em_Val inner;
-} Object;
+} jb_Object;
 
 typedef struct {
     em_Val inner;
-} Sequence;
+} jb_Sequence;
 
 typedef struct {
     em_Val inner;
-} Record;
+} jb_Record;
 
 typedef struct {
     em_Val inner;
-} Function;
+} jb_Function;
 
 typedef struct {
     em_Val inner;
-} Promise;
+} jb_Promise;
 
 typedef struct {
     em_Val inner;
-} Error;
+} jb_Error;
 
 typedef struct {
     em_Val inner;
-} Uint8Array;
+} jb_Uint8Array;
 
 typedef struct {
     em_Val inner;
-} Int8Array;
+} jb_Int8Array;
 
 typedef struct {
     em_Val inner;
-} Uint32Array;
+} jb_Uint32Array;
 
 typedef struct {
     em_Val inner;
-} Int32Array;
+} jb_Int32Array;
 
 typedef struct {
     em_Val inner;
-} Float32Array;
+} jb_Float32Array;
 
 typedef struct {
     em_Val inner;
-} Float64Array;
+} jb_Float64Array;
 
 typedef struct {
     em_Val inner;
-} ArrayBuffer;
+} jb_ArrayBuffer;
 
 typedef struct {
     em_Val inner;
-} DataView;
+} jb_DataView;
 

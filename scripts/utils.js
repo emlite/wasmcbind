@@ -66,26 +66,26 @@ export function flat(t) {
 export function cpp(idlType) {
   const { n, unsigned } = flat(idlType);
   const jsbindMap = {
-    undefined: "jsbind::Undefined",
-    DOMString: "jsbind::DOMString",
-    USVString: "jsbind::USVString",
-    ByteString: "jsbind::ByteString",
-    CSSOMString: "jsbind::CSSOMString",
-    object: "jsbind::Object",
-    any: "jsbind::Any",
-    Uint8Array: "jsbind::Uint8Array",
-    Int8Array: "jsbind::Int8Array",
-    Uint32Array: "jsbind::Uint32Array",
-    Int32Array: "jsbind::Int32Array",
-    Float32Array: "jsbind::Float32Array",
-    Float64Array: "jsbind::Float64Array",
-    ArrayBuffer: "jsbind::ArrayBuffer",
-    DataView: "jsbind::DataView",
+    undefined: "jb_Undefined",
+    DOMString: "jb_DOMString",
+    USVString: "jb_USVString",
+    ByteString: "jb_ByteString",
+    CSSOMString: "jb_CSSOMString",
+    object: "jb_Object",
+    any: "jb_Any",
+    Uint8Array: "jb_Uint8Array",
+    Int8Array: "jb_Int8Array",
+    Uint32Array: "jb_Uint32Array",
+    Int32Array: "jb_Int32Array",
+    Float32Array: "jb_Float32Array",
+    Float64Array: "jb_Float64Array",
+    ArrayBuffer: "jb_ArrayBuffer",
+    DataView: "jb_DataView",
   };
 
   if (missingDictFallback.has(n) || builtinNominals.has(n))
-    return "jsbind::Any";
-  if (n.includes("EventInit")) return "jsbind::Any";
+    return "jb_Any";
+  if (n.includes("EventInit")) return "jb_Any";
 
   if (jsbindMap[n]) return jsbindMap[n];
 
@@ -95,27 +95,27 @@ export function cpp(idlType) {
     const elem = Array.isArray(inner) ? inner[0] : inner;
 
     if (idlType.generic === "sequence") {
-      return `jsbind::Sequence<${cpp(elem)}>`;
+      return `jb_Sequence`;
     }
 
     if (idlType.generic === "Promise") {
-      return `jsbind::Promise<${cpp(elem)}>`;
+      return `jb_Promise`;
     }
 
     if (idlType.generic === "FrozenArray") {
-      return `jsbind::FrozenArray<${cpp(elem)}>`;
+      return `jb_FrozenArray`;
     }
 
     if (idlType.generic === "ObservableArray") {
-      return `jsbind::ObservableArray<${cpp(elem)}>`;
+      return `jb_ObservableArray`;
     }
 
     if (idlType.generic === "record") {
       const [k, v] = inner;
-      return `jsbind::Record<${cpp(k)}, ${cpp(v)}>`;
+      return `jb_Record`;
     }
   }
-  if (["__union", "__unk"].includes(n)) return "jsbind::Any";
+  if (["__union", "__unk"].includes(n)) return "jb_Any";
   if (n === "boolean") return "bool";
   if (n === "byte") return "char";
   if (n === "bigint") return "long long";
@@ -125,8 +125,8 @@ export function cpp(idlType) {
 
   if (n === "double" || n === "float") return n;
   if (enums.has(n)) return n;
-  if (callbacks.has(n)) return "jsbind::Function";
-  if (typedefs.has(n) || n === "__union") return "jsbind::Any";
+  if (callbacks.has(n)) return "jb_Function";
+  if (typedefs.has(n) || n === "__union") return "jb_Any";
 
   return n;
 }

@@ -29,7 +29,7 @@ function emitAttr(attr, owner, isStatic = false, parent0) {
   if (isStatic) {
     S.push(
       `${type} ${owner}::${fixIdent(attr.name)}() {`,
-      `    return emlite::Val::global("${owner.toLowerCase()}").get("${
+      `    return em_Val_global("${owner.toLowerCase()}").get("${
         attr.name
       }").as<${type}>();`,
       `}`,
@@ -71,7 +71,7 @@ function emitOp(op, owner, isStatic = false, parent0) {
     const declSrc = declHdr;
     const callArgs = v.map((a) => fixIdent(a.name)).join(", ");
     const callExpr = isStatic
-      ? `emlite::Val::global("${owner.toLowerCase()}").call("${op.name}"${
+      ? `em_Val_global("${owner.toLowerCase()}").call("${op.name}"${
           callArgs ? ", " + callArgs : ""
         })`
       : `${parent}::call("${op.name}"${callArgs ? ", " + callArgs : ""})`;
@@ -101,7 +101,7 @@ function emitCtor(ctor, owner, parent) {
     H.push(`    ${owner}(${declHdr});`);
 
     S.push(
-      `${owner}::${owner}(${declSrc}) : ${parent}(emlite::Val::global("${owner}").new_(${callArgs})) {}`,
+      `${owner}::${owner}(${declSrc}) : ${parent}(em_Val_global("${owner}").new_(${callArgs})) {}`,
       ""
     );
   }
@@ -118,18 +118,18 @@ function embedDict(dict, hdr, src, ownerName) {
     `class ${dict.name} : public emlite::Val {`,
     `  explicit ${dict.name}(Handle h) noexcept;`,
     "public:",
-    `    static ${dict.name} take_ownership(Handle h) noexcept;`,
+    `    static ${dict.name} from_handle(Handle h) noexcept;`,
     `    explicit ${dict.name}(const emlite::Val &val) noexcept;`,
     `    ${dict.name}() noexcept;`,
     `    ${dict.name} clone() const noexcept;`
   );
   src.push(
-    `${dict.name}::${dict.name}(Handle h) noexcept : emlite::Val(emlite::Val::take_ownership(h)) {}`,
-    `${dict.name} ${dict.name}::take_ownership(Handle h) noexcept {
+    `${dict.name}::${dict.name}(Handle h) noexcept : em_Val_from(em_Val_from_handle(h)) {}`,
+    `${dict.name} ${dict.name}::from_handle(Handle h) noexcept {
         return ${dict.name}(h);
     }`,
-    `${dict.name}::${dict.name}(const emlite::Val &val) noexcept: emlite::Val(val) {}`,
-    `${dict.name}::${dict.name}() noexcept: emlite::Val(emlite::Val::object()) {}`,
+    `${dict.name}::${dict.name}(const emlite::Val &val) noexcept: em_Val_from(val) {}`,
+    `${dict.name}::${dict.name}() noexcept: em_Val_from(em_Val_object()) {}`,
     `${dict.name} ${dict.name}::clone() const noexcept { return *this; }`,
     ""
   );
@@ -230,17 +230,17 @@ export function generate(specAst) {
       hdr.push(`class ${e.name} : public emlite::Val {`);
       hdr.push(`  explicit ${e.name}(Handle h) noexcept;`);
       src.push(
-        `${e.name}::${e.name}(Handle h) noexcept : emlite::Val(emlite::Val::take_ownership(h)) {}`
+        `${e.name}::${e.name}(Handle h) noexcept : em_Val_from(em_Val_from_handle(h)) {}`
       );
       hdr.push("public:");
       hdr.push(`   explicit ${e.name}(const emlite::Val &v) noexcept;`);
       src.push(
-        `${e.name}::${e.name}(const emlite::Val &v) noexcept : emlite::Val(v) {}`
+        `${e.name}::${e.name}(const emlite::Val &v) noexcept : em_Val_from(v) {}`
       );
-      hdr.push(`  static ${e.name} take_ownership(Handle h) noexcept;`);
+      hdr.push(`  static ${e.name} from_handle(Handle h) noexcept;`);
       hdr.push(`    ${e.name} clone() const noexcept;`);
       src.push(
-        `${e.name} ${e.name}::take_ownership(Handle h) noexcept { return ${e.name}(h); }`
+        `${e.name} ${e.name}::from_handle(Handle h) noexcept { return ${e.name}(h); }`
       );
       src.push(`${e.name} ${e.name}::clone() const noexcept { return *this; }`);
       for (const v of e.values) {
@@ -252,7 +252,7 @@ export function generate(specAst) {
     for (const e of enums.values()) {
       for (const v of e.values) {
         src.push(
-          `const ${e.name} ${e.name}::${fixIdent(v.value)}{ emlite::Val("${
+          `const ${e.name} ${e.name}::${fixIdent(v.value)}{ em_Val_from("${
             v.value
           }") };`
         );
@@ -363,14 +363,14 @@ export function generate(specAst) {
     hdr.push(`    explicit ${iname}(Handle h) noexcept;\n`);
     hdr.push("public:");
     hdr.push(`    explicit ${iname}(const emlite::Val &val) noexcept;`);
-    hdr.push(`    static ${iname} take_ownership(Handle h) noexcept;\n`);
+    hdr.push(`    static ${iname} from_handle(Handle h) noexcept;\n`);
     hdr.push(`    ${iname} clone() const noexcept;`);
-    src.push(`${iname} ${iname}::take_ownership(Handle h) noexcept {
+    src.push(`${iname} ${iname}::from_handle(Handle h) noexcept {
         return ${iname}(h);
     }`);
     src.push(`${iname} ${iname}::clone() const noexcept { return *this; }`);
     src.push(
-      `${iname}::${iname}(Handle h) noexcept : ${parent}(emlite::Val::take_ownership(h)) {}`
+      `${iname}::${iname}(Handle h) noexcept : ${parent}(em_Val_from_handle(h)) {}`
     );
     src.push(
       `${iname}::${iname}(const emlite::Val &val) noexcept: ${parent}(val) {}`,
@@ -423,7 +423,7 @@ export function generate(specAst) {
           hdr.push(`    ${ret} ${cppName}(${declHdr});`);
 
           const callExpr =
-            `emlite::Val::global("${ns.name.toLowerCase()}").call("${
+            `em_Val_global("${ns.name.toLowerCase()}").call("${
               op.name
             }"` + (callArgs ? `, ${callArgs})` : ")");
 
