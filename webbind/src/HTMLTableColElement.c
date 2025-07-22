@@ -1,0 +1,1 @@
+#include <webbind/HTMLTableColElement.h>

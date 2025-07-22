@@ -1,0 +1,1 @@
+#include <webbind/InputDeviceCapabilities.h>

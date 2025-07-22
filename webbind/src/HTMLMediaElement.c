@@ -1,0 +1,10 @@
+#include <webbind/HTMLMediaElement.h>
+#include <webbind/MediaError.h>
+#include <webbind/TimeRanges.h>
+#include <webbind/AudioTrackList.h>
+#include <webbind/VideoTrackList.h>
+#include <webbind/TextTrackList.h>
+#include <webbind/TextTrack.h>
+#include <webbind/MediaKeys.h>
+#include <webbind/MediaStream.h>
+#include <webbind/RemotePlayback.h>

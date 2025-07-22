@@ -1,0 +1,16 @@
+#include <webbind/SVGSVGElement.h>
+#include <webbind/SVGAnimatedLength.h>
+#include <webbind/DOMPointReadOnly.h>
+#include <webbind/NodeList.h>
+#include <webbind/DOMRectReadOnly.h>
+#include <webbind/SVGElement.h>
+#include <webbind/SVGNumber.h>
+#include <webbind/SVGLength.h>
+#include <webbind/SVGAngle.h>
+#include <webbind/DOMPoint.h>
+#include <webbind/DOMMatrix.h>
+#include <webbind/DOMRect.h>
+#include <webbind/SVGTransform.h>
+#include <webbind/Element.h>
+#include <webbind/SVGAnimatedRect.h>
+#include <webbind/SVGAnimatedPreserveAspectRatio.h>

@@ -1,0 +1,37 @@
+#pragma once
+
+#include <emlite/emlite.h>
+#include <jsbind/jsbind.h>
+#include "Node.h"
+#include "enums.h"
+
+class DOMTokenList;
+class NamedNodeMap;
+class Attr;
+class ShadowRoot;
+class ShadowRootInit;
+class CustomElementRegistry;
+class HTMLCollection;
+class FocusableAreasOption;
+class SpatialNavigationSearchOptions;
+class CSSPseudoElement;
+class StylePropertyMapReadOnly;
+class DOMRectList;
+class DOMRect;
+class CheckVisibilityOptions;
+class FullscreenOptions;
+class GetHTMLOptions;
+class PointerLockOptions;
+class Range;
+class DOMQuad;
+class DOMRectReadOnly;
+class DOMPoint;
+class NodeList;
+class HTMLSlotElement;
+class Animation;
+class GetAnimationsOptions;
+class ScreenDetailed;
+class ConvertCoordinateOptions;
+class DOMPointInit;
+class DOMQuadInit;
+class BoxQuadOptions;

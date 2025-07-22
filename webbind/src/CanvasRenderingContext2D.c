@@ -1,0 +1,10 @@
+#include <webbind/CanvasRenderingContext2D.h>
+#include <webbind/HTMLCanvasElement.h>
+#include <webbind/DOMMatrix.h>
+#include <webbind/SVGSVGElement.h>
+#include <webbind/CanvasGradient.h>
+#include <webbind/CanvasPattern.h>
+#include <webbind/Path2D.h>
+#include <webbind/Element.h>
+#include <webbind/TextMetrics.h>
+#include <webbind/ImageData.h>

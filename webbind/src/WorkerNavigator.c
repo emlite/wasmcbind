@@ -1,0 +1,15 @@
+#include <webbind/WorkerNavigator.h>
+#include <webbind/MediaCapabilities.h>
+#include <webbind/Permissions.h>
+#include <webbind/Serial.h>
+#include <webbind/ServiceWorkerContainer.h>
+#include <webbind/HID.h>
+#include <webbind/USB.h>
+#include <webbind/NetworkInformation.h>
+#include <webbind/StorageBucketManager.h>
+#include <webbind/StorageManager.h>
+#include <webbind/NavigatorUAData.h>
+#include <webbind/LockManager.h>
+#include <webbind/GPU.h>
+#include <webbind/ML.h>
+

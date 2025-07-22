@@ -1,0 +1,11 @@
+#include <webbind/XRSession.h>
+#include <webbind/XRRenderState.h>
+#include <webbind/XRInputSourceArray.h>
+#include <webbind/XRReferenceSpace.h>
+#include <webbind/XRAnchor.h>
+#include <webbind/XRHitTestSource.h>
+#include <webbind/XRTransientInputHitTestSource.h>
+#include <webbind/XRLightProbe.h>
+#include <webbind/XRRay.h>
+#include <webbind/XRWebGLLayer.h>
+#include <webbind/XRRigidTransform.h>

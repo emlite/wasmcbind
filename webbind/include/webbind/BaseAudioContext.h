@@ -1,0 +1,29 @@
+#pragma once
+
+#include <emlite/emlite.h>
+#include <jsbind/jsbind.h>
+#include "EventTarget.h"
+#include "enums.h"
+
+class AudioDestinationNode;
+class AudioListener;
+class AudioWorklet;
+class AnalyserNode;
+class BiquadFilterNode;
+class AudioBuffer;
+class AudioBufferSourceNode;
+class ChannelMergerNode;
+class ChannelSplitterNode;
+class ConstantSourceNode;
+class ConvolverNode;
+class DelayNode;
+class DynamicsCompressorNode;
+class GainNode;
+class IIRFilterNode;
+class OscillatorNode;
+class PannerNode;
+class PeriodicWave;
+class PeriodicWaveConstraints;
+class ScriptProcessorNode;
+class StereoPannerNode;
+class WaveShaperNode;

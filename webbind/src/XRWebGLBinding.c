@@ -1,0 +1,17 @@
+#include <webbind/XRWebGLBinding.h>
+#include <webbind/XRProjectionLayer.h>
+#include <webbind/XRQuadLayer.h>
+#include <webbind/XRCylinderLayer.h>
+#include <webbind/XREquirectLayer.h>
+#include <webbind/XRCubeLayer.h>
+#include <webbind/XRWebGLSubImage.h>
+#include <webbind/XRCompositionLayer.h>
+#include <webbind/XRFrame.h>
+#include <webbind/XRView.h>
+#include <webbind/WebGLTexture.h>
+#include <webbind/XRCamera.h>
+#include <webbind/XRWebGLDepthInformation.h>
+#include <webbind/XRLightProbe.h>
+#include <webbind/XRRigidTransform.h>
+#include <webbind/DOMPointReadOnly.h>
+#include <webbind/XRSession.h>

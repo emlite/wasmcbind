@@ -1,0 +1,1 @@
+#include <webbind/InterestGroupBiddingScriptRunnerGlobalScope.h>

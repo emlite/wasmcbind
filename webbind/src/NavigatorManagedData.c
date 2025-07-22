@@ -1,0 +1,1 @@
+#include <webbind/NavigatorManagedData.h>

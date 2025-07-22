@@ -1,0 +1,1 @@
+#include <webbind/FederatedCredential.h>

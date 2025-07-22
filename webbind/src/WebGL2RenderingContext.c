@@ -1,0 +1,11 @@
+#include <webbind/WebGL2RenderingContext.h>
+#include <webbind/WebGLTexture.h>
+#include <webbind/WebGLProgram.h>
+#include <webbind/WebGLUniformLocation.h>
+#include <webbind/WebGLQuery.h>
+#include <webbind/WebGLSampler.h>
+#include <webbind/WebGLSync.h>
+#include <webbind/WebGLTransformFeedback.h>
+#include <webbind/WebGLActiveInfo.h>
+#include <webbind/WebGLBuffer.h>
+#include <webbind/WebGLVertexArrayObject.h>
