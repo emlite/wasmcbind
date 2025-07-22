@@ -5,4 +5,4 @@
 #include "SVGSVGElement.h"
 #include "enums.h"
 
-class Path2D;
+typedef struct wb_Path2D wb_Path2D;

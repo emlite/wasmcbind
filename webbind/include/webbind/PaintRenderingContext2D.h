@@ -8,4 +8,4 @@
 typedef struct wb_DOMMatrix wb_DOMMatrix;
 typedef struct wb_CanvasGradient wb_CanvasGradient;
 typedef struct wb_CanvasPattern wb_CanvasPattern;
-class Path2D;
+typedef struct wb_Path2D wb_Path2D;

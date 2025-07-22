@@ -17,7 +17,7 @@ typedef struct wb_DOMPoint wb_DOMPoint;
 typedef struct wb_DOMMatrix wb_DOMMatrix;
 typedef struct wb_DOMRect wb_DOMRect;
 typedef struct wb_SVGTransform wb_SVGTransform;
-class DOMMatrix2DInit;
+typedef struct wb_DOMMatrix2DInit wb_DOMMatrix2DInit;
 typedef struct wb_Element wb_Element;
 typedef struct wb_SVGAnimatedRect wb_SVGAnimatedRect;
 typedef struct wb_SVGAnimatedPreserveAspectRatio wb_SVGAnimatedPreserveAspectRatio;
