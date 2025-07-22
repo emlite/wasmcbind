@@ -5,27 +5,27 @@ DEFINE_EMLITE_TYPE(NavigationDestination, em_Val);
 
 
 jb_USVString NavigationDestination_url(const NavigationDestination *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "url"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 
 jb_DOMString NavigationDestination_key(const NavigationDestination *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "key"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("key")));
 }
 
 
 jb_DOMString NavigationDestination_id(const NavigationDestination *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "id"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
 long long NavigationDestination_index(const NavigationDestination *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "index"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("index")));
 }
 
 
 bool NavigationDestination_sameDocument(const NavigationDestination *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "sameDocument"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sameDocument")));
 }
 
 

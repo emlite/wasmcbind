@@ -4,42 +4,44 @@
 DEFINE_EMLITE_TYPE(CSSColor, CSSColorValue);
 
 
-CSSColor CSSColor_new(const jb_Any* colorSpace, const jb_Sequence* channels) : CSSColorValue(em_Val_global("CSSColor").new_(em_Val_from(colorSpace), em_Val_from(channels))) {
-        return CSSColor(em_Val_new(em_Val_global("CSSColor", em_Val_from(colorSpace), em_Val_from(channels)));
+CSSColor CSSColor_new0(jb_Any * colorSpace, jb_Sequence * channels) {
+        em_Val vv = em_Val_new(em_Val_global("CSSColor") , em_Val_from(colorSpace), em_Val_from(channels));
+        return CSSColor_from_val(&vv);
       }
 
 
-CSSColor CSSColor_new(const jb_Any* colorSpace, const jb_Sequence* channels, const jb_Any* alpha) : CSSColorValue(em_Val_global("CSSColor").new_(em_Val_from(colorSpace), em_Val_from(channels), em_Val_from(alpha))) {
-        return CSSColor(em_Val_new(em_Val_global("CSSColor", em_Val_from(colorSpace), em_Val_from(channels), em_Val_from(alpha)));
+CSSColor CSSColor_new1(jb_Any * colorSpace, jb_Sequence * channels, jb_Any * alpha) {
+        em_Val vv = em_Val_new(em_Val_global("CSSColor") , em_Val_from(colorSpace), em_Val_from(channels), em_Val_from(alpha));
+        return CSSColor_from_val(&vv);
       }
 
 
 jb_Any CSSColor_colorSpace(const CSSColor *self) {
-    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), "colorSpace"));
+    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), em_Val_from("colorSpace")));
 }
 
 
-void CSSColor_set_colorSpace(CSSColor* self, const jb_Any* value) {
-    em_Val_set(CSSColorValue_as_val(self->inner), "colorSpace", value);
+void CSSColor_set_colorSpace(CSSColor* self, jb_Any * value) {
+    em_Val_set(CSSColorValue_as_val(self->inner), em_Val_from("colorSpace"), em_Val_from(value));
 }
 
 
 jb_ObservableArray CSSColor_channels(const CSSColor *self) {
-    return em_Val_as(jb_ObservableArray, em_Val_get(CSSColorValue_as_val(self->inner), "channels"));
+    return em_Val_as(jb_ObservableArray, em_Val_get(CSSColorValue_as_val(self->inner), em_Val_from("channels")));
 }
 
 
-void CSSColor_set_channels(CSSColor* self, const jb_ObservableArray* value) {
-    em_Val_set(CSSColorValue_as_val(self->inner), "channels", value);
+void CSSColor_set_channels(CSSColor* self, jb_ObservableArray * value) {
+    em_Val_set(CSSColorValue_as_val(self->inner), em_Val_from("channels"), em_Val_from(value));
 }
 
 
 jb_Any CSSColor_alpha(const CSSColor *self) {
-    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), "alpha"));
+    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), em_Val_from("alpha")));
 }
 
 
-void CSSColor_set_alpha(CSSColor* self, const jb_Any* value) {
-    em_Val_set(CSSColorValue_as_val(self->inner), "alpha", value);
+void CSSColor_set_alpha(CSSColor* self, jb_Any * value) {
+    em_Val_set(CSSColorValue_as_val(self->inner), em_Val_from("alpha"), em_Val_from(value));
 }
 

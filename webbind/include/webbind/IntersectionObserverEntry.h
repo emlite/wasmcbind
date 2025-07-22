@@ -8,14 +8,9 @@ typedef struct DOMRectReadOnly DOMRectReadOnly;
 typedef struct Element Element;
 
 
-typedef struct {
-  em_Val inner;
-} IntersectionObserverEntry;
-
-
 DECLARE_EMLITE_TYPE(IntersectionObserverEntry, em_Val);
 
-IntersectionObserverEntry IntersectionObserverEntry_new(const jb_Any* intersectionObserverEntryInit);
+IntersectionObserverEntry IntersectionObserverEntry_new(jb_Any * intersectionObserverEntryInit);
 
 jb_Any IntersectionObserverEntry_time( const IntersectionObserverEntry *self);
 

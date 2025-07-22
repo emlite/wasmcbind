@@ -8,13 +8,8 @@
 typedef struct Gamepad Gamepad;
 
 
-typedef struct {
-  Event inner;
-} GamepadEvent;
-
-
 DECLARE_EMLITE_TYPE(GamepadEvent, Event);
 
-GamepadEvent GamepadEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+GamepadEvent GamepadEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 Gamepad GamepadEvent_gamepad( const GamepadEvent *self);

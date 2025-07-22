@@ -7,14 +7,9 @@
 typedef struct EventTarget EventTarget;
 
 
-typedef struct {
-  em_Val inner;
-} Touch;
-
-
 DECLARE_EMLITE_TYPE(Touch, em_Val);
 
-Touch Touch_new(const jb_Any* touchInitDict);
+Touch Touch_new(jb_Any * touchInitDict);
 
 long Touch_identifier( const Touch *self);
 

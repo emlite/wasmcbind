@@ -7,113 +7,114 @@
 DEFINE_EMLITE_TYPE(HTMLIFrameElement, HTMLElement);
 
 
-HTMLIFrameElement HTMLIFrameElement_new() : HTMLElement(em_Val_global("HTMLIFrameElement").new_()) {
-        return HTMLIFrameElement(em_Val_new(em_Val_global("HTMLIFrameElement", ));
+HTMLIFrameElement HTMLIFrameElement_new() {
+        em_Val vv = em_Val_new(em_Val_global("HTMLIFrameElement") );
+        return HTMLIFrameElement_from_val(&vv);
       }
 
 
 jb_USVString HTMLIFrameElement_src(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "src"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLIFrameElement_set_src(HTMLIFrameElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "src", value);
+void HTMLIFrameElement_set_src(HTMLIFrameElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
 
 jb_Any HTMLIFrameElement_srcdoc(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), "srcdoc"));
+    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("srcdoc")));
 }
 
 
-void HTMLIFrameElement_set_srcdoc(HTMLIFrameElement* self, const jb_Any* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "srcdoc", value);
+void HTMLIFrameElement_set_srcdoc(HTMLIFrameElement* self, jb_Any * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("srcdoc"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLIFrameElement_name(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLIFrameElement_set_name(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "name", value);
+void HTMLIFrameElement_set_name(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
 DOMTokenList HTMLIFrameElement_sandbox(const HTMLIFrameElement *self) {
-    return em_Val_as(DOMTokenList, em_Val_get(HTMLElement_as_val(self->inner), "sandbox"));
+    return em_Val_as(DOMTokenList, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("sandbox")));
 }
 
 
 jb_DOMString HTMLIFrameElement_allow(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "allow"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("allow")));
 }
 
 
-void HTMLIFrameElement_set_allow(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "allow", value);
+void HTMLIFrameElement_set_allow(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("allow"), em_Val_from(value));
 }
 
 
 bool HTMLIFrameElement_allowFullscreen(const HTMLIFrameElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "allowFullscreen"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("allowFullscreen")));
 }
 
 
 void HTMLIFrameElement_set_allowFullscreen(HTMLIFrameElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "allowFullscreen", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("allowFullscreen"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLIFrameElement_width(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "width"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
-void HTMLIFrameElement_set_width(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "width", value);
+void HTMLIFrameElement_set_width(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLIFrameElement_height(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "height"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
-void HTMLIFrameElement_set_height(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "height", value);
+void HTMLIFrameElement_set_height(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("height"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLIFrameElement_referrerPolicy(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "referrerPolicy"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("referrerPolicy")));
 }
 
 
-void HTMLIFrameElement_set_referrerPolicy(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "referrerPolicy", value);
+void HTMLIFrameElement_set_referrerPolicy(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("referrerPolicy"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLIFrameElement_loading(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "loading"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("loading")));
 }
 
 
-void HTMLIFrameElement_set_loading(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "loading", value);
+void HTMLIFrameElement_set_loading(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("loading"), em_Val_from(value));
 }
 
 
 Document HTMLIFrameElement_contentDocument(const HTMLIFrameElement *self) {
-    return em_Val_as(Document, em_Val_get(HTMLElement_as_val(self->inner), "contentDocument"));
+    return em_Val_as(Document, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("contentDocument")));
 }
 
 
 jb_Any HTMLIFrameElement_contentWindow(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), "contentWindow"));
+    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("contentWindow")));
 }
 
 
@@ -123,116 +124,116 @@ Document HTMLIFrameElement_getSVGDocument(HTMLIFrameElement* self ) {
 
 
 bool HTMLIFrameElement_credentialless(const HTMLIFrameElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "credentialless"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("credentialless")));
 }
 
 
 void HTMLIFrameElement_set_credentialless(HTMLIFrameElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "credentialless", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("credentialless"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLIFrameElement_csp(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "csp"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("csp")));
 }
 
 
-void HTMLIFrameElement_set_csp(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "csp", value);
+void HTMLIFrameElement_set_csp(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("csp"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLIFrameElement_align(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "align"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLIFrameElement_set_align(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "align", value);
+void HTMLIFrameElement_set_align(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLIFrameElement_scrolling(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "scrolling"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("scrolling")));
 }
 
 
-void HTMLIFrameElement_set_scrolling(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "scrolling", value);
+void HTMLIFrameElement_set_scrolling(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("scrolling"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLIFrameElement_frameBorder(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "frameBorder"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("frameBorder")));
 }
 
 
-void HTMLIFrameElement_set_frameBorder(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "frameBorder", value);
+void HTMLIFrameElement_set_frameBorder(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("frameBorder"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLIFrameElement_longDesc(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "longDesc"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("longDesc")));
 }
 
 
-void HTMLIFrameElement_set_longDesc(HTMLIFrameElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "longDesc", value);
+void HTMLIFrameElement_set_longDesc(HTMLIFrameElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("longDesc"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLIFrameElement_marginHeight(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "marginHeight"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("marginHeight")));
 }
 
 
-void HTMLIFrameElement_set_marginHeight(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "marginHeight", value);
+void HTMLIFrameElement_set_marginHeight(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("marginHeight"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLIFrameElement_marginWidth(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "marginWidth"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("marginWidth")));
 }
 
 
-void HTMLIFrameElement_set_marginWidth(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "marginWidth", value);
+void HTMLIFrameElement_set_marginWidth(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("marginWidth"), em_Val_from(value));
 }
 
 
 PermissionsPolicy HTMLIFrameElement_permissionsPolicy(const HTMLIFrameElement *self) {
-    return em_Val_as(PermissionsPolicy, em_Val_get(HTMLElement_as_val(self->inner), "permissionsPolicy"));
+    return em_Val_as(PermissionsPolicy, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("permissionsPolicy")));
 }
 
 
 jb_DOMString HTMLIFrameElement_privateToken(const HTMLIFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "privateToken"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("privateToken")));
 }
 
 
-void HTMLIFrameElement_set_privateToken(HTMLIFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "privateToken", value);
+void HTMLIFrameElement_set_privateToken(HTMLIFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("privateToken"), em_Val_from(value));
 }
 
 
 bool HTMLIFrameElement_adAuctionHeaders(const HTMLIFrameElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "adAuctionHeaders"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("adAuctionHeaders")));
 }
 
 
 void HTMLIFrameElement_set_adAuctionHeaders(HTMLIFrameElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "adAuctionHeaders", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("adAuctionHeaders"), em_Val_from(value));
 }
 
 
 bool HTMLIFrameElement_sharedStorageWritable(const HTMLIFrameElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "sharedStorageWritable"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("sharedStorageWritable")));
 }
 
 
 void HTMLIFrameElement_set_sharedStorageWritable(HTMLIFrameElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "sharedStorageWritable", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("sharedStorageWritable"), em_Val_from(value));
 }
 

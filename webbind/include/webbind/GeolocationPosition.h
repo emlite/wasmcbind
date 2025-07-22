@@ -7,11 +7,6 @@
 typedef struct GeolocationCoordinates GeolocationCoordinates;
 
 
-typedef struct {
-  em_Val inner;
-} GeolocationPosition;
-
-
 DECLARE_EMLITE_TYPE(GeolocationPosition, em_Val);
 
 GeolocationCoordinates GeolocationPosition_coords( const GeolocationPosition *self);

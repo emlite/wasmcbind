@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} ValidityState;
-
-
 DECLARE_EMLITE_TYPE(ValidityState, em_Val);
 
 bool ValidityState_valueMissing( const ValidityState *self);

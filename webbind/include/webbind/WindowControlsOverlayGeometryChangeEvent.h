@@ -8,14 +8,9 @@
 typedef struct DOMRect DOMRect;
 
 
-typedef struct {
-  Event inner;
-} WindowControlsOverlayGeometryChangeEvent;
-
-
 DECLARE_EMLITE_TYPE(WindowControlsOverlayGeometryChangeEvent, Event);
 
-WindowControlsOverlayGeometryChangeEvent WindowControlsOverlayGeometryChangeEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+WindowControlsOverlayGeometryChangeEvent WindowControlsOverlayGeometryChangeEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 DOMRect WindowControlsOverlayGeometryChangeEvent_titlebarAreaRect( const WindowControlsOverlayGeometryChangeEvent *self);
 

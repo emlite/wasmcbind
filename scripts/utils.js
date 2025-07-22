@@ -134,7 +134,7 @@ export function cpp(idlType) {
 
 const primitiveRE = /\b(?:long|short|float|double|bool|char|int)\b/;
 export function argtypeFix(type) {
-  return primitiveRE.test(type) ? type : `const ${type}*`;
+  return primitiveRE.test(type) ? type : `${type} *`;
 }
 
 export function fixIdent(name) {

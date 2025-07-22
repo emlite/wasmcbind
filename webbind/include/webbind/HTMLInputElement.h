@@ -14,18 +14,13 @@ typedef struct FileSystemEntry FileSystemEntry;
 typedef struct Element Element;
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLInputElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLInputElement, HTMLElement);
 
 HTMLInputElement HTMLInputElement_new();
 
 jb_DOMString HTMLInputElement_accept( const HTMLInputElement *self);
 
-void HTMLInputElement_set_accept(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_accept(HTMLInputElement* self, jb_DOMString * value);
 
 bool HTMLInputElement_alpha( const HTMLInputElement *self);
 
@@ -33,11 +28,11 @@ void HTMLInputElement_set_alpha(HTMLInputElement* self, bool value);
 
 jb_DOMString HTMLInputElement_alt( const HTMLInputElement *self);
 
-void HTMLInputElement_set_alt(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_alt(HTMLInputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLInputElement_autocomplete( const HTMLInputElement *self);
 
-void HTMLInputElement_set_autocomplete(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_autocomplete(HTMLInputElement* self, jb_DOMString * value);
 
 bool HTMLInputElement_defaultChecked( const HTMLInputElement *self);
 
@@ -49,11 +44,11 @@ void HTMLInputElement_set_checked(HTMLInputElement* self, bool value);
 
 jb_DOMString HTMLInputElement_colorSpace( const HTMLInputElement *self);
 
-void HTMLInputElement_set_colorSpace(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_colorSpace(HTMLInputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLInputElement_dirName( const HTMLInputElement *self);
 
-void HTMLInputElement_set_dirName(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_dirName(HTMLInputElement* self, jb_DOMString * value);
 
 bool HTMLInputElement_disabled( const HTMLInputElement *self);
 
@@ -63,19 +58,19 @@ HTMLFormElement HTMLInputElement_form( const HTMLInputElement *self);
 
 FileList HTMLInputElement_files( const HTMLInputElement *self);
 
-void HTMLInputElement_set_files(HTMLInputElement* self, const FileList* value);
+void HTMLInputElement_set_files(HTMLInputElement* self, FileList * value);
 
 jb_USVString HTMLInputElement_formAction( const HTMLInputElement *self);
 
-void HTMLInputElement_set_formAction(HTMLInputElement* self, const jb_USVString* value);
+void HTMLInputElement_set_formAction(HTMLInputElement* self, jb_USVString * value);
 
 jb_DOMString HTMLInputElement_formEnctype( const HTMLInputElement *self);
 
-void HTMLInputElement_set_formEnctype(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_formEnctype(HTMLInputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLInputElement_formMethod( const HTMLInputElement *self);
 
-void HTMLInputElement_set_formMethod(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_formMethod(HTMLInputElement* self, jb_DOMString * value);
 
 bool HTMLInputElement_formNoValidate( const HTMLInputElement *self);
 
@@ -83,7 +78,7 @@ void HTMLInputElement_set_formNoValidate(HTMLInputElement* self, bool value);
 
 jb_DOMString HTMLInputElement_formTarget( const HTMLInputElement *self);
 
-void HTMLInputElement_set_formTarget(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_formTarget(HTMLInputElement* self, jb_DOMString * value);
 
 unsigned long HTMLInputElement_height( const HTMLInputElement *self);
 
@@ -97,7 +92,7 @@ HTMLDataListElement HTMLInputElement_list( const HTMLInputElement *self);
 
 jb_DOMString HTMLInputElement_max( const HTMLInputElement *self);
 
-void HTMLInputElement_set_max(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_max(HTMLInputElement* self, jb_DOMString * value);
 
 long HTMLInputElement_maxLength( const HTMLInputElement *self);
 
@@ -105,7 +100,7 @@ void HTMLInputElement_set_maxLength(HTMLInputElement* self, long value);
 
 jb_DOMString HTMLInputElement_min( const HTMLInputElement *self);
 
-void HTMLInputElement_set_min(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_min(HTMLInputElement* self, jb_DOMString * value);
 
 long HTMLInputElement_minLength( const HTMLInputElement *self);
 
@@ -117,15 +112,15 @@ void HTMLInputElement_set_multiple(HTMLInputElement* self, bool value);
 
 jb_DOMString HTMLInputElement_name( const HTMLInputElement *self);
 
-void HTMLInputElement_set_name(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_name(HTMLInputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLInputElement_pattern( const HTMLInputElement *self);
 
-void HTMLInputElement_set_pattern(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_pattern(HTMLInputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLInputElement_placeholder( const HTMLInputElement *self);
 
-void HTMLInputElement_set_placeholder(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_placeholder(HTMLInputElement* self, jb_DOMString * value);
 
 bool HTMLInputElement_readOnly( const HTMLInputElement *self);
 
@@ -141,27 +136,27 @@ void HTMLInputElement_set_size(HTMLInputElement* self, unsigned long value);
 
 jb_USVString HTMLInputElement_src( const HTMLInputElement *self);
 
-void HTMLInputElement_set_src(HTMLInputElement* self, const jb_USVString* value);
+void HTMLInputElement_set_src(HTMLInputElement* self, jb_USVString * value);
 
 jb_DOMString HTMLInputElement_step( const HTMLInputElement *self);
 
-void HTMLInputElement_set_step(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_step(HTMLInputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLInputElement_type( const HTMLInputElement *self);
 
-void HTMLInputElement_set_type(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_type(HTMLInputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLInputElement_defaultValue( const HTMLInputElement *self);
 
-void HTMLInputElement_set_defaultValue(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_defaultValue(HTMLInputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLInputElement_value( const HTMLInputElement *self);
 
-void HTMLInputElement_set_value(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_value(HTMLInputElement* self, jb_DOMString * value);
 
 jb_Object HTMLInputElement_valueAsDate( const HTMLInputElement *self);
 
-void HTMLInputElement_set_valueAsDate(HTMLInputElement* self, const jb_Object* value);
+void HTMLInputElement_set_valueAsDate(HTMLInputElement* self, jb_Object * value);
 
 double HTMLInputElement_valueAsNumber( const HTMLInputElement *self);
 
@@ -171,13 +166,13 @@ unsigned long HTMLInputElement_width( const HTMLInputElement *self);
 
 void HTMLInputElement_set_width(HTMLInputElement* self, unsigned long value);
 
-jb_Undefined HTMLInputElement_stepUp(HTMLInputElement* self );
+jb_Undefined HTMLInputElement_stepUp0(HTMLInputElement* self );
 
-jb_Undefined HTMLInputElement_stepUp(HTMLInputElement* self , long n);
+jb_Undefined HTMLInputElement_stepUp1(HTMLInputElement* self , long n);
 
-jb_Undefined HTMLInputElement_stepDown(HTMLInputElement* self );
+jb_Undefined HTMLInputElement_stepDown0(HTMLInputElement* self );
 
-jb_Undefined HTMLInputElement_stepDown(HTMLInputElement* self , long n);
+jb_Undefined HTMLInputElement_stepDown1(HTMLInputElement* self , long n);
 
 bool HTMLInputElement_willValidate( const HTMLInputElement *self);
 
@@ -189,7 +184,7 @@ bool HTMLInputElement_checkValidity(HTMLInputElement* self );
 
 bool HTMLInputElement_reportValidity(HTMLInputElement* self );
 
-jb_Undefined HTMLInputElement_setCustomValidity(HTMLInputElement* self , const jb_DOMString* error);
+jb_Undefined HTMLInputElement_setCustomValidity(HTMLInputElement* self , jb_DOMString * error);
 
 NodeList HTMLInputElement_labels( const HTMLInputElement *self);
 
@@ -205,15 +200,15 @@ void HTMLInputElement_set_selectionEnd(HTMLInputElement* self, unsigned long val
 
 jb_DOMString HTMLInputElement_selectionDirection( const HTMLInputElement *self);
 
-void HTMLInputElement_set_selectionDirection(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_selectionDirection(HTMLInputElement* self, jb_DOMString * value);
 
-jb_Undefined HTMLInputElement_setRangeText(HTMLInputElement* self , const jb_DOMString* replacement, unsigned long start, unsigned long end);
+jb_Undefined HTMLInputElement_setRangeText0(HTMLInputElement* self , jb_DOMString * replacement, unsigned long start, unsigned long end);
 
-jb_Undefined HTMLInputElement_setRangeText(HTMLInputElement* self , const jb_DOMString* replacement, unsigned long start, unsigned long end, const SelectionMode* selectionMode);
+jb_Undefined HTMLInputElement_setRangeText1(HTMLInputElement* self , jb_DOMString * replacement, unsigned long start, unsigned long end, SelectionMode * selectionMode);
 
-jb_Undefined HTMLInputElement_setSelectionRange(HTMLInputElement* self , unsigned long start, unsigned long end);
+jb_Undefined HTMLInputElement_setSelectionRange0(HTMLInputElement* self , unsigned long start, unsigned long end);
 
-jb_Undefined HTMLInputElement_setSelectionRange(HTMLInputElement* self , unsigned long start, unsigned long end, const jb_DOMString* direction);
+jb_Undefined HTMLInputElement_setSelectionRange1(HTMLInputElement* self , unsigned long start, unsigned long end, jb_DOMString * direction);
 
 jb_Undefined HTMLInputElement_showPicker(HTMLInputElement* self );
 
@@ -225,20 +220,20 @@ jb_FrozenArray HTMLInputElement_webkitEntries( const HTMLInputElement *self);
 
 jb_DOMString HTMLInputElement_capture( const HTMLInputElement *self);
 
-void HTMLInputElement_set_capture(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_capture(HTMLInputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLInputElement_align( const HTMLInputElement *self);
 
-void HTMLInputElement_set_align(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_align(HTMLInputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLInputElement_useMap( const HTMLInputElement *self);
 
-void HTMLInputElement_set_useMap(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_useMap(HTMLInputElement* self, jb_DOMString * value);
 
 Element HTMLInputElement_popoverTargetElement( const HTMLInputElement *self);
 
-void HTMLInputElement_set_popoverTargetElement(HTMLInputElement* self, const Element* value);
+void HTMLInputElement_set_popoverTargetElement(HTMLInputElement* self, Element * value);
 
 jb_DOMString HTMLInputElement_popoverTargetAction( const HTMLInputElement *self);
 
-void HTMLInputElement_set_popoverTargetAction(HTMLInputElement* self, const jb_DOMString* value);
+void HTMLInputElement_set_popoverTargetAction(HTMLInputElement* self, jb_DOMString * value);

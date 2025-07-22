@@ -8,11 +8,6 @@
 typedef struct DOMRect DOMRect;
 
 
-typedef struct {
-  EventTarget inner;
-} VirtualKeyboard;
-
-
 DECLARE_EMLITE_TYPE(VirtualKeyboard, EventTarget);
 
 jb_Undefined VirtualKeyboard_show(VirtualKeyboard* self );
@@ -27,4 +22,4 @@ void VirtualKeyboard_set_overlaysContent(VirtualKeyboard* self, bool value);
 
 jb_Any VirtualKeyboard_ongeometrychange( const VirtualKeyboard *self);
 
-void VirtualKeyboard_set_ongeometrychange(VirtualKeyboard* self, const jb_Any* value);
+void VirtualKeyboard_set_ongeometrychange(VirtualKeyboard* self, jb_Any * value);

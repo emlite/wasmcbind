@@ -4,27 +4,29 @@
 DEFINE_EMLITE_TYPE(Magnetometer, Sensor);
 
 
-Magnetometer Magnetometer_new() : Sensor(em_Val_global("Magnetometer").new_()) {
-        return Magnetometer(em_Val_new(em_Val_global("Magnetometer", ));
+Magnetometer Magnetometer_new0() {
+        em_Val vv = em_Val_new(em_Val_global("Magnetometer") );
+        return Magnetometer_from_val(&vv);
       }
 
 
-Magnetometer Magnetometer_new(const jb_Any* sensorOptions) : Sensor(em_Val_global("Magnetometer").new_(em_Val_from(sensorOptions))) {
-        return Magnetometer(em_Val_new(em_Val_global("Magnetometer", em_Val_from(sensorOptions)));
+Magnetometer Magnetometer_new1(jb_Any * sensorOptions) {
+        em_Val vv = em_Val_new(em_Val_global("Magnetometer") , em_Val_from(sensorOptions));
+        return Magnetometer_from_val(&vv);
       }
 
 
 double Magnetometer_x(const Magnetometer *self) {
-    return em_Val_as(double, em_Val_get(Sensor_as_val(self->inner), "x"));
+    return em_Val_as(double, em_Val_get(Sensor_as_val(self->inner), em_Val_from("x")));
 }
 
 
 double Magnetometer_y(const Magnetometer *self) {
-    return em_Val_as(double, em_Val_get(Sensor_as_val(self->inner), "y"));
+    return em_Val_as(double, em_Val_get(Sensor_as_val(self->inner), em_Val_from("y")));
 }
 
 
 double Magnetometer_z(const Magnetometer *self) {
-    return em_Val_as(double, em_Val_get(Sensor_as_val(self->inner), "z"));
+    return em_Val_as(double, em_Val_get(Sensor_as_val(self->inner), em_Val_from("z")));
 }
 

@@ -9,11 +9,6 @@ typedef struct BackgroundFetchRecord BackgroundFetchRecord;
 typedef struct CacheQueryOptions CacheQueryOptions;
 
 
-typedef struct {
-  em_Val inner;
-} CacheQueryOptions;
-
-
 DECLARE_EMLITE_TYPE(CacheQueryOptions, em_Val);
 
 bool CacheQueryOptions_ignoreSearch( const CacheQueryOptions *self);
@@ -27,11 +22,6 @@ void CacheQueryOptions_set_ignoreMethod(CacheQueryOptions* self, bool value);
 bool CacheQueryOptions_ignoreVary( const CacheQueryOptions *self);
 
 void CacheQueryOptions_set_ignoreVary(CacheQueryOptions* self, bool value);
-typedef struct {
-  EventTarget inner;
-} BackgroundFetchRegistration;
-
-
 DECLARE_EMLITE_TYPE(BackgroundFetchRegistration, EventTarget);
 
 jb_DOMString BackgroundFetchRegistration_id( const BackgroundFetchRegistration *self);
@@ -52,16 +42,16 @@ bool BackgroundFetchRegistration_recordsAvailable( const BackgroundFetchRegistra
 
 jb_Any BackgroundFetchRegistration_onprogress( const BackgroundFetchRegistration *self);
 
-void BackgroundFetchRegistration_set_onprogress(BackgroundFetchRegistration* self, const jb_Any* value);
+void BackgroundFetchRegistration_set_onprogress(BackgroundFetchRegistration* self, jb_Any * value);
 
 jb_Promise BackgroundFetchRegistration_abort(BackgroundFetchRegistration* self );
 
-jb_Promise BackgroundFetchRegistration_match(BackgroundFetchRegistration* self , const jb_Any* request);
+jb_Promise BackgroundFetchRegistration_match0(BackgroundFetchRegistration* self , jb_Any * request);
 
-jb_Promise BackgroundFetchRegistration_match(BackgroundFetchRegistration* self , const jb_Any* request, const CacheQueryOptions* options);
+jb_Promise BackgroundFetchRegistration_match1(BackgroundFetchRegistration* self , jb_Any * request, CacheQueryOptions * options);
 
-jb_Promise BackgroundFetchRegistration_matchAll(BackgroundFetchRegistration* self );
+jb_Promise BackgroundFetchRegistration_matchAll0(BackgroundFetchRegistration* self );
 
-jb_Promise BackgroundFetchRegistration_matchAll(BackgroundFetchRegistration* self , const jb_Any* request);
+jb_Promise BackgroundFetchRegistration_matchAll1(BackgroundFetchRegistration* self , jb_Any * request);
 
-jb_Promise BackgroundFetchRegistration_matchAll(BackgroundFetchRegistration* self , const jb_Any* request, const CacheQueryOptions* options);
+jb_Promise BackgroundFetchRegistration_matchAll2(BackgroundFetchRegistration* self , jb_Any * request, CacheQueryOptions * options);

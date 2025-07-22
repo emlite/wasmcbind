@@ -6,12 +6,12 @@ DEFINE_EMLITE_TYPE(RTCDtlsTransport, EventTarget);
 
 
 RTCIceTransport RTCDtlsTransport_iceTransport(const RTCDtlsTransport *self) {
-    return em_Val_as(RTCIceTransport, em_Val_get(EventTarget_as_val(self->inner), "iceTransport"));
+    return em_Val_as(RTCIceTransport, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("iceTransport")));
 }
 
 
 RTCDtlsTransportState RTCDtlsTransport_state(const RTCDtlsTransport *self) {
-    return em_Val_as(RTCDtlsTransportState, em_Val_get(EventTarget_as_val(self->inner), "state"));
+    return em_Val_as(RTCDtlsTransportState, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("state")));
 }
 
 
@@ -21,21 +21,21 @@ jb_Sequence RTCDtlsTransport_getRemoteCertificates(RTCDtlsTransport* self ) {
 
 
 jb_Any RTCDtlsTransport_onstatechange(const RTCDtlsTransport *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onstatechange"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onstatechange")));
 }
 
 
-void RTCDtlsTransport_set_onstatechange(RTCDtlsTransport* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onstatechange", value);
+void RTCDtlsTransport_set_onstatechange(RTCDtlsTransport* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onstatechange"), em_Val_from(value));
 }
 
 
 jb_Any RTCDtlsTransport_onerror(const RTCDtlsTransport *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onerror"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onerror")));
 }
 
 
-void RTCDtlsTransport_set_onerror(RTCDtlsTransport* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onerror", value);
+void RTCDtlsTransport_set_onerror(RTCDtlsTransport* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onerror"), em_Val_from(value));
 }
 

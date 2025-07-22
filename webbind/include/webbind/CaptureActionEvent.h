@@ -6,15 +6,10 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} CaptureActionEvent;
-
-
 DECLARE_EMLITE_TYPE(CaptureActionEvent, Event);
 
-CaptureActionEvent CaptureActionEvent_new();
+CaptureActionEvent CaptureActionEvent_new0();
 
-CaptureActionEvent CaptureActionEvent_new(const jb_Any* init);
+CaptureActionEvent CaptureActionEvent_new1(jb_Any * init);
 
 CaptureAction CaptureActionEvent_action( const CaptureActionEvent *self);

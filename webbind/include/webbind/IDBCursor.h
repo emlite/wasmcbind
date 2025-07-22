@@ -7,11 +7,6 @@
 typedef struct IDBRequest IDBRequest;
 
 
-typedef struct {
-  em_Val inner;
-} IDBCursor;
-
-
 DECLARE_EMLITE_TYPE(IDBCursor, em_Val);
 
 jb_Any IDBCursor_source( const IDBCursor *self);
@@ -26,12 +21,12 @@ IDBRequest IDBCursor_request( const IDBCursor *self);
 
 jb_Undefined IDBCursor_advance(IDBCursor* self , unsigned long count);
 
-jb_Undefined IDBCursor_continue_(IDBCursor* self );
+jb_Undefined IDBCursor_continue_0(IDBCursor* self );
 
-jb_Undefined IDBCursor_continue_(IDBCursor* self , const jb_Any* key);
+jb_Undefined IDBCursor_continue_1(IDBCursor* self , jb_Any * key);
 
-jb_Undefined IDBCursor_continuePrimaryKey(IDBCursor* self , const jb_Any* key, const jb_Any* primaryKey);
+jb_Undefined IDBCursor_continuePrimaryKey(IDBCursor* self , jb_Any * key, jb_Any * primaryKey);
 
-IDBRequest IDBCursor_update(IDBCursor* self , const jb_Any* value);
+IDBRequest IDBCursor_update(IDBCursor* self , jb_Any * value);
 
 IDBRequest IDBCursor_delete_(IDBCursor* self );

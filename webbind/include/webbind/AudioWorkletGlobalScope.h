@@ -8,14 +8,9 @@
 typedef struct MessagePort MessagePort;
 
 
-typedef struct {
-  WorkletGlobalScope inner;
-} AudioWorkletGlobalScope;
-
-
 DECLARE_EMLITE_TYPE(AudioWorkletGlobalScope, WorkletGlobalScope);
 
-jb_Undefined AudioWorkletGlobalScope_registerProcessor(AudioWorkletGlobalScope* self , const jb_DOMString* name, const jb_Function* processorCtor);
+jb_Undefined AudioWorkletGlobalScope_registerProcessor(AudioWorkletGlobalScope* self , jb_DOMString * name, jb_Function * processorCtor);
 
 long long AudioWorkletGlobalScope_currentFrame( const AudioWorkletGlobalScope *self);
 

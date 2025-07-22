@@ -8,11 +8,6 @@
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGGeometryElement inner;
-} SVGLineElement;
-
-
 DECLARE_EMLITE_TYPE(SVGLineElement, SVGGeometryElement);
 
 SVGAnimatedLength SVGLineElement_x1( const SVGLineElement *self);

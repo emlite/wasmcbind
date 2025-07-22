@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  GPUError inner;
-} GPUOutOfMemoryError;
-
-
 DECLARE_EMLITE_TYPE(GPUOutOfMemoryError, GPUError);
 
-GPUOutOfMemoryError GPUOutOfMemoryError_new(const jb_DOMString* message);
+GPUOutOfMemoryError GPUOutOfMemoryError_new(jb_DOMString * message);

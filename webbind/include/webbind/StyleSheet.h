@@ -8,11 +8,6 @@ typedef struct CSSStyleSheet CSSStyleSheet;
 typedef struct MediaList MediaList;
 
 
-typedef struct {
-  em_Val inner;
-} StyleSheet;
-
-
 DECLARE_EMLITE_TYPE(StyleSheet, em_Val);
 
 jb_CSSOMString StyleSheet_type( const StyleSheet *self);

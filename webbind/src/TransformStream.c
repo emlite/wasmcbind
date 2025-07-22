@@ -6,32 +6,36 @@
 DEFINE_EMLITE_TYPE(TransformStream, em_Val);
 
 
-TransformStream TransformStream_new() : em_Val(em_Val_global("TransformStream").new_()) {
-        return TransformStream(em_Val_new(em_Val_global("TransformStream", ));
+TransformStream TransformStream_new0() {
+        em_Val vv = em_Val_new(em_Val_global("TransformStream") );
+        return TransformStream_from_val(&vv);
       }
 
 
-TransformStream TransformStream_new(const jb_Object* transformer) : em_Val(em_Val_global("TransformStream").new_(em_Val_from(transformer))) {
-        return TransformStream(em_Val_new(em_Val_global("TransformStream", em_Val_from(transformer)));
+TransformStream TransformStream_new1(jb_Object * transformer) {
+        em_Val vv = em_Val_new(em_Val_global("TransformStream") , em_Val_from(transformer));
+        return TransformStream_from_val(&vv);
       }
 
 
-TransformStream TransformStream_new(const jb_Object* transformer, const jb_Any* writableStrategy) : em_Val(em_Val_global("TransformStream").new_(em_Val_from(transformer), em_Val_from(writableStrategy))) {
-        return TransformStream(em_Val_new(em_Val_global("TransformStream", em_Val_from(transformer), em_Val_from(writableStrategy)));
+TransformStream TransformStream_new2(jb_Object * transformer, jb_Any * writableStrategy) {
+        em_Val vv = em_Val_new(em_Val_global("TransformStream") , em_Val_from(transformer), em_Val_from(writableStrategy));
+        return TransformStream_from_val(&vv);
       }
 
 
-TransformStream TransformStream_new(const jb_Object* transformer, const jb_Any* writableStrategy, const jb_Any* readableStrategy) : em_Val(em_Val_global("TransformStream").new_(em_Val_from(transformer), em_Val_from(writableStrategy), em_Val_from(readableStrategy))) {
-        return TransformStream(em_Val_new(em_Val_global("TransformStream", em_Val_from(transformer), em_Val_from(writableStrategy), em_Val_from(readableStrategy)));
+TransformStream TransformStream_new3(jb_Object * transformer, jb_Any * writableStrategy, jb_Any * readableStrategy) {
+        em_Val vv = em_Val_new(em_Val_global("TransformStream") , em_Val_from(transformer), em_Val_from(writableStrategy), em_Val_from(readableStrategy));
+        return TransformStream_from_val(&vv);
       }
 
 
 ReadableStream TransformStream_readable(const TransformStream *self) {
-    return em_Val_as(ReadableStream, em_Val_get(em_Val_as_val(self->inner), "readable"));
+    return em_Val_as(ReadableStream, em_Val_get(em_Val_as_val(self->inner), em_Val_from("readable")));
 }
 
 
 WritableStream TransformStream_writable(const TransformStream *self) {
-    return em_Val_as(WritableStream, em_Val_get(em_Val_as_val(self->inner), "writable"));
+    return em_Val_as(WritableStream, em_Val_get(em_Val_as_val(self->inner), em_Val_from("writable")));
 }
 

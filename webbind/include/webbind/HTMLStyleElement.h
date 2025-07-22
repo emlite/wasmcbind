@@ -9,11 +9,6 @@ typedef struct DOMTokenList DOMTokenList;
 typedef struct CSSStyleSheet CSSStyleSheet;
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLStyleElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLStyleElement, HTMLElement);
 
 HTMLStyleElement HTMLStyleElement_new();
@@ -24,12 +19,12 @@ void HTMLStyleElement_set_disabled(HTMLStyleElement* self, bool value);
 
 jb_DOMString HTMLStyleElement_media( const HTMLStyleElement *self);
 
-void HTMLStyleElement_set_media(HTMLStyleElement* self, const jb_DOMString* value);
+void HTMLStyleElement_set_media(HTMLStyleElement* self, jb_DOMString * value);
 
 DOMTokenList HTMLStyleElement_blocking( const HTMLStyleElement *self);
 
 jb_DOMString HTMLStyleElement_type( const HTMLStyleElement *self);
 
-void HTMLStyleElement_set_type(HTMLStyleElement* self, const jb_DOMString* value);
+void HTMLStyleElement_set_type(HTMLStyleElement* self, jb_DOMString * value);
 
 CSSStyleSheet HTMLStyleElement_sheet( const HTMLStyleElement *self);

@@ -8,11 +8,6 @@
 typedef struct NodeList NodeList;
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLMeterElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLMeterElement, HTMLElement);
 
 HTMLMeterElement HTMLMeterElement_new();

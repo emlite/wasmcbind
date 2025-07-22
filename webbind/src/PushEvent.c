@@ -5,17 +5,19 @@
 DEFINE_EMLITE_TYPE(PushEvent, ExtendableEvent);
 
 
-PushEvent PushEvent_new(const jb_DOMString* type) : ExtendableEvent(em_Val_global("PushEvent").new_(em_Val_from(type))) {
-        return PushEvent(em_Val_new(em_Val_global("PushEvent", em_Val_from(type)));
+PushEvent PushEvent_new0(jb_DOMString * type) {
+        em_Val vv = em_Val_new(em_Val_global("PushEvent") , em_Val_from(type));
+        return PushEvent_from_val(&vv);
       }
 
 
-PushEvent PushEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict) : ExtendableEvent(em_Val_global("PushEvent").new_(em_Val_from(type), em_Val_from(eventInitDict))) {
-        return PushEvent(em_Val_new(em_Val_global("PushEvent", em_Val_from(type), em_Val_from(eventInitDict)));
+PushEvent PushEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("PushEvent") , em_Val_from(type), em_Val_from(eventInitDict));
+        return PushEvent_from_val(&vv);
       }
 
 
 PushMessageData PushEvent_data(const PushEvent *self) {
-    return em_Val_as(PushMessageData, em_Val_get(ExtendableEvent_as_val(self->inner), "data"));
+    return em_Val_as(PushMessageData, em_Val_get(ExtendableEvent_as_val(self->inner), em_Val_from("data")));
 }
 

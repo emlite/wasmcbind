@@ -9,11 +9,6 @@ typedef struct MutationObserverInit MutationObserverInit;
 typedef struct MutationRecord MutationRecord;
 
 
-typedef struct {
-  em_Val inner;
-} MutationObserverInit;
-
-
 DECLARE_EMLITE_TYPE(MutationObserverInit, em_Val);
 
 bool MutationObserverInit_childList( const MutationObserverInit *self);
@@ -42,19 +37,14 @@ void MutationObserverInit_set_characterDataOldValue(MutationObserverInit* self, 
 
 jb_Sequence MutationObserverInit_attributeFilter( const MutationObserverInit *self);
 
-void MutationObserverInit_set_attributeFilter(MutationObserverInit* self, const jb_Sequence* value);
-typedef struct {
-  em_Val inner;
-} MutationObserver;
-
-
+void MutationObserverInit_set_attributeFilter(MutationObserverInit* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(MutationObserver, em_Val);
 
-MutationObserver MutationObserver_new(const jb_Function* callback);
+MutationObserver MutationObserver_new(jb_Function * callback);
 
-jb_Undefined MutationObserver_observe(MutationObserver* self , const Node* target);
+jb_Undefined MutationObserver_observe0(MutationObserver* self , Node * target);
 
-jb_Undefined MutationObserver_observe(MutationObserver* self , const Node* target, const MutationObserverInit* options);
+jb_Undefined MutationObserver_observe1(MutationObserver* self , Node * target, MutationObserverInit * options);
 
 jb_Undefined MutationObserver_disconnect(MutationObserver* self );
 

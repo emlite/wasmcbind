@@ -6,30 +6,25 @@
 #include "enums.h"
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLMarqueeElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLMarqueeElement, HTMLElement);
 
 HTMLMarqueeElement HTMLMarqueeElement_new();
 
 jb_DOMString HTMLMarqueeElement_behavior( const HTMLMarqueeElement *self);
 
-void HTMLMarqueeElement_set_behavior(HTMLMarqueeElement* self, const jb_DOMString* value);
+void HTMLMarqueeElement_set_behavior(HTMLMarqueeElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLMarqueeElement_bgColor( const HTMLMarqueeElement *self);
 
-void HTMLMarqueeElement_set_bgColor(HTMLMarqueeElement* self, const jb_DOMString* value);
+void HTMLMarqueeElement_set_bgColor(HTMLMarqueeElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLMarqueeElement_direction( const HTMLMarqueeElement *self);
 
-void HTMLMarqueeElement_set_direction(HTMLMarqueeElement* self, const jb_DOMString* value);
+void HTMLMarqueeElement_set_direction(HTMLMarqueeElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLMarqueeElement_height( const HTMLMarqueeElement *self);
 
-void HTMLMarqueeElement_set_height(HTMLMarqueeElement* self, const jb_DOMString* value);
+void HTMLMarqueeElement_set_height(HTMLMarqueeElement* self, jb_DOMString * value);
 
 unsigned long HTMLMarqueeElement_hspace( const HTMLMarqueeElement *self);
 
@@ -57,7 +52,7 @@ void HTMLMarqueeElement_set_vspace(HTMLMarqueeElement* self, unsigned long value
 
 jb_DOMString HTMLMarqueeElement_width( const HTMLMarqueeElement *self);
 
-void HTMLMarqueeElement_set_width(HTMLMarqueeElement* self, const jb_DOMString* value);
+void HTMLMarqueeElement_set_width(HTMLMarqueeElement* self, jb_DOMString * value);
 
 jb_Undefined HTMLMarqueeElement_start(HTMLMarqueeElement* self );
 

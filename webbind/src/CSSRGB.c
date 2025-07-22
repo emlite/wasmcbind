@@ -4,52 +4,54 @@
 DEFINE_EMLITE_TYPE(CSSRGB, CSSColorValue);
 
 
-CSSRGB CSSRGB_new(const jb_Any* r, const jb_Any* g, const jb_Any* b) : CSSColorValue(em_Val_global("CSSRGB").new_(em_Val_from(r), em_Val_from(g), em_Val_from(b))) {
-        return CSSRGB(em_Val_new(em_Val_global("CSSRGB", em_Val_from(r), em_Val_from(g), em_Val_from(b)));
+CSSRGB CSSRGB_new0(jb_Any * r, jb_Any * g, jb_Any * b) {
+        em_Val vv = em_Val_new(em_Val_global("CSSRGB") , em_Val_from(r), em_Val_from(g), em_Val_from(b));
+        return CSSRGB_from_val(&vv);
       }
 
 
-CSSRGB CSSRGB_new(const jb_Any* r, const jb_Any* g, const jb_Any* b, const jb_Any* alpha) : CSSColorValue(em_Val_global("CSSRGB").new_(em_Val_from(r), em_Val_from(g), em_Val_from(b), em_Val_from(alpha))) {
-        return CSSRGB(em_Val_new(em_Val_global("CSSRGB", em_Val_from(r), em_Val_from(g), em_Val_from(b), em_Val_from(alpha)));
+CSSRGB CSSRGB_new1(jb_Any * r, jb_Any * g, jb_Any * b, jb_Any * alpha) {
+        em_Val vv = em_Val_new(em_Val_global("CSSRGB") , em_Val_from(r), em_Val_from(g), em_Val_from(b), em_Val_from(alpha));
+        return CSSRGB_from_val(&vv);
       }
 
 
 jb_Any CSSRGB_r(const CSSRGB *self) {
-    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), "r"));
+    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), em_Val_from("r")));
 }
 
 
-void CSSRGB_set_r(CSSRGB* self, const jb_Any* value) {
-    em_Val_set(CSSColorValue_as_val(self->inner), "r", value);
+void CSSRGB_set_r(CSSRGB* self, jb_Any * value) {
+    em_Val_set(CSSColorValue_as_val(self->inner), em_Val_from("r"), em_Val_from(value));
 }
 
 
 jb_Any CSSRGB_g(const CSSRGB *self) {
-    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), "g"));
+    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), em_Val_from("g")));
 }
 
 
-void CSSRGB_set_g(CSSRGB* self, const jb_Any* value) {
-    em_Val_set(CSSColorValue_as_val(self->inner), "g", value);
+void CSSRGB_set_g(CSSRGB* self, jb_Any * value) {
+    em_Val_set(CSSColorValue_as_val(self->inner), em_Val_from("g"), em_Val_from(value));
 }
 
 
 jb_Any CSSRGB_b(const CSSRGB *self) {
-    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), "b"));
+    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), em_Val_from("b")));
 }
 
 
-void CSSRGB_set_b(CSSRGB* self, const jb_Any* value) {
-    em_Val_set(CSSColorValue_as_val(self->inner), "b", value);
+void CSSRGB_set_b(CSSRGB* self, jb_Any * value) {
+    em_Val_set(CSSColorValue_as_val(self->inner), em_Val_from("b"), em_Val_from(value));
 }
 
 
 jb_Any CSSRGB_alpha(const CSSRGB *self) {
-    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), "alpha"));
+    return em_Val_as(jb_Any, em_Val_get(CSSColorValue_as_val(self->inner), em_Val_from("alpha")));
 }
 
 
-void CSSRGB_set_alpha(CSSRGB* self, const jb_Any* value) {
-    em_Val_set(CSSColorValue_as_val(self->inner), "alpha", value);
+void CSSRGB_set_alpha(CSSRGB* self, jb_Any * value) {
+    em_Val_set(CSSColorValue_as_val(self->inner), em_Val_from("alpha"), em_Val_from(value));
 }
 

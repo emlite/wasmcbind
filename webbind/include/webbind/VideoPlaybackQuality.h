@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} VideoPlaybackQuality;
-
-
 DECLARE_EMLITE_TYPE(VideoPlaybackQuality, em_Val);
 
 jb_Any VideoPlaybackQuality_creationTime( const VideoPlaybackQuality *self);

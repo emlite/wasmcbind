@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  SVGAnimationElement inner;
-} SVGAnimateMotionElement;
-
-
 DECLARE_EMLITE_TYPE(SVGAnimateMotionElement, SVGAnimationElement);

@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  EventTarget inner;
-} NetworkInformation;
-
-
 DECLARE_EMLITE_TYPE(NetworkInformation, EventTarget);
 
 ConnectionType NetworkInformation_type( const NetworkInformation *self);
@@ -25,6 +20,6 @@ jb_Any NetworkInformation_rtt( const NetworkInformation *self);
 
 jb_Any NetworkInformation_onchange( const NetworkInformation *self);
 
-void NetworkInformation_set_onchange(NetworkInformation* self, const jb_Any* value);
+void NetworkInformation_set_onchange(NetworkInformation* self, jb_Any * value);
 
 bool NetworkInformation_saveData( const NetworkInformation *self);

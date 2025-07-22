@@ -8,11 +8,6 @@ typedef struct XRWebGLLayer XRWebGLLayer;
 typedef struct XRLayer XRLayer;
 
 
-typedef struct {
-  em_Val inner;
-} XRRenderState;
-
-
 DECLARE_EMLITE_TYPE(XRRenderState, em_Val);
 
 double XRRenderState_depthNear( const XRRenderState *self);

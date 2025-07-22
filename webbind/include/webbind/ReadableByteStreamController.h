@@ -7,11 +7,6 @@
 typedef struct ReadableStreamBYOBRequest ReadableStreamBYOBRequest;
 
 
-typedef struct {
-  em_Val inner;
-} ReadableByteStreamController;
-
-
 DECLARE_EMLITE_TYPE(ReadableByteStreamController, em_Val);
 
 ReadableStreamBYOBRequest ReadableByteStreamController_byobRequest( const ReadableByteStreamController *self);
@@ -20,8 +15,8 @@ double ReadableByteStreamController_desiredSize( const ReadableByteStreamControl
 
 jb_Undefined ReadableByteStreamController_close(ReadableByteStreamController* self );
 
-jb_Undefined ReadableByteStreamController_enqueue(ReadableByteStreamController* self , const jb_Any* chunk);
+jb_Undefined ReadableByteStreamController_enqueue(ReadableByteStreamController* self , jb_Any * chunk);
 
-jb_Undefined ReadableByteStreamController_error(ReadableByteStreamController* self );
+jb_Undefined ReadableByteStreamController_error0(ReadableByteStreamController* self );
 
-jb_Undefined ReadableByteStreamController_error(ReadableByteStreamController* self , const jb_Any* e);
+jb_Undefined ReadableByteStreamController_error1(ReadableByteStreamController* self , jb_Any * e);

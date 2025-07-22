@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} CSSFontFeatureValuesMap;
-
-
 DECLARE_EMLITE_TYPE(CSSFontFeatureValuesMap, em_Val);
 
-jb_Undefined CSSFontFeatureValuesMap_set(CSSFontFeatureValuesMap* self , const jb_CSSOMString* featureValueName, const jb_Any* values);
+jb_Undefined CSSFontFeatureValuesMap_set(CSSFontFeatureValuesMap* self , jb_CSSOMString * featureValueName, jb_Any * values);

@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  AudioNode inner;
-} MediaStreamTrackAudioSourceNode;
-
-
 DECLARE_EMLITE_TYPE(MediaStreamTrackAudioSourceNode, AudioNode);
 
-MediaStreamTrackAudioSourceNode MediaStreamTrackAudioSourceNode_new(const AudioContext* context, const jb_Any* options);
+MediaStreamTrackAudioSourceNode MediaStreamTrackAudioSourceNode_new(AudioContext * context, jb_Any * options);

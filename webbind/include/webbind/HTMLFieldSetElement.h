@@ -10,11 +10,6 @@ typedef struct HTMLCollection HTMLCollection;
 typedef struct ValidityState ValidityState;
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLFieldSetElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLFieldSetElement, HTMLElement);
 
 HTMLFieldSetElement HTMLFieldSetElement_new();
@@ -27,7 +22,7 @@ HTMLFormElement HTMLFieldSetElement_form( const HTMLFieldSetElement *self);
 
 jb_DOMString HTMLFieldSetElement_name( const HTMLFieldSetElement *self);
 
-void HTMLFieldSetElement_set_name(HTMLFieldSetElement* self, const jb_DOMString* value);
+void HTMLFieldSetElement_set_name(HTMLFieldSetElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLFieldSetElement_type( const HTMLFieldSetElement *self);
 
@@ -43,4 +38,4 @@ bool HTMLFieldSetElement_checkValidity(HTMLFieldSetElement* self );
 
 bool HTMLFieldSetElement_reportValidity(HTMLFieldSetElement* self );
 
-jb_Undefined HTMLFieldSetElement_setCustomValidity(HTMLFieldSetElement* self , const jb_DOMString* error);
+jb_Undefined HTMLFieldSetElement_setCustomValidity(HTMLFieldSetElement* self , jb_DOMString * error);

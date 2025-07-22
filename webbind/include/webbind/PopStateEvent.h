@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} PopStateEvent;
-
-
 DECLARE_EMLITE_TYPE(PopStateEvent, Event);
 
-PopStateEvent PopStateEvent_new(const jb_DOMString* type);
+PopStateEvent PopStateEvent_new0(jb_DOMString * type);
 
-PopStateEvent PopStateEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+PopStateEvent PopStateEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 jb_Any PopStateEvent_state( const PopStateEvent *self);
 

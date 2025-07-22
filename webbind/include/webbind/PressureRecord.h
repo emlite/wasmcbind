@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} PressureRecord;
-
-
 DECLARE_EMLITE_TYPE(PressureRecord, em_Val);
 
 PressureSource PressureRecord_source( const PressureRecord *self);

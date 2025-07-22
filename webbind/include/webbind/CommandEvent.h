@@ -8,16 +8,11 @@
 typedef struct Element Element;
 
 
-typedef struct {
-  Event inner;
-} CommandEvent;
-
-
 DECLARE_EMLITE_TYPE(CommandEvent, Event);
 
-CommandEvent CommandEvent_new(const jb_DOMString* type);
+CommandEvent CommandEvent_new0(jb_DOMString * type);
 
-CommandEvent CommandEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+CommandEvent CommandEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 Element CommandEvent_source( const CommandEvent *self);
 

@@ -8,11 +8,6 @@
 typedef struct PerformanceScriptTiming PerformanceScriptTiming;
 
 
-typedef struct {
-  PerformanceEntry inner;
-} PerformanceLongAnimationFrameTiming;
-
-
 DECLARE_EMLITE_TYPE(PerformanceLongAnimationFrameTiming, PerformanceEntry);
 
 jb_Any PerformanceLongAnimationFrameTiming_startTime( const PerformanceLongAnimationFrameTiming *self);

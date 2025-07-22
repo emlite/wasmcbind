@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} GPUError;
-
-
 DECLARE_EMLITE_TYPE(GPUError, em_Val);
 
 jb_DOMString GPUError_message( const GPUError *self);

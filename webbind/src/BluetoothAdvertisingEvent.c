@@ -7,47 +7,48 @@
 DEFINE_EMLITE_TYPE(BluetoothAdvertisingEvent, Event);
 
 
-BluetoothAdvertisingEvent BluetoothAdvertisingEvent_new(const jb_DOMString* type, const jb_Any* init) : Event(em_Val_global("BluetoothAdvertisingEvent").new_(em_Val_from(type), em_Val_from(init))) {
-        return BluetoothAdvertisingEvent(em_Val_new(em_Val_global("BluetoothAdvertisingEvent", em_Val_from(type), em_Val_from(init)));
+BluetoothAdvertisingEvent BluetoothAdvertisingEvent_new(jb_DOMString * type, jb_Any * init) {
+        em_Val vv = em_Val_new(em_Val_global("BluetoothAdvertisingEvent") , em_Val_from(type), em_Val_from(init));
+        return BluetoothAdvertisingEvent_from_val(&vv);
       }
 
 
 BluetoothDevice BluetoothAdvertisingEvent_device(const BluetoothAdvertisingEvent *self) {
-    return em_Val_as(BluetoothDevice, em_Val_get(Event_as_val(self->inner), "device"));
+    return em_Val_as(BluetoothDevice, em_Val_get(Event_as_val(self->inner), em_Val_from("device")));
 }
 
 
 jb_FrozenArray BluetoothAdvertisingEvent_uuids(const BluetoothAdvertisingEvent *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(Event_as_val(self->inner), "uuids"));
+    return em_Val_as(jb_FrozenArray, em_Val_get(Event_as_val(self->inner), em_Val_from("uuids")));
 }
 
 
 jb_DOMString BluetoothAdvertisingEvent_name(const BluetoothAdvertisingEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("name")));
 }
 
 
 unsigned short BluetoothAdvertisingEvent_appearance(const BluetoothAdvertisingEvent *self) {
-    return em_Val_as(unsigned short, em_Val_get(Event_as_val(self->inner), "appearance"));
+    return em_Val_as(unsigned short, em_Val_get(Event_as_val(self->inner), em_Val_from("appearance")));
 }
 
 
 char BluetoothAdvertisingEvent_txPower(const BluetoothAdvertisingEvent *self) {
-    return em_Val_as(char, em_Val_get(Event_as_val(self->inner), "txPower"));
+    return em_Val_as(char, em_Val_get(Event_as_val(self->inner), em_Val_from("txPower")));
 }
 
 
 char BluetoothAdvertisingEvent_rssi(const BluetoothAdvertisingEvent *self) {
-    return em_Val_as(char, em_Val_get(Event_as_val(self->inner), "rssi"));
+    return em_Val_as(char, em_Val_get(Event_as_val(self->inner), em_Val_from("rssi")));
 }
 
 
 BluetoothManufacturerDataMap BluetoothAdvertisingEvent_manufacturerData(const BluetoothAdvertisingEvent *self) {
-    return em_Val_as(BluetoothManufacturerDataMap, em_Val_get(Event_as_val(self->inner), "manufacturerData"));
+    return em_Val_as(BluetoothManufacturerDataMap, em_Val_get(Event_as_val(self->inner), em_Val_from("manufacturerData")));
 }
 
 
 BluetoothServiceDataMap BluetoothAdvertisingEvent_serviceData(const BluetoothAdvertisingEvent *self) {
-    return em_Val_as(BluetoothServiceDataMap, em_Val_get(Event_as_val(self->inner), "serviceData"));
+    return em_Val_as(BluetoothServiceDataMap, em_Val_get(Event_as_val(self->inner), em_Val_from("serviceData")));
 }
 

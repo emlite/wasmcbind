@@ -15,16 +15,11 @@ typedef struct XRRigidTransform XRRigidTransform;
 typedef struct XRSession XRSession;
 
 
-typedef struct {
-  em_Val inner;
-} XRMediaQuadLayerInit;
-
-
 DECLARE_EMLITE_TYPE(XRMediaQuadLayerInit, em_Val);
 
 XRRigidTransform XRMediaQuadLayerInit_transform( const XRMediaQuadLayerInit *self);
 
-void XRMediaQuadLayerInit_set_transform(XRMediaQuadLayerInit* self, const XRRigidTransform* value);
+void XRMediaQuadLayerInit_set_transform(XRMediaQuadLayerInit* self, XRRigidTransform * value);
 
 float XRMediaQuadLayerInit_width( const XRMediaQuadLayerInit *self);
 
@@ -33,16 +28,11 @@ void XRMediaQuadLayerInit_set_width(XRMediaQuadLayerInit* self, float value);
 float XRMediaQuadLayerInit_height( const XRMediaQuadLayerInit *self);
 
 void XRMediaQuadLayerInit_set_height(XRMediaQuadLayerInit* self, float value);
-typedef struct {
-  em_Val inner;
-} XRMediaCylinderLayerInit;
-
-
 DECLARE_EMLITE_TYPE(XRMediaCylinderLayerInit, em_Val);
 
 XRRigidTransform XRMediaCylinderLayerInit_transform( const XRMediaCylinderLayerInit *self);
 
-void XRMediaCylinderLayerInit_set_transform(XRMediaCylinderLayerInit* self, const XRRigidTransform* value);
+void XRMediaCylinderLayerInit_set_transform(XRMediaCylinderLayerInit* self, XRRigidTransform * value);
 
 float XRMediaCylinderLayerInit_radius( const XRMediaCylinderLayerInit *self);
 
@@ -55,16 +45,11 @@ void XRMediaCylinderLayerInit_set_centralAngle(XRMediaCylinderLayerInit* self, f
 float XRMediaCylinderLayerInit_aspectRatio( const XRMediaCylinderLayerInit *self);
 
 void XRMediaCylinderLayerInit_set_aspectRatio(XRMediaCylinderLayerInit* self, float value);
-typedef struct {
-  em_Val inner;
-} XRMediaEquirectLayerInit;
-
-
 DECLARE_EMLITE_TYPE(XRMediaEquirectLayerInit, em_Val);
 
 XRRigidTransform XRMediaEquirectLayerInit_transform( const XRMediaEquirectLayerInit *self);
 
-void XRMediaEquirectLayerInit_set_transform(XRMediaEquirectLayerInit* self, const XRRigidTransform* value);
+void XRMediaEquirectLayerInit_set_transform(XRMediaEquirectLayerInit* self, XRRigidTransform * value);
 
 float XRMediaEquirectLayerInit_radius( const XRMediaEquirectLayerInit *self);
 
@@ -81,23 +66,18 @@ void XRMediaEquirectLayerInit_set_upperVerticalAngle(XRMediaEquirectLayerInit* s
 float XRMediaEquirectLayerInit_lowerVerticalAngle( const XRMediaEquirectLayerInit *self);
 
 void XRMediaEquirectLayerInit_set_lowerVerticalAngle(XRMediaEquirectLayerInit* self, float value);
-typedef struct {
-  em_Val inner;
-} XRMediaBinding;
-
-
 DECLARE_EMLITE_TYPE(XRMediaBinding, em_Val);
 
-XRMediaBinding XRMediaBinding_new(const XRSession* session);
+XRMediaBinding XRMediaBinding_new(XRSession * session);
 
-XRQuadLayer XRMediaBinding_createQuadLayer(XRMediaBinding* self , const HTMLVideoElement* video);
+XRQuadLayer XRMediaBinding_createQuadLayer0(XRMediaBinding* self , HTMLVideoElement * video);
 
-XRQuadLayer XRMediaBinding_createQuadLayer(XRMediaBinding* self , const HTMLVideoElement* video, const XRMediaQuadLayerInit* init);
+XRQuadLayer XRMediaBinding_createQuadLayer1(XRMediaBinding* self , HTMLVideoElement * video, XRMediaQuadLayerInit * init);
 
-XRCylinderLayer XRMediaBinding_createCylinderLayer(XRMediaBinding* self , const HTMLVideoElement* video);
+XRCylinderLayer XRMediaBinding_createCylinderLayer0(XRMediaBinding* self , HTMLVideoElement * video);
 
-XRCylinderLayer XRMediaBinding_createCylinderLayer(XRMediaBinding* self , const HTMLVideoElement* video, const XRMediaCylinderLayerInit* init);
+XRCylinderLayer XRMediaBinding_createCylinderLayer1(XRMediaBinding* self , HTMLVideoElement * video, XRMediaCylinderLayerInit * init);
 
-XREquirectLayer XRMediaBinding_createEquirectLayer(XRMediaBinding* self , const HTMLVideoElement* video);
+XREquirectLayer XRMediaBinding_createEquirectLayer0(XRMediaBinding* self , HTMLVideoElement * video);
 
-XREquirectLayer XRMediaBinding_createEquirectLayer(XRMediaBinding* self , const HTMLVideoElement* video, const XRMediaEquirectLayerInit* init);
+XREquirectLayer XRMediaBinding_createEquirectLayer1(XRMediaBinding* self , HTMLVideoElement * video, XRMediaEquirectLayerInit * init);

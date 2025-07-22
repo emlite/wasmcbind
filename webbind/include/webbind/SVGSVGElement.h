@@ -23,11 +23,6 @@ typedef struct SVGAnimatedRect SVGAnimatedRect;
 typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
 
 
-typedef struct {
-  em_Val inner;
-} DOMMatrix2DInit;
-
-
 DECLARE_EMLITE_TYPE(DOMMatrix2DInit, em_Val);
 
 double DOMMatrix2DInit_a( const DOMMatrix2DInit *self);
@@ -77,11 +72,6 @@ void DOMMatrix2DInit_set_m41(DOMMatrix2DInit* self, double value);
 double DOMMatrix2DInit_m42( const DOMMatrix2DInit *self);
 
 void DOMMatrix2DInit_set_m42(DOMMatrix2DInit* self, double value);
-typedef struct {
-  SVGGraphicsElement inner;
-} SVGSVGElement;
-
-
 DECLARE_EMLITE_TYPE(SVGSVGElement, SVGGraphicsElement);
 
 SVGAnimatedLength SVGSVGElement_x( const SVGSVGElement *self);
@@ -98,13 +88,13 @@ void SVGSVGElement_set_currentScale(SVGSVGElement* self, float value);
 
 DOMPointReadOnly SVGSVGElement_currentTranslate( const SVGSVGElement *self);
 
-NodeList SVGSVGElement_getIntersectionList(SVGSVGElement* self , const DOMRectReadOnly* rect, const SVGElement* referenceElement);
+NodeList SVGSVGElement_getIntersectionList(SVGSVGElement* self , DOMRectReadOnly * rect, SVGElement * referenceElement);
 
-NodeList SVGSVGElement_getEnclosureList(SVGSVGElement* self , const DOMRectReadOnly* rect, const SVGElement* referenceElement);
+NodeList SVGSVGElement_getEnclosureList(SVGSVGElement* self , DOMRectReadOnly * rect, SVGElement * referenceElement);
 
-bool SVGSVGElement_checkIntersection(SVGSVGElement* self , const SVGElement* element, const DOMRectReadOnly* rect);
+bool SVGSVGElement_checkIntersection(SVGSVGElement* self , SVGElement * element, DOMRectReadOnly * rect);
 
-bool SVGSVGElement_checkEnclosure(SVGSVGElement* self , const SVGElement* element, const DOMRectReadOnly* rect);
+bool SVGSVGElement_checkEnclosure(SVGSVGElement* self , SVGElement * element, DOMRectReadOnly * rect);
 
 jb_Undefined SVGSVGElement_deselectAll(SVGSVGElement* self );
 
@@ -122,11 +112,11 @@ DOMRect SVGSVGElement_createSVGRect(SVGSVGElement* self );
 
 SVGTransform SVGSVGElement_createSVGTransform(SVGSVGElement* self );
 
-SVGTransform SVGSVGElement_createSVGTransformFromMatrix(SVGSVGElement* self );
+SVGTransform SVGSVGElement_createSVGTransformFromMatrix0(SVGSVGElement* self );
 
-SVGTransform SVGSVGElement_createSVGTransformFromMatrix(SVGSVGElement* self , const DOMMatrix2DInit* matrix);
+SVGTransform SVGSVGElement_createSVGTransformFromMatrix1(SVGSVGElement* self , DOMMatrix2DInit * matrix);
 
-Element SVGSVGElement_getElementById(SVGSVGElement* self , const jb_DOMString* elementId);
+Element SVGSVGElement_getElementById(SVGSVGElement* self , jb_DOMString * elementId);
 
 unsigned long SVGSVGElement_suspendRedraw(SVGSVGElement* self , unsigned long maxWaitMilliseconds);
 
@@ -152,4 +142,4 @@ SVGAnimatedPreserveAspectRatio SVGSVGElement_preserveAspectRatio( const SVGSVGEl
 
 jb_Any SVGSVGElement_onportalactivate( const SVGSVGElement *self);
 
-void SVGSVGElement_set_onportalactivate(SVGSVGElement* self, const jb_Any* value);
+void SVGSVGElement_set_onportalactivate(SVGSVGElement* self, jb_Any * value);

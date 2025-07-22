@@ -10,14 +10,9 @@ typedef struct BluetoothManufacturerDataMap BluetoothManufacturerDataMap;
 typedef struct BluetoothServiceDataMap BluetoothServiceDataMap;
 
 
-typedef struct {
-  Event inner;
-} BluetoothAdvertisingEvent;
-
-
 DECLARE_EMLITE_TYPE(BluetoothAdvertisingEvent, Event);
 
-BluetoothAdvertisingEvent BluetoothAdvertisingEvent_new(const jb_DOMString* type, const jb_Any* init);
+BluetoothAdvertisingEvent BluetoothAdvertisingEvent_new(jb_DOMString * type, jb_Any * init);
 
 BluetoothDevice BluetoothAdvertisingEvent_device( const BluetoothAdvertisingEvent *self);
 

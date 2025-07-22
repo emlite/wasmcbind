@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} ContactAddress;
-
-
 DECLARE_EMLITE_TYPE(ContactAddress, em_Val);
 
 jb_Object ContactAddress_toJSON(ContactAddress* self );

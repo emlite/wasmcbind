@@ -5,17 +5,18 @@
 DEFINE_EMLITE_TYPE(NDEFReadingEvent, Event);
 
 
-NDEFReadingEvent NDEFReadingEvent_new(const jb_DOMString* type, const jb_Any* readingEventInitDict) : Event(em_Val_global("NDEFReadingEvent").new_(em_Val_from(type), em_Val_from(readingEventInitDict))) {
-        return NDEFReadingEvent(em_Val_new(em_Val_global("NDEFReadingEvent", em_Val_from(type), em_Val_from(readingEventInitDict)));
+NDEFReadingEvent NDEFReadingEvent_new(jb_DOMString * type, jb_Any * readingEventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("NDEFReadingEvent") , em_Val_from(type), em_Val_from(readingEventInitDict));
+        return NDEFReadingEvent_from_val(&vv);
       }
 
 
 jb_DOMString NDEFReadingEvent_serialNumber(const NDEFReadingEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), "serialNumber"));
+    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("serialNumber")));
 }
 
 
 NDEFMessage NDEFReadingEvent_message(const NDEFReadingEvent *self) {
-    return em_Val_as(NDEFMessage, em_Val_get(Event_as_val(self->inner), "message"));
+    return em_Val_as(NDEFMessage, em_Val_get(Event_as_val(self->inner), em_Val_from("message")));
 }
 

@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Sensor inner;
-} UncalibratedMagnetometer;
-
-
 DECLARE_EMLITE_TYPE(UncalibratedMagnetometer, Sensor);
 
-UncalibratedMagnetometer UncalibratedMagnetometer_new();
+UncalibratedMagnetometer UncalibratedMagnetometer_new0();
 
-UncalibratedMagnetometer UncalibratedMagnetometer_new(const jb_Any* sensorOptions);
+UncalibratedMagnetometer UncalibratedMagnetometer_new1(jb_Any * sensorOptions);
 
 double UncalibratedMagnetometer_x( const UncalibratedMagnetometer *self);
 

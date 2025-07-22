@@ -13,11 +13,6 @@ typedef struct SerialOutputSignals SerialOutputSignals;
 typedef struct SerialInputSignals SerialInputSignals;
 
 
-typedef struct {
-  em_Val inner;
-} SerialPortInfo;
-
-
 DECLARE_EMLITE_TYPE(SerialPortInfo, em_Val);
 
 unsigned short SerialPortInfo_usbVendorId( const SerialPortInfo *self);
@@ -30,12 +25,7 @@ void SerialPortInfo_set_usbProductId(SerialPortInfo* self, unsigned short value)
 
 jb_Any SerialPortInfo_bluetoothServiceClassId( const SerialPortInfo *self);
 
-void SerialPortInfo_set_bluetoothServiceClassId(SerialPortInfo* self, const jb_Any* value);
-typedef struct {
-  em_Val inner;
-} SerialOptions;
-
-
+void SerialPortInfo_set_bluetoothServiceClassId(SerialPortInfo* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(SerialOptions, em_Val);
 
 unsigned long SerialOptions_baudRate( const SerialOptions *self);
@@ -52,7 +42,7 @@ void SerialOptions_set_stopBits(SerialOptions* self, unsigned char value);
 
 ParityType SerialOptions_parity( const SerialOptions *self);
 
-void SerialOptions_set_parity(SerialOptions* self, const ParityType* value);
+void SerialOptions_set_parity(SerialOptions* self, ParityType * value);
 
 unsigned long SerialOptions_bufferSize( const SerialOptions *self);
 
@@ -60,12 +50,7 @@ void SerialOptions_set_bufferSize(SerialOptions* self, unsigned long value);
 
 FlowControlType SerialOptions_flowControl( const SerialOptions *self);
 
-void SerialOptions_set_flowControl(SerialOptions* self, const FlowControlType* value);
-typedef struct {
-  em_Val inner;
-} SerialOutputSignals;
-
-
+void SerialOptions_set_flowControl(SerialOptions* self, FlowControlType * value);
 DECLARE_EMLITE_TYPE(SerialOutputSignals, em_Val);
 
 bool SerialOutputSignals_dataTerminalReady( const SerialOutputSignals *self);
@@ -79,11 +64,6 @@ void SerialOutputSignals_set_requestToSend(SerialOutputSignals* self, bool value
 bool SerialOutputSignals_break_( const SerialOutputSignals *self);
 
 void SerialOutputSignals_set_break_(SerialOutputSignals* self, bool value);
-typedef struct {
-  em_Val inner;
-} SerialInputSignals;
-
-
 DECLARE_EMLITE_TYPE(SerialInputSignals, em_Val);
 
 bool SerialInputSignals_dataCarrierDetect( const SerialInputSignals *self);
@@ -101,20 +81,15 @@ void SerialInputSignals_set_ringIndicator(SerialInputSignals* self, bool value);
 bool SerialInputSignals_dataSetReady( const SerialInputSignals *self);
 
 void SerialInputSignals_set_dataSetReady(SerialInputSignals* self, bool value);
-typedef struct {
-  EventTarget inner;
-} SerialPort;
-
-
 DECLARE_EMLITE_TYPE(SerialPort, EventTarget);
 
 jb_Any SerialPort_onconnect( const SerialPort *self);
 
-void SerialPort_set_onconnect(SerialPort* self, const jb_Any* value);
+void SerialPort_set_onconnect(SerialPort* self, jb_Any * value);
 
 jb_Any SerialPort_ondisconnect( const SerialPort *self);
 
-void SerialPort_set_ondisconnect(SerialPort* self, const jb_Any* value);
+void SerialPort_set_ondisconnect(SerialPort* self, jb_Any * value);
 
 bool SerialPort_connected( const SerialPort *self);
 
@@ -124,11 +99,11 @@ WritableStream SerialPort_writable( const SerialPort *self);
 
 SerialPortInfo SerialPort_getInfo(SerialPort* self );
 
-jb_Promise SerialPort_open(SerialPort* self , const SerialOptions* options);
+jb_Promise SerialPort_open(SerialPort* self , SerialOptions * options);
 
-jb_Promise SerialPort_setSignals(SerialPort* self );
+jb_Promise SerialPort_setSignals0(SerialPort* self );
 
-jb_Promise SerialPort_setSignals(SerialPort* self , const SerialOutputSignals* signals);
+jb_Promise SerialPort_setSignals1(SerialPort* self , SerialOutputSignals * signals);
 
 jb_Promise SerialPort_getSignals(SerialPort* self );
 

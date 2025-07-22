@@ -9,20 +9,15 @@ typedef struct GPURequestAdapterOptions GPURequestAdapterOptions;
 typedef struct WGSLLanguageFeatures WGSLLanguageFeatures;
 
 
-typedef struct {
-  em_Val inner;
-} GPURequestAdapterOptions;
-
-
 DECLARE_EMLITE_TYPE(GPURequestAdapterOptions, em_Val);
 
 jb_DOMString GPURequestAdapterOptions_featureLevel( const GPURequestAdapterOptions *self);
 
-void GPURequestAdapterOptions_set_featureLevel(GPURequestAdapterOptions* self, const jb_DOMString* value);
+void GPURequestAdapterOptions_set_featureLevel(GPURequestAdapterOptions* self, jb_DOMString * value);
 
 GPUPowerPreference GPURequestAdapterOptions_powerPreference( const GPURequestAdapterOptions *self);
 
-void GPURequestAdapterOptions_set_powerPreference(GPURequestAdapterOptions* self, const GPUPowerPreference* value);
+void GPURequestAdapterOptions_set_powerPreference(GPURequestAdapterOptions* self, GPUPowerPreference * value);
 
 bool GPURequestAdapterOptions_forceFallbackAdapter( const GPURequestAdapterOptions *self);
 
@@ -31,16 +26,11 @@ void GPURequestAdapterOptions_set_forceFallbackAdapter(GPURequestAdapterOptions*
 bool GPURequestAdapterOptions_xrCompatible( const GPURequestAdapterOptions *self);
 
 void GPURequestAdapterOptions_set_xrCompatible(GPURequestAdapterOptions* self, bool value);
-typedef struct {
-  em_Val inner;
-} GPU;
-
-
 DECLARE_EMLITE_TYPE(GPU, em_Val);
 
-jb_Promise GPU_requestAdapter(GPU* self );
+jb_Promise GPU_requestAdapter0(GPU* self );
 
-jb_Promise GPU_requestAdapter(GPU* self , const GPURequestAdapterOptions* options);
+jb_Promise GPU_requestAdapter1(GPU* self , GPURequestAdapterOptions * options);
 
 GPUTextureFormat GPU_getPreferredCanvasFormat(GPU* self );
 

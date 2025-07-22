@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  EventTarget inner;
-} XRSpace;
-
-
 DECLARE_EMLITE_TYPE(XRSpace, EventTarget);

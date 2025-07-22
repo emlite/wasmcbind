@@ -11,11 +11,6 @@ typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEGaussianBlurElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEGaussianBlurElement, SVGElement);
 
 SVGAnimatedString SVGFEGaussianBlurElement_in1( const SVGFEGaussianBlurElement *self);

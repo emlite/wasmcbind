@@ -10,11 +10,6 @@ typedef struct SVGAnimatedNumber SVGAnimatedNumber;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEDropShadowElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEDropShadowElement, SVGElement);
 
 SVGAnimatedString SVGFEDropShadowElement_in1( const SVGFEDropShadowElement *self);

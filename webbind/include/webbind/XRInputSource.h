@@ -9,11 +9,6 @@ typedef struct Gamepad Gamepad;
 typedef struct XRHand XRHand;
 
 
-typedef struct {
-  em_Val inner;
-} XRInputSource;
-
-
 DECLARE_EMLITE_TYPE(XRInputSource, em_Val);
 
 XRHandedness XRInputSource_handedness( const XRInputSource *self);

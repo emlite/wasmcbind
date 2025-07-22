@@ -8,11 +8,6 @@
 typedef struct SVGAnimatedNumber SVGAnimatedNumber;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFESpotLightElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFESpotLightElement, SVGElement);
 
 SVGAnimatedNumber SVGFESpotLightElement_x( const SVGFESpotLightElement *self);

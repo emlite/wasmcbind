@@ -5,17 +5,19 @@
 DEFINE_EMLITE_TYPE(PageRevealEvent, Event);
 
 
-PageRevealEvent PageRevealEvent_new(const jb_DOMString* type) : Event(em_Val_global("PageRevealEvent").new_(em_Val_from(type))) {
-        return PageRevealEvent(em_Val_new(em_Val_global("PageRevealEvent", em_Val_from(type)));
+PageRevealEvent PageRevealEvent_new0(jb_DOMString * type) {
+        em_Val vv = em_Val_new(em_Val_global("PageRevealEvent") , em_Val_from(type));
+        return PageRevealEvent_from_val(&vv);
       }
 
 
-PageRevealEvent PageRevealEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict) : Event(em_Val_global("PageRevealEvent").new_(em_Val_from(type), em_Val_from(eventInitDict))) {
-        return PageRevealEvent(em_Val_new(em_Val_global("PageRevealEvent", em_Val_from(type), em_Val_from(eventInitDict)));
+PageRevealEvent PageRevealEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("PageRevealEvent") , em_Val_from(type), em_Val_from(eventInitDict));
+        return PageRevealEvent_from_val(&vv);
       }
 
 
 ViewTransition PageRevealEvent_viewTransition(const PageRevealEvent *self) {
-    return em_Val_as(ViewTransition, em_Val_get(Event_as_val(self->inner), "viewTransition"));
+    return em_Val_as(ViewTransition, em_Val_get(Event_as_val(self->inner), em_Val_from("viewTransition")));
 }
 

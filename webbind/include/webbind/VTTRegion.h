@@ -5,18 +5,13 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} VTTRegion;
-
-
 DECLARE_EMLITE_TYPE(VTTRegion, em_Val);
 
 VTTRegion VTTRegion_new();
 
 jb_DOMString VTTRegion_id( const VTTRegion *self);
 
-void VTTRegion_set_id(VTTRegion* self, const jb_DOMString* value);
+void VTTRegion_set_id(VTTRegion* self, jb_DOMString * value);
 
 double VTTRegion_width( const VTTRegion *self);
 
@@ -44,4 +39,4 @@ void VTTRegion_set_viewportAnchorY(VTTRegion* self, double value);
 
 ScrollSetting VTTRegion_scroll( const VTTRegion *self);
 
-void VTTRegion_set_scroll(VTTRegion* self, const ScrollSetting* value);
+void VTTRegion_set_scroll(VTTRegion* self, ScrollSetting * value);

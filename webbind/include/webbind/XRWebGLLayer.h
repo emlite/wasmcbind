@@ -11,16 +11,11 @@ typedef struct XRView XRView;
 typedef struct XRSession XRSession;
 
 
-typedef struct {
-  XRLayer inner;
-} XRWebGLLayer;
-
-
 DECLARE_EMLITE_TYPE(XRWebGLLayer, XRLayer);
 
-XRWebGLLayer XRWebGLLayer_new(const XRSession* session, const jb_Any* context);
+XRWebGLLayer XRWebGLLayer_new0(XRSession * session, jb_Any * context);
 
-XRWebGLLayer XRWebGLLayer_new(const XRSession* session, const jb_Any* context, const jb_Any* layerInit);
+XRWebGLLayer XRWebGLLayer_new1(XRSession * session, jb_Any * context, jb_Any * layerInit);
 
 bool XRWebGLLayer_antialias( const XRWebGLLayer *self);
 
@@ -36,6 +31,6 @@ unsigned long XRWebGLLayer_framebufferWidth( const XRWebGLLayer *self);
 
 unsigned long XRWebGLLayer_framebufferHeight( const XRWebGLLayer *self);
 
-XRViewport XRWebGLLayer_getViewport(XRWebGLLayer* self , const XRView* view);
+XRViewport XRWebGLLayer_getViewport(XRWebGLLayer* self , XRView * view);
 
-double XRWebGLLayer_getNativeFramebufferScaleFactor(XRWebGLLayer* self , const XRSession* session);
+double XRWebGLLayer_getNativeFramebufferScaleFactor(XRWebGLLayer* self , XRSession * session);

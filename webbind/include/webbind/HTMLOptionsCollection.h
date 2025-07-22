@@ -8,20 +8,15 @@
 typedef struct HTMLOptionElement HTMLOptionElement;
 
 
-typedef struct {
-  HTMLCollection inner;
-} HTMLOptionsCollection;
-
-
 DECLARE_EMLITE_TYPE(HTMLOptionsCollection, HTMLCollection);
 
 unsigned long HTMLOptionsCollection_length( const HTMLOptionsCollection *self);
 
 void HTMLOptionsCollection_set_length(HTMLOptionsCollection* self, unsigned long value);
 
-jb_Undefined HTMLOptionsCollection_add(HTMLOptionsCollection* self , const jb_Any* element);
+jb_Undefined HTMLOptionsCollection_add0(HTMLOptionsCollection* self , jb_Any * element);
 
-jb_Undefined HTMLOptionsCollection_add(HTMLOptionsCollection* self , const jb_Any* element, const jb_Any* before);
+jb_Undefined HTMLOptionsCollection_add1(HTMLOptionsCollection* self , jb_Any * element, jb_Any * before);
 
 jb_Undefined HTMLOptionsCollection_remove(HTMLOptionsCollection* self , long index);
 

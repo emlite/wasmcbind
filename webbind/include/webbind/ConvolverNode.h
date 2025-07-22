@@ -8,20 +8,15 @@
 typedef struct AudioBuffer AudioBuffer;
 
 
-typedef struct {
-  AudioNode inner;
-} ConvolverNode;
-
-
 DECLARE_EMLITE_TYPE(ConvolverNode, AudioNode);
 
-ConvolverNode ConvolverNode_new(const BaseAudioContext* context);
+ConvolverNode ConvolverNode_new0(BaseAudioContext * context);
 
-ConvolverNode ConvolverNode_new(const BaseAudioContext* context, const jb_Any* options);
+ConvolverNode ConvolverNode_new1(BaseAudioContext * context, jb_Any * options);
 
 AudioBuffer ConvolverNode_buffer( const ConvolverNode *self);
 
-void ConvolverNode_set_buffer(ConvolverNode* self, const AudioBuffer* value);
+void ConvolverNode_set_buffer(ConvolverNode* self, AudioBuffer * value);
 
 bool ConvolverNode_normalize( const ConvolverNode *self);
 

@@ -7,11 +7,6 @@
 typedef struct Node Node;
 
 
-typedef struct {
-  em_Val inner;
-} AbstractRange;
-
-
 DECLARE_EMLITE_TYPE(AbstractRange, em_Val);
 
 Node AbstractRange_startContainer( const AbstractRange *self);

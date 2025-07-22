@@ -19,11 +19,6 @@ typedef struct GPU GPU;
 typedef struct ML ML;
 
 
-typedef struct {
-  em_Val inner;
-} WorkerNavigator;
-
-
 DECLARE_EMLITE_TYPE(WorkerNavigator, em_Val);
 
 MediaCapabilities WorkerNavigator_mediaCapabilities( const WorkerNavigator *self);
@@ -38,9 +33,9 @@ HID WorkerNavigator_hid( const WorkerNavigator *self);
 
 USB WorkerNavigator_usb( const WorkerNavigator *self);
 
-jb_Promise WorkerNavigator_setAppBadge(WorkerNavigator* self );
+jb_Promise WorkerNavigator_setAppBadge0(WorkerNavigator* self );
 
-jb_Promise WorkerNavigator_setAppBadge(WorkerNavigator* self , long long contents);
+jb_Promise WorkerNavigator_setAppBadge1(WorkerNavigator* self , long long contents);
 
 jb_Promise WorkerNavigator_clearAppBadge(WorkerNavigator* self );
 

@@ -8,11 +8,6 @@
 typedef struct Element Element;
 
 
-typedef struct {
-  Node inner;
-} Attr;
-
-
 DECLARE_EMLITE_TYPE(Attr, Node);
 
 jb_DOMString Attr_namespaceURI( const Attr *self);
@@ -25,7 +20,7 @@ jb_DOMString Attr_name( const Attr *self);
 
 jb_DOMString Attr_value( const Attr *self);
 
-void Attr_set_value(Attr* self, const jb_DOMString* value);
+void Attr_set_value(Attr* self, jb_DOMString * value);
 
 Element Attr_ownerElement( const Attr *self);
 

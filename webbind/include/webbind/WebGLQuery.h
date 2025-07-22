@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  WebGLObject inner;
-} WebGLQuery;
-
-
 DECLARE_EMLITE_TYPE(WebGLQuery, WebGLObject);

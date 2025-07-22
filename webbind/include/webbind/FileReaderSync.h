@@ -7,21 +7,16 @@
 typedef struct Blob Blob;
 
 
-typedef struct {
-  em_Val inner;
-} FileReaderSync;
-
-
 DECLARE_EMLITE_TYPE(FileReaderSync, em_Val);
 
 FileReaderSync FileReaderSync_new();
 
-jb_ArrayBuffer FileReaderSync_readAsArrayBuffer(FileReaderSync* self , const Blob* blob);
+jb_ArrayBuffer FileReaderSync_readAsArrayBuffer(FileReaderSync* self , Blob * blob);
 
-jb_DOMString FileReaderSync_readAsBinaryString(FileReaderSync* self , const Blob* blob);
+jb_DOMString FileReaderSync_readAsBinaryString(FileReaderSync* self , Blob * blob);
 
-jb_DOMString FileReaderSync_readAsText(FileReaderSync* self , const Blob* blob);
+jb_DOMString FileReaderSync_readAsText0(FileReaderSync* self , Blob * blob);
 
-jb_DOMString FileReaderSync_readAsText(FileReaderSync* self , const Blob* blob, const jb_DOMString* encoding);
+jb_DOMString FileReaderSync_readAsText1(FileReaderSync* self , Blob * blob, jb_DOMString * encoding);
 
-jb_DOMString FileReaderSync_readAsDataURL(FileReaderSync* self , const Blob* blob);
+jb_DOMString FileReaderSync_readAsDataURL(FileReaderSync* self , Blob * blob);

@@ -7,11 +7,6 @@
 typedef struct Blob Blob;
 
 
-typedef struct {
-  em_Val inner;
-} FontData;
-
-
 DECLARE_EMLITE_TYPE(FontData, em_Val);
 
 jb_Promise FontData_blob(FontData* self );

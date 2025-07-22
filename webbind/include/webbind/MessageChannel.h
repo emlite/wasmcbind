@@ -7,11 +7,6 @@
 typedef struct MessagePort MessagePort;
 
 
-typedef struct {
-  em_Val inner;
-} MessageChannel;
-
-
 DECLARE_EMLITE_TYPE(MessageChannel, em_Val);
 
 MessageChannel MessageChannel_new();

@@ -11,11 +11,6 @@ typedef struct SVGAnimatedNumberList SVGAnimatedNumberList;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEColorMatrixElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEColorMatrixElement, SVGElement);
 
 SVGAnimatedString SVGFEColorMatrixElement_in1( const SVGFEColorMatrixElement *self);

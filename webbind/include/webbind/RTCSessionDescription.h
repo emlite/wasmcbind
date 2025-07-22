@@ -6,14 +6,9 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} RTCSessionDescription;
-
-
 DECLARE_EMLITE_TYPE(RTCSessionDescription, em_Val);
 
-RTCSessionDescription RTCSessionDescription_new(const RTCSessionDescriptionInit* descriptionInitDict);
+RTCSessionDescription RTCSessionDescription_new(RTCSessionDescriptionInit * descriptionInitDict);
 
 RTCSdpType RTCSessionDescription_type( const RTCSessionDescription *self);
 

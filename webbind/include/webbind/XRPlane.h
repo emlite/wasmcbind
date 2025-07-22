@@ -8,11 +8,6 @@ typedef struct XRSpace XRSpace;
 typedef struct DOMPointReadOnly DOMPointReadOnly;
 
 
-typedef struct {
-  em_Val inner;
-} XRPlane;
-
-
 DECLARE_EMLITE_TYPE(XRPlane, em_Val);
 
 XRSpace XRPlane_planeSpace( const XRPlane *self);

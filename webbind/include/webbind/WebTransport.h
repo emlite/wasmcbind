@@ -14,11 +14,6 @@ typedef struct WebTransportSendStream WebTransportSendStream;
 typedef struct WebTransportSendGroup WebTransportSendGroup;
 
 
-typedef struct {
-  em_Val inner;
-} WebTransportConnectionStats;
-
-
 DECLARE_EMLITE_TYPE(WebTransportConnectionStats, em_Val);
 
 long long WebTransportConnectionStats_bytesSent( const WebTransportConnectionStats *self);
@@ -47,19 +42,19 @@ void WebTransportConnectionStats_set_packetsReceived(WebTransportConnectionStats
 
 jb_Any WebTransportConnectionStats_smoothedRtt( const WebTransportConnectionStats *self);
 
-void WebTransportConnectionStats_set_smoothedRtt(WebTransportConnectionStats* self, const jb_Any* value);
+void WebTransportConnectionStats_set_smoothedRtt(WebTransportConnectionStats* self, jb_Any * value);
 
 jb_Any WebTransportConnectionStats_rttVariation( const WebTransportConnectionStats *self);
 
-void WebTransportConnectionStats_set_rttVariation(WebTransportConnectionStats* self, const jb_Any* value);
+void WebTransportConnectionStats_set_rttVariation(WebTransportConnectionStats* self, jb_Any * value);
 
 jb_Any WebTransportConnectionStats_minRtt( const WebTransportConnectionStats *self);
 
-void WebTransportConnectionStats_set_minRtt(WebTransportConnectionStats* self, const jb_Any* value);
+void WebTransportConnectionStats_set_minRtt(WebTransportConnectionStats* self, jb_Any * value);
 
 jb_Any WebTransportConnectionStats_datagrams( const WebTransportConnectionStats *self);
 
-void WebTransportConnectionStats_set_datagrams(WebTransportConnectionStats* self, const jb_Any* value);
+void WebTransportConnectionStats_set_datagrams(WebTransportConnectionStats* self, jb_Any * value);
 
 long long WebTransportConnectionStats_estimatedSendRate( const WebTransportConnectionStats *self);
 
@@ -68,11 +63,6 @@ void WebTransportConnectionStats_set_estimatedSendRate(WebTransportConnectionSta
 bool WebTransportConnectionStats_atSendCapacity( const WebTransportConnectionStats *self);
 
 void WebTransportConnectionStats_set_atSendCapacity(WebTransportConnectionStats* self, bool value);
-typedef struct {
-  em_Val inner;
-} WebTransportCloseInfo;
-
-
 DECLARE_EMLITE_TYPE(WebTransportCloseInfo, em_Val);
 
 unsigned long WebTransportCloseInfo_closeCode( const WebTransportCloseInfo *self);
@@ -81,33 +71,23 @@ void WebTransportCloseInfo_set_closeCode(WebTransportCloseInfo* self, unsigned l
 
 jb_USVString WebTransportCloseInfo_reason( const WebTransportCloseInfo *self);
 
-void WebTransportCloseInfo_set_reason(WebTransportCloseInfo* self, const jb_USVString* value);
-typedef struct {
-  em_Val inner;
-} WebTransportSendStreamOptions;
-
-
+void WebTransportCloseInfo_set_reason(WebTransportCloseInfo* self, jb_USVString * value);
 DECLARE_EMLITE_TYPE(WebTransportSendStreamOptions, em_Val);
 
 bool WebTransportSendStreamOptions_waitUntilAvailable( const WebTransportSendStreamOptions *self);
 
 void WebTransportSendStreamOptions_set_waitUntilAvailable(WebTransportSendStreamOptions* self, bool value);
-typedef struct {
-  em_Val inner;
-} WebTransport;
-
-
 DECLARE_EMLITE_TYPE(WebTransport, em_Val);
 
-WebTransport WebTransport_new(const jb_USVString* url);
+WebTransport WebTransport_new0(jb_USVString * url);
 
-WebTransport WebTransport_new(const jb_USVString* url, const jb_Any* options);
+WebTransport WebTransport_new1(jb_USVString * url, jb_Any * options);
 
 jb_Promise WebTransport_getStats(WebTransport* self );
 
-jb_Promise WebTransport_exportKeyingMaterial(WebTransport* self , const jb_Any* label);
+jb_Promise WebTransport_exportKeyingMaterial0(WebTransport* self , jb_Any * label);
 
-jb_Promise WebTransport_exportKeyingMaterial(WebTransport* self , const jb_Any* label, const jb_Any* context);
+jb_Promise WebTransport_exportKeyingMaterial1(WebTransport* self , jb_Any * label, jb_Any * context);
 
 jb_Promise WebTransport_ready( const WebTransport *self);
 
@@ -129,21 +109,21 @@ jb_Promise WebTransport_closed( const WebTransport *self);
 
 jb_Promise WebTransport_draining( const WebTransport *self);
 
-jb_Undefined WebTransport_close(WebTransport* self );
+jb_Undefined WebTransport_close0(WebTransport* self );
 
-jb_Undefined WebTransport_close(WebTransport* self , const WebTransportCloseInfo* closeInfo);
+jb_Undefined WebTransport_close1(WebTransport* self , WebTransportCloseInfo * closeInfo);
 
 WebTransportDatagramDuplexStream WebTransport_datagrams( const WebTransport *self);
 
-jb_Promise WebTransport_createBidirectionalStream(WebTransport* self );
+jb_Promise WebTransport_createBidirectionalStream0(WebTransport* self );
 
-jb_Promise WebTransport_createBidirectionalStream(WebTransport* self , const WebTransportSendStreamOptions* options);
+jb_Promise WebTransport_createBidirectionalStream1(WebTransport* self , WebTransportSendStreamOptions * options);
 
 ReadableStream WebTransport_incomingBidirectionalStreams( const WebTransport *self);
 
-jb_Promise WebTransport_createUnidirectionalStream(WebTransport* self );
+jb_Promise WebTransport_createUnidirectionalStream0(WebTransport* self );
 
-jb_Promise WebTransport_createUnidirectionalStream(WebTransport* self , const WebTransportSendStreamOptions* options);
+jb_Promise WebTransport_createUnidirectionalStream1(WebTransport* self , WebTransportSendStreamOptions * options);
 
 ReadableStream WebTransport_incomingUnidirectionalStreams( const WebTransport *self);
 

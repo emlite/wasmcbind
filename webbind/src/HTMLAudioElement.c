@@ -4,7 +4,8 @@
 DEFINE_EMLITE_TYPE(HTMLAudioElement, HTMLMediaElement);
 
 
-HTMLAudioElement HTMLAudioElement_new() : HTMLMediaElement(em_Val_global("HTMLAudioElement").new_()) {
-        return HTMLAudioElement(em_Val_new(em_Val_global("HTMLAudioElement", ));
+HTMLAudioElement HTMLAudioElement_new() {
+        em_Val vv = em_Val_new(em_Val_global("HTMLAudioElement") );
+        return HTMLAudioElement_from_val(&vv);
       }
 

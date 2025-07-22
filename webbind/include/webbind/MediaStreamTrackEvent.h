@@ -8,13 +8,8 @@
 typedef struct MediaStreamTrack MediaStreamTrack;
 
 
-typedef struct {
-  Event inner;
-} MediaStreamTrackEvent;
-
-
 DECLARE_EMLITE_TYPE(MediaStreamTrackEvent, Event);
 
-MediaStreamTrackEvent MediaStreamTrackEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+MediaStreamTrackEvent MediaStreamTrackEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 MediaStreamTrack MediaStreamTrackEvent_track( const MediaStreamTrackEvent *self);

@@ -11,51 +11,51 @@ DEFINE_EMLITE_TYPE(SVGPatternElement, SVGElement);
 
 
 SVGAnimatedEnumeration SVGPatternElement_patternUnits(const SVGPatternElement *self) {
-    return em_Val_as(SVGAnimatedEnumeration, em_Val_get(SVGElement_as_val(self->inner), "patternUnits"));
+    return em_Val_as(SVGAnimatedEnumeration, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("patternUnits")));
 }
 
 
 SVGAnimatedEnumeration SVGPatternElement_patternContentUnits(const SVGPatternElement *self) {
-    return em_Val_as(SVGAnimatedEnumeration, em_Val_get(SVGElement_as_val(self->inner), "patternContentUnits"));
+    return em_Val_as(SVGAnimatedEnumeration, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("patternContentUnits")));
 }
 
 
 SVGAnimatedTransformList SVGPatternElement_patternTransform(const SVGPatternElement *self) {
-    return em_Val_as(SVGAnimatedTransformList, em_Val_get(SVGElement_as_val(self->inner), "patternTransform"));
+    return em_Val_as(SVGAnimatedTransformList, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("patternTransform")));
 }
 
 
 SVGAnimatedLength SVGPatternElement_x(const SVGPatternElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "x"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("x")));
 }
 
 
 SVGAnimatedLength SVGPatternElement_y(const SVGPatternElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "y"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("y")));
 }
 
 
 SVGAnimatedLength SVGPatternElement_width(const SVGPatternElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "width"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
 SVGAnimatedLength SVGPatternElement_height(const SVGPatternElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "height"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
 SVGAnimatedRect SVGPatternElement_viewBox(const SVGPatternElement *self) {
-    return em_Val_as(SVGAnimatedRect, em_Val_get(SVGElement_as_val(self->inner), "viewBox"));
+    return em_Val_as(SVGAnimatedRect, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("viewBox")));
 }
 
 
 SVGAnimatedPreserveAspectRatio SVGPatternElement_preserveAspectRatio(const SVGPatternElement *self) {
-    return em_Val_as(SVGAnimatedPreserveAspectRatio, em_Val_get(SVGElement_as_val(self->inner), "preserveAspectRatio"));
+    return em_Val_as(SVGAnimatedPreserveAspectRatio, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("preserveAspectRatio")));
 }
 
 
 SVGAnimatedString SVGPatternElement_href(const SVGPatternElement *self) {
-    return em_Val_as(SVGAnimatedString, em_Val_get(SVGElement_as_val(self->inner), "href"));
+    return em_Val_as(SVGAnimatedString, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("href")));
 }
 

@@ -8,11 +8,6 @@ typedef struct ReadableStream ReadableStream;
 typedef struct WritableStream WritableStream;
 
 
-typedef struct {
-  em_Val inner;
-} TextEncoderStream;
-
-
 DECLARE_EMLITE_TYPE(TextEncoderStream, em_Val);
 
 TextEncoderStream TextEncoderStream_new();

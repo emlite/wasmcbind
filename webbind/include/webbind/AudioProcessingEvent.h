@@ -8,14 +8,9 @@
 typedef struct AudioBuffer AudioBuffer;
 
 
-typedef struct {
-  Event inner;
-} AudioProcessingEvent;
-
-
 DECLARE_EMLITE_TYPE(AudioProcessingEvent, Event);
 
-AudioProcessingEvent AudioProcessingEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+AudioProcessingEvent AudioProcessingEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 double AudioProcessingEvent_playbackTime( const AudioProcessingEvent *self);
 

@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  EventTarget inner;
-} NavigationHistoryEntry;
-
-
 DECLARE_EMLITE_TYPE(NavigationHistoryEntry, EventTarget);
 
 jb_USVString NavigationHistoryEntry_url( const NavigationHistoryEntry *self);
@@ -27,4 +22,4 @@ jb_Any NavigationHistoryEntry_getState(NavigationHistoryEntry* self );
 
 jb_Any NavigationHistoryEntry_ondispose( const NavigationHistoryEntry *self);
 
-void NavigationHistoryEntry_set_ondispose(NavigationHistoryEntry* self, const jb_Any* value);
+void NavigationHistoryEntry_set_ondispose(NavigationHistoryEntry* self, jb_Any * value);

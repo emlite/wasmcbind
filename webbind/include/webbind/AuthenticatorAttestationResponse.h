@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  AuthenticatorResponse inner;
-} AuthenticatorAttestationResponse;
-
-
 DECLARE_EMLITE_TYPE(AuthenticatorAttestationResponse, AuthenticatorResponse);
 
 jb_ArrayBuffer AuthenticatorAttestationResponse_attestationObject( const AuthenticatorAttestationResponse *self);

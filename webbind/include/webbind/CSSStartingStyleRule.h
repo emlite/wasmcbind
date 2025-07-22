@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSGroupingRule inner;
-} CSSStartingStyleRule;
-
-
 DECLARE_EMLITE_TYPE(CSSStartingStyleRule, CSSGroupingRule);

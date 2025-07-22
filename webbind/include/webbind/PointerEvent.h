@@ -8,16 +8,11 @@
 typedef struct PointerEvent PointerEvent;
 
 
-typedef struct {
-  MouseEvent inner;
-} PointerEvent;
-
-
 DECLARE_EMLITE_TYPE(PointerEvent, MouseEvent);
 
-PointerEvent PointerEvent_new(const jb_DOMString* type);
+PointerEvent PointerEvent_new0(jb_DOMString * type);
 
-PointerEvent PointerEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+PointerEvent PointerEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 long PointerEvent_pointerId( const PointerEvent *self);
 

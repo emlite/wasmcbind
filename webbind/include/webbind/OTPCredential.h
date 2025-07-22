@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  Credential inner;
-} OTPCredential;
-
-
 DECLARE_EMLITE_TYPE(OTPCredential, Credential);
 
 jb_DOMString OTPCredential_code( const OTPCredential *self);

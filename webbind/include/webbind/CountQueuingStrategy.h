@@ -5,14 +5,9 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} CountQueuingStrategy;
-
-
 DECLARE_EMLITE_TYPE(CountQueuingStrategy, em_Val);
 
-CountQueuingStrategy CountQueuingStrategy_new(const jb_Any* init);
+CountQueuingStrategy CountQueuingStrategy_new(jb_Any * init);
 
 double CountQueuingStrategy_highWaterMark( const CountQueuingStrategy *self);
 

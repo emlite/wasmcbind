@@ -7,11 +7,6 @@
 typedef struct SourceBuffer SourceBuffer;
 
 
-typedef struct {
-  em_Val inner;
-} AudioTrack;
-
-
 DECLARE_EMLITE_TYPE(AudioTrack, em_Val);
 
 jb_DOMString AudioTrack_id( const AudioTrack *self);

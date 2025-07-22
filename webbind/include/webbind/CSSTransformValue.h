@@ -9,14 +9,9 @@ typedef struct CSSTransformComponent CSSTransformComponent;
 typedef struct DOMMatrix DOMMatrix;
 
 
-typedef struct {
-  CSSStyleValue inner;
-} CSSTransformValue;
-
-
 DECLARE_EMLITE_TYPE(CSSTransformValue, CSSStyleValue);
 
-CSSTransformValue CSSTransformValue_new(const jb_Sequence* transforms);
+CSSTransformValue CSSTransformValue_new(jb_Sequence * transforms);
 
 unsigned long CSSTransformValue_length( const CSSTransformValue *self);
 

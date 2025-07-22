@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} AnimationPlaybackEvent;
-
-
 DECLARE_EMLITE_TYPE(AnimationPlaybackEvent, Event);
 
-AnimationPlaybackEvent AnimationPlaybackEvent_new(const jb_DOMString* type);
+AnimationPlaybackEvent AnimationPlaybackEvent_new0(jb_DOMString * type);
 
-AnimationPlaybackEvent AnimationPlaybackEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+AnimationPlaybackEvent AnimationPlaybackEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 jb_Any AnimationPlaybackEvent_currentTime( const AnimationPlaybackEvent *self);
 

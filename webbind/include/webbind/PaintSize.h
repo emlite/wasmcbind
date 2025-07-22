@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} PaintSize;
-
-
 DECLARE_EMLITE_TYPE(PaintSize, em_Val);
 
 double PaintSize_width( const PaintSize *self);

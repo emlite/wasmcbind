@@ -8,11 +8,6 @@
 typedef struct WebGLTexture WebGLTexture;
 
 
-typedef struct {
-  XRSubImage inner;
-} XRWebGLSubImage;
-
-
 DECLARE_EMLITE_TYPE(XRWebGLSubImage, XRSubImage);
 
 WebGLTexture XRWebGLSubImage_colorTexture( const XRWebGLSubImage *self);

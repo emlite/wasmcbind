@@ -7,13 +7,8 @@
 typedef struct TextTrackCue TextTrackCue;
 
 
-typedef struct {
-  em_Val inner;
-} TextTrackCueList;
-
-
 DECLARE_EMLITE_TYPE(TextTrackCueList, em_Val);
 
 unsigned long TextTrackCueList_length( const TextTrackCueList *self);
 
-TextTrackCue TextTrackCueList_getCueById(TextTrackCueList* self , const jb_DOMString* id);
+TextTrackCue TextTrackCueList_getCueById(TextTrackCueList* self , jb_DOMString * id);

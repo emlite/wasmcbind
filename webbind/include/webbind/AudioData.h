@@ -8,11 +8,6 @@ typedef struct AudioDataCopyToOptions AudioDataCopyToOptions;
 typedef struct AudioData AudioData;
 
 
-typedef struct {
-  em_Val inner;
-} AudioDataCopyToOptions;
-
-
 DECLARE_EMLITE_TYPE(AudioDataCopyToOptions, em_Val);
 
 unsigned long AudioDataCopyToOptions_planeIndex( const AudioDataCopyToOptions *self);
@@ -29,15 +24,10 @@ void AudioDataCopyToOptions_set_frameCount(AudioDataCopyToOptions* self, unsigne
 
 AudioSampleFormat AudioDataCopyToOptions_format( const AudioDataCopyToOptions *self);
 
-void AudioDataCopyToOptions_set_format(AudioDataCopyToOptions* self, const AudioSampleFormat* value);
-typedef struct {
-  em_Val inner;
-} AudioData;
-
-
+void AudioDataCopyToOptions_set_format(AudioDataCopyToOptions* self, AudioSampleFormat * value);
 DECLARE_EMLITE_TYPE(AudioData, em_Val);
 
-AudioData AudioData_new(const jb_Any* init);
+AudioData AudioData_new(jb_Any * init);
 
 AudioSampleFormat AudioData_format( const AudioData *self);
 
@@ -51,9 +41,9 @@ long long AudioData_duration( const AudioData *self);
 
 long long AudioData_timestamp( const AudioData *self);
 
-unsigned long AudioData_allocationSize(AudioData* self , const AudioDataCopyToOptions* options);
+unsigned long AudioData_allocationSize(AudioData* self , AudioDataCopyToOptions * options);
 
-jb_Undefined AudioData_copyTo(AudioData* self , const jb_Any* destination, const AudioDataCopyToOptions* options);
+jb_Undefined AudioData_copyTo(AudioData* self , jb_Any * destination, AudioDataCopyToOptions * options);
 
 AudioData AudioData_clone(AudioData* self );
 

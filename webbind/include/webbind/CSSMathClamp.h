@@ -8,14 +8,9 @@
 typedef struct CSSNumericValue CSSNumericValue;
 
 
-typedef struct {
-  CSSMathValue inner;
-} CSSMathClamp;
-
-
 DECLARE_EMLITE_TYPE(CSSMathClamp, CSSMathValue);
 
-CSSMathClamp CSSMathClamp_new(const jb_Any* lower, const jb_Any* value, const jb_Any* upper);
+CSSMathClamp CSSMathClamp_new(jb_Any * lower, jb_Any * value, jb_Any * upper);
 
 CSSNumericValue CSSMathClamp_lower( const CSSMathClamp *self);
 

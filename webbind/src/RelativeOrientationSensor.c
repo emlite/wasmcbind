@@ -4,12 +4,14 @@
 DEFINE_EMLITE_TYPE(RelativeOrientationSensor, OrientationSensor);
 
 
-RelativeOrientationSensor RelativeOrientationSensor_new() : OrientationSensor(em_Val_global("RelativeOrientationSensor").new_()) {
-        return RelativeOrientationSensor(em_Val_new(em_Val_global("RelativeOrientationSensor", ));
+RelativeOrientationSensor RelativeOrientationSensor_new0() {
+        em_Val vv = em_Val_new(em_Val_global("RelativeOrientationSensor") );
+        return RelativeOrientationSensor_from_val(&vv);
       }
 
 
-RelativeOrientationSensor RelativeOrientationSensor_new(const jb_Any* sensorOptions) : OrientationSensor(em_Val_global("RelativeOrientationSensor").new_(em_Val_from(sensorOptions))) {
-        return RelativeOrientationSensor(em_Val_new(em_Val_global("RelativeOrientationSensor", em_Val_from(sensorOptions)));
+RelativeOrientationSensor RelativeOrientationSensor_new1(jb_Any * sensorOptions) {
+        em_Val vv = em_Val_new(em_Val_global("RelativeOrientationSensor") , em_Val_from(sensorOptions));
+        return RelativeOrientationSensor_from_val(&vv);
       }
 

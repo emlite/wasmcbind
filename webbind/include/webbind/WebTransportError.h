@@ -6,18 +6,13 @@
 #include "enums.h"
 
 
-typedef struct {
-  DOMException inner;
-} WebTransportError;
-
-
 DECLARE_EMLITE_TYPE(WebTransportError, DOMException);
 
-WebTransportError WebTransportError_new();
+WebTransportError WebTransportError_new0();
 
-WebTransportError WebTransportError_new(const jb_DOMString* message);
+WebTransportError WebTransportError_new1(jb_DOMString * message);
 
-WebTransportError WebTransportError_new(const jb_DOMString* message, const jb_Any* options);
+WebTransportError WebTransportError_new2(jb_DOMString * message, jb_Any * options);
 
 WebTransportErrorSource WebTransportError_source( const WebTransportError *self);
 

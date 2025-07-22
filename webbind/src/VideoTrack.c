@@ -6,36 +6,36 @@ DEFINE_EMLITE_TYPE(VideoTrack, em_Val);
 
 
 jb_DOMString VideoTrack_id(const VideoTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "id"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
 jb_DOMString VideoTrack_kind(const VideoTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "kind"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("kind")));
 }
 
 
 jb_DOMString VideoTrack_label(const VideoTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "label"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
 jb_DOMString VideoTrack_language(const VideoTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "language"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("language")));
 }
 
 
 bool VideoTrack_selected(const VideoTrack *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "selected"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("selected")));
 }
 
 
 void VideoTrack_set_selected(VideoTrack* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "selected", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("selected"), em_Val_from(value));
 }
 
 
 SourceBuffer VideoTrack_sourceBuffer(const VideoTrack *self) {
-    return em_Val_as(SourceBuffer, em_Val_get(em_Val_as_val(self->inner), "sourceBuffer"));
+    return em_Val_as(SourceBuffer, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sourceBuffer")));
 }
 

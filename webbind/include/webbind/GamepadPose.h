@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} GamepadPose;
-
-
 DECLARE_EMLITE_TYPE(GamepadPose, em_Val);
 
 bool GamepadPose_hasOrientation( const GamepadPose *self);

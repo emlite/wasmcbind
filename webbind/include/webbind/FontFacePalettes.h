@@ -7,11 +7,6 @@
 typedef struct FontFacePalette FontFacePalette;
 
 
-typedef struct {
-  em_Val inner;
-} FontFacePalettes;
-
-
 DECLARE_EMLITE_TYPE(FontFacePalettes, em_Val);
 
 unsigned long FontFacePalettes_length( const FontFacePalettes *self);

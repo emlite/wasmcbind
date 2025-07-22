@@ -7,11 +7,6 @@
 typedef struct AudioParam AudioParam;
 
 
-typedef struct {
-  em_Val inner;
-} AudioListener;
-
-
 DECLARE_EMLITE_TYPE(AudioListener, em_Val);
 
 AudioParam AudioListener_positionX( const AudioListener *self);

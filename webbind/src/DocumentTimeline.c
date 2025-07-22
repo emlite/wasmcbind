@@ -4,12 +4,14 @@
 DEFINE_EMLITE_TYPE(DocumentTimeline, AnimationTimeline);
 
 
-DocumentTimeline DocumentTimeline_new() : AnimationTimeline(em_Val_global("DocumentTimeline").new_()) {
-        return DocumentTimeline(em_Val_new(em_Val_global("DocumentTimeline", ));
+DocumentTimeline DocumentTimeline_new0() {
+        em_Val vv = em_Val_new(em_Val_global("DocumentTimeline") );
+        return DocumentTimeline_from_val(&vv);
       }
 
 
-DocumentTimeline DocumentTimeline_new(const jb_Any* options) : AnimationTimeline(em_Val_global("DocumentTimeline").new_(em_Val_from(options))) {
-        return DocumentTimeline(em_Val_new(em_Val_global("DocumentTimeline", em_Val_from(options)));
+DocumentTimeline DocumentTimeline_new1(jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("DocumentTimeline") , em_Val_from(options));
+        return DocumentTimeline_from_val(&vv);
       }
 

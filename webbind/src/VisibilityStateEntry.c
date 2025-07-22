@@ -5,21 +5,21 @@ DEFINE_EMLITE_TYPE(VisibilityStateEntry, PerformanceEntry);
 
 
 jb_DOMString VisibilityStateEntry_name(const VisibilityStateEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
 }
 
 
 jb_DOMString VisibilityStateEntry_entryType(const VisibilityStateEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "entryType"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
 }
 
 
 jb_Any VisibilityStateEntry_startTime(const VisibilityStateEntry *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "startTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("startTime")));
 }
 
 
 unsigned long VisibilityStateEntry_duration(const VisibilityStateEntry *self) {
-    return em_Val_as(unsigned long, em_Val_get(PerformanceEntry_as_val(self->inner), "duration"));
+    return em_Val_as(unsigned long, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("duration")));
 }
 

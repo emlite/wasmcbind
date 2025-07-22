@@ -7,11 +7,6 @@
 typedef struct BluetoothLEScanFilter BluetoothLEScanFilter;
 
 
-typedef struct {
-  em_Val inner;
-} BluetoothLEScan;
-
-
 DECLARE_EMLITE_TYPE(BluetoothLEScan, em_Val);
 
 jb_FrozenArray BluetoothLEScan_filters( const BluetoothLEScan *self);

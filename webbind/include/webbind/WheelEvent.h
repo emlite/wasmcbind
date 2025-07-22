@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  MouseEvent inner;
-} WheelEvent;
-
-
 DECLARE_EMLITE_TYPE(WheelEvent, MouseEvent);
 
-WheelEvent WheelEvent_new(const jb_DOMString* type);
+WheelEvent WheelEvent_new0(jb_DOMString * type);
 
-WheelEvent WheelEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+WheelEvent WheelEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 double WheelEvent_deltaX( const WheelEvent *self);
 

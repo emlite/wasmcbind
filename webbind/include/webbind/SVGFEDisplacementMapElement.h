@@ -11,11 +11,6 @@ typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEDisplacementMapElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEDisplacementMapElement, SVGElement);
 
 SVGAnimatedString SVGFEDisplacementMapElement_in1( const SVGFEDisplacementMapElement *self);

@@ -13,39 +13,24 @@ typedef struct VideoFrame VideoFrame;
 typedef struct DOMRectInit DOMRectInit;
 
 
-typedef struct {
-  em_Val inner;
-} VideoFrameMetadata;
-
-
 DECLARE_EMLITE_TYPE(VideoFrameMetadata, em_Val);
-typedef struct {
-  em_Val inner;
-} VideoFrameCopyToOptions;
-
-
 DECLARE_EMLITE_TYPE(VideoFrameCopyToOptions, em_Val);
 
 DOMRectInit VideoFrameCopyToOptions_rect( const VideoFrameCopyToOptions *self);
 
-void VideoFrameCopyToOptions_set_rect(VideoFrameCopyToOptions* self, const DOMRectInit* value);
+void VideoFrameCopyToOptions_set_rect(VideoFrameCopyToOptions* self, DOMRectInit * value);
 
 jb_Sequence VideoFrameCopyToOptions_layout( const VideoFrameCopyToOptions *self);
 
-void VideoFrameCopyToOptions_set_layout(VideoFrameCopyToOptions* self, const jb_Sequence* value);
+void VideoFrameCopyToOptions_set_layout(VideoFrameCopyToOptions* self, jb_Sequence * value);
 
 VideoPixelFormat VideoFrameCopyToOptions_format( const VideoFrameCopyToOptions *self);
 
-void VideoFrameCopyToOptions_set_format(VideoFrameCopyToOptions* self, const VideoPixelFormat* value);
+void VideoFrameCopyToOptions_set_format(VideoFrameCopyToOptions* self, VideoPixelFormat * value);
 
 PredefinedColorSpace VideoFrameCopyToOptions_colorSpace( const VideoFrameCopyToOptions *self);
 
-void VideoFrameCopyToOptions_set_colorSpace(VideoFrameCopyToOptions* self, const PredefinedColorSpace* value);
-typedef struct {
-  em_Val inner;
-} PlaneLayout;
-
-
+void VideoFrameCopyToOptions_set_colorSpace(VideoFrameCopyToOptions* self, PredefinedColorSpace * value);
 DECLARE_EMLITE_TYPE(PlaneLayout, em_Val);
 
 unsigned long PlaneLayout_offset( const PlaneLayout *self);
@@ -55,14 +40,9 @@ void PlaneLayout_set_offset(PlaneLayout* self, unsigned long value);
 unsigned long PlaneLayout_stride( const PlaneLayout *self);
 
 void PlaneLayout_set_stride(PlaneLayout* self, unsigned long value);
-typedef struct {
-  em_Val inner;
-} VideoFrame;
-
-
 DECLARE_EMLITE_TYPE(VideoFrame, em_Val);
 
-VideoFrame VideoFrame_new(const jb_Any* data, const jb_Any* init);
+VideoFrame VideoFrame_new(jb_Any * data, jb_Any * init);
 
 VideoPixelFormat VideoFrame_format( const VideoFrame *self);
 
@@ -90,13 +70,13 @@ VideoColorSpace VideoFrame_colorSpace( const VideoFrame *self);
 
 VideoFrameMetadata VideoFrame_metadata(VideoFrame* self );
 
-unsigned long VideoFrame_allocationSize(VideoFrame* self );
+unsigned long VideoFrame_allocationSize0(VideoFrame* self );
 
-unsigned long VideoFrame_allocationSize(VideoFrame* self , const VideoFrameCopyToOptions* options);
+unsigned long VideoFrame_allocationSize1(VideoFrame* self , VideoFrameCopyToOptions * options);
 
-jb_Promise VideoFrame_copyTo(VideoFrame* self , const jb_Any* destination);
+jb_Promise VideoFrame_copyTo0(VideoFrame* self , jb_Any * destination);
 
-jb_Promise VideoFrame_copyTo(VideoFrame* self , const jb_Any* destination, const VideoFrameCopyToOptions* options);
+jb_Promise VideoFrame_copyTo1(VideoFrame* self , jb_Any * destination, VideoFrameCopyToOptions * options);
 
 VideoFrame VideoFrame_clone(VideoFrame* self );
 

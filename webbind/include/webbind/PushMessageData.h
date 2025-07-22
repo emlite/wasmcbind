@@ -7,11 +7,6 @@
 typedef struct Blob Blob;
 
 
-typedef struct {
-  em_Val inner;
-} PushMessageData;
-
-
 DECLARE_EMLITE_TYPE(PushMessageData, em_Val);
 
 jb_ArrayBuffer PushMessageData_arrayBuffer(PushMessageData* self );

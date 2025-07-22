@@ -13,11 +13,6 @@ typedef struct SVGAnimatedRect SVGAnimatedRect;
 typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGMarkerElement;
-
-
 DECLARE_EMLITE_TYPE(SVGMarkerElement, SVGElement);
 
 SVGAnimatedLength SVGMarkerElement_refX( const SVGMarkerElement *self);
@@ -36,11 +31,11 @@ SVGAnimatedAngle SVGMarkerElement_orientAngle( const SVGMarkerElement *self);
 
 jb_DOMString SVGMarkerElement_orient( const SVGMarkerElement *self);
 
-void SVGMarkerElement_set_orient(SVGMarkerElement* self, const jb_DOMString* value);
+void SVGMarkerElement_set_orient(SVGMarkerElement* self, jb_DOMString * value);
 
 jb_Undefined SVGMarkerElement_setOrientToAuto(SVGMarkerElement* self );
 
-jb_Undefined SVGMarkerElement_setOrientToAngle(SVGMarkerElement* self , const SVGAngle* angle);
+jb_Undefined SVGMarkerElement_setOrientToAngle(SVGMarkerElement* self , SVGAngle * angle);
 
 SVGAnimatedRect SVGMarkerElement_viewBox( const SVGMarkerElement *self);
 

@@ -8,11 +8,6 @@
 typedef struct TaskAttributionTiming TaskAttributionTiming;
 
 
-typedef struct {
-  PerformanceEntry inner;
-} PerformanceLongTaskTiming;
-
-
 DECLARE_EMLITE_TYPE(PerformanceLongTaskTiming, PerformanceEntry);
 
 jb_Any PerformanceLongTaskTiming_startTime( const PerformanceLongTaskTiming *self);

@@ -7,12 +7,12 @@ DEFINE_EMLITE_TYPE(BluetoothRemoteGATTServer, em_Val);
 
 
 BluetoothDevice BluetoothRemoteGATTServer_device(const BluetoothRemoteGATTServer *self) {
-    return em_Val_as(BluetoothDevice, em_Val_get(em_Val_as_val(self->inner), "device"));
+    return em_Val_as(BluetoothDevice, em_Val_get(em_Val_as_val(self->inner), em_Val_from("device")));
 }
 
 
 bool BluetoothRemoteGATTServer_connected(const BluetoothRemoteGATTServer *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "connected"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("connected")));
 }
 
 
@@ -26,17 +26,17 @@ jb_Undefined BluetoothRemoteGATTServer_disconnect(BluetoothRemoteGATTServer* sel
 }
 
 
-jb_Promise BluetoothRemoteGATTServer_getPrimaryService(BluetoothRemoteGATTServer* self , const jb_Any* service) {
+jb_Promise BluetoothRemoteGATTServer_getPrimaryService(BluetoothRemoteGATTServer* self , jb_Any * service) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "getPrimaryService", em_Val_from(service)));
 }
 
 
-jb_Promise BluetoothRemoteGATTServer_getPrimaryServices(BluetoothRemoteGATTServer* self ) {
+jb_Promise BluetoothRemoteGATTServer_getPrimaryServices0(BluetoothRemoteGATTServer* self ) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "getPrimaryServices"));
 }
 
 
-jb_Promise BluetoothRemoteGATTServer_getPrimaryServices(BluetoothRemoteGATTServer* self , const jb_Any* service) {
+jb_Promise BluetoothRemoteGATTServer_getPrimaryServices1(BluetoothRemoteGATTServer* self , jb_Any * service) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "getPrimaryServices", em_Val_from(service)));
 }
 

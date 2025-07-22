@@ -8,13 +8,8 @@
 typedef struct CSSNumericValue CSSNumericValue;
 
 
-typedef struct {
-  CSSMathValue inner;
-} CSSMathNegate;
-
-
 DECLARE_EMLITE_TYPE(CSSMathNegate, CSSMathValue);
 
-CSSMathNegate CSSMathNegate_new(const jb_Any* arg);
+CSSMathNegate CSSMathNegate_new(jb_Any * arg);
 
 CSSNumericValue CSSMathNegate_value( const CSSMathNegate *self);

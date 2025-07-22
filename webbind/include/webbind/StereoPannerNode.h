@@ -8,15 +8,10 @@
 typedef struct AudioParam AudioParam;
 
 
-typedef struct {
-  AudioNode inner;
-} StereoPannerNode;
-
-
 DECLARE_EMLITE_TYPE(StereoPannerNode, AudioNode);
 
-StereoPannerNode StereoPannerNode_new(const BaseAudioContext* context);
+StereoPannerNode StereoPannerNode_new0(BaseAudioContext * context);
 
-StereoPannerNode StereoPannerNode_new(const BaseAudioContext* context, const jb_Any* options);
+StereoPannerNode StereoPannerNode_new1(BaseAudioContext * context, jb_Any * options);
 
 AudioParam StereoPannerNode_pan( const StereoPannerNode *self);

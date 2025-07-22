@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Sensor inner;
-} Accelerometer;
-
-
 DECLARE_EMLITE_TYPE(Accelerometer, Sensor);
 
-Accelerometer Accelerometer_new();
+Accelerometer Accelerometer_new0();
 
-Accelerometer Accelerometer_new(const jb_Any* options);
+Accelerometer Accelerometer_new1(jb_Any * options);
 
 double Accelerometer_x( const Accelerometer *self);
 

@@ -7,11 +7,6 @@
 typedef struct RTCEncodedVideoFrameMetadata RTCEncodedVideoFrameMetadata;
 
 
-typedef struct {
-  em_Val inner;
-} RTCEncodedVideoFrameMetadata;
-
-
 DECLARE_EMLITE_TYPE(RTCEncodedVideoFrameMetadata, em_Val);
 
 long long RTCEncodedVideoFrameMetadata_frameId( const RTCEncodedVideoFrameMetadata *self);
@@ -20,7 +15,7 @@ void RTCEncodedVideoFrameMetadata_set_frameId(RTCEncodedVideoFrameMetadata* self
 
 jb_Sequence RTCEncodedVideoFrameMetadata_dependencies( const RTCEncodedVideoFrameMetadata *self);
 
-void RTCEncodedVideoFrameMetadata_set_dependencies(RTCEncodedVideoFrameMetadata* self, const jb_Sequence* value);
+void RTCEncodedVideoFrameMetadata_set_dependencies(RTCEncodedVideoFrameMetadata* self, jb_Sequence * value);
 
 unsigned short RTCEncodedVideoFrameMetadata_width( const RTCEncodedVideoFrameMetadata *self);
 
@@ -41,21 +36,16 @@ void RTCEncodedVideoFrameMetadata_set_temporalIndex(RTCEncodedVideoFrameMetadata
 long long RTCEncodedVideoFrameMetadata_timestamp( const RTCEncodedVideoFrameMetadata *self);
 
 void RTCEncodedVideoFrameMetadata_set_timestamp(RTCEncodedVideoFrameMetadata* self, long long value);
-typedef struct {
-  em_Val inner;
-} RTCEncodedVideoFrame;
-
-
 DECLARE_EMLITE_TYPE(RTCEncodedVideoFrame, em_Val);
 
-RTCEncodedVideoFrame RTCEncodedVideoFrame_new(const RTCEncodedVideoFrame* originalFrame);
+RTCEncodedVideoFrame RTCEncodedVideoFrame_new0(RTCEncodedVideoFrame * originalFrame);
 
-RTCEncodedVideoFrame RTCEncodedVideoFrame_new(const RTCEncodedVideoFrame* originalFrame, const jb_Any* options);
+RTCEncodedVideoFrame RTCEncodedVideoFrame_new1(RTCEncodedVideoFrame * originalFrame, jb_Any * options);
 
 RTCEncodedVideoFrameType RTCEncodedVideoFrame_type( const RTCEncodedVideoFrame *self);
 
 jb_ArrayBuffer RTCEncodedVideoFrame_data( const RTCEncodedVideoFrame *self);
 
-void RTCEncodedVideoFrame_set_data(RTCEncodedVideoFrame* self, const jb_ArrayBuffer* value);
+void RTCEncodedVideoFrame_set_data(RTCEncodedVideoFrame* self, jb_ArrayBuffer * value);
 
 RTCEncodedVideoFrameMetadata RTCEncodedVideoFrame_getMetadata(RTCEncodedVideoFrame* self );

@@ -5,32 +5,32 @@ DEFINE_EMLITE_TYPE(PerformanceEntry, em_Val);
 
 
 long long PerformanceEntry_id(const PerformanceEntry *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "id"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
 jb_DOMString PerformanceEntry_name(const PerformanceEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
 jb_DOMString PerformanceEntry_entryType(const PerformanceEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "entryType"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entryType")));
 }
 
 
 jb_Any PerformanceEntry_startTime(const PerformanceEntry *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "startTime"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("startTime")));
 }
 
 
 jb_Any PerformanceEntry_duration(const PerformanceEntry *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "duration"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("duration")));
 }
 
 
 long long PerformanceEntry_navigationId(const PerformanceEntry *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "navigationId"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("navigationId")));
 }
 
 

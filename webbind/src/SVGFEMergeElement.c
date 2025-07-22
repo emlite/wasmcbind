@@ -7,26 +7,26 @@ DEFINE_EMLITE_TYPE(SVGFEMergeElement, SVGElement);
 
 
 SVGAnimatedLength SVGFEMergeElement_x(const SVGFEMergeElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "x"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("x")));
 }
 
 
 SVGAnimatedLength SVGFEMergeElement_y(const SVGFEMergeElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "y"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("y")));
 }
 
 
 SVGAnimatedLength SVGFEMergeElement_width(const SVGFEMergeElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "width"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
 SVGAnimatedLength SVGFEMergeElement_height(const SVGFEMergeElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "height"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
 SVGAnimatedString SVGFEMergeElement_result(const SVGFEMergeElement *self) {
-    return em_Val_as(SVGAnimatedString, em_Val_get(SVGElement_as_val(self->inner), "result"));
+    return em_Val_as(SVGAnimatedString, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("result")));
 }
 

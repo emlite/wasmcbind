@@ -7,11 +7,6 @@
 typedef struct SVGNumberList SVGNumberList;
 
 
-typedef struct {
-  em_Val inner;
-} SVGAnimatedNumberList;
-
-
 DECLARE_EMLITE_TYPE(SVGAnimatedNumberList, em_Val);
 
 SVGNumberList SVGAnimatedNumberList_baseVal( const SVGAnimatedNumberList *self);

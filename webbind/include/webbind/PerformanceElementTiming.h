@@ -9,11 +9,6 @@ typedef struct DOMRectReadOnly DOMRectReadOnly;
 typedef struct Element Element;
 
 
-typedef struct {
-  PerformanceEntry inner;
-} PerformanceElementTiming;
-
-
 DECLARE_EMLITE_TYPE(PerformanceElementTiming, PerformanceEntry);
 
 jb_Any PerformanceElementTiming_renderTime( const PerformanceElementTiming *self);

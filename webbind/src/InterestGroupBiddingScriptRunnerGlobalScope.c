@@ -4,12 +4,12 @@
 DEFINE_EMLITE_TYPE(InterestGroupBiddingScriptRunnerGlobalScope, InterestGroupBiddingAndScoringScriptRunnerGlobalScope);
 
 
-bool InterestGroupBiddingScriptRunnerGlobalScope_setBid(InterestGroupBiddingScriptRunnerGlobalScope* self ) {
+bool InterestGroupBiddingScriptRunnerGlobalScope_setBid0(InterestGroupBiddingScriptRunnerGlobalScope* self ) {
     return em_Val_as(bool, em_Val_call(InterestGroupBiddingAndScoringScriptRunnerGlobalScope_as_val(self->inner), "setBid"));
 }
 
 
-bool InterestGroupBiddingScriptRunnerGlobalScope_setBid(InterestGroupBiddingScriptRunnerGlobalScope* self , const jb_Any* oneOrManyBids) {
+bool InterestGroupBiddingScriptRunnerGlobalScope_setBid1(InterestGroupBiddingScriptRunnerGlobalScope* self , jb_Any * oneOrManyBids) {
     return em_Val_as(bool, em_Val_call(InterestGroupBiddingAndScoringScriptRunnerGlobalScope_as_val(self->inner), "setBid", em_Val_from(oneOrManyBids)));
 }
 
@@ -19,12 +19,12 @@ jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPriority(InterestGro
 }
 
 
-jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPrioritySignalsOverride(InterestGroupBiddingScriptRunnerGlobalScope* self , const jb_DOMString* key) {
+jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPrioritySignalsOverride0(InterestGroupBiddingScriptRunnerGlobalScope* self , jb_DOMString * key) {
     return em_Val_as(jb_Undefined, em_Val_call(InterestGroupBiddingAndScoringScriptRunnerGlobalScope_as_val(self->inner), "setPrioritySignalsOverride", em_Val_from(key)));
 }
 
 
-jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPrioritySignalsOverride(InterestGroupBiddingScriptRunnerGlobalScope* self , const jb_DOMString* key, double priority) {
+jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPrioritySignalsOverride1(InterestGroupBiddingScriptRunnerGlobalScope* self , jb_DOMString * key, double priority) {
     return em_Val_as(jb_Undefined, em_Val_call(InterestGroupBiddingAndScoringScriptRunnerGlobalScope_as_val(self->inner), "setPrioritySignalsOverride", em_Val_from(key), em_Val_from(priority)));
 }
 

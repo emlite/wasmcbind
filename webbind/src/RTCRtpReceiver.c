@@ -11,42 +11,42 @@ DEFINE_EMLITE_TYPE(RTCRtpContributingSource, em_Val);
 
 
 jb_Any RTCRtpContributingSource_timestamp(const RTCRtpContributingSource *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "timestamp"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("timestamp")));
 }
 
 
-void RTCRtpContributingSource_set_timestamp(RTCRtpContributingSource* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "timestamp", value);
+void RTCRtpContributingSource_set_timestamp(RTCRtpContributingSource* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("timestamp"), em_Val_from(value));
 }
 
 
 unsigned long RTCRtpContributingSource_source(const RTCRtpContributingSource *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "source"));
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("source")));
 }
 
 
 void RTCRtpContributingSource_set_source(RTCRtpContributingSource* self, unsigned long value) {
-    em_Val_set(em_Val_as_val(self->inner), "source", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("source"), em_Val_from(value));
 }
 
 
 double RTCRtpContributingSource_audioLevel(const RTCRtpContributingSource *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "audioLevel"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("audioLevel")));
 }
 
 
 void RTCRtpContributingSource_set_audioLevel(RTCRtpContributingSource* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "audioLevel", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("audioLevel"), em_Val_from(value));
 }
 
 
 unsigned long RTCRtpContributingSource_rtpTimestamp(const RTCRtpContributingSource *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "rtpTimestamp"));
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rtpTimestamp")));
 }
 
 
 void RTCRtpContributingSource_set_rtpTimestamp(RTCRtpContributingSource* self, unsigned long value) {
-    em_Val_set(em_Val_as_val(self->inner), "rtpTimestamp", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("rtpTimestamp"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(RTCRtpSynchronizationSource, em_Val);
@@ -55,16 +55,16 @@ DEFINE_EMLITE_TYPE(RTCRtpReceiver, em_Val);
 
 
 MediaStreamTrack RTCRtpReceiver_track(const RTCRtpReceiver *self) {
-    return em_Val_as(MediaStreamTrack, em_Val_get(em_Val_as_val(self->inner), "track"));
+    return em_Val_as(MediaStreamTrack, em_Val_get(em_Val_as_val(self->inner), em_Val_from("track")));
 }
 
 
 RTCDtlsTransport RTCRtpReceiver_transport(const RTCRtpReceiver *self) {
-    return em_Val_as(RTCDtlsTransport, em_Val_get(em_Val_as_val(self->inner), "transport"));
+    return em_Val_as(RTCDtlsTransport, em_Val_get(em_Val_as_val(self->inner), em_Val_from("transport")));
 }
 
 
-RTCRtpCapabilities RTCRtpReceiver_getCapabilities(RTCRtpReceiver* self , const jb_DOMString* kind) {
+RTCRtpCapabilities RTCRtpReceiver_getCapabilities(RTCRtpReceiver* self , jb_DOMString * kind) {
     return em_Val_as(RTCRtpCapabilities, em_Val_call(em_Val_global("rtcrtpreceiver"), "getCapabilities", em_Val_from(kind)));
 }
 
@@ -90,21 +90,21 @@ jb_Promise RTCRtpReceiver_getStats(RTCRtpReceiver* self ) {
 
 
 jb_Any RTCRtpReceiver_jitterBufferTarget(const RTCRtpReceiver *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "jitterBufferTarget"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("jitterBufferTarget")));
 }
 
 
-void RTCRtpReceiver_set_jitterBufferTarget(RTCRtpReceiver* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "jitterBufferTarget", value);
+void RTCRtpReceiver_set_jitterBufferTarget(RTCRtpReceiver* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("jitterBufferTarget"), em_Val_from(value));
 }
 
 
 jb_Any RTCRtpReceiver_transform(const RTCRtpReceiver *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "transform"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("transform")));
 }
 
 
-void RTCRtpReceiver_set_transform(RTCRtpReceiver* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "transform", value);
+void RTCRtpReceiver_set_transform(RTCRtpReceiver* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("transform"), em_Val_from(value));
 }
 

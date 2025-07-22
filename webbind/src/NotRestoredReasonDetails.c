@@ -5,7 +5,7 @@ DEFINE_EMLITE_TYPE(NotRestoredReasonDetails, em_Val);
 
 
 jb_DOMString NotRestoredReasonDetails_reason(const NotRestoredReasonDetails *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "reason"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("reason")));
 }
 
 

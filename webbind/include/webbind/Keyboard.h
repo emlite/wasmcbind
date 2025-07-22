@@ -8,16 +8,11 @@
 typedef struct KeyboardLayoutMap KeyboardLayoutMap;
 
 
-typedef struct {
-  EventTarget inner;
-} Keyboard;
-
-
 DECLARE_EMLITE_TYPE(Keyboard, EventTarget);
 
-jb_Promise Keyboard_lock(Keyboard* self );
+jb_Promise Keyboard_lock0(Keyboard* self );
 
-jb_Promise Keyboard_lock(Keyboard* self , const jb_Sequence* keyCodes);
+jb_Promise Keyboard_lock1(Keyboard* self , jb_Sequence * keyCodes);
 
 jb_Undefined Keyboard_unlock(Keyboard* self );
 
@@ -25,4 +20,4 @@ jb_Promise Keyboard_getLayoutMap(Keyboard* self );
 
 jb_Any Keyboard_onlayoutchange( const Keyboard *self);
 
-void Keyboard_set_onlayoutchange(Keyboard* self, const jb_Any* value);
+void Keyboard_set_onlayoutchange(Keyboard* self, jb_Any * value);

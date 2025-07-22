@@ -5,701 +5,701 @@ DEFINE_EMLITE_TYPE(CSSPositionTryDescriptors, CSSStyleDeclaration);
 
 
 jb_CSSOMString CSSPositionTryDescriptors_margin(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin")));
 }
 
 
-void CSSPositionTryDescriptors_set_margin(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin", value);
+void CSSPositionTryDescriptors_set_margin(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_marginTop(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginTop"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginTop")));
 }
 
 
-void CSSPositionTryDescriptors_set_marginTop(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginTop", value);
+void CSSPositionTryDescriptors_set_marginTop(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginTop"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_marginRight(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginRight"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginRight")));
 }
 
 
-void CSSPositionTryDescriptors_set_marginRight(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginRight", value);
+void CSSPositionTryDescriptors_set_marginRight(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginRight"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_marginBottom(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginBottom"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginBottom")));
 }
 
 
-void CSSPositionTryDescriptors_set_marginBottom(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginBottom", value);
+void CSSPositionTryDescriptors_set_marginBottom(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginBottom"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_marginLeft(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginLeft"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginLeft")));
 }
 
 
-void CSSPositionTryDescriptors_set_marginLeft(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginLeft", value);
+void CSSPositionTryDescriptors_set_marginLeft(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginLeft"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_marginBlock(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginBlock"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginBlock")));
 }
 
 
-void CSSPositionTryDescriptors_set_marginBlock(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginBlock", value);
+void CSSPositionTryDescriptors_set_marginBlock(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginBlock"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_marginBlockStart(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginBlockStart"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginBlockStart")));
 }
 
 
-void CSSPositionTryDescriptors_set_marginBlockStart(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginBlockStart", value);
+void CSSPositionTryDescriptors_set_marginBlockStart(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginBlockStart"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_marginBlockEnd(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginBlockEnd"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginBlockEnd")));
 }
 
 
-void CSSPositionTryDescriptors_set_marginBlockEnd(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginBlockEnd", value);
+void CSSPositionTryDescriptors_set_marginBlockEnd(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginBlockEnd"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_marginInline(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginInline"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginInline")));
 }
 
 
-void CSSPositionTryDescriptors_set_marginInline(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginInline", value);
+void CSSPositionTryDescriptors_set_marginInline(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginInline"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_marginInlineStart(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginInlineStart"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginInlineStart")));
 }
 
 
-void CSSPositionTryDescriptors_set_marginInlineStart(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginInlineStart", value);
+void CSSPositionTryDescriptors_set_marginInlineStart(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginInlineStart"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_marginInlineEnd(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginInlineEnd"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginInlineEnd")));
 }
 
 
-void CSSPositionTryDescriptors_set_marginInlineEnd(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginInlineEnd", value);
+void CSSPositionTryDescriptors_set_marginInlineEnd(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginInlineEnd"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_margin_top(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-top"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-top")));
 }
 
 
-void CSSPositionTryDescriptors_set_margin_top(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-top", value);
+void CSSPositionTryDescriptors_set_margin_top(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-top"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_margin_right(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-right"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-right")));
 }
 
 
-void CSSPositionTryDescriptors_set_margin_right(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-right", value);
+void CSSPositionTryDescriptors_set_margin_right(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-right"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_margin_bottom(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-bottom"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-bottom")));
 }
 
 
-void CSSPositionTryDescriptors_set_margin_bottom(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-bottom", value);
+void CSSPositionTryDescriptors_set_margin_bottom(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-bottom"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_margin_left(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-left"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-left")));
 }
 
 
-void CSSPositionTryDescriptors_set_margin_left(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-left", value);
+void CSSPositionTryDescriptors_set_margin_left(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-left"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_margin_block(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-block"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-block")));
 }
 
 
-void CSSPositionTryDescriptors_set_margin_block(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-block", value);
+void CSSPositionTryDescriptors_set_margin_block(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-block"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_margin_block_start(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-block-start"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-block-start")));
 }
 
 
-void CSSPositionTryDescriptors_set_margin_block_start(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-block-start", value);
+void CSSPositionTryDescriptors_set_margin_block_start(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-block-start"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_margin_block_end(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-block-end"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-block-end")));
 }
 
 
-void CSSPositionTryDescriptors_set_margin_block_end(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-block-end", value);
+void CSSPositionTryDescriptors_set_margin_block_end(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-block-end"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_margin_inline(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-inline"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-inline")));
 }
 
 
-void CSSPositionTryDescriptors_set_margin_inline(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-inline", value);
+void CSSPositionTryDescriptors_set_margin_inline(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-inline"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_margin_inline_start(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-inline-start"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-inline-start")));
 }
 
 
-void CSSPositionTryDescriptors_set_margin_inline_start(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-inline-start", value);
+void CSSPositionTryDescriptors_set_margin_inline_start(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-inline-start"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_margin_inline_end(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-inline-end"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-inline-end")));
 }
 
 
-void CSSPositionTryDescriptors_set_margin_inline_end(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-inline-end", value);
+void CSSPositionTryDescriptors_set_margin_inline_end(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-inline-end"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_inset(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "inset"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset")));
 }
 
 
-void CSSPositionTryDescriptors_set_inset(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "inset", value);
+void CSSPositionTryDescriptors_set_inset(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_insetBlock(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "insetBlock"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetBlock")));
 }
 
 
-void CSSPositionTryDescriptors_set_insetBlock(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "insetBlock", value);
+void CSSPositionTryDescriptors_set_insetBlock(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetBlock"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_insetBlockStart(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "insetBlockStart"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetBlockStart")));
 }
 
 
-void CSSPositionTryDescriptors_set_insetBlockStart(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "insetBlockStart", value);
+void CSSPositionTryDescriptors_set_insetBlockStart(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetBlockStart"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_insetBlockEnd(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "insetBlockEnd"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetBlockEnd")));
 }
 
 
-void CSSPositionTryDescriptors_set_insetBlockEnd(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "insetBlockEnd", value);
+void CSSPositionTryDescriptors_set_insetBlockEnd(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetBlockEnd"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_insetInline(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "insetInline"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetInline")));
 }
 
 
-void CSSPositionTryDescriptors_set_insetInline(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "insetInline", value);
+void CSSPositionTryDescriptors_set_insetInline(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetInline"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_insetInlineStart(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "insetInlineStart"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetInlineStart")));
 }
 
 
-void CSSPositionTryDescriptors_set_insetInlineStart(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "insetInlineStart", value);
+void CSSPositionTryDescriptors_set_insetInlineStart(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetInlineStart"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_insetInlineEnd(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "insetInlineEnd"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetInlineEnd")));
 }
 
 
-void CSSPositionTryDescriptors_set_insetInlineEnd(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "insetInlineEnd", value);
+void CSSPositionTryDescriptors_set_insetInlineEnd(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("insetInlineEnd"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_top(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "top"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("top")));
 }
 
 
-void CSSPositionTryDescriptors_set_top(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "top", value);
+void CSSPositionTryDescriptors_set_top(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("top"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_left(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "left"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("left")));
 }
 
 
-void CSSPositionTryDescriptors_set_left(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "left", value);
+void CSSPositionTryDescriptors_set_left(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("left"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_right(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "right"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("right")));
 }
 
 
-void CSSPositionTryDescriptors_set_right(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "right", value);
+void CSSPositionTryDescriptors_set_right(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("right"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_bottom(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "bottom"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("bottom")));
 }
 
 
-void CSSPositionTryDescriptors_set_bottom(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "bottom", value);
+void CSSPositionTryDescriptors_set_bottom(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("bottom"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_inset_block(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "inset-block"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-block")));
 }
 
 
-void CSSPositionTryDescriptors_set_inset_block(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "inset-block", value);
+void CSSPositionTryDescriptors_set_inset_block(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-block"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_inset_block_start(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "inset-block-start"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-block-start")));
 }
 
 
-void CSSPositionTryDescriptors_set_inset_block_start(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "inset-block-start", value);
+void CSSPositionTryDescriptors_set_inset_block_start(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-block-start"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_inset_block_end(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "inset-block-end"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-block-end")));
 }
 
 
-void CSSPositionTryDescriptors_set_inset_block_end(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "inset-block-end", value);
+void CSSPositionTryDescriptors_set_inset_block_end(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-block-end"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_inset_inline(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "inset-inline"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-inline")));
 }
 
 
-void CSSPositionTryDescriptors_set_inset_inline(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "inset-inline", value);
+void CSSPositionTryDescriptors_set_inset_inline(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-inline"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_inset_inline_start(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "inset-inline-start"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-inline-start")));
 }
 
 
-void CSSPositionTryDescriptors_set_inset_inline_start(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "inset-inline-start", value);
+void CSSPositionTryDescriptors_set_inset_inline_start(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-inline-start"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_inset_inline_end(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "inset-inline-end"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-inline-end")));
 }
 
 
-void CSSPositionTryDescriptors_set_inset_inline_end(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "inset-inline-end", value);
+void CSSPositionTryDescriptors_set_inset_inline_end(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inset-inline-end"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_width(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "width"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("width")));
 }
 
 
-void CSSPositionTryDescriptors_set_width(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "width", value);
+void CSSPositionTryDescriptors_set_width(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_minWidth(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "minWidth"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("minWidth")));
 }
 
 
-void CSSPositionTryDescriptors_set_minWidth(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "minWidth", value);
+void CSSPositionTryDescriptors_set_minWidth(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("minWidth"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_maxWidth(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "maxWidth"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("maxWidth")));
 }
 
 
-void CSSPositionTryDescriptors_set_maxWidth(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "maxWidth", value);
+void CSSPositionTryDescriptors_set_maxWidth(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("maxWidth"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_height(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "height"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("height")));
 }
 
 
-void CSSPositionTryDescriptors_set_height(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "height", value);
+void CSSPositionTryDescriptors_set_height(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("height"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_minHeight(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "minHeight"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("minHeight")));
 }
 
 
-void CSSPositionTryDescriptors_set_minHeight(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "minHeight", value);
+void CSSPositionTryDescriptors_set_minHeight(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("minHeight"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_maxHeight(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "maxHeight"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("maxHeight")));
 }
 
 
-void CSSPositionTryDescriptors_set_maxHeight(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "maxHeight", value);
+void CSSPositionTryDescriptors_set_maxHeight(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("maxHeight"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_blockSize(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "blockSize"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("blockSize")));
 }
 
 
-void CSSPositionTryDescriptors_set_blockSize(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "blockSize", value);
+void CSSPositionTryDescriptors_set_blockSize(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("blockSize"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_minBlockSize(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "minBlockSize"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("minBlockSize")));
 }
 
 
-void CSSPositionTryDescriptors_set_minBlockSize(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "minBlockSize", value);
+void CSSPositionTryDescriptors_set_minBlockSize(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("minBlockSize"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_maxBlockSize(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "maxBlockSize"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("maxBlockSize")));
 }
 
 
-void CSSPositionTryDescriptors_set_maxBlockSize(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "maxBlockSize", value);
+void CSSPositionTryDescriptors_set_maxBlockSize(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("maxBlockSize"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_inlineSize(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "inlineSize"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inlineSize")));
 }
 
 
-void CSSPositionTryDescriptors_set_inlineSize(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "inlineSize", value);
+void CSSPositionTryDescriptors_set_inlineSize(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inlineSize"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_minInlineSize(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "minInlineSize"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("minInlineSize")));
 }
 
 
-void CSSPositionTryDescriptors_set_minInlineSize(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "minInlineSize", value);
+void CSSPositionTryDescriptors_set_minInlineSize(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("minInlineSize"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_maxInlineSize(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "maxInlineSize"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("maxInlineSize")));
 }
 
 
-void CSSPositionTryDescriptors_set_maxInlineSize(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "maxInlineSize", value);
+void CSSPositionTryDescriptors_set_maxInlineSize(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("maxInlineSize"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_min_width(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "min-width"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("min-width")));
 }
 
 
-void CSSPositionTryDescriptors_set_min_width(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "min-width", value);
+void CSSPositionTryDescriptors_set_min_width(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("min-width"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_max_width(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "max-width"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("max-width")));
 }
 
 
-void CSSPositionTryDescriptors_set_max_width(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "max-width", value);
+void CSSPositionTryDescriptors_set_max_width(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("max-width"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_min_height(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "min-height"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("min-height")));
 }
 
 
-void CSSPositionTryDescriptors_set_min_height(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "min-height", value);
+void CSSPositionTryDescriptors_set_min_height(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("min-height"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_max_height(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "max-height"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("max-height")));
 }
 
 
-void CSSPositionTryDescriptors_set_max_height(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "max-height", value);
+void CSSPositionTryDescriptors_set_max_height(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("max-height"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_block_size(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "block-size"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("block-size")));
 }
 
 
-void CSSPositionTryDescriptors_set_block_size(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "block-size", value);
+void CSSPositionTryDescriptors_set_block_size(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("block-size"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_min_block_size(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "min-block-size"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("min-block-size")));
 }
 
 
-void CSSPositionTryDescriptors_set_min_block_size(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "min-block-size", value);
+void CSSPositionTryDescriptors_set_min_block_size(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("min-block-size"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_max_block_size(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "max-block-size"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("max-block-size")));
 }
 
 
-void CSSPositionTryDescriptors_set_max_block_size(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "max-block-size", value);
+void CSSPositionTryDescriptors_set_max_block_size(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("max-block-size"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_inline_size(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "inline-size"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inline-size")));
 }
 
 
-void CSSPositionTryDescriptors_set_inline_size(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "inline-size", value);
+void CSSPositionTryDescriptors_set_inline_size(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("inline-size"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_min_inline_size(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "min-inline-size"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("min-inline-size")));
 }
 
 
-void CSSPositionTryDescriptors_set_min_inline_size(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "min-inline-size", value);
+void CSSPositionTryDescriptors_set_min_inline_size(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("min-inline-size"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_max_inline_size(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "max-inline-size"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("max-inline-size")));
 }
 
 
-void CSSPositionTryDescriptors_set_max_inline_size(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "max-inline-size", value);
+void CSSPositionTryDescriptors_set_max_inline_size(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("max-inline-size"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_placeSelf(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "placeSelf"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("placeSelf")));
 }
 
 
-void CSSPositionTryDescriptors_set_placeSelf(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "placeSelf", value);
+void CSSPositionTryDescriptors_set_placeSelf(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("placeSelf"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_alignSelf(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "alignSelf"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("alignSelf")));
 }
 
 
-void CSSPositionTryDescriptors_set_alignSelf(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "alignSelf", value);
+void CSSPositionTryDescriptors_set_alignSelf(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("alignSelf"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_justifySelf(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "justifySelf"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("justifySelf")));
 }
 
 
-void CSSPositionTryDescriptors_set_justifySelf(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "justifySelf", value);
+void CSSPositionTryDescriptors_set_justifySelf(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("justifySelf"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_place_self(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "place-self"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("place-self")));
 }
 
 
-void CSSPositionTryDescriptors_set_place_self(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "place-self", value);
+void CSSPositionTryDescriptors_set_place_self(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("place-self"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_align_self(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "align-self"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("align-self")));
 }
 
 
-void CSSPositionTryDescriptors_set_align_self(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "align-self", value);
+void CSSPositionTryDescriptors_set_align_self(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("align-self"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_justify_self(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "justify-self"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("justify-self")));
 }
 
 
-void CSSPositionTryDescriptors_set_justify_self(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "justify-self", value);
+void CSSPositionTryDescriptors_set_justify_self(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("justify-self"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_positionAnchor(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "positionAnchor"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("positionAnchor")));
 }
 
 
-void CSSPositionTryDescriptors_set_positionAnchor(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "positionAnchor", value);
+void CSSPositionTryDescriptors_set_positionAnchor(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("positionAnchor"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_position_anchor(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "position-anchor"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("position-anchor")));
 }
 
 
-void CSSPositionTryDescriptors_set_position_anchor(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "position-anchor", value);
+void CSSPositionTryDescriptors_set_position_anchor(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("position-anchor"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_positionArea(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "positionArea"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("positionArea")));
 }
 
 
-void CSSPositionTryDescriptors_set_positionArea(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "positionArea", value);
+void CSSPositionTryDescriptors_set_positionArea(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("positionArea"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPositionTryDescriptors_position_area(const CSSPositionTryDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "position-area"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("position-area")));
 }
 
 
-void CSSPositionTryDescriptors_set_position_area(CSSPositionTryDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "position-area", value);
+void CSSPositionTryDescriptors_set_position_area(CSSPositionTryDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("position-area"), em_Val_from(value));
 }
 

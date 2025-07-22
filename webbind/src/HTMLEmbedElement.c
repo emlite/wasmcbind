@@ -5,48 +5,49 @@
 DEFINE_EMLITE_TYPE(HTMLEmbedElement, HTMLElement);
 
 
-HTMLEmbedElement HTMLEmbedElement_new() : HTMLElement(em_Val_global("HTMLEmbedElement").new_()) {
-        return HTMLEmbedElement(em_Val_new(em_Val_global("HTMLEmbedElement", ));
+HTMLEmbedElement HTMLEmbedElement_new() {
+        em_Val vv = em_Val_new(em_Val_global("HTMLEmbedElement") );
+        return HTMLEmbedElement_from_val(&vv);
       }
 
 
 jb_USVString HTMLEmbedElement_src(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "src"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLEmbedElement_set_src(HTMLEmbedElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "src", value);
+void HTMLEmbedElement_set_src(HTMLEmbedElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLEmbedElement_type(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "type"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void HTMLEmbedElement_set_type(HTMLEmbedElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "type", value);
+void HTMLEmbedElement_set_type(HTMLEmbedElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLEmbedElement_width(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "width"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
-void HTMLEmbedElement_set_width(HTMLEmbedElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "width", value);
+void HTMLEmbedElement_set_width(HTMLEmbedElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLEmbedElement_height(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "height"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
-void HTMLEmbedElement_set_height(HTMLEmbedElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "height", value);
+void HTMLEmbedElement_set_height(HTMLEmbedElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("height"), em_Val_from(value));
 }
 
 
@@ -56,21 +57,21 @@ Document HTMLEmbedElement_getSVGDocument(HTMLEmbedElement* self ) {
 
 
 jb_DOMString HTMLEmbedElement_align(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "align"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLEmbedElement_set_align(HTMLEmbedElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "align", value);
+void HTMLEmbedElement_set_align(HTMLEmbedElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLEmbedElement_name(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLEmbedElement_set_name(HTMLEmbedElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "name", value);
+void HTMLEmbedElement_set_name(HTMLEmbedElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 

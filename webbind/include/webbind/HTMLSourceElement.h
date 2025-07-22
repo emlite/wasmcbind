@@ -6,34 +6,29 @@
 #include "enums.h"
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLSourceElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLSourceElement, HTMLElement);
 
 HTMLSourceElement HTMLSourceElement_new();
 
 jb_USVString HTMLSourceElement_src( const HTMLSourceElement *self);
 
-void HTMLSourceElement_set_src(HTMLSourceElement* self, const jb_USVString* value);
+void HTMLSourceElement_set_src(HTMLSourceElement* self, jb_USVString * value);
 
 jb_DOMString HTMLSourceElement_type( const HTMLSourceElement *self);
 
-void HTMLSourceElement_set_type(HTMLSourceElement* self, const jb_DOMString* value);
+void HTMLSourceElement_set_type(HTMLSourceElement* self, jb_DOMString * value);
 
 jb_USVString HTMLSourceElement_srcset( const HTMLSourceElement *self);
 
-void HTMLSourceElement_set_srcset(HTMLSourceElement* self, const jb_USVString* value);
+void HTMLSourceElement_set_srcset(HTMLSourceElement* self, jb_USVString * value);
 
 jb_DOMString HTMLSourceElement_sizes( const HTMLSourceElement *self);
 
-void HTMLSourceElement_set_sizes(HTMLSourceElement* self, const jb_DOMString* value);
+void HTMLSourceElement_set_sizes(HTMLSourceElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLSourceElement_media( const HTMLSourceElement *self);
 
-void HTMLSourceElement_set_media(HTMLSourceElement* self, const jb_DOMString* value);
+void HTMLSourceElement_set_media(HTMLSourceElement* self, jb_DOMString * value);
 
 unsigned long HTMLSourceElement_width( const HTMLSourceElement *self);
 

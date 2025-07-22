@@ -7,25 +7,15 @@
 typedef struct RTCDtlsFingerprint RTCDtlsFingerprint;
 
 
-typedef struct {
-  em_Val inner;
-} RTCDtlsFingerprint;
-
-
 DECLARE_EMLITE_TYPE(RTCDtlsFingerprint, em_Val);
 
 jb_DOMString RTCDtlsFingerprint_algorithm( const RTCDtlsFingerprint *self);
 
-void RTCDtlsFingerprint_set_algorithm(RTCDtlsFingerprint* self, const jb_DOMString* value);
+void RTCDtlsFingerprint_set_algorithm(RTCDtlsFingerprint* self, jb_DOMString * value);
 
 jb_DOMString RTCDtlsFingerprint_value( const RTCDtlsFingerprint *self);
 
-void RTCDtlsFingerprint_set_value(RTCDtlsFingerprint* self, const jb_DOMString* value);
-typedef struct {
-  em_Val inner;
-} RTCCertificate;
-
-
+void RTCDtlsFingerprint_set_value(RTCDtlsFingerprint* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(RTCCertificate, em_Val);
 
 jb_Any RTCCertificate_expires( const RTCCertificate *self);

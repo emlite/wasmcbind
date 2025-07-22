@@ -7,11 +7,6 @@
 typedef struct FileSystem FileSystem;
 
 
-typedef struct {
-  em_Val inner;
-} FileSystemEntry;
-
-
 DECLARE_EMLITE_TYPE(FileSystemEntry, em_Val);
 
 bool FileSystemEntry_isFile( const FileSystemEntry *self);
@@ -24,8 +19,8 @@ jb_USVString FileSystemEntry_fullPath( const FileSystemEntry *self);
 
 FileSystem FileSystemEntry_filesystem( const FileSystemEntry *self);
 
-jb_Undefined FileSystemEntry_getParent(FileSystemEntry* self );
+jb_Undefined FileSystemEntry_getParent0(FileSystemEntry* self );
 
-jb_Undefined FileSystemEntry_getParent(FileSystemEntry* self , const jb_Function* successCallback);
+jb_Undefined FileSystemEntry_getParent1(FileSystemEntry* self , jb_Function * successCallback);
 
-jb_Undefined FileSystemEntry_getParent(FileSystemEntry* self , const jb_Function* successCallback, const jb_Function* errorCallback);
+jb_Undefined FileSystemEntry_getParent2(FileSystemEntry* self , jb_Function * successCallback, jb_Function * errorCallback);

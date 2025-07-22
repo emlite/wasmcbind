@@ -5,25 +5,20 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} Table;
-
-
 DECLARE_EMLITE_TYPE(Table, em_Val);
 
-Table Table_new(const jb_Any* descriptor);
+Table Table_new0(jb_Any * descriptor);
 
-Table Table_new(const jb_Any* descriptor, const jb_Any* value);
+Table Table_new1(jb_Any * descriptor, jb_Any * value);
 
-unsigned long Table_grow(Table* self , unsigned long delta);
+unsigned long Table_grow0(Table* self , unsigned long delta);
 
-unsigned long Table_grow(Table* self , unsigned long delta, const jb_Any* value);
+unsigned long Table_grow1(Table* self , unsigned long delta, jb_Any * value);
 
 jb_Any Table_get(Table* self , unsigned long index);
 
-jb_Undefined Table_set(Table* self , unsigned long index);
+jb_Undefined Table_set0(Table* self , unsigned long index);
 
-jb_Undefined Table_set(Table* self , unsigned long index, const jb_Any* value);
+jb_Undefined Table_set1(Table* self , unsigned long index, jb_Any * value);
 
 unsigned long Table_length( const Table *self);

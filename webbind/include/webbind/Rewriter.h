@@ -12,90 +12,70 @@ typedef struct ReadableStream ReadableStream;
 typedef struct AbortSignal AbortSignal;
 
 
-typedef struct {
-  em_Val inner;
-} RewriterCreateOptions;
-
-
 DECLARE_EMLITE_TYPE(RewriterCreateOptions, em_Val);
 
 AbortSignal RewriterCreateOptions_signal( const RewriterCreateOptions *self);
 
-void RewriterCreateOptions_set_signal(RewriterCreateOptions* self, const AbortSignal* value);
+void RewriterCreateOptions_set_signal(RewriterCreateOptions* self, AbortSignal * value);
 
 jb_Function RewriterCreateOptions_monitor( const RewriterCreateOptions *self);
 
-void RewriterCreateOptions_set_monitor(RewriterCreateOptions* self, const jb_Function* value);
+void RewriterCreateOptions_set_monitor(RewriterCreateOptions* self, jb_Function * value);
 
 jb_DOMString RewriterCreateOptions_sharedContext( const RewriterCreateOptions *self);
 
-void RewriterCreateOptions_set_sharedContext(RewriterCreateOptions* self, const jb_DOMString* value);
-typedef struct {
-  em_Val inner;
-} RewriterCreateCoreOptions;
-
-
+void RewriterCreateOptions_set_sharedContext(RewriterCreateOptions* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(RewriterCreateCoreOptions, em_Val);
 
 RewriterTone RewriterCreateCoreOptions_tone( const RewriterCreateCoreOptions *self);
 
-void RewriterCreateCoreOptions_set_tone(RewriterCreateCoreOptions* self, const RewriterTone* value);
+void RewriterCreateCoreOptions_set_tone(RewriterCreateCoreOptions* self, RewriterTone * value);
 
 RewriterFormat RewriterCreateCoreOptions_format( const RewriterCreateCoreOptions *self);
 
-void RewriterCreateCoreOptions_set_format(RewriterCreateCoreOptions* self, const RewriterFormat* value);
+void RewriterCreateCoreOptions_set_format(RewriterCreateCoreOptions* self, RewriterFormat * value);
 
 RewriterLength RewriterCreateCoreOptions_length( const RewriterCreateCoreOptions *self);
 
-void RewriterCreateCoreOptions_set_length(RewriterCreateCoreOptions* self, const RewriterLength* value);
+void RewriterCreateCoreOptions_set_length(RewriterCreateCoreOptions* self, RewriterLength * value);
 
 jb_Sequence RewriterCreateCoreOptions_expectedInputLanguages( const RewriterCreateCoreOptions *self);
 
-void RewriterCreateCoreOptions_set_expectedInputLanguages(RewriterCreateCoreOptions* self, const jb_Sequence* value);
+void RewriterCreateCoreOptions_set_expectedInputLanguages(RewriterCreateCoreOptions* self, jb_Sequence * value);
 
 jb_Sequence RewriterCreateCoreOptions_expectedContextLanguages( const RewriterCreateCoreOptions *self);
 
-void RewriterCreateCoreOptions_set_expectedContextLanguages(RewriterCreateCoreOptions* self, const jb_Sequence* value);
+void RewriterCreateCoreOptions_set_expectedContextLanguages(RewriterCreateCoreOptions* self, jb_Sequence * value);
 
 jb_DOMString RewriterCreateCoreOptions_outputLanguage( const RewriterCreateCoreOptions *self);
 
-void RewriterCreateCoreOptions_set_outputLanguage(RewriterCreateCoreOptions* self, const jb_DOMString* value);
-typedef struct {
-  em_Val inner;
-} RewriterRewriteOptions;
-
-
+void RewriterCreateCoreOptions_set_outputLanguage(RewriterCreateCoreOptions* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(RewriterRewriteOptions, em_Val);
 
 jb_DOMString RewriterRewriteOptions_context( const RewriterRewriteOptions *self);
 
-void RewriterRewriteOptions_set_context(RewriterRewriteOptions* self, const jb_DOMString* value);
+void RewriterRewriteOptions_set_context(RewriterRewriteOptions* self, jb_DOMString * value);
 
 AbortSignal RewriterRewriteOptions_signal( const RewriterRewriteOptions *self);
 
-void RewriterRewriteOptions_set_signal(RewriterRewriteOptions* self, const AbortSignal* value);
-typedef struct {
-  em_Val inner;
-} Rewriter;
-
-
+void RewriterRewriteOptions_set_signal(RewriterRewriteOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(Rewriter, em_Val);
 
-jb_Promise Rewriter_create(Rewriter* self );
+jb_Promise Rewriter_create0(Rewriter* self );
 
-jb_Promise Rewriter_create(Rewriter* self , const RewriterCreateOptions* options);
+jb_Promise Rewriter_create1(Rewriter* self , RewriterCreateOptions * options);
 
-jb_Promise Rewriter_availability(Rewriter* self );
+jb_Promise Rewriter_availability0(Rewriter* self );
 
-jb_Promise Rewriter_availability(Rewriter* self , const RewriterCreateCoreOptions* options);
+jb_Promise Rewriter_availability1(Rewriter* self , RewriterCreateCoreOptions * options);
 
-jb_Promise Rewriter_rewrite(Rewriter* self , const jb_DOMString* input);
+jb_Promise Rewriter_rewrite0(Rewriter* self , jb_DOMString * input);
 
-jb_Promise Rewriter_rewrite(Rewriter* self , const jb_DOMString* input, const RewriterRewriteOptions* options);
+jb_Promise Rewriter_rewrite1(Rewriter* self , jb_DOMString * input, RewriterRewriteOptions * options);
 
-ReadableStream Rewriter_rewriteStreaming(Rewriter* self , const jb_DOMString* input);
+ReadableStream Rewriter_rewriteStreaming0(Rewriter* self , jb_DOMString * input);
 
-ReadableStream Rewriter_rewriteStreaming(Rewriter* self , const jb_DOMString* input, const RewriterRewriteOptions* options);
+ReadableStream Rewriter_rewriteStreaming1(Rewriter* self , jb_DOMString * input, RewriterRewriteOptions * options);
 
 jb_DOMString Rewriter_sharedContext( const Rewriter *self);
 
@@ -111,9 +91,9 @@ jb_FrozenArray Rewriter_expectedContextLanguages( const Rewriter *self);
 
 jb_DOMString Rewriter_outputLanguage( const Rewriter *self);
 
-jb_Promise Rewriter_measureInputUsage(Rewriter* self , const jb_DOMString* input);
+jb_Promise Rewriter_measureInputUsage0(Rewriter* self , jb_DOMString * input);
 
-jb_Promise Rewriter_measureInputUsage(Rewriter* self , const jb_DOMString* input, const RewriterRewriteOptions* options);
+jb_Promise Rewriter_measureInputUsage1(Rewriter* self , jb_DOMString * input, RewriterRewriteOptions * options);
 
 double Rewriter_inputQuota( const Rewriter *self);
 

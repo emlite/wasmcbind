@@ -11,11 +11,6 @@ typedef struct ValidityState ValidityState;
 typedef struct NodeList NodeList;
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLOutputElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLOutputElement, HTMLElement);
 
 HTMLOutputElement HTMLOutputElement_new();
@@ -26,17 +21,17 @@ HTMLFormElement HTMLOutputElement_form( const HTMLOutputElement *self);
 
 jb_DOMString HTMLOutputElement_name( const HTMLOutputElement *self);
 
-void HTMLOutputElement_set_name(HTMLOutputElement* self, const jb_DOMString* value);
+void HTMLOutputElement_set_name(HTMLOutputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLOutputElement_type( const HTMLOutputElement *self);
 
 jb_DOMString HTMLOutputElement_defaultValue( const HTMLOutputElement *self);
 
-void HTMLOutputElement_set_defaultValue(HTMLOutputElement* self, const jb_DOMString* value);
+void HTMLOutputElement_set_defaultValue(HTMLOutputElement* self, jb_DOMString * value);
 
 jb_DOMString HTMLOutputElement_value( const HTMLOutputElement *self);
 
-void HTMLOutputElement_set_value(HTMLOutputElement* self, const jb_DOMString* value);
+void HTMLOutputElement_set_value(HTMLOutputElement* self, jb_DOMString * value);
 
 bool HTMLOutputElement_willValidate( const HTMLOutputElement *self);
 
@@ -48,6 +43,6 @@ bool HTMLOutputElement_checkValidity(HTMLOutputElement* self );
 
 bool HTMLOutputElement_reportValidity(HTMLOutputElement* self );
 
-jb_Undefined HTMLOutputElement_setCustomValidity(HTMLOutputElement* self , const jb_DOMString* error);
+jb_Undefined HTMLOutputElement_setCustomValidity(HTMLOutputElement* self , jb_DOMString * error);
 
 NodeList HTMLOutputElement_labels( const HTMLOutputElement *self);

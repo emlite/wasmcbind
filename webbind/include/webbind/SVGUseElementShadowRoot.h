@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  ShadowRoot inner;
-} SVGUseElementShadowRoot;
-
-
 DECLARE_EMLITE_TYPE(SVGUseElementShadowRoot, ShadowRoot);

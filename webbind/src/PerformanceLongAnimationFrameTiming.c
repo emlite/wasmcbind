@@ -6,47 +6,47 @@ DEFINE_EMLITE_TYPE(PerformanceLongAnimationFrameTiming, PerformanceEntry);
 
 
 jb_Any PerformanceLongAnimationFrameTiming_startTime(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "startTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("startTime")));
 }
 
 
 jb_Any PerformanceLongAnimationFrameTiming_duration(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "duration"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("duration")));
 }
 
 
 jb_DOMString PerformanceLongAnimationFrameTiming_name(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
 }
 
 
 jb_DOMString PerformanceLongAnimationFrameTiming_entryType(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "entryType"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
 }
 
 
 jb_Any PerformanceLongAnimationFrameTiming_renderStart(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "renderStart"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("renderStart")));
 }
 
 
 jb_Any PerformanceLongAnimationFrameTiming_styleAndLayoutStart(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "styleAndLayoutStart"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("styleAndLayoutStart")));
 }
 
 
 jb_Any PerformanceLongAnimationFrameTiming_blockingDuration(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "blockingDuration"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("blockingDuration")));
 }
 
 
 jb_Any PerformanceLongAnimationFrameTiming_firstUIEventTimestamp(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "firstUIEventTimestamp"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("firstUIEventTimestamp")));
 }
 
 
 jb_FrozenArray PerformanceLongAnimationFrameTiming_scripts(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(PerformanceEntry_as_val(self->inner), "scripts"));
+    return em_Val_as(jb_FrozenArray, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("scripts")));
 }
 
 
@@ -56,11 +56,11 @@ jb_Object PerformanceLongAnimationFrameTiming_toJSON(PerformanceLongAnimationFra
 
 
 jb_Any PerformanceLongAnimationFrameTiming_paintTime(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "paintTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("paintTime")));
 }
 
 
 jb_Any PerformanceLongAnimationFrameTiming_presentationTime(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "presentationTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("presentationTime")));
 }
 

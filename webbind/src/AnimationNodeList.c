@@ -6,7 +6,7 @@ DEFINE_EMLITE_TYPE(AnimationNodeList, em_Val);
 
 
 unsigned long AnimationNodeList_length(const AnimationNodeList *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "length"));
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("length")));
 }
 
 

@@ -8,14 +8,9 @@
 typedef struct HIDDevice HIDDevice;
 
 
-typedef struct {
-  Event inner;
-} HIDInputReportEvent;
-
-
 DECLARE_EMLITE_TYPE(HIDInputReportEvent, Event);
 
-HIDInputReportEvent HIDInputReportEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+HIDInputReportEvent HIDInputReportEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 HIDDevice HIDInputReportEvent_device( const HIDInputReportEvent *self);
 

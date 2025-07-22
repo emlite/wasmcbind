@@ -8,11 +8,6 @@
 typedef struct RTCIdentityProviderRegistrar RTCIdentityProviderRegistrar;
 
 
-typedef struct {
-  WorkerGlobalScope inner;
-} RTCIdentityProviderGlobalScope;
-
-
 DECLARE_EMLITE_TYPE(RTCIdentityProviderGlobalScope, WorkerGlobalScope);
 
 RTCIdentityProviderRegistrar RTCIdentityProviderGlobalScope_rtcIdentityProvider( const RTCIdentityProviderGlobalScope *self);

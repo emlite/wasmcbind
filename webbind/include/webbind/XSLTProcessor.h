@@ -9,26 +9,21 @@ typedef struct DocumentFragment DocumentFragment;
 typedef struct Document Document;
 
 
-typedef struct {
-  em_Val inner;
-} XSLTProcessor;
-
-
 DECLARE_EMLITE_TYPE(XSLTProcessor, em_Val);
 
 XSLTProcessor XSLTProcessor_new();
 
-jb_Undefined XSLTProcessor_importStylesheet(XSLTProcessor* self , const Node* style);
+jb_Undefined XSLTProcessor_importStylesheet(XSLTProcessor* self , Node * style);
 
-DocumentFragment XSLTProcessor_transformToFragment(XSLTProcessor* self , const Node* source, const Document* output);
+DocumentFragment XSLTProcessor_transformToFragment(XSLTProcessor* self , Node * source, Document * output);
 
-Document XSLTProcessor_transformToDocument(XSLTProcessor* self , const Node* source);
+Document XSLTProcessor_transformToDocument(XSLTProcessor* self , Node * source);
 
-jb_Undefined XSLTProcessor_setParameter(XSLTProcessor* self , const jb_DOMString* namespaceURI, const jb_DOMString* localName, const jb_Any* value);
+jb_Undefined XSLTProcessor_setParameter(XSLTProcessor* self , jb_DOMString * namespaceURI, jb_DOMString * localName, jb_Any * value);
 
-jb_Any XSLTProcessor_getParameter(XSLTProcessor* self , const jb_DOMString* namespaceURI, const jb_DOMString* localName);
+jb_Any XSLTProcessor_getParameter(XSLTProcessor* self , jb_DOMString * namespaceURI, jb_DOMString * localName);
 
-jb_Undefined XSLTProcessor_removeParameter(XSLTProcessor* self , const jb_DOMString* namespaceURI, const jb_DOMString* localName);
+jb_Undefined XSLTProcessor_removeParameter(XSLTProcessor* self , jb_DOMString * namespaceURI, jb_DOMString * localName);
 
 jb_Undefined XSLTProcessor_clearParameters(XSLTProcessor* self );
 

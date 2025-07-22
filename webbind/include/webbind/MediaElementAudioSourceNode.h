@@ -9,13 +9,8 @@ typedef struct HTMLMediaElement HTMLMediaElement;
 typedef struct AudioContext AudioContext;
 
 
-typedef struct {
-  AudioNode inner;
-} MediaElementAudioSourceNode;
-
-
 DECLARE_EMLITE_TYPE(MediaElementAudioSourceNode, AudioNode);
 
-MediaElementAudioSourceNode MediaElementAudioSourceNode_new(const AudioContext* context, const jb_Any* options);
+MediaElementAudioSourceNode MediaElementAudioSourceNode_new(AudioContext * context, jb_Any * options);
 
 HTMLMediaElement MediaElementAudioSourceNode_mediaElement( const MediaElementAudioSourceNode *self);

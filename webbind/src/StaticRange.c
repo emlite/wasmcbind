@@ -4,7 +4,8 @@
 DEFINE_EMLITE_TYPE(StaticRange, AbstractRange);
 
 
-StaticRange StaticRange_new(const jb_Any* init) : AbstractRange(em_Val_global("StaticRange").new_(em_Val_from(init))) {
-        return StaticRange(em_Val_new(em_Val_global("StaticRange", em_Val_from(init)));
+StaticRange StaticRange_new(jb_Any * init) {
+        em_Val vv = em_Val_new(em_Val_global("StaticRange") , em_Val_from(init));
+        return StaticRange_from_val(&vv);
       }
 

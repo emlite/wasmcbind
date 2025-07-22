@@ -7,11 +7,6 @@
 typedef struct ScreenOrientation ScreenOrientation;
 
 
-typedef struct {
-  em_Val inner;
-} Screen;
-
-
 DECLARE_EMLITE_TYPE(Screen, em_Val);
 
 long Screen_availWidth( const Screen *self);
@@ -32,4 +27,4 @@ bool Screen_isExtended( const Screen *self);
 
 jb_Any Screen_onchange( const Screen *self);
 
-void Screen_set_onchange(Screen* self, const jb_Any* value);
+void Screen_set_onchange(Screen* self, jb_Any * value);

@@ -6,15 +6,10 @@
 #include "enums.h"
 
 
-typedef struct {
-  AbortController inner;
-} TaskController;
-
-
 DECLARE_EMLITE_TYPE(TaskController, AbortController);
 
-TaskController TaskController_new();
+TaskController TaskController_new0();
 
-TaskController TaskController_new(const jb_Any* init);
+TaskController TaskController_new1(jb_Any * init);
 
-jb_Undefined TaskController_setPriority(TaskController* self , const TaskPriority* priority);
+jb_Undefined TaskController_setPriority(TaskController* self , TaskPriority * priority);

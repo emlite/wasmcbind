@@ -5,38 +5,39 @@
 DEFINE_EMLITE_TYPE(KeyframeEffect, AnimationEffect);
 
 
-KeyframeEffect KeyframeEffect_new(const KeyframeEffect* source) : AnimationEffect(em_Val_global("KeyframeEffect").new_(em_Val_from(source))) {
-        return KeyframeEffect(em_Val_new(em_Val_global("KeyframeEffect", em_Val_from(source)));
+KeyframeEffect KeyframeEffect_new(KeyframeEffect * source) {
+        em_Val vv = em_Val_new(em_Val_global("KeyframeEffect") , em_Val_from(source));
+        return KeyframeEffect_from_val(&vv);
       }
 
 
 Element KeyframeEffect_target(const KeyframeEffect *self) {
-    return em_Val_as(Element, em_Val_get(AnimationEffect_as_val(self->inner), "target"));
+    return em_Val_as(Element, em_Val_get(AnimationEffect_as_val(self->inner), em_Val_from("target")));
 }
 
 
-void KeyframeEffect_set_target(KeyframeEffect* self, const Element* value) {
-    em_Val_set(AnimationEffect_as_val(self->inner), "target", value);
+void KeyframeEffect_set_target(KeyframeEffect* self, Element * value) {
+    em_Val_set(AnimationEffect_as_val(self->inner), em_Val_from("target"), em_Val_from(value));
 }
 
 
 jb_CSSOMString KeyframeEffect_pseudoElement(const KeyframeEffect *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(AnimationEffect_as_val(self->inner), "pseudoElement"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(AnimationEffect_as_val(self->inner), em_Val_from("pseudoElement")));
 }
 
 
-void KeyframeEffect_set_pseudoElement(KeyframeEffect* self, const jb_CSSOMString* value) {
-    em_Val_set(AnimationEffect_as_val(self->inner), "pseudoElement", value);
+void KeyframeEffect_set_pseudoElement(KeyframeEffect* self, jb_CSSOMString * value) {
+    em_Val_set(AnimationEffect_as_val(self->inner), em_Val_from("pseudoElement"), em_Val_from(value));
 }
 
 
 CompositeOperation KeyframeEffect_composite(const KeyframeEffect *self) {
-    return em_Val_as(CompositeOperation, em_Val_get(AnimationEffect_as_val(self->inner), "composite"));
+    return em_Val_as(CompositeOperation, em_Val_get(AnimationEffect_as_val(self->inner), em_Val_from("composite")));
 }
 
 
-void KeyframeEffect_set_composite(KeyframeEffect* self, const CompositeOperation* value) {
-    em_Val_set(AnimationEffect_as_val(self->inner), "composite", value);
+void KeyframeEffect_set_composite(KeyframeEffect* self, CompositeOperation * value) {
+    em_Val_set(AnimationEffect_as_val(self->inner), em_Val_from("composite"), em_Val_from(value));
 }
 
 
@@ -45,17 +46,17 @@ jb_Sequence KeyframeEffect_getKeyframes(KeyframeEffect* self ) {
 }
 
 
-jb_Undefined KeyframeEffect_setKeyframes(KeyframeEffect* self , const jb_Object* keyframes) {
+jb_Undefined KeyframeEffect_setKeyframes(KeyframeEffect* self , jb_Object * keyframes) {
     return em_Val_as(jb_Undefined, em_Val_call(AnimationEffect_as_val(self->inner), "setKeyframes", em_Val_from(keyframes)));
 }
 
 
 IterationCompositeOperation KeyframeEffect_iterationComposite(const KeyframeEffect *self) {
-    return em_Val_as(IterationCompositeOperation, em_Val_get(AnimationEffect_as_val(self->inner), "iterationComposite"));
+    return em_Val_as(IterationCompositeOperation, em_Val_get(AnimationEffect_as_val(self->inner), em_Val_from("iterationComposite")));
 }
 
 
-void KeyframeEffect_set_iterationComposite(KeyframeEffect* self, const IterationCompositeOperation* value) {
-    em_Val_set(AnimationEffect_as_val(self->inner), "iterationComposite", value);
+void KeyframeEffect_set_iterationComposite(KeyframeEffect* self, IterationCompositeOperation * value) {
+    em_Val_set(AnimationEffect_as_val(self->inner), em_Val_from("iterationComposite"), em_Val_from(value));
 }
 

@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLLIElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLLIElement, HTMLElement);
 
 HTMLLIElement HTMLLIElement_new();
@@ -21,4 +16,4 @@ void HTMLLIElement_set_value(HTMLLIElement* self, long value);
 
 jb_DOMString HTMLLIElement_type( const HTMLLIElement *self);
 
-void HTMLLIElement_set_type(HTMLLIElement* self, const jb_DOMString* value);
+void HTMLLIElement_set_type(HTMLLIElement* self, jb_DOMString * value);

@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  EventTarget inner;
-} WakeLockSentinel;
-
-
 DECLARE_EMLITE_TYPE(WakeLockSentinel, EventTarget);
 
 bool WakeLockSentinel_released( const WakeLockSentinel *self);
@@ -21,4 +16,4 @@ jb_Promise WakeLockSentinel_release(WakeLockSentinel* self );
 
 jb_Any WakeLockSentinel_onrelease( const WakeLockSentinel *self);
 
-void WakeLockSentinel_set_onrelease(WakeLockSentinel* self, const jb_Any* value);
+void WakeLockSentinel_set_onrelease(WakeLockSentinel* self, jb_Any * value);

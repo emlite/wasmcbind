@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} SVGAnimatedNumber;
-
-
 DECLARE_EMLITE_TYPE(SVGAnimatedNumber, em_Val);
 
 float SVGAnimatedNumber_baseVal( const SVGAnimatedNumber *self);

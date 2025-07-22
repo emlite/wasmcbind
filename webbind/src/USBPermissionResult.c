@@ -6,11 +6,11 @@ DEFINE_EMLITE_TYPE(USBPermissionResult, PermissionStatus);
 
 
 jb_FrozenArray USBPermissionResult_devices(const USBPermissionResult *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(PermissionStatus_as_val(self->inner), "devices"));
+    return em_Val_as(jb_FrozenArray, em_Val_get(PermissionStatus_as_val(self->inner), em_Val_from("devices")));
 }
 
 
-void USBPermissionResult_set_devices(USBPermissionResult* self, const jb_FrozenArray* value) {
-    em_Val_set(PermissionStatus_as_val(self->inner), "devices", value);
+void USBPermissionResult_set_devices(USBPermissionResult* self, jb_FrozenArray * value) {
+    em_Val_set(PermissionStatus_as_val(self->inner), em_Val_from("devices"), em_Val_from(value));
 }
 

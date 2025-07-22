@@ -8,11 +8,6 @@ typedef struct Request Request;
 typedef struct Response Response;
 
 
-typedef struct {
-  em_Val inner;
-} BackgroundFetchRecord;
-
-
 DECLARE_EMLITE_TYPE(BackgroundFetchRecord, em_Val);
 
 Request BackgroundFetchRecord_request( const BackgroundFetchRecord *self);

@@ -8,11 +8,6 @@ typedef struct WritableStream WritableStream;
 typedef struct MediaStreamTrack MediaStreamTrack;
 
 
-typedef struct {
-  em_Val inner;
-} VideoTrackGenerator;
-
-
 DECLARE_EMLITE_TYPE(VideoTrackGenerator, em_Val);
 
 VideoTrackGenerator VideoTrackGenerator_new();

@@ -8,11 +8,6 @@ typedef struct NotRestoredReasonDetails NotRestoredReasonDetails;
 typedef struct NotRestoredReasons NotRestoredReasons;
 
 
-typedef struct {
-  em_Val inner;
-} NotRestoredReasons;
-
-
 DECLARE_EMLITE_TYPE(NotRestoredReasons, em_Val);
 
 jb_USVString NotRestoredReasons_src( const NotRestoredReasons *self);

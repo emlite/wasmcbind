@@ -7,11 +7,6 @@
 typedef struct Plugin Plugin;
 
 
-typedef struct {
-  em_Val inner;
-} MimeType;
-
-
 DECLARE_EMLITE_TYPE(MimeType, em_Val);
 
 jb_DOMString MimeType_type( const MimeType *self);

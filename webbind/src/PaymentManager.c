@@ -5,16 +5,16 @@ DEFINE_EMLITE_TYPE(PaymentManager, em_Val);
 
 
 jb_DOMString PaymentManager_userHint(const PaymentManager *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "userHint"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("userHint")));
 }
 
 
-void PaymentManager_set_userHint(PaymentManager* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "userHint", value);
+void PaymentManager_set_userHint(PaymentManager* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("userHint"), em_Val_from(value));
 }
 
 
-jb_Promise PaymentManager_enableDelegations(PaymentManager* self , const jb_Sequence* delegations) {
+jb_Promise PaymentManager_enableDelegations(PaymentManager* self , jb_Sequence * delegations) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "enableDelegations", em_Val_from(delegations)));
 }
 

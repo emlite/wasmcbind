@@ -8,18 +8,13 @@ typedef struct ReadableStream ReadableStream;
 typedef struct WritableStream WritableStream;
 
 
-typedef struct {
-  em_Val inner;
-} TextDecoderStream;
-
-
 DECLARE_EMLITE_TYPE(TextDecoderStream, em_Val);
 
-TextDecoderStream TextDecoderStream_new();
+TextDecoderStream TextDecoderStream_new0();
 
-TextDecoderStream TextDecoderStream_new(const jb_DOMString* label);
+TextDecoderStream TextDecoderStream_new1(jb_DOMString * label);
 
-TextDecoderStream TextDecoderStream_new(const jb_DOMString* label, const jb_Any* options);
+TextDecoderStream TextDecoderStream_new2(jb_DOMString * label, jb_Any * options);
 
 jb_DOMString TextDecoderStream_encoding( const TextDecoderStream *self);
 

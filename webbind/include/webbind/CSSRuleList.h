@@ -7,11 +7,6 @@
 typedef struct CSSRule CSSRule;
 
 
-typedef struct {
-  em_Val inner;
-} CSSRuleList;
-
-
 DECLARE_EMLITE_TYPE(CSSRuleList, em_Val);
 
 CSSRule CSSRuleList_item(CSSRuleList* self , unsigned long index);

@@ -5,13 +5,14 @@
 DEFINE_EMLITE_TYPE(MediaStream, EventTarget);
 
 
-MediaStream MediaStream_new(const jb_Sequence* tracks) : EventTarget(em_Val_global("MediaStream").new_(em_Val_from(tracks))) {
-        return MediaStream(em_Val_new(em_Val_global("MediaStream", em_Val_from(tracks)));
+MediaStream MediaStream_new(jb_Sequence * tracks) {
+        em_Val vv = em_Val_new(em_Val_global("MediaStream") , em_Val_from(tracks));
+        return MediaStream_from_val(&vv);
       }
 
 
 jb_DOMString MediaStream_id(const MediaStream *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), "id"));
+    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
@@ -30,17 +31,17 @@ jb_Sequence MediaStream_getTracks(MediaStream* self ) {
 }
 
 
-MediaStreamTrack MediaStream_getTrackById(MediaStream* self , const jb_DOMString* trackId) {
+MediaStreamTrack MediaStream_getTrackById(MediaStream* self , jb_DOMString * trackId) {
     return em_Val_as(MediaStreamTrack, em_Val_call(EventTarget_as_val(self->inner), "getTrackById", em_Val_from(trackId)));
 }
 
 
-jb_Undefined MediaStream_addTrack(MediaStream* self , const MediaStreamTrack* track) {
+jb_Undefined MediaStream_addTrack(MediaStream* self , MediaStreamTrack * track) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "addTrack", em_Val_from(track)));
 }
 
 
-jb_Undefined MediaStream_removeTrack(MediaStream* self , const MediaStreamTrack* track) {
+jb_Undefined MediaStream_removeTrack(MediaStream* self , MediaStreamTrack * track) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "removeTrack", em_Val_from(track)));
 }
 
@@ -51,26 +52,26 @@ MediaStream MediaStream_clone(MediaStream* self ) {
 
 
 bool MediaStream_active(const MediaStream *self) {
-    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), "active"));
+    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("active")));
 }
 
 
 jb_Any MediaStream_onaddtrack(const MediaStream *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onaddtrack"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onaddtrack")));
 }
 
 
-void MediaStream_set_onaddtrack(MediaStream* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onaddtrack", value);
+void MediaStream_set_onaddtrack(MediaStream* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onaddtrack"), em_Val_from(value));
 }
 
 
 jb_Any MediaStream_onremovetrack(const MediaStream *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onremovetrack"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onremovetrack")));
 }
 
 
-void MediaStream_set_onremovetrack(MediaStream* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onremovetrack", value);
+void MediaStream_set_onremovetrack(MediaStream* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onremovetrack"), em_Val_from(value));
 }
 

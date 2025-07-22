@@ -8,13 +8,8 @@
 typedef struct CSSNumericArray CSSNumericArray;
 
 
-typedef struct {
-  CSSMathValue inner;
-} CSSMathSum;
-
-
 DECLARE_EMLITE_TYPE(CSSMathSum, CSSMathValue);
 
-CSSMathSum CSSMathSum_new(const jb_Any* args);
+CSSMathSum CSSMathSum_new(jb_Any * args);
 
 CSSNumericArray CSSMathSum_values( const CSSMathSum *self);

@@ -4,17 +4,18 @@
 DEFINE_EMLITE_TYPE(SyncEvent, ExtendableEvent);
 
 
-SyncEvent SyncEvent_new(const jb_DOMString* type, const jb_Any* init) : ExtendableEvent(em_Val_global("SyncEvent").new_(em_Val_from(type), em_Val_from(init))) {
-        return SyncEvent(em_Val_new(em_Val_global("SyncEvent", em_Val_from(type), em_Val_from(init)));
+SyncEvent SyncEvent_new(jb_DOMString * type, jb_Any * init) {
+        em_Val vv = em_Val_new(em_Val_global("SyncEvent") , em_Val_from(type), em_Val_from(init));
+        return SyncEvent_from_val(&vv);
       }
 
 
 jb_DOMString SyncEvent_tag(const SyncEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(ExtendableEvent_as_val(self->inner), "tag"));
+    return em_Val_as(jb_DOMString, em_Val_get(ExtendableEvent_as_val(self->inner), em_Val_from("tag")));
 }
 
 
 bool SyncEvent_lastChance(const SyncEvent *self) {
-    return em_Val_as(bool, em_Val_get(ExtendableEvent_as_val(self->inner), "lastChance"));
+    return em_Val_as(bool, em_Val_get(ExtendableEvent_as_val(self->inner), em_Val_from("lastChance")));
 }
 

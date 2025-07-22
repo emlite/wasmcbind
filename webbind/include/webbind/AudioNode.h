@@ -10,18 +10,13 @@ typedef struct BaseAudioContext BaseAudioContext;
 typedef struct AudioContext AudioContext;
 
 
-typedef struct {
-  EventTarget inner;
-} AudioNode;
-
-
 DECLARE_EMLITE_TYPE(AudioNode, EventTarget);
 
-jb_Undefined AudioNode_connect(AudioNode* self , const AudioParam* destinationParam);
+jb_Undefined AudioNode_connect0(AudioNode* self , AudioParam * destinationParam);
 
-jb_Undefined AudioNode_connect(AudioNode* self , const AudioParam* destinationParam, unsigned long output);
+jb_Undefined AudioNode_connect1(AudioNode* self , AudioParam * destinationParam, unsigned long output);
 
-jb_Undefined AudioNode_disconnect(AudioNode* self , const AudioParam* destinationParam, unsigned long output);
+jb_Undefined AudioNode_disconnect(AudioNode* self , AudioParam * destinationParam, unsigned long output);
 
 BaseAudioContext AudioNode_context( const AudioNode *self);
 
@@ -35,8 +30,8 @@ void AudioNode_set_channelCount(AudioNode* self, unsigned long value);
 
 ChannelCountMode AudioNode_channelCountMode( const AudioNode *self);
 
-void AudioNode_set_channelCountMode(AudioNode* self, const ChannelCountMode* value);
+void AudioNode_set_channelCountMode(AudioNode* self, ChannelCountMode * value);
 
 ChannelInterpretation AudioNode_channelInterpretation( const AudioNode *self);
 
-void AudioNode_set_channelInterpretation(AudioNode* self, const ChannelInterpretation* value);
+void AudioNode_set_channelInterpretation(AudioNode* self, ChannelInterpretation * value);

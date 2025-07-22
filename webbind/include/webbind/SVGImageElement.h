@@ -10,11 +10,6 @@ typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
 typedef struct SVGAnimatedString SVGAnimatedString;
 
 
-typedef struct {
-  SVGGraphicsElement inner;
-} SVGImageElement;
-
-
 DECLARE_EMLITE_TYPE(SVGImageElement, SVGGraphicsElement);
 
 SVGAnimatedLength SVGImageElement_x( const SVGImageElement *self);
@@ -29,6 +24,6 @@ SVGAnimatedPreserveAspectRatio SVGImageElement_preserveAspectRatio( const SVGIma
 
 jb_DOMString SVGImageElement_crossOrigin( const SVGImageElement *self);
 
-void SVGImageElement_set_crossOrigin(SVGImageElement* self, const jb_DOMString* value);
+void SVGImageElement_set_crossOrigin(SVGImageElement* self, jb_DOMString * value);
 
 SVGAnimatedString SVGImageElement_href( const SVGImageElement *self);

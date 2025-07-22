@@ -6,18 +6,13 @@
 #include "enums.h"
 
 
-typedef struct {
-  EventTarget inner;
-} NavigatorManagedData;
-
-
 DECLARE_EMLITE_TYPE(NavigatorManagedData, EventTarget);
 
-jb_Promise NavigatorManagedData_getManagedConfiguration(NavigatorManagedData* self , const jb_Sequence* keys);
+jb_Promise NavigatorManagedData_getManagedConfiguration(NavigatorManagedData* self , jb_Sequence * keys);
 
 jb_Any NavigatorManagedData_onmanagedconfigurationchange( const NavigatorManagedData *self);
 
-void NavigatorManagedData_set_onmanagedconfigurationchange(NavigatorManagedData* self, const jb_Any* value);
+void NavigatorManagedData_set_onmanagedconfigurationchange(NavigatorManagedData* self, jb_Any * value);
 
 jb_Promise NavigatorManagedData_getAnnotatedAssetId(NavigatorManagedData* self );
 

@@ -8,27 +8,17 @@ typedef struct BackgroundFetchRegistration BackgroundFetchRegistration;
 typedef struct BackgroundFetchOptions BackgroundFetchOptions;
 
 
-typedef struct {
-  em_Val inner;
-} BackgroundFetchOptions;
-
-
 DECLARE_EMLITE_TYPE(BackgroundFetchOptions, em_Val);
 
 long long BackgroundFetchOptions_downloadTotal( const BackgroundFetchOptions *self);
 
 void BackgroundFetchOptions_set_downloadTotal(BackgroundFetchOptions* self, long long value);
-typedef struct {
-  em_Val inner;
-} BackgroundFetchManager;
-
-
 DECLARE_EMLITE_TYPE(BackgroundFetchManager, em_Val);
 
-jb_Promise BackgroundFetchManager_fetch(BackgroundFetchManager* self , const jb_DOMString* id, const jb_Any* requests);
+jb_Promise BackgroundFetchManager_fetch0(BackgroundFetchManager* self , jb_DOMString * id, jb_Any * requests);
 
-jb_Promise BackgroundFetchManager_fetch(BackgroundFetchManager* self , const jb_DOMString* id, const jb_Any* requests, const BackgroundFetchOptions* options);
+jb_Promise BackgroundFetchManager_fetch1(BackgroundFetchManager* self , jb_DOMString * id, jb_Any * requests, BackgroundFetchOptions * options);
 
-jb_Promise BackgroundFetchManager_get(BackgroundFetchManager* self , const jb_DOMString* id);
+jb_Promise BackgroundFetchManager_get(BackgroundFetchManager* self , jb_DOMString * id);
 
 jb_Promise BackgroundFetchManager_getIds(BackgroundFetchManager* self );

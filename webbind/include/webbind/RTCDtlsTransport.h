@@ -8,11 +8,6 @@
 typedef struct RTCIceTransport RTCIceTransport;
 
 
-typedef struct {
-  EventTarget inner;
-} RTCDtlsTransport;
-
-
 DECLARE_EMLITE_TYPE(RTCDtlsTransport, EventTarget);
 
 RTCIceTransport RTCDtlsTransport_iceTransport( const RTCDtlsTransport *self);
@@ -23,8 +18,8 @@ jb_Sequence RTCDtlsTransport_getRemoteCertificates(RTCDtlsTransport* self );
 
 jb_Any RTCDtlsTransport_onstatechange( const RTCDtlsTransport *self);
 
-void RTCDtlsTransport_set_onstatechange(RTCDtlsTransport* self, const jb_Any* value);
+void RTCDtlsTransport_set_onstatechange(RTCDtlsTransport* self, jb_Any * value);
 
 jb_Any RTCDtlsTransport_onerror( const RTCDtlsTransport *self);
 
-void RTCDtlsTransport_set_onerror(RTCDtlsTransport* self, const jb_Any* value);
+void RTCDtlsTransport_set_onerror(RTCDtlsTransport* self, jb_Any * value);

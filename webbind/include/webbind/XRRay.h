@@ -8,14 +8,9 @@ typedef struct DOMPointReadOnly DOMPointReadOnly;
 typedef struct XRRigidTransform XRRigidTransform;
 
 
-typedef struct {
-  em_Val inner;
-} XRRay;
-
-
 DECLARE_EMLITE_TYPE(XRRay, em_Val);
 
-XRRay XRRay_new(const XRRigidTransform* transform);
+XRRay XRRay_new(XRRigidTransform * transform);
 
 DOMPointReadOnly XRRay_origin( const XRRay *self);
 

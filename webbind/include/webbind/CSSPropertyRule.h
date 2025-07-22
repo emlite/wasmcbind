@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSRule inner;
-} CSSPropertyRule;
-
-
 DECLARE_EMLITE_TYPE(CSSPropertyRule, CSSRule);
 
 jb_CSSOMString CSSPropertyRule_name( const CSSPropertyRule *self);

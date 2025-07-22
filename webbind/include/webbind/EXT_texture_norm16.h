@@ -5,9 +5,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} EXT_texture_norm16;
-
-
 DECLARE_EMLITE_TYPE(EXT_texture_norm16, em_Val);

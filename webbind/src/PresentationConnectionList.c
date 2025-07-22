@@ -6,16 +6,16 @@ DEFINE_EMLITE_TYPE(PresentationConnectionList, EventTarget);
 
 
 jb_FrozenArray PresentationConnectionList_connections(const PresentationConnectionList *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(EventTarget_as_val(self->inner), "connections"));
+    return em_Val_as(jb_FrozenArray, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("connections")));
 }
 
 
 jb_Any PresentationConnectionList_onconnectionavailable(const PresentationConnectionList *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onconnectionavailable"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onconnectionavailable")));
 }
 
 
-void PresentationConnectionList_set_onconnectionavailable(PresentationConnectionList* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onconnectionavailable", value);
+void PresentationConnectionList_set_onconnectionavailable(PresentationConnectionList* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onconnectionavailable"), em_Val_from(value));
 }
 

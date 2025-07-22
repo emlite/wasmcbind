@@ -14,7 +14,7 @@ DEFINE_EMLITE_TYPE(OffscreenCanvasRenderingContext2D, em_Val);
 
 
 OffscreenCanvas OffscreenCanvasRenderingContext2D_canvas(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(OffscreenCanvas, em_Val_get(em_Val_as_val(self->inner), "canvas"));
+    return em_Val_as(OffscreenCanvas, em_Val_get(em_Val_as_val(self->inner), em_Val_from("canvas")));
 }
 
 
@@ -68,12 +68,12 @@ DOMMatrix OffscreenCanvasRenderingContext2D_getTransform(OffscreenCanvasRenderin
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_setTransform(OffscreenCanvasRenderingContext2D* self ) {
+jb_Undefined OffscreenCanvasRenderingContext2D_setTransform0(OffscreenCanvasRenderingContext2D* self ) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setTransform"));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_setTransform(OffscreenCanvasRenderingContext2D* self , const DOMMatrix2DInit* transform) {
+jb_Undefined OffscreenCanvasRenderingContext2D_setTransform1(OffscreenCanvasRenderingContext2D* self , DOMMatrix2DInit * transform) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setTransform", em_Val_from(transform)));
 }
 
@@ -84,62 +84,62 @@ jb_Undefined OffscreenCanvasRenderingContext2D_resetTransform(OffscreenCanvasRen
 
 
 double OffscreenCanvasRenderingContext2D_globalAlpha(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "globalAlpha"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("globalAlpha")));
 }
 
 
 void OffscreenCanvasRenderingContext2D_set_globalAlpha(OffscreenCanvasRenderingContext2D* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "globalAlpha", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("globalAlpha"), em_Val_from(value));
 }
 
 
 jb_DOMString OffscreenCanvasRenderingContext2D_globalCompositeOperation(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "globalCompositeOperation"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("globalCompositeOperation")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_globalCompositeOperation(OffscreenCanvasRenderingContext2D* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "globalCompositeOperation", value);
+void OffscreenCanvasRenderingContext2D_set_globalCompositeOperation(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("globalCompositeOperation"), em_Val_from(value));
 }
 
 
 bool OffscreenCanvasRenderingContext2D_imageSmoothingEnabled(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "imageSmoothingEnabled"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("imageSmoothingEnabled")));
 }
 
 
 void OffscreenCanvasRenderingContext2D_set_imageSmoothingEnabled(OffscreenCanvasRenderingContext2D* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "imageSmoothingEnabled", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("imageSmoothingEnabled"), em_Val_from(value));
 }
 
 
 ImageSmoothingQuality OffscreenCanvasRenderingContext2D_imageSmoothingQuality(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(ImageSmoothingQuality, em_Val_get(em_Val_as_val(self->inner), "imageSmoothingQuality"));
+    return em_Val_as(ImageSmoothingQuality, em_Val_get(em_Val_as_val(self->inner), em_Val_from("imageSmoothingQuality")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_imageSmoothingQuality(OffscreenCanvasRenderingContext2D* self, const ImageSmoothingQuality* value) {
-    em_Val_set(em_Val_as_val(self->inner), "imageSmoothingQuality", value);
+void OffscreenCanvasRenderingContext2D_set_imageSmoothingQuality(OffscreenCanvasRenderingContext2D* self, ImageSmoothingQuality * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("imageSmoothingQuality"), em_Val_from(value));
 }
 
 
 jb_Any OffscreenCanvasRenderingContext2D_strokeStyle(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "strokeStyle"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("strokeStyle")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_strokeStyle(OffscreenCanvasRenderingContext2D* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "strokeStyle", value);
+void OffscreenCanvasRenderingContext2D_set_strokeStyle(OffscreenCanvasRenderingContext2D* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("strokeStyle"), em_Val_from(value));
 }
 
 
 jb_Any OffscreenCanvasRenderingContext2D_fillStyle(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "fillStyle"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fillStyle")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_fillStyle(OffscreenCanvasRenderingContext2D* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "fillStyle", value);
+void OffscreenCanvasRenderingContext2D_set_fillStyle(OffscreenCanvasRenderingContext2D* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("fillStyle"), em_Val_from(value));
 }
 
 
@@ -158,58 +158,58 @@ CanvasGradient OffscreenCanvasRenderingContext2D_createConicGradient(OffscreenCa
 }
 
 
-CanvasPattern OffscreenCanvasRenderingContext2D_createPattern(OffscreenCanvasRenderingContext2D* self , const jb_Any* image, const jb_DOMString* repetition) {
+CanvasPattern OffscreenCanvasRenderingContext2D_createPattern(OffscreenCanvasRenderingContext2D* self , jb_Any * image, jb_DOMString * repetition) {
     return em_Val_as(CanvasPattern, em_Val_call(em_Val_as_val(self->inner), "createPattern", em_Val_from(image), em_Val_from(repetition)));
 }
 
 
 double OffscreenCanvasRenderingContext2D_shadowOffsetX(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "shadowOffsetX"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowOffsetX")));
 }
 
 
 void OffscreenCanvasRenderingContext2D_set_shadowOffsetX(OffscreenCanvasRenderingContext2D* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "shadowOffsetX", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("shadowOffsetX"), em_Val_from(value));
 }
 
 
 double OffscreenCanvasRenderingContext2D_shadowOffsetY(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "shadowOffsetY"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowOffsetY")));
 }
 
 
 void OffscreenCanvasRenderingContext2D_set_shadowOffsetY(OffscreenCanvasRenderingContext2D* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "shadowOffsetY", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("shadowOffsetY"), em_Val_from(value));
 }
 
 
 double OffscreenCanvasRenderingContext2D_shadowBlur(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "shadowBlur"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowBlur")));
 }
 
 
 void OffscreenCanvasRenderingContext2D_set_shadowBlur(OffscreenCanvasRenderingContext2D* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "shadowBlur", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("shadowBlur"), em_Val_from(value));
 }
 
 
 jb_DOMString OffscreenCanvasRenderingContext2D_shadowColor(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "shadowColor"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowColor")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_shadowColor(OffscreenCanvasRenderingContext2D* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "shadowColor", value);
+void OffscreenCanvasRenderingContext2D_set_shadowColor(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("shadowColor"), em_Val_from(value));
 }
 
 
 jb_DOMString OffscreenCanvasRenderingContext2D_filter(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "filter"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filter")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_filter(OffscreenCanvasRenderingContext2D* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "filter", value);
+void OffscreenCanvasRenderingContext2D_set_filter(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("filter"), em_Val_from(value));
 }
 
 
@@ -233,137 +233,137 @@ jb_Undefined OffscreenCanvasRenderingContext2D_beginPath(OffscreenCanvasRenderin
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_fill(OffscreenCanvasRenderingContext2D* self , const Path2D* path) {
+jb_Undefined OffscreenCanvasRenderingContext2D_fill0(OffscreenCanvasRenderingContext2D* self , Path2D * path) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "fill", em_Val_from(path)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_fill(OffscreenCanvasRenderingContext2D* self , const Path2D* path, const CanvasFillRule* fillRule) {
+jb_Undefined OffscreenCanvasRenderingContext2D_fill1(OffscreenCanvasRenderingContext2D* self , Path2D * path, CanvasFillRule * fillRule) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "fill", em_Val_from(path), em_Val_from(fillRule)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_stroke(OffscreenCanvasRenderingContext2D* self , const Path2D* path) {
+jb_Undefined OffscreenCanvasRenderingContext2D_stroke(OffscreenCanvasRenderingContext2D* self , Path2D * path) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "stroke", em_Val_from(path)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_clip(OffscreenCanvasRenderingContext2D* self , const Path2D* path) {
+jb_Undefined OffscreenCanvasRenderingContext2D_clip0(OffscreenCanvasRenderingContext2D* self , Path2D * path) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "clip", em_Val_from(path)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_clip(OffscreenCanvasRenderingContext2D* self , const Path2D* path, const CanvasFillRule* fillRule) {
+jb_Undefined OffscreenCanvasRenderingContext2D_clip1(OffscreenCanvasRenderingContext2D* self , Path2D * path, CanvasFillRule * fillRule) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "clip", em_Val_from(path), em_Val_from(fillRule)));
 }
 
 
-bool OffscreenCanvasRenderingContext2D_isPointInPath(OffscreenCanvasRenderingContext2D* self , const Path2D* path, double x, double y) {
+bool OffscreenCanvasRenderingContext2D_isPointInPath0(OffscreenCanvasRenderingContext2D* self , Path2D * path, double x, double y) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "isPointInPath", em_Val_from(path), em_Val_from(x), em_Val_from(y)));
 }
 
 
-bool OffscreenCanvasRenderingContext2D_isPointInPath(OffscreenCanvasRenderingContext2D* self , const Path2D* path, double x, double y, const CanvasFillRule* fillRule) {
+bool OffscreenCanvasRenderingContext2D_isPointInPath1(OffscreenCanvasRenderingContext2D* self , Path2D * path, double x, double y, CanvasFillRule * fillRule) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "isPointInPath", em_Val_from(path), em_Val_from(x), em_Val_from(y), em_Val_from(fillRule)));
 }
 
 
-bool OffscreenCanvasRenderingContext2D_isPointInStroke(OffscreenCanvasRenderingContext2D* self , const Path2D* path, double x, double y) {
+bool OffscreenCanvasRenderingContext2D_isPointInStroke(OffscreenCanvasRenderingContext2D* self , Path2D * path, double x, double y) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "isPointInStroke", em_Val_from(path), em_Val_from(x), em_Val_from(y)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_fillText(OffscreenCanvasRenderingContext2D* self , const jb_DOMString* text, double x, double y) {
+jb_Undefined OffscreenCanvasRenderingContext2D_fillText0(OffscreenCanvasRenderingContext2D* self , jb_DOMString * text, double x, double y) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "fillText", em_Val_from(text), em_Val_from(x), em_Val_from(y)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_fillText(OffscreenCanvasRenderingContext2D* self , const jb_DOMString* text, double x, double y, double maxWidth) {
+jb_Undefined OffscreenCanvasRenderingContext2D_fillText1(OffscreenCanvasRenderingContext2D* self , jb_DOMString * text, double x, double y, double maxWidth) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "fillText", em_Val_from(text), em_Val_from(x), em_Val_from(y), em_Val_from(maxWidth)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_strokeText(OffscreenCanvasRenderingContext2D* self , const jb_DOMString* text, double x, double y) {
+jb_Undefined OffscreenCanvasRenderingContext2D_strokeText0(OffscreenCanvasRenderingContext2D* self , jb_DOMString * text, double x, double y) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "strokeText", em_Val_from(text), em_Val_from(x), em_Val_from(y)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_strokeText(OffscreenCanvasRenderingContext2D* self , const jb_DOMString* text, double x, double y, double maxWidth) {
+jb_Undefined OffscreenCanvasRenderingContext2D_strokeText1(OffscreenCanvasRenderingContext2D* self , jb_DOMString * text, double x, double y, double maxWidth) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "strokeText", em_Val_from(text), em_Val_from(x), em_Val_from(y), em_Val_from(maxWidth)));
 }
 
 
-TextMetrics OffscreenCanvasRenderingContext2D_measureText(OffscreenCanvasRenderingContext2D* self , const jb_DOMString* text) {
+TextMetrics OffscreenCanvasRenderingContext2D_measureText(OffscreenCanvasRenderingContext2D* self , jb_DOMString * text) {
     return em_Val_as(TextMetrics, em_Val_call(em_Val_as_val(self->inner), "measureText", em_Val_from(text)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_drawImage(OffscreenCanvasRenderingContext2D* self , const jb_Any* image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) {
+jb_Undefined OffscreenCanvasRenderingContext2D_drawImage(OffscreenCanvasRenderingContext2D* self , jb_Any * image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "drawImage", em_Val_from(image), em_Val_from(sx), em_Val_from(sy), em_Val_from(sw), em_Val_from(sh), em_Val_from(dx), em_Val_from(dy), em_Val_from(dw), em_Val_from(dh)));
 }
 
 
-ImageData OffscreenCanvasRenderingContext2D_createImageData(OffscreenCanvasRenderingContext2D* self , const ImageData* imageData) {
+ImageData OffscreenCanvasRenderingContext2D_createImageData(OffscreenCanvasRenderingContext2D* self , ImageData * imageData) {
     return em_Val_as(ImageData, em_Val_call(em_Val_as_val(self->inner), "createImageData", em_Val_from(imageData)));
 }
 
 
-ImageData OffscreenCanvasRenderingContext2D_getImageData(OffscreenCanvasRenderingContext2D* self , long sx, long sy, long sw, long sh) {
+ImageData OffscreenCanvasRenderingContext2D_getImageData0(OffscreenCanvasRenderingContext2D* self , long sx, long sy, long sw, long sh) {
     return em_Val_as(ImageData, em_Val_call(em_Val_as_val(self->inner), "getImageData", em_Val_from(sx), em_Val_from(sy), em_Val_from(sw), em_Val_from(sh)));
 }
 
 
-ImageData OffscreenCanvasRenderingContext2D_getImageData(OffscreenCanvasRenderingContext2D* self , long sx, long sy, long sw, long sh, const ImageDataSettings* settings) {
+ImageData OffscreenCanvasRenderingContext2D_getImageData1(OffscreenCanvasRenderingContext2D* self , long sx, long sy, long sw, long sh, ImageDataSettings * settings) {
     return em_Val_as(ImageData, em_Val_call(em_Val_as_val(self->inner), "getImageData", em_Val_from(sx), em_Val_from(sy), em_Val_from(sw), em_Val_from(sh), em_Val_from(settings)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_putImageData(OffscreenCanvasRenderingContext2D* self , const ImageData* imageData, long dx, long dy, long dirtyX, long dirtyY, long dirtyWidth, long dirtyHeight) {
+jb_Undefined OffscreenCanvasRenderingContext2D_putImageData(OffscreenCanvasRenderingContext2D* self , ImageData * imageData, long dx, long dy, long dirtyX, long dirtyY, long dirtyWidth, long dirtyHeight) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "putImageData", em_Val_from(imageData), em_Val_from(dx), em_Val_from(dy), em_Val_from(dirtyX), em_Val_from(dirtyY), em_Val_from(dirtyWidth), em_Val_from(dirtyHeight)));
 }
 
 
 double OffscreenCanvasRenderingContext2D_lineWidth(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "lineWidth"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lineWidth")));
 }
 
 
 void OffscreenCanvasRenderingContext2D_set_lineWidth(OffscreenCanvasRenderingContext2D* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "lineWidth", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("lineWidth"), em_Val_from(value));
 }
 
 
 CanvasLineCap OffscreenCanvasRenderingContext2D_lineCap(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(CanvasLineCap, em_Val_get(em_Val_as_val(self->inner), "lineCap"));
+    return em_Val_as(CanvasLineCap, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lineCap")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_lineCap(OffscreenCanvasRenderingContext2D* self, const CanvasLineCap* value) {
-    em_Val_set(em_Val_as_val(self->inner), "lineCap", value);
+void OffscreenCanvasRenderingContext2D_set_lineCap(OffscreenCanvasRenderingContext2D* self, CanvasLineCap * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("lineCap"), em_Val_from(value));
 }
 
 
 CanvasLineJoin OffscreenCanvasRenderingContext2D_lineJoin(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(CanvasLineJoin, em_Val_get(em_Val_as_val(self->inner), "lineJoin"));
+    return em_Val_as(CanvasLineJoin, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lineJoin")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_lineJoin(OffscreenCanvasRenderingContext2D* self, const CanvasLineJoin* value) {
-    em_Val_set(em_Val_as_val(self->inner), "lineJoin", value);
+void OffscreenCanvasRenderingContext2D_set_lineJoin(OffscreenCanvasRenderingContext2D* self, CanvasLineJoin * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("lineJoin"), em_Val_from(value));
 }
 
 
 double OffscreenCanvasRenderingContext2D_miterLimit(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "miterLimit"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("miterLimit")));
 }
 
 
 void OffscreenCanvasRenderingContext2D_set_miterLimit(OffscreenCanvasRenderingContext2D* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "miterLimit", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("miterLimit"), em_Val_from(value));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_setLineDash(OffscreenCanvasRenderingContext2D* self , const jb_Sequence* segments) {
+jb_Undefined OffscreenCanvasRenderingContext2D_setLineDash(OffscreenCanvasRenderingContext2D* self , jb_Sequence * segments) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setLineDash", em_Val_from(segments)));
 }
 
@@ -374,122 +374,122 @@ jb_Sequence OffscreenCanvasRenderingContext2D_getLineDash(OffscreenCanvasRenderi
 
 
 double OffscreenCanvasRenderingContext2D_lineDashOffset(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "lineDashOffset"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lineDashOffset")));
 }
 
 
 void OffscreenCanvasRenderingContext2D_set_lineDashOffset(OffscreenCanvasRenderingContext2D* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "lineDashOffset", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("lineDashOffset"), em_Val_from(value));
 }
 
 
 jb_DOMString OffscreenCanvasRenderingContext2D_lang(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "lang"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lang")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_lang(OffscreenCanvasRenderingContext2D* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "lang", value);
+void OffscreenCanvasRenderingContext2D_set_lang(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("lang"), em_Val_from(value));
 }
 
 
 jb_DOMString OffscreenCanvasRenderingContext2D_font(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "font"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("font")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_font(OffscreenCanvasRenderingContext2D* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "font", value);
+void OffscreenCanvasRenderingContext2D_set_font(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("font"), em_Val_from(value));
 }
 
 
 CanvasTextAlign OffscreenCanvasRenderingContext2D_textAlign(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(CanvasTextAlign, em_Val_get(em_Val_as_val(self->inner), "textAlign"));
+    return em_Val_as(CanvasTextAlign, em_Val_get(em_Val_as_val(self->inner), em_Val_from("textAlign")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_textAlign(OffscreenCanvasRenderingContext2D* self, const CanvasTextAlign* value) {
-    em_Val_set(em_Val_as_val(self->inner), "textAlign", value);
+void OffscreenCanvasRenderingContext2D_set_textAlign(OffscreenCanvasRenderingContext2D* self, CanvasTextAlign * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("textAlign"), em_Val_from(value));
 }
 
 
 CanvasTextBaseline OffscreenCanvasRenderingContext2D_textBaseline(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(CanvasTextBaseline, em_Val_get(em_Val_as_val(self->inner), "textBaseline"));
+    return em_Val_as(CanvasTextBaseline, em_Val_get(em_Val_as_val(self->inner), em_Val_from("textBaseline")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_textBaseline(OffscreenCanvasRenderingContext2D* self, const CanvasTextBaseline* value) {
-    em_Val_set(em_Val_as_val(self->inner), "textBaseline", value);
+void OffscreenCanvasRenderingContext2D_set_textBaseline(OffscreenCanvasRenderingContext2D* self, CanvasTextBaseline * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("textBaseline"), em_Val_from(value));
 }
 
 
 CanvasDirection OffscreenCanvasRenderingContext2D_direction(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(CanvasDirection, em_Val_get(em_Val_as_val(self->inner), "direction"));
+    return em_Val_as(CanvasDirection, em_Val_get(em_Val_as_val(self->inner), em_Val_from("direction")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_direction(OffscreenCanvasRenderingContext2D* self, const CanvasDirection* value) {
-    em_Val_set(em_Val_as_val(self->inner), "direction", value);
+void OffscreenCanvasRenderingContext2D_set_direction(OffscreenCanvasRenderingContext2D* self, CanvasDirection * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("direction"), em_Val_from(value));
 }
 
 
 jb_DOMString OffscreenCanvasRenderingContext2D_letterSpacing(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "letterSpacing"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("letterSpacing")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_letterSpacing(OffscreenCanvasRenderingContext2D* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "letterSpacing", value);
+void OffscreenCanvasRenderingContext2D_set_letterSpacing(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("letterSpacing"), em_Val_from(value));
 }
 
 
 CanvasFontKerning OffscreenCanvasRenderingContext2D_fontKerning(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(CanvasFontKerning, em_Val_get(em_Val_as_val(self->inner), "fontKerning"));
+    return em_Val_as(CanvasFontKerning, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fontKerning")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_fontKerning(OffscreenCanvasRenderingContext2D* self, const CanvasFontKerning* value) {
-    em_Val_set(em_Val_as_val(self->inner), "fontKerning", value);
+void OffscreenCanvasRenderingContext2D_set_fontKerning(OffscreenCanvasRenderingContext2D* self, CanvasFontKerning * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("fontKerning"), em_Val_from(value));
 }
 
 
 CanvasFontStretch OffscreenCanvasRenderingContext2D_fontStretch(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(CanvasFontStretch, em_Val_get(em_Val_as_val(self->inner), "fontStretch"));
+    return em_Val_as(CanvasFontStretch, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fontStretch")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_fontStretch(OffscreenCanvasRenderingContext2D* self, const CanvasFontStretch* value) {
-    em_Val_set(em_Val_as_val(self->inner), "fontStretch", value);
+void OffscreenCanvasRenderingContext2D_set_fontStretch(OffscreenCanvasRenderingContext2D* self, CanvasFontStretch * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("fontStretch"), em_Val_from(value));
 }
 
 
 CanvasFontVariantCaps OffscreenCanvasRenderingContext2D_fontVariantCaps(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(CanvasFontVariantCaps, em_Val_get(em_Val_as_val(self->inner), "fontVariantCaps"));
+    return em_Val_as(CanvasFontVariantCaps, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fontVariantCaps")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_fontVariantCaps(OffscreenCanvasRenderingContext2D* self, const CanvasFontVariantCaps* value) {
-    em_Val_set(em_Val_as_val(self->inner), "fontVariantCaps", value);
+void OffscreenCanvasRenderingContext2D_set_fontVariantCaps(OffscreenCanvasRenderingContext2D* self, CanvasFontVariantCaps * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("fontVariantCaps"), em_Val_from(value));
 }
 
 
 CanvasTextRendering OffscreenCanvasRenderingContext2D_textRendering(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(CanvasTextRendering, em_Val_get(em_Val_as_val(self->inner), "textRendering"));
+    return em_Val_as(CanvasTextRendering, em_Val_get(em_Val_as_val(self->inner), em_Val_from("textRendering")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_textRendering(OffscreenCanvasRenderingContext2D* self, const CanvasTextRendering* value) {
-    em_Val_set(em_Val_as_val(self->inner), "textRendering", value);
+void OffscreenCanvasRenderingContext2D_set_textRendering(OffscreenCanvasRenderingContext2D* self, CanvasTextRendering * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("textRendering"), em_Val_from(value));
 }
 
 
 jb_DOMString OffscreenCanvasRenderingContext2D_wordSpacing(const OffscreenCanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "wordSpacing"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("wordSpacing")));
 }
 
 
-void OffscreenCanvasRenderingContext2D_set_wordSpacing(OffscreenCanvasRenderingContext2D* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "wordSpacing", value);
+void OffscreenCanvasRenderingContext2D_set_wordSpacing(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("wordSpacing"), em_Val_from(value));
 }
 
 
@@ -528,32 +528,32 @@ jb_Undefined OffscreenCanvasRenderingContext2D_rect(OffscreenCanvasRenderingCont
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_roundRect(OffscreenCanvasRenderingContext2D* self , double x, double y, double w, double h) {
+jb_Undefined OffscreenCanvasRenderingContext2D_roundRect0(OffscreenCanvasRenderingContext2D* self , double x, double y, double w, double h) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "roundRect", em_Val_from(x), em_Val_from(y), em_Val_from(w), em_Val_from(h)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_roundRect(OffscreenCanvasRenderingContext2D* self , double x, double y, double w, double h, const jb_Any* radii) {
+jb_Undefined OffscreenCanvasRenderingContext2D_roundRect1(OffscreenCanvasRenderingContext2D* self , double x, double y, double w, double h, jb_Any * radii) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "roundRect", em_Val_from(x), em_Val_from(y), em_Val_from(w), em_Val_from(h), em_Val_from(radii)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_arc(OffscreenCanvasRenderingContext2D* self , double x, double y, double radius, double startAngle, double endAngle) {
+jb_Undefined OffscreenCanvasRenderingContext2D_arc0(OffscreenCanvasRenderingContext2D* self , double x, double y, double radius, double startAngle, double endAngle) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "arc", em_Val_from(x), em_Val_from(y), em_Val_from(radius), em_Val_from(startAngle), em_Val_from(endAngle)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_arc(OffscreenCanvasRenderingContext2D* self , double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise) {
+jb_Undefined OffscreenCanvasRenderingContext2D_arc1(OffscreenCanvasRenderingContext2D* self , double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "arc", em_Val_from(x), em_Val_from(y), em_Val_from(radius), em_Val_from(startAngle), em_Val_from(endAngle), em_Val_from(counterclockwise)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_ellipse(OffscreenCanvasRenderingContext2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle) {
+jb_Undefined OffscreenCanvasRenderingContext2D_ellipse0(OffscreenCanvasRenderingContext2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "ellipse", em_Val_from(x), em_Val_from(y), em_Val_from(radiusX), em_Val_from(radiusY), em_Val_from(rotation), em_Val_from(startAngle), em_Val_from(endAngle)));
 }
 
 
-jb_Undefined OffscreenCanvasRenderingContext2D_ellipse(OffscreenCanvasRenderingContext2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise) {
+jb_Undefined OffscreenCanvasRenderingContext2D_ellipse1(OffscreenCanvasRenderingContext2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "ellipse", em_Val_from(x), em_Val_from(y), em_Val_from(radiusX), em_Val_from(radiusY), em_Val_from(rotation), em_Val_from(startAngle), em_Val_from(endAngle), em_Val_from(counterclockwise)));
 }
 

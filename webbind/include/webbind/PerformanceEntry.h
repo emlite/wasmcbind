@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} PerformanceEntry;
-
-
 DECLARE_EMLITE_TYPE(PerformanceEntry, em_Val);
 
 long long PerformanceEntry_id( const PerformanceEntry *self);

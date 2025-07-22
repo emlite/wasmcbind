@@ -8,11 +8,6 @@
 typedef struct MediaList MediaList;
 
 
-typedef struct {
-  CSSConditionRule inner;
-} CSSMediaRule;
-
-
 DECLARE_EMLITE_TYPE(CSSMediaRule, CSSConditionRule);
 
 MediaList CSSMediaRule_media( const CSSMediaRule *self);

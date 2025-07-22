@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  PerformanceEntry inner;
-} VisibilityStateEntry;
-
-
 DECLARE_EMLITE_TYPE(VisibilityStateEntry, PerformanceEntry);
 
 jb_DOMString VisibilityStateEntry_name( const VisibilityStateEntry *self);

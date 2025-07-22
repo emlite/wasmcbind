@@ -21,48 +21,43 @@ typedef struct PushManager PushManager;
 typedef struct NotificationAction NotificationAction;
 
 
-typedef struct {
-  em_Val inner;
-} NotificationOptions;
-
-
 DECLARE_EMLITE_TYPE(NotificationOptions, em_Val);
 
 NotificationDirection NotificationOptions_dir( const NotificationOptions *self);
 
-void NotificationOptions_set_dir(NotificationOptions* self, const NotificationDirection* value);
+void NotificationOptions_set_dir(NotificationOptions* self, NotificationDirection * value);
 
 jb_DOMString NotificationOptions_lang( const NotificationOptions *self);
 
-void NotificationOptions_set_lang(NotificationOptions* self, const jb_DOMString* value);
+void NotificationOptions_set_lang(NotificationOptions* self, jb_DOMString * value);
 
 jb_DOMString NotificationOptions_body( const NotificationOptions *self);
 
-void NotificationOptions_set_body(NotificationOptions* self, const jb_DOMString* value);
+void NotificationOptions_set_body(NotificationOptions* self, jb_DOMString * value);
 
 jb_DOMString NotificationOptions_tag( const NotificationOptions *self);
 
-void NotificationOptions_set_tag(NotificationOptions* self, const jb_DOMString* value);
+void NotificationOptions_set_tag(NotificationOptions* self, jb_DOMString * value);
 
 jb_USVString NotificationOptions_image( const NotificationOptions *self);
 
-void NotificationOptions_set_image(NotificationOptions* self, const jb_USVString* value);
+void NotificationOptions_set_image(NotificationOptions* self, jb_USVString * value);
 
 jb_USVString NotificationOptions_icon( const NotificationOptions *self);
 
-void NotificationOptions_set_icon(NotificationOptions* self, const jb_USVString* value);
+void NotificationOptions_set_icon(NotificationOptions* self, jb_USVString * value);
 
 jb_USVString NotificationOptions_badge( const NotificationOptions *self);
 
-void NotificationOptions_set_badge(NotificationOptions* self, const jb_USVString* value);
+void NotificationOptions_set_badge(NotificationOptions* self, jb_USVString * value);
 
 jb_Any NotificationOptions_vibrate( const NotificationOptions *self);
 
-void NotificationOptions_set_vibrate(NotificationOptions* self, const jb_Any* value);
+void NotificationOptions_set_vibrate(NotificationOptions* self, jb_Any * value);
 
 jb_Any NotificationOptions_timestamp( const NotificationOptions *self);
 
-void NotificationOptions_set_timestamp(NotificationOptions* self, const jb_Any* value);
+void NotificationOptions_set_timestamp(NotificationOptions* self, jb_Any * value);
 
 bool NotificationOptions_renotify( const NotificationOptions *self);
 
@@ -78,26 +73,16 @@ void NotificationOptions_set_requireInteraction(NotificationOptions* self, bool 
 
 jb_Any NotificationOptions_data( const NotificationOptions *self);
 
-void NotificationOptions_set_data(NotificationOptions* self, const jb_Any* value);
+void NotificationOptions_set_data(NotificationOptions* self, jb_Any * value);
 
 jb_Sequence NotificationOptions_actions( const NotificationOptions *self);
 
-void NotificationOptions_set_actions(NotificationOptions* self, const jb_Sequence* value);
-typedef struct {
-  em_Val inner;
-} GetNotificationOptions;
-
-
+void NotificationOptions_set_actions(NotificationOptions* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(GetNotificationOptions, em_Val);
 
 jb_DOMString GetNotificationOptions_tag( const GetNotificationOptions *self);
 
-void GetNotificationOptions_set_tag(GetNotificationOptions* self, const jb_DOMString* value);
-typedef struct {
-  EventTarget inner;
-} ServiceWorkerRegistration;
-
-
+void GetNotificationOptions_set_tag(GetNotificationOptions* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(ServiceWorkerRegistration, EventTarget);
 
 ServiceWorker ServiceWorkerRegistration_installing( const ServiceWorkerRegistration *self);
@@ -118,7 +103,7 @@ jb_Promise ServiceWorkerRegistration_unregister(ServiceWorkerRegistration* self 
 
 jb_Any ServiceWorkerRegistration_onupdatefound( const ServiceWorkerRegistration *self);
 
-void ServiceWorkerRegistration_set_onupdatefound(ServiceWorkerRegistration* self, const jb_Any* value);
+void ServiceWorkerRegistration_set_onupdatefound(ServiceWorkerRegistration* self, jb_Any * value);
 
 BackgroundFetchManager ServiceWorkerRegistration_backgroundFetch( const ServiceWorkerRegistration *self);
 
@@ -128,13 +113,13 @@ ContentIndex ServiceWorkerRegistration_index( const ServiceWorkerRegistration *s
 
 CookieStoreManager ServiceWorkerRegistration_cookies( const ServiceWorkerRegistration *self);
 
-jb_Promise ServiceWorkerRegistration_showNotification(ServiceWorkerRegistration* self , const jb_DOMString* title);
+jb_Promise ServiceWorkerRegistration_showNotification0(ServiceWorkerRegistration* self , jb_DOMString * title);
 
-jb_Promise ServiceWorkerRegistration_showNotification(ServiceWorkerRegistration* self , const jb_DOMString* title, const NotificationOptions* options);
+jb_Promise ServiceWorkerRegistration_showNotification1(ServiceWorkerRegistration* self , jb_DOMString * title, NotificationOptions * options);
 
-jb_Promise ServiceWorkerRegistration_getNotifications(ServiceWorkerRegistration* self );
+jb_Promise ServiceWorkerRegistration_getNotifications0(ServiceWorkerRegistration* self );
 
-jb_Promise ServiceWorkerRegistration_getNotifications(ServiceWorkerRegistration* self , const GetNotificationOptions* filter);
+jb_Promise ServiceWorkerRegistration_getNotifications1(ServiceWorkerRegistration* self , GetNotificationOptions * filter);
 
 PaymentManager ServiceWorkerRegistration_paymentManager( const ServiceWorkerRegistration *self);
 

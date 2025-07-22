@@ -8,13 +8,8 @@
 typedef struct BackgroundFetchRegistration BackgroundFetchRegistration;
 
 
-typedef struct {
-  ExtendableEvent inner;
-} BackgroundFetchEvent;
-
-
 DECLARE_EMLITE_TYPE(BackgroundFetchEvent, ExtendableEvent);
 
-BackgroundFetchEvent BackgroundFetchEvent_new(const jb_DOMString* type, const jb_Any* init);
+BackgroundFetchEvent BackgroundFetchEvent_new(jb_DOMString * type, jb_Any * init);
 
 BackgroundFetchRegistration BackgroundFetchEvent_registration( const BackgroundFetchEvent *self);

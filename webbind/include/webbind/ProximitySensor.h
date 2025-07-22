@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Sensor inner;
-} ProximitySensor;
-
-
 DECLARE_EMLITE_TYPE(ProximitySensor, Sensor);
 
-ProximitySensor ProximitySensor_new();
+ProximitySensor ProximitySensor_new0();
 
-ProximitySensor ProximitySensor_new(const jb_Any* sensorOptions);
+ProximitySensor ProximitySensor_new1(jb_Any * sensorOptions);
 
 double ProximitySensor_distance( const ProximitySensor *self);
 

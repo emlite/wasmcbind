@@ -9,11 +9,6 @@ typedef struct DOMRectReadOnly DOMRectReadOnly;
 typedef struct ResizeObserverSize ResizeObserverSize;
 
 
-typedef struct {
-  em_Val inner;
-} ResizeObserverEntry;
-
-
 DECLARE_EMLITE_TYPE(ResizeObserverEntry, em_Val);
 
 Element ResizeObserverEntry_target( const ResizeObserverEntry *self);

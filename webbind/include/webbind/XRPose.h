@@ -8,11 +8,6 @@ typedef struct XRRigidTransform XRRigidTransform;
 typedef struct DOMPointReadOnly DOMPointReadOnly;
 
 
-typedef struct {
-  em_Val inner;
-} XRPose;
-
-
 DECLARE_EMLITE_TYPE(XRPose, em_Val);
 
 XRRigidTransform XRPose_transform( const XRPose *self);

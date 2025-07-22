@@ -9,11 +9,6 @@ typedef struct VideoPlaybackQuality VideoPlaybackQuality;
 typedef struct PictureInPictureWindow PictureInPictureWindow;
 
 
-typedef struct {
-  HTMLMediaElement inner;
-} HTMLVideoElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLVideoElement, HTMLMediaElement);
 
 HTMLVideoElement HTMLVideoElement_new();
@@ -32,7 +27,7 @@ unsigned long HTMLVideoElement_videoHeight( const HTMLVideoElement *self);
 
 jb_USVString HTMLVideoElement_poster( const HTMLVideoElement *self);
 
-void HTMLVideoElement_set_poster(HTMLVideoElement* self, const jb_USVString* value);
+void HTMLVideoElement_set_poster(HTMLVideoElement* self, jb_USVString * value);
 
 bool HTMLVideoElement_playsInline( const HTMLVideoElement *self);
 
@@ -44,16 +39,16 @@ jb_Promise HTMLVideoElement_requestPictureInPicture(HTMLVideoElement* self );
 
 jb_Any HTMLVideoElement_onenterpictureinpicture( const HTMLVideoElement *self);
 
-void HTMLVideoElement_set_onenterpictureinpicture(HTMLVideoElement* self, const jb_Any* value);
+void HTMLVideoElement_set_onenterpictureinpicture(HTMLVideoElement* self, jb_Any * value);
 
 jb_Any HTMLVideoElement_onleavepictureinpicture( const HTMLVideoElement *self);
 
-void HTMLVideoElement_set_onleavepictureinpicture(HTMLVideoElement* self, const jb_Any* value);
+void HTMLVideoElement_set_onleavepictureinpicture(HTMLVideoElement* self, jb_Any * value);
 
 bool HTMLVideoElement_disablePictureInPicture( const HTMLVideoElement *self);
 
 void HTMLVideoElement_set_disablePictureInPicture(HTMLVideoElement* self, bool value);
 
-unsigned long HTMLVideoElement_requestVideoFrameCallback(HTMLVideoElement* self , const jb_Function* callback);
+unsigned long HTMLVideoElement_requestVideoFrameCallback(HTMLVideoElement* self , jb_Function * callback);
 
 jb_Undefined HTMLVideoElement_cancelVideoFrameCallback(HTMLVideoElement* self , unsigned long handle);

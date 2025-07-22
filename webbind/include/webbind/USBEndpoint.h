@@ -7,14 +7,9 @@
 typedef struct USBAlternateInterface USBAlternateInterface;
 
 
-typedef struct {
-  em_Val inner;
-} USBEndpoint;
-
-
 DECLARE_EMLITE_TYPE(USBEndpoint, em_Val);
 
-USBEndpoint USBEndpoint_new(const USBAlternateInterface* alternate, unsigned char endpointNumber, const USBDirection* direction);
+USBEndpoint USBEndpoint_new(USBAlternateInterface * alternate, unsigned char endpointNumber, USBDirection * direction);
 
 unsigned char USBEndpoint_endpointNumber( const USBEndpoint *self);
 

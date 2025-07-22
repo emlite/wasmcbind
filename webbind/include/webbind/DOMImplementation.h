@@ -9,21 +9,16 @@ typedef struct XMLDocument XMLDocument;
 typedef struct Document Document;
 
 
-typedef struct {
-  em_Val inner;
-} DOMImplementation;
-
-
 DECLARE_EMLITE_TYPE(DOMImplementation, em_Val);
 
-DocumentType DOMImplementation_createDocumentType(DOMImplementation* self , const jb_DOMString* name, const jb_DOMString* publicId, const jb_DOMString* systemId);
+DocumentType DOMImplementation_createDocumentType(DOMImplementation* self , jb_DOMString * name, jb_DOMString * publicId, jb_DOMString * systemId);
 
-XMLDocument DOMImplementation_createDocument(DOMImplementation* self , const jb_DOMString* namespace_, const jb_DOMString* qualifiedName);
+XMLDocument DOMImplementation_createDocument0(DOMImplementation* self , jb_DOMString * namespace_, jb_DOMString * qualifiedName);
 
-XMLDocument DOMImplementation_createDocument(DOMImplementation* self , const jb_DOMString* namespace_, const jb_DOMString* qualifiedName, const DocumentType* doctype);
+XMLDocument DOMImplementation_createDocument1(DOMImplementation* self , jb_DOMString * namespace_, jb_DOMString * qualifiedName, DocumentType * doctype);
 
-Document DOMImplementation_createHTMLDocument(DOMImplementation* self );
+Document DOMImplementation_createHTMLDocument0(DOMImplementation* self );
 
-Document DOMImplementation_createHTMLDocument(DOMImplementation* self , const jb_DOMString* title);
+Document DOMImplementation_createHTMLDocument1(DOMImplementation* self , jb_DOMString * title);
 
 bool DOMImplementation_hasFeature(DOMImplementation* self );

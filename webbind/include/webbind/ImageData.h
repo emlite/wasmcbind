@@ -7,18 +7,13 @@
 typedef struct ImageDataSettings ImageDataSettings;
 
 
-typedef struct {
-  em_Val inner;
-} ImageData;
-
-
 DECLARE_EMLITE_TYPE(ImageData, em_Val);
 
-ImageData ImageData_new(const jb_Any* data, unsigned long sw);
+ImageData ImageData_new0(jb_Any * data, unsigned long sw);
 
-ImageData ImageData_new(const jb_Any* data, unsigned long sw, unsigned long sh);
+ImageData ImageData_new1(jb_Any * data, unsigned long sw, unsigned long sh);
 
-ImageData ImageData_new(const jb_Any* data, unsigned long sw, unsigned long sh, const ImageDataSettings* settings);
+ImageData ImageData_new2(jb_Any * data, unsigned long sw, unsigned long sh, ImageDataSettings * settings);
 
 unsigned long ImageData_width( const ImageData *self);
 

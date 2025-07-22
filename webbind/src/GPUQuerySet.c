@@ -10,21 +10,21 @@ jb_Undefined GPUQuerySet_destroy(GPUQuerySet* self ) {
 
 
 GPUQueryType GPUQuerySet_type(const GPUQuerySet *self) {
-    return em_Val_as(GPUQueryType, em_Val_get(em_Val_as_val(self->inner), "type"));
+    return em_Val_as(GPUQueryType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
 jb_Any GPUQuerySet_count(const GPUQuerySet *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "count"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("count")));
 }
 
 
 jb_USVString GPUQuerySet_label(const GPUQuerySet *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "label"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void GPUQuerySet_set_label(GPUQuerySet* self, const jb_USVString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "label", value);
+void GPUQuerySet_set_label(GPUQuerySet* self, jb_USVString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 

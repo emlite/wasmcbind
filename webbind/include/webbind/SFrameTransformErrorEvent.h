@@ -6,14 +6,9 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} SFrameTransformErrorEvent;
-
-
 DECLARE_EMLITE_TYPE(SFrameTransformErrorEvent, Event);
 
-SFrameTransformErrorEvent SFrameTransformErrorEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+SFrameTransformErrorEvent SFrameTransformErrorEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 SFrameTransformErrorEventType SFrameTransformErrorEvent_errorType( const SFrameTransformErrorEvent *self);
 

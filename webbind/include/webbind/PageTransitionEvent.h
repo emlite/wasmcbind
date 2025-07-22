@@ -6,15 +6,10 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} PageTransitionEvent;
-
-
 DECLARE_EMLITE_TYPE(PageTransitionEvent, Event);
 
-PageTransitionEvent PageTransitionEvent_new(const jb_DOMString* type);
+PageTransitionEvent PageTransitionEvent_new0(jb_DOMString * type);
 
-PageTransitionEvent PageTransitionEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+PageTransitionEvent PageTransitionEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 bool PageTransitionEvent_persisted( const PageTransitionEvent *self);

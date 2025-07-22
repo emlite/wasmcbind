@@ -12,20 +12,15 @@ typedef struct USBIsochronousInTransferResult USBIsochronousInTransferResult;
 typedef struct USBIsochronousOutTransferResult USBIsochronousOutTransferResult;
 
 
-typedef struct {
-  em_Val inner;
-} USBControlTransferParameters;
-
-
 DECLARE_EMLITE_TYPE(USBControlTransferParameters, em_Val);
 
 USBRequestType USBControlTransferParameters_requestType( const USBControlTransferParameters *self);
 
-void USBControlTransferParameters_set_requestType(USBControlTransferParameters* self, const USBRequestType* value);
+void USBControlTransferParameters_set_requestType(USBControlTransferParameters* self, USBRequestType * value);
 
 USBRecipient USBControlTransferParameters_recipient( const USBControlTransferParameters *self);
 
-void USBControlTransferParameters_set_recipient(USBControlTransferParameters* self, const USBRecipient* value);
+void USBControlTransferParameters_set_recipient(USBControlTransferParameters* self, USBRecipient * value);
 
 unsigned char USBControlTransferParameters_request( const USBControlTransferParameters *self);
 
@@ -38,11 +33,6 @@ void USBControlTransferParameters_set_value(USBControlTransferParameters* self, 
 unsigned short USBControlTransferParameters_index( const USBControlTransferParameters *self);
 
 void USBControlTransferParameters_set_index(USBControlTransferParameters* self, unsigned short value);
-typedef struct {
-  em_Val inner;
-} USBDevice;
-
-
 DECLARE_EMLITE_TYPE(USBDevice, em_Val);
 
 unsigned char USBDevice_usbVersionMajor( const USBDevice *self);
@@ -93,20 +83,20 @@ jb_Promise USBDevice_releaseInterface(USBDevice* self , unsigned char interfaceN
 
 jb_Promise USBDevice_selectAlternateInterface(USBDevice* self , unsigned char interfaceNumber, unsigned char alternateSetting);
 
-jb_Promise USBDevice_controlTransferIn(USBDevice* self , const USBControlTransferParameters* setup, unsigned short length);
+jb_Promise USBDevice_controlTransferIn(USBDevice* self , USBControlTransferParameters * setup, unsigned short length);
 
-jb_Promise USBDevice_controlTransferOut(USBDevice* self , const USBControlTransferParameters* setup);
+jb_Promise USBDevice_controlTransferOut0(USBDevice* self , USBControlTransferParameters * setup);
 
-jb_Promise USBDevice_controlTransferOut(USBDevice* self , const USBControlTransferParameters* setup, const jb_Any* data);
+jb_Promise USBDevice_controlTransferOut1(USBDevice* self , USBControlTransferParameters * setup, jb_Any * data);
 
-jb_Promise USBDevice_clearHalt(USBDevice* self , const USBDirection* direction, unsigned char endpointNumber);
+jb_Promise USBDevice_clearHalt(USBDevice* self , USBDirection * direction, unsigned char endpointNumber);
 
 jb_Promise USBDevice_transferIn(USBDevice* self , unsigned char endpointNumber, unsigned long length);
 
-jb_Promise USBDevice_transferOut(USBDevice* self , unsigned char endpointNumber, const jb_Any* data);
+jb_Promise USBDevice_transferOut(USBDevice* self , unsigned char endpointNumber, jb_Any * data);
 
-jb_Promise USBDevice_isochronousTransferIn(USBDevice* self , unsigned char endpointNumber, const jb_Sequence* packetLengths);
+jb_Promise USBDevice_isochronousTransferIn(USBDevice* self , unsigned char endpointNumber, jb_Sequence * packetLengths);
 
-jb_Promise USBDevice_isochronousTransferOut(USBDevice* self , unsigned char endpointNumber, const jb_Any* data, const jb_Sequence* packetLengths);
+jb_Promise USBDevice_isochronousTransferOut(USBDevice* self , unsigned char endpointNumber, jb_Any * data, jb_Sequence * packetLengths);
 
 jb_Promise USBDevice_reset(USBDevice* self );

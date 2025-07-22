@@ -6,22 +6,22 @@ DEFINE_EMLITE_TYPE(BluetoothLEScan, em_Val);
 
 
 jb_FrozenArray BluetoothLEScan_filters(const BluetoothLEScan *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), "filters"));
+    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filters")));
 }
 
 
 bool BluetoothLEScan_keepRepeatedDevices(const BluetoothLEScan *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "keepRepeatedDevices"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("keepRepeatedDevices")));
 }
 
 
 bool BluetoothLEScan_acceptAllAdvertisements(const BluetoothLEScan *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "acceptAllAdvertisements"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("acceptAllAdvertisements")));
 }
 
 
 bool BluetoothLEScan_active(const BluetoothLEScan *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "active"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("active")));
 }
 
 

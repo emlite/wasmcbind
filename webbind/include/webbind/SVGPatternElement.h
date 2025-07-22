@@ -13,11 +13,6 @@ typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
 typedef struct SVGAnimatedString SVGAnimatedString;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGPatternElement;
-
-
 DECLARE_EMLITE_TYPE(SVGPatternElement, SVGElement);
 
 SVGAnimatedEnumeration SVGPatternElement_patternUnits( const SVGPatternElement *self);

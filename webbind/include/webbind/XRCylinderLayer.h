@@ -9,20 +9,15 @@ typedef struct XRSpace XRSpace;
 typedef struct XRRigidTransform XRRigidTransform;
 
 
-typedef struct {
-  XRCompositionLayer inner;
-} XRCylinderLayer;
-
-
 DECLARE_EMLITE_TYPE(XRCylinderLayer, XRCompositionLayer);
 
 XRSpace XRCylinderLayer_space( const XRCylinderLayer *self);
 
-void XRCylinderLayer_set_space(XRCylinderLayer* self, const XRSpace* value);
+void XRCylinderLayer_set_space(XRCylinderLayer* self, XRSpace * value);
 
 XRRigidTransform XRCylinderLayer_transform( const XRCylinderLayer *self);
 
-void XRCylinderLayer_set_transform(XRCylinderLayer* self, const XRRigidTransform* value);
+void XRCylinderLayer_set_transform(XRCylinderLayer* self, XRRigidTransform * value);
 
 float XRCylinderLayer_radius( const XRCylinderLayer *self);
 
@@ -38,4 +33,4 @@ void XRCylinderLayer_set_aspectRatio(XRCylinderLayer* self, float value);
 
 jb_Any XRCylinderLayer_onredraw( const XRCylinderLayer *self);
 
-void XRCylinderLayer_set_onredraw(XRCylinderLayer* self, const jb_Any* value);
+void XRCylinderLayer_set_onredraw(XRCylinderLayer* self, jb_Any * value);

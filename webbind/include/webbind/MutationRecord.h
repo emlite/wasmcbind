@@ -8,11 +8,6 @@ typedef struct Node Node;
 typedef struct NodeList NodeList;
 
 
-typedef struct {
-  em_Val inner;
-} MutationRecord;
-
-
 DECLARE_EMLITE_TYPE(MutationRecord, em_Val);
 
 jb_DOMString MutationRecord_type( const MutationRecord *self);

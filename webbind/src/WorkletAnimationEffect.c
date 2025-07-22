@@ -5,74 +5,74 @@ DEFINE_EMLITE_TYPE(EffectTiming, em_Val);
 
 
 FillMode EffectTiming_fill(const EffectTiming *self) {
-    return em_Val_as(FillMode, em_Val_get(em_Val_as_val(self->inner), "fill"));
+    return em_Val_as(FillMode, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fill")));
 }
 
 
-void EffectTiming_set_fill(EffectTiming* self, const FillMode* value) {
-    em_Val_set(em_Val_as_val(self->inner), "fill", value);
+void EffectTiming_set_fill(EffectTiming* self, FillMode * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("fill"), em_Val_from(value));
 }
 
 
 double EffectTiming_iterationStart(const EffectTiming *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "iterationStart"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("iterationStart")));
 }
 
 
 void EffectTiming_set_iterationStart(EffectTiming* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "iterationStart", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("iterationStart"), em_Val_from(value));
 }
 
 
 double EffectTiming_iterations(const EffectTiming *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "iterations"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("iterations")));
 }
 
 
 void EffectTiming_set_iterations(EffectTiming* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "iterations", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("iterations"), em_Val_from(value));
 }
 
 
 PlaybackDirection EffectTiming_direction(const EffectTiming *self) {
-    return em_Val_as(PlaybackDirection, em_Val_get(em_Val_as_val(self->inner), "direction"));
+    return em_Val_as(PlaybackDirection, em_Val_get(em_Val_as_val(self->inner), em_Val_from("direction")));
 }
 
 
-void EffectTiming_set_direction(EffectTiming* self, const PlaybackDirection* value) {
-    em_Val_set(em_Val_as_val(self->inner), "direction", value);
+void EffectTiming_set_direction(EffectTiming* self, PlaybackDirection * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("direction"), em_Val_from(value));
 }
 
 
 jb_DOMString EffectTiming_easing(const EffectTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "easing"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("easing")));
 }
 
 
-void EffectTiming_set_easing(EffectTiming* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "easing", value);
+void EffectTiming_set_easing(EffectTiming* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("easing"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(ComputedEffectTiming, em_Val);
 
 
 double ComputedEffectTiming_progress(const ComputedEffectTiming *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "progress"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("progress")));
 }
 
 
 void ComputedEffectTiming_set_progress(ComputedEffectTiming* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "progress", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("progress"), em_Val_from(value));
 }
 
 
 double ComputedEffectTiming_currentIteration(const ComputedEffectTiming *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "currentIteration"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("currentIteration")));
 }
 
 
 void ComputedEffectTiming_set_currentIteration(ComputedEffectTiming* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "currentIteration", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("currentIteration"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(WorkletAnimationEffect, em_Val);
@@ -89,11 +89,11 @@ ComputedEffectTiming WorkletAnimationEffect_getComputedTiming(WorkletAnimationEf
 
 
 double WorkletAnimationEffect_localTime(const WorkletAnimationEffect *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "localTime"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("localTime")));
 }
 
 
 void WorkletAnimationEffect_set_localTime(WorkletAnimationEffect* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "localTime", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("localTime"), em_Val_from(value));
 }
 

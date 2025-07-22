@@ -8,11 +8,6 @@
 typedef struct RTCDtlsTransport RTCDtlsTransport;
 
 
-typedef struct {
-  EventTarget inner;
-} RTCSctpTransport;
-
-
 DECLARE_EMLITE_TYPE(RTCSctpTransport, EventTarget);
 
 RTCDtlsTransport RTCSctpTransport_transport( const RTCSctpTransport *self);
@@ -25,4 +20,4 @@ unsigned short RTCSctpTransport_maxChannels( const RTCSctpTransport *self);
 
 jb_Any RTCSctpTransport_onstatechange( const RTCSctpTransport *self);
 
-void RTCSctpTransport_set_onstatechange(RTCSctpTransport* self, const jb_Any* value);
+void RTCSctpTransport_set_onstatechange(RTCSctpTransport* self, jb_Any * value);

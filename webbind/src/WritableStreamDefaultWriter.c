@@ -6,32 +6,33 @@
 DEFINE_EMLITE_TYPE(WritableStreamDefaultWriter, em_Val);
 
 
-WritableStreamDefaultWriter WritableStreamDefaultWriter_new(const WritableStream* stream) : em_Val(em_Val_global("WritableStreamDefaultWriter").new_(em_Val_from(stream))) {
-        return WritableStreamDefaultWriter(em_Val_new(em_Val_global("WritableStreamDefaultWriter", em_Val_from(stream)));
+WritableStreamDefaultWriter WritableStreamDefaultWriter_new(WritableStream * stream) {
+        em_Val vv = em_Val_new(em_Val_global("WritableStreamDefaultWriter") , em_Val_from(stream));
+        return WritableStreamDefaultWriter_from_val(&vv);
       }
 
 
 jb_Promise WritableStreamDefaultWriter_closed(const WritableStreamDefaultWriter *self) {
-    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), "closed"));
+    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), em_Val_from("closed")));
 }
 
 
 double WritableStreamDefaultWriter_desiredSize(const WritableStreamDefaultWriter *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "desiredSize"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("desiredSize")));
 }
 
 
 jb_Promise WritableStreamDefaultWriter_ready(const WritableStreamDefaultWriter *self) {
-    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), "ready"));
+    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ready")));
 }
 
 
-jb_Promise WritableStreamDefaultWriter_abort(WritableStreamDefaultWriter* self ) {
+jb_Promise WritableStreamDefaultWriter_abort0(WritableStreamDefaultWriter* self ) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "abort"));
 }
 
 
-jb_Promise WritableStreamDefaultWriter_abort(WritableStreamDefaultWriter* self , const jb_Any* reason) {
+jb_Promise WritableStreamDefaultWriter_abort1(WritableStreamDefaultWriter* self , jb_Any * reason) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "abort", em_Val_from(reason)));
 }
 
@@ -46,12 +47,12 @@ jb_Undefined WritableStreamDefaultWriter_releaseLock(WritableStreamDefaultWriter
 }
 
 
-jb_Promise WritableStreamDefaultWriter_write(WritableStreamDefaultWriter* self ) {
+jb_Promise WritableStreamDefaultWriter_write0(WritableStreamDefaultWriter* self ) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "write"));
 }
 
 
-jb_Promise WritableStreamDefaultWriter_write(WritableStreamDefaultWriter* self , const jb_Any* chunk) {
+jb_Promise WritableStreamDefaultWriter_write1(WritableStreamDefaultWriter* self , jb_Any * chunk) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "write", em_Val_from(chunk)));
 }
 

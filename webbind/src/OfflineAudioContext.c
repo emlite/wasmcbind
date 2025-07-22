@@ -5,8 +5,9 @@
 DEFINE_EMLITE_TYPE(OfflineAudioContext, BaseAudioContext);
 
 
-OfflineAudioContext OfflineAudioContext_new(unsigned long numberOfChannels, unsigned long length, float sampleRate) : BaseAudioContext(em_Val_global("OfflineAudioContext").new_(em_Val_from(numberOfChannels), em_Val_from(length), em_Val_from(sampleRate))) {
-        return OfflineAudioContext(em_Val_new(em_Val_global("OfflineAudioContext", em_Val_from(numberOfChannels), em_Val_from(length), em_Val_from(sampleRate)));
+OfflineAudioContext OfflineAudioContext_new(unsigned long numberOfChannels, unsigned long length, float sampleRate) {
+        em_Val vv = em_Val_new(em_Val_global("OfflineAudioContext") , em_Val_from(numberOfChannels), em_Val_from(length), em_Val_from(sampleRate));
+        return OfflineAudioContext_from_val(&vv);
       }
 
 
@@ -26,16 +27,16 @@ jb_Promise OfflineAudioContext_suspend(OfflineAudioContext* self , double suspen
 
 
 unsigned long OfflineAudioContext_length(const OfflineAudioContext *self) {
-    return em_Val_as(unsigned long, em_Val_get(BaseAudioContext_as_val(self->inner), "length"));
+    return em_Val_as(unsigned long, em_Val_get(BaseAudioContext_as_val(self->inner), em_Val_from("length")));
 }
 
 
 jb_Any OfflineAudioContext_oncomplete(const OfflineAudioContext *self) {
-    return em_Val_as(jb_Any, em_Val_get(BaseAudioContext_as_val(self->inner), "oncomplete"));
+    return em_Val_as(jb_Any, em_Val_get(BaseAudioContext_as_val(self->inner), em_Val_from("oncomplete")));
 }
 
 
-void OfflineAudioContext_set_oncomplete(OfflineAudioContext* self, const jb_Any* value) {
-    em_Val_set(BaseAudioContext_as_val(self->inner), "oncomplete", value);
+void OfflineAudioContext_set_oncomplete(OfflineAudioContext* self, jb_Any * value) {
+    em_Val_set(BaseAudioContext_as_val(self->inner), em_Val_from("oncomplete"), em_Val_from(value));
 }
 

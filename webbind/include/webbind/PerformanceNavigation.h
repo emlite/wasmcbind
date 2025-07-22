@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} PerformanceNavigation;
-
-
 DECLARE_EMLITE_TYPE(PerformanceNavigation, em_Val);
 
 unsigned short PerformanceNavigation_type( const PerformanceNavigation *self);

@@ -6,23 +6,18 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} CustomEvent;
-
-
 DECLARE_EMLITE_TYPE(CustomEvent, Event);
 
-CustomEvent CustomEvent_new(const jb_DOMString* type);
+CustomEvent CustomEvent_new0(jb_DOMString * type);
 
-CustomEvent CustomEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+CustomEvent CustomEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 jb_Any CustomEvent_detail( const CustomEvent *self);
 
-jb_Undefined CustomEvent_initCustomEvent(CustomEvent* self , const jb_DOMString* type);
+jb_Undefined CustomEvent_initCustomEvent0(CustomEvent* self , jb_DOMString * type);
 
-jb_Undefined CustomEvent_initCustomEvent(CustomEvent* self , const jb_DOMString* type, bool bubbles);
+jb_Undefined CustomEvent_initCustomEvent1(CustomEvent* self , jb_DOMString * type, bool bubbles);
 
-jb_Undefined CustomEvent_initCustomEvent(CustomEvent* self , const jb_DOMString* type, bool bubbles, bool cancelable);
+jb_Undefined CustomEvent_initCustomEvent2(CustomEvent* self , jb_DOMString * type, bool bubbles, bool cancelable);
 
-jb_Undefined CustomEvent_initCustomEvent(CustomEvent* self , const jb_DOMString* type, bool bubbles, bool cancelable, const jb_Any* detail);
+jb_Undefined CustomEvent_initCustomEvent3(CustomEvent* self , jb_DOMString * type, bool bubbles, bool cancelable, jb_Any * detail);

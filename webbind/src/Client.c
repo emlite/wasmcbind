@@ -6,36 +6,36 @@ DEFINE_EMLITE_TYPE(Client, em_Val);
 
 
 jb_USVString Client_url(const Client *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "url"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 
 FrameType Client_frameType(const Client *self) {
-    return em_Val_as(FrameType, em_Val_get(em_Val_as_val(self->inner), "frameType"));
+    return em_Val_as(FrameType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("frameType")));
 }
 
 
 jb_DOMString Client_id(const Client *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "id"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
 ClientType Client_type(const Client *self) {
-    return em_Val_as(ClientType, em_Val_get(em_Val_as_val(self->inner), "type"));
+    return em_Val_as(ClientType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
-jb_Undefined Client_postMessage(Client* self , const jb_Any* message) {
+jb_Undefined Client_postMessage0(Client* self , jb_Any * message) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "postMessage", em_Val_from(message)));
 }
 
 
-jb_Undefined Client_postMessage(Client* self , const jb_Any* message, const StructuredSerializeOptions* options) {
+jb_Undefined Client_postMessage1(Client* self , jb_Any * message, StructuredSerializeOptions * options) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "postMessage", em_Val_from(message), em_Val_from(options)));
 }
 
 
 ClientLifecycleState Client_lifecycleState(const Client *self) {
-    return em_Val_as(ClientLifecycleState, em_Val_get(em_Val_as_val(self->inner), "lifecycleState"));
+    return em_Val_as(ClientLifecycleState, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lifecycleState")));
 }
 

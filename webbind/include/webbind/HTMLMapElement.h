@@ -8,17 +8,12 @@
 typedef struct HTMLCollection HTMLCollection;
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLMapElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLMapElement, HTMLElement);
 
 HTMLMapElement HTMLMapElement_new();
 
 jb_DOMString HTMLMapElement_name( const HTMLMapElement *self);
 
-void HTMLMapElement_set_name(HTMLMapElement* self, const jb_DOMString* value);
+void HTMLMapElement_set_name(HTMLMapElement* self, jb_DOMString * value);
 
 HTMLCollection HTMLMapElement_areas( const HTMLMapElement *self);

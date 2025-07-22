@@ -6,24 +6,19 @@
 #include "enums.h"
 
 
-typedef struct {
-  AudioNode inner;
-} AnalyserNode;
-
-
 DECLARE_EMLITE_TYPE(AnalyserNode, AudioNode);
 
-AnalyserNode AnalyserNode_new(const BaseAudioContext* context);
+AnalyserNode AnalyserNode_new0(BaseAudioContext * context);
 
-AnalyserNode AnalyserNode_new(const BaseAudioContext* context, const jb_Any* options);
+AnalyserNode AnalyserNode_new1(BaseAudioContext * context, jb_Any * options);
 
-jb_Undefined AnalyserNode_getFloatFrequencyData(AnalyserNode* self , const jb_Float32Array* array);
+jb_Undefined AnalyserNode_getFloatFrequencyData(AnalyserNode* self , jb_Float32Array * array);
 
-jb_Undefined AnalyserNode_getByteFrequencyData(AnalyserNode* self , const jb_Uint8Array* array);
+jb_Undefined AnalyserNode_getByteFrequencyData(AnalyserNode* self , jb_Uint8Array * array);
 
-jb_Undefined AnalyserNode_getFloatTimeDomainData(AnalyserNode* self , const jb_Float32Array* array);
+jb_Undefined AnalyserNode_getFloatTimeDomainData(AnalyserNode* self , jb_Float32Array * array);
 
-jb_Undefined AnalyserNode_getByteTimeDomainData(AnalyserNode* self , const jb_Uint8Array* array);
+jb_Undefined AnalyserNode_getByteTimeDomainData(AnalyserNode* self , jb_Uint8Array * array);
 
 unsigned long AnalyserNode_fftSize( const AnalyserNode *self);
 

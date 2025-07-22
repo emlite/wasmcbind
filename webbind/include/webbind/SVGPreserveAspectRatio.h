@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} SVGPreserveAspectRatio;
-
-
 DECLARE_EMLITE_TYPE(SVGPreserveAspectRatio, em_Val);
 
 unsigned short SVGPreserveAspectRatio_align( const SVGPreserveAspectRatio *self);

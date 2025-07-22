@@ -8,15 +8,10 @@
 typedef struct AudioParam AudioParam;
 
 
-typedef struct {
-  AudioNode inner;
-} DelayNode;
-
-
 DECLARE_EMLITE_TYPE(DelayNode, AudioNode);
 
-DelayNode DelayNode_new(const BaseAudioContext* context);
+DelayNode DelayNode_new0(BaseAudioContext * context);
 
-DelayNode DelayNode_new(const BaseAudioContext* context, const jb_Any* options);
+DelayNode DelayNode_new1(BaseAudioContext * context, jb_Any * options);
 
 AudioParam DelayNode_delayTime( const DelayNode *self);

@@ -7,11 +7,6 @@
 typedef struct AudioParam AudioParam;
 
 
-typedef struct {
-  em_Val inner;
-} AudioParam;
-
-
 DECLARE_EMLITE_TYPE(AudioParam, em_Val);
 
 float AudioParam_value( const AudioParam *self);
@@ -20,7 +15,7 @@ void AudioParam_set_value(AudioParam* self, float value);
 
 AutomationRate AudioParam_automationRate( const AudioParam *self);
 
-void AudioParam_set_automationRate(AudioParam* self, const AutomationRate* value);
+void AudioParam_set_automationRate(AudioParam* self, AutomationRate * value);
 
 float AudioParam_defaultValue( const AudioParam *self);
 
@@ -36,7 +31,7 @@ AudioParam AudioParam_exponentialRampToValueAtTime(AudioParam* self , float valu
 
 AudioParam AudioParam_setTargetAtTime(AudioParam* self , float target, double startTime, float timeConstant);
 
-AudioParam AudioParam_setValueCurveAtTime(AudioParam* self , const jb_Sequence* values, double startTime, double duration);
+AudioParam AudioParam_setValueCurveAtTime(AudioParam* self , jb_Sequence * values, double startTime, double duration);
 
 AudioParam AudioParam_cancelScheduledValues(AudioParam* self , double cancelTime);
 

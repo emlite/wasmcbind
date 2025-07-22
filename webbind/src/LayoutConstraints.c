@@ -5,46 +5,46 @@ DEFINE_EMLITE_TYPE(LayoutConstraints, em_Val);
 
 
 double LayoutConstraints_availableInlineSize(const LayoutConstraints *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "availableInlineSize"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("availableInlineSize")));
 }
 
 
 double LayoutConstraints_availableBlockSize(const LayoutConstraints *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "availableBlockSize"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("availableBlockSize")));
 }
 
 
 double LayoutConstraints_fixedInlineSize(const LayoutConstraints *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "fixedInlineSize"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fixedInlineSize")));
 }
 
 
 double LayoutConstraints_fixedBlockSize(const LayoutConstraints *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "fixedBlockSize"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fixedBlockSize")));
 }
 
 
 double LayoutConstraints_percentageInlineSize(const LayoutConstraints *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "percentageInlineSize"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("percentageInlineSize")));
 }
 
 
 double LayoutConstraints_percentageBlockSize(const LayoutConstraints *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "percentageBlockSize"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("percentageBlockSize")));
 }
 
 
 double LayoutConstraints_blockFragmentationOffset(const LayoutConstraints *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "blockFragmentationOffset"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("blockFragmentationOffset")));
 }
 
 
 BlockFragmentationType LayoutConstraints_blockFragmentationType(const LayoutConstraints *self) {
-    return em_Val_as(BlockFragmentationType, em_Val_get(em_Val_as_val(self->inner), "blockFragmentationType"));
+    return em_Val_as(BlockFragmentationType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("blockFragmentationType")));
 }
 
 
 jb_Any LayoutConstraints_data(const LayoutConstraints *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "data"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("data")));
 }
 

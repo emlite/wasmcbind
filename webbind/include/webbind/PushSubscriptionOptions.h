@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} PushSubscriptionOptions;
-
-
 DECLARE_EMLITE_TYPE(PushSubscriptionOptions, em_Val);
 
 bool PushSubscriptionOptions_userVisibleOnly( const PushSubscriptionOptions *self);

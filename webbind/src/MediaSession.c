@@ -6,68 +6,68 @@ DEFINE_EMLITE_TYPE(MediaPositionState, em_Val);
 
 
 double MediaPositionState_duration(const MediaPositionState *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "duration"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("duration")));
 }
 
 
 void MediaPositionState_set_duration(MediaPositionState* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "duration", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("duration"), em_Val_from(value));
 }
 
 
 double MediaPositionState_playbackRate(const MediaPositionState *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "playbackRate"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("playbackRate")));
 }
 
 
 void MediaPositionState_set_playbackRate(MediaPositionState* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "playbackRate", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("playbackRate"), em_Val_from(value));
 }
 
 
 double MediaPositionState_position(const MediaPositionState *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "position"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("position")));
 }
 
 
 void MediaPositionState_set_position(MediaPositionState* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "position", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("position"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(MediaSession, em_Val);
 
 
 MediaMetadata MediaSession_metadata(const MediaSession *self) {
-    return em_Val_as(MediaMetadata, em_Val_get(em_Val_as_val(self->inner), "metadata"));
+    return em_Val_as(MediaMetadata, em_Val_get(em_Val_as_val(self->inner), em_Val_from("metadata")));
 }
 
 
-void MediaSession_set_metadata(MediaSession* self, const MediaMetadata* value) {
-    em_Val_set(em_Val_as_val(self->inner), "metadata", value);
+void MediaSession_set_metadata(MediaSession* self, MediaMetadata * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("metadata"), em_Val_from(value));
 }
 
 
 MediaSessionPlaybackState MediaSession_playbackState(const MediaSession *self) {
-    return em_Val_as(MediaSessionPlaybackState, em_Val_get(em_Val_as_val(self->inner), "playbackState"));
+    return em_Val_as(MediaSessionPlaybackState, em_Val_get(em_Val_as_val(self->inner), em_Val_from("playbackState")));
 }
 
 
-void MediaSession_set_playbackState(MediaSession* self, const MediaSessionPlaybackState* value) {
-    em_Val_set(em_Val_as_val(self->inner), "playbackState", value);
+void MediaSession_set_playbackState(MediaSession* self, MediaSessionPlaybackState * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("playbackState"), em_Val_from(value));
 }
 
 
-jb_Undefined MediaSession_setActionHandler(MediaSession* self , const MediaSessionAction* action, const jb_Function* handler) {
+jb_Undefined MediaSession_setActionHandler(MediaSession* self , MediaSessionAction * action, jb_Function * handler) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setActionHandler", em_Val_from(action), em_Val_from(handler)));
 }
 
 
-jb_Undefined MediaSession_setPositionState(MediaSession* self ) {
+jb_Undefined MediaSession_setPositionState0(MediaSession* self ) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setPositionState"));
 }
 
 
-jb_Undefined MediaSession_setPositionState(MediaSession* self , const MediaPositionState* state) {
+jb_Undefined MediaSession_setPositionState1(MediaSession* self , MediaPositionState * state) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setPositionState", em_Val_from(state)));
 }
 

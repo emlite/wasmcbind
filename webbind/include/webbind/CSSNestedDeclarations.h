@@ -8,11 +8,6 @@
 typedef struct CSSStyleProperties CSSStyleProperties;
 
 
-typedef struct {
-  CSSRule inner;
-} CSSNestedDeclarations;
-
-
 DECLARE_EMLITE_TYPE(CSSNestedDeclarations, CSSRule);
 
 CSSStyleProperties CSSNestedDeclarations_style( const CSSNestedDeclarations *self);

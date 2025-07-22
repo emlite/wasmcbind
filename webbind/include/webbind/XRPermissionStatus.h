@@ -6,13 +6,8 @@
 #include "enums.h"
 
 
-typedef struct {
-  PermissionStatus inner;
-} XRPermissionStatus;
-
-
 DECLARE_EMLITE_TYPE(XRPermissionStatus, PermissionStatus);
 
 jb_FrozenArray XRPermissionStatus_granted( const XRPermissionStatus *self);
 
-void XRPermissionStatus_set_granted(XRPermissionStatus* self, const jb_FrozenArray* value);
+void XRPermissionStatus_set_granted(XRPermissionStatus* self, jb_FrozenArray * value);

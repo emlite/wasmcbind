@@ -8,14 +8,9 @@
 typedef struct SpeechSynthesisUtterance SpeechSynthesisUtterance;
 
 
-typedef struct {
-  Event inner;
-} SpeechSynthesisEvent;
-
-
 DECLARE_EMLITE_TYPE(SpeechSynthesisEvent, Event);
 
-SpeechSynthesisEvent SpeechSynthesisEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+SpeechSynthesisEvent SpeechSynthesisEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 SpeechSynthesisUtterance SpeechSynthesisEvent_utterance( const SpeechSynthesisEvent *self);
 

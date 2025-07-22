@@ -9,24 +9,19 @@
 typedef struct DOMMatrix DOMMatrix;
 
 
-typedef struct {
-  DOMMatrixReadOnly inner;
-} DOMMatrix;
-
-
 DECLARE_EMLITE_TYPE(DOMMatrix, DOMMatrixReadOnly);
 
-DOMMatrix DOMMatrix_new();
+DOMMatrix DOMMatrix_new0();
 
-DOMMatrix DOMMatrix_new(const jb_Any* init);
+DOMMatrix DOMMatrix_new1(jb_Any * init);
 
-DOMMatrix DOMMatrix_fromMatrix(DOMMatrix* self );
+DOMMatrix DOMMatrix_fromMatrix0(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_fromMatrix(DOMMatrix* self , const DOMMatrixInit* other);
+DOMMatrix DOMMatrix_fromMatrix1(DOMMatrix* self , DOMMatrixInit * other);
 
-DOMMatrix DOMMatrix_fromFloat32Array(DOMMatrix* self , const jb_Float32Array* array32);
+DOMMatrix DOMMatrix_fromFloat32Array(DOMMatrix* self , jb_Float32Array * array32);
 
-DOMMatrix DOMMatrix_fromFloat64Array(DOMMatrix* self , const jb_Float64Array* array64);
+DOMMatrix DOMMatrix_fromFloat64Array(DOMMatrix* self , jb_Float64Array * array64);
 
 double DOMMatrix_a( const DOMMatrix *self);
 
@@ -116,78 +111,78 @@ double DOMMatrix_m44( const DOMMatrix *self);
 
 void DOMMatrix_set_m44(DOMMatrix* self, double value);
 
-DOMMatrix DOMMatrix_multiplySelf(DOMMatrix* self );
+DOMMatrix DOMMatrix_multiplySelf0(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_multiplySelf(DOMMatrix* self , const DOMMatrixInit* other);
+DOMMatrix DOMMatrix_multiplySelf1(DOMMatrix* self , DOMMatrixInit * other);
 
-DOMMatrix DOMMatrix_preMultiplySelf(DOMMatrix* self );
+DOMMatrix DOMMatrix_preMultiplySelf0(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_preMultiplySelf(DOMMatrix* self , const DOMMatrixInit* other);
+DOMMatrix DOMMatrix_preMultiplySelf1(DOMMatrix* self , DOMMatrixInit * other);
 
-DOMMatrix DOMMatrix_translateSelf(DOMMatrix* self );
+DOMMatrix DOMMatrix_translateSelf0(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_translateSelf(DOMMatrix* self , double tx);
+DOMMatrix DOMMatrix_translateSelf1(DOMMatrix* self , double tx);
 
-DOMMatrix DOMMatrix_translateSelf(DOMMatrix* self , double tx, double ty);
+DOMMatrix DOMMatrix_translateSelf2(DOMMatrix* self , double tx, double ty);
 
-DOMMatrix DOMMatrix_translateSelf(DOMMatrix* self , double tx, double ty, double tz);
+DOMMatrix DOMMatrix_translateSelf3(DOMMatrix* self , double tx, double ty, double tz);
 
-DOMMatrix DOMMatrix_scaleSelf(DOMMatrix* self );
+DOMMatrix DOMMatrix_scaleSelf0(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_scaleSelf(DOMMatrix* self , double scaleX);
+DOMMatrix DOMMatrix_scaleSelf1(DOMMatrix* self , double scaleX);
 
-DOMMatrix DOMMatrix_scaleSelf(DOMMatrix* self , double scaleX, double scaleY);
+DOMMatrix DOMMatrix_scaleSelf2(DOMMatrix* self , double scaleX, double scaleY);
 
-DOMMatrix DOMMatrix_scaleSelf(DOMMatrix* self , double scaleX, double scaleY, double scaleZ);
+DOMMatrix DOMMatrix_scaleSelf3(DOMMatrix* self , double scaleX, double scaleY, double scaleZ);
 
-DOMMatrix DOMMatrix_scaleSelf(DOMMatrix* self , double scaleX, double scaleY, double scaleZ, double originX);
+DOMMatrix DOMMatrix_scaleSelf4(DOMMatrix* self , double scaleX, double scaleY, double scaleZ, double originX);
 
-DOMMatrix DOMMatrix_scaleSelf(DOMMatrix* self , double scaleX, double scaleY, double scaleZ, double originX, double originY);
+DOMMatrix DOMMatrix_scaleSelf5(DOMMatrix* self , double scaleX, double scaleY, double scaleZ, double originX, double originY);
 
-DOMMatrix DOMMatrix_scaleSelf(DOMMatrix* self , double scaleX, double scaleY, double scaleZ, double originX, double originY, double originZ);
+DOMMatrix DOMMatrix_scaleSelf6(DOMMatrix* self , double scaleX, double scaleY, double scaleZ, double originX, double originY, double originZ);
 
-DOMMatrix DOMMatrix_scale3dSelf(DOMMatrix* self );
+DOMMatrix DOMMatrix_scale3dSelf0(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_scale3dSelf(DOMMatrix* self , double scale);
+DOMMatrix DOMMatrix_scale3dSelf1(DOMMatrix* self , double scale);
 
-DOMMatrix DOMMatrix_scale3dSelf(DOMMatrix* self , double scale, double originX);
+DOMMatrix DOMMatrix_scale3dSelf2(DOMMatrix* self , double scale, double originX);
 
-DOMMatrix DOMMatrix_scale3dSelf(DOMMatrix* self , double scale, double originX, double originY);
+DOMMatrix DOMMatrix_scale3dSelf3(DOMMatrix* self , double scale, double originX, double originY);
 
-DOMMatrix DOMMatrix_scale3dSelf(DOMMatrix* self , double scale, double originX, double originY, double originZ);
+DOMMatrix DOMMatrix_scale3dSelf4(DOMMatrix* self , double scale, double originX, double originY, double originZ);
 
-DOMMatrix DOMMatrix_rotateSelf(DOMMatrix* self );
+DOMMatrix DOMMatrix_rotateSelf0(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_rotateSelf(DOMMatrix* self , double rotX);
+DOMMatrix DOMMatrix_rotateSelf1(DOMMatrix* self , double rotX);
 
-DOMMatrix DOMMatrix_rotateSelf(DOMMatrix* self , double rotX, double rotY);
+DOMMatrix DOMMatrix_rotateSelf2(DOMMatrix* self , double rotX, double rotY);
 
-DOMMatrix DOMMatrix_rotateSelf(DOMMatrix* self , double rotX, double rotY, double rotZ);
+DOMMatrix DOMMatrix_rotateSelf3(DOMMatrix* self , double rotX, double rotY, double rotZ);
 
-DOMMatrix DOMMatrix_rotateFromVectorSelf(DOMMatrix* self );
+DOMMatrix DOMMatrix_rotateFromVectorSelf0(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_rotateFromVectorSelf(DOMMatrix* self , double x);
+DOMMatrix DOMMatrix_rotateFromVectorSelf1(DOMMatrix* self , double x);
 
-DOMMatrix DOMMatrix_rotateFromVectorSelf(DOMMatrix* self , double x, double y);
+DOMMatrix DOMMatrix_rotateFromVectorSelf2(DOMMatrix* self , double x, double y);
 
-DOMMatrix DOMMatrix_rotateAxisAngleSelf(DOMMatrix* self );
+DOMMatrix DOMMatrix_rotateAxisAngleSelf0(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_rotateAxisAngleSelf(DOMMatrix* self , double x);
+DOMMatrix DOMMatrix_rotateAxisAngleSelf1(DOMMatrix* self , double x);
 
-DOMMatrix DOMMatrix_rotateAxisAngleSelf(DOMMatrix* self , double x, double y);
+DOMMatrix DOMMatrix_rotateAxisAngleSelf2(DOMMatrix* self , double x, double y);
 
-DOMMatrix DOMMatrix_rotateAxisAngleSelf(DOMMatrix* self , double x, double y, double z);
+DOMMatrix DOMMatrix_rotateAxisAngleSelf3(DOMMatrix* self , double x, double y, double z);
 
-DOMMatrix DOMMatrix_rotateAxisAngleSelf(DOMMatrix* self , double x, double y, double z, double angle);
+DOMMatrix DOMMatrix_rotateAxisAngleSelf4(DOMMatrix* self , double x, double y, double z, double angle);
 
-DOMMatrix DOMMatrix_skewXSelf(DOMMatrix* self );
+DOMMatrix DOMMatrix_skewXSelf0(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_skewXSelf(DOMMatrix* self , double sx);
+DOMMatrix DOMMatrix_skewXSelf1(DOMMatrix* self , double sx);
 
-DOMMatrix DOMMatrix_skewYSelf(DOMMatrix* self );
+DOMMatrix DOMMatrix_skewYSelf0(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_skewYSelf(DOMMatrix* self , double sy);
+DOMMatrix DOMMatrix_skewYSelf1(DOMMatrix* self , double sy);
 
 DOMMatrix DOMMatrix_invertSelf(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_setMatrixValue(DOMMatrix* self , const jb_DOMString* transformList);
+DOMMatrix DOMMatrix_setMatrixValue(DOMMatrix* self , jb_DOMString * transformList);

@@ -9,14 +9,9 @@ typedef struct XRReferenceSpace XRReferenceSpace;
 typedef struct XRRigidTransform XRRigidTransform;
 
 
-typedef struct {
-  Event inner;
-} XRReferenceSpaceEvent;
-
-
 DECLARE_EMLITE_TYPE(XRReferenceSpaceEvent, Event);
 
-XRReferenceSpaceEvent XRReferenceSpaceEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+XRReferenceSpaceEvent XRReferenceSpaceEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 XRReferenceSpace XRReferenceSpaceEvent_referenceSpace( const XRReferenceSpaceEvent *self);
 

@@ -8,15 +8,10 @@
 typedef struct HTMLElement HTMLElement;
 
 
-typedef struct {
-  Event inner;
-} SubmitEvent;
-
-
 DECLARE_EMLITE_TYPE(SubmitEvent, Event);
 
-SubmitEvent SubmitEvent_new(const jb_DOMString* type);
+SubmitEvent SubmitEvent_new0(jb_DOMString * type);
 
-SubmitEvent SubmitEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+SubmitEvent SubmitEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 HTMLElement SubmitEvent_submitter( const SubmitEvent *self);

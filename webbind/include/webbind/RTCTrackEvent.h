@@ -11,14 +11,9 @@ typedef struct MediaStream MediaStream;
 typedef struct RTCRtpTransceiver RTCRtpTransceiver;
 
 
-typedef struct {
-  Event inner;
-} RTCTrackEvent;
-
-
 DECLARE_EMLITE_TYPE(RTCTrackEvent, Event);
 
-RTCTrackEvent RTCTrackEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+RTCTrackEvent RTCTrackEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 RTCRtpReceiver RTCTrackEvent_receiver( const RTCTrackEvent *self);
 

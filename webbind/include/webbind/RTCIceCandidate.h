@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} RTCIceCandidate;
-
-
 DECLARE_EMLITE_TYPE(RTCIceCandidate, em_Val);
 
-RTCIceCandidate RTCIceCandidate_new();
+RTCIceCandidate RTCIceCandidate_new0();
 
-RTCIceCandidate RTCIceCandidate_new(const jb_Any* candidateInitDict);
+RTCIceCandidate RTCIceCandidate_new1(jb_Any * candidateInitDict);
 
 jb_DOMString RTCIceCandidate_candidate( const RTCIceCandidate *self);
 

@@ -5,27 +5,28 @@
 DEFINE_EMLITE_TYPE(HTMLLabelElement, HTMLElement);
 
 
-HTMLLabelElement HTMLLabelElement_new() : HTMLElement(em_Val_global("HTMLLabelElement").new_()) {
-        return HTMLLabelElement(em_Val_new(em_Val_global("HTMLLabelElement", ));
+HTMLLabelElement HTMLLabelElement_new() {
+        em_Val vv = em_Val_new(em_Val_global("HTMLLabelElement") );
+        return HTMLLabelElement_from_val(&vv);
       }
 
 
 HTMLFormElement HTMLLabelElement_form(const HTMLLabelElement *self) {
-    return em_Val_as(HTMLFormElement, em_Val_get(HTMLElement_as_val(self->inner), "form"));
+    return em_Val_as(HTMLFormElement, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("form")));
 }
 
 
 jb_DOMString HTMLLabelElement_htmlFor(const HTMLLabelElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "htmlFor"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("htmlFor")));
 }
 
 
-void HTMLLabelElement_set_htmlFor(HTMLLabelElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "htmlFor", value);
+void HTMLLabelElement_set_htmlFor(HTMLLabelElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("htmlFor"), em_Val_from(value));
 }
 
 
 HTMLElement HTMLLabelElement_control(const HTMLLabelElement *self) {
-    return em_Val_as(HTMLElement, em_Val_get(HTMLElement_as_val(self->inner), "control"));
+    return em_Val_as(HTMLElement, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("control")));
 }
 

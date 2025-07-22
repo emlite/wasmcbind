@@ -5,97 +5,98 @@
 DEFINE_EMLITE_TYPE(HTMLFrameElement, HTMLElement);
 
 
-HTMLFrameElement HTMLFrameElement_new() : HTMLElement(em_Val_global("HTMLFrameElement").new_()) {
-        return HTMLFrameElement(em_Val_new(em_Val_global("HTMLFrameElement", ));
+HTMLFrameElement HTMLFrameElement_new() {
+        em_Val vv = em_Val_new(em_Val_global("HTMLFrameElement") );
+        return HTMLFrameElement_from_val(&vv);
       }
 
 
 jb_DOMString HTMLFrameElement_name(const HTMLFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLFrameElement_set_name(HTMLFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "name", value);
+void HTMLFrameElement_set_name(HTMLFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLFrameElement_scrolling(const HTMLFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "scrolling"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("scrolling")));
 }
 
 
-void HTMLFrameElement_set_scrolling(HTMLFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "scrolling", value);
+void HTMLFrameElement_set_scrolling(HTMLFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("scrolling"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLFrameElement_src(const HTMLFrameElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "src"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLFrameElement_set_src(HTMLFrameElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "src", value);
+void HTMLFrameElement_set_src(HTMLFrameElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLFrameElement_frameBorder(const HTMLFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "frameBorder"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("frameBorder")));
 }
 
 
-void HTMLFrameElement_set_frameBorder(HTMLFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "frameBorder", value);
+void HTMLFrameElement_set_frameBorder(HTMLFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("frameBorder"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLFrameElement_longDesc(const HTMLFrameElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "longDesc"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("longDesc")));
 }
 
 
-void HTMLFrameElement_set_longDesc(HTMLFrameElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "longDesc", value);
+void HTMLFrameElement_set_longDesc(HTMLFrameElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("longDesc"), em_Val_from(value));
 }
 
 
 bool HTMLFrameElement_noResize(const HTMLFrameElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "noResize"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("noResize")));
 }
 
 
 void HTMLFrameElement_set_noResize(HTMLFrameElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "noResize", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("noResize"), em_Val_from(value));
 }
 
 
 Document HTMLFrameElement_contentDocument(const HTMLFrameElement *self) {
-    return em_Val_as(Document, em_Val_get(HTMLElement_as_val(self->inner), "contentDocument"));
+    return em_Val_as(Document, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("contentDocument")));
 }
 
 
 jb_Any HTMLFrameElement_contentWindow(const HTMLFrameElement *self) {
-    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), "contentWindow"));
+    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("contentWindow")));
 }
 
 
 jb_DOMString HTMLFrameElement_marginHeight(const HTMLFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "marginHeight"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("marginHeight")));
 }
 
 
-void HTMLFrameElement_set_marginHeight(HTMLFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "marginHeight", value);
+void HTMLFrameElement_set_marginHeight(HTMLFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("marginHeight"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLFrameElement_marginWidth(const HTMLFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "marginWidth"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("marginWidth")));
 }
 
 
-void HTMLFrameElement_set_marginWidth(HTMLFrameElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "marginWidth", value);
+void HTMLFrameElement_set_marginWidth(HTMLFrameElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("marginWidth"), em_Val_from(value));
 }
 

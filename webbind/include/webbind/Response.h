@@ -11,24 +11,19 @@ typedef struct Blob Blob;
 typedef struct FormData FormData;
 
 
-typedef struct {
-  em_Val inner;
-} Response;
-
-
 DECLARE_EMLITE_TYPE(Response, em_Val);
 
-Response Response_new();
+Response Response_new0();
 
-Response Response_new(const jb_Any* body);
+Response Response_new1(jb_Any * body);
 
-Response Response_new(const jb_Any* body, const jb_Any* init);
+Response Response_new2(jb_Any * body, jb_Any * init);
 
 Response Response_error(Response* self );
 
-Response Response_redirect(Response* self , const jb_USVString* url);
+Response Response_redirect0(Response* self , jb_USVString * url);
 
-Response Response_redirect(Response* self , const jb_USVString* url, unsigned short status);
+Response Response_redirect1(Response* self , jb_USVString * url, unsigned short status);
 
 jb_Promise Response_json(Response* self );
 

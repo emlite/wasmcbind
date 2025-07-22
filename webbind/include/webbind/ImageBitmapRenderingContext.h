@@ -7,13 +7,8 @@
 typedef struct ImageBitmap ImageBitmap;
 
 
-typedef struct {
-  em_Val inner;
-} ImageBitmapRenderingContext;
-
-
 DECLARE_EMLITE_TYPE(ImageBitmapRenderingContext, em_Val);
 
 jb_Any ImageBitmapRenderingContext_canvas( const ImageBitmapRenderingContext *self);
 
-jb_Undefined ImageBitmapRenderingContext_transferFromImageBitmap(ImageBitmapRenderingContext* self , const ImageBitmap* bitmap);
+jb_Undefined ImageBitmapRenderingContext_transferFromImageBitmap(ImageBitmapRenderingContext* self , ImageBitmap * bitmap);

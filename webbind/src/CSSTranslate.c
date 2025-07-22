@@ -5,42 +5,44 @@
 DEFINE_EMLITE_TYPE(CSSTranslate, CSSTransformComponent);
 
 
-CSSTranslate CSSTranslate_new(const CSSNumericValue* x, const CSSNumericValue* y) : CSSTransformComponent(em_Val_global("CSSTranslate").new_(em_Val_from(x), em_Val_from(y))) {
-        return CSSTranslate(em_Val_new(em_Val_global("CSSTranslate", em_Val_from(x), em_Val_from(y)));
+CSSTranslate CSSTranslate_new0(CSSNumericValue * x, CSSNumericValue * y) {
+        em_Val vv = em_Val_new(em_Val_global("CSSTranslate") , em_Val_from(x), em_Val_from(y));
+        return CSSTranslate_from_val(&vv);
       }
 
 
-CSSTranslate CSSTranslate_new(const CSSNumericValue* x, const CSSNumericValue* y, const CSSNumericValue* z) : CSSTransformComponent(em_Val_global("CSSTranslate").new_(em_Val_from(x), em_Val_from(y), em_Val_from(z))) {
-        return CSSTranslate(em_Val_new(em_Val_global("CSSTranslate", em_Val_from(x), em_Val_from(y), em_Val_from(z)));
+CSSTranslate CSSTranslate_new1(CSSNumericValue * x, CSSNumericValue * y, CSSNumericValue * z) {
+        em_Val vv = em_Val_new(em_Val_global("CSSTranslate") , em_Val_from(x), em_Val_from(y), em_Val_from(z));
+        return CSSTranslate_from_val(&vv);
       }
 
 
 CSSNumericValue CSSTranslate_x(const CSSTranslate *self) {
-    return em_Val_as(CSSNumericValue, em_Val_get(CSSTransformComponent_as_val(self->inner), "x"));
+    return em_Val_as(CSSNumericValue, em_Val_get(CSSTransformComponent_as_val(self->inner), em_Val_from("x")));
 }
 
 
-void CSSTranslate_set_x(CSSTranslate* self, const CSSNumericValue* value) {
-    em_Val_set(CSSTransformComponent_as_val(self->inner), "x", value);
+void CSSTranslate_set_x(CSSTranslate* self, CSSNumericValue * value) {
+    em_Val_set(CSSTransformComponent_as_val(self->inner), em_Val_from("x"), em_Val_from(value));
 }
 
 
 CSSNumericValue CSSTranslate_y(const CSSTranslate *self) {
-    return em_Val_as(CSSNumericValue, em_Val_get(CSSTransformComponent_as_val(self->inner), "y"));
+    return em_Val_as(CSSNumericValue, em_Val_get(CSSTransformComponent_as_val(self->inner), em_Val_from("y")));
 }
 
 
-void CSSTranslate_set_y(CSSTranslate* self, const CSSNumericValue* value) {
-    em_Val_set(CSSTransformComponent_as_val(self->inner), "y", value);
+void CSSTranslate_set_y(CSSTranslate* self, CSSNumericValue * value) {
+    em_Val_set(CSSTransformComponent_as_val(self->inner), em_Val_from("y"), em_Val_from(value));
 }
 
 
 CSSNumericValue CSSTranslate_z(const CSSTranslate *self) {
-    return em_Val_as(CSSNumericValue, em_Val_get(CSSTransformComponent_as_val(self->inner), "z"));
+    return em_Val_as(CSSNumericValue, em_Val_get(CSSTransformComponent_as_val(self->inner), em_Val_from("z")));
 }
 
 
-void CSSTranslate_set_z(CSSTranslate* self, const CSSNumericValue* value) {
-    em_Val_set(CSSTransformComponent_as_val(self->inner), "z", value);
+void CSSTranslate_set_z(CSSTranslate* self, CSSNumericValue * value) {
+    em_Val_set(CSSTransformComponent_as_val(self->inner), em_Val_from("z"), em_Val_from(value));
 }
 

@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} XRViewport;
-
-
 DECLARE_EMLITE_TYPE(XRViewport, em_Val);
 
 long XRViewport_x( const XRViewport *self);

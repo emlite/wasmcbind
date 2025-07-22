@@ -8,14 +8,9 @@
 typedef struct NavigationHistoryEntry NavigationHistoryEntry;
 
 
-typedef struct {
-  Event inner;
-} NavigationCurrentEntryChangeEvent;
-
-
 DECLARE_EMLITE_TYPE(NavigationCurrentEntryChangeEvent, Event);
 
-NavigationCurrentEntryChangeEvent NavigationCurrentEntryChangeEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+NavigationCurrentEntryChangeEvent NavigationCurrentEntryChangeEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 NavigationType NavigationCurrentEntryChangeEvent_navigationType( const NavigationCurrentEntryChangeEvent *self);
 

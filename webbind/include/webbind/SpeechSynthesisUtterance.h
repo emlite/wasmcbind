@@ -8,28 +8,23 @@
 typedef struct SpeechSynthesisVoice SpeechSynthesisVoice;
 
 
-typedef struct {
-  EventTarget inner;
-} SpeechSynthesisUtterance;
-
-
 DECLARE_EMLITE_TYPE(SpeechSynthesisUtterance, EventTarget);
 
-SpeechSynthesisUtterance SpeechSynthesisUtterance_new();
+SpeechSynthesisUtterance SpeechSynthesisUtterance_new0();
 
-SpeechSynthesisUtterance SpeechSynthesisUtterance_new(const jb_DOMString* text);
+SpeechSynthesisUtterance SpeechSynthesisUtterance_new1(jb_DOMString * text);
 
 jb_DOMString SpeechSynthesisUtterance_text( const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_text(SpeechSynthesisUtterance* self, const jb_DOMString* value);
+void SpeechSynthesisUtterance_set_text(SpeechSynthesisUtterance* self, jb_DOMString * value);
 
 jb_DOMString SpeechSynthesisUtterance_lang( const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_lang(SpeechSynthesisUtterance* self, const jb_DOMString* value);
+void SpeechSynthesisUtterance_set_lang(SpeechSynthesisUtterance* self, jb_DOMString * value);
 
 SpeechSynthesisVoice SpeechSynthesisUtterance_voice( const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_voice(SpeechSynthesisUtterance* self, const SpeechSynthesisVoice* value);
+void SpeechSynthesisUtterance_set_voice(SpeechSynthesisUtterance* self, SpeechSynthesisVoice * value);
 
 float SpeechSynthesisUtterance_volume( const SpeechSynthesisUtterance *self);
 
@@ -45,28 +40,28 @@ void SpeechSynthesisUtterance_set_pitch(SpeechSynthesisUtterance* self, float va
 
 jb_Any SpeechSynthesisUtterance_onstart( const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_onstart(SpeechSynthesisUtterance* self, const jb_Any* value);
+void SpeechSynthesisUtterance_set_onstart(SpeechSynthesisUtterance* self, jb_Any * value);
 
 jb_Any SpeechSynthesisUtterance_onend( const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_onend(SpeechSynthesisUtterance* self, const jb_Any* value);
+void SpeechSynthesisUtterance_set_onend(SpeechSynthesisUtterance* self, jb_Any * value);
 
 jb_Any SpeechSynthesisUtterance_onerror( const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_onerror(SpeechSynthesisUtterance* self, const jb_Any* value);
+void SpeechSynthesisUtterance_set_onerror(SpeechSynthesisUtterance* self, jb_Any * value);
 
 jb_Any SpeechSynthesisUtterance_onpause( const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_onpause(SpeechSynthesisUtterance* self, const jb_Any* value);
+void SpeechSynthesisUtterance_set_onpause(SpeechSynthesisUtterance* self, jb_Any * value);
 
 jb_Any SpeechSynthesisUtterance_onresume( const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_onresume(SpeechSynthesisUtterance* self, const jb_Any* value);
+void SpeechSynthesisUtterance_set_onresume(SpeechSynthesisUtterance* self, jb_Any * value);
 
 jb_Any SpeechSynthesisUtterance_onmark( const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_onmark(SpeechSynthesisUtterance* self, const jb_Any* value);
+void SpeechSynthesisUtterance_set_onmark(SpeechSynthesisUtterance* self, jb_Any * value);
 
 jb_Any SpeechSynthesisUtterance_onboundary( const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_onboundary(SpeechSynthesisUtterance* self, const jb_Any* value);
+void SpeechSynthesisUtterance_set_onboundary(SpeechSynthesisUtterance* self, jb_Any * value);

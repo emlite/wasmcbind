@@ -8,16 +8,11 @@
 typedef struct RTCIceCandidate RTCIceCandidate;
 
 
-typedef struct {
-  Event inner;
-} RTCPeerConnectionIceEvent;
-
-
 DECLARE_EMLITE_TYPE(RTCPeerConnectionIceEvent, Event);
 
-RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new(const jb_DOMString* type);
+RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new0(jb_DOMString * type);
 
-RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 RTCIceCandidate RTCPeerConnectionIceEvent_candidate( const RTCPeerConnectionIceEvent *self);
 

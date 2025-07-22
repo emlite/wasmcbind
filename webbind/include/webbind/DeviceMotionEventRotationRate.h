@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} DeviceMotionEventRotationRate;
-
-
 DECLARE_EMLITE_TYPE(DeviceMotionEventRotationRate, em_Val);
 
 double DeviceMotionEventRotationRate_alpha( const DeviceMotionEventRotationRate *self);

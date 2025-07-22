@@ -8,18 +8,13 @@
 typedef struct TextTrack TextTrack;
 
 
-typedef struct {
-  EventTarget inner;
-} TextTrackCue;
-
-
 DECLARE_EMLITE_TYPE(TextTrackCue, EventTarget);
 
 TextTrack TextTrackCue_track( const TextTrackCue *self);
 
 jb_DOMString TextTrackCue_id( const TextTrackCue *self);
 
-void TextTrackCue_set_id(TextTrackCue* self, const jb_DOMString* value);
+void TextTrackCue_set_id(TextTrackCue* self, jb_DOMString * value);
 
 double TextTrackCue_startTime( const TextTrackCue *self);
 
@@ -35,8 +30,8 @@ void TextTrackCue_set_pauseOnExit(TextTrackCue* self, bool value);
 
 jb_Any TextTrackCue_onenter( const TextTrackCue *self);
 
-void TextTrackCue_set_onenter(TextTrackCue* self, const jb_Any* value);
+void TextTrackCue_set_onenter(TextTrackCue* self, jb_Any * value);
 
 jb_Any TextTrackCue_onexit( const TextTrackCue *self);
 
-void TextTrackCue_set_onexit(TextTrackCue* self, const jb_Any* value);
+void TextTrackCue_set_onexit(TextTrackCue* self, jb_Any * value);

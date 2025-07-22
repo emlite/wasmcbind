@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSRule inner;
-} CSSColorProfileRule;
-
-
 DECLARE_EMLITE_TYPE(CSSColorProfileRule, CSSRule);
 
 jb_CSSOMString CSSColorProfileRule_name( const CSSColorProfileRule *self);

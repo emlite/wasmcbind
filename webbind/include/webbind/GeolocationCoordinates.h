@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} GeolocationCoordinates;
-
-
 DECLARE_EMLITE_TYPE(GeolocationCoordinates, em_Val);
 
 double GeolocationCoordinates_accuracy( const GeolocationCoordinates *self);

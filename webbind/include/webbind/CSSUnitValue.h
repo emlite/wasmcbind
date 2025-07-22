@@ -6,14 +6,9 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSNumericValue inner;
-} CSSUnitValue;
-
-
 DECLARE_EMLITE_TYPE(CSSUnitValue, CSSNumericValue);
 
-CSSUnitValue CSSUnitValue_new(double value, const jb_USVString* unit);
+CSSUnitValue CSSUnitValue_new(double value, jb_USVString * unit);
 
 double CSSUnitValue_value( const CSSUnitValue *self);
 

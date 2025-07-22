@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  InterestGroupBiddingAndScoringScriptRunnerGlobalScope inner;
-} InterestGroupScoringScriptRunnerGlobalScope;
-
-
 DECLARE_EMLITE_TYPE(InterestGroupScoringScriptRunnerGlobalScope, InterestGroupBiddingAndScoringScriptRunnerGlobalScope);

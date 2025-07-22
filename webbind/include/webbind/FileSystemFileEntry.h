@@ -6,13 +6,8 @@
 #include "enums.h"
 
 
-typedef struct {
-  FileSystemEntry inner;
-} FileSystemFileEntry;
-
-
 DECLARE_EMLITE_TYPE(FileSystemFileEntry, FileSystemEntry);
 
-jb_Undefined FileSystemFileEntry_file(FileSystemFileEntry* self , const jb_Function* successCallback);
+jb_Undefined FileSystemFileEntry_file0(FileSystemFileEntry* self , jb_Function * successCallback);
 
-jb_Undefined FileSystemFileEntry_file(FileSystemFileEntry* self , const jb_Function* successCallback, const jb_Function* errorCallback);
+jb_Undefined FileSystemFileEntry_file1(FileSystemFileEntry* self , jb_Function * successCallback, jb_Function * errorCallback);

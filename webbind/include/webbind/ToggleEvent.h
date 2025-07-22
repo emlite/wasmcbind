@@ -8,16 +8,11 @@
 typedef struct Element Element;
 
 
-typedef struct {
-  Event inner;
-} ToggleEvent;
-
-
 DECLARE_EMLITE_TYPE(ToggleEvent, Event);
 
-ToggleEvent ToggleEvent_new(const jb_DOMString* type);
+ToggleEvent ToggleEvent_new0(jb_DOMString * type);
 
-ToggleEvent ToggleEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+ToggleEvent ToggleEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 jb_DOMString ToggleEvent_oldState( const ToggleEvent *self);
 

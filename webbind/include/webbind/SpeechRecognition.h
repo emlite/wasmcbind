@@ -11,36 +11,26 @@ typedef struct MediaStreamTrack MediaStreamTrack;
 typedef struct SpeechRecognitionOptions SpeechRecognitionOptions;
 
 
-typedef struct {
-  em_Val inner;
-} SpeechRecognitionOptions;
-
-
 DECLARE_EMLITE_TYPE(SpeechRecognitionOptions, em_Val);
 
 jb_Sequence SpeechRecognitionOptions_langs( const SpeechRecognitionOptions *self);
 
-void SpeechRecognitionOptions_set_langs(SpeechRecognitionOptions* self, const jb_Sequence* value);
+void SpeechRecognitionOptions_set_langs(SpeechRecognitionOptions* self, jb_Sequence * value);
 
 bool SpeechRecognitionOptions_processLocally( const SpeechRecognitionOptions *self);
 
 void SpeechRecognitionOptions_set_processLocally(SpeechRecognitionOptions* self, bool value);
-typedef struct {
-  EventTarget inner;
-} SpeechRecognition;
-
-
 DECLARE_EMLITE_TYPE(SpeechRecognition, EventTarget);
 
 SpeechRecognition SpeechRecognition_new();
 
 SpeechGrammarList SpeechRecognition_grammars( const SpeechRecognition *self);
 
-void SpeechRecognition_set_grammars(SpeechRecognition* self, const SpeechGrammarList* value);
+void SpeechRecognition_set_grammars(SpeechRecognition* self, SpeechGrammarList * value);
 
 jb_DOMString SpeechRecognition_lang( const SpeechRecognition *self);
 
-void SpeechRecognition_set_lang(SpeechRecognition* self, const jb_DOMString* value);
+void SpeechRecognition_set_lang(SpeechRecognition* self, jb_DOMString * value);
 
 bool SpeechRecognition_continuous( const SpeechRecognition *self);
 
@@ -60,58 +50,58 @@ void SpeechRecognition_set_processLocally(SpeechRecognition* self, bool value);
 
 jb_ObservableArray SpeechRecognition_phrases( const SpeechRecognition *self);
 
-void SpeechRecognition_set_phrases(SpeechRecognition* self, const jb_ObservableArray* value);
+void SpeechRecognition_set_phrases(SpeechRecognition* self, jb_ObservableArray * value);
 
-jb_Undefined SpeechRecognition_start(SpeechRecognition* self , const MediaStreamTrack* audioTrack);
+jb_Undefined SpeechRecognition_start(SpeechRecognition* self , MediaStreamTrack * audioTrack);
 
 jb_Undefined SpeechRecognition_stop(SpeechRecognition* self );
 
 jb_Undefined SpeechRecognition_abort(SpeechRecognition* self );
 
-jb_Promise SpeechRecognition_available(SpeechRecognition* self , const SpeechRecognitionOptions* options);
+jb_Promise SpeechRecognition_available(SpeechRecognition* self , SpeechRecognitionOptions * options);
 
-jb_Promise SpeechRecognition_install(SpeechRecognition* self , const SpeechRecognitionOptions* options);
+jb_Promise SpeechRecognition_install(SpeechRecognition* self , SpeechRecognitionOptions * options);
 
 jb_Any SpeechRecognition_onaudiostart( const SpeechRecognition *self);
 
-void SpeechRecognition_set_onaudiostart(SpeechRecognition* self, const jb_Any* value);
+void SpeechRecognition_set_onaudiostart(SpeechRecognition* self, jb_Any * value);
 
 jb_Any SpeechRecognition_onsoundstart( const SpeechRecognition *self);
 
-void SpeechRecognition_set_onsoundstart(SpeechRecognition* self, const jb_Any* value);
+void SpeechRecognition_set_onsoundstart(SpeechRecognition* self, jb_Any * value);
 
 jb_Any SpeechRecognition_onspeechstart( const SpeechRecognition *self);
 
-void SpeechRecognition_set_onspeechstart(SpeechRecognition* self, const jb_Any* value);
+void SpeechRecognition_set_onspeechstart(SpeechRecognition* self, jb_Any * value);
 
 jb_Any SpeechRecognition_onspeechend( const SpeechRecognition *self);
 
-void SpeechRecognition_set_onspeechend(SpeechRecognition* self, const jb_Any* value);
+void SpeechRecognition_set_onspeechend(SpeechRecognition* self, jb_Any * value);
 
 jb_Any SpeechRecognition_onsoundend( const SpeechRecognition *self);
 
-void SpeechRecognition_set_onsoundend(SpeechRecognition* self, const jb_Any* value);
+void SpeechRecognition_set_onsoundend(SpeechRecognition* self, jb_Any * value);
 
 jb_Any SpeechRecognition_onaudioend( const SpeechRecognition *self);
 
-void SpeechRecognition_set_onaudioend(SpeechRecognition* self, const jb_Any* value);
+void SpeechRecognition_set_onaudioend(SpeechRecognition* self, jb_Any * value);
 
 jb_Any SpeechRecognition_onresult( const SpeechRecognition *self);
 
-void SpeechRecognition_set_onresult(SpeechRecognition* self, const jb_Any* value);
+void SpeechRecognition_set_onresult(SpeechRecognition* self, jb_Any * value);
 
 jb_Any SpeechRecognition_onnomatch( const SpeechRecognition *self);
 
-void SpeechRecognition_set_onnomatch(SpeechRecognition* self, const jb_Any* value);
+void SpeechRecognition_set_onnomatch(SpeechRecognition* self, jb_Any * value);
 
 jb_Any SpeechRecognition_onerror( const SpeechRecognition *self);
 
-void SpeechRecognition_set_onerror(SpeechRecognition* self, const jb_Any* value);
+void SpeechRecognition_set_onerror(SpeechRecognition* self, jb_Any * value);
 
 jb_Any SpeechRecognition_onstart( const SpeechRecognition *self);
 
-void SpeechRecognition_set_onstart(SpeechRecognition* self, const jb_Any* value);
+void SpeechRecognition_set_onstart(SpeechRecognition* self, jb_Any * value);
 
 jb_Any SpeechRecognition_onend( const SpeechRecognition *self);
 
-void SpeechRecognition_set_onend(SpeechRecognition* self, const jb_Any* value);
+void SpeechRecognition_set_onend(SpeechRecognition* self, jb_Any * value);

@@ -5,27 +5,27 @@ DEFINE_EMLITE_TYPE(NavigationHistoryEntry, EventTarget);
 
 
 jb_USVString NavigationHistoryEntry_url(const NavigationHistoryEntry *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), "url"));
+    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("url")));
 }
 
 
 jb_DOMString NavigationHistoryEntry_key(const NavigationHistoryEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), "key"));
+    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("key")));
 }
 
 
 jb_DOMString NavigationHistoryEntry_id(const NavigationHistoryEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), "id"));
+    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
 long long NavigationHistoryEntry_index(const NavigationHistoryEntry *self) {
-    return em_Val_as(long long, em_Val_get(EventTarget_as_val(self->inner), "index"));
+    return em_Val_as(long long, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("index")));
 }
 
 
 bool NavigationHistoryEntry_sameDocument(const NavigationHistoryEntry *self) {
-    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), "sameDocument"));
+    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("sameDocument")));
 }
 
 
@@ -35,11 +35,11 @@ jb_Any NavigationHistoryEntry_getState(NavigationHistoryEntry* self ) {
 
 
 jb_Any NavigationHistoryEntry_ondispose(const NavigationHistoryEntry *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "ondispose"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("ondispose")));
 }
 
 
-void NavigationHistoryEntry_set_ondispose(NavigationHistoryEntry* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "ondispose", value);
+void NavigationHistoryEntry_set_ondispose(NavigationHistoryEntry* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("ondispose"), em_Val_from(value));
 }
 

@@ -12,11 +12,6 @@ typedef struct DOMPoint DOMPoint;
 typedef struct DOMRect DOMRect;
 
 
-typedef struct {
-  SVGGraphicsElement inner;
-} SVGTextContentElement;
-
-
 DECLARE_EMLITE_TYPE(SVGTextContentElement, SVGGraphicsElement);
 
 SVGAnimatedLength SVGTextContentElement_textLength( const SVGTextContentElement *self);
@@ -37,8 +32,8 @@ DOMRect SVGTextContentElement_getExtentOfChar(SVGTextContentElement* self , unsi
 
 float SVGTextContentElement_getRotationOfChar(SVGTextContentElement* self , unsigned long charnum);
 
-long SVGTextContentElement_getCharNumAtPosition(SVGTextContentElement* self );
+long SVGTextContentElement_getCharNumAtPosition0(SVGTextContentElement* self );
 
-long SVGTextContentElement_getCharNumAtPosition(SVGTextContentElement* self , const DOMPointInit* point);
+long SVGTextContentElement_getCharNumAtPosition1(SVGTextContentElement* self , DOMPointInit * point);
 
 jb_Undefined SVGTextContentElement_selectSubString(SVGTextContentElement* self , unsigned long charnum, unsigned long nchars);

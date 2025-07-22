@@ -7,11 +7,6 @@
 typedef struct XRViewport XRViewport;
 
 
-typedef struct {
-  em_Val inner;
-} XRSubImage;
-
-
 DECLARE_EMLITE_TYPE(XRSubImage, em_Val);
 
 XRViewport XRSubImage_viewport( const XRSubImage *self);

@@ -5,141 +5,141 @@ DEFINE_EMLITE_TYPE(CSSPageDescriptors, CSSStyleDeclaration);
 
 
 jb_CSSOMString CSSPageDescriptors_margin(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin")));
 }
 
 
-void CSSPageDescriptors_set_margin(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin", value);
+void CSSPageDescriptors_set_margin(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_marginTop(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginTop"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginTop")));
 }
 
 
-void CSSPageDescriptors_set_marginTop(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginTop", value);
+void CSSPageDescriptors_set_marginTop(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginTop"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_marginRight(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginRight"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginRight")));
 }
 
 
-void CSSPageDescriptors_set_marginRight(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginRight", value);
+void CSSPageDescriptors_set_marginRight(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginRight"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_marginBottom(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginBottom"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginBottom")));
 }
 
 
-void CSSPageDescriptors_set_marginBottom(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginBottom", value);
+void CSSPageDescriptors_set_marginBottom(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginBottom"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_marginLeft(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marginLeft"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginLeft")));
 }
 
 
-void CSSPageDescriptors_set_marginLeft(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marginLeft", value);
+void CSSPageDescriptors_set_marginLeft(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marginLeft"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_margin_top(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-top"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-top")));
 }
 
 
-void CSSPageDescriptors_set_margin_top(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-top", value);
+void CSSPageDescriptors_set_margin_top(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-top"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_margin_right(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-right"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-right")));
 }
 
 
-void CSSPageDescriptors_set_margin_right(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-right", value);
+void CSSPageDescriptors_set_margin_right(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-right"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_margin_bottom(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-bottom"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-bottom")));
 }
 
 
-void CSSPageDescriptors_set_margin_bottom(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-bottom", value);
+void CSSPageDescriptors_set_margin_bottom(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-bottom"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_margin_left(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "margin-left"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-left")));
 }
 
 
-void CSSPageDescriptors_set_margin_left(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "margin-left", value);
+void CSSPageDescriptors_set_margin_left(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("margin-left"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_size(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "size"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("size")));
 }
 
 
-void CSSPageDescriptors_set_size(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "size", value);
+void CSSPageDescriptors_set_size(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("size"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_pageOrientation(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "pageOrientation"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("pageOrientation")));
 }
 
 
-void CSSPageDescriptors_set_pageOrientation(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "pageOrientation", value);
+void CSSPageDescriptors_set_pageOrientation(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("pageOrientation"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_page_orientation(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "page-orientation"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("page-orientation")));
 }
 
 
-void CSSPageDescriptors_set_page_orientation(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "page-orientation", value);
+void CSSPageDescriptors_set_page_orientation(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("page-orientation"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_marks(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "marks"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marks")));
 }
 
 
-void CSSPageDescriptors_set_marks(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "marks", value);
+void CSSPageDescriptors_set_marks(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("marks"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSPageDescriptors_bleed(const CSSPageDescriptors *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), "bleed"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSStyleDeclaration_as_val(self->inner), em_Val_from("bleed")));
 }
 
 
-void CSSPageDescriptors_set_bleed(CSSPageDescriptors* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSStyleDeclaration_as_val(self->inner), "bleed", value);
+void CSSPageDescriptors_set_bleed(CSSPageDescriptors* self, jb_CSSOMString * value) {
+    em_Val_set(CSSStyleDeclaration_as_val(self->inner), em_Val_from("bleed"), em_Val_from(value));
 }
 

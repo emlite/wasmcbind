@@ -7,11 +7,6 @@
 typedef struct XRSpace XRSpace;
 
 
-typedef struct {
-  em_Val inner;
-} XRAnchor;
-
-
 DECLARE_EMLITE_TYPE(XRAnchor, em_Val);
 
 XRSpace XRAnchor_anchorSpace( const XRAnchor *self);

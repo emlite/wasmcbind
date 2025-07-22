@@ -7,31 +7,31 @@ DEFINE_EMLITE_TYPE(SpeechSynthesis, EventTarget);
 
 
 bool SpeechSynthesis_pending(const SpeechSynthesis *self) {
-    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), "pending"));
+    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("pending")));
 }
 
 
 bool SpeechSynthesis_speaking(const SpeechSynthesis *self) {
-    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), "speaking"));
+    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("speaking")));
 }
 
 
 bool SpeechSynthesis_paused(const SpeechSynthesis *self) {
-    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), "paused"));
+    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("paused")));
 }
 
 
 jb_Any SpeechSynthesis_onvoiceschanged(const SpeechSynthesis *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onvoiceschanged"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onvoiceschanged")));
 }
 
 
-void SpeechSynthesis_set_onvoiceschanged(SpeechSynthesis* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onvoiceschanged", value);
+void SpeechSynthesis_set_onvoiceschanged(SpeechSynthesis* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onvoiceschanged"), em_Val_from(value));
 }
 
 
-jb_Undefined SpeechSynthesis_speak(SpeechSynthesis* self , const SpeechSynthesisUtterance* utterance) {
+jb_Undefined SpeechSynthesis_speak(SpeechSynthesis* self , SpeechSynthesisUtterance * utterance) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "speak", em_Val_from(utterance)));
 }
 

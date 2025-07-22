@@ -7,92 +7,93 @@
 DEFINE_EMLITE_TYPE(MediaSource, EventTarget);
 
 
-MediaSource MediaSource_new() : EventTarget(em_Val_global("MediaSource").new_()) {
-        return MediaSource(em_Val_new(em_Val_global("MediaSource", ));
+MediaSource MediaSource_new() {
+        em_Val vv = em_Val_new(em_Val_global("MediaSource") );
+        return MediaSource_from_val(&vv);
       }
 
 
 MediaSourceHandle MediaSource_handle(const MediaSource *self) {
-    return em_Val_as(MediaSourceHandle, em_Val_get(EventTarget_as_val(self->inner), "handle"));
+    return em_Val_as(MediaSourceHandle, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("handle")));
 }
 
 
 SourceBufferList MediaSource_sourceBuffers(const MediaSource *self) {
-    return em_Val_as(SourceBufferList, em_Val_get(EventTarget_as_val(self->inner), "sourceBuffers"));
+    return em_Val_as(SourceBufferList, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("sourceBuffers")));
 }
 
 
 SourceBufferList MediaSource_activeSourceBuffers(const MediaSource *self) {
-    return em_Val_as(SourceBufferList, em_Val_get(EventTarget_as_val(self->inner), "activeSourceBuffers"));
+    return em_Val_as(SourceBufferList, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("activeSourceBuffers")));
 }
 
 
 ReadyState MediaSource_readyState(const MediaSource *self) {
-    return em_Val_as(ReadyState, em_Val_get(EventTarget_as_val(self->inner), "readyState"));
+    return em_Val_as(ReadyState, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("readyState")));
 }
 
 
 double MediaSource_duration(const MediaSource *self) {
-    return em_Val_as(double, em_Val_get(EventTarget_as_val(self->inner), "duration"));
+    return em_Val_as(double, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("duration")));
 }
 
 
 void MediaSource_set_duration(MediaSource* self, double value) {
-    em_Val_set(EventTarget_as_val(self->inner), "duration", value);
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("duration"), em_Val_from(value));
 }
 
 
 jb_Any MediaSource_onsourceopen(const MediaSource *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onsourceopen"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onsourceopen")));
 }
 
 
-void MediaSource_set_onsourceopen(MediaSource* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onsourceopen", value);
+void MediaSource_set_onsourceopen(MediaSource* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onsourceopen"), em_Val_from(value));
 }
 
 
 jb_Any MediaSource_onsourceended(const MediaSource *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onsourceended"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onsourceended")));
 }
 
 
-void MediaSource_set_onsourceended(MediaSource* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onsourceended", value);
+void MediaSource_set_onsourceended(MediaSource* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onsourceended"), em_Val_from(value));
 }
 
 
 jb_Any MediaSource_onsourceclose(const MediaSource *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onsourceclose"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onsourceclose")));
 }
 
 
-void MediaSource_set_onsourceclose(MediaSource* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onsourceclose", value);
+void MediaSource_set_onsourceclose(MediaSource* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onsourceclose"), em_Val_from(value));
 }
 
 
 bool MediaSource_canConstructInDedicatedWorker() {
-    return em_Val_as(bool, em_Val_get(em_Val_global("mediasource", "canConstructInDedicatedWorker")));
+    return em_Val_as(bool, em_Val_get(em_Val_global("mediasource", em_Val_from("canConstructInDedicatedWorker"))));
 }
 
 
-SourceBuffer MediaSource_addSourceBuffer(MediaSource* self , const jb_DOMString* type) {
+SourceBuffer MediaSource_addSourceBuffer(MediaSource* self , jb_DOMString * type) {
     return em_Val_as(SourceBuffer, em_Val_call(EventTarget_as_val(self->inner), "addSourceBuffer", em_Val_from(type)));
 }
 
 
-jb_Undefined MediaSource_removeSourceBuffer(MediaSource* self , const SourceBuffer* sourceBuffer) {
+jb_Undefined MediaSource_removeSourceBuffer(MediaSource* self , SourceBuffer * sourceBuffer) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "removeSourceBuffer", em_Val_from(sourceBuffer)));
 }
 
 
-jb_Undefined MediaSource_endOfStream(MediaSource* self ) {
+jb_Undefined MediaSource_endOfStream0(MediaSource* self ) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "endOfStream"));
 }
 
 
-jb_Undefined MediaSource_endOfStream(MediaSource* self , const EndOfStreamError* error) {
+jb_Undefined MediaSource_endOfStream1(MediaSource* self , EndOfStreamError * error) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "endOfStream", em_Val_from(error)));
 }
 
@@ -107,7 +108,7 @@ jb_Undefined MediaSource_clearLiveSeekableRange(MediaSource* self ) {
 }
 
 
-bool MediaSource_isTypeSupported(MediaSource* self , const jb_DOMString* type) {
+bool MediaSource_isTypeSupported(MediaSource* self , jb_DOMString * type) {
     return em_Val_as(bool, em_Val_call(em_Val_global("mediasource"), "isTypeSupported", em_Val_from(type)));
 }
 

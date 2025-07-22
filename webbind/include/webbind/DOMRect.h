@@ -8,26 +8,21 @@
 typedef struct DOMRect DOMRect;
 
 
-typedef struct {
-  DOMRectReadOnly inner;
-} DOMRect;
-
-
 DECLARE_EMLITE_TYPE(DOMRect, DOMRectReadOnly);
 
-DOMRect DOMRect_new();
+DOMRect DOMRect_new0();
 
-DOMRect DOMRect_new(double x);
+DOMRect DOMRect_new1(double x);
 
-DOMRect DOMRect_new(double x, double y);
+DOMRect DOMRect_new2(double x, double y);
 
-DOMRect DOMRect_new(double x, double y, double width);
+DOMRect DOMRect_new3(double x, double y, double width);
 
-DOMRect DOMRect_new(double x, double y, double width, double height);
+DOMRect DOMRect_new4(double x, double y, double width, double height);
 
-DOMRect DOMRect_fromRect(DOMRect* self );
+DOMRect DOMRect_fromRect0(DOMRect* self );
 
-DOMRect DOMRect_fromRect(DOMRect* self , const DOMRectInit* other);
+DOMRect DOMRect_fromRect1(DOMRect* self , DOMRectInit * other);
 
 double DOMRect_x( const DOMRect *self);
 

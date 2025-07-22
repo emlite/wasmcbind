@@ -7,11 +7,6 @@
 typedef struct NavigationHistoryEntry NavigationHistoryEntry;
 
 
-typedef struct {
-  em_Val inner;
-} NavigationActivation;
-
-
 DECLARE_EMLITE_TYPE(NavigationActivation, em_Val);
 
 NavigationHistoryEntry NavigationActivation_from( const NavigationActivation *self);

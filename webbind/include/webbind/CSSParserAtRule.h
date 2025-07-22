@@ -8,16 +8,11 @@
 typedef struct CSSParserValue CSSParserValue;
 
 
-typedef struct {
-  CSSParserRule inner;
-} CSSParserAtRule;
-
-
 DECLARE_EMLITE_TYPE(CSSParserAtRule, CSSParserRule);
 
-CSSParserAtRule CSSParserAtRule_new(const jb_DOMString* name, const jb_Sequence* prelude);
+CSSParserAtRule CSSParserAtRule_new0(jb_DOMString * name, jb_Sequence * prelude);
 
-CSSParserAtRule CSSParserAtRule_new(const jb_DOMString* name, const jb_Sequence* prelude, const jb_Sequence* body);
+CSSParserAtRule CSSParserAtRule_new1(jb_DOMString * name, jb_Sequence * prelude, jb_Sequence * body);
 
 jb_DOMString CSSParserAtRule_name( const CSSParserAtRule *self);
 

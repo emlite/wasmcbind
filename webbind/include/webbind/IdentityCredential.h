@@ -8,24 +8,14 @@
 typedef struct IdentityCredentialDisconnectOptions IdentityCredentialDisconnectOptions;
 
 
-typedef struct {
-  em_Val inner;
-} IdentityCredentialDisconnectOptions;
-
-
 DECLARE_EMLITE_TYPE(IdentityCredentialDisconnectOptions, em_Val);
 
 jb_USVString IdentityCredentialDisconnectOptions_accountHint( const IdentityCredentialDisconnectOptions *self);
 
-void IdentityCredentialDisconnectOptions_set_accountHint(IdentityCredentialDisconnectOptions* self, const jb_USVString* value);
-typedef struct {
-  Credential inner;
-} IdentityCredential;
-
-
+void IdentityCredentialDisconnectOptions_set_accountHint(IdentityCredentialDisconnectOptions* self, jb_USVString * value);
 DECLARE_EMLITE_TYPE(IdentityCredential, Credential);
 
-jb_Promise IdentityCredential_disconnect(IdentityCredential* self , const IdentityCredentialDisconnectOptions* options);
+jb_Promise IdentityCredential_disconnect(IdentityCredential* self , IdentityCredentialDisconnectOptions * options);
 
 jb_USVString IdentityCredential_token( const IdentityCredential *self);
 

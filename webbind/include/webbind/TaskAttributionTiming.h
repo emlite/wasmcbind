@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  PerformanceEntry inner;
-} TaskAttributionTiming;
-
-
 DECLARE_EMLITE_TYPE(TaskAttributionTiming, PerformanceEntry);
 
 jb_Any TaskAttributionTiming_startTime( const TaskAttributionTiming *self);

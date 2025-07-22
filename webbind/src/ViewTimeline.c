@@ -6,27 +6,29 @@
 DEFINE_EMLITE_TYPE(ViewTimeline, ScrollTimeline);
 
 
-ViewTimeline ViewTimeline_new() : ScrollTimeline(em_Val_global("ViewTimeline").new_()) {
-        return ViewTimeline(em_Val_new(em_Val_global("ViewTimeline", ));
+ViewTimeline ViewTimeline_new0() {
+        em_Val vv = em_Val_new(em_Val_global("ViewTimeline") );
+        return ViewTimeline_from_val(&vv);
       }
 
 
-ViewTimeline ViewTimeline_new(const jb_Any* options) : ScrollTimeline(em_Val_global("ViewTimeline").new_(em_Val_from(options))) {
-        return ViewTimeline(em_Val_new(em_Val_global("ViewTimeline", em_Val_from(options)));
+ViewTimeline ViewTimeline_new1(jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("ViewTimeline") , em_Val_from(options));
+        return ViewTimeline_from_val(&vv);
       }
 
 
 Element ViewTimeline_subject(const ViewTimeline *self) {
-    return em_Val_as(Element, em_Val_get(ScrollTimeline_as_val(self->inner), "subject"));
+    return em_Val_as(Element, em_Val_get(ScrollTimeline_as_val(self->inner), em_Val_from("subject")));
 }
 
 
 CSSNumericValue ViewTimeline_startOffset(const ViewTimeline *self) {
-    return em_Val_as(CSSNumericValue, em_Val_get(ScrollTimeline_as_val(self->inner), "startOffset"));
+    return em_Val_as(CSSNumericValue, em_Val_get(ScrollTimeline_as_val(self->inner), em_Val_from("startOffset")));
 }
 
 
 CSSNumericValue ViewTimeline_endOffset(const ViewTimeline *self) {
-    return em_Val_as(CSSNumericValue, em_Val_get(ScrollTimeline_as_val(self->inner), "endOffset"));
+    return em_Val_as(CSSNumericValue, em_Val_get(ScrollTimeline_as_val(self->inner), em_Val_from("endOffset")));
 }
 

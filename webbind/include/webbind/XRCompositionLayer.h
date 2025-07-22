@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  XRLayer inner;
-} XRCompositionLayer;
-
-
 DECLARE_EMLITE_TYPE(XRCompositionLayer, XRLayer);
 
 XRLayerLayout XRCompositionLayer_layout( const XRCompositionLayer *self);
@@ -31,7 +26,7 @@ unsigned long XRCompositionLayer_mipLevels( const XRCompositionLayer *self);
 
 XRLayerQuality XRCompositionLayer_quality( const XRCompositionLayer *self);
 
-void XRCompositionLayer_set_quality(XRCompositionLayer* self, const XRLayerQuality* value);
+void XRCompositionLayer_set_quality(XRCompositionLayer* self, XRLayerQuality * value);
 
 bool XRCompositionLayer_needsRedraw( const XRCompositionLayer *self);
 

@@ -5,14 +5,9 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} Memory;
-
-
 DECLARE_EMLITE_TYPE(Memory, em_Val);
 
-Memory Memory_new(const jb_Any* descriptor);
+Memory Memory_new(jb_Any * descriptor);
 
 unsigned long Memory_grow(Memory* self , unsigned long delta);
 

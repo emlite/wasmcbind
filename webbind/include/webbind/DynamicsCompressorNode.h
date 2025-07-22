@@ -8,16 +8,11 @@
 typedef struct AudioParam AudioParam;
 
 
-typedef struct {
-  AudioNode inner;
-} DynamicsCompressorNode;
-
-
 DECLARE_EMLITE_TYPE(DynamicsCompressorNode, AudioNode);
 
-DynamicsCompressorNode DynamicsCompressorNode_new(const BaseAudioContext* context);
+DynamicsCompressorNode DynamicsCompressorNode_new0(BaseAudioContext * context);
 
-DynamicsCompressorNode DynamicsCompressorNode_new(const BaseAudioContext* context, const jb_Any* options);
+DynamicsCompressorNode DynamicsCompressorNode_new1(BaseAudioContext * context, jb_Any * options);
 
 AudioParam DynamicsCompressorNode_threshold( const DynamicsCompressorNode *self);
 

@@ -8,23 +8,18 @@
 typedef struct CSSStyleSheet CSSStyleSheet;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGStyleElement;
-
-
 DECLARE_EMLITE_TYPE(SVGStyleElement, SVGElement);
 
 jb_DOMString SVGStyleElement_type( const SVGStyleElement *self);
 
-void SVGStyleElement_set_type(SVGStyleElement* self, const jb_DOMString* value);
+void SVGStyleElement_set_type(SVGStyleElement* self, jb_DOMString * value);
 
 jb_DOMString SVGStyleElement_media( const SVGStyleElement *self);
 
-void SVGStyleElement_set_media(SVGStyleElement* self, const jb_DOMString* value);
+void SVGStyleElement_set_media(SVGStyleElement* self, jb_DOMString * value);
 
 jb_DOMString SVGStyleElement_title( const SVGStyleElement *self);
 
-void SVGStyleElement_set_title(SVGStyleElement* self, const jb_DOMString* value);
+void SVGStyleElement_set_title(SVGStyleElement* self, jb_DOMString * value);
 
 CSSStyleSheet SVGStyleElement_sheet( const SVGStyleElement *self);

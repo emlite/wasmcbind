@@ -8,31 +8,26 @@
 typedef struct Element Element;
 
 
-typedef struct {
-  AnimationEffect inner;
-} KeyframeEffect;
-
-
 DECLARE_EMLITE_TYPE(KeyframeEffect, AnimationEffect);
 
-KeyframeEffect KeyframeEffect_new(const KeyframeEffect* source);
+KeyframeEffect KeyframeEffect_new(KeyframeEffect * source);
 
 Element KeyframeEffect_target( const KeyframeEffect *self);
 
-void KeyframeEffect_set_target(KeyframeEffect* self, const Element* value);
+void KeyframeEffect_set_target(KeyframeEffect* self, Element * value);
 
 jb_CSSOMString KeyframeEffect_pseudoElement( const KeyframeEffect *self);
 
-void KeyframeEffect_set_pseudoElement(KeyframeEffect* self, const jb_CSSOMString* value);
+void KeyframeEffect_set_pseudoElement(KeyframeEffect* self, jb_CSSOMString * value);
 
 CompositeOperation KeyframeEffect_composite( const KeyframeEffect *self);
 
-void KeyframeEffect_set_composite(KeyframeEffect* self, const CompositeOperation* value);
+void KeyframeEffect_set_composite(KeyframeEffect* self, CompositeOperation * value);
 
 jb_Sequence KeyframeEffect_getKeyframes(KeyframeEffect* self );
 
-jb_Undefined KeyframeEffect_setKeyframes(KeyframeEffect* self , const jb_Object* keyframes);
+jb_Undefined KeyframeEffect_setKeyframes(KeyframeEffect* self , jb_Object * keyframes);
 
 IterationCompositeOperation KeyframeEffect_iterationComposite( const KeyframeEffect *self);
 
-void KeyframeEffect_set_iterationComposite(KeyframeEffect* self, const IterationCompositeOperation* value);
+void KeyframeEffect_set_iterationComposite(KeyframeEffect* self, IterationCompositeOperation * value);

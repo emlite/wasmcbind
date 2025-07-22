@@ -4,12 +4,14 @@
 DEFINE_EMLITE_TYPE(LinearAccelerationSensor, Accelerometer);
 
 
-LinearAccelerationSensor LinearAccelerationSensor_new() : Accelerometer(em_Val_global("LinearAccelerationSensor").new_()) {
-        return LinearAccelerationSensor(em_Val_new(em_Val_global("LinearAccelerationSensor", ));
+LinearAccelerationSensor LinearAccelerationSensor_new0() {
+        em_Val vv = em_Val_new(em_Val_global("LinearAccelerationSensor") );
+        return LinearAccelerationSensor_from_val(&vv);
       }
 
 
-LinearAccelerationSensor LinearAccelerationSensor_new(const jb_Any* options) : Accelerometer(em_Val_global("LinearAccelerationSensor").new_(em_Val_from(options))) {
-        return LinearAccelerationSensor(em_Val_new(em_Val_global("LinearAccelerationSensor", em_Val_from(options)));
+LinearAccelerationSensor LinearAccelerationSensor_new1(jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("LinearAccelerationSensor") , em_Val_from(options));
+        return LinearAccelerationSensor_from_val(&vv);
       }
 

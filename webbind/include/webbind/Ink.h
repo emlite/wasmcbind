@@ -9,23 +9,13 @@ typedef struct InkPresenterParam InkPresenterParam;
 typedef struct Element Element;
 
 
-typedef struct {
-  em_Val inner;
-} InkPresenterParam;
-
-
 DECLARE_EMLITE_TYPE(InkPresenterParam, em_Val);
 
 Element InkPresenterParam_presentationArea( const InkPresenterParam *self);
 
-void InkPresenterParam_set_presentationArea(InkPresenterParam* self, const Element* value);
-typedef struct {
-  em_Val inner;
-} Ink;
-
-
+void InkPresenterParam_set_presentationArea(InkPresenterParam* self, Element * value);
 DECLARE_EMLITE_TYPE(Ink, em_Val);
 
-jb_Promise Ink_requestPresenter(Ink* self );
+jb_Promise Ink_requestPresenter0(Ink* self );
 
-jb_Promise Ink_requestPresenter(Ink* self , const InkPresenterParam* param);
+jb_Promise Ink_requestPresenter1(Ink* self , InkPresenterParam * param);

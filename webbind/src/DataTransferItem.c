@@ -8,16 +8,16 @@ DEFINE_EMLITE_TYPE(DataTransferItem, em_Val);
 
 
 jb_DOMString DataTransferItem_kind(const DataTransferItem *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "kind"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("kind")));
 }
 
 
 jb_DOMString DataTransferItem_type(const DataTransferItem *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "type"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
-jb_Undefined DataTransferItem_getAsString(DataTransferItem* self , const jb_Any* callback) {
+jb_Undefined DataTransferItem_getAsString(DataTransferItem* self , jb_Any * callback) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "getAsString", em_Val_from(callback)));
 }
 

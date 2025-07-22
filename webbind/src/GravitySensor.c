@@ -4,12 +4,14 @@
 DEFINE_EMLITE_TYPE(GravitySensor, Accelerometer);
 
 
-GravitySensor GravitySensor_new() : Accelerometer(em_Val_global("GravitySensor").new_()) {
-        return GravitySensor(em_Val_new(em_Val_global("GravitySensor", ));
+GravitySensor GravitySensor_new0() {
+        em_Val vv = em_Val_new(em_Val_global("GravitySensor") );
+        return GravitySensor_from_val(&vv);
       }
 
 
-GravitySensor GravitySensor_new(const jb_Any* options) : Accelerometer(em_Val_global("GravitySensor").new_(em_Val_from(options))) {
-        return GravitySensor(em_Val_new(em_Val_global("GravitySensor", em_Val_from(options)));
+GravitySensor GravitySensor_new1(jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("GravitySensor") , em_Val_from(options));
+        return GravitySensor_from_val(&vv);
       }
 

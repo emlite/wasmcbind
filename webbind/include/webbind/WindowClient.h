@@ -8,11 +8,6 @@
 typedef struct WindowClient WindowClient;
 
 
-typedef struct {
-  Client inner;
-} WindowClient;
-
-
 DECLARE_EMLITE_TYPE(WindowClient, Client);
 
 DocumentVisibilityState WindowClient_visibilityState( const WindowClient *self);
@@ -23,4 +18,4 @@ jb_FrozenArray WindowClient_ancestorOrigins( const WindowClient *self);
 
 jb_Promise WindowClient_focus(WindowClient* self );
 
-jb_Promise WindowClient_navigate(WindowClient* self , const jb_USVString* url);
+jb_Promise WindowClient_navigate(WindowClient* self , jb_USVString * url);

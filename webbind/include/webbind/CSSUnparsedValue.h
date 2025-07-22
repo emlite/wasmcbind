@@ -6,13 +6,8 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSStyleValue inner;
-} CSSUnparsedValue;
-
-
 DECLARE_EMLITE_TYPE(CSSUnparsedValue, CSSStyleValue);
 
-CSSUnparsedValue CSSUnparsedValue_new(const jb_Sequence* members);
+CSSUnparsedValue CSSUnparsedValue_new(jb_Sequence * members);
 
 unsigned long CSSUnparsedValue_length( const CSSUnparsedValue *self);

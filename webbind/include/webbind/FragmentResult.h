@@ -5,16 +5,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} FragmentResult;
-
-
 DECLARE_EMLITE_TYPE(FragmentResult, em_Val);
 
-FragmentResult FragmentResult_new();
+FragmentResult FragmentResult_new0();
 
-FragmentResult FragmentResult_new(const jb_Any* options);
+FragmentResult FragmentResult_new1(jb_Any * options);
 
 double FragmentResult_inlineSize( const FragmentResult *self);
 

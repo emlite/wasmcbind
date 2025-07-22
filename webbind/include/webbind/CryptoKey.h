@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} CryptoKey;
-
-
 DECLARE_EMLITE_TYPE(CryptoKey, em_Val);
 
 KeyType CryptoKey_type( const CryptoKey *self);

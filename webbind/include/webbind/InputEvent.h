@@ -9,16 +9,11 @@ typedef struct DataTransfer DataTransfer;
 typedef struct StaticRange StaticRange;
 
 
-typedef struct {
-  UIEvent inner;
-} InputEvent;
-
-
 DECLARE_EMLITE_TYPE(InputEvent, UIEvent);
 
-InputEvent InputEvent_new(const jb_DOMString* type);
+InputEvent InputEvent_new0(jb_DOMString * type);
 
-InputEvent InputEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+InputEvent InputEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 jb_USVString InputEvent_data( const InputEvent *self);
 

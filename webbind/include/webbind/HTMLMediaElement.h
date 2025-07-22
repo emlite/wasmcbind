@@ -16,40 +16,35 @@ typedef struct MediaStream MediaStream;
 typedef struct RemotePlayback RemotePlayback;
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLMediaElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLMediaElement, HTMLElement);
 
 MediaError HTMLMediaElement_error( const HTMLMediaElement *self);
 
 jb_USVString HTMLMediaElement_src( const HTMLMediaElement *self);
 
-void HTMLMediaElement_set_src(HTMLMediaElement* self, const jb_USVString* value);
+void HTMLMediaElement_set_src(HTMLMediaElement* self, jb_USVString * value);
 
 jb_Any HTMLMediaElement_srcObject( const HTMLMediaElement *self);
 
-void HTMLMediaElement_set_srcObject(HTMLMediaElement* self, const jb_Any* value);
+void HTMLMediaElement_set_srcObject(HTMLMediaElement* self, jb_Any * value);
 
 jb_USVString HTMLMediaElement_currentSrc( const HTMLMediaElement *self);
 
 jb_DOMString HTMLMediaElement_crossOrigin( const HTMLMediaElement *self);
 
-void HTMLMediaElement_set_crossOrigin(HTMLMediaElement* self, const jb_DOMString* value);
+void HTMLMediaElement_set_crossOrigin(HTMLMediaElement* self, jb_DOMString * value);
 
 unsigned short HTMLMediaElement_networkState( const HTMLMediaElement *self);
 
 jb_DOMString HTMLMediaElement_preload( const HTMLMediaElement *self);
 
-void HTMLMediaElement_set_preload(HTMLMediaElement* self, const jb_DOMString* value);
+void HTMLMediaElement_set_preload(HTMLMediaElement* self, jb_DOMString * value);
 
 TimeRanges HTMLMediaElement_buffered( const HTMLMediaElement *self);
 
 jb_Undefined HTMLMediaElement_load(HTMLMediaElement* self );
 
-CanPlayTypeResult HTMLMediaElement_canPlayType(HTMLMediaElement* self , const jb_DOMString* type);
+CanPlayTypeResult HTMLMediaElement_canPlayType(HTMLMediaElement* self , jb_DOMString * type);
 
 unsigned short HTMLMediaElement_readyState( const HTMLMediaElement *self);
 
@@ -119,27 +114,27 @@ VideoTrackList HTMLMediaElement_videoTracks( const HTMLMediaElement *self);
 
 TextTrackList HTMLMediaElement_textTracks( const HTMLMediaElement *self);
 
-TextTrack HTMLMediaElement_addTextTrack(HTMLMediaElement* self , const TextTrackKind* kind);
+TextTrack HTMLMediaElement_addTextTrack0(HTMLMediaElement* self , TextTrackKind * kind);
 
-TextTrack HTMLMediaElement_addTextTrack(HTMLMediaElement* self , const TextTrackKind* kind, const jb_DOMString* label);
+TextTrack HTMLMediaElement_addTextTrack1(HTMLMediaElement* self , TextTrackKind * kind, jb_DOMString * label);
 
-TextTrack HTMLMediaElement_addTextTrack(HTMLMediaElement* self , const TextTrackKind* kind, const jb_DOMString* label, const jb_DOMString* language);
+TextTrack HTMLMediaElement_addTextTrack2(HTMLMediaElement* self , TextTrackKind * kind, jb_DOMString * label, jb_DOMString * language);
 
 jb_DOMString HTMLMediaElement_sinkId( const HTMLMediaElement *self);
 
-jb_Promise HTMLMediaElement_setSinkId(HTMLMediaElement* self , const jb_DOMString* sinkId);
+jb_Promise HTMLMediaElement_setSinkId(HTMLMediaElement* self , jb_DOMString * sinkId);
 
 MediaKeys HTMLMediaElement_mediaKeys( const HTMLMediaElement *self);
 
 jb_Any HTMLMediaElement_onencrypted( const HTMLMediaElement *self);
 
-void HTMLMediaElement_set_onencrypted(HTMLMediaElement* self, const jb_Any* value);
+void HTMLMediaElement_set_onencrypted(HTMLMediaElement* self, jb_Any * value);
 
 jb_Any HTMLMediaElement_onwaitingforkey( const HTMLMediaElement *self);
 
-void HTMLMediaElement_set_onwaitingforkey(HTMLMediaElement* self, const jb_Any* value);
+void HTMLMediaElement_set_onwaitingforkey(HTMLMediaElement* self, jb_Any * value);
 
-jb_Promise HTMLMediaElement_setMediaKeys(HTMLMediaElement* self , const MediaKeys* mediaKeys);
+jb_Promise HTMLMediaElement_setMediaKeys(HTMLMediaElement* self , MediaKeys * mediaKeys);
 
 MediaStream HTMLMediaElement_captureStream(HTMLMediaElement* self );
 

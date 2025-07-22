@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} FontFacePalette;
-
-
 DECLARE_EMLITE_TYPE(FontFacePalette, em_Val);
 
 unsigned long FontFacePalette_length( const FontFacePalette *self);

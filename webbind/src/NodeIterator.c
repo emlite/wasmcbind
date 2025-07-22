@@ -6,27 +6,27 @@ DEFINE_EMLITE_TYPE(NodeIterator, em_Val);
 
 
 Node NodeIterator_root(const NodeIterator *self) {
-    return em_Val_as(Node, em_Val_get(em_Val_as_val(self->inner), "root"));
+    return em_Val_as(Node, em_Val_get(em_Val_as_val(self->inner), em_Val_from("root")));
 }
 
 
 Node NodeIterator_referenceNode(const NodeIterator *self) {
-    return em_Val_as(Node, em_Val_get(em_Val_as_val(self->inner), "referenceNode"));
+    return em_Val_as(Node, em_Val_get(em_Val_as_val(self->inner), em_Val_from("referenceNode")));
 }
 
 
 bool NodeIterator_pointerBeforeReferenceNode(const NodeIterator *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "pointerBeforeReferenceNode"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pointerBeforeReferenceNode")));
 }
 
 
 unsigned long NodeIterator_whatToShow(const NodeIterator *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "whatToShow"));
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("whatToShow")));
 }
 
 
 jb_Function NodeIterator_filter(const NodeIterator *self) {
-    return em_Val_as(jb_Function, em_Val_get(em_Val_as_val(self->inner), "filter"));
+    return em_Val_as(jb_Function, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filter")));
 }
 
 

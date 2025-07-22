@@ -10,168 +10,170 @@ DEFINE_EMLITE_TYPE(WebTransportConnectionStats, em_Val);
 
 
 long long WebTransportConnectionStats_bytesSent(const WebTransportConnectionStats *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "bytesSent"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("bytesSent")));
 }
 
 
 void WebTransportConnectionStats_set_bytesSent(WebTransportConnectionStats* self, long long value) {
-    em_Val_set(em_Val_as_val(self->inner), "bytesSent", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("bytesSent"), em_Val_from(value));
 }
 
 
 long long WebTransportConnectionStats_packetsSent(const WebTransportConnectionStats *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "packetsSent"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("packetsSent")));
 }
 
 
 void WebTransportConnectionStats_set_packetsSent(WebTransportConnectionStats* self, long long value) {
-    em_Val_set(em_Val_as_val(self->inner), "packetsSent", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("packetsSent"), em_Val_from(value));
 }
 
 
 long long WebTransportConnectionStats_bytesLost(const WebTransportConnectionStats *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "bytesLost"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("bytesLost")));
 }
 
 
 void WebTransportConnectionStats_set_bytesLost(WebTransportConnectionStats* self, long long value) {
-    em_Val_set(em_Val_as_val(self->inner), "bytesLost", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("bytesLost"), em_Val_from(value));
 }
 
 
 long long WebTransportConnectionStats_packetsLost(const WebTransportConnectionStats *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "packetsLost"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("packetsLost")));
 }
 
 
 void WebTransportConnectionStats_set_packetsLost(WebTransportConnectionStats* self, long long value) {
-    em_Val_set(em_Val_as_val(self->inner), "packetsLost", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("packetsLost"), em_Val_from(value));
 }
 
 
 long long WebTransportConnectionStats_bytesReceived(const WebTransportConnectionStats *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "bytesReceived"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("bytesReceived")));
 }
 
 
 void WebTransportConnectionStats_set_bytesReceived(WebTransportConnectionStats* self, long long value) {
-    em_Val_set(em_Val_as_val(self->inner), "bytesReceived", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("bytesReceived"), em_Val_from(value));
 }
 
 
 long long WebTransportConnectionStats_packetsReceived(const WebTransportConnectionStats *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "packetsReceived"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("packetsReceived")));
 }
 
 
 void WebTransportConnectionStats_set_packetsReceived(WebTransportConnectionStats* self, long long value) {
-    em_Val_set(em_Val_as_val(self->inner), "packetsReceived", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("packetsReceived"), em_Val_from(value));
 }
 
 
 jb_Any WebTransportConnectionStats_smoothedRtt(const WebTransportConnectionStats *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "smoothedRtt"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("smoothedRtt")));
 }
 
 
-void WebTransportConnectionStats_set_smoothedRtt(WebTransportConnectionStats* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "smoothedRtt", value);
+void WebTransportConnectionStats_set_smoothedRtt(WebTransportConnectionStats* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("smoothedRtt"), em_Val_from(value));
 }
 
 
 jb_Any WebTransportConnectionStats_rttVariation(const WebTransportConnectionStats *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "rttVariation"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rttVariation")));
 }
 
 
-void WebTransportConnectionStats_set_rttVariation(WebTransportConnectionStats* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "rttVariation", value);
+void WebTransportConnectionStats_set_rttVariation(WebTransportConnectionStats* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("rttVariation"), em_Val_from(value));
 }
 
 
 jb_Any WebTransportConnectionStats_minRtt(const WebTransportConnectionStats *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "minRtt"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("minRtt")));
 }
 
 
-void WebTransportConnectionStats_set_minRtt(WebTransportConnectionStats* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "minRtt", value);
+void WebTransportConnectionStats_set_minRtt(WebTransportConnectionStats* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("minRtt"), em_Val_from(value));
 }
 
 
 jb_Any WebTransportConnectionStats_datagrams(const WebTransportConnectionStats *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "datagrams"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("datagrams")));
 }
 
 
-void WebTransportConnectionStats_set_datagrams(WebTransportConnectionStats* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "datagrams", value);
+void WebTransportConnectionStats_set_datagrams(WebTransportConnectionStats* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("datagrams"), em_Val_from(value));
 }
 
 
 long long WebTransportConnectionStats_estimatedSendRate(const WebTransportConnectionStats *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "estimatedSendRate"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("estimatedSendRate")));
 }
 
 
 void WebTransportConnectionStats_set_estimatedSendRate(WebTransportConnectionStats* self, long long value) {
-    em_Val_set(em_Val_as_val(self->inner), "estimatedSendRate", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("estimatedSendRate"), em_Val_from(value));
 }
 
 
 bool WebTransportConnectionStats_atSendCapacity(const WebTransportConnectionStats *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "atSendCapacity"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("atSendCapacity")));
 }
 
 
 void WebTransportConnectionStats_set_atSendCapacity(WebTransportConnectionStats* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "atSendCapacity", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("atSendCapacity"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(WebTransportCloseInfo, em_Val);
 
 
 unsigned long WebTransportCloseInfo_closeCode(const WebTransportCloseInfo *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "closeCode"));
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("closeCode")));
 }
 
 
 void WebTransportCloseInfo_set_closeCode(WebTransportCloseInfo* self, unsigned long value) {
-    em_Val_set(em_Val_as_val(self->inner), "closeCode", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("closeCode"), em_Val_from(value));
 }
 
 
 jb_USVString WebTransportCloseInfo_reason(const WebTransportCloseInfo *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "reason"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("reason")));
 }
 
 
-void WebTransportCloseInfo_set_reason(WebTransportCloseInfo* self, const jb_USVString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "reason", value);
+void WebTransportCloseInfo_set_reason(WebTransportCloseInfo* self, jb_USVString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("reason"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(WebTransportSendStreamOptions, em_Val);
 
 
 bool WebTransportSendStreamOptions_waitUntilAvailable(const WebTransportSendStreamOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "waitUntilAvailable"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("waitUntilAvailable")));
 }
 
 
 void WebTransportSendStreamOptions_set_waitUntilAvailable(WebTransportSendStreamOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "waitUntilAvailable", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("waitUntilAvailable"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(WebTransport, em_Val);
 
 
-WebTransport WebTransport_new(const jb_USVString* url) : em_Val(em_Val_global("WebTransport").new_(em_Val_from(url))) {
-        return WebTransport(em_Val_new(em_Val_global("WebTransport", em_Val_from(url)));
+WebTransport WebTransport_new0(jb_USVString * url) {
+        em_Val vv = em_Val_new(em_Val_global("WebTransport") , em_Val_from(url));
+        return WebTransport_from_val(&vv);
       }
 
 
-WebTransport WebTransport_new(const jb_USVString* url, const jb_Any* options) : em_Val(em_Val_global("WebTransport").new_(em_Val_from(url), em_Val_from(options))) {
-        return WebTransport(em_Val_new(em_Val_global("WebTransport", em_Val_from(url), em_Val_from(options)));
+WebTransport WebTransport_new1(jb_USVString * url, jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("WebTransport") , em_Val_from(url), em_Val_from(options));
+        return WebTransport_from_val(&vv);
       }
 
 
@@ -180,108 +182,108 @@ jb_Promise WebTransport_getStats(WebTransport* self ) {
 }
 
 
-jb_Promise WebTransport_exportKeyingMaterial(WebTransport* self , const jb_Any* label) {
+jb_Promise WebTransport_exportKeyingMaterial0(WebTransport* self , jb_Any * label) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "exportKeyingMaterial", em_Val_from(label)));
 }
 
 
-jb_Promise WebTransport_exportKeyingMaterial(WebTransport* self , const jb_Any* label, const jb_Any* context) {
+jb_Promise WebTransport_exportKeyingMaterial1(WebTransport* self , jb_Any * label, jb_Any * context) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "exportKeyingMaterial", em_Val_from(label), em_Val_from(context)));
 }
 
 
 jb_Promise WebTransport_ready(const WebTransport *self) {
-    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), "ready"));
+    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ready")));
 }
 
 
 WebTransportReliabilityMode WebTransport_reliability(const WebTransport *self) {
-    return em_Val_as(WebTransportReliabilityMode, em_Val_get(em_Val_as_val(self->inner), "reliability"));
+    return em_Val_as(WebTransportReliabilityMode, em_Val_get(em_Val_as_val(self->inner), em_Val_from("reliability")));
 }
 
 
 WebTransportCongestionControl WebTransport_congestionControl(const WebTransport *self) {
-    return em_Val_as(WebTransportCongestionControl, em_Val_get(em_Val_as_val(self->inner), "congestionControl"));
+    return em_Val_as(WebTransportCongestionControl, em_Val_get(em_Val_as_val(self->inner), em_Val_from("congestionControl")));
 }
 
 
 unsigned short WebTransport_anticipatedConcurrentIncomingUnidirectionalStreams(const WebTransport *self) {
-    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), "anticipatedConcurrentIncomingUnidirectionalStreams"));
+    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), em_Val_from("anticipatedConcurrentIncomingUnidirectionalStreams")));
 }
 
 
 void WebTransport_set_anticipatedConcurrentIncomingUnidirectionalStreams(WebTransport* self, unsigned short value) {
-    em_Val_set(em_Val_as_val(self->inner), "anticipatedConcurrentIncomingUnidirectionalStreams", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("anticipatedConcurrentIncomingUnidirectionalStreams"), em_Val_from(value));
 }
 
 
 unsigned short WebTransport_anticipatedConcurrentIncomingBidirectionalStreams(const WebTransport *self) {
-    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), "anticipatedConcurrentIncomingBidirectionalStreams"));
+    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), em_Val_from("anticipatedConcurrentIncomingBidirectionalStreams")));
 }
 
 
 void WebTransport_set_anticipatedConcurrentIncomingBidirectionalStreams(WebTransport* self, unsigned short value) {
-    em_Val_set(em_Val_as_val(self->inner), "anticipatedConcurrentIncomingBidirectionalStreams", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("anticipatedConcurrentIncomingBidirectionalStreams"), em_Val_from(value));
 }
 
 
 jb_DOMString WebTransport_protocol(const WebTransport *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "protocol"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("protocol")));
 }
 
 
 jb_Promise WebTransport_closed(const WebTransport *self) {
-    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), "closed"));
+    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), em_Val_from("closed")));
 }
 
 
 jb_Promise WebTransport_draining(const WebTransport *self) {
-    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), "draining"));
+    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), em_Val_from("draining")));
 }
 
 
-jb_Undefined WebTransport_close(WebTransport* self ) {
+jb_Undefined WebTransport_close0(WebTransport* self ) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "close"));
 }
 
 
-jb_Undefined WebTransport_close(WebTransport* self , const WebTransportCloseInfo* closeInfo) {
+jb_Undefined WebTransport_close1(WebTransport* self , WebTransportCloseInfo * closeInfo) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "close", em_Val_from(closeInfo)));
 }
 
 
 WebTransportDatagramDuplexStream WebTransport_datagrams(const WebTransport *self) {
-    return em_Val_as(WebTransportDatagramDuplexStream, em_Val_get(em_Val_as_val(self->inner), "datagrams"));
+    return em_Val_as(WebTransportDatagramDuplexStream, em_Val_get(em_Val_as_val(self->inner), em_Val_from("datagrams")));
 }
 
 
-jb_Promise WebTransport_createBidirectionalStream(WebTransport* self ) {
+jb_Promise WebTransport_createBidirectionalStream0(WebTransport* self ) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "createBidirectionalStream"));
 }
 
 
-jb_Promise WebTransport_createBidirectionalStream(WebTransport* self , const WebTransportSendStreamOptions* options) {
+jb_Promise WebTransport_createBidirectionalStream1(WebTransport* self , WebTransportSendStreamOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "createBidirectionalStream", em_Val_from(options)));
 }
 
 
 ReadableStream WebTransport_incomingBidirectionalStreams(const WebTransport *self) {
-    return em_Val_as(ReadableStream, em_Val_get(em_Val_as_val(self->inner), "incomingBidirectionalStreams"));
+    return em_Val_as(ReadableStream, em_Val_get(em_Val_as_val(self->inner), em_Val_from("incomingBidirectionalStreams")));
 }
 
 
-jb_Promise WebTransport_createUnidirectionalStream(WebTransport* self ) {
+jb_Promise WebTransport_createUnidirectionalStream0(WebTransport* self ) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "createUnidirectionalStream"));
 }
 
 
-jb_Promise WebTransport_createUnidirectionalStream(WebTransport* self , const WebTransportSendStreamOptions* options) {
+jb_Promise WebTransport_createUnidirectionalStream1(WebTransport* self , WebTransportSendStreamOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "createUnidirectionalStream", em_Val_from(options)));
 }
 
 
 ReadableStream WebTransport_incomingUnidirectionalStreams(const WebTransport *self) {
-    return em_Val_as(ReadableStream, em_Val_get(em_Val_as_val(self->inner), "incomingUnidirectionalStreams"));
+    return em_Val_as(ReadableStream, em_Val_get(em_Val_as_val(self->inner), em_Val_from("incomingUnidirectionalStreams")));
 }
 
 
@@ -291,6 +293,6 @@ WebTransportSendGroup WebTransport_createSendGroup(WebTransport* self ) {
 
 
 bool WebTransport_supportsReliableOnly() {
-    return em_Val_as(bool, em_Val_get(em_Val_global("webtransport", "supportsReliableOnly")));
+    return em_Val_as(bool, em_Val_get(em_Val_global("webtransport", em_Val_from("supportsReliableOnly"))));
 }
 

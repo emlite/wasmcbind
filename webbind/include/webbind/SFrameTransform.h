@@ -10,24 +10,19 @@ typedef struct ReadableStream ReadableStream;
 typedef struct WritableStream WritableStream;
 
 
-typedef struct {
-  EventTarget inner;
-} SFrameTransform;
-
-
 DECLARE_EMLITE_TYPE(SFrameTransform, EventTarget);
 
-SFrameTransform SFrameTransform_new();
+SFrameTransform SFrameTransform_new0();
 
-SFrameTransform SFrameTransform_new(const jb_Any* options);
+SFrameTransform SFrameTransform_new1(jb_Any * options);
 
-jb_Promise SFrameTransform_setEncryptionKey(SFrameTransform* self , const CryptoKey* key);
+jb_Promise SFrameTransform_setEncryptionKey0(SFrameTransform* self , CryptoKey * key);
 
-jb_Promise SFrameTransform_setEncryptionKey(SFrameTransform* self , const CryptoKey* key, const jb_Any* keyID);
+jb_Promise SFrameTransform_setEncryptionKey1(SFrameTransform* self , CryptoKey * key, jb_Any * keyID);
 
 jb_Any SFrameTransform_onerror( const SFrameTransform *self);
 
-void SFrameTransform_set_onerror(SFrameTransform* self, const jb_Any* value);
+void SFrameTransform_set_onerror(SFrameTransform* self, jb_Any * value);
 
 ReadableStream SFrameTransform_readable( const SFrameTransform *self);
 

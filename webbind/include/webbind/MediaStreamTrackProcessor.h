@@ -7,13 +7,8 @@
 typedef struct ReadableStream ReadableStream;
 
 
-typedef struct {
-  em_Val inner;
-} MediaStreamTrackProcessor;
-
-
 DECLARE_EMLITE_TYPE(MediaStreamTrackProcessor, em_Val);
 
-MediaStreamTrackProcessor MediaStreamTrackProcessor_new(const jb_Any* init);
+MediaStreamTrackProcessor MediaStreamTrackProcessor_new(jb_Any * init);
 
 ReadableStream MediaStreamTrackProcessor_readable( const MediaStreamTrackProcessor *self);

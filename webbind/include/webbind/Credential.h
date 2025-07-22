@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} Credential;
-
-
 DECLARE_EMLITE_TYPE(Credential, em_Val);
 
 jb_USVString Credential_id( const Credential *self);

@@ -8,11 +8,6 @@
 typedef struct DocumentFragment DocumentFragment;
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLTemplateElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLTemplateElement, HTMLElement);
 
 HTMLTemplateElement HTMLTemplateElement_new();
@@ -21,7 +16,7 @@ DocumentFragment HTMLTemplateElement_content( const HTMLTemplateElement *self);
 
 jb_DOMString HTMLTemplateElement_shadowRootMode( const HTMLTemplateElement *self);
 
-void HTMLTemplateElement_set_shadowRootMode(HTMLTemplateElement* self, const jb_DOMString* value);
+void HTMLTemplateElement_set_shadowRootMode(HTMLTemplateElement* self, jb_DOMString * value);
 
 bool HTMLTemplateElement_shadowRootDelegatesFocus( const HTMLTemplateElement *self);
 
@@ -37,4 +32,4 @@ void HTMLTemplateElement_set_shadowRootSerializable(HTMLTemplateElement* self, b
 
 jb_DOMString HTMLTemplateElement_shadowRootCustomElementRegistry( const HTMLTemplateElement *self);
 
-void HTMLTemplateElement_set_shadowRootCustomElementRegistry(HTMLTemplateElement* self, const jb_DOMString* value);
+void HTMLTemplateElement_set_shadowRootCustomElementRegistry(HTMLTemplateElement* self, jb_DOMString * value);

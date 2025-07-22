@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} SVGAnimatedBoolean;
-
-
 DECLARE_EMLITE_TYPE(SVGAnimatedBoolean, em_Val);
 
 bool SVGAnimatedBoolean_baseVal( const SVGAnimatedBoolean *self);

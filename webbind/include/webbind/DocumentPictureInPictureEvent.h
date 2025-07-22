@@ -8,13 +8,8 @@
 typedef struct Window Window;
 
 
-typedef struct {
-  Event inner;
-} DocumentPictureInPictureEvent;
-
-
 DECLARE_EMLITE_TYPE(DocumentPictureInPictureEvent, Event);
 
-DocumentPictureInPictureEvent DocumentPictureInPictureEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+DocumentPictureInPictureEvent DocumentPictureInPictureEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 Window DocumentPictureInPictureEvent_window( const DocumentPictureInPictureEvent *self);

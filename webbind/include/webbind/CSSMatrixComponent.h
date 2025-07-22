@@ -9,17 +9,12 @@ typedef struct DOMMatrix DOMMatrix;
 typedef struct DOMMatrixReadOnly DOMMatrixReadOnly;
 
 
-typedef struct {
-  CSSTransformComponent inner;
-} CSSMatrixComponent;
-
-
 DECLARE_EMLITE_TYPE(CSSMatrixComponent, CSSTransformComponent);
 
-CSSMatrixComponent CSSMatrixComponent_new(const DOMMatrixReadOnly* matrix);
+CSSMatrixComponent CSSMatrixComponent_new0(DOMMatrixReadOnly * matrix);
 
-CSSMatrixComponent CSSMatrixComponent_new(const DOMMatrixReadOnly* matrix, const jb_Any* options);
+CSSMatrixComponent CSSMatrixComponent_new1(DOMMatrixReadOnly * matrix, jb_Any * options);
 
 DOMMatrix CSSMatrixComponent_matrix( const CSSMatrixComponent *self);
 
-void CSSMatrixComponent_set_matrix(CSSMatrixComponent* self, const DOMMatrix* value);
+void CSSMatrixComponent_set_matrix(CSSMatrixComponent* self, DOMMatrix * value);

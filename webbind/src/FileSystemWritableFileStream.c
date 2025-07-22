@@ -4,7 +4,7 @@
 DEFINE_EMLITE_TYPE(FileSystemWritableFileStream, WritableStream);
 
 
-jb_Promise FileSystemWritableFileStream_write(FileSystemWritableFileStream* self , const jb_Any* data) {
+jb_Promise FileSystemWritableFileStream_write(FileSystemWritableFileStream* self , jb_Any * data) {
     return em_Val_as(jb_Promise, em_Val_call(WritableStream_as_val(self->inner), "write", em_Val_from(data)));
 }
 

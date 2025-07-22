@@ -7,38 +7,28 @@
 typedef struct VideoColorSpaceInit VideoColorSpaceInit;
 
 
-typedef struct {
-  em_Val inner;
-} VideoColorSpaceInit;
-
-
 DECLARE_EMLITE_TYPE(VideoColorSpaceInit, em_Val);
 
 VideoColorPrimaries VideoColorSpaceInit_primaries( const VideoColorSpaceInit *self);
 
-void VideoColorSpaceInit_set_primaries(VideoColorSpaceInit* self, const VideoColorPrimaries* value);
+void VideoColorSpaceInit_set_primaries(VideoColorSpaceInit* self, VideoColorPrimaries * value);
 
 VideoTransferCharacteristics VideoColorSpaceInit_transfer( const VideoColorSpaceInit *self);
 
-void VideoColorSpaceInit_set_transfer(VideoColorSpaceInit* self, const VideoTransferCharacteristics* value);
+void VideoColorSpaceInit_set_transfer(VideoColorSpaceInit* self, VideoTransferCharacteristics * value);
 
 VideoMatrixCoefficients VideoColorSpaceInit_matrix( const VideoColorSpaceInit *self);
 
-void VideoColorSpaceInit_set_matrix(VideoColorSpaceInit* self, const VideoMatrixCoefficients* value);
+void VideoColorSpaceInit_set_matrix(VideoColorSpaceInit* self, VideoMatrixCoefficients * value);
 
 bool VideoColorSpaceInit_fullRange( const VideoColorSpaceInit *self);
 
 void VideoColorSpaceInit_set_fullRange(VideoColorSpaceInit* self, bool value);
-typedef struct {
-  em_Val inner;
-} VideoColorSpace;
-
-
 DECLARE_EMLITE_TYPE(VideoColorSpace, em_Val);
 
-VideoColorSpace VideoColorSpace_new();
+VideoColorSpace VideoColorSpace_new0();
 
-VideoColorSpace VideoColorSpace_new(const VideoColorSpaceInit* init);
+VideoColorSpace VideoColorSpace_new1(VideoColorSpaceInit * init);
 
 VideoColorPrimaries VideoColorSpace_primaries( const VideoColorSpace *self);
 

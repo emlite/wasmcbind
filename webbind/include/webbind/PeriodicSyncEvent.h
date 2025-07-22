@@ -6,13 +6,8 @@
 #include "enums.h"
 
 
-typedef struct {
-  ExtendableEvent inner;
-} PeriodicSyncEvent;
-
-
 DECLARE_EMLITE_TYPE(PeriodicSyncEvent, ExtendableEvent);
 
-PeriodicSyncEvent PeriodicSyncEvent_new(const jb_DOMString* type, const jb_Any* init);
+PeriodicSyncEvent PeriodicSyncEvent_new(jb_DOMString * type, jb_Any * init);
 
 jb_DOMString PeriodicSyncEvent_tag( const PeriodicSyncEvent *self);

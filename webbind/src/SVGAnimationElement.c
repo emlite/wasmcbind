@@ -6,37 +6,37 @@ DEFINE_EMLITE_TYPE(SVGAnimationElement, SVGElement);
 
 
 SVGElement SVGAnimationElement_targetElement(const SVGAnimationElement *self) {
-    return em_Val_as(SVGElement, em_Val_get(SVGElement_as_val(self->inner), "targetElement"));
+    return em_Val_as(SVGElement, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("targetElement")));
 }
 
 
 jb_Any SVGAnimationElement_onbegin(const SVGAnimationElement *self) {
-    return em_Val_as(jb_Any, em_Val_get(SVGElement_as_val(self->inner), "onbegin"));
+    return em_Val_as(jb_Any, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("onbegin")));
 }
 
 
-void SVGAnimationElement_set_onbegin(SVGAnimationElement* self, const jb_Any* value) {
-    em_Val_set(SVGElement_as_val(self->inner), "onbegin", value);
+void SVGAnimationElement_set_onbegin(SVGAnimationElement* self, jb_Any * value) {
+    em_Val_set(SVGElement_as_val(self->inner), em_Val_from("onbegin"), em_Val_from(value));
 }
 
 
 jb_Any SVGAnimationElement_onend(const SVGAnimationElement *self) {
-    return em_Val_as(jb_Any, em_Val_get(SVGElement_as_val(self->inner), "onend"));
+    return em_Val_as(jb_Any, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("onend")));
 }
 
 
-void SVGAnimationElement_set_onend(SVGAnimationElement* self, const jb_Any* value) {
-    em_Val_set(SVGElement_as_val(self->inner), "onend", value);
+void SVGAnimationElement_set_onend(SVGAnimationElement* self, jb_Any * value) {
+    em_Val_set(SVGElement_as_val(self->inner), em_Val_from("onend"), em_Val_from(value));
 }
 
 
 jb_Any SVGAnimationElement_onrepeat(const SVGAnimationElement *self) {
-    return em_Val_as(jb_Any, em_Val_get(SVGElement_as_val(self->inner), "onrepeat"));
+    return em_Val_as(jb_Any, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("onrepeat")));
 }
 
 
-void SVGAnimationElement_set_onrepeat(SVGAnimationElement* self, const jb_Any* value) {
-    em_Val_set(SVGElement_as_val(self->inner), "onrepeat", value);
+void SVGAnimationElement_set_onrepeat(SVGAnimationElement* self, jb_Any * value) {
+    em_Val_set(SVGElement_as_val(self->inner), em_Val_from("onrepeat"), em_Val_from(value));
 }
 
 
@@ -76,11 +76,11 @@ jb_Undefined SVGAnimationElement_endElementAt(SVGAnimationElement* self , float 
 
 
 SVGStringList SVGAnimationElement_requiredExtensions(const SVGAnimationElement *self) {
-    return em_Val_as(SVGStringList, em_Val_get(SVGElement_as_val(self->inner), "requiredExtensions"));
+    return em_Val_as(SVGStringList, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("requiredExtensions")));
 }
 
 
 SVGStringList SVGAnimationElement_systemLanguage(const SVGAnimationElement *self) {
-    return em_Val_as(SVGStringList, em_Val_get(SVGElement_as_val(self->inner), "systemLanguage"));
+    return em_Val_as(SVGStringList, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("systemLanguage")));
 }
 

@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  Text inner;
-} CDATASection;
-
-
 DECLARE_EMLITE_TYPE(CDATASection, Text);

@@ -8,14 +8,9 @@ typedef struct ReadableStream ReadableStream;
 typedef struct WritableStream WritableStream;
 
 
-typedef struct {
-  em_Val inner;
-} DecompressionStream;
-
-
 DECLARE_EMLITE_TYPE(DecompressionStream, em_Val);
 
-DecompressionStream DecompressionStream_new(const CompressionFormat* format);
+DecompressionStream DecompressionStream_new(CompressionFormat * format);
 
 ReadableStream DecompressionStream_readable( const DecompressionStream *self);
 

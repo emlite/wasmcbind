@@ -5,22 +5,24 @@
 DEFINE_EMLITE_TYPE(Path2D, em_Val);
 
 
-Path2D Path2D_new() : em_Val(em_Val_global("Path2D").new_()) {
-        return Path2D(em_Val_new(em_Val_global("Path2D", ));
+Path2D Path2D_new0() {
+        em_Val vv = em_Val_new(em_Val_global("Path2D") );
+        return Path2D_from_val(&vv);
       }
 
 
-Path2D Path2D_new(const jb_Any* path) : em_Val(em_Val_global("Path2D").new_(em_Val_from(path))) {
-        return Path2D(em_Val_new(em_Val_global("Path2D", em_Val_from(path)));
+Path2D Path2D_new1(jb_Any * path) {
+        em_Val vv = em_Val_new(em_Val_global("Path2D") , em_Val_from(path));
+        return Path2D_from_val(&vv);
       }
 
 
-jb_Undefined Path2D_addPath(Path2D* self , const Path2D* path) {
+jb_Undefined Path2D_addPath0(Path2D* self , Path2D * path) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "addPath", em_Val_from(path)));
 }
 
 
-jb_Undefined Path2D_addPath(Path2D* self , const Path2D* path, const DOMMatrix2DInit* transform) {
+jb_Undefined Path2D_addPath1(Path2D* self , Path2D * path, DOMMatrix2DInit * transform) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "addPath", em_Val_from(path), em_Val_from(transform)));
 }
 
@@ -60,32 +62,32 @@ jb_Undefined Path2D_rect(Path2D* self , double x, double y, double w, double h) 
 }
 
 
-jb_Undefined Path2D_roundRect(Path2D* self , double x, double y, double w, double h) {
+jb_Undefined Path2D_roundRect0(Path2D* self , double x, double y, double w, double h) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "roundRect", em_Val_from(x), em_Val_from(y), em_Val_from(w), em_Val_from(h)));
 }
 
 
-jb_Undefined Path2D_roundRect(Path2D* self , double x, double y, double w, double h, const jb_Any* radii) {
+jb_Undefined Path2D_roundRect1(Path2D* self , double x, double y, double w, double h, jb_Any * radii) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "roundRect", em_Val_from(x), em_Val_from(y), em_Val_from(w), em_Val_from(h), em_Val_from(radii)));
 }
 
 
-jb_Undefined Path2D_arc(Path2D* self , double x, double y, double radius, double startAngle, double endAngle) {
+jb_Undefined Path2D_arc0(Path2D* self , double x, double y, double radius, double startAngle, double endAngle) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "arc", em_Val_from(x), em_Val_from(y), em_Val_from(radius), em_Val_from(startAngle), em_Val_from(endAngle)));
 }
 
 
-jb_Undefined Path2D_arc(Path2D* self , double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise) {
+jb_Undefined Path2D_arc1(Path2D* self , double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "arc", em_Val_from(x), em_Val_from(y), em_Val_from(radius), em_Val_from(startAngle), em_Val_from(endAngle), em_Val_from(counterclockwise)));
 }
 
 
-jb_Undefined Path2D_ellipse(Path2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle) {
+jb_Undefined Path2D_ellipse0(Path2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "ellipse", em_Val_from(x), em_Val_from(y), em_Val_from(radiusX), em_Val_from(radiusY), em_Val_from(rotation), em_Val_from(startAngle), em_Val_from(endAngle)));
 }
 
 
-jb_Undefined Path2D_ellipse(Path2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise) {
+jb_Undefined Path2D_ellipse1(Path2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "ellipse", em_Val_from(x), em_Val_from(y), em_Val_from(radiusX), em_Val_from(radiusY), em_Val_from(rotation), em_Val_from(startAngle), em_Val_from(endAngle), em_Val_from(counterclockwise)));
 }
 

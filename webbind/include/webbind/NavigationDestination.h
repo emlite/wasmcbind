@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} NavigationDestination;
-
-
 DECLARE_EMLITE_TYPE(NavigationDestination, em_Val);
 
 jb_USVString NavigationDestination_url( const NavigationDestination *self);

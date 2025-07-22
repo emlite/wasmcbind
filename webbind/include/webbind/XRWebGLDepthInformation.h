@@ -8,11 +8,6 @@
 typedef struct WebGLTexture WebGLTexture;
 
 
-typedef struct {
-  XRDepthInformation inner;
-} XRWebGLDepthInformation;
-
-
 DECLARE_EMLITE_TYPE(XRWebGLDepthInformation, XRDepthInformation);
 
 WebGLTexture XRWebGLDepthInformation_texture( const XRWebGLDepthInformation *self);

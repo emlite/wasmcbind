@@ -8,11 +8,6 @@
 typedef struct HTMLCollection HTMLCollection;
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLDataListElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLDataListElement, HTMLElement);
 
 HTMLDataListElement HTMLDataListElement_new();

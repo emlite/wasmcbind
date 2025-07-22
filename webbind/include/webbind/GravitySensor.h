@@ -6,13 +6,8 @@
 #include "enums.h"
 
 
-typedef struct {
-  Accelerometer inner;
-} GravitySensor;
-
-
 DECLARE_EMLITE_TYPE(GravitySensor, Accelerometer);
 
-GravitySensor GravitySensor_new();
+GravitySensor GravitySensor_new0();
 
-GravitySensor GravitySensor_new(const jb_Any* options);
+GravitySensor GravitySensor_new1(jb_Any * options);

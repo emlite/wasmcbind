@@ -8,11 +8,6 @@ typedef struct DOMRect DOMRect;
 typedef struct DOMRectReadOnly DOMRectReadOnly;
 
 
-typedef struct {
-  em_Val inner;
-} SVGAnimatedRect;
-
-
 DECLARE_EMLITE_TYPE(SVGAnimatedRect, em_Val);
 
 DOMRect SVGAnimatedRect_baseVal( const SVGAnimatedRect *self);

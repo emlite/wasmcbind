@@ -8,11 +8,6 @@ typedef struct Node Node;
 typedef struct DOMRectReadOnly DOMRectReadOnly;
 
 
-typedef struct {
-  em_Val inner;
-} LayoutShiftAttribution;
-
-
 DECLARE_EMLITE_TYPE(LayoutShiftAttribution, em_Val);
 
 Node LayoutShiftAttribution_node( const LayoutShiftAttribution *self);

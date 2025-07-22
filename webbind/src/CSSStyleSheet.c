@@ -6,32 +6,34 @@
 DEFINE_EMLITE_TYPE(CSSStyleSheet, StyleSheet);
 
 
-CSSStyleSheet CSSStyleSheet_new() : StyleSheet(em_Val_global("CSSStyleSheet").new_()) {
-        return CSSStyleSheet(em_Val_new(em_Val_global("CSSStyleSheet", ));
+CSSStyleSheet CSSStyleSheet_new0() {
+        em_Val vv = em_Val_new(em_Val_global("CSSStyleSheet") );
+        return CSSStyleSheet_from_val(&vv);
       }
 
 
-CSSStyleSheet CSSStyleSheet_new(const jb_Any* options) : StyleSheet(em_Val_global("CSSStyleSheet").new_(em_Val_from(options))) {
-        return CSSStyleSheet(em_Val_new(em_Val_global("CSSStyleSheet", em_Val_from(options)));
+CSSStyleSheet CSSStyleSheet_new1(jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("CSSStyleSheet") , em_Val_from(options));
+        return CSSStyleSheet_from_val(&vv);
       }
 
 
 CSSRule CSSStyleSheet_ownerRule(const CSSStyleSheet *self) {
-    return em_Val_as(CSSRule, em_Val_get(StyleSheet_as_val(self->inner), "ownerRule"));
+    return em_Val_as(CSSRule, em_Val_get(StyleSheet_as_val(self->inner), em_Val_from("ownerRule")));
 }
 
 
 CSSRuleList CSSStyleSheet_cssRules(const CSSStyleSheet *self) {
-    return em_Val_as(CSSRuleList, em_Val_get(StyleSheet_as_val(self->inner), "cssRules"));
+    return em_Val_as(CSSRuleList, em_Val_get(StyleSheet_as_val(self->inner), em_Val_from("cssRules")));
 }
 
 
-unsigned long CSSStyleSheet_insertRule(CSSStyleSheet* self , const jb_CSSOMString* rule) {
+unsigned long CSSStyleSheet_insertRule0(CSSStyleSheet* self , jb_CSSOMString * rule) {
     return em_Val_as(unsigned long, em_Val_call(StyleSheet_as_val(self->inner), "insertRule", em_Val_from(rule)));
 }
 
 
-unsigned long CSSStyleSheet_insertRule(CSSStyleSheet* self , const jb_CSSOMString* rule, unsigned long index) {
+unsigned long CSSStyleSheet_insertRule1(CSSStyleSheet* self , jb_CSSOMString * rule, unsigned long index) {
     return em_Val_as(unsigned long, em_Val_call(StyleSheet_as_val(self->inner), "insertRule", em_Val_from(rule), em_Val_from(index)));
 }
 
@@ -41,47 +43,47 @@ jb_Undefined CSSStyleSheet_deleteRule(CSSStyleSheet* self , unsigned long index)
 }
 
 
-jb_Promise CSSStyleSheet_replace(CSSStyleSheet* self , const jb_USVString* text) {
+jb_Promise CSSStyleSheet_replace(CSSStyleSheet* self , jb_USVString * text) {
     return em_Val_as(jb_Promise, em_Val_call(StyleSheet_as_val(self->inner), "replace", em_Val_from(text)));
 }
 
 
-jb_Undefined CSSStyleSheet_replaceSync(CSSStyleSheet* self , const jb_USVString* text) {
+jb_Undefined CSSStyleSheet_replaceSync(CSSStyleSheet* self , jb_USVString * text) {
     return em_Val_as(jb_Undefined, em_Val_call(StyleSheet_as_val(self->inner), "replaceSync", em_Val_from(text)));
 }
 
 
 CSSRuleList CSSStyleSheet_rules(const CSSStyleSheet *self) {
-    return em_Val_as(CSSRuleList, em_Val_get(StyleSheet_as_val(self->inner), "rules"));
+    return em_Val_as(CSSRuleList, em_Val_get(StyleSheet_as_val(self->inner), em_Val_from("rules")));
 }
 
 
-long CSSStyleSheet_addRule(CSSStyleSheet* self ) {
+long CSSStyleSheet_addRule0(CSSStyleSheet* self ) {
     return em_Val_as(long, em_Val_call(StyleSheet_as_val(self->inner), "addRule"));
 }
 
 
-long CSSStyleSheet_addRule(CSSStyleSheet* self , const jb_DOMString* selector) {
+long CSSStyleSheet_addRule1(CSSStyleSheet* self , jb_DOMString * selector) {
     return em_Val_as(long, em_Val_call(StyleSheet_as_val(self->inner), "addRule", em_Val_from(selector)));
 }
 
 
-long CSSStyleSheet_addRule(CSSStyleSheet* self , const jb_DOMString* selector, const jb_DOMString* style) {
+long CSSStyleSheet_addRule2(CSSStyleSheet* self , jb_DOMString * selector, jb_DOMString * style) {
     return em_Val_as(long, em_Val_call(StyleSheet_as_val(self->inner), "addRule", em_Val_from(selector), em_Val_from(style)));
 }
 
 
-long CSSStyleSheet_addRule(CSSStyleSheet* self , const jb_DOMString* selector, const jb_DOMString* style, unsigned long index) {
+long CSSStyleSheet_addRule3(CSSStyleSheet* self , jb_DOMString * selector, jb_DOMString * style, unsigned long index) {
     return em_Val_as(long, em_Val_call(StyleSheet_as_val(self->inner), "addRule", em_Val_from(selector), em_Val_from(style), em_Val_from(index)));
 }
 
 
-jb_Undefined CSSStyleSheet_removeRule(CSSStyleSheet* self ) {
+jb_Undefined CSSStyleSheet_removeRule0(CSSStyleSheet* self ) {
     return em_Val_as(jb_Undefined, em_Val_call(StyleSheet_as_val(self->inner), "removeRule"));
 }
 
 
-jb_Undefined CSSStyleSheet_removeRule(CSSStyleSheet* self , unsigned long index) {
+jb_Undefined CSSStyleSheet_removeRule1(CSSStyleSheet* self , unsigned long index) {
     return em_Val_as(jb_Undefined, em_Val_call(StyleSheet_as_val(self->inner), "removeRule", em_Val_from(index)));
 }
 

@@ -7,11 +7,6 @@
 typedef struct Node Node;
 
 
-typedef struct {
-  em_Val inner;
-} XPathResult;
-
-
 DECLARE_EMLITE_TYPE(XPathResult, em_Val);
 
 unsigned short XPathResult_resultType( const XPathResult *self);

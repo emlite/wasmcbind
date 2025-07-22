@@ -16,26 +16,26 @@ jb_Undefined VirtualKeyboard_hide(VirtualKeyboard* self ) {
 
 
 DOMRect VirtualKeyboard_boundingRect(const VirtualKeyboard *self) {
-    return em_Val_as(DOMRect, em_Val_get(EventTarget_as_val(self->inner), "boundingRect"));
+    return em_Val_as(DOMRect, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("boundingRect")));
 }
 
 
 bool VirtualKeyboard_overlaysContent(const VirtualKeyboard *self) {
-    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), "overlaysContent"));
+    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("overlaysContent")));
 }
 
 
 void VirtualKeyboard_set_overlaysContent(VirtualKeyboard* self, bool value) {
-    em_Val_set(EventTarget_as_val(self->inner), "overlaysContent", value);
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("overlaysContent"), em_Val_from(value));
 }
 
 
 jb_Any VirtualKeyboard_ongeometrychange(const VirtualKeyboard *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "ongeometrychange"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("ongeometrychange")));
 }
 
 
-void VirtualKeyboard_set_ongeometrychange(VirtualKeyboard* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "ongeometrychange", value);
+void VirtualKeyboard_set_ongeometrychange(VirtualKeyboard* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("ongeometrychange"), em_Val_from(value));
 }
 

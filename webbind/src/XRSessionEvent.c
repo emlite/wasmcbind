@@ -5,12 +5,13 @@
 DEFINE_EMLITE_TYPE(XRSessionEvent, Event);
 
 
-XRSessionEvent XRSessionEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict) : Event(em_Val_global("XRSessionEvent").new_(em_Val_from(type), em_Val_from(eventInitDict))) {
-        return XRSessionEvent(em_Val_new(em_Val_global("XRSessionEvent", em_Val_from(type), em_Val_from(eventInitDict)));
+XRSessionEvent XRSessionEvent_new(jb_DOMString * type, jb_Any * eventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("XRSessionEvent") , em_Val_from(type), em_Val_from(eventInitDict));
+        return XRSessionEvent_from_val(&vv);
       }
 
 
 XRSession XRSessionEvent_session(const XRSessionEvent *self) {
-    return em_Val_as(XRSession, em_Val_get(Event_as_val(self->inner), "session"));
+    return em_Val_as(XRSession, em_Val_get(Event_as_val(self->inner), em_Val_from("session")));
 }
 

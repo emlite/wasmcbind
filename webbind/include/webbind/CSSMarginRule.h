@@ -8,11 +8,6 @@
 typedef struct CSSStyleDeclaration CSSStyleDeclaration;
 
 
-typedef struct {
-  CSSRule inner;
-} CSSMarginRule;
-
-
 DECLARE_EMLITE_TYPE(CSSMarginRule, CSSRule);
 
 jb_CSSOMString CSSMarginRule_name( const CSSMarginRule *self);

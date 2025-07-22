@@ -3,5 +3,6 @@
 #include <emlite/emlite.h>
 
 Window window() {
-    return Window_from_val(emlite_Val_global("window"));
+    em_Val vv = em_Val_global("window");
+    return Window_from_val(&vv);
 }

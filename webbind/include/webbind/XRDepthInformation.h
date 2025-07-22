@@ -7,11 +7,6 @@
 typedef struct XRRigidTransform XRRigidTransform;
 
 
-typedef struct {
-  em_Val inner;
-} XRDepthInformation;
-
-
 DECLARE_EMLITE_TYPE(XRDepthInformation, em_Val);
 
 unsigned long XRDepthInformation_width( const XRDepthInformation *self);

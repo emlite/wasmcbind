@@ -6,72 +6,72 @@ DEFINE_EMLITE_TYPE(PerformanceScriptTiming, PerformanceEntry);
 
 
 jb_Any PerformanceScriptTiming_startTime(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "startTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("startTime")));
 }
 
 
 jb_Any PerformanceScriptTiming_duration(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "duration"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("duration")));
 }
 
 
 jb_DOMString PerformanceScriptTiming_name(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
 }
 
 
 jb_DOMString PerformanceScriptTiming_entryType(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "entryType"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
 }
 
 
 ScriptInvokerType PerformanceScriptTiming_invokerType(const PerformanceScriptTiming *self) {
-    return em_Val_as(ScriptInvokerType, em_Val_get(PerformanceEntry_as_val(self->inner), "invokerType"));
+    return em_Val_as(ScriptInvokerType, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("invokerType")));
 }
 
 
 jb_DOMString PerformanceScriptTiming_invoker(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "invoker"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("invoker")));
 }
 
 
 jb_Any PerformanceScriptTiming_executionStart(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "executionStart"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("executionStart")));
 }
 
 
 jb_DOMString PerformanceScriptTiming_sourceURL(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "sourceURL"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("sourceURL")));
 }
 
 
 jb_DOMString PerformanceScriptTiming_sourceFunctionName(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "sourceFunctionName"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("sourceFunctionName")));
 }
 
 
 long long PerformanceScriptTiming_sourceCharPosition(const PerformanceScriptTiming *self) {
-    return em_Val_as(long long, em_Val_get(PerformanceEntry_as_val(self->inner), "sourceCharPosition"));
+    return em_Val_as(long long, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("sourceCharPosition")));
 }
 
 
 jb_Any PerformanceScriptTiming_pauseDuration(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "pauseDuration"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("pauseDuration")));
 }
 
 
 jb_Any PerformanceScriptTiming_forcedStyleAndLayoutDuration(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "forcedStyleAndLayoutDuration"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("forcedStyleAndLayoutDuration")));
 }
 
 
 Window PerformanceScriptTiming_window(const PerformanceScriptTiming *self) {
-    return em_Val_as(Window, em_Val_get(PerformanceEntry_as_val(self->inner), "window"));
+    return em_Val_as(Window, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("window")));
 }
 
 
 ScriptWindowAttribution PerformanceScriptTiming_windowAttribution(const PerformanceScriptTiming *self) {
-    return em_Val_as(ScriptWindowAttribution, em_Val_get(PerformanceEntry_as_val(self->inner), "windowAttribution"));
+    return em_Val_as(ScriptWindowAttribution, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("windowAttribution")));
 }
 
 

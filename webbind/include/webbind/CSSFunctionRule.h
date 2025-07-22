@@ -8,29 +8,19 @@
 typedef struct FunctionParameter FunctionParameter;
 
 
-typedef struct {
-  em_Val inner;
-} FunctionParameter;
-
-
 DECLARE_EMLITE_TYPE(FunctionParameter, em_Val);
 
 jb_CSSOMString FunctionParameter_name( const FunctionParameter *self);
 
-void FunctionParameter_set_name(FunctionParameter* self, const jb_CSSOMString* value);
+void FunctionParameter_set_name(FunctionParameter* self, jb_CSSOMString * value);
 
 jb_CSSOMString FunctionParameter_type( const FunctionParameter *self);
 
-void FunctionParameter_set_type(FunctionParameter* self, const jb_CSSOMString* value);
+void FunctionParameter_set_type(FunctionParameter* self, jb_CSSOMString * value);
 
 jb_CSSOMString FunctionParameter_defaultValue( const FunctionParameter *self);
 
-void FunctionParameter_set_defaultValue(FunctionParameter* self, const jb_CSSOMString* value);
-typedef struct {
-  CSSGroupingRule inner;
-} CSSFunctionRule;
-
-
+void FunctionParameter_set_defaultValue(FunctionParameter* self, jb_CSSOMString * value);
 DECLARE_EMLITE_TYPE(CSSFunctionRule, CSSGroupingRule);
 
 jb_CSSOMString CSSFunctionRule_name( const CSSFunctionRule *self);

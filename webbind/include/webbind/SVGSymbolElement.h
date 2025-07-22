@@ -9,11 +9,6 @@ typedef struct SVGAnimatedRect SVGAnimatedRect;
 typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
 
 
-typedef struct {
-  SVGGraphicsElement inner;
-} SVGSymbolElement;
-
-
 DECLARE_EMLITE_TYPE(SVGSymbolElement, SVGGraphicsElement);
 
 SVGAnimatedRect SVGSymbolElement_viewBox( const SVGSymbolElement *self);

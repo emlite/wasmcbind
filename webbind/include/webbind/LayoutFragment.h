@@ -7,11 +7,6 @@
 typedef struct ChildBreakToken ChildBreakToken;
 
 
-typedef struct {
-  em_Val inner;
-} LayoutFragment;
-
-
 DECLARE_EMLITE_TYPE(LayoutFragment, em_Val);
 
 double LayoutFragment_inlineSize( const LayoutFragment *self);

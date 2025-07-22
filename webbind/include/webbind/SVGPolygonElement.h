@@ -8,11 +8,6 @@
 typedef struct SVGPointList SVGPointList;
 
 
-typedef struct {
-  SVGGeometryElement inner;
-} SVGPolygonElement;
-
-
 DECLARE_EMLITE_TYPE(SVGPolygonElement, SVGGeometryElement);
 
 SVGPointList SVGPolygonElement_points( const SVGPolygonElement *self);

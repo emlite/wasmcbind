@@ -8,13 +8,8 @@
 typedef struct CSSNumericValue CSSNumericValue;
 
 
-typedef struct {
-  CSSMathValue inner;
-} CSSMathInvert;
-
-
 DECLARE_EMLITE_TYPE(CSSMathInvert, CSSMathValue);
 
-CSSMathInvert CSSMathInvert_new(const jb_Any* arg);
+CSSMathInvert CSSMathInvert_new(jb_Any * arg);
 
 CSSNumericValue CSSMathInvert_value( const CSSMathInvert *self);

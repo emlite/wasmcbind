@@ -8,16 +8,11 @@
 typedef struct CSSFontFeatureValuesMap CSSFontFeatureValuesMap;
 
 
-typedef struct {
-  CSSRule inner;
-} CSSFontFeatureValuesRule;
-
-
 DECLARE_EMLITE_TYPE(CSSFontFeatureValuesRule, CSSRule);
 
 jb_CSSOMString CSSFontFeatureValuesRule_fontFamily( const CSSFontFeatureValuesRule *self);
 
-void CSSFontFeatureValuesRule_set_fontFamily(CSSFontFeatureValuesRule* self, const jb_CSSOMString* value);
+void CSSFontFeatureValuesRule_set_fontFamily(CSSFontFeatureValuesRule* self, jb_CSSOMString * value);
 
 CSSFontFeatureValuesMap CSSFontFeatureValuesRule_annotation( const CSSFontFeatureValuesRule *self);
 

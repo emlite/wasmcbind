@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} CharacterBoundsUpdateEvent;
-
-
 DECLARE_EMLITE_TYPE(CharacterBoundsUpdateEvent, Event);
 
-CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new(const jb_DOMString* type);
+CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new0(jb_DOMString * type);
 
-CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new(const jb_DOMString* type, const jb_Any* options);
+CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new1(jb_DOMString * type, jb_Any * options);
 
 unsigned long CharacterBoundsUpdateEvent_rangeStart( const CharacterBoundsUpdateEvent *self);
 

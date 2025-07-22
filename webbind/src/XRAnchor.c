@@ -6,7 +6,7 @@ DEFINE_EMLITE_TYPE(XRAnchor, em_Val);
 
 
 XRSpace XRAnchor_anchorSpace(const XRAnchor *self) {
-    return em_Val_as(XRSpace, em_Val_get(em_Val_as_val(self->inner), "anchorSpace"));
+    return em_Val_as(XRSpace, em_Val_get(em_Val_as_val(self->inner), em_Val_from("anchorSpace")));
 }
 
 

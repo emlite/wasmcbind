@@ -5,9 +5,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} OES_texture_half_float;
-
-
 DECLARE_EMLITE_TYPE(OES_texture_half_float, em_Val);

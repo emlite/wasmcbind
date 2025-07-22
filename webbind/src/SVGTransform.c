@@ -7,26 +7,26 @@ DEFINE_EMLITE_TYPE(SVGTransform, em_Val);
 
 
 unsigned short SVGTransform_type(const SVGTransform *self) {
-    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), "type"));
+    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
 DOMMatrix SVGTransform_matrix(const SVGTransform *self) {
-    return em_Val_as(DOMMatrix, em_Val_get(em_Val_as_val(self->inner), "matrix"));
+    return em_Val_as(DOMMatrix, em_Val_get(em_Val_as_val(self->inner), em_Val_from("matrix")));
 }
 
 
 float SVGTransform_angle(const SVGTransform *self) {
-    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), "angle"));
+    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), em_Val_from("angle")));
 }
 
 
-jb_Undefined SVGTransform_setMatrix(SVGTransform* self ) {
+jb_Undefined SVGTransform_setMatrix0(SVGTransform* self ) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setMatrix"));
 }
 
 
-jb_Undefined SVGTransform_setMatrix(SVGTransform* self , const DOMMatrix2DInit* matrix) {
+jb_Undefined SVGTransform_setMatrix1(SVGTransform* self , DOMMatrix2DInit * matrix) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setMatrix", em_Val_from(matrix)));
 }
 

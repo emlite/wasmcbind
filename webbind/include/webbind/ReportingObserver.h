@@ -5,16 +5,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} ReportingObserver;
-
-
 DECLARE_EMLITE_TYPE(ReportingObserver, em_Val);
 
-ReportingObserver ReportingObserver_new(const jb_Function* callback);
+ReportingObserver ReportingObserver_new0(jb_Function * callback);
 
-ReportingObserver ReportingObserver_new(const jb_Function* callback, const jb_Any* options);
+ReportingObserver ReportingObserver_new1(jb_Function * callback, jb_Any * options);
 
 jb_Undefined ReportingObserver_observe(ReportingObserver* self );
 

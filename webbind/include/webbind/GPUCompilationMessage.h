@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} GPUCompilationMessage;
-
-
 DECLARE_EMLITE_TYPE(GPUCompilationMessage, em_Val);
 
 jb_DOMString GPUCompilationMessage_message( const GPUCompilationMessage *self);

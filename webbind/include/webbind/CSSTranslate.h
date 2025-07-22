@@ -8,25 +8,20 @@
 typedef struct CSSNumericValue CSSNumericValue;
 
 
-typedef struct {
-  CSSTransformComponent inner;
-} CSSTranslate;
-
-
 DECLARE_EMLITE_TYPE(CSSTranslate, CSSTransformComponent);
 
-CSSTranslate CSSTranslate_new(const CSSNumericValue* x, const CSSNumericValue* y);
+CSSTranslate CSSTranslate_new0(CSSNumericValue * x, CSSNumericValue * y);
 
-CSSTranslate CSSTranslate_new(const CSSNumericValue* x, const CSSNumericValue* y, const CSSNumericValue* z);
+CSSTranslate CSSTranslate_new1(CSSNumericValue * x, CSSNumericValue * y, CSSNumericValue * z);
 
 CSSNumericValue CSSTranslate_x( const CSSTranslate *self);
 
-void CSSTranslate_set_x(CSSTranslate* self, const CSSNumericValue* value);
+void CSSTranslate_set_x(CSSTranslate* self, CSSNumericValue * value);
 
 CSSNumericValue CSSTranslate_y( const CSSTranslate *self);
 
-void CSSTranslate_set_y(CSSTranslate* self, const CSSNumericValue* value);
+void CSSTranslate_set_y(CSSTranslate* self, CSSNumericValue * value);
 
 CSSNumericValue CSSTranslate_z( const CSSTranslate *self);
 
-void CSSTranslate_set_z(CSSTranslate* self, const CSSNumericValue* value);
+void CSSTranslate_set_z(CSSTranslate* self, CSSNumericValue * value);

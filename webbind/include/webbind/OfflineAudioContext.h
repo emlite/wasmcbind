@@ -8,11 +8,6 @@
 typedef struct AudioBuffer AudioBuffer;
 
 
-typedef struct {
-  BaseAudioContext inner;
-} OfflineAudioContext;
-
-
 DECLARE_EMLITE_TYPE(OfflineAudioContext, BaseAudioContext);
 
 OfflineAudioContext OfflineAudioContext_new(unsigned long numberOfChannels, unsigned long length, float sampleRate);
@@ -27,4 +22,4 @@ unsigned long OfflineAudioContext_length( const OfflineAudioContext *self);
 
 jb_Any OfflineAudioContext_oncomplete( const OfflineAudioContext *self);
 
-void OfflineAudioContext_set_oncomplete(OfflineAudioContext* self, const jb_Any* value);
+void OfflineAudioContext_set_oncomplete(OfflineAudioContext* self, jb_Any * value);

@@ -8,20 +8,15 @@
 typedef struct AudioParam AudioParam;
 
 
-typedef struct {
-  AudioNode inner;
-} PannerNode;
-
-
 DECLARE_EMLITE_TYPE(PannerNode, AudioNode);
 
-PannerNode PannerNode_new(const BaseAudioContext* context);
+PannerNode PannerNode_new0(BaseAudioContext * context);
 
-PannerNode PannerNode_new(const BaseAudioContext* context, const jb_Any* options);
+PannerNode PannerNode_new1(BaseAudioContext * context, jb_Any * options);
 
 PanningModelType PannerNode_panningModel( const PannerNode *self);
 
-void PannerNode_set_panningModel(PannerNode* self, const PanningModelType* value);
+void PannerNode_set_panningModel(PannerNode* self, PanningModelType * value);
 
 AudioParam PannerNode_positionX( const PannerNode *self);
 
@@ -37,7 +32,7 @@ AudioParam PannerNode_orientationZ( const PannerNode *self);
 
 DistanceModelType PannerNode_distanceModel( const PannerNode *self);
 
-void PannerNode_set_distanceModel(PannerNode* self, const DistanceModelType* value);
+void PannerNode_set_distanceModel(PannerNode* self, DistanceModelType * value);
 
 double PannerNode_refDistance( const PannerNode *self);
 

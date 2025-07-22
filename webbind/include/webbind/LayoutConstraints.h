@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} LayoutConstraints;
-
-
 DECLARE_EMLITE_TYPE(LayoutConstraints, em_Val);
 
 double LayoutConstraints_availableInlineSize( const LayoutConstraints *self);

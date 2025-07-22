@@ -4,77 +4,78 @@
 DEFINE_EMLITE_TYPE(HTMLSourceElement, HTMLElement);
 
 
-HTMLSourceElement HTMLSourceElement_new() : HTMLElement(em_Val_global("HTMLSourceElement").new_()) {
-        return HTMLSourceElement(em_Val_new(em_Val_global("HTMLSourceElement", ));
+HTMLSourceElement HTMLSourceElement_new() {
+        em_Val vv = em_Val_new(em_Val_global("HTMLSourceElement") );
+        return HTMLSourceElement_from_val(&vv);
       }
 
 
 jb_USVString HTMLSourceElement_src(const HTMLSourceElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "src"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLSourceElement_set_src(HTMLSourceElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "src", value);
+void HTMLSourceElement_set_src(HTMLSourceElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLSourceElement_type(const HTMLSourceElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "type"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void HTMLSourceElement_set_type(HTMLSourceElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "type", value);
+void HTMLSourceElement_set_type(HTMLSourceElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLSourceElement_srcset(const HTMLSourceElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "srcset"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("srcset")));
 }
 
 
-void HTMLSourceElement_set_srcset(HTMLSourceElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "srcset", value);
+void HTMLSourceElement_set_srcset(HTMLSourceElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("srcset"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLSourceElement_sizes(const HTMLSourceElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "sizes"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("sizes")));
 }
 
 
-void HTMLSourceElement_set_sizes(HTMLSourceElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "sizes", value);
+void HTMLSourceElement_set_sizes(HTMLSourceElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("sizes"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLSourceElement_media(const HTMLSourceElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "media"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("media")));
 }
 
 
-void HTMLSourceElement_set_media(HTMLSourceElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "media", value);
+void HTMLSourceElement_set_media(HTMLSourceElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("media"), em_Val_from(value));
 }
 
 
 unsigned long HTMLSourceElement_width(const HTMLSourceElement *self) {
-    return em_Val_as(unsigned long, em_Val_get(HTMLElement_as_val(self->inner), "width"));
+    return em_Val_as(unsigned long, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
 void HTMLSourceElement_set_width(HTMLSourceElement* self, unsigned long value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "width", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 
 
 unsigned long HTMLSourceElement_height(const HTMLSourceElement *self) {
-    return em_Val_as(unsigned long, em_Val_get(HTMLElement_as_val(self->inner), "height"));
+    return em_Val_as(unsigned long, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
 void HTMLSourceElement_set_height(HTMLSourceElement* self, unsigned long value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "height", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("height"), em_Val_from(value));
 }
 

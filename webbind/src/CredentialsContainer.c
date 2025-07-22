@@ -7,50 +7,50 @@ DEFINE_EMLITE_TYPE(CredentialRequestOptions, em_Val);
 
 
 PublicKeyCredentialRequestOptions CredentialRequestOptions_publicKey(const CredentialRequestOptions *self) {
-    return em_Val_as(PublicKeyCredentialRequestOptions, em_Val_get(em_Val_as_val(self->inner), "publicKey"));
+    return em_Val_as(PublicKeyCredentialRequestOptions, em_Val_get(em_Val_as_val(self->inner), em_Val_from("publicKey")));
 }
 
 
-void CredentialRequestOptions_set_publicKey(CredentialRequestOptions* self, const PublicKeyCredentialRequestOptions* value) {
-    em_Val_set(em_Val_as_val(self->inner), "publicKey", value);
+void CredentialRequestOptions_set_publicKey(CredentialRequestOptions* self, PublicKeyCredentialRequestOptions * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("publicKey"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(CredentialCreationOptions, em_Val);
 
 
 PublicKeyCredentialCreationOptions CredentialCreationOptions_publicKey(const CredentialCreationOptions *self) {
-    return em_Val_as(PublicKeyCredentialCreationOptions, em_Val_get(em_Val_as_val(self->inner), "publicKey"));
+    return em_Val_as(PublicKeyCredentialCreationOptions, em_Val_get(em_Val_as_val(self->inner), em_Val_from("publicKey")));
 }
 
 
-void CredentialCreationOptions_set_publicKey(CredentialCreationOptions* self, const PublicKeyCredentialCreationOptions* value) {
-    em_Val_set(em_Val_as_val(self->inner), "publicKey", value);
+void CredentialCreationOptions_set_publicKey(CredentialCreationOptions* self, PublicKeyCredentialCreationOptions * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("publicKey"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(CredentialsContainer, em_Val);
 
 
-jb_Promise CredentialsContainer_get(CredentialsContainer* self ) {
+jb_Promise CredentialsContainer_get0(CredentialsContainer* self ) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "get"));
 }
 
 
-jb_Promise CredentialsContainer_get(CredentialsContainer* self , const CredentialRequestOptions* options) {
+jb_Promise CredentialsContainer_get1(CredentialsContainer* self , CredentialRequestOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "get", em_Val_from(options)));
 }
 
 
-jb_Promise CredentialsContainer_store(CredentialsContainer* self , const Credential* credential) {
+jb_Promise CredentialsContainer_store(CredentialsContainer* self , Credential * credential) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "store", em_Val_from(credential)));
 }
 
 
-jb_Promise CredentialsContainer_create(CredentialsContainer* self ) {
+jb_Promise CredentialsContainer_create0(CredentialsContainer* self ) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "create"));
 }
 
 
-jb_Promise CredentialsContainer_create(CredentialsContainer* self , const CredentialCreationOptions* options) {
+jb_Promise CredentialsContainer_create1(CredentialsContainer* self , CredentialCreationOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "create", em_Val_from(options)));
 }
 

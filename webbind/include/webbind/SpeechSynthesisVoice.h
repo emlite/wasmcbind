@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} SpeechSynthesisVoice;
-
-
 DECLARE_EMLITE_TYPE(SpeechSynthesisVoice, em_Val);
 
 jb_DOMString SpeechSynthesisVoice_voiceURI( const SpeechSynthesisVoice *self);

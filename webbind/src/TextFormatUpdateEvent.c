@@ -5,13 +5,15 @@
 DEFINE_EMLITE_TYPE(TextFormatUpdateEvent, Event);
 
 
-TextFormatUpdateEvent TextFormatUpdateEvent_new(const jb_DOMString* type) : Event(em_Val_global("TextFormatUpdateEvent").new_(em_Val_from(type))) {
-        return TextFormatUpdateEvent(em_Val_new(em_Val_global("TextFormatUpdateEvent", em_Val_from(type)));
+TextFormatUpdateEvent TextFormatUpdateEvent_new0(jb_DOMString * type) {
+        em_Val vv = em_Val_new(em_Val_global("TextFormatUpdateEvent") , em_Val_from(type));
+        return TextFormatUpdateEvent_from_val(&vv);
       }
 
 
-TextFormatUpdateEvent TextFormatUpdateEvent_new(const jb_DOMString* type, const jb_Any* options) : Event(em_Val_global("TextFormatUpdateEvent").new_(em_Val_from(type), em_Val_from(options))) {
-        return TextFormatUpdateEvent(em_Val_new(em_Val_global("TextFormatUpdateEvent", em_Val_from(type), em_Val_from(options)));
+TextFormatUpdateEvent TextFormatUpdateEvent_new1(jb_DOMString * type, jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("TextFormatUpdateEvent") , em_Val_from(type), em_Val_from(options));
+        return TextFormatUpdateEvent_from_val(&vv);
       }
 
 

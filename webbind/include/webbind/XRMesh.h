@@ -7,11 +7,6 @@
 typedef struct XRSpace XRSpace;
 
 
-typedef struct {
-  em_Val inner;
-} XRMesh;
-
-
 DECLARE_EMLITE_TYPE(XRMesh, em_Val);
 
 XRSpace XRMesh_meshSpace( const XRMesh *self);

@@ -5,111 +5,111 @@ DEFINE_EMLITE_TYPE(CSSCounterStyleRule, CSSRule);
 
 
 jb_CSSOMString CSSCounterStyleRule_name(const CSSCounterStyleRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "name"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void CSSCounterStyleRule_set_name(CSSCounterStyleRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "name", value);
+void CSSCounterStyleRule_set_name(CSSCounterStyleRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSCounterStyleRule_system(const CSSCounterStyleRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "system"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("system")));
 }
 
 
-void CSSCounterStyleRule_set_system(CSSCounterStyleRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "system", value);
+void CSSCounterStyleRule_set_system(CSSCounterStyleRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("system"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSCounterStyleRule_symbols(const CSSCounterStyleRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "symbols"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("symbols")));
 }
 
 
-void CSSCounterStyleRule_set_symbols(CSSCounterStyleRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "symbols", value);
+void CSSCounterStyleRule_set_symbols(CSSCounterStyleRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("symbols"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSCounterStyleRule_additiveSymbols(const CSSCounterStyleRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "additiveSymbols"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("additiveSymbols")));
 }
 
 
-void CSSCounterStyleRule_set_additiveSymbols(CSSCounterStyleRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "additiveSymbols", value);
+void CSSCounterStyleRule_set_additiveSymbols(CSSCounterStyleRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("additiveSymbols"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSCounterStyleRule_negative(const CSSCounterStyleRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "negative"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("negative")));
 }
 
 
-void CSSCounterStyleRule_set_negative(CSSCounterStyleRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "negative", value);
+void CSSCounterStyleRule_set_negative(CSSCounterStyleRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("negative"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSCounterStyleRule_prefix(const CSSCounterStyleRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "prefix"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("prefix")));
 }
 
 
-void CSSCounterStyleRule_set_prefix(CSSCounterStyleRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "prefix", value);
+void CSSCounterStyleRule_set_prefix(CSSCounterStyleRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("prefix"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSCounterStyleRule_suffix(const CSSCounterStyleRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "suffix"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("suffix")));
 }
 
 
-void CSSCounterStyleRule_set_suffix(CSSCounterStyleRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "suffix", value);
+void CSSCounterStyleRule_set_suffix(CSSCounterStyleRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("suffix"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSCounterStyleRule_range(const CSSCounterStyleRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "range"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("range")));
 }
 
 
-void CSSCounterStyleRule_set_range(CSSCounterStyleRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "range", value);
+void CSSCounterStyleRule_set_range(CSSCounterStyleRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("range"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSCounterStyleRule_pad(const CSSCounterStyleRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "pad"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("pad")));
 }
 
 
-void CSSCounterStyleRule_set_pad(CSSCounterStyleRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "pad", value);
+void CSSCounterStyleRule_set_pad(CSSCounterStyleRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("pad"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSCounterStyleRule_speakAs(const CSSCounterStyleRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "speakAs"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("speakAs")));
 }
 
 
-void CSSCounterStyleRule_set_speakAs(CSSCounterStyleRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "speakAs", value);
+void CSSCounterStyleRule_set_speakAs(CSSCounterStyleRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("speakAs"), em_Val_from(value));
 }
 
 
 jb_CSSOMString CSSCounterStyleRule_fallback(const CSSCounterStyleRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "fallback"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("fallback")));
 }
 
 
-void CSSCounterStyleRule_set_fallback(CSSCounterStyleRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "fallback", value);
+void CSSCounterStyleRule_set_fallback(CSSCounterStyleRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("fallback"), em_Val_from(value));
 }
 

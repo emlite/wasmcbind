@@ -9,78 +9,78 @@ DEFINE_EMLITE_TYPE(IDBIndexParameters, em_Val);
 
 
 bool IDBIndexParameters_unique(const IDBIndexParameters *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "unique"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("unique")));
 }
 
 
 void IDBIndexParameters_set_unique(IDBIndexParameters* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "unique", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("unique"), em_Val_from(value));
 }
 
 
 bool IDBIndexParameters_multiEntry(const IDBIndexParameters *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "multiEntry"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("multiEntry")));
 }
 
 
 void IDBIndexParameters_set_multiEntry(IDBIndexParameters* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "multiEntry", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("multiEntry"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(IDBObjectStore, em_Val);
 
 
 jb_DOMString IDBObjectStore_name(const IDBObjectStore *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void IDBObjectStore_set_name(IDBObjectStore* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "name", value);
+void IDBObjectStore_set_name(IDBObjectStore* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
 jb_Any IDBObjectStore_keyPath(const IDBObjectStore *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "keyPath"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("keyPath")));
 }
 
 
 DOMStringList IDBObjectStore_indexNames(const IDBObjectStore *self) {
-    return em_Val_as(DOMStringList, em_Val_get(em_Val_as_val(self->inner), "indexNames"));
+    return em_Val_as(DOMStringList, em_Val_get(em_Val_as_val(self->inner), em_Val_from("indexNames")));
 }
 
 
 IDBTransaction IDBObjectStore_transaction(const IDBObjectStore *self) {
-    return em_Val_as(IDBTransaction, em_Val_get(em_Val_as_val(self->inner), "transaction"));
+    return em_Val_as(IDBTransaction, em_Val_get(em_Val_as_val(self->inner), em_Val_from("transaction")));
 }
 
 
 bool IDBObjectStore_autoIncrement(const IDBObjectStore *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "autoIncrement"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("autoIncrement")));
 }
 
 
-IDBRequest IDBObjectStore_put(IDBObjectStore* self , const jb_Any* value) {
+IDBRequest IDBObjectStore_put0(IDBObjectStore* self , jb_Any * value) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "put", em_Val_from(value)));
 }
 
 
-IDBRequest IDBObjectStore_put(IDBObjectStore* self , const jb_Any* value, const jb_Any* key) {
+IDBRequest IDBObjectStore_put1(IDBObjectStore* self , jb_Any * value, jb_Any * key) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "put", em_Val_from(value), em_Val_from(key)));
 }
 
 
-IDBRequest IDBObjectStore_add(IDBObjectStore* self , const jb_Any* value) {
+IDBRequest IDBObjectStore_add0(IDBObjectStore* self , jb_Any * value) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "add", em_Val_from(value)));
 }
 
 
-IDBRequest IDBObjectStore_add(IDBObjectStore* self , const jb_Any* value, const jb_Any* key) {
+IDBRequest IDBObjectStore_add1(IDBObjectStore* self , jb_Any * value, jb_Any * key) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "add", em_Val_from(value), em_Val_from(key)));
 }
 
 
-IDBRequest IDBObjectStore_delete_(IDBObjectStore* self , const jb_Any* query) {
+IDBRequest IDBObjectStore_delete_(IDBObjectStore* self , jb_Any * query) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "delete", em_Val_from(query)));
 }
 
@@ -90,102 +90,102 @@ IDBRequest IDBObjectStore_clear(IDBObjectStore* self ) {
 }
 
 
-IDBRequest IDBObjectStore_get(IDBObjectStore* self , const jb_Any* query) {
+IDBRequest IDBObjectStore_get(IDBObjectStore* self , jb_Any * query) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "get", em_Val_from(query)));
 }
 
 
-IDBRequest IDBObjectStore_getKey(IDBObjectStore* self , const jb_Any* query) {
+IDBRequest IDBObjectStore_getKey(IDBObjectStore* self , jb_Any * query) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getKey", em_Val_from(query)));
 }
 
 
-IDBRequest IDBObjectStore_getAll(IDBObjectStore* self ) {
+IDBRequest IDBObjectStore_getAll0(IDBObjectStore* self ) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAll"));
 }
 
 
-IDBRequest IDBObjectStore_getAll(IDBObjectStore* self , const jb_Any* query) {
+IDBRequest IDBObjectStore_getAll1(IDBObjectStore* self , jb_Any * query) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAll", em_Val_from(query)));
 }
 
 
-IDBRequest IDBObjectStore_getAll(IDBObjectStore* self , const jb_Any* query, unsigned long count) {
+IDBRequest IDBObjectStore_getAll2(IDBObjectStore* self , jb_Any * query, unsigned long count) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAll", em_Val_from(query), em_Val_from(count)));
 }
 
 
-IDBRequest IDBObjectStore_getAllKeys(IDBObjectStore* self ) {
+IDBRequest IDBObjectStore_getAllKeys0(IDBObjectStore* self ) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAllKeys"));
 }
 
 
-IDBRequest IDBObjectStore_getAllKeys(IDBObjectStore* self , const jb_Any* query) {
+IDBRequest IDBObjectStore_getAllKeys1(IDBObjectStore* self , jb_Any * query) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAllKeys", em_Val_from(query)));
 }
 
 
-IDBRequest IDBObjectStore_getAllKeys(IDBObjectStore* self , const jb_Any* query, unsigned long count) {
+IDBRequest IDBObjectStore_getAllKeys2(IDBObjectStore* self , jb_Any * query, unsigned long count) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAllKeys", em_Val_from(query), em_Val_from(count)));
 }
 
 
-IDBRequest IDBObjectStore_count(IDBObjectStore* self ) {
+IDBRequest IDBObjectStore_count0(IDBObjectStore* self ) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "count"));
 }
 
 
-IDBRequest IDBObjectStore_count(IDBObjectStore* self , const jb_Any* query) {
+IDBRequest IDBObjectStore_count1(IDBObjectStore* self , jb_Any * query) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "count", em_Val_from(query)));
 }
 
 
-IDBRequest IDBObjectStore_openCursor(IDBObjectStore* self ) {
+IDBRequest IDBObjectStore_openCursor0(IDBObjectStore* self ) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "openCursor"));
 }
 
 
-IDBRequest IDBObjectStore_openCursor(IDBObjectStore* self , const jb_Any* query) {
+IDBRequest IDBObjectStore_openCursor1(IDBObjectStore* self , jb_Any * query) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "openCursor", em_Val_from(query)));
 }
 
 
-IDBRequest IDBObjectStore_openCursor(IDBObjectStore* self , const jb_Any* query, const IDBCursorDirection* direction) {
+IDBRequest IDBObjectStore_openCursor2(IDBObjectStore* self , jb_Any * query, IDBCursorDirection * direction) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "openCursor", em_Val_from(query), em_Val_from(direction)));
 }
 
 
-IDBRequest IDBObjectStore_openKeyCursor(IDBObjectStore* self ) {
+IDBRequest IDBObjectStore_openKeyCursor0(IDBObjectStore* self ) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "openKeyCursor"));
 }
 
 
-IDBRequest IDBObjectStore_openKeyCursor(IDBObjectStore* self , const jb_Any* query) {
+IDBRequest IDBObjectStore_openKeyCursor1(IDBObjectStore* self , jb_Any * query) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "openKeyCursor", em_Val_from(query)));
 }
 
 
-IDBRequest IDBObjectStore_openKeyCursor(IDBObjectStore* self , const jb_Any* query, const IDBCursorDirection* direction) {
+IDBRequest IDBObjectStore_openKeyCursor2(IDBObjectStore* self , jb_Any * query, IDBCursorDirection * direction) {
     return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "openKeyCursor", em_Val_from(query), em_Val_from(direction)));
 }
 
 
-IDBIndex IDBObjectStore_index(IDBObjectStore* self , const jb_DOMString* name) {
+IDBIndex IDBObjectStore_index(IDBObjectStore* self , jb_DOMString * name) {
     return em_Val_as(IDBIndex, em_Val_call(em_Val_as_val(self->inner), "index", em_Val_from(name)));
 }
 
 
-IDBIndex IDBObjectStore_createIndex(IDBObjectStore* self , const jb_DOMString* name, const jb_Any* keyPath) {
+IDBIndex IDBObjectStore_createIndex0(IDBObjectStore* self , jb_DOMString * name, jb_Any * keyPath) {
     return em_Val_as(IDBIndex, em_Val_call(em_Val_as_val(self->inner), "createIndex", em_Val_from(name), em_Val_from(keyPath)));
 }
 
 
-IDBIndex IDBObjectStore_createIndex(IDBObjectStore* self , const jb_DOMString* name, const jb_Any* keyPath, const IDBIndexParameters* options) {
+IDBIndex IDBObjectStore_createIndex1(IDBObjectStore* self , jb_DOMString * name, jb_Any * keyPath, IDBIndexParameters * options) {
     return em_Val_as(IDBIndex, em_Val_call(em_Val_as_val(self->inner), "createIndex", em_Val_from(name), em_Val_from(keyPath), em_Val_from(options)));
 }
 
 
-jb_Undefined IDBObjectStore_deleteIndex(IDBObjectStore* self , const jb_DOMString* name) {
+jb_Undefined IDBObjectStore_deleteIndex(IDBObjectStore* self , jb_DOMString * name) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "deleteIndex", em_Val_from(name)));
 }
 

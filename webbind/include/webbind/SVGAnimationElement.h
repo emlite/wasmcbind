@@ -8,26 +8,21 @@
 typedef struct SVGStringList SVGStringList;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGAnimationElement;
-
-
 DECLARE_EMLITE_TYPE(SVGAnimationElement, SVGElement);
 
 SVGElement SVGAnimationElement_targetElement( const SVGAnimationElement *self);
 
 jb_Any SVGAnimationElement_onbegin( const SVGAnimationElement *self);
 
-void SVGAnimationElement_set_onbegin(SVGAnimationElement* self, const jb_Any* value);
+void SVGAnimationElement_set_onbegin(SVGAnimationElement* self, jb_Any * value);
 
 jb_Any SVGAnimationElement_onend( const SVGAnimationElement *self);
 
-void SVGAnimationElement_set_onend(SVGAnimationElement* self, const jb_Any* value);
+void SVGAnimationElement_set_onend(SVGAnimationElement* self, jb_Any * value);
 
 jb_Any SVGAnimationElement_onrepeat( const SVGAnimationElement *self);
 
-void SVGAnimationElement_set_onrepeat(SVGAnimationElement* self, const jb_Any* value);
+void SVGAnimationElement_set_onrepeat(SVGAnimationElement* self, jb_Any * value);
 
 float SVGAnimationElement_getStartTime(SVGAnimationElement* self );
 

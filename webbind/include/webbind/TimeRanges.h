@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} TimeRanges;
-
-
 DECLARE_EMLITE_TYPE(TimeRanges, em_Val);
 
 unsigned long TimeRanges_length( const TimeRanges *self);

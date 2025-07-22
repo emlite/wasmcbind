@@ -8,11 +8,6 @@
 typedef struct Element Element;
 
 
-typedef struct {
-  PerformanceEntry inner;
-} LargestContentfulPaint;
-
-
 DECLARE_EMLITE_TYPE(LargestContentfulPaint, PerformanceEntry);
 
 jb_Any LargestContentfulPaint_loadTime( const LargestContentfulPaint *self);

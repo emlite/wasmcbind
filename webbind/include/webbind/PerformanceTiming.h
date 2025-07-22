@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} PerformanceTiming;
-
-
 DECLARE_EMLITE_TYPE(PerformanceTiming, em_Val);
 
 long long PerformanceTiming_navigationStart( const PerformanceTiming *self);

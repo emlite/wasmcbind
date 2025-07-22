@@ -6,17 +6,17 @@ DEFINE_EMLITE_TYPE(ViewTransition, em_Val);
 
 
 jb_Promise ViewTransition_updateCallbackDone(const ViewTransition *self) {
-    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), "updateCallbackDone"));
+    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), em_Val_from("updateCallbackDone")));
 }
 
 
 jb_Promise ViewTransition_ready(const ViewTransition *self) {
-    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), "ready"));
+    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ready")));
 }
 
 
 jb_Promise ViewTransition_finished(const ViewTransition *self) {
-    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), "finished"));
+    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), em_Val_from("finished")));
 }
 
 
@@ -26,11 +26,11 @@ jb_Undefined ViewTransition_skipTransition(ViewTransition* self ) {
 
 
 ViewTransitionTypeSet ViewTransition_types(const ViewTransition *self) {
-    return em_Val_as(ViewTransitionTypeSet, em_Val_get(em_Val_as_val(self->inner), "types"));
+    return em_Val_as(ViewTransitionTypeSet, em_Val_get(em_Val_as_val(self->inner), em_Val_from("types")));
 }
 
 
-void ViewTransition_set_types(ViewTransition* self, const ViewTransitionTypeSet* value) {
-    em_Val_set(em_Val_as_val(self->inner), "types", value);
+void ViewTransition_set_types(ViewTransition* self, ViewTransitionTypeSet * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("types"), em_Val_from(value));
 }
 

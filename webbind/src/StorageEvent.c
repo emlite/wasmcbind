@@ -5,77 +5,79 @@
 DEFINE_EMLITE_TYPE(StorageEvent, Event);
 
 
-StorageEvent StorageEvent_new(const jb_DOMString* type) : Event(em_Val_global("StorageEvent").new_(em_Val_from(type))) {
-        return StorageEvent(em_Val_new(em_Val_global("StorageEvent", em_Val_from(type)));
+StorageEvent StorageEvent_new0(jb_DOMString * type) {
+        em_Val vv = em_Val_new(em_Val_global("StorageEvent") , em_Val_from(type));
+        return StorageEvent_from_val(&vv);
       }
 
 
-StorageEvent StorageEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict) : Event(em_Val_global("StorageEvent").new_(em_Val_from(type), em_Val_from(eventInitDict))) {
-        return StorageEvent(em_Val_new(em_Val_global("StorageEvent", em_Val_from(type), em_Val_from(eventInitDict)));
+StorageEvent StorageEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("StorageEvent") , em_Val_from(type), em_Val_from(eventInitDict));
+        return StorageEvent_from_val(&vv);
       }
 
 
 jb_DOMString StorageEvent_key(const StorageEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), "key"));
+    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("key")));
 }
 
 
 jb_DOMString StorageEvent_oldValue(const StorageEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), "oldValue"));
+    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("oldValue")));
 }
 
 
 jb_DOMString StorageEvent_newValue(const StorageEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), "newValue"));
+    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("newValue")));
 }
 
 
 jb_USVString StorageEvent_url(const StorageEvent *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), "url"));
+    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), em_Val_from("url")));
 }
 
 
 Storage StorageEvent_storageArea(const StorageEvent *self) {
-    return em_Val_as(Storage, em_Val_get(Event_as_val(self->inner), "storageArea"));
+    return em_Val_as(Storage, em_Val_get(Event_as_val(self->inner), em_Val_from("storageArea")));
 }
 
 
-jb_Undefined StorageEvent_initStorageEvent(StorageEvent* self , const jb_DOMString* type) {
+jb_Undefined StorageEvent_initStorageEvent0(StorageEvent* self , jb_DOMString * type) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initStorageEvent", em_Val_from(type)));
 }
 
 
-jb_Undefined StorageEvent_initStorageEvent(StorageEvent* self , const jb_DOMString* type, bool bubbles) {
+jb_Undefined StorageEvent_initStorageEvent1(StorageEvent* self , jb_DOMString * type, bool bubbles) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initStorageEvent", em_Val_from(type), em_Val_from(bubbles)));
 }
 
 
-jb_Undefined StorageEvent_initStorageEvent(StorageEvent* self , const jb_DOMString* type, bool bubbles, bool cancelable) {
+jb_Undefined StorageEvent_initStorageEvent2(StorageEvent* self , jb_DOMString * type, bool bubbles, bool cancelable) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initStorageEvent", em_Val_from(type), em_Val_from(bubbles), em_Val_from(cancelable)));
 }
 
 
-jb_Undefined StorageEvent_initStorageEvent(StorageEvent* self , const jb_DOMString* type, bool bubbles, bool cancelable, const jb_DOMString* key) {
+jb_Undefined StorageEvent_initStorageEvent3(StorageEvent* self , jb_DOMString * type, bool bubbles, bool cancelable, jb_DOMString * key) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initStorageEvent", em_Val_from(type), em_Val_from(bubbles), em_Val_from(cancelable), em_Val_from(key)));
 }
 
 
-jb_Undefined StorageEvent_initStorageEvent(StorageEvent* self , const jb_DOMString* type, bool bubbles, bool cancelable, const jb_DOMString* key, const jb_DOMString* oldValue) {
+jb_Undefined StorageEvent_initStorageEvent4(StorageEvent* self , jb_DOMString * type, bool bubbles, bool cancelable, jb_DOMString * key, jb_DOMString * oldValue) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initStorageEvent", em_Val_from(type), em_Val_from(bubbles), em_Val_from(cancelable), em_Val_from(key), em_Val_from(oldValue)));
 }
 
 
-jb_Undefined StorageEvent_initStorageEvent(StorageEvent* self , const jb_DOMString* type, bool bubbles, bool cancelable, const jb_DOMString* key, const jb_DOMString* oldValue, const jb_DOMString* newValue) {
+jb_Undefined StorageEvent_initStorageEvent5(StorageEvent* self , jb_DOMString * type, bool bubbles, bool cancelable, jb_DOMString * key, jb_DOMString * oldValue, jb_DOMString * newValue) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initStorageEvent", em_Val_from(type), em_Val_from(bubbles), em_Val_from(cancelable), em_Val_from(key), em_Val_from(oldValue), em_Val_from(newValue)));
 }
 
 
-jb_Undefined StorageEvent_initStorageEvent(StorageEvent* self , const jb_DOMString* type, bool bubbles, bool cancelable, const jb_DOMString* key, const jb_DOMString* oldValue, const jb_DOMString* newValue, const jb_USVString* url) {
+jb_Undefined StorageEvent_initStorageEvent6(StorageEvent* self , jb_DOMString * type, bool bubbles, bool cancelable, jb_DOMString * key, jb_DOMString * oldValue, jb_DOMString * newValue, jb_USVString * url) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initStorageEvent", em_Val_from(type), em_Val_from(bubbles), em_Val_from(cancelable), em_Val_from(key), em_Val_from(oldValue), em_Val_from(newValue), em_Val_from(url)));
 }
 
 
-jb_Undefined StorageEvent_initStorageEvent(StorageEvent* self , const jb_DOMString* type, bool bubbles, bool cancelable, const jb_DOMString* key, const jb_DOMString* oldValue, const jb_DOMString* newValue, const jb_USVString* url, const Storage* storageArea) {
+jb_Undefined StorageEvent_initStorageEvent7(StorageEvent* self , jb_DOMString * type, bool bubbles, bool cancelable, jb_DOMString * key, jb_DOMString * oldValue, jb_DOMString * newValue, jb_USVString * url, Storage * storageArea) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initStorageEvent", em_Val_from(type), em_Val_from(bubbles), em_Val_from(cancelable), em_Val_from(key), em_Val_from(oldValue), em_Val_from(newValue), em_Val_from(url), em_Val_from(storageArea)));
 }
 

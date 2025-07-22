@@ -9,50 +9,40 @@ typedef struct GPUTexture GPUTexture;
 typedef struct GPUDevice GPUDevice;
 
 
-typedef struct {
-  em_Val inner;
-} GPUCanvasConfiguration;
-
-
 DECLARE_EMLITE_TYPE(GPUCanvasConfiguration, em_Val);
 
 GPUDevice GPUCanvasConfiguration_device( const GPUCanvasConfiguration *self);
 
-void GPUCanvasConfiguration_set_device(GPUCanvasConfiguration* self, const GPUDevice* value);
+void GPUCanvasConfiguration_set_device(GPUCanvasConfiguration* self, GPUDevice * value);
 
 GPUTextureFormat GPUCanvasConfiguration_format( const GPUCanvasConfiguration *self);
 
-void GPUCanvasConfiguration_set_format(GPUCanvasConfiguration* self, const GPUTextureFormat* value);
+void GPUCanvasConfiguration_set_format(GPUCanvasConfiguration* self, GPUTextureFormat * value);
 
 jb_Any GPUCanvasConfiguration_usage( const GPUCanvasConfiguration *self);
 
-void GPUCanvasConfiguration_set_usage(GPUCanvasConfiguration* self, const jb_Any* value);
+void GPUCanvasConfiguration_set_usage(GPUCanvasConfiguration* self, jb_Any * value);
 
 jb_Sequence GPUCanvasConfiguration_viewFormats( const GPUCanvasConfiguration *self);
 
-void GPUCanvasConfiguration_set_viewFormats(GPUCanvasConfiguration* self, const jb_Sequence* value);
+void GPUCanvasConfiguration_set_viewFormats(GPUCanvasConfiguration* self, jb_Sequence * value);
 
 PredefinedColorSpace GPUCanvasConfiguration_colorSpace( const GPUCanvasConfiguration *self);
 
-void GPUCanvasConfiguration_set_colorSpace(GPUCanvasConfiguration* self, const PredefinedColorSpace* value);
+void GPUCanvasConfiguration_set_colorSpace(GPUCanvasConfiguration* self, PredefinedColorSpace * value);
 
 jb_Any GPUCanvasConfiguration_toneMapping( const GPUCanvasConfiguration *self);
 
-void GPUCanvasConfiguration_set_toneMapping(GPUCanvasConfiguration* self, const jb_Any* value);
+void GPUCanvasConfiguration_set_toneMapping(GPUCanvasConfiguration* self, jb_Any * value);
 
 GPUCanvasAlphaMode GPUCanvasConfiguration_alphaMode( const GPUCanvasConfiguration *self);
 
-void GPUCanvasConfiguration_set_alphaMode(GPUCanvasConfiguration* self, const GPUCanvasAlphaMode* value);
-typedef struct {
-  em_Val inner;
-} GPUCanvasContext;
-
-
+void GPUCanvasConfiguration_set_alphaMode(GPUCanvasConfiguration* self, GPUCanvasAlphaMode * value);
 DECLARE_EMLITE_TYPE(GPUCanvasContext, em_Val);
 
 jb_Any GPUCanvasContext_canvas( const GPUCanvasContext *self);
 
-jb_Undefined GPUCanvasContext_configure(GPUCanvasContext* self , const GPUCanvasConfiguration* configuration);
+jb_Undefined GPUCanvasContext_configure(GPUCanvasContext* self , GPUCanvasConfiguration * configuration);
 
 jb_Undefined GPUCanvasContext_unconfigure(GPUCanvasContext* self );
 

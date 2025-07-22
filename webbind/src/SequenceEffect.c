@@ -4,13 +4,15 @@
 DEFINE_EMLITE_TYPE(SequenceEffect, GroupEffect);
 
 
-SequenceEffect SequenceEffect_new(const jb_Sequence* children) : GroupEffect(em_Val_global("SequenceEffect").new_(em_Val_from(children))) {
-        return SequenceEffect(em_Val_new(em_Val_global("SequenceEffect", em_Val_from(children)));
+SequenceEffect SequenceEffect_new0(jb_Sequence * children) {
+        em_Val vv = em_Val_new(em_Val_global("SequenceEffect") , em_Val_from(children));
+        return SequenceEffect_from_val(&vv);
       }
 
 
-SequenceEffect SequenceEffect_new(const jb_Sequence* children, const jb_Any* timing) : GroupEffect(em_Val_global("SequenceEffect").new_(em_Val_from(children), em_Val_from(timing))) {
-        return SequenceEffect(em_Val_new(em_Val_global("SequenceEffect", em_Val_from(children), em_Val_from(timing)));
+SequenceEffect SequenceEffect_new1(jb_Sequence * children, jb_Any * timing) {
+        em_Val vv = em_Val_new(em_Val_global("SequenceEffect") , em_Val_from(children), em_Val_from(timing));
+        return SequenceEffect_from_val(&vv);
       }
 
 

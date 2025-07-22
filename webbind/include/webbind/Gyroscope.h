@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Sensor inner;
-} Gyroscope;
-
-
 DECLARE_EMLITE_TYPE(Gyroscope, Sensor);
 
-Gyroscope Gyroscope_new();
+Gyroscope Gyroscope_new0();
 
-Gyroscope Gyroscope_new(const jb_Any* sensorOptions);
+Gyroscope Gyroscope_new1(jb_Any * sensorOptions);
 
 double Gyroscope_x( const Gyroscope *self);
 

@@ -9,11 +9,6 @@ typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedTransformList SVGAnimatedTransformList;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGClipPathElement;
-
-
 DECLARE_EMLITE_TYPE(SVGClipPathElement, SVGElement);
 
 SVGAnimatedEnumeration SVGClipPathElement_clipPathUnits( const SVGClipPathElement *self);

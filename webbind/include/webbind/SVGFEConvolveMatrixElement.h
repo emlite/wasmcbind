@@ -14,11 +14,6 @@ typedef struct SVGAnimatedBoolean SVGAnimatedBoolean;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEConvolveMatrixElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEConvolveMatrixElement, SVGElement);
 
 SVGAnimatedString SVGFEConvolveMatrixElement_in1( const SVGFEConvolveMatrixElement *self);

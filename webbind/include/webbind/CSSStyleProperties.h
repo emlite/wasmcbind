@@ -6,13 +6,8 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSStyleDeclaration inner;
-} CSSStyleProperties;
-
-
 DECLARE_EMLITE_TYPE(CSSStyleProperties, CSSStyleDeclaration);
 
 jb_CSSOMString CSSStyleProperties_cssFloat( const CSSStyleProperties *self);
 
-void CSSStyleProperties_set_cssFloat(CSSStyleProperties* self, const jb_CSSOMString* value);
+void CSSStyleProperties_set_cssFloat(CSSStyleProperties* self, jb_CSSOMString * value);

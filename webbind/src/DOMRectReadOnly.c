@@ -5,119 +5,124 @@ DEFINE_EMLITE_TYPE(DOMRectInit, em_Val);
 
 
 double DOMRectInit_x(const DOMRectInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "x"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("x")));
 }
 
 
 void DOMRectInit_set_x(DOMRectInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "x", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("x"), em_Val_from(value));
 }
 
 
 double DOMRectInit_y(const DOMRectInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "y"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("y")));
 }
 
 
 void DOMRectInit_set_y(DOMRectInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "y", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("y"), em_Val_from(value));
 }
 
 
 double DOMRectInit_width(const DOMRectInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "width"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("width")));
 }
 
 
 void DOMRectInit_set_width(DOMRectInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "width", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 
 
 double DOMRectInit_height(const DOMRectInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "height"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("height")));
 }
 
 
 void DOMRectInit_set_height(DOMRectInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "height", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("height"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(DOMRectReadOnly, em_Val);
 
 
-DOMRectReadOnly DOMRectReadOnly_new() : em_Val(em_Val_global("DOMRectReadOnly").new_()) {
-        return DOMRectReadOnly(em_Val_new(em_Val_global("DOMRectReadOnly", ));
+DOMRectReadOnly DOMRectReadOnly_new0() {
+        em_Val vv = em_Val_new(em_Val_global("DOMRectReadOnly") );
+        return DOMRectReadOnly_from_val(&vv);
       }
 
 
-DOMRectReadOnly DOMRectReadOnly_new(double x) : em_Val(em_Val_global("DOMRectReadOnly").new_(em_Val_from(x))) {
-        return DOMRectReadOnly(em_Val_new(em_Val_global("DOMRectReadOnly", em_Val_from(x)));
+DOMRectReadOnly DOMRectReadOnly_new1(double x) {
+        em_Val vv = em_Val_new(em_Val_global("DOMRectReadOnly") , em_Val_from(x));
+        return DOMRectReadOnly_from_val(&vv);
       }
 
 
-DOMRectReadOnly DOMRectReadOnly_new(double x, double y) : em_Val(em_Val_global("DOMRectReadOnly").new_(em_Val_from(x), em_Val_from(y))) {
-        return DOMRectReadOnly(em_Val_new(em_Val_global("DOMRectReadOnly", em_Val_from(x), em_Val_from(y)));
+DOMRectReadOnly DOMRectReadOnly_new2(double x, double y) {
+        em_Val vv = em_Val_new(em_Val_global("DOMRectReadOnly") , em_Val_from(x), em_Val_from(y));
+        return DOMRectReadOnly_from_val(&vv);
       }
 
 
-DOMRectReadOnly DOMRectReadOnly_new(double x, double y, double width) : em_Val(em_Val_global("DOMRectReadOnly").new_(em_Val_from(x), em_Val_from(y), em_Val_from(width))) {
-        return DOMRectReadOnly(em_Val_new(em_Val_global("DOMRectReadOnly", em_Val_from(x), em_Val_from(y), em_Val_from(width)));
+DOMRectReadOnly DOMRectReadOnly_new3(double x, double y, double width) {
+        em_Val vv = em_Val_new(em_Val_global("DOMRectReadOnly") , em_Val_from(x), em_Val_from(y), em_Val_from(width));
+        return DOMRectReadOnly_from_val(&vv);
       }
 
 
-DOMRectReadOnly DOMRectReadOnly_new(double x, double y, double width, double height) : em_Val(em_Val_global("DOMRectReadOnly").new_(em_Val_from(x), em_Val_from(y), em_Val_from(width), em_Val_from(height))) {
-        return DOMRectReadOnly(em_Val_new(em_Val_global("DOMRectReadOnly", em_Val_from(x), em_Val_from(y), em_Val_from(width), em_Val_from(height)));
+DOMRectReadOnly DOMRectReadOnly_new4(double x, double y, double width, double height) {
+        em_Val vv = em_Val_new(em_Val_global("DOMRectReadOnly") , em_Val_from(x), em_Val_from(y), em_Val_from(width), em_Val_from(height));
+        return DOMRectReadOnly_from_val(&vv);
       }
 
 
-DOMRectReadOnly DOMRectReadOnly_fromRect(DOMRectReadOnly* self ) {
+DOMRectReadOnly DOMRectReadOnly_fromRect0(DOMRectReadOnly* self ) {
     return em_Val_as(DOMRectReadOnly, em_Val_call(em_Val_global("domrectreadonly"), "fromRect"));
 }
 
 
-DOMRectReadOnly DOMRectReadOnly_fromRect(DOMRectReadOnly* self , const DOMRectInit* other) {
+DOMRectReadOnly DOMRectReadOnly_fromRect1(DOMRectReadOnly* self , DOMRectInit * other) {
     return em_Val_as(DOMRectReadOnly, em_Val_call(em_Val_global("domrectreadonly"), "fromRect", em_Val_from(other)));
 }
 
 
 double DOMRectReadOnly_x(const DOMRectReadOnly *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "x"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("x")));
 }
 
 
 double DOMRectReadOnly_y(const DOMRectReadOnly *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "y"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("y")));
 }
 
 
 double DOMRectReadOnly_width(const DOMRectReadOnly *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "width"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("width")));
 }
 
 
 double DOMRectReadOnly_height(const DOMRectReadOnly *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "height"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("height")));
 }
 
 
 double DOMRectReadOnly_top(const DOMRectReadOnly *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "top"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("top")));
 }
 
 
 double DOMRectReadOnly_right(const DOMRectReadOnly *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "right"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("right")));
 }
 
 
 double DOMRectReadOnly_bottom(const DOMRectReadOnly *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "bottom"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("bottom")));
 }
 
 
 double DOMRectReadOnly_left(const DOMRectReadOnly *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "left"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("left")));
 }
 
 

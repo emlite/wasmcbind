@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} GPUSupportedLimits;
-
-
 DECLARE_EMLITE_TYPE(GPUSupportedLimits, em_Val);
 
 unsigned long GPUSupportedLimits_maxTextureDimension1D( const GPUSupportedLimits *self);

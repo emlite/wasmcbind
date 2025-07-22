@@ -6,14 +6,9 @@
 #include "enums.h"
 
 
-typedef struct {
-  ExtendableEvent inner;
-} SyncEvent;
-
-
 DECLARE_EMLITE_TYPE(SyncEvent, ExtendableEvent);
 
-SyncEvent SyncEvent_new(const jb_DOMString* type, const jb_Any* init);
+SyncEvent SyncEvent_new(jb_DOMString * type, jb_Any * init);
 
 jb_DOMString SyncEvent_tag( const SyncEvent *self);
 

@@ -8,13 +8,8 @@
 typedef struct SharedStorageModifierMethodOptions SharedStorageModifierMethodOptions;
 
 
-typedef struct {
-  SharedStorageModifierMethod inner;
-} SharedStorageClearMethod;
-
-
 DECLARE_EMLITE_TYPE(SharedStorageClearMethod, SharedStorageModifierMethod);
 
-SharedStorageClearMethod SharedStorageClearMethod_new();
+SharedStorageClearMethod SharedStorageClearMethod_new0();
 
-SharedStorageClearMethod SharedStorageClearMethod_new(const SharedStorageModifierMethodOptions* options);
+SharedStorageClearMethod SharedStorageClearMethod_new1(SharedStorageModifierMethodOptions * options);

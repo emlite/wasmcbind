@@ -10,11 +10,6 @@ typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEBlendElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEBlendElement, SVGElement);
 
 SVGAnimatedString SVGFEBlendElement_in1( const SVGFEBlendElement *self);

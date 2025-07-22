@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} LayoutEdges;
-
-
 DECLARE_EMLITE_TYPE(LayoutEdges, em_Val);
 
 double LayoutEdges_inlineStart( const LayoutEdges *self);

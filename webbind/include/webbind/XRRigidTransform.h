@@ -9,18 +9,13 @@ typedef struct XRRigidTransform XRRigidTransform;
 typedef struct DOMPointInit DOMPointInit;
 
 
-typedef struct {
-  em_Val inner;
-} XRRigidTransform;
-
-
 DECLARE_EMLITE_TYPE(XRRigidTransform, em_Val);
 
-XRRigidTransform XRRigidTransform_new();
+XRRigidTransform XRRigidTransform_new0();
 
-XRRigidTransform XRRigidTransform_new(const DOMPointInit* position);
+XRRigidTransform XRRigidTransform_new1(DOMPointInit * position);
 
-XRRigidTransform XRRigidTransform_new(const DOMPointInit* position, const DOMPointInit* orientation);
+XRRigidTransform XRRigidTransform_new2(DOMPointInit * position, DOMPointInit * orientation);
 
 DOMPointReadOnly XRRigidTransform_position( const XRRigidTransform *self);
 

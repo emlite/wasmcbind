@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  Screen inner;
-} ScreenDetailed;
-
-
 DECLARE_EMLITE_TYPE(ScreenDetailed, Screen);
 
 long ScreenDetailed_availLeft( const ScreenDetailed *self);

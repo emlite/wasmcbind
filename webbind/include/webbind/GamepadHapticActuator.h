@@ -7,11 +7,6 @@
 typedef struct GamepadEffectParameters GamepadEffectParameters;
 
 
-typedef struct {
-  em_Val inner;
-} GamepadEffectParameters;
-
-
 DECLARE_EMLITE_TYPE(GamepadEffectParameters, em_Val);
 
 long long GamepadEffectParameters_duration( const GamepadEffectParameters *self);
@@ -37,18 +32,13 @@ void GamepadEffectParameters_set_leftTrigger(GamepadEffectParameters* self, doub
 double GamepadEffectParameters_rightTrigger( const GamepadEffectParameters *self);
 
 void GamepadEffectParameters_set_rightTrigger(GamepadEffectParameters* self, double value);
-typedef struct {
-  em_Val inner;
-} GamepadHapticActuator;
-
-
 DECLARE_EMLITE_TYPE(GamepadHapticActuator, em_Val);
 
 jb_FrozenArray GamepadHapticActuator_effects( const GamepadHapticActuator *self);
 
-jb_Promise GamepadHapticActuator_playEffect(GamepadHapticActuator* self , const GamepadHapticEffectType* type);
+jb_Promise GamepadHapticActuator_playEffect0(GamepadHapticActuator* self , GamepadHapticEffectType * type);
 
-jb_Promise GamepadHapticActuator_playEffect(GamepadHapticActuator* self , const GamepadHapticEffectType* type, const GamepadEffectParameters* params);
+jb_Promise GamepadHapticActuator_playEffect1(GamepadHapticActuator* self , GamepadHapticEffectType * type, GamepadEffectParameters * params);
 
 jb_Promise GamepadHapticActuator_reset(GamepadHapticActuator* self );
 

@@ -4,27 +4,30 @@
 DEFINE_EMLITE_TYPE(IdentityCredentialError, DOMException);
 
 
-IdentityCredentialError IdentityCredentialError_new() : DOMException(em_Val_global("IdentityCredentialError").new_()) {
-        return IdentityCredentialError(em_Val_new(em_Val_global("IdentityCredentialError", ));
+IdentityCredentialError IdentityCredentialError_new0() {
+        em_Val vv = em_Val_new(em_Val_global("IdentityCredentialError") );
+        return IdentityCredentialError_from_val(&vv);
       }
 
 
-IdentityCredentialError IdentityCredentialError_new(const jb_DOMString* message) : DOMException(em_Val_global("IdentityCredentialError").new_(em_Val_from(message))) {
-        return IdentityCredentialError(em_Val_new(em_Val_global("IdentityCredentialError", em_Val_from(message)));
+IdentityCredentialError IdentityCredentialError_new1(jb_DOMString * message) {
+        em_Val vv = em_Val_new(em_Val_global("IdentityCredentialError") , em_Val_from(message));
+        return IdentityCredentialError_from_val(&vv);
       }
 
 
-IdentityCredentialError IdentityCredentialError_new(const jb_DOMString* message, const jb_Any* options) : DOMException(em_Val_global("IdentityCredentialError").new_(em_Val_from(message), em_Val_from(options))) {
-        return IdentityCredentialError(em_Val_new(em_Val_global("IdentityCredentialError", em_Val_from(message), em_Val_from(options)));
+IdentityCredentialError IdentityCredentialError_new2(jb_DOMString * message, jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("IdentityCredentialError") , em_Val_from(message), em_Val_from(options));
+        return IdentityCredentialError_from_val(&vv);
       }
 
 
 jb_DOMString IdentityCredentialError_error(const IdentityCredentialError *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(DOMException_as_val(self->inner), "error"));
+    return em_Val_as(jb_DOMString, em_Val_get(DOMException_as_val(self->inner), em_Val_from("error")));
 }
 
 
 jb_USVString IdentityCredentialError_url(const IdentityCredentialError *self) {
-    return em_Val_as(jb_USVString, em_Val_get(DOMException_as_val(self->inner), "url"));
+    return em_Val_as(jb_USVString, em_Val_get(DOMException_as_val(self->inner), em_Val_from("url")));
 }
 

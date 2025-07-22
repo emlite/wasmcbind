@@ -7,15 +7,10 @@
 typedef struct Worker Worker;
 
 
-typedef struct {
-  em_Val inner;
-} RTCRtpScriptTransform;
-
-
 DECLARE_EMLITE_TYPE(RTCRtpScriptTransform, em_Val);
 
-RTCRtpScriptTransform RTCRtpScriptTransform_new(const Worker* worker);
+RTCRtpScriptTransform RTCRtpScriptTransform_new0(Worker * worker);
 
-RTCRtpScriptTransform RTCRtpScriptTransform_new(const Worker* worker, const jb_Any* options);
+RTCRtpScriptTransform RTCRtpScriptTransform_new1(Worker * worker, jb_Any * options);
 
-RTCRtpScriptTransform RTCRtpScriptTransform_new(const Worker* worker, const jb_Any* options, const jb_Sequence* transfer);
+RTCRtpScriptTransform RTCRtpScriptTransform_new2(Worker * worker, jb_Any * options, jb_Sequence * transfer);

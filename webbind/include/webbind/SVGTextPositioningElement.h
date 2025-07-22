@@ -9,11 +9,6 @@ typedef struct SVGAnimatedLengthList SVGAnimatedLengthList;
 typedef struct SVGAnimatedNumberList SVGAnimatedNumberList;
 
 
-typedef struct {
-  SVGTextContentElement inner;
-} SVGTextPositioningElement;
-
-
 DECLARE_EMLITE_TYPE(SVGTextPositioningElement, SVGTextContentElement);
 
 SVGAnimatedLengthList SVGTextPositioningElement_x( const SVGTextPositioningElement *self);

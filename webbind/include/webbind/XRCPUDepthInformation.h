@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  XRDepthInformation inner;
-} XRCPUDepthInformation;
-
-
 DECLARE_EMLITE_TYPE(XRCPUDepthInformation, XRDepthInformation);
 
 jb_ArrayBuffer XRCPUDepthInformation_data( const XRCPUDepthInformation *self);

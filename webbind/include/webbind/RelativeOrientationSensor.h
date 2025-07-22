@@ -6,13 +6,8 @@
 #include "enums.h"
 
 
-typedef struct {
-  OrientationSensor inner;
-} RelativeOrientationSensor;
-
-
 DECLARE_EMLITE_TYPE(RelativeOrientationSensor, OrientationSensor);
 
-RelativeOrientationSensor RelativeOrientationSensor_new();
+RelativeOrientationSensor RelativeOrientationSensor_new0();
 
-RelativeOrientationSensor RelativeOrientationSensor_new(const jb_Any* sensorOptions);
+RelativeOrientationSensor RelativeOrientationSensor_new1(jb_Any * sensorOptions);

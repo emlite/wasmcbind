@@ -10,11 +10,6 @@ typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedString SVGAnimatedString;
 
 
-typedef struct {
-  SVGTextContentElement inner;
-} SVGTextPathElement;
-
-
 DECLARE_EMLITE_TYPE(SVGTextPathElement, SVGTextContentElement);
 
 SVGAnimatedLength SVGTextPathElement_startOffset( const SVGTextPathElement *self);

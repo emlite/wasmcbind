@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} SVGAnimatedEnumeration;
-
-
 DECLARE_EMLITE_TYPE(SVGAnimatedEnumeration, em_Val);
 
 unsigned short SVGAnimatedEnumeration_baseVal( const SVGAnimatedEnumeration *self);

@@ -11,30 +11,25 @@ typedef struct Animation Animation;
 typedef struct AnimationTrigger AnimationTrigger;
 
 
-typedef struct {
-  EventTarget inner;
-} Animation;
-
-
 DECLARE_EMLITE_TYPE(Animation, EventTarget);
 
-Animation Animation_new();
+Animation Animation_new0();
 
-Animation Animation_new(const AnimationEffect* effect);
+Animation Animation_new1(AnimationEffect * effect);
 
-Animation Animation_new(const AnimationEffect* effect, const AnimationTimeline* timeline);
+Animation Animation_new2(AnimationEffect * effect, AnimationTimeline * timeline);
 
 jb_DOMString Animation_id( const Animation *self);
 
-void Animation_set_id(Animation* self, const jb_DOMString* value);
+void Animation_set_id(Animation* self, jb_DOMString * value);
 
 AnimationEffect Animation_effect( const Animation *self);
 
-void Animation_set_effect(Animation* self, const AnimationEffect* value);
+void Animation_set_effect(Animation* self, AnimationEffect * value);
 
 AnimationTimeline Animation_timeline( const Animation *self);
 
-void Animation_set_timeline(Animation* self, const AnimationTimeline* value);
+void Animation_set_timeline(Animation* self, AnimationTimeline * value);
 
 double Animation_playbackRate( const Animation *self);
 
@@ -52,15 +47,15 @@ jb_Promise Animation_finished( const Animation *self);
 
 jb_Any Animation_onfinish( const Animation *self);
 
-void Animation_set_onfinish(Animation* self, const jb_Any* value);
+void Animation_set_onfinish(Animation* self, jb_Any * value);
 
 jb_Any Animation_oncancel( const Animation *self);
 
-void Animation_set_oncancel(Animation* self, const jb_Any* value);
+void Animation_set_oncancel(Animation* self, jb_Any * value);
 
 jb_Any Animation_onremove( const Animation *self);
 
-void Animation_set_onremove(Animation* self, const jb_Any* value);
+void Animation_set_onremove(Animation* self, jb_Any * value);
 
 jb_Undefined Animation_cancel(Animation* self );
 
@@ -80,14 +75,14 @@ jb_Undefined Animation_commitStyles(Animation* self );
 
 jb_Any Animation_startTime( const Animation *self);
 
-void Animation_set_startTime(Animation* self, const jb_Any* value);
+void Animation_set_startTime(Animation* self, jb_Any * value);
 
 jb_Any Animation_currentTime( const Animation *self);
 
-void Animation_set_currentTime(Animation* self, const jb_Any* value);
+void Animation_set_currentTime(Animation* self, jb_Any * value);
 
 AnimationTrigger Animation_trigger( const Animation *self);
 
-void Animation_set_trigger(Animation* self, const AnimationTrigger* value);
+void Animation_set_trigger(Animation* self, AnimationTrigger * value);
 
 double Animation_overallProgress( const Animation *self);

@@ -26,39 +26,34 @@ typedef struct XRLightProbe XRLightProbe;
 typedef struct XRPlaneSet XRPlaneSet;
 
 
-typedef struct {
-  em_Val inner;
-} XRFrame;
-
-
 DECLARE_EMLITE_TYPE(XRFrame, em_Val);
 
 XRSession XRFrame_session( const XRFrame *self);
 
 jb_Any XRFrame_predictedDisplayTime( const XRFrame *self);
 
-XRViewerPose XRFrame_getViewerPose(XRFrame* self , const XRReferenceSpace* referenceSpace);
+XRViewerPose XRFrame_getViewerPose(XRFrame* self , XRReferenceSpace * referenceSpace);
 
-XRPose XRFrame_getPose(XRFrame* self , const XRSpace* space, const XRSpace* baseSpace);
+XRPose XRFrame_getPose(XRFrame* self , XRSpace * space, XRSpace * baseSpace);
 
-jb_Promise XRFrame_createAnchor(XRFrame* self , const XRRigidTransform* pose, const XRSpace* space);
+jb_Promise XRFrame_createAnchor(XRFrame* self , XRRigidTransform * pose, XRSpace * space);
 
 XRAnchorSet XRFrame_trackedAnchors( const XRFrame *self);
 
 XRMeshSet XRFrame_detectedMeshes( const XRFrame *self);
 
-XRCPUDepthInformation XRFrame_getDepthInformation(XRFrame* self , const XRView* view);
+XRCPUDepthInformation XRFrame_getDepthInformation(XRFrame* self , XRView * view);
 
-XRJointPose XRFrame_getJointPose(XRFrame* self , const XRJointSpace* joint, const XRSpace* baseSpace);
+XRJointPose XRFrame_getJointPose(XRFrame* self , XRJointSpace * joint, XRSpace * baseSpace);
 
-bool XRFrame_fillJointRadii(XRFrame* self , const jb_Sequence* jointSpaces, const jb_Float32Array* radii);
+bool XRFrame_fillJointRadii(XRFrame* self , jb_Sequence * jointSpaces, jb_Float32Array * radii);
 
-bool XRFrame_fillPoses(XRFrame* self , const jb_Sequence* spaces, const XRSpace* baseSpace, const jb_Float32Array* transforms);
+bool XRFrame_fillPoses(XRFrame* self , jb_Sequence * spaces, XRSpace * baseSpace, jb_Float32Array * transforms);
 
-jb_Sequence XRFrame_getHitTestResults(XRFrame* self , const XRHitTestSource* hitTestSource);
+jb_Sequence XRFrame_getHitTestResults(XRFrame* self , XRHitTestSource * hitTestSource);
 
-jb_Sequence XRFrame_getHitTestResultsForTransientInput(XRFrame* self , const XRTransientInputHitTestSource* hitTestSource);
+jb_Sequence XRFrame_getHitTestResultsForTransientInput(XRFrame* self , XRTransientInputHitTestSource * hitTestSource);
 
-XRLightEstimate XRFrame_getLightEstimate(XRFrame* self , const XRLightProbe* lightProbe);
+XRLightEstimate XRFrame_getLightEstimate(XRFrame* self , XRLightProbe * lightProbe);
 
 XRPlaneSet XRFrame_detectedPlanes( const XRFrame *self);

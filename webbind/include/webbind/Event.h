@@ -7,16 +7,11 @@
 typedef struct EventTarget EventTarget;
 
 
-typedef struct {
-  em_Val inner;
-} Event;
-
-
 DECLARE_EMLITE_TYPE(Event, em_Val);
 
-Event Event_new(const jb_DOMString* type);
+Event Event_new0(jb_DOMString * type);
 
-Event Event_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+Event Event_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 jb_DOMString Event_type( const Event *self);
 
@@ -56,8 +51,8 @@ bool Event_isTrusted( const Event *self);
 
 jb_Any Event_timeStamp( const Event *self);
 
-jb_Undefined Event_initEvent(Event* self , const jb_DOMString* type);
+jb_Undefined Event_initEvent0(Event* self , jb_DOMString * type);
 
-jb_Undefined Event_initEvent(Event* self , const jb_DOMString* type, bool bubbles);
+jb_Undefined Event_initEvent1(Event* self , jb_DOMString * type, bool bubbles);
 
-jb_Undefined Event_initEvent(Event* self , const jb_DOMString* type, bool bubbles, bool cancelable);
+jb_Undefined Event_initEvent2(Event* self , jb_DOMString * type, bool bubbles, bool cancelable);

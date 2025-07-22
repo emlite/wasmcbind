@@ -11,29 +11,19 @@ typedef struct GPUDevice GPUDevice;
 typedef struct GPUDeviceDescriptor GPUDeviceDescriptor;
 
 
-typedef struct {
-  em_Val inner;
-} GPUDeviceDescriptor;
-
-
 DECLARE_EMLITE_TYPE(GPUDeviceDescriptor, em_Val);
 
 jb_Sequence GPUDeviceDescriptor_requiredFeatures( const GPUDeviceDescriptor *self);
 
-void GPUDeviceDescriptor_set_requiredFeatures(GPUDeviceDescriptor* self, const jb_Sequence* value);
+void GPUDeviceDescriptor_set_requiredFeatures(GPUDeviceDescriptor* self, jb_Sequence * value);
 
 jb_Record GPUDeviceDescriptor_requiredLimits( const GPUDeviceDescriptor *self);
 
-void GPUDeviceDescriptor_set_requiredLimits(GPUDeviceDescriptor* self, const jb_Record* value);
+void GPUDeviceDescriptor_set_requiredLimits(GPUDeviceDescriptor* self, jb_Record * value);
 
 jb_Any GPUDeviceDescriptor_defaultQueue( const GPUDeviceDescriptor *self);
 
-void GPUDeviceDescriptor_set_defaultQueue(GPUDeviceDescriptor* self, const jb_Any* value);
-typedef struct {
-  em_Val inner;
-} GPUAdapter;
-
-
+void GPUDeviceDescriptor_set_defaultQueue(GPUDeviceDescriptor* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(GPUAdapter, em_Val);
 
 GPUSupportedFeatures GPUAdapter_features( const GPUAdapter *self);
@@ -42,6 +32,6 @@ GPUSupportedLimits GPUAdapter_limits( const GPUAdapter *self);
 
 GPUAdapterInfo GPUAdapter_info( const GPUAdapter *self);
 
-jb_Promise GPUAdapter_requestDevice(GPUAdapter* self );
+jb_Promise GPUAdapter_requestDevice0(GPUAdapter* self );
 
-jb_Promise GPUAdapter_requestDevice(GPUAdapter* self , const GPUDeviceDescriptor* descriptor);
+jb_Promise GPUAdapter_requestDevice1(GPUAdapter* self , GPUDeviceDescriptor * descriptor);

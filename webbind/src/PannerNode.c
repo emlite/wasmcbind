@@ -6,123 +6,125 @@
 DEFINE_EMLITE_TYPE(PannerNode, AudioNode);
 
 
-PannerNode PannerNode_new(const BaseAudioContext* context) : AudioNode(em_Val_global("PannerNode").new_(em_Val_from(context))) {
-        return PannerNode(em_Val_new(em_Val_global("PannerNode", em_Val_from(context)));
+PannerNode PannerNode_new0(BaseAudioContext * context) {
+        em_Val vv = em_Val_new(em_Val_global("PannerNode") , em_Val_from(context));
+        return PannerNode_from_val(&vv);
       }
 
 
-PannerNode PannerNode_new(const BaseAudioContext* context, const jb_Any* options) : AudioNode(em_Val_global("PannerNode").new_(em_Val_from(context), em_Val_from(options))) {
-        return PannerNode(em_Val_new(em_Val_global("PannerNode", em_Val_from(context), em_Val_from(options)));
+PannerNode PannerNode_new1(BaseAudioContext * context, jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("PannerNode") , em_Val_from(context), em_Val_from(options));
+        return PannerNode_from_val(&vv);
       }
 
 
 PanningModelType PannerNode_panningModel(const PannerNode *self) {
-    return em_Val_as(PanningModelType, em_Val_get(AudioNode_as_val(self->inner), "panningModel"));
+    return em_Val_as(PanningModelType, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("panningModel")));
 }
 
 
-void PannerNode_set_panningModel(PannerNode* self, const PanningModelType* value) {
-    em_Val_set(AudioNode_as_val(self->inner), "panningModel", value);
+void PannerNode_set_panningModel(PannerNode* self, PanningModelType * value) {
+    em_Val_set(AudioNode_as_val(self->inner), em_Val_from("panningModel"), em_Val_from(value));
 }
 
 
 AudioParam PannerNode_positionX(const PannerNode *self) {
-    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), "positionX"));
+    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("positionX")));
 }
 
 
 AudioParam PannerNode_positionY(const PannerNode *self) {
-    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), "positionY"));
+    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("positionY")));
 }
 
 
 AudioParam PannerNode_positionZ(const PannerNode *self) {
-    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), "positionZ"));
+    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("positionZ")));
 }
 
 
 AudioParam PannerNode_orientationX(const PannerNode *self) {
-    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), "orientationX"));
+    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("orientationX")));
 }
 
 
 AudioParam PannerNode_orientationY(const PannerNode *self) {
-    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), "orientationY"));
+    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("orientationY")));
 }
 
 
 AudioParam PannerNode_orientationZ(const PannerNode *self) {
-    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), "orientationZ"));
+    return em_Val_as(AudioParam, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("orientationZ")));
 }
 
 
 DistanceModelType PannerNode_distanceModel(const PannerNode *self) {
-    return em_Val_as(DistanceModelType, em_Val_get(AudioNode_as_val(self->inner), "distanceModel"));
+    return em_Val_as(DistanceModelType, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("distanceModel")));
 }
 
 
-void PannerNode_set_distanceModel(PannerNode* self, const DistanceModelType* value) {
-    em_Val_set(AudioNode_as_val(self->inner), "distanceModel", value);
+void PannerNode_set_distanceModel(PannerNode* self, DistanceModelType * value) {
+    em_Val_set(AudioNode_as_val(self->inner), em_Val_from("distanceModel"), em_Val_from(value));
 }
 
 
 double PannerNode_refDistance(const PannerNode *self) {
-    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), "refDistance"));
+    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("refDistance")));
 }
 
 
 void PannerNode_set_refDistance(PannerNode* self, double value) {
-    em_Val_set(AudioNode_as_val(self->inner), "refDistance", value);
+    em_Val_set(AudioNode_as_val(self->inner), em_Val_from("refDistance"), em_Val_from(value));
 }
 
 
 double PannerNode_maxDistance(const PannerNode *self) {
-    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), "maxDistance"));
+    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("maxDistance")));
 }
 
 
 void PannerNode_set_maxDistance(PannerNode* self, double value) {
-    em_Val_set(AudioNode_as_val(self->inner), "maxDistance", value);
+    em_Val_set(AudioNode_as_val(self->inner), em_Val_from("maxDistance"), em_Val_from(value));
 }
 
 
 double PannerNode_rolloffFactor(const PannerNode *self) {
-    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), "rolloffFactor"));
+    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("rolloffFactor")));
 }
 
 
 void PannerNode_set_rolloffFactor(PannerNode* self, double value) {
-    em_Val_set(AudioNode_as_val(self->inner), "rolloffFactor", value);
+    em_Val_set(AudioNode_as_val(self->inner), em_Val_from("rolloffFactor"), em_Val_from(value));
 }
 
 
 double PannerNode_coneInnerAngle(const PannerNode *self) {
-    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), "coneInnerAngle"));
+    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("coneInnerAngle")));
 }
 
 
 void PannerNode_set_coneInnerAngle(PannerNode* self, double value) {
-    em_Val_set(AudioNode_as_val(self->inner), "coneInnerAngle", value);
+    em_Val_set(AudioNode_as_val(self->inner), em_Val_from("coneInnerAngle"), em_Val_from(value));
 }
 
 
 double PannerNode_coneOuterAngle(const PannerNode *self) {
-    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), "coneOuterAngle"));
+    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("coneOuterAngle")));
 }
 
 
 void PannerNode_set_coneOuterAngle(PannerNode* self, double value) {
-    em_Val_set(AudioNode_as_val(self->inner), "coneOuterAngle", value);
+    em_Val_set(AudioNode_as_val(self->inner), em_Val_from("coneOuterAngle"), em_Val_from(value));
 }
 
 
 double PannerNode_coneOuterGain(const PannerNode *self) {
-    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), "coneOuterGain"));
+    return em_Val_as(double, em_Val_get(AudioNode_as_val(self->inner), em_Val_from("coneOuterGain")));
 }
 
 
 void PannerNode_set_coneOuterGain(PannerNode* self, double value) {
-    em_Val_set(AudioNode_as_val(self->inner), "coneOuterGain", value);
+    em_Val_set(AudioNode_as_val(self->inner), em_Val_from("coneOuterGain"), em_Val_from(value));
 }
 
 

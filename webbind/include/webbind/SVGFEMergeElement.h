@@ -9,11 +9,6 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 typedef struct SVGAnimatedString SVGAnimatedString;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEMergeElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEMergeElement, SVGElement);
 
 SVGAnimatedLength SVGFEMergeElement_x( const SVGFEMergeElement *self);

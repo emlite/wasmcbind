@@ -8,11 +8,6 @@
 typedef struct MessagePort MessagePort;
 
 
-typedef struct {
-  Worklet inner;
-} AudioWorklet;
-
-
 DECLARE_EMLITE_TYPE(AudioWorklet, Worklet);
 
 jb_Any AudioWorklet_port( const AudioWorklet *self);

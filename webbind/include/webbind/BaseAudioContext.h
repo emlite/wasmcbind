@@ -29,21 +29,11 @@ typedef struct StereoPannerNode StereoPannerNode;
 typedef struct WaveShaperNode WaveShaperNode;
 
 
-typedef struct {
-  em_Val inner;
-} PeriodicWaveConstraints;
-
-
 DECLARE_EMLITE_TYPE(PeriodicWaveConstraints, em_Val);
 
 bool PeriodicWaveConstraints_disableNormalization( const PeriodicWaveConstraints *self);
 
 void PeriodicWaveConstraints_set_disableNormalization(PeriodicWaveConstraints* self, bool value);
-typedef struct {
-  EventTarget inner;
-} BaseAudioContext;
-
-
 DECLARE_EMLITE_TYPE(BaseAudioContext, EventTarget);
 
 AudioDestinationNode BaseAudioContext_destination( const BaseAudioContext *self);
@@ -62,7 +52,7 @@ AudioWorklet BaseAudioContext_audioWorklet( const BaseAudioContext *self);
 
 jb_Any BaseAudioContext_onstatechange( const BaseAudioContext *self);
 
-void BaseAudioContext_set_onstatechange(BaseAudioContext* self, const jb_Any* value);
+void BaseAudioContext_set_onstatechange(BaseAudioContext* self, jb_Any * value);
 
 AnalyserNode BaseAudioContext_createAnalyser(BaseAudioContext* self );
 
@@ -72,50 +62,50 @@ AudioBuffer BaseAudioContext_createBuffer(BaseAudioContext* self , unsigned long
 
 AudioBufferSourceNode BaseAudioContext_createBufferSource(BaseAudioContext* self );
 
-ChannelMergerNode BaseAudioContext_createChannelMerger(BaseAudioContext* self );
+ChannelMergerNode BaseAudioContext_createChannelMerger0(BaseAudioContext* self );
 
-ChannelMergerNode BaseAudioContext_createChannelMerger(BaseAudioContext* self , unsigned long numberOfInputs);
+ChannelMergerNode BaseAudioContext_createChannelMerger1(BaseAudioContext* self , unsigned long numberOfInputs);
 
-ChannelSplitterNode BaseAudioContext_createChannelSplitter(BaseAudioContext* self );
+ChannelSplitterNode BaseAudioContext_createChannelSplitter0(BaseAudioContext* self );
 
-ChannelSplitterNode BaseAudioContext_createChannelSplitter(BaseAudioContext* self , unsigned long numberOfOutputs);
+ChannelSplitterNode BaseAudioContext_createChannelSplitter1(BaseAudioContext* self , unsigned long numberOfOutputs);
 
 ConstantSourceNode BaseAudioContext_createConstantSource(BaseAudioContext* self );
 
 ConvolverNode BaseAudioContext_createConvolver(BaseAudioContext* self );
 
-DelayNode BaseAudioContext_createDelay(BaseAudioContext* self );
+DelayNode BaseAudioContext_createDelay0(BaseAudioContext* self );
 
-DelayNode BaseAudioContext_createDelay(BaseAudioContext* self , double maxDelayTime);
+DelayNode BaseAudioContext_createDelay1(BaseAudioContext* self , double maxDelayTime);
 
 DynamicsCompressorNode BaseAudioContext_createDynamicsCompressor(BaseAudioContext* self );
 
 GainNode BaseAudioContext_createGain(BaseAudioContext* self );
 
-IIRFilterNode BaseAudioContext_createIIRFilter(BaseAudioContext* self , const jb_Sequence* feedforward, const jb_Sequence* feedback);
+IIRFilterNode BaseAudioContext_createIIRFilter(BaseAudioContext* self , jb_Sequence * feedforward, jb_Sequence * feedback);
 
 OscillatorNode BaseAudioContext_createOscillator(BaseAudioContext* self );
 
 PannerNode BaseAudioContext_createPanner(BaseAudioContext* self );
 
-PeriodicWave BaseAudioContext_createPeriodicWave(BaseAudioContext* self , const jb_Sequence* real, const jb_Sequence* imag);
+PeriodicWave BaseAudioContext_createPeriodicWave0(BaseAudioContext* self , jb_Sequence * real, jb_Sequence * imag);
 
-PeriodicWave BaseAudioContext_createPeriodicWave(BaseAudioContext* self , const jb_Sequence* real, const jb_Sequence* imag, const PeriodicWaveConstraints* constraints);
+PeriodicWave BaseAudioContext_createPeriodicWave1(BaseAudioContext* self , jb_Sequence * real, jb_Sequence * imag, PeriodicWaveConstraints * constraints);
 
-ScriptProcessorNode BaseAudioContext_createScriptProcessor(BaseAudioContext* self );
+ScriptProcessorNode BaseAudioContext_createScriptProcessor0(BaseAudioContext* self );
 
-ScriptProcessorNode BaseAudioContext_createScriptProcessor(BaseAudioContext* self , unsigned long bufferSize);
+ScriptProcessorNode BaseAudioContext_createScriptProcessor1(BaseAudioContext* self , unsigned long bufferSize);
 
-ScriptProcessorNode BaseAudioContext_createScriptProcessor(BaseAudioContext* self , unsigned long bufferSize, unsigned long numberOfInputChannels);
+ScriptProcessorNode BaseAudioContext_createScriptProcessor2(BaseAudioContext* self , unsigned long bufferSize, unsigned long numberOfInputChannels);
 
-ScriptProcessorNode BaseAudioContext_createScriptProcessor(BaseAudioContext* self , unsigned long bufferSize, unsigned long numberOfInputChannels, unsigned long numberOfOutputChannels);
+ScriptProcessorNode BaseAudioContext_createScriptProcessor3(BaseAudioContext* self , unsigned long bufferSize, unsigned long numberOfInputChannels, unsigned long numberOfOutputChannels);
 
 StereoPannerNode BaseAudioContext_createStereoPanner(BaseAudioContext* self );
 
 WaveShaperNode BaseAudioContext_createWaveShaper(BaseAudioContext* self );
 
-jb_Promise BaseAudioContext_decodeAudioData(BaseAudioContext* self , const jb_ArrayBuffer* audioData);
+jb_Promise BaseAudioContext_decodeAudioData0(BaseAudioContext* self , jb_ArrayBuffer * audioData);
 
-jb_Promise BaseAudioContext_decodeAudioData(BaseAudioContext* self , const jb_ArrayBuffer* audioData, const jb_Function* successCallback);
+jb_Promise BaseAudioContext_decodeAudioData1(BaseAudioContext* self , jb_ArrayBuffer * audioData, jb_Function * successCallback);
 
-jb_Promise BaseAudioContext_decodeAudioData(BaseAudioContext* self , const jb_ArrayBuffer* audioData, const jb_Function* successCallback, const jb_Function* errorCallback);
+jb_Promise BaseAudioContext_decodeAudioData2(BaseAudioContext* self , jb_ArrayBuffer * audioData, jb_Function * successCallback, jb_Function * errorCallback);

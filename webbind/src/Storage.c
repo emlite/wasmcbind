@@ -5,7 +5,7 @@ DEFINE_EMLITE_TYPE(Storage, em_Val);
 
 
 unsigned long Storage_length(const Storage *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "length"));
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("length")));
 }
 
 
@@ -14,17 +14,17 @@ jb_DOMString Storage_key(Storage* self , unsigned long index) {
 }
 
 
-jb_DOMString Storage_getItem(Storage* self , const jb_DOMString* key) {
+jb_DOMString Storage_getItem(Storage* self , jb_DOMString * key) {
     return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "getItem", em_Val_from(key)));
 }
 
 
-jb_Undefined Storage_setItem(Storage* self , const jb_DOMString* key, const jb_DOMString* value) {
+jb_Undefined Storage_setItem(Storage* self , jb_DOMString * key, jb_DOMString * value) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setItem", em_Val_from(key), em_Val_from(value)));
 }
 
 
-jb_Undefined Storage_removeItem(Storage* self , const jb_DOMString* key) {
+jb_Undefined Storage_removeItem(Storage* self , jb_DOMString * key) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "removeItem", em_Val_from(key)));
 }
 

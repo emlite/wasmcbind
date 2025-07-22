@@ -5,16 +5,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} InputDeviceCapabilities;
-
-
 DECLARE_EMLITE_TYPE(InputDeviceCapabilities, em_Val);
 
-InputDeviceCapabilities InputDeviceCapabilities_new();
+InputDeviceCapabilities InputDeviceCapabilities_new0();
 
-InputDeviceCapabilities InputDeviceCapabilities_new(const jb_Any* deviceInitDict);
+InputDeviceCapabilities InputDeviceCapabilities_new1(jb_Any * deviceInitDict);
 
 bool InputDeviceCapabilities_firesTouchEvents( const InputDeviceCapabilities *self);
 

@@ -5,17 +5,19 @@
 DEFINE_EMLITE_TYPE(ClipboardEvent, Event);
 
 
-ClipboardEvent ClipboardEvent_new(const jb_DOMString* type) : Event(em_Val_global("ClipboardEvent").new_(em_Val_from(type))) {
-        return ClipboardEvent(em_Val_new(em_Val_global("ClipboardEvent", em_Val_from(type)));
+ClipboardEvent ClipboardEvent_new0(jb_DOMString * type) {
+        em_Val vv = em_Val_new(em_Val_global("ClipboardEvent") , em_Val_from(type));
+        return ClipboardEvent_from_val(&vv);
       }
 
 
-ClipboardEvent ClipboardEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict) : Event(em_Val_global("ClipboardEvent").new_(em_Val_from(type), em_Val_from(eventInitDict))) {
-        return ClipboardEvent(em_Val_new(em_Val_global("ClipboardEvent", em_Val_from(type), em_Val_from(eventInitDict)));
+ClipboardEvent ClipboardEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("ClipboardEvent") , em_Val_from(type), em_Val_from(eventInitDict));
+        return ClipboardEvent_from_val(&vv);
       }
 
 
 DataTransfer ClipboardEvent_clipboardData(const ClipboardEvent *self) {
-    return em_Val_as(DataTransfer, em_Val_get(Event_as_val(self->inner), "clipboardData"));
+    return em_Val_as(DataTransfer, em_Val_get(Event_as_val(self->inner), em_Val_from("clipboardData")));
 }
 

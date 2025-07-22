@@ -9,33 +9,28 @@ typedef struct GPUBuffer GPUBuffer;
 typedef struct GPUBindGroup GPUBindGroup;
 
 
-typedef struct {
-  em_Val inner;
-} GPUComputePassEncoder;
-
-
 DECLARE_EMLITE_TYPE(GPUComputePassEncoder, em_Val);
 
-jb_Undefined GPUComputePassEncoder_setPipeline(GPUComputePassEncoder* self , const GPUComputePipeline* pipeline);
+jb_Undefined GPUComputePassEncoder_setPipeline(GPUComputePassEncoder* self , GPUComputePipeline * pipeline);
 
-jb_Undefined GPUComputePassEncoder_dispatchWorkgroups(GPUComputePassEncoder* self , const jb_Any* workgroupCountX);
+jb_Undefined GPUComputePassEncoder_dispatchWorkgroups0(GPUComputePassEncoder* self , jb_Any * workgroupCountX);
 
-jb_Undefined GPUComputePassEncoder_dispatchWorkgroups(GPUComputePassEncoder* self , const jb_Any* workgroupCountX, const jb_Any* workgroupCountY);
+jb_Undefined GPUComputePassEncoder_dispatchWorkgroups1(GPUComputePassEncoder* self , jb_Any * workgroupCountX, jb_Any * workgroupCountY);
 
-jb_Undefined GPUComputePassEncoder_dispatchWorkgroups(GPUComputePassEncoder* self , const jb_Any* workgroupCountX, const jb_Any* workgroupCountY, const jb_Any* workgroupCountZ);
+jb_Undefined GPUComputePassEncoder_dispatchWorkgroups2(GPUComputePassEncoder* self , jb_Any * workgroupCountX, jb_Any * workgroupCountY, jb_Any * workgroupCountZ);
 
-jb_Undefined GPUComputePassEncoder_dispatchWorkgroupsIndirect(GPUComputePassEncoder* self , const GPUBuffer* indirectBuffer, const jb_Any* indirectOffset);
+jb_Undefined GPUComputePassEncoder_dispatchWorkgroupsIndirect(GPUComputePassEncoder* self , GPUBuffer * indirectBuffer, jb_Any * indirectOffset);
 
 jb_Undefined GPUComputePassEncoder_end(GPUComputePassEncoder* self );
 
 jb_USVString GPUComputePassEncoder_label( const GPUComputePassEncoder *self);
 
-void GPUComputePassEncoder_set_label(GPUComputePassEncoder* self, const jb_USVString* value);
+void GPUComputePassEncoder_set_label(GPUComputePassEncoder* self, jb_USVString * value);
 
-jb_Undefined GPUComputePassEncoder_pushDebugGroup(GPUComputePassEncoder* self , const jb_USVString* groupLabel);
+jb_Undefined GPUComputePassEncoder_pushDebugGroup(GPUComputePassEncoder* self , jb_USVString * groupLabel);
 
 jb_Undefined GPUComputePassEncoder_popDebugGroup(GPUComputePassEncoder* self );
 
-jb_Undefined GPUComputePassEncoder_insertDebugMarker(GPUComputePassEncoder* self , const jb_USVString* markerLabel);
+jb_Undefined GPUComputePassEncoder_insertDebugMarker(GPUComputePassEncoder* self , jb_USVString * markerLabel);
 
-jb_Undefined GPUComputePassEncoder_setBindGroup(GPUComputePassEncoder* self , const jb_Any* index, const GPUBindGroup* bindGroup, const jb_Uint32Array* dynamicOffsetsData, const jb_Any* dynamicOffsetsDataStart, const jb_Any* dynamicOffsetsDataLength);
+jb_Undefined GPUComputePassEncoder_setBindGroup(GPUComputePassEncoder* self , jb_Any * index, GPUBindGroup * bindGroup, jb_Uint32Array * dynamicOffsetsData, jb_Any * dynamicOffsetsDataStart, jb_Any * dynamicOffsetsDataLength);

@@ -7,11 +7,6 @@
 typedef struct DOMMatrix DOMMatrix;
 
 
-typedef struct {
-  em_Val inner;
-} CSSTransformComponent;
-
-
 DECLARE_EMLITE_TYPE(CSSTransformComponent, em_Val);
 
 bool CSSTransformComponent_is2D( const CSSTransformComponent *self);

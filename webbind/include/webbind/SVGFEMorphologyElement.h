@@ -11,11 +11,6 @@ typedef struct SVGAnimatedNumber SVGAnimatedNumber;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEMorphologyElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEMorphologyElement, SVGElement);
 
 SVGAnimatedString SVGFEMorphologyElement_in1( const SVGFEMorphologyElement *self);

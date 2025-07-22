@@ -5,22 +5,22 @@ DEFINE_EMLITE_TYPE(MediaDeviceInfo, em_Val);
 
 
 jb_DOMString MediaDeviceInfo_deviceId(const MediaDeviceInfo *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "deviceId"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("deviceId")));
 }
 
 
 MediaDeviceKind MediaDeviceInfo_kind(const MediaDeviceInfo *self) {
-    return em_Val_as(MediaDeviceKind, em_Val_get(em_Val_as_val(self->inner), "kind"));
+    return em_Val_as(MediaDeviceKind, em_Val_get(em_Val_as_val(self->inner), em_Val_from("kind")));
 }
 
 
 jb_DOMString MediaDeviceInfo_label(const MediaDeviceInfo *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "label"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
 jb_DOMString MediaDeviceInfo_groupId(const MediaDeviceInfo *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "groupId"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("groupId")));
 }
 
 

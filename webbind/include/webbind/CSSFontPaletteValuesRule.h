@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSRule inner;
-} CSSFontPaletteValuesRule;
-
-
 DECLARE_EMLITE_TYPE(CSSFontPaletteValuesRule, CSSRule);
 
 jb_CSSOMString CSSFontPaletteValuesRule_name( const CSSFontPaletteValuesRule *self);

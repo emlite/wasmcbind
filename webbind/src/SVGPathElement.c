@@ -8,19 +8,19 @@ DEFINE_EMLITE_TYPE(SVGPathDataSettings, em_Val);
 
 
 bool SVGPathDataSettings_normalize(const SVGPathDataSettings *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "normalize"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("normalize")));
 }
 
 
 void SVGPathDataSettings_set_normalize(SVGPathDataSettings* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "normalize", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("normalize"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(SVGPathElement, SVGGeometryElement);
 
 
 SVGAnimatedNumber SVGPathElement_pathLength(const SVGPathElement *self) {
-    return em_Val_as(SVGAnimatedNumber, em_Val_get(SVGGeometryElement_as_val(self->inner), "pathLength"));
+    return em_Val_as(SVGAnimatedNumber, em_Val_get(SVGGeometryElement_as_val(self->inner), em_Val_from("pathLength")));
 }
 
 
@@ -39,17 +39,17 @@ SVGPathSegment SVGPathElement_getPathSegmentAtLength(SVGPathElement* self , floa
 }
 
 
-jb_Sequence SVGPathElement_getPathData(SVGPathElement* self ) {
+jb_Sequence SVGPathElement_getPathData0(SVGPathElement* self ) {
     return em_Val_as(jb_Sequence, em_Val_call(SVGGeometryElement_as_val(self->inner), "getPathData"));
 }
 
 
-jb_Sequence SVGPathElement_getPathData(SVGPathElement* self , const SVGPathDataSettings* settings) {
+jb_Sequence SVGPathElement_getPathData1(SVGPathElement* self , SVGPathDataSettings * settings) {
     return em_Val_as(jb_Sequence, em_Val_call(SVGGeometryElement_as_val(self->inner), "getPathData", em_Val_from(settings)));
 }
 
 
-jb_Undefined SVGPathElement_setPathData(SVGPathElement* self , const jb_Sequence* pathData) {
+jb_Undefined SVGPathElement_setPathData(SVGPathElement* self , jb_Sequence * pathData) {
     return em_Val_as(jb_Undefined, em_Val_call(SVGGeometryElement_as_val(self->inner), "setPathData", em_Val_from(pathData)));
 }
 

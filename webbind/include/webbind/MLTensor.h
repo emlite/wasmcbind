@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} MLTensor;
-
-
 DECLARE_EMLITE_TYPE(MLTensor, em_Val);
 
 MLOperandDataType MLTensor_dataType( const MLTensor *self);

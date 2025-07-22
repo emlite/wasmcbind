@@ -11,11 +11,6 @@ typedef struct StorageInterestGroup StorageInterestGroup;
 typedef struct SharedStorageWorkletNavigator SharedStorageWorkletNavigator;
 
 
-typedef struct {
-  em_Val inner;
-} StorageInterestGroup;
-
-
 DECLARE_EMLITE_TYPE(StorageInterestGroup, em_Val);
 
 long long StorageInterestGroup_joinCount( const StorageInterestGroup *self);
@@ -28,11 +23,11 @@ void StorageInterestGroup_set_bidCount(StorageInterestGroup* self, long long val
 
 jb_Sequence StorageInterestGroup_prevWinsMs( const StorageInterestGroup *self);
 
-void StorageInterestGroup_set_prevWinsMs(StorageInterestGroup* self, const jb_Sequence* value);
+void StorageInterestGroup_set_prevWinsMs(StorageInterestGroup* self, jb_Sequence * value);
 
 jb_USVString StorageInterestGroup_joiningOrigin( const StorageInterestGroup *self);
 
-void StorageInterestGroup_set_joiningOrigin(StorageInterestGroup* self, const jb_USVString* value);
+void StorageInterestGroup_set_joiningOrigin(StorageInterestGroup* self, jb_USVString * value);
 
 long long StorageInterestGroup_timeSinceGroupJoinedMs( const StorageInterestGroup *self);
 
@@ -53,14 +48,9 @@ void StorageInterestGroup_set_timeUntilNextUpdateMs(StorageInterestGroup* self, 
 long long StorageInterestGroup_estimatedSize( const StorageInterestGroup *self);
 
 void StorageInterestGroup_set_estimatedSize(StorageInterestGroup* self, long long value);
-typedef struct {
-  WorkletGlobalScope inner;
-} SharedStorageWorkletGlobalScope;
-
-
 DECLARE_EMLITE_TYPE(SharedStorageWorkletGlobalScope, WorkletGlobalScope);
 
-jb_Undefined SharedStorageWorkletGlobalScope_register_(SharedStorageWorkletGlobalScope* self , const jb_DOMString* name, const jb_Function* operationCtor);
+jb_Undefined SharedStorageWorkletGlobalScope_register_(SharedStorageWorkletGlobalScope* self , jb_DOMString * name, jb_Function * operationCtor);
 
 SharedStorage SharedStorageWorkletGlobalScope_sharedStorage( const SharedStorageWorkletGlobalScope *self);
 

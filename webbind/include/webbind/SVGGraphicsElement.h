@@ -12,11 +12,6 @@ typedef struct DOMMatrix DOMMatrix;
 typedef struct SVGStringList SVGStringList;
 
 
-typedef struct {
-  em_Val inner;
-} SVGBoundingBoxOptions;
-
-
 DECLARE_EMLITE_TYPE(SVGBoundingBoxOptions, em_Val);
 
 bool SVGBoundingBoxOptions_fill( const SVGBoundingBoxOptions *self);
@@ -34,18 +29,13 @@ void SVGBoundingBoxOptions_set_markers(SVGBoundingBoxOptions* self, bool value);
 bool SVGBoundingBoxOptions_clipped( const SVGBoundingBoxOptions *self);
 
 void SVGBoundingBoxOptions_set_clipped(SVGBoundingBoxOptions* self, bool value);
-typedef struct {
-  SVGElement inner;
-} SVGGraphicsElement;
-
-
 DECLARE_EMLITE_TYPE(SVGGraphicsElement, SVGElement);
 
 SVGAnimatedTransformList SVGGraphicsElement_transform( const SVGGraphicsElement *self);
 
-DOMRect SVGGraphicsElement_getBBox(SVGGraphicsElement* self );
+DOMRect SVGGraphicsElement_getBBox0(SVGGraphicsElement* self );
 
-DOMRect SVGGraphicsElement_getBBox(SVGGraphicsElement* self , const SVGBoundingBoxOptions* options);
+DOMRect SVGGraphicsElement_getBBox1(SVGGraphicsElement* self , SVGBoundingBoxOptions * options);
 
 DOMMatrix SVGGraphicsElement_getCTM(SVGGraphicsElement* self );
 

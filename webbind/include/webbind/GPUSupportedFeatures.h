@@ -5,9 +5,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} GPUSupportedFeatures;
-
-
 DECLARE_EMLITE_TYPE(GPUSupportedFeatures, em_Val);

@@ -5,9 +5,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} FragmentDirective;
-
-
 DECLARE_EMLITE_TYPE(FragmentDirective, em_Val);

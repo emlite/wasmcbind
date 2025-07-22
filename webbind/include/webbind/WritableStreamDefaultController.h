@@ -7,15 +7,10 @@
 typedef struct AbortSignal AbortSignal;
 
 
-typedef struct {
-  em_Val inner;
-} WritableStreamDefaultController;
-
-
 DECLARE_EMLITE_TYPE(WritableStreamDefaultController, em_Val);
 
 AbortSignal WritableStreamDefaultController_signal( const WritableStreamDefaultController *self);
 
-jb_Undefined WritableStreamDefaultController_error(WritableStreamDefaultController* self );
+jb_Undefined WritableStreamDefaultController_error0(WritableStreamDefaultController* self );
 
-jb_Undefined WritableStreamDefaultController_error(WritableStreamDefaultController* self , const jb_Any* e);
+jb_Undefined WritableStreamDefaultController_error1(WritableStreamDefaultController* self , jb_Any * e);

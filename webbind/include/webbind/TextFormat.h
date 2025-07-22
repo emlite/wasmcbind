@@ -5,16 +5,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} TextFormat;
-
-
 DECLARE_EMLITE_TYPE(TextFormat, em_Val);
 
-TextFormat TextFormat_new();
+TextFormat TextFormat_new0();
 
-TextFormat TextFormat_new(const jb_Any* options);
+TextFormat TextFormat_new1(jb_Any * options);
 
 unsigned long TextFormat_rangeStart( const TextFormat *self);
 

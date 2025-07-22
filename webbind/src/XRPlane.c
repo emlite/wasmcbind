@@ -7,26 +7,26 @@ DEFINE_EMLITE_TYPE(XRPlane, em_Val);
 
 
 XRSpace XRPlane_planeSpace(const XRPlane *self) {
-    return em_Val_as(XRSpace, em_Val_get(em_Val_as_val(self->inner), "planeSpace"));
+    return em_Val_as(XRSpace, em_Val_get(em_Val_as_val(self->inner), em_Val_from("planeSpace")));
 }
 
 
 jb_FrozenArray XRPlane_polygon(const XRPlane *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), "polygon"));
+    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("polygon")));
 }
 
 
 XRPlaneOrientation XRPlane_orientation(const XRPlane *self) {
-    return em_Val_as(XRPlaneOrientation, em_Val_get(em_Val_as_val(self->inner), "orientation"));
+    return em_Val_as(XRPlaneOrientation, em_Val_get(em_Val_as_val(self->inner), em_Val_from("orientation")));
 }
 
 
 jb_Any XRPlane_lastChangedTime(const XRPlane *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "lastChangedTime"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lastChangedTime")));
 }
 
 
 jb_DOMString XRPlane_semanticLabel(const XRPlane *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "semanticLabel"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("semanticLabel")));
 }
 

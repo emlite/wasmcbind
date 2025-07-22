@@ -5,9 +5,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} DOMStringMap;
-
-
 DECLARE_EMLITE_TYPE(DOMStringMap, em_Val);

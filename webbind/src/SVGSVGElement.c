@@ -20,178 +20,178 @@ DEFINE_EMLITE_TYPE(DOMMatrix2DInit, em_Val);
 
 
 double DOMMatrix2DInit_a(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "a"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("a")));
 }
 
 
 void DOMMatrix2DInit_set_a(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "a", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("a"), em_Val_from(value));
 }
 
 
 double DOMMatrix2DInit_b(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "b"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("b")));
 }
 
 
 void DOMMatrix2DInit_set_b(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "b", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("b"), em_Val_from(value));
 }
 
 
 double DOMMatrix2DInit_c(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "c"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("c")));
 }
 
 
 void DOMMatrix2DInit_set_c(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "c", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("c"), em_Val_from(value));
 }
 
 
 double DOMMatrix2DInit_d(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "d"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("d")));
 }
 
 
 void DOMMatrix2DInit_set_d(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "d", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("d"), em_Val_from(value));
 }
 
 
 double DOMMatrix2DInit_e(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "e"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("e")));
 }
 
 
 void DOMMatrix2DInit_set_e(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "e", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("e"), em_Val_from(value));
 }
 
 
 double DOMMatrix2DInit_f(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "f"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("f")));
 }
 
 
 void DOMMatrix2DInit_set_f(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "f", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("f"), em_Val_from(value));
 }
 
 
 double DOMMatrix2DInit_m11(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "m11"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("m11")));
 }
 
 
 void DOMMatrix2DInit_set_m11(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "m11", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("m11"), em_Val_from(value));
 }
 
 
 double DOMMatrix2DInit_m12(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "m12"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("m12")));
 }
 
 
 void DOMMatrix2DInit_set_m12(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "m12", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("m12"), em_Val_from(value));
 }
 
 
 double DOMMatrix2DInit_m21(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "m21"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("m21")));
 }
 
 
 void DOMMatrix2DInit_set_m21(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "m21", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("m21"), em_Val_from(value));
 }
 
 
 double DOMMatrix2DInit_m22(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "m22"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("m22")));
 }
 
 
 void DOMMatrix2DInit_set_m22(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "m22", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("m22"), em_Val_from(value));
 }
 
 
 double DOMMatrix2DInit_m41(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "m41"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("m41")));
 }
 
 
 void DOMMatrix2DInit_set_m41(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "m41", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("m41"), em_Val_from(value));
 }
 
 
 double DOMMatrix2DInit_m42(const DOMMatrix2DInit *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "m42"));
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("m42")));
 }
 
 
 void DOMMatrix2DInit_set_m42(DOMMatrix2DInit* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), "m42", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("m42"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(SVGSVGElement, SVGGraphicsElement);
 
 
 SVGAnimatedLength SVGSVGElement_x(const SVGSVGElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), "x"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("x")));
 }
 
 
 SVGAnimatedLength SVGSVGElement_y(const SVGSVGElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), "y"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("y")));
 }
 
 
 SVGAnimatedLength SVGSVGElement_width(const SVGSVGElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), "width"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
 SVGAnimatedLength SVGSVGElement_height(const SVGSVGElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), "height"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
 float SVGSVGElement_currentScale(const SVGSVGElement *self) {
-    return em_Val_as(float, em_Val_get(SVGGraphicsElement_as_val(self->inner), "currentScale"));
+    return em_Val_as(float, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("currentScale")));
 }
 
 
 void SVGSVGElement_set_currentScale(SVGSVGElement* self, float value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "currentScale", value);
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("currentScale"), em_Val_from(value));
 }
 
 
 DOMPointReadOnly SVGSVGElement_currentTranslate(const SVGSVGElement *self) {
-    return em_Val_as(DOMPointReadOnly, em_Val_get(SVGGraphicsElement_as_val(self->inner), "currentTranslate"));
+    return em_Val_as(DOMPointReadOnly, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("currentTranslate")));
 }
 
 
-NodeList SVGSVGElement_getIntersectionList(SVGSVGElement* self , const DOMRectReadOnly* rect, const SVGElement* referenceElement) {
+NodeList SVGSVGElement_getIntersectionList(SVGSVGElement* self , DOMRectReadOnly * rect, SVGElement * referenceElement) {
     return em_Val_as(NodeList, em_Val_call(SVGGraphicsElement_as_val(self->inner), "getIntersectionList", em_Val_from(rect), em_Val_from(referenceElement)));
 }
 
 
-NodeList SVGSVGElement_getEnclosureList(SVGSVGElement* self , const DOMRectReadOnly* rect, const SVGElement* referenceElement) {
+NodeList SVGSVGElement_getEnclosureList(SVGSVGElement* self , DOMRectReadOnly * rect, SVGElement * referenceElement) {
     return em_Val_as(NodeList, em_Val_call(SVGGraphicsElement_as_val(self->inner), "getEnclosureList", em_Val_from(rect), em_Val_from(referenceElement)));
 }
 
 
-bool SVGSVGElement_checkIntersection(SVGSVGElement* self , const SVGElement* element, const DOMRectReadOnly* rect) {
+bool SVGSVGElement_checkIntersection(SVGSVGElement* self , SVGElement * element, DOMRectReadOnly * rect) {
     return em_Val_as(bool, em_Val_call(SVGGraphicsElement_as_val(self->inner), "checkIntersection", em_Val_from(element), em_Val_from(rect)));
 }
 
 
-bool SVGSVGElement_checkEnclosure(SVGSVGElement* self , const SVGElement* element, const DOMRectReadOnly* rect) {
+bool SVGSVGElement_checkEnclosure(SVGSVGElement* self , SVGElement * element, DOMRectReadOnly * rect) {
     return em_Val_as(bool, em_Val_call(SVGGraphicsElement_as_val(self->inner), "checkEnclosure", em_Val_from(element), em_Val_from(rect)));
 }
 
@@ -236,17 +236,17 @@ SVGTransform SVGSVGElement_createSVGTransform(SVGSVGElement* self ) {
 }
 
 
-SVGTransform SVGSVGElement_createSVGTransformFromMatrix(SVGSVGElement* self ) {
+SVGTransform SVGSVGElement_createSVGTransformFromMatrix0(SVGSVGElement* self ) {
     return em_Val_as(SVGTransform, em_Val_call(SVGGraphicsElement_as_val(self->inner), "createSVGTransformFromMatrix"));
 }
 
 
-SVGTransform SVGSVGElement_createSVGTransformFromMatrix(SVGSVGElement* self , const DOMMatrix2DInit* matrix) {
+SVGTransform SVGSVGElement_createSVGTransformFromMatrix1(SVGSVGElement* self , DOMMatrix2DInit * matrix) {
     return em_Val_as(SVGTransform, em_Val_call(SVGGraphicsElement_as_val(self->inner), "createSVGTransformFromMatrix", em_Val_from(matrix)));
 }
 
 
-Element SVGSVGElement_getElementById(SVGSVGElement* self , const jb_DOMString* elementId) {
+Element SVGSVGElement_getElementById(SVGSVGElement* self , jb_DOMString * elementId) {
     return em_Val_as(Element, em_Val_call(SVGGraphicsElement_as_val(self->inner), "getElementById", em_Val_from(elementId)));
 }
 
@@ -297,21 +297,21 @@ jb_Undefined SVGSVGElement_setCurrentTime(SVGSVGElement* self , float seconds) {
 
 
 SVGAnimatedRect SVGSVGElement_viewBox(const SVGSVGElement *self) {
-    return em_Val_as(SVGAnimatedRect, em_Val_get(SVGGraphicsElement_as_val(self->inner), "viewBox"));
+    return em_Val_as(SVGAnimatedRect, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("viewBox")));
 }
 
 
 SVGAnimatedPreserveAspectRatio SVGSVGElement_preserveAspectRatio(const SVGSVGElement *self) {
-    return em_Val_as(SVGAnimatedPreserveAspectRatio, em_Val_get(SVGGraphicsElement_as_val(self->inner), "preserveAspectRatio"));
+    return em_Val_as(SVGAnimatedPreserveAspectRatio, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("preserveAspectRatio")));
 }
 
 
 jb_Any SVGSVGElement_onportalactivate(const SVGSVGElement *self) {
-    return em_Val_as(jb_Any, em_Val_get(SVGGraphicsElement_as_val(self->inner), "onportalactivate"));
+    return em_Val_as(jb_Any, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("onportalactivate")));
 }
 
 
-void SVGSVGElement_set_onportalactivate(SVGSVGElement* self, const jb_Any* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "onportalactivate", value);
+void SVGSVGElement_set_onportalactivate(SVGSVGElement* self, jb_Any * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("onportalactivate"), em_Val_from(value));
 }
 

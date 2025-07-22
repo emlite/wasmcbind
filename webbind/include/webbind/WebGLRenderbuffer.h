@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  WebGLObject inner;
-} WebGLRenderbuffer;
-
-
 DECLARE_EMLITE_TYPE(WebGLRenderbuffer, WebGLObject);

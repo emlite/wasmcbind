@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  SVGTextPositioningElement inner;
-} SVGTextElement;
-
-
 DECLARE_EMLITE_TYPE(SVGTextElement, SVGTextPositioningElement);

@@ -8,18 +8,21 @@
 DEFINE_EMLITE_TYPE(Response, em_Val);
 
 
-Response Response_new() : em_Val(em_Val_global("Response").new_()) {
-        return Response(em_Val_new(em_Val_global("Response", ));
+Response Response_new0() {
+        em_Val vv = em_Val_new(em_Val_global("Response") );
+        return Response_from_val(&vv);
       }
 
 
-Response Response_new(const jb_Any* body) : em_Val(em_Val_global("Response").new_(em_Val_from(body))) {
-        return Response(em_Val_new(em_Val_global("Response", em_Val_from(body)));
+Response Response_new1(jb_Any * body) {
+        em_Val vv = em_Val_new(em_Val_global("Response") , em_Val_from(body));
+        return Response_from_val(&vv);
       }
 
 
-Response Response_new(const jb_Any* body, const jb_Any* init) : em_Val(em_Val_global("Response").new_(em_Val_from(body), em_Val_from(init))) {
-        return Response(em_Val_new(em_Val_global("Response", em_Val_from(body), em_Val_from(init)));
+Response Response_new2(jb_Any * body, jb_Any * init) {
+        em_Val vv = em_Val_new(em_Val_global("Response") , em_Val_from(body), em_Val_from(init));
+        return Response_from_val(&vv);
       }
 
 
@@ -28,12 +31,12 @@ Response Response_error(Response* self ) {
 }
 
 
-Response Response_redirect(Response* self , const jb_USVString* url) {
+Response Response_redirect0(Response* self , jb_USVString * url) {
     return em_Val_as(Response, em_Val_call(em_Val_global("response"), "redirect", em_Val_from(url)));
 }
 
 
-Response Response_redirect(Response* self , const jb_USVString* url, unsigned short status) {
+Response Response_redirect1(Response* self , jb_USVString * url, unsigned short status) {
     return em_Val_as(Response, em_Val_call(em_Val_global("response"), "redirect", em_Val_from(url), em_Val_from(status)));
 }
 
@@ -44,37 +47,37 @@ jb_Promise Response_json(Response* self ) {
 
 
 ResponseType Response_type(const Response *self) {
-    return em_Val_as(ResponseType, em_Val_get(em_Val_as_val(self->inner), "type"));
+    return em_Val_as(ResponseType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
 jb_USVString Response_url(const Response *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "url"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 
 bool Response_redirected(const Response *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "redirected"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("redirected")));
 }
 
 
 unsigned short Response_status(const Response *self) {
-    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), "status"));
+    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), em_Val_from("status")));
 }
 
 
 bool Response_ok(const Response *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "ok"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ok")));
 }
 
 
 jb_ByteString Response_statusText(const Response *self) {
-    return em_Val_as(jb_ByteString, em_Val_get(em_Val_as_val(self->inner), "statusText"));
+    return em_Val_as(jb_ByteString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("statusText")));
 }
 
 
 Headers Response_headers(const Response *self) {
-    return em_Val_as(Headers, em_Val_get(em_Val_as_val(self->inner), "headers"));
+    return em_Val_as(Headers, em_Val_get(em_Val_as_val(self->inner), em_Val_from("headers")));
 }
 
 
@@ -84,12 +87,12 @@ Response Response_clone(Response* self ) {
 
 
 ReadableStream Response_body(const Response *self) {
-    return em_Val_as(ReadableStream, em_Val_get(em_Val_as_val(self->inner), "body"));
+    return em_Val_as(ReadableStream, em_Val_get(em_Val_as_val(self->inner), em_Val_from("body")));
 }
 
 
 bool Response_bodyUsed(const Response *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "bodyUsed"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("bodyUsed")));
 }
 
 

@@ -8,12 +8,12 @@ DEFINE_EMLITE_TYPE(FileSystemCreateWritableOptions, em_Val);
 
 
 bool FileSystemCreateWritableOptions_keepExistingData(const FileSystemCreateWritableOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "keepExistingData"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("keepExistingData")));
 }
 
 
 void FileSystemCreateWritableOptions_set_keepExistingData(FileSystemCreateWritableOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "keepExistingData", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("keepExistingData"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(FileSystemFileHandle, FileSystemHandle);
@@ -24,12 +24,12 @@ jb_Promise FileSystemFileHandle_getFile(FileSystemFileHandle* self ) {
 }
 
 
-jb_Promise FileSystemFileHandle_createWritable(FileSystemFileHandle* self ) {
+jb_Promise FileSystemFileHandle_createWritable0(FileSystemFileHandle* self ) {
     return em_Val_as(jb_Promise, em_Val_call(FileSystemHandle_as_val(self->inner), "createWritable"));
 }
 
 
-jb_Promise FileSystemFileHandle_createWritable(FileSystemFileHandle* self , const FileSystemCreateWritableOptions* options) {
+jb_Promise FileSystemFileHandle_createWritable1(FileSystemFileHandle* self , FileSystemCreateWritableOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(FileSystemHandle_as_val(self->inner), "createWritable", em_Val_from(options)));
 }
 

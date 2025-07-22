@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} WebGLActiveInfo;
-
-
 DECLARE_EMLITE_TYPE(WebGLActiveInfo, em_Val);
 
 jb_Any WebGLActiveInfo_size( const WebGLActiveInfo *self);

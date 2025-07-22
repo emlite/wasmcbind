@@ -9,35 +9,25 @@ typedef struct USBDevice USBDevice;
 typedef struct USBDeviceRequestOptions USBDeviceRequestOptions;
 
 
-typedef struct {
-  em_Val inner;
-} USBDeviceRequestOptions;
-
-
 DECLARE_EMLITE_TYPE(USBDeviceRequestOptions, em_Val);
 
 jb_Sequence USBDeviceRequestOptions_filters( const USBDeviceRequestOptions *self);
 
-void USBDeviceRequestOptions_set_filters(USBDeviceRequestOptions* self, const jb_Sequence* value);
+void USBDeviceRequestOptions_set_filters(USBDeviceRequestOptions* self, jb_Sequence * value);
 
 jb_Sequence USBDeviceRequestOptions_exclusionFilters( const USBDeviceRequestOptions *self);
 
-void USBDeviceRequestOptions_set_exclusionFilters(USBDeviceRequestOptions* self, const jb_Sequence* value);
-typedef struct {
-  EventTarget inner;
-} USB;
-
-
+void USBDeviceRequestOptions_set_exclusionFilters(USBDeviceRequestOptions* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(USB, EventTarget);
 
 jb_Any USB_onconnect( const USB *self);
 
-void USB_set_onconnect(USB* self, const jb_Any* value);
+void USB_set_onconnect(USB* self, jb_Any * value);
 
 jb_Any USB_ondisconnect( const USB *self);
 
-void USB_set_ondisconnect(USB* self, const jb_Any* value);
+void USB_set_ondisconnect(USB* self, jb_Any * value);
 
 jb_Promise USB_getDevices(USB* self );
 
-jb_Promise USB_requestDevice(USB* self , const USBDeviceRequestOptions* options);
+jb_Promise USB_requestDevice(USB* self , USBDeviceRequestOptions * options);

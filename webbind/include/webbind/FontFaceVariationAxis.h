@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} FontFaceVariationAxis;
-
-
 DECLARE_EMLITE_TYPE(FontFaceVariationAxis, em_Val);
 
 jb_DOMString FontFaceVariationAxis_name( const FontFaceVariationAxis *self);

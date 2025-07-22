@@ -7,15 +7,10 @@
 typedef struct Module Module;
 
 
-typedef struct {
-  em_Val inner;
-} Instance;
-
-
 DECLARE_EMLITE_TYPE(Instance, em_Val);
 
-Instance Instance_new(const Module* module_);
+Instance Instance_new0(Module * module_);
 
-Instance Instance_new(const Module* module_, const jb_Object* importObject);
+Instance Instance_new1(Module * module_, jb_Object * importObject);
 
 jb_Object Instance_exports( const Instance *self);

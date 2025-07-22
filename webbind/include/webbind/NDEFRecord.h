@@ -7,14 +7,9 @@
 typedef struct NDEFRecord NDEFRecord;
 
 
-typedef struct {
-  em_Val inner;
-} NDEFRecord;
-
-
 DECLARE_EMLITE_TYPE(NDEFRecord, em_Val);
 
-NDEFRecord NDEFRecord_new(const jb_Any* recordInit);
+NDEFRecord NDEFRecord_new(jb_Any * recordInit);
 
 jb_USVString NDEFRecord_recordType( const NDEFRecord *self);
 

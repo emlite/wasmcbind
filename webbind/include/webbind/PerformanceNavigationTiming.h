@@ -8,11 +8,6 @@
 typedef struct NotRestoredReasons NotRestoredReasons;
 
 
-typedef struct {
-  PerformanceResourceTiming inner;
-} PerformanceNavigationTiming;
-
-
 DECLARE_EMLITE_TYPE(PerformanceNavigationTiming, PerformanceResourceTiming);
 
 jb_Any PerformanceNavigationTiming_unloadEventStart( const PerformanceNavigationTiming *self);

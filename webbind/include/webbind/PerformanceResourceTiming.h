@@ -8,11 +8,6 @@
 typedef struct PerformanceServerTiming PerformanceServerTiming;
 
 
-typedef struct {
-  PerformanceEntry inner;
-} PerformanceResourceTiming;
-
-
 DECLARE_EMLITE_TYPE(PerformanceResourceTiming, PerformanceEntry);
 
 jb_DOMString PerformanceResourceTiming_initiatorType( const PerformanceResourceTiming *self);

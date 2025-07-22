@@ -6,7 +6,7 @@ DEFINE_EMLITE_TYPE(TouchList, em_Val);
 
 
 unsigned long TouchList_length(const TouchList *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "length"));
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("length")));
 }
 
 

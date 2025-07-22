@@ -8,16 +8,11 @@
 typedef struct Element Element;
 
 
-typedef struct {
-  AnimationTimeline inner;
-} ScrollTimeline;
-
-
 DECLARE_EMLITE_TYPE(ScrollTimeline, AnimationTimeline);
 
-ScrollTimeline ScrollTimeline_new();
+ScrollTimeline ScrollTimeline_new0();
 
-ScrollTimeline ScrollTimeline_new(const jb_Any* options);
+ScrollTimeline ScrollTimeline_new1(jb_Any * options);
 
 Element ScrollTimeline_source( const ScrollTimeline *self);
 

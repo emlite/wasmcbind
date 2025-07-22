@@ -5,17 +5,19 @@
 DEFINE_EMLITE_TYPE(DragEvent, MouseEvent);
 
 
-DragEvent DragEvent_new(const jb_DOMString* type) : MouseEvent(em_Val_global("DragEvent").new_(em_Val_from(type))) {
-        return DragEvent(em_Val_new(em_Val_global("DragEvent", em_Val_from(type)));
+DragEvent DragEvent_new0(jb_DOMString * type) {
+        em_Val vv = em_Val_new(em_Val_global("DragEvent") , em_Val_from(type));
+        return DragEvent_from_val(&vv);
       }
 
 
-DragEvent DragEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict) : MouseEvent(em_Val_global("DragEvent").new_(em_Val_from(type), em_Val_from(eventInitDict))) {
-        return DragEvent(em_Val_new(em_Val_global("DragEvent", em_Val_from(type), em_Val_from(eventInitDict)));
+DragEvent DragEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("DragEvent") , em_Val_from(type), em_Val_from(eventInitDict));
+        return DragEvent_from_val(&vv);
       }
 
 
 DataTransfer DragEvent_dataTransfer(const DragEvent *self) {
-    return em_Val_as(DataTransfer, em_Val_get(MouseEvent_as_val(self->inner), "dataTransfer"));
+    return em_Val_as(DataTransfer, em_Val_get(MouseEvent_as_val(self->inner), em_Val_from("dataTransfer")));
 }
 

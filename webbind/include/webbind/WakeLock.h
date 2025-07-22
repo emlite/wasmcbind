@@ -7,13 +7,8 @@
 typedef struct WakeLockSentinel WakeLockSentinel;
 
 
-typedef struct {
-  em_Val inner;
-} WakeLock;
-
-
 DECLARE_EMLITE_TYPE(WakeLock, em_Val);
 
-jb_Promise WakeLock_request(WakeLock* self );
+jb_Promise WakeLock_request0(WakeLock* self );
 
-jb_Promise WakeLock_request(WakeLock* self , const WakeLockType* type);
+jb_Promise WakeLock_request1(WakeLock* self , WakeLockType * type);

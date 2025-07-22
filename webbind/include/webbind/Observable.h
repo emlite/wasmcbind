@@ -9,85 +9,75 @@ typedef struct Observable Observable;
 typedef struct AbortSignal AbortSignal;
 
 
-typedef struct {
-  em_Val inner;
-} SubscribeOptions;
-
-
 DECLARE_EMLITE_TYPE(SubscribeOptions, em_Val);
 
 AbortSignal SubscribeOptions_signal( const SubscribeOptions *self);
 
-void SubscribeOptions_set_signal(SubscribeOptions* self, const AbortSignal* value);
-typedef struct {
-  em_Val inner;
-} Observable;
-
-
+void SubscribeOptions_set_signal(SubscribeOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(Observable, em_Val);
 
-Observable Observable_new(const jb_Function* callback);
+Observable Observable_new(jb_Function * callback);
 
-jb_Undefined Observable_subscribe(Observable* self );
+jb_Undefined Observable_subscribe0(Observable* self );
 
-jb_Undefined Observable_subscribe(Observable* self , const jb_Any* observer);
+jb_Undefined Observable_subscribe1(Observable* self , jb_Any * observer);
 
-jb_Undefined Observable_subscribe(Observable* self , const jb_Any* observer, const SubscribeOptions* options);
+jb_Undefined Observable_subscribe2(Observable* self , jb_Any * observer, SubscribeOptions * options);
 
-Observable Observable_from(Observable* self , const jb_Any* value);
+Observable Observable_from(Observable* self , jb_Any * value);
 
-Observable Observable_takeUntil(Observable* self , const jb_Any* value);
+Observable Observable_takeUntil(Observable* self , jb_Any * value);
 
-Observable Observable_map(Observable* self , const jb_Function* mapper);
+Observable Observable_map(Observable* self , jb_Function * mapper);
 
-Observable Observable_filter(Observable* self , const jb_Function* predicate);
+Observable Observable_filter(Observable* self , jb_Function * predicate);
 
 Observable Observable_take(Observable* self , long long amount);
 
 Observable Observable_drop(Observable* self , long long amount);
 
-Observable Observable_flatMap(Observable* self , const jb_Function* mapper);
+Observable Observable_flatMap(Observable* self , jb_Function * mapper);
 
-Observable Observable_switchMap(Observable* self , const jb_Function* mapper);
+Observable Observable_switchMap(Observable* self , jb_Function * mapper);
 
-Observable Observable_inspect(Observable* self );
+Observable Observable_inspect0(Observable* self );
 
-Observable Observable_inspect(Observable* self , const jb_Any* inspectorUnion);
+Observable Observable_inspect1(Observable* self , jb_Any * inspectorUnion);
 
-Observable Observable_catch_(Observable* self , const jb_Function* callback);
+Observable Observable_catch_(Observable* self , jb_Function * callback);
 
-Observable Observable_finally(Observable* self , const jb_Any* callback);
+Observable Observable_finally(Observable* self , jb_Any * callback);
 
-jb_Promise Observable_toArray(Observable* self );
+jb_Promise Observable_toArray0(Observable* self );
 
-jb_Promise Observable_toArray(Observable* self , const SubscribeOptions* options);
+jb_Promise Observable_toArray1(Observable* self , SubscribeOptions * options);
 
-jb_Promise Observable_forEach(Observable* self , const jb_Function* callback);
+jb_Promise Observable_forEach0(Observable* self , jb_Function * callback);
 
-jb_Promise Observable_forEach(Observable* self , const jb_Function* callback, const SubscribeOptions* options);
+jb_Promise Observable_forEach1(Observable* self , jb_Function * callback, SubscribeOptions * options);
 
-jb_Promise Observable_every(Observable* self , const jb_Function* predicate);
+jb_Promise Observable_every0(Observable* self , jb_Function * predicate);
 
-jb_Promise Observable_every(Observable* self , const jb_Function* predicate, const SubscribeOptions* options);
+jb_Promise Observable_every1(Observable* self , jb_Function * predicate, SubscribeOptions * options);
 
-jb_Promise Observable_first(Observable* self );
+jb_Promise Observable_first0(Observable* self );
 
-jb_Promise Observable_first(Observable* self , const SubscribeOptions* options);
+jb_Promise Observable_first1(Observable* self , SubscribeOptions * options);
 
-jb_Promise Observable_last(Observable* self );
+jb_Promise Observable_last0(Observable* self );
 
-jb_Promise Observable_last(Observable* self , const SubscribeOptions* options);
+jb_Promise Observable_last1(Observable* self , SubscribeOptions * options);
 
-jb_Promise Observable_find(Observable* self , const jb_Function* predicate);
+jb_Promise Observable_find0(Observable* self , jb_Function * predicate);
 
-jb_Promise Observable_find(Observable* self , const jb_Function* predicate, const SubscribeOptions* options);
+jb_Promise Observable_find1(Observable* self , jb_Function * predicate, SubscribeOptions * options);
 
-jb_Promise Observable_some(Observable* self , const jb_Function* predicate);
+jb_Promise Observable_some0(Observable* self , jb_Function * predicate);
 
-jb_Promise Observable_some(Observable* self , const jb_Function* predicate, const SubscribeOptions* options);
+jb_Promise Observable_some1(Observable* self , jb_Function * predicate, SubscribeOptions * options);
 
-jb_Promise Observable_reduce(Observable* self , const jb_Function* reducer);
+jb_Promise Observable_reduce0(Observable* self , jb_Function * reducer);
 
-jb_Promise Observable_reduce(Observable* self , const jb_Function* reducer, const jb_Any* initialValue);
+jb_Promise Observable_reduce1(Observable* self , jb_Function * reducer, jb_Any * initialValue);
 
-jb_Promise Observable_reduce(Observable* self , const jb_Function* reducer, const jb_Any* initialValue, const SubscribeOptions* options);
+jb_Promise Observable_reduce2(Observable* self , jb_Function * reducer, jb_Any * initialValue, SubscribeOptions * options);

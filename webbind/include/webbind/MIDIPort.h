@@ -8,11 +8,6 @@
 typedef struct MIDIPort MIDIPort;
 
 
-typedef struct {
-  EventTarget inner;
-} MIDIPort;
-
-
 DECLARE_EMLITE_TYPE(MIDIPort, EventTarget);
 
 jb_DOMString MIDIPort_id( const MIDIPort *self);
@@ -31,7 +26,7 @@ MIDIPortConnectionState MIDIPort_connection( const MIDIPort *self);
 
 jb_Any MIDIPort_onstatechange( const MIDIPort *self);
 
-void MIDIPort_set_onstatechange(MIDIPort* self, const jb_Any* value);
+void MIDIPort_set_onstatechange(MIDIPort* self, jb_Any * value);
 
 jb_Promise MIDIPort_open(MIDIPort* self );
 

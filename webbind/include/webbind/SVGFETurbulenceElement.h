@@ -12,11 +12,6 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 typedef struct SVGAnimatedString SVGAnimatedString;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFETurbulenceElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFETurbulenceElement, SVGElement);
 
 SVGAnimatedNumber SVGFETurbulenceElement_baseFrequencyX( const SVGFETurbulenceElement *self);

@@ -6,47 +6,47 @@ DEFINE_EMLITE_TYPE(AudioListener, em_Val);
 
 
 AudioParam AudioListener_positionX(const AudioListener *self) {
-    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), "positionX"));
+    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), em_Val_from("positionX")));
 }
 
 
 AudioParam AudioListener_positionY(const AudioListener *self) {
-    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), "positionY"));
+    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), em_Val_from("positionY")));
 }
 
 
 AudioParam AudioListener_positionZ(const AudioListener *self) {
-    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), "positionZ"));
+    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), em_Val_from("positionZ")));
 }
 
 
 AudioParam AudioListener_forwardX(const AudioListener *self) {
-    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), "forwardX"));
+    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), em_Val_from("forwardX")));
 }
 
 
 AudioParam AudioListener_forwardY(const AudioListener *self) {
-    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), "forwardY"));
+    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), em_Val_from("forwardY")));
 }
 
 
 AudioParam AudioListener_forwardZ(const AudioListener *self) {
-    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), "forwardZ"));
+    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), em_Val_from("forwardZ")));
 }
 
 
 AudioParam AudioListener_upX(const AudioListener *self) {
-    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), "upX"));
+    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), em_Val_from("upX")));
 }
 
 
 AudioParam AudioListener_upY(const AudioListener *self) {
-    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), "upY"));
+    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), em_Val_from("upY")));
 }
 
 
 AudioParam AudioListener_upZ(const AudioListener *self) {
-    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), "upZ"));
+    return em_Val_as(AudioParam, em_Val_get(em_Val_as_val(self->inner), em_Val_from("upZ")));
 }
 
 

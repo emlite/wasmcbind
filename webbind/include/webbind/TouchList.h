@@ -7,11 +7,6 @@
 typedef struct Touch Touch;
 
 
-typedef struct {
-  em_Val inner;
-} TouchList;
-
-
 DECLARE_EMLITE_TYPE(TouchList, em_Val);
 
 unsigned long TouchList_length( const TouchList *self);

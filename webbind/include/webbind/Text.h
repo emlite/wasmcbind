@@ -13,35 +13,30 @@ typedef struct DOMPoint DOMPoint;
 typedef struct HTMLSlotElement HTMLSlotElement;
 
 
-typedef struct {
-  CharacterData inner;
-} Text;
-
-
 DECLARE_EMLITE_TYPE(Text, CharacterData);
 
-Text Text_new();
+Text Text_new0();
 
-Text Text_new(const jb_DOMString* data);
+Text Text_new1(jb_DOMString * data);
 
 Text Text_splitText(Text* self , unsigned long offset);
 
 jb_DOMString Text_wholeText( const Text *self);
 
-jb_Sequence Text_getBoxQuads(Text* self );
+jb_Sequence Text_getBoxQuads0(Text* self );
 
-jb_Sequence Text_getBoxQuads(Text* self , const BoxQuadOptions* options);
+jb_Sequence Text_getBoxQuads1(Text* self , BoxQuadOptions * options);
 
-DOMQuad Text_convertQuadFromNode(Text* self , const DOMQuadInit* quad, const jb_Any* from);
+DOMQuad Text_convertQuadFromNode0(Text* self , DOMQuadInit * quad, jb_Any * from);
 
-DOMQuad Text_convertQuadFromNode(Text* self , const DOMQuadInit* quad, const jb_Any* from, const ConvertCoordinateOptions* options);
+DOMQuad Text_convertQuadFromNode1(Text* self , DOMQuadInit * quad, jb_Any * from, ConvertCoordinateOptions * options);
 
-DOMQuad Text_convertRectFromNode(Text* self , const DOMRectReadOnly* rect, const jb_Any* from);
+DOMQuad Text_convertRectFromNode0(Text* self , DOMRectReadOnly * rect, jb_Any * from);
 
-DOMQuad Text_convertRectFromNode(Text* self , const DOMRectReadOnly* rect, const jb_Any* from, const ConvertCoordinateOptions* options);
+DOMQuad Text_convertRectFromNode1(Text* self , DOMRectReadOnly * rect, jb_Any * from, ConvertCoordinateOptions * options);
 
-DOMPoint Text_convertPointFromNode(Text* self , const DOMPointInit* point, const jb_Any* from);
+DOMPoint Text_convertPointFromNode0(Text* self , DOMPointInit * point, jb_Any * from);
 
-DOMPoint Text_convertPointFromNode(Text* self , const DOMPointInit* point, const jb_Any* from, const ConvertCoordinateOptions* options);
+DOMPoint Text_convertPointFromNode1(Text* self , DOMPointInit * point, jb_Any * from, ConvertCoordinateOptions * options);
 
 HTMLSlotElement Text_assignedSlot( const Text *self);

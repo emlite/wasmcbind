@@ -5,18 +5,13 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} DOMException;
-
-
 DECLARE_EMLITE_TYPE(DOMException, em_Val);
 
-DOMException DOMException_new();
+DOMException DOMException_new0();
 
-DOMException DOMException_new(const jb_DOMString* message);
+DOMException DOMException_new1(jb_DOMString * message);
 
-DOMException DOMException_new(const jb_DOMString* message, const jb_DOMString* name);
+DOMException DOMException_new2(jb_DOMString * message, jb_DOMString * name);
 
 jb_DOMString DOMException_name( const DOMException *self);
 

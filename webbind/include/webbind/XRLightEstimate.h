@@ -7,11 +7,6 @@
 typedef struct DOMPointReadOnly DOMPointReadOnly;
 
 
-typedef struct {
-  em_Val inner;
-} XRLightEstimate;
-
-
 DECLARE_EMLITE_TYPE(XRLightEstimate, em_Val);
 
 jb_Float32Array XRLightEstimate_sphericalHarmonicsCoefficients( const XRLightEstimate *self);

@@ -8,11 +8,6 @@
 typedef struct LayoutShiftAttribution LayoutShiftAttribution;
 
 
-typedef struct {
-  PerformanceEntry inner;
-} LayoutShift;
-
-
 DECLARE_EMLITE_TYPE(LayoutShift, PerformanceEntry);
 
 double LayoutShift_value( const LayoutShift *self);

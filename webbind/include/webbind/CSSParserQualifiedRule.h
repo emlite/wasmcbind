@@ -8,16 +8,11 @@
 typedef struct CSSParserValue CSSParserValue;
 
 
-typedef struct {
-  CSSParserRule inner;
-} CSSParserQualifiedRule;
-
-
 DECLARE_EMLITE_TYPE(CSSParserQualifiedRule, CSSParserRule);
 
-CSSParserQualifiedRule CSSParserQualifiedRule_new(const jb_Sequence* prelude);
+CSSParserQualifiedRule CSSParserQualifiedRule_new0(jb_Sequence * prelude);
 
-CSSParserQualifiedRule CSSParserQualifiedRule_new(const jb_Sequence* prelude, const jb_Sequence* body);
+CSSParserQualifiedRule CSSParserQualifiedRule_new1(jb_Sequence * prelude, jb_Sequence * body);
 
 jb_FrozenArray CSSParserQualifiedRule_prelude( const CSSParserQualifiedRule *self);
 

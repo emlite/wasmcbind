@@ -8,16 +8,11 @@
 typedef struct MessagePort MessagePort;
 
 
-typedef struct {
-  ExtendableEvent inner;
-} ExtendableMessageEvent;
-
-
 DECLARE_EMLITE_TYPE(ExtendableMessageEvent, ExtendableEvent);
 
-ExtendableMessageEvent ExtendableMessageEvent_new(const jb_DOMString* type);
+ExtendableMessageEvent ExtendableMessageEvent_new0(jb_DOMString * type);
 
-ExtendableMessageEvent ExtendableMessageEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+ExtendableMessageEvent ExtendableMessageEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 jb_Any ExtendableMessageEvent_data( const ExtendableMessageEvent *self);
 

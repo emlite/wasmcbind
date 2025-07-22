@@ -6,27 +6,27 @@ DEFINE_EMLITE_TYPE(LargestContentfulPaint, PerformanceEntry);
 
 
 jb_Any LargestContentfulPaint_loadTime(const LargestContentfulPaint *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "loadTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("loadTime")));
 }
 
 
 unsigned long LargestContentfulPaint_size(const LargestContentfulPaint *self) {
-    return em_Val_as(unsigned long, em_Val_get(PerformanceEntry_as_val(self->inner), "size"));
+    return em_Val_as(unsigned long, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("size")));
 }
 
 
 jb_DOMString LargestContentfulPaint_id(const LargestContentfulPaint *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "id"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("id")));
 }
 
 
 jb_DOMString LargestContentfulPaint_url(const LargestContentfulPaint *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "url"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("url")));
 }
 
 
 Element LargestContentfulPaint_element(const LargestContentfulPaint *self) {
-    return em_Val_as(Element, em_Val_get(PerformanceEntry_as_val(self->inner), "element"));
+    return em_Val_as(Element, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("element")));
 }
 
 
@@ -36,11 +36,11 @@ jb_Object LargestContentfulPaint_toJSON(LargestContentfulPaint* self ) {
 
 
 jb_Any LargestContentfulPaint_paintTime(const LargestContentfulPaint *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "paintTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("paintTime")));
 }
 
 
 jb_Any LargestContentfulPaint_presentationTime(const LargestContentfulPaint *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "presentationTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("presentationTime")));
 }
 

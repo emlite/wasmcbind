@@ -8,16 +8,11 @@
 typedef struct EventTarget EventTarget;
 
 
-typedef struct {
-  UIEvent inner;
-} NavigationEvent;
-
-
 DECLARE_EMLITE_TYPE(NavigationEvent, UIEvent);
 
-NavigationEvent NavigationEvent_new(const jb_DOMString* type);
+NavigationEvent NavigationEvent_new0(jb_DOMString * type);
 
-NavigationEvent NavigationEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+NavigationEvent NavigationEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 SpatialNavigationDirection NavigationEvent_dir( const NavigationEvent *self);
 

@@ -9,58 +9,48 @@ typedef struct NotificationAction NotificationAction;
 typedef struct NotificationOptions NotificationOptions;
 
 
-typedef struct {
-  em_Val inner;
-} NotificationAction;
-
-
 DECLARE_EMLITE_TYPE(NotificationAction, em_Val);
 
 jb_DOMString NotificationAction_action( const NotificationAction *self);
 
-void NotificationAction_set_action(NotificationAction* self, const jb_DOMString* value);
+void NotificationAction_set_action(NotificationAction* self, jb_DOMString * value);
 
 jb_DOMString NotificationAction_title( const NotificationAction *self);
 
-void NotificationAction_set_title(NotificationAction* self, const jb_DOMString* value);
+void NotificationAction_set_title(NotificationAction* self, jb_DOMString * value);
 
 jb_USVString NotificationAction_icon( const NotificationAction *self);
 
-void NotificationAction_set_icon(NotificationAction* self, const jb_USVString* value);
-typedef struct {
-  EventTarget inner;
-} Notification;
-
-
+void NotificationAction_set_icon(NotificationAction* self, jb_USVString * value);
 DECLARE_EMLITE_TYPE(Notification, EventTarget);
 
-Notification Notification_new(const jb_DOMString* title);
+Notification Notification_new0(jb_DOMString * title);
 
-Notification Notification_new(const jb_DOMString* title, const NotificationOptions* options);
+Notification Notification_new1(jb_DOMString * title, NotificationOptions * options);
 
 NotificationPermission Notification_permission( Notification *self);
 
-jb_Promise Notification_requestPermission(Notification* self );
+jb_Promise Notification_requestPermission0(Notification* self );
 
-jb_Promise Notification_requestPermission(Notification* self , const jb_Function* deprecatedCallback);
+jb_Promise Notification_requestPermission1(Notification* self , jb_Function * deprecatedCallback);
 
 unsigned long Notification_maxActions( Notification *self);
 
 jb_Any Notification_onclick( const Notification *self);
 
-void Notification_set_onclick(Notification* self, const jb_Any* value);
+void Notification_set_onclick(Notification* self, jb_Any * value);
 
 jb_Any Notification_onshow( const Notification *self);
 
-void Notification_set_onshow(Notification* self, const jb_Any* value);
+void Notification_set_onshow(Notification* self, jb_Any * value);
 
 jb_Any Notification_onerror( const Notification *self);
 
-void Notification_set_onerror(Notification* self, const jb_Any* value);
+void Notification_set_onerror(Notification* self, jb_Any * value);
 
 jb_Any Notification_onclose( const Notification *self);
 
-void Notification_set_onclose(Notification* self, const jb_Any* value);
+void Notification_set_onclose(Notification* self, jb_Any * value);
 
 jb_DOMString Notification_title( const Notification *self);
 

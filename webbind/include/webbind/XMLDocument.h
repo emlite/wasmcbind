@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  Document inner;
-} XMLDocument;
-
-
 DECLARE_EMLITE_TYPE(XMLDocument, Document);

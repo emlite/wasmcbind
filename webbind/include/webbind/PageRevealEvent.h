@@ -8,15 +8,10 @@
 typedef struct ViewTransition ViewTransition;
 
 
-typedef struct {
-  Event inner;
-} PageRevealEvent;
-
-
 DECLARE_EMLITE_TYPE(PageRevealEvent, Event);
 
-PageRevealEvent PageRevealEvent_new(const jb_DOMString* type);
+PageRevealEvent PageRevealEvent_new0(jb_DOMString * type);
 
-PageRevealEvent PageRevealEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+PageRevealEvent PageRevealEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 ViewTransition PageRevealEvent_viewTransition( const PageRevealEvent *self);

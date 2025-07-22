@@ -6,14 +6,9 @@
 #include "enums.h"
 
 
-typedef struct {
-  Credential inner;
-} FederatedCredential;
-
-
 DECLARE_EMLITE_TYPE(FederatedCredential, Credential);
 
-FederatedCredential FederatedCredential_new(const jb_Any* data);
+FederatedCredential FederatedCredential_new(jb_Any * data);
 
 jb_USVString FederatedCredential_provider( const FederatedCredential *self);
 

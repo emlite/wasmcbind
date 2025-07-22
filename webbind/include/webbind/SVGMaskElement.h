@@ -9,11 +9,6 @@ typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGMaskElement;
-
-
 DECLARE_EMLITE_TYPE(SVGMaskElement, SVGElement);
 
 SVGAnimatedEnumeration SVGMaskElement_maskUnits( const SVGMaskElement *self);

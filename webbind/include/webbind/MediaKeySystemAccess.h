@@ -8,11 +8,6 @@
 typedef struct MediaKeys MediaKeys;
 
 
-typedef struct {
-  em_Val inner;
-} MediaKeySystemAccess;
-
-
 DECLARE_EMLITE_TYPE(MediaKeySystemAccess, em_Val);
 
 jb_DOMString MediaKeySystemAccess_keySystem( const MediaKeySystemAccess *self);

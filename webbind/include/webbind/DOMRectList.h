@@ -7,11 +7,6 @@
 typedef struct DOMRect DOMRect;
 
 
-typedef struct {
-  em_Val inner;
-} DOMRectList;
-
-
 DECLARE_EMLITE_TYPE(DOMRectList, em_Val);
 
 unsigned long DOMRectList_length( const DOMRectList *self);

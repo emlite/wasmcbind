@@ -8,21 +8,21 @@ DEFINE_EMLITE_TYPE(SVGTextPathElement, SVGTextContentElement);
 
 
 SVGAnimatedLength SVGTextPathElement_startOffset(const SVGTextPathElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGTextContentElement_as_val(self->inner), "startOffset"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGTextContentElement_as_val(self->inner), em_Val_from("startOffset")));
 }
 
 
 SVGAnimatedEnumeration SVGTextPathElement_method(const SVGTextPathElement *self) {
-    return em_Val_as(SVGAnimatedEnumeration, em_Val_get(SVGTextContentElement_as_val(self->inner), "method"));
+    return em_Val_as(SVGAnimatedEnumeration, em_Val_get(SVGTextContentElement_as_val(self->inner), em_Val_from("method")));
 }
 
 
 SVGAnimatedEnumeration SVGTextPathElement_spacing(const SVGTextPathElement *self) {
-    return em_Val_as(SVGAnimatedEnumeration, em_Val_get(SVGTextContentElement_as_val(self->inner), "spacing"));
+    return em_Val_as(SVGAnimatedEnumeration, em_Val_get(SVGTextContentElement_as_val(self->inner), em_Val_from("spacing")));
 }
 
 
 SVGAnimatedString SVGTextPathElement_href(const SVGTextPathElement *self) {
-    return em_Val_as(SVGAnimatedString, em_Val_get(SVGTextContentElement_as_val(self->inner), "href"));
+    return em_Val_as(SVGAnimatedString, em_Val_get(SVGTextContentElement_as_val(self->inner), em_Val_from("href")));
 }
 

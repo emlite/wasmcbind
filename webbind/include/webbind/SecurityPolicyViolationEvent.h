@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} SecurityPolicyViolationEvent;
-
-
 DECLARE_EMLITE_TYPE(SecurityPolicyViolationEvent, Event);
 
-SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new(const jb_DOMString* type);
+SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new0(jb_DOMString * type);
 
-SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 jb_USVString SecurityPolicyViolationEvent_documentURI( const SecurityPolicyViolationEvent *self);
 

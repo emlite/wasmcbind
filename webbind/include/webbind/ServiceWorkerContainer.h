@@ -10,42 +10,32 @@ typedef struct ServiceWorkerRegistration ServiceWorkerRegistration;
 typedef struct RegistrationOptions RegistrationOptions;
 
 
-typedef struct {
-  em_Val inner;
-} RegistrationOptions;
-
-
 DECLARE_EMLITE_TYPE(RegistrationOptions, em_Val);
 
 jb_USVString RegistrationOptions_scope( const RegistrationOptions *self);
 
-void RegistrationOptions_set_scope(RegistrationOptions* self, const jb_USVString* value);
+void RegistrationOptions_set_scope(RegistrationOptions* self, jb_USVString * value);
 
 WorkerType RegistrationOptions_type( const RegistrationOptions *self);
 
-void RegistrationOptions_set_type(RegistrationOptions* self, const WorkerType* value);
+void RegistrationOptions_set_type(RegistrationOptions* self, WorkerType * value);
 
 ServiceWorkerUpdateViaCache RegistrationOptions_updateViaCache( const RegistrationOptions *self);
 
-void RegistrationOptions_set_updateViaCache(RegistrationOptions* self, const ServiceWorkerUpdateViaCache* value);
-typedef struct {
-  EventTarget inner;
-} ServiceWorkerContainer;
-
-
+void RegistrationOptions_set_updateViaCache(RegistrationOptions* self, ServiceWorkerUpdateViaCache * value);
 DECLARE_EMLITE_TYPE(ServiceWorkerContainer, EventTarget);
 
 ServiceWorker ServiceWorkerContainer_controller( const ServiceWorkerContainer *self);
 
 jb_Promise ServiceWorkerContainer_ready( const ServiceWorkerContainer *self);
 
-jb_Promise ServiceWorkerContainer_register_(ServiceWorkerContainer* self , const jb_Any* scriptURL);
+jb_Promise ServiceWorkerContainer_register_0(ServiceWorkerContainer* self , jb_Any * scriptURL);
 
-jb_Promise ServiceWorkerContainer_register_(ServiceWorkerContainer* self , const jb_Any* scriptURL, const RegistrationOptions* options);
+jb_Promise ServiceWorkerContainer_register_1(ServiceWorkerContainer* self , jb_Any * scriptURL, RegistrationOptions * options);
 
-jb_Promise ServiceWorkerContainer_getRegistration(ServiceWorkerContainer* self );
+jb_Promise ServiceWorkerContainer_getRegistration0(ServiceWorkerContainer* self );
 
-jb_Promise ServiceWorkerContainer_getRegistration(ServiceWorkerContainer* self , const jb_USVString* clientURL);
+jb_Promise ServiceWorkerContainer_getRegistration1(ServiceWorkerContainer* self , jb_USVString * clientURL);
 
 jb_Promise ServiceWorkerContainer_getRegistrations(ServiceWorkerContainer* self );
 
@@ -53,12 +43,12 @@ jb_Undefined ServiceWorkerContainer_startMessages(ServiceWorkerContainer* self )
 
 jb_Any ServiceWorkerContainer_oncontrollerchange( const ServiceWorkerContainer *self);
 
-void ServiceWorkerContainer_set_oncontrollerchange(ServiceWorkerContainer* self, const jb_Any* value);
+void ServiceWorkerContainer_set_oncontrollerchange(ServiceWorkerContainer* self, jb_Any * value);
 
 jb_Any ServiceWorkerContainer_onmessage( const ServiceWorkerContainer *self);
 
-void ServiceWorkerContainer_set_onmessage(ServiceWorkerContainer* self, const jb_Any* value);
+void ServiceWorkerContainer_set_onmessage(ServiceWorkerContainer* self, jb_Any * value);
 
 jb_Any ServiceWorkerContainer_onmessageerror( const ServiceWorkerContainer *self);
 
-void ServiceWorkerContainer_set_onmessageerror(ServiceWorkerContainer* self, const jb_Any* value);
+void ServiceWorkerContainer_set_onmessageerror(ServiceWorkerContainer* self, jb_Any * value);

@@ -9,15 +9,10 @@ typedef struct XRReferenceSpace XRReferenceSpace;
 typedef struct XRRigidTransform XRRigidTransform;
 
 
-typedef struct {
-  XRSpace inner;
-} XRReferenceSpace;
-
-
 DECLARE_EMLITE_TYPE(XRReferenceSpace, XRSpace);
 
-XRReferenceSpace XRReferenceSpace_getOffsetReferenceSpace(XRReferenceSpace* self , const XRRigidTransform* originOffset);
+XRReferenceSpace XRReferenceSpace_getOffsetReferenceSpace(XRReferenceSpace* self , XRRigidTransform * originOffset);
 
 jb_Any XRReferenceSpace_onreset( const XRReferenceSpace *self);
 
-void XRReferenceSpace_set_onreset(XRReferenceSpace* self, const jb_Any* value);
+void XRReferenceSpace_set_onreset(XRReferenceSpace* self, jb_Any * value);

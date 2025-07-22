@@ -8,15 +8,10 @@
 typedef struct DataTransfer DataTransfer;
 
 
-typedef struct {
-  Event inner;
-} ClipboardEvent;
-
-
 DECLARE_EMLITE_TYPE(ClipboardEvent, Event);
 
-ClipboardEvent ClipboardEvent_new(const jb_DOMString* type);
+ClipboardEvent ClipboardEvent_new0(jb_DOMString * type);
 
-ClipboardEvent ClipboardEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+ClipboardEvent ClipboardEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 DataTransfer ClipboardEvent_clipboardData( const ClipboardEvent *self);

@@ -10,11 +10,6 @@ typedef struct SVGAnimatedNumber SVGAnimatedNumber;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEOffsetElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEOffsetElement, SVGElement);
 
 SVGAnimatedString SVGFEOffsetElement_in1( const SVGFEOffsetElement *self);

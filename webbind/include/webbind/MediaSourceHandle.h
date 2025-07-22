@@ -5,9 +5,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} MediaSourceHandle;
-
-
 DECLARE_EMLITE_TYPE(MediaSourceHandle, em_Val);

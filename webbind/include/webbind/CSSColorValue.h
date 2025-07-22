@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSStyleValue inner;
-} CSSColorValue;
-
-
 DECLARE_EMLITE_TYPE(CSSColorValue, CSSStyleValue);
 
-jb_Any CSSColorValue_parse(CSSColorValue* self , const jb_USVString* cssText);
+jb_Any CSSColorValue_parse(CSSColorValue* self , jb_USVString * cssText);

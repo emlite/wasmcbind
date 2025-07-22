@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} DeviceMotionEventAcceleration;
-
-
 DECLARE_EMLITE_TYPE(DeviceMotionEventAcceleration, em_Val);
 
 double DeviceMotionEventAcceleration_x( const DeviceMotionEventAcceleration *self);

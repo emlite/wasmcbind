@@ -5,12 +5,13 @@
 DEFINE_EMLITE_TYPE(MediaStreamTrackEvent, Event);
 
 
-MediaStreamTrackEvent MediaStreamTrackEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict) : Event(em_Val_global("MediaStreamTrackEvent").new_(em_Val_from(type), em_Val_from(eventInitDict))) {
-        return MediaStreamTrackEvent(em_Val_new(em_Val_global("MediaStreamTrackEvent", em_Val_from(type), em_Val_from(eventInitDict)));
+MediaStreamTrackEvent MediaStreamTrackEvent_new(jb_DOMString * type, jb_Any * eventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("MediaStreamTrackEvent") , em_Val_from(type), em_Val_from(eventInitDict));
+        return MediaStreamTrackEvent_from_val(&vv);
       }
 
 
 MediaStreamTrack MediaStreamTrackEvent_track(const MediaStreamTrackEvent *self) {
-    return em_Val_as(MediaStreamTrack, em_Val_get(Event_as_val(self->inner), "track"));
+    return em_Val_as(MediaStreamTrack, em_Val_get(Event_as_val(self->inner), em_Val_from("track")));
 }
 

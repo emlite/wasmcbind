@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLDirectoryElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLDirectoryElement, HTMLElement);
 
 HTMLDirectoryElement HTMLDirectoryElement_new();

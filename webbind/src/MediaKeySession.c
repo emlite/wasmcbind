@@ -6,56 +6,56 @@ DEFINE_EMLITE_TYPE(MediaKeySession, EventTarget);
 
 
 jb_DOMString MediaKeySession_sessionId(const MediaKeySession *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), "sessionId"));
+    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("sessionId")));
 }
 
 
 double MediaKeySession_expiration(const MediaKeySession *self) {
-    return em_Val_as(double, em_Val_get(EventTarget_as_val(self->inner), "expiration"));
+    return em_Val_as(double, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("expiration")));
 }
 
 
 jb_Promise MediaKeySession_closed(const MediaKeySession *self) {
-    return em_Val_as(jb_Promise, em_Val_get(EventTarget_as_val(self->inner), "closed"));
+    return em_Val_as(jb_Promise, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("closed")));
 }
 
 
 MediaKeyStatusMap MediaKeySession_keyStatuses(const MediaKeySession *self) {
-    return em_Val_as(MediaKeyStatusMap, em_Val_get(EventTarget_as_val(self->inner), "keyStatuses"));
+    return em_Val_as(MediaKeyStatusMap, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("keyStatuses")));
 }
 
 
 jb_Any MediaKeySession_onkeystatuseschange(const MediaKeySession *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onkeystatuseschange"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onkeystatuseschange")));
 }
 
 
-void MediaKeySession_set_onkeystatuseschange(MediaKeySession* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onkeystatuseschange", value);
+void MediaKeySession_set_onkeystatuseschange(MediaKeySession* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onkeystatuseschange"), em_Val_from(value));
 }
 
 
 jb_Any MediaKeySession_onmessage(const MediaKeySession *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onmessage"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onmessage")));
 }
 
 
-void MediaKeySession_set_onmessage(MediaKeySession* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onmessage", value);
+void MediaKeySession_set_onmessage(MediaKeySession* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onmessage"), em_Val_from(value));
 }
 
 
-jb_Promise MediaKeySession_generateRequest(MediaKeySession* self , const jb_DOMString* initDataType, const jb_Any* initData) {
+jb_Promise MediaKeySession_generateRequest(MediaKeySession* self , jb_DOMString * initDataType, jb_Any * initData) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "generateRequest", em_Val_from(initDataType), em_Val_from(initData)));
 }
 
 
-jb_Promise MediaKeySession_load(MediaKeySession* self , const jb_DOMString* sessionId) {
+jb_Promise MediaKeySession_load(MediaKeySession* self , jb_DOMString * sessionId) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "load", em_Val_from(sessionId)));
 }
 
 
-jb_Promise MediaKeySession_update(MediaKeySession* self , const jb_Any* response) {
+jb_Promise MediaKeySession_update(MediaKeySession* self , jb_Any * response) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "update", em_Val_from(response)));
 }
 

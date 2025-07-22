@@ -7,181 +7,181 @@ DEFINE_EMLITE_TYPE(SVGAElement, SVGGraphicsElement);
 
 
 SVGAnimatedString SVGAElement_target(const SVGAElement *self) {
-    return em_Val_as(SVGAnimatedString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "target"));
+    return em_Val_as(SVGAnimatedString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("target")));
 }
 
 
 jb_DOMString SVGAElement_download(const SVGAElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "download"));
+    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("download")));
 }
 
 
-void SVGAElement_set_download(SVGAElement* self, const jb_DOMString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "download", value);
+void SVGAElement_set_download(SVGAElement* self, jb_DOMString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("download"), em_Val_from(value));
 }
 
 
 jb_USVString SVGAElement_ping(const SVGAElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "ping"));
+    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("ping")));
 }
 
 
-void SVGAElement_set_ping(SVGAElement* self, const jb_USVString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "ping", value);
+void SVGAElement_set_ping(SVGAElement* self, jb_USVString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("ping"), em_Val_from(value));
 }
 
 
 jb_DOMString SVGAElement_rel(const SVGAElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "rel"));
+    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("rel")));
 }
 
 
-void SVGAElement_set_rel(SVGAElement* self, const jb_DOMString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "rel", value);
+void SVGAElement_set_rel(SVGAElement* self, jb_DOMString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("rel"), em_Val_from(value));
 }
 
 
 DOMTokenList SVGAElement_relList(const SVGAElement *self) {
-    return em_Val_as(DOMTokenList, em_Val_get(SVGGraphicsElement_as_val(self->inner), "relList"));
+    return em_Val_as(DOMTokenList, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("relList")));
 }
 
 
 jb_DOMString SVGAElement_hreflang(const SVGAElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "hreflang"));
+    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("hreflang")));
 }
 
 
-void SVGAElement_set_hreflang(SVGAElement* self, const jb_DOMString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "hreflang", value);
+void SVGAElement_set_hreflang(SVGAElement* self, jb_DOMString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("hreflang"), em_Val_from(value));
 }
 
 
 jb_DOMString SVGAElement_type(const SVGAElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "type"));
+    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void SVGAElement_set_type(SVGAElement* self, const jb_DOMString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "type", value);
+void SVGAElement_set_type(SVGAElement* self, jb_DOMString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
 jb_DOMString SVGAElement_text(const SVGAElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "text"));
+    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("text")));
 }
 
 
-void SVGAElement_set_text(SVGAElement* self, const jb_DOMString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "text", value);
+void SVGAElement_set_text(SVGAElement* self, jb_DOMString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("text"), em_Val_from(value));
 }
 
 
 jb_DOMString SVGAElement_referrerPolicy(const SVGAElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "referrerPolicy"));
+    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("referrerPolicy")));
 }
 
 
-void SVGAElement_set_referrerPolicy(SVGAElement* self, const jb_DOMString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "referrerPolicy", value);
+void SVGAElement_set_referrerPolicy(SVGAElement* self, jb_DOMString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("referrerPolicy"), em_Val_from(value));
 }
 
 
 jb_USVString SVGAElement_origin(const SVGAElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "origin"));
+    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("origin")));
 }
 
 
 jb_USVString SVGAElement_protocol(const SVGAElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "protocol"));
+    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("protocol")));
 }
 
 
-void SVGAElement_set_protocol(SVGAElement* self, const jb_USVString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "protocol", value);
+void SVGAElement_set_protocol(SVGAElement* self, jb_USVString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("protocol"), em_Val_from(value));
 }
 
 
 jb_USVString SVGAElement_username(const SVGAElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "username"));
+    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("username")));
 }
 
 
-void SVGAElement_set_username(SVGAElement* self, const jb_USVString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "username", value);
+void SVGAElement_set_username(SVGAElement* self, jb_USVString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("username"), em_Val_from(value));
 }
 
 
 jb_USVString SVGAElement_password(const SVGAElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "password"));
+    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("password")));
 }
 
 
-void SVGAElement_set_password(SVGAElement* self, const jb_USVString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "password", value);
+void SVGAElement_set_password(SVGAElement* self, jb_USVString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("password"), em_Val_from(value));
 }
 
 
 jb_USVString SVGAElement_host(const SVGAElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "host"));
+    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("host")));
 }
 
 
-void SVGAElement_set_host(SVGAElement* self, const jb_USVString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "host", value);
+void SVGAElement_set_host(SVGAElement* self, jb_USVString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("host"), em_Val_from(value));
 }
 
 
 jb_USVString SVGAElement_hostname(const SVGAElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "hostname"));
+    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("hostname")));
 }
 
 
-void SVGAElement_set_hostname(SVGAElement* self, const jb_USVString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "hostname", value);
+void SVGAElement_set_hostname(SVGAElement* self, jb_USVString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("hostname"), em_Val_from(value));
 }
 
 
 jb_USVString SVGAElement_port(const SVGAElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "port"));
+    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("port")));
 }
 
 
-void SVGAElement_set_port(SVGAElement* self, const jb_USVString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "port", value);
+void SVGAElement_set_port(SVGAElement* self, jb_USVString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("port"), em_Val_from(value));
 }
 
 
 jb_USVString SVGAElement_pathname(const SVGAElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "pathname"));
+    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("pathname")));
 }
 
 
-void SVGAElement_set_pathname(SVGAElement* self, const jb_USVString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "pathname", value);
+void SVGAElement_set_pathname(SVGAElement* self, jb_USVString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("pathname"), em_Val_from(value));
 }
 
 
 jb_USVString SVGAElement_search(const SVGAElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "search"));
+    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("search")));
 }
 
 
-void SVGAElement_set_search(SVGAElement* self, const jb_USVString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "search", value);
+void SVGAElement_set_search(SVGAElement* self, jb_USVString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("search"), em_Val_from(value));
 }
 
 
 jb_USVString SVGAElement_hash(const SVGAElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "hash"));
+    return em_Val_as(jb_USVString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("hash")));
 }
 
 
-void SVGAElement_set_hash(SVGAElement* self, const jb_USVString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "hash", value);
+void SVGAElement_set_hash(SVGAElement* self, jb_USVString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("hash"), em_Val_from(value));
 }
 
 
 SVGAnimatedString SVGAElement_href(const SVGAElement *self) {
-    return em_Val_as(SVGAnimatedString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "href"));
+    return em_Val_as(SVGAnimatedString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("href")));
 }
 

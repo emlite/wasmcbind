@@ -5,12 +5,12 @@ DEFINE_EMLITE_TYPE(PerformanceNavigation, em_Val);
 
 
 unsigned short PerformanceNavigation_type(const PerformanceNavigation *self) {
-    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), "type"));
+    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
 unsigned short PerformanceNavigation_redirectCount(const PerformanceNavigation *self) {
-    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), "redirectCount"));
+    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), em_Val_from("redirectCount")));
 }
 
 

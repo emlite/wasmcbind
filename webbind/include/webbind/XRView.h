@@ -8,11 +8,6 @@ typedef struct XRCamera XRCamera;
 typedef struct XRRigidTransform XRRigidTransform;
 
 
-typedef struct {
-  em_Val inner;
-} XRView;
-
-
 DECLARE_EMLITE_TYPE(XRView, em_Val);
 
 XREye XRView_eye( const XRView *self);

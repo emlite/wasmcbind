@@ -4,27 +4,29 @@
 DEFINE_EMLITE_TYPE(ProgressEvent, Event);
 
 
-ProgressEvent ProgressEvent_new(const jb_DOMString* type) : Event(em_Val_global("ProgressEvent").new_(em_Val_from(type))) {
-        return ProgressEvent(em_Val_new(em_Val_global("ProgressEvent", em_Val_from(type)));
+ProgressEvent ProgressEvent_new0(jb_DOMString * type) {
+        em_Val vv = em_Val_new(em_Val_global("ProgressEvent") , em_Val_from(type));
+        return ProgressEvent_from_val(&vv);
       }
 
 
-ProgressEvent ProgressEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict) : Event(em_Val_global("ProgressEvent").new_(em_Val_from(type), em_Val_from(eventInitDict))) {
-        return ProgressEvent(em_Val_new(em_Val_global("ProgressEvent", em_Val_from(type), em_Val_from(eventInitDict)));
+ProgressEvent ProgressEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("ProgressEvent") , em_Val_from(type), em_Val_from(eventInitDict));
+        return ProgressEvent_from_val(&vv);
       }
 
 
 bool ProgressEvent_lengthComputable(const ProgressEvent *self) {
-    return em_Val_as(bool, em_Val_get(Event_as_val(self->inner), "lengthComputable"));
+    return em_Val_as(bool, em_Val_get(Event_as_val(self->inner), em_Val_from("lengthComputable")));
 }
 
 
 double ProgressEvent_loaded(const ProgressEvent *self) {
-    return em_Val_as(double, em_Val_get(Event_as_val(self->inner), "loaded"));
+    return em_Val_as(double, em_Val_get(Event_as_val(self->inner), em_Val_from("loaded")));
 }
 
 
 double ProgressEvent_total(const ProgressEvent *self) {
-    return em_Val_as(double, em_Val_get(Event_as_val(self->inner), "total"));
+    return em_Val_as(double, em_Val_get(Event_as_val(self->inner), em_Val_from("total")));
 }
 

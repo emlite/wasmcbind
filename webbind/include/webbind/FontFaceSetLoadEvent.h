@@ -8,15 +8,10 @@
 typedef struct FontFace FontFace;
 
 
-typedef struct {
-  Event inner;
-} FontFaceSetLoadEvent;
-
-
 DECLARE_EMLITE_TYPE(FontFaceSetLoadEvent, Event);
 
-FontFaceSetLoadEvent FontFaceSetLoadEvent_new(const jb_CSSOMString* type);
+FontFaceSetLoadEvent FontFaceSetLoadEvent_new0(jb_CSSOMString * type);
 
-FontFaceSetLoadEvent FontFaceSetLoadEvent_new(const jb_CSSOMString* type, const jb_Any* eventInitDict);
+FontFaceSetLoadEvent FontFaceSetLoadEvent_new1(jb_CSSOMString * type, jb_Any * eventInitDict);
 
 jb_FrozenArray FontFaceSetLoadEvent_fontfaces( const FontFaceSetLoadEvent *self);

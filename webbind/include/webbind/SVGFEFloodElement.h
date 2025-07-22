@@ -9,11 +9,6 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 typedef struct SVGAnimatedString SVGAnimatedString;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEFloodElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEFloodElement, SVGElement);
 
 SVGAnimatedLength SVGFEFloodElement_x( const SVGFEFloodElement *self);

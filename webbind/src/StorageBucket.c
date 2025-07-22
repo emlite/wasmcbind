@@ -9,7 +9,7 @@ DEFINE_EMLITE_TYPE(StorageBucket, em_Val);
 
 
 jb_DOMString StorageBucket_name(const StorageBucket *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
@@ -28,7 +28,7 @@ jb_Promise StorageBucket_estimate(StorageBucket* self ) {
 }
 
 
-jb_Promise StorageBucket_setExpires(StorageBucket* self , const jb_Any* expires) {
+jb_Promise StorageBucket_setExpires(StorageBucket* self , jb_Any * expires) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "setExpires", em_Val_from(expires)));
 }
 
@@ -39,12 +39,12 @@ jb_Promise StorageBucket_expires(StorageBucket* self ) {
 
 
 IDBFactory StorageBucket_indexedDB(const StorageBucket *self) {
-    return em_Val_as(IDBFactory, em_Val_get(em_Val_as_val(self->inner), "indexedDB"));
+    return em_Val_as(IDBFactory, em_Val_get(em_Val_as_val(self->inner), em_Val_from("indexedDB")));
 }
 
 
 CacheStorage StorageBucket_caches(const StorageBucket *self) {
-    return em_Val_as(CacheStorage, em_Val_get(em_Val_as_val(self->inner), "caches"));
+    return em_Val_as(CacheStorage, em_Val_get(em_Val_as_val(self->inner), em_Val_from("caches")));
 }
 
 

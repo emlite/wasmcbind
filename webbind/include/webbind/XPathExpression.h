@@ -8,15 +8,10 @@ typedef struct XPathResult XPathResult;
 typedef struct Node Node;
 
 
-typedef struct {
-  em_Val inner;
-} XPathExpression;
-
-
 DECLARE_EMLITE_TYPE(XPathExpression, em_Val);
 
-XPathResult XPathExpression_evaluate(XPathExpression* self , const Node* contextNode);
+XPathResult XPathExpression_evaluate0(XPathExpression* self , Node * contextNode);
 
-XPathResult XPathExpression_evaluate(XPathExpression* self , const Node* contextNode, unsigned short type);
+XPathResult XPathExpression_evaluate1(XPathExpression* self , Node * contextNode, unsigned short type);
 
-XPathResult XPathExpression_evaluate(XPathExpression* self , const Node* contextNode, unsigned short type, const XPathResult* result);
+XPathResult XPathExpression_evaluate2(XPathExpression* self , Node * contextNode, unsigned short type, XPathResult * result);

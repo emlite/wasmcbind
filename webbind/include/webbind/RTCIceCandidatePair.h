@@ -7,11 +7,6 @@
 typedef struct RTCIceCandidate RTCIceCandidate;
 
 
-typedef struct {
-  em_Val inner;
-} RTCIceCandidatePair;
-
-
 DECLARE_EMLITE_TYPE(RTCIceCandidatePair, em_Val);
 
 RTCIceCandidate RTCIceCandidatePair_local( const RTCIceCandidatePair *self);

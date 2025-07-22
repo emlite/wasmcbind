@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} ImageBitmap;
-
-
 DECLARE_EMLITE_TYPE(ImageBitmap, em_Val);
 
 unsigned long ImageBitmap_width( const ImageBitmap *self);

@@ -6,13 +6,8 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} CanvasPattern;
-
-
 DECLARE_EMLITE_TYPE(CanvasPattern, em_Val);
 
-jb_Undefined CanvasPattern_setTransform(CanvasPattern* self );
+jb_Undefined CanvasPattern_setTransform0(CanvasPattern* self );
 
-jb_Undefined CanvasPattern_setTransform(CanvasPattern* self , const DOMMatrix2DInit* transform);
+jb_Undefined CanvasPattern_setTransform1(CanvasPattern* self , DOMMatrix2DInit * transform);

@@ -8,13 +8,8 @@
 typedef struct MediaStream MediaStream;
 
 
-typedef struct {
-  AudioNode inner;
-} MediaStreamAudioSourceNode;
-
-
 DECLARE_EMLITE_TYPE(MediaStreamAudioSourceNode, AudioNode);
 
-MediaStreamAudioSourceNode MediaStreamAudioSourceNode_new(const AudioContext* context, const jb_Any* options);
+MediaStreamAudioSourceNode MediaStreamAudioSourceNode_new(AudioContext * context, jb_Any * options);
 
 MediaStream MediaStreamAudioSourceNode_mediaStream( const MediaStreamAudioSourceNode *self);

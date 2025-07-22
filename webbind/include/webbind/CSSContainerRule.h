@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSConditionRule inner;
-} CSSContainerRule;
-
-
 DECLARE_EMLITE_TYPE(CSSContainerRule, CSSConditionRule);
 
 jb_CSSOMString CSSContainerRule_containerName( const CSSContainerRule *self);

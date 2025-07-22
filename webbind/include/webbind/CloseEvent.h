@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} CloseEvent;
-
-
 DECLARE_EMLITE_TYPE(CloseEvent, Event);
 
-CloseEvent CloseEvent_new(const jb_DOMString* type);
+CloseEvent CloseEvent_new0(jb_DOMString * type);
 
-CloseEvent CloseEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+CloseEvent CloseEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 bool CloseEvent_wasClean( const CloseEvent *self);
 

@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} HashChangeEvent;
-
-
 DECLARE_EMLITE_TYPE(HashChangeEvent, Event);
 
-HashChangeEvent HashChangeEvent_new(const jb_DOMString* type);
+HashChangeEvent HashChangeEvent_new0(jb_DOMString * type);
 
-HashChangeEvent HashChangeEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+HashChangeEvent HashChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 jb_USVString HashChangeEvent_oldURL( const HashChangeEvent *self);
 

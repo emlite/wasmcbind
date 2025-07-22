@@ -8,41 +8,41 @@ DEFINE_EMLITE_TYPE(SVGImageElement, SVGGraphicsElement);
 
 
 SVGAnimatedLength SVGImageElement_x(const SVGImageElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), "x"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("x")));
 }
 
 
 SVGAnimatedLength SVGImageElement_y(const SVGImageElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), "y"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("y")));
 }
 
 
 SVGAnimatedLength SVGImageElement_width(const SVGImageElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), "width"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
 SVGAnimatedLength SVGImageElement_height(const SVGImageElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), "height"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
 SVGAnimatedPreserveAspectRatio SVGImageElement_preserveAspectRatio(const SVGImageElement *self) {
-    return em_Val_as(SVGAnimatedPreserveAspectRatio, em_Val_get(SVGGraphicsElement_as_val(self->inner), "preserveAspectRatio"));
+    return em_Val_as(SVGAnimatedPreserveAspectRatio, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("preserveAspectRatio")));
 }
 
 
 jb_DOMString SVGImageElement_crossOrigin(const SVGImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "crossOrigin"));
+    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("crossOrigin")));
 }
 
 
-void SVGImageElement_set_crossOrigin(SVGImageElement* self, const jb_DOMString* value) {
-    em_Val_set(SVGGraphicsElement_as_val(self->inner), "crossOrigin", value);
+void SVGImageElement_set_crossOrigin(SVGImageElement* self, jb_DOMString * value) {
+    em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("crossOrigin"), em_Val_from(value));
 }
 
 
 SVGAnimatedString SVGImageElement_href(const SVGImageElement *self) {
-    return em_Val_as(SVGAnimatedString, em_Val_get(SVGGraphicsElement_as_val(self->inner), "href"));
+    return em_Val_as(SVGAnimatedString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("href")));
 }
 

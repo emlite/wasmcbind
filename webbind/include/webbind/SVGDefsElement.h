@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  SVGGraphicsElement inner;
-} SVGDefsElement;
-
-
 DECLARE_EMLITE_TYPE(SVGDefsElement, SVGGraphicsElement);

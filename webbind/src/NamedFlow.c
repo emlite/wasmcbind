@@ -7,12 +7,12 @@ DEFINE_EMLITE_TYPE(NamedFlow, EventTarget);
 
 
 jb_CSSOMString NamedFlow_name(const NamedFlow *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(EventTarget_as_val(self->inner), "name"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
 }
 
 
 bool NamedFlow_overset(const NamedFlow *self) {
-    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), "overset"));
+    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("overset")));
 }
 
 
@@ -22,7 +22,7 @@ jb_Sequence NamedFlow_getRegions(NamedFlow* self ) {
 
 
 short NamedFlow_firstEmptyRegionIndex(const NamedFlow *self) {
-    return em_Val_as(short, em_Val_get(EventTarget_as_val(self->inner), "firstEmptyRegionIndex"));
+    return em_Val_as(short, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("firstEmptyRegionIndex")));
 }
 
 
@@ -31,7 +31,7 @@ jb_Sequence NamedFlow_getContent(NamedFlow* self ) {
 }
 
 
-jb_Sequence NamedFlow_getRegionsByContent(NamedFlow* self , const Node* node) {
+jb_Sequence NamedFlow_getRegionsByContent(NamedFlow* self , Node * node) {
     return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getRegionsByContent", em_Val_from(node)));
 }
 

@@ -8,11 +8,6 @@ typedef struct Node Node;
 typedef struct DOMRect DOMRect;
 
 
-typedef struct {
-  em_Val inner;
-} CaretPosition;
-
-
 DECLARE_EMLITE_TYPE(CaretPosition, em_Val);
 
 Node CaretPosition_offsetNode( const CaretPosition *self);

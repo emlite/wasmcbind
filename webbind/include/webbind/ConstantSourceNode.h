@@ -8,15 +8,10 @@
 typedef struct AudioParam AudioParam;
 
 
-typedef struct {
-  AudioScheduledSourceNode inner;
-} ConstantSourceNode;
-
-
 DECLARE_EMLITE_TYPE(ConstantSourceNode, AudioScheduledSourceNode);
 
-ConstantSourceNode ConstantSourceNode_new(const BaseAudioContext* context);
+ConstantSourceNode ConstantSourceNode_new0(BaseAudioContext * context);
 
-ConstantSourceNode ConstantSourceNode_new(const BaseAudioContext* context, const jb_Any* options);
+ConstantSourceNode ConstantSourceNode_new1(BaseAudioContext * context, jb_Any * options);
 
 AudioParam ConstantSourceNode_offset( const ConstantSourceNode *self);

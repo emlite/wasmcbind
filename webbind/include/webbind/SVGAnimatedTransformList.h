@@ -7,11 +7,6 @@
 typedef struct SVGTransformList SVGTransformList;
 
 
-typedef struct {
-  em_Val inner;
-} SVGAnimatedTransformList;
-
-
 DECLARE_EMLITE_TYPE(SVGAnimatedTransformList, em_Val);
 
 SVGTransformList SVGAnimatedTransformList_baseVal( const SVGAnimatedTransformList *self);

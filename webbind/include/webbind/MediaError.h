@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} MediaError;
-
-
 DECLARE_EMLITE_TYPE(MediaError, em_Val);
 
 unsigned short MediaError_code( const MediaError *self);

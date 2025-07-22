@@ -7,11 +7,6 @@
 typedef struct Node Node;
 
 
-typedef struct {
-  em_Val inner;
-} TreeWalker;
-
-
 DECLARE_EMLITE_TYPE(TreeWalker, em_Val);
 
 Node TreeWalker_root( const TreeWalker *self);
@@ -22,7 +17,7 @@ jb_Function TreeWalker_filter( const TreeWalker *self);
 
 Node TreeWalker_currentNode( const TreeWalker *self);
 
-void TreeWalker_set_currentNode(TreeWalker* self, const Node* value);
+void TreeWalker_set_currentNode(TreeWalker* self, Node * value);
 
 Node TreeWalker_parentNode(TreeWalker* self );
 

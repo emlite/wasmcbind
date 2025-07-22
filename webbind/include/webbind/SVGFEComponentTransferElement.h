@@ -9,11 +9,6 @@ typedef struct SVGAnimatedString SVGAnimatedString;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEComponentTransferElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEComponentTransferElement, SVGElement);
 
 SVGAnimatedString SVGFEComponentTransferElement_in1( const SVGFEComponentTransferElement *self);

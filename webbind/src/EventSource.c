@@ -4,58 +4,60 @@
 DEFINE_EMLITE_TYPE(EventSource, EventTarget);
 
 
-EventSource EventSource_new(const jb_USVString* url) : EventTarget(em_Val_global("EventSource").new_(em_Val_from(url))) {
-        return EventSource(em_Val_new(em_Val_global("EventSource", em_Val_from(url)));
+EventSource EventSource_new0(jb_USVString * url) {
+        em_Val vv = em_Val_new(em_Val_global("EventSource") , em_Val_from(url));
+        return EventSource_from_val(&vv);
       }
 
 
-EventSource EventSource_new(const jb_USVString* url, const jb_Any* eventSourceInitDict) : EventTarget(em_Val_global("EventSource").new_(em_Val_from(url), em_Val_from(eventSourceInitDict))) {
-        return EventSource(em_Val_new(em_Val_global("EventSource", em_Val_from(url), em_Val_from(eventSourceInitDict)));
+EventSource EventSource_new1(jb_USVString * url, jb_Any * eventSourceInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("EventSource") , em_Val_from(url), em_Val_from(eventSourceInitDict));
+        return EventSource_from_val(&vv);
       }
 
 
 jb_USVString EventSource_url(const EventSource *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), "url"));
+    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("url")));
 }
 
 
 bool EventSource_withCredentials(const EventSource *self) {
-    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), "withCredentials"));
+    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("withCredentials")));
 }
 
 
 unsigned short EventSource_readyState(const EventSource *self) {
-    return em_Val_as(unsigned short, em_Val_get(EventTarget_as_val(self->inner), "readyState"));
+    return em_Val_as(unsigned short, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("readyState")));
 }
 
 
 jb_Any EventSource_onopen(const EventSource *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onopen"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onopen")));
 }
 
 
-void EventSource_set_onopen(EventSource* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onopen", value);
+void EventSource_set_onopen(EventSource* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onopen"), em_Val_from(value));
 }
 
 
 jb_Any EventSource_onmessage(const EventSource *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onmessage"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onmessage")));
 }
 
 
-void EventSource_set_onmessage(EventSource* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onmessage", value);
+void EventSource_set_onmessage(EventSource* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onmessage"), em_Val_from(value));
 }
 
 
 jb_Any EventSource_onerror(const EventSource *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onerror"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onerror")));
 }
 
 
-void EventSource_set_onerror(EventSource* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onerror", value);
+void EventSource_set_onerror(EventSource* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onerror"), em_Val_from(value));
 }
 
 

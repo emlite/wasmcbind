@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} MediaEncryptedEvent;
-
-
 DECLARE_EMLITE_TYPE(MediaEncryptedEvent, Event);
 
-MediaEncryptedEvent MediaEncryptedEvent_new(const jb_DOMString* type);
+MediaEncryptedEvent MediaEncryptedEvent_new0(jb_DOMString * type);
 
-MediaEncryptedEvent MediaEncryptedEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+MediaEncryptedEvent MediaEncryptedEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 jb_DOMString MediaEncryptedEvent_initDataType( const MediaEncryptedEvent *self);
 

@@ -6,27 +6,28 @@
 DEFINE_EMLITE_TYPE(VideoTrackGenerator, em_Val);
 
 
-VideoTrackGenerator VideoTrackGenerator_new() : em_Val(em_Val_global("VideoTrackGenerator").new_()) {
-        return VideoTrackGenerator(em_Val_new(em_Val_global("VideoTrackGenerator", ));
+VideoTrackGenerator VideoTrackGenerator_new() {
+        em_Val vv = em_Val_new(em_Val_global("VideoTrackGenerator") );
+        return VideoTrackGenerator_from_val(&vv);
       }
 
 
 WritableStream VideoTrackGenerator_writable(const VideoTrackGenerator *self) {
-    return em_Val_as(WritableStream, em_Val_get(em_Val_as_val(self->inner), "writable"));
+    return em_Val_as(WritableStream, em_Val_get(em_Val_as_val(self->inner), em_Val_from("writable")));
 }
 
 
 bool VideoTrackGenerator_muted(const VideoTrackGenerator *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "muted"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("muted")));
 }
 
 
 void VideoTrackGenerator_set_muted(VideoTrackGenerator* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "muted", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("muted"), em_Val_from(value));
 }
 
 
 MediaStreamTrack VideoTrackGenerator_track(const VideoTrackGenerator *self) {
-    return em_Val_as(MediaStreamTrack, em_Val_get(em_Val_as_val(self->inner), "track"));
+    return em_Val_as(MediaStreamTrack, em_Val_get(em_Val_as_val(self->inner), em_Val_from("track")));
 }
 

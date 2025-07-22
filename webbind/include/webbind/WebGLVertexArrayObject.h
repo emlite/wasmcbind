@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  WebGLObject inner;
-} WebGLVertexArrayObject;
-
-
 DECLARE_EMLITE_TYPE(WebGLVertexArrayObject, WebGLObject);

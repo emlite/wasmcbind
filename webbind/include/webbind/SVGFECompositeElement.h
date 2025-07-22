@@ -11,11 +11,6 @@ typedef struct SVGAnimatedNumber SVGAnimatedNumber;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFECompositeElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFECompositeElement, SVGElement);
 
 SVGAnimatedString SVGFECompositeElement_in1( const SVGFECompositeElement *self);

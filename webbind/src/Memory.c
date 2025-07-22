@@ -4,8 +4,9 @@
 DEFINE_EMLITE_TYPE(Memory, em_Val);
 
 
-Memory Memory_new(const jb_Any* descriptor) : em_Val(em_Val_global("Memory").new_(em_Val_from(descriptor))) {
-        return Memory(em_Val_new(em_Val_global("Memory", em_Val_from(descriptor)));
+Memory Memory_new(jb_Any * descriptor) {
+        em_Val vv = em_Val_new(em_Val_global("Memory") , em_Val_from(descriptor));
+        return Memory_from_val(&vv);
       }
 
 
@@ -25,6 +26,6 @@ jb_ArrayBuffer Memory_toResizableBuffer(Memory* self ) {
 
 
 jb_ArrayBuffer Memory_buffer(const Memory *self) {
-    return em_Val_as(jb_ArrayBuffer, em_Val_get(em_Val_as_val(self->inner), "buffer"));
+    return em_Val_as(jb_ArrayBuffer, em_Val_get(em_Val_as_val(self->inner), em_Val_from("buffer")));
 }
 

@@ -10,6 +10,6 @@ jb_Any IdleDeadline_timeRemaining(IdleDeadline* self ) {
 
 
 bool IdleDeadline_didTimeout(const IdleDeadline *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "didTimeout"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("didTimeout")));
 }
 

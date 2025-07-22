@@ -12,32 +12,22 @@ typedef struct Element Element;
 typedef struct NavigationInterceptOptions NavigationInterceptOptions;
 
 
-typedef struct {
-  em_Val inner;
-} NavigationInterceptOptions;
-
-
 DECLARE_EMLITE_TYPE(NavigationInterceptOptions, em_Val);
 
 jb_Function NavigationInterceptOptions_handler( const NavigationInterceptOptions *self);
 
-void NavigationInterceptOptions_set_handler(NavigationInterceptOptions* self, const jb_Function* value);
+void NavigationInterceptOptions_set_handler(NavigationInterceptOptions* self, jb_Function * value);
 
 NavigationFocusReset NavigationInterceptOptions_focusReset( const NavigationInterceptOptions *self);
 
-void NavigationInterceptOptions_set_focusReset(NavigationInterceptOptions* self, const NavigationFocusReset* value);
+void NavigationInterceptOptions_set_focusReset(NavigationInterceptOptions* self, NavigationFocusReset * value);
 
 NavigationScrollBehavior NavigationInterceptOptions_scroll( const NavigationInterceptOptions *self);
 
-void NavigationInterceptOptions_set_scroll(NavigationInterceptOptions* self, const NavigationScrollBehavior* value);
-typedef struct {
-  Event inner;
-} NavigateEvent;
-
-
+void NavigationInterceptOptions_set_scroll(NavigationInterceptOptions* self, NavigationScrollBehavior * value);
 DECLARE_EMLITE_TYPE(NavigateEvent, Event);
 
-NavigateEvent NavigateEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+NavigateEvent NavigateEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 NavigationType NavigateEvent_navigationType( const NavigateEvent *self);
 
@@ -61,8 +51,8 @@ bool NavigateEvent_hasUAVisualTransition( const NavigateEvent *self);
 
 Element NavigateEvent_sourceElement( const NavigateEvent *self);
 
-jb_Undefined NavigateEvent_intercept(NavigateEvent* self );
+jb_Undefined NavigateEvent_intercept0(NavigateEvent* self );
 
-jb_Undefined NavigateEvent_intercept(NavigateEvent* self , const NavigationInterceptOptions* options);
+jb_Undefined NavigateEvent_intercept1(NavigateEvent* self , NavigationInterceptOptions * options);
 
 jb_Undefined NavigateEvent_scroll(NavigateEvent* self );

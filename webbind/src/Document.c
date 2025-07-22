@@ -42,189 +42,190 @@ DEFINE_EMLITE_TYPE(CaretPositionFromPointOptions, em_Val);
 
 
 jb_Sequence CaretPositionFromPointOptions_shadowRoots(const CaretPositionFromPointOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), "shadowRoots"));
+    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowRoots")));
 }
 
 
-void CaretPositionFromPointOptions_set_shadowRoots(CaretPositionFromPointOptions* self, const jb_Sequence* value) {
-    em_Val_set(em_Val_as_val(self->inner), "shadowRoots", value);
+void CaretPositionFromPointOptions_set_shadowRoots(CaretPositionFromPointOptions* self, jb_Sequence * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("shadowRoots"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(BoxQuadOptions, em_Val);
 
 
 CSSBoxType BoxQuadOptions_box(const BoxQuadOptions *self) {
-    return em_Val_as(CSSBoxType, em_Val_get(em_Val_as_val(self->inner), "box"));
+    return em_Val_as(CSSBoxType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("box")));
 }
 
 
-void BoxQuadOptions_set_box(BoxQuadOptions* self, const CSSBoxType* value) {
-    em_Val_set(em_Val_as_val(self->inner), "box", value);
+void BoxQuadOptions_set_box(BoxQuadOptions* self, CSSBoxType * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("box"), em_Val_from(value));
 }
 
 
 jb_Any BoxQuadOptions_relativeTo(const BoxQuadOptions *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "relativeTo"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("relativeTo")));
 }
 
 
-void BoxQuadOptions_set_relativeTo(BoxQuadOptions* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "relativeTo", value);
+void BoxQuadOptions_set_relativeTo(BoxQuadOptions* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("relativeTo"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(DOMQuadInit, em_Val);
 
 
 DOMPointInit DOMQuadInit_p1(const DOMQuadInit *self) {
-    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), "p1"));
+    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), em_Val_from("p1")));
 }
 
 
-void DOMQuadInit_set_p1(DOMQuadInit* self, const DOMPointInit* value) {
-    em_Val_set(em_Val_as_val(self->inner), "p1", value);
+void DOMQuadInit_set_p1(DOMQuadInit* self, DOMPointInit * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("p1"), em_Val_from(value));
 }
 
 
 DOMPointInit DOMQuadInit_p2(const DOMQuadInit *self) {
-    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), "p2"));
+    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), em_Val_from("p2")));
 }
 
 
-void DOMQuadInit_set_p2(DOMQuadInit* self, const DOMPointInit* value) {
-    em_Val_set(em_Val_as_val(self->inner), "p2", value);
+void DOMQuadInit_set_p2(DOMQuadInit* self, DOMPointInit * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("p2"), em_Val_from(value));
 }
 
 
 DOMPointInit DOMQuadInit_p3(const DOMQuadInit *self) {
-    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), "p3"));
+    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), em_Val_from("p3")));
 }
 
 
-void DOMQuadInit_set_p3(DOMQuadInit* self, const DOMPointInit* value) {
-    em_Val_set(em_Val_as_val(self->inner), "p3", value);
+void DOMQuadInit_set_p3(DOMQuadInit* self, DOMPointInit * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("p3"), em_Val_from(value));
 }
 
 
 DOMPointInit DOMQuadInit_p4(const DOMQuadInit *self) {
-    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), "p4"));
+    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), em_Val_from("p4")));
 }
 
 
-void DOMQuadInit_set_p4(DOMQuadInit* self, const DOMPointInit* value) {
-    em_Val_set(em_Val_as_val(self->inner), "p4", value);
+void DOMQuadInit_set_p4(DOMQuadInit* self, DOMPointInit * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("p4"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(ConvertCoordinateOptions, em_Val);
 
 
 CSSBoxType ConvertCoordinateOptions_fromBox(const ConvertCoordinateOptions *self) {
-    return em_Val_as(CSSBoxType, em_Val_get(em_Val_as_val(self->inner), "fromBox"));
+    return em_Val_as(CSSBoxType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fromBox")));
 }
 
 
-void ConvertCoordinateOptions_set_fromBox(ConvertCoordinateOptions* self, const CSSBoxType* value) {
-    em_Val_set(em_Val_as_val(self->inner), "fromBox", value);
+void ConvertCoordinateOptions_set_fromBox(ConvertCoordinateOptions* self, CSSBoxType * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("fromBox"), em_Val_from(value));
 }
 
 
 CSSBoxType ConvertCoordinateOptions_toBox(const ConvertCoordinateOptions *self) {
-    return em_Val_as(CSSBoxType, em_Val_get(em_Val_as_val(self->inner), "toBox"));
+    return em_Val_as(CSSBoxType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("toBox")));
 }
 
 
-void ConvertCoordinateOptions_set_toBox(ConvertCoordinateOptions* self, const CSSBoxType* value) {
-    em_Val_set(em_Val_as_val(self->inner), "toBox", value);
+void ConvertCoordinateOptions_set_toBox(ConvertCoordinateOptions* self, CSSBoxType * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("toBox"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(Document, Node);
 
 
-Document Document_new() : Node(em_Val_global("Document").new_()) {
-        return Document(em_Val_new(em_Val_global("Document", ));
+Document Document_new() {
+        em_Val vv = em_Val_new(em_Val_global("Document") );
+        return Document_from_val(&vv);
       }
 
 
 DOMImplementation Document_implementation(const Document *self) {
-    return em_Val_as(DOMImplementation, em_Val_get(Node_as_val(self->inner), "implementation"));
+    return em_Val_as(DOMImplementation, em_Val_get(Node_as_val(self->inner), em_Val_from("implementation")));
 }
 
 
 jb_USVString Document_URL(const Document *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Node_as_val(self->inner), "URL"));
+    return em_Val_as(jb_USVString, em_Val_get(Node_as_val(self->inner), em_Val_from("URL")));
 }
 
 
 jb_USVString Document_documentURI(const Document *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Node_as_val(self->inner), "documentURI"));
+    return em_Val_as(jb_USVString, em_Val_get(Node_as_val(self->inner), em_Val_from("documentURI")));
 }
 
 
 jb_DOMString Document_compatMode(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "compatMode"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("compatMode")));
 }
 
 
 jb_DOMString Document_characterSet(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "characterSet"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("characterSet")));
 }
 
 
 jb_DOMString Document_charset(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "charset"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("charset")));
 }
 
 
 jb_DOMString Document_inputEncoding(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "inputEncoding"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("inputEncoding")));
 }
 
 
 jb_DOMString Document_contentType(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "contentType"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("contentType")));
 }
 
 
 DocumentType Document_doctype(const Document *self) {
-    return em_Val_as(DocumentType, em_Val_get(Node_as_val(self->inner), "doctype"));
+    return em_Val_as(DocumentType, em_Val_get(Node_as_val(self->inner), em_Val_from("doctype")));
 }
 
 
 Element Document_documentElement(const Document *self) {
-    return em_Val_as(Element, em_Val_get(Node_as_val(self->inner), "documentElement"));
+    return em_Val_as(Element, em_Val_get(Node_as_val(self->inner), em_Val_from("documentElement")));
 }
 
 
-HTMLCollection Document_getElementsByTagName(Document* self , const jb_DOMString* qualifiedName) {
+HTMLCollection Document_getElementsByTagName(Document* self , jb_DOMString * qualifiedName) {
     return em_Val_as(HTMLCollection, em_Val_call(Node_as_val(self->inner), "getElementsByTagName", em_Val_from(qualifiedName)));
 }
 
 
-HTMLCollection Document_getElementsByTagNameNS(Document* self , const jb_DOMString* namespace_, const jb_DOMString* localName) {
+HTMLCollection Document_getElementsByTagNameNS(Document* self , jb_DOMString * namespace_, jb_DOMString * localName) {
     return em_Val_as(HTMLCollection, em_Val_call(Node_as_val(self->inner), "getElementsByTagNameNS", em_Val_from(namespace_), em_Val_from(localName)));
 }
 
 
-HTMLCollection Document_getElementsByClassName(Document* self , const jb_DOMString* classNames) {
+HTMLCollection Document_getElementsByClassName(Document* self , jb_DOMString * classNames) {
     return em_Val_as(HTMLCollection, em_Val_call(Node_as_val(self->inner), "getElementsByClassName", em_Val_from(classNames)));
 }
 
 
-Element Document_createElement(Document* self , const jb_DOMString* localName) {
+Element Document_createElement0(Document* self , jb_DOMString * localName) {
     return em_Val_as(Element, em_Val_call(Node_as_val(self->inner), "createElement", em_Val_from(localName)));
 }
 
 
-Element Document_createElement(Document* self , const jb_DOMString* localName, const jb_Any* options) {
+Element Document_createElement1(Document* self , jb_DOMString * localName, jb_Any * options) {
     return em_Val_as(Element, em_Val_call(Node_as_val(self->inner), "createElement", em_Val_from(localName), em_Val_from(options)));
 }
 
 
-Element Document_createElementNS(Document* self , const jb_DOMString* namespace_, const jb_DOMString* qualifiedName) {
+Element Document_createElementNS0(Document* self , jb_DOMString * namespace_, jb_DOMString * qualifiedName) {
     return em_Val_as(Element, em_Val_call(Node_as_val(self->inner), "createElementNS", em_Val_from(namespace_), em_Val_from(qualifiedName)));
 }
 
 
-Element Document_createElementNS(Document* self , const jb_DOMString* namespace_, const jb_DOMString* qualifiedName, const jb_Any* options) {
+Element Document_createElementNS1(Document* self , jb_DOMString * namespace_, jb_DOMString * qualifiedName, jb_Any * options) {
     return em_Val_as(Element, em_Val_call(Node_as_val(self->inner), "createElementNS", em_Val_from(namespace_), em_Val_from(qualifiedName), em_Val_from(options)));
 }
 
@@ -234,52 +235,52 @@ DocumentFragment Document_createDocumentFragment(Document* self ) {
 }
 
 
-Text Document_createTextNode(Document* self , const jb_DOMString* data) {
+Text Document_createTextNode(Document* self , jb_DOMString * data) {
     return em_Val_as(Text, em_Val_call(Node_as_val(self->inner), "createTextNode", em_Val_from(data)));
 }
 
 
-CDATASection Document_createCDATASection(Document* self , const jb_DOMString* data) {
+CDATASection Document_createCDATASection(Document* self , jb_DOMString * data) {
     return em_Val_as(CDATASection, em_Val_call(Node_as_val(self->inner), "createCDATASection", em_Val_from(data)));
 }
 
 
-Comment Document_createComment(Document* self , const jb_DOMString* data) {
+Comment Document_createComment(Document* self , jb_DOMString * data) {
     return em_Val_as(Comment, em_Val_call(Node_as_val(self->inner), "createComment", em_Val_from(data)));
 }
 
 
-ProcessingInstruction Document_createProcessingInstruction(Document* self , const jb_DOMString* target, const jb_DOMString* data) {
+ProcessingInstruction Document_createProcessingInstruction(Document* self , jb_DOMString * target, jb_DOMString * data) {
     return em_Val_as(ProcessingInstruction, em_Val_call(Node_as_val(self->inner), "createProcessingInstruction", em_Val_from(target), em_Val_from(data)));
 }
 
 
-Node Document_importNode(Document* self , const Node* node) {
+Node Document_importNode0(Document* self , Node * node) {
     return em_Val_as(Node, em_Val_call(Node_as_val(self->inner), "importNode", em_Val_from(node)));
 }
 
 
-Node Document_importNode(Document* self , const Node* node, const jb_Any* options) {
+Node Document_importNode1(Document* self , Node * node, jb_Any * options) {
     return em_Val_as(Node, em_Val_call(Node_as_val(self->inner), "importNode", em_Val_from(node), em_Val_from(options)));
 }
 
 
-Node Document_adoptNode(Document* self , const Node* node) {
+Node Document_adoptNode(Document* self , Node * node) {
     return em_Val_as(Node, em_Val_call(Node_as_val(self->inner), "adoptNode", em_Val_from(node)));
 }
 
 
-Attr Document_createAttribute(Document* self , const jb_DOMString* localName) {
+Attr Document_createAttribute(Document* self , jb_DOMString * localName) {
     return em_Val_as(Attr, em_Val_call(Node_as_val(self->inner), "createAttribute", em_Val_from(localName)));
 }
 
 
-Attr Document_createAttributeNS(Document* self , const jb_DOMString* namespace_, const jb_DOMString* qualifiedName) {
+Attr Document_createAttributeNS(Document* self , jb_DOMString * namespace_, jb_DOMString * qualifiedName) {
     return em_Val_as(Attr, em_Val_call(Node_as_val(self->inner), "createAttributeNS", em_Val_from(namespace_), em_Val_from(qualifiedName)));
 }
 
 
-Event Document_createEvent(Document* self , const jb_DOMString* interface) {
+Event Document_createEvent(Document* self , jb_DOMString * interface) {
     return em_Val_as(Event, em_Val_call(Node_as_val(self->inner), "createEvent", em_Val_from(interface)));
 }
 
@@ -289,52 +290,52 @@ Range Document_createRange(Document* self ) {
 }
 
 
-NodeIterator Document_createNodeIterator(Document* self , const Node* root) {
+NodeIterator Document_createNodeIterator0(Document* self , Node * root) {
     return em_Val_as(NodeIterator, em_Val_call(Node_as_val(self->inner), "createNodeIterator", em_Val_from(root)));
 }
 
 
-NodeIterator Document_createNodeIterator(Document* self , const Node* root, unsigned long whatToShow) {
+NodeIterator Document_createNodeIterator1(Document* self , Node * root, unsigned long whatToShow) {
     return em_Val_as(NodeIterator, em_Val_call(Node_as_val(self->inner), "createNodeIterator", em_Val_from(root), em_Val_from(whatToShow)));
 }
 
 
-NodeIterator Document_createNodeIterator(Document* self , const Node* root, unsigned long whatToShow, const jb_Function* filter) {
+NodeIterator Document_createNodeIterator2(Document* self , Node * root, unsigned long whatToShow, jb_Function * filter) {
     return em_Val_as(NodeIterator, em_Val_call(Node_as_val(self->inner), "createNodeIterator", em_Val_from(root), em_Val_from(whatToShow), em_Val_from(filter)));
 }
 
 
-TreeWalker Document_createTreeWalker(Document* self , const Node* root) {
+TreeWalker Document_createTreeWalker0(Document* self , Node * root) {
     return em_Val_as(TreeWalker, em_Val_call(Node_as_val(self->inner), "createTreeWalker", em_Val_from(root)));
 }
 
 
-TreeWalker Document_createTreeWalker(Document* self , const Node* root, unsigned long whatToShow) {
+TreeWalker Document_createTreeWalker1(Document* self , Node * root, unsigned long whatToShow) {
     return em_Val_as(TreeWalker, em_Val_call(Node_as_val(self->inner), "createTreeWalker", em_Val_from(root), em_Val_from(whatToShow)));
 }
 
 
-TreeWalker Document_createTreeWalker(Document* self , const Node* root, unsigned long whatToShow, const jb_Function* filter) {
+TreeWalker Document_createTreeWalker2(Document* self , Node * root, unsigned long whatToShow, jb_Function * filter) {
     return em_Val_as(TreeWalker, em_Val_call(Node_as_val(self->inner), "createTreeWalker", em_Val_from(root), em_Val_from(whatToShow), em_Val_from(filter)));
 }
 
 
 SVGSVGElement Document_rootElement(const Document *self) {
-    return em_Val_as(SVGSVGElement, em_Val_get(Node_as_val(self->inner), "rootElement"));
+    return em_Val_as(SVGSVGElement, em_Val_get(Node_as_val(self->inner), em_Val_from("rootElement")));
 }
 
 
 NamedFlowMap Document_namedFlows(const Document *self) {
-    return em_Val_as(NamedFlowMap, em_Val_get(Node_as_val(self->inner), "namedFlows"));
+    return em_Val_as(NamedFlowMap, em_Val_get(Node_as_val(self->inner), em_Val_from("namedFlows")));
 }
 
 
-ViewTransition Document_startViewTransition(Document* self ) {
+ViewTransition Document_startViewTransition0(Document* self ) {
     return em_Val_as(ViewTransition, em_Val_call(Node_as_val(self->inner), "startViewTransition"));
 }
 
 
-ViewTransition Document_startViewTransition(Document* self , const jb_Any* callbackOptions) {
+ViewTransition Document_startViewTransition1(Document* self , jb_Any * callbackOptions) {
     return em_Val_as(ViewTransition, em_Val_call(Node_as_val(self->inner), "startViewTransition", em_Val_from(callbackOptions)));
 }
 
@@ -349,38 +350,38 @@ jb_Sequence Document_elementsFromPoint(Document* self , double x, double y) {
 }
 
 
-CaretPosition Document_caretPositionFromPoint(Document* self , double x, double y) {
+CaretPosition Document_caretPositionFromPoint0(Document* self , double x, double y) {
     return em_Val_as(CaretPosition, em_Val_call(Node_as_val(self->inner), "caretPositionFromPoint", em_Val_from(x), em_Val_from(y)));
 }
 
 
-CaretPosition Document_caretPositionFromPoint(Document* self , double x, double y, const CaretPositionFromPointOptions* options) {
+CaretPosition Document_caretPositionFromPoint1(Document* self , double x, double y, CaretPositionFromPointOptions * options) {
     return em_Val_as(CaretPosition, em_Val_call(Node_as_val(self->inner), "caretPositionFromPoint", em_Val_from(x), em_Val_from(y), em_Val_from(options)));
 }
 
 
 Element Document_scrollingElement(const Document *self) {
-    return em_Val_as(Element, em_Val_get(Node_as_val(self->inner), "scrollingElement"));
+    return em_Val_as(Element, em_Val_get(Node_as_val(self->inner), em_Val_from("scrollingElement")));
 }
 
 
-FontMetrics Document_measureElement(Document* self , const Element* element) {
+FontMetrics Document_measureElement(Document* self , Element * element) {
     return em_Val_as(FontMetrics, em_Val_call(Node_as_val(self->inner), "measureElement", em_Val_from(element)));
 }
 
 
-FontMetrics Document_measureText(Document* self , const jb_DOMString* text, const StylePropertyMapReadOnly* styleMap) {
+FontMetrics Document_measureText(Document* self , jb_DOMString * text, StylePropertyMapReadOnly * styleMap) {
     return em_Val_as(FontMetrics, em_Val_call(Node_as_val(self->inner), "measureText", em_Val_from(text), em_Val_from(styleMap)));
 }
 
 
 bool Document_fullscreenEnabled(const Document *self) {
-    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), "fullscreenEnabled"));
+    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), em_Val_from("fullscreenEnabled")));
 }
 
 
 bool Document_fullscreen(const Document *self) {
-    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), "fullscreen"));
+    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), em_Val_from("fullscreen")));
 }
 
 
@@ -390,146 +391,146 @@ jb_Promise Document_exitFullscreen(Document* self ) {
 
 
 jb_Any Document_onfullscreenchange(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "onfullscreenchange"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("onfullscreenchange")));
 }
 
 
-void Document_set_onfullscreenchange(Document* self, const jb_Any* value) {
-    em_Val_set(Node_as_val(self->inner), "onfullscreenchange", value);
+void Document_set_onfullscreenchange(Document* self, jb_Any * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("onfullscreenchange"), em_Val_from(value));
 }
 
 
 jb_Any Document_onfullscreenerror(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "onfullscreenerror"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("onfullscreenerror")));
 }
 
 
-void Document_set_onfullscreenerror(Document* self, const jb_Any* value) {
-    em_Val_set(Node_as_val(self->inner), "onfullscreenerror", value);
+void Document_set_onfullscreenerror(Document* self, jb_Any * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("onfullscreenerror"), em_Val_from(value));
 }
 
 
-Document Document_parseHTMLUnsafe(Document* self , const jb_Any* html) {
+Document Document_parseHTMLUnsafe(Document* self , jb_Any * html) {
     return em_Val_as(Document, em_Val_call(em_Val_global("document"), "parseHTMLUnsafe", em_Val_from(html)));
 }
 
 
 jb_Any Document_location(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "location"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("location")));
 }
 
 
 jb_USVString Document_domain(const Document *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Node_as_val(self->inner), "domain"));
+    return em_Val_as(jb_USVString, em_Val_get(Node_as_val(self->inner), em_Val_from("domain")));
 }
 
 
-void Document_set_domain(Document* self, const jb_USVString* value) {
-    em_Val_set(Node_as_val(self->inner), "domain", value);
+void Document_set_domain(Document* self, jb_USVString * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("domain"), em_Val_from(value));
 }
 
 
 jb_USVString Document_referrer(const Document *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Node_as_val(self->inner), "referrer"));
+    return em_Val_as(jb_USVString, em_Val_get(Node_as_val(self->inner), em_Val_from("referrer")));
 }
 
 
 jb_USVString Document_cookie(const Document *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Node_as_val(self->inner), "cookie"));
+    return em_Val_as(jb_USVString, em_Val_get(Node_as_val(self->inner), em_Val_from("cookie")));
 }
 
 
-void Document_set_cookie(Document* self, const jb_USVString* value) {
-    em_Val_set(Node_as_val(self->inner), "cookie", value);
+void Document_set_cookie(Document* self, jb_USVString * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("cookie"), em_Val_from(value));
 }
 
 
 jb_DOMString Document_lastModified(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "lastModified"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("lastModified")));
 }
 
 
 DocumentReadyState Document_readyState(const Document *self) {
-    return em_Val_as(DocumentReadyState, em_Val_get(Node_as_val(self->inner), "readyState"));
+    return em_Val_as(DocumentReadyState, em_Val_get(Node_as_val(self->inner), em_Val_from("readyState")));
 }
 
 
 jb_DOMString Document_title(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "title"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("title")));
 }
 
 
-void Document_set_title(Document* self, const jb_DOMString* value) {
-    em_Val_set(Node_as_val(self->inner), "title", value);
+void Document_set_title(Document* self, jb_DOMString * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("title"), em_Val_from(value));
 }
 
 
 jb_DOMString Document_dir(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "dir"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("dir")));
 }
 
 
-void Document_set_dir(Document* self, const jb_DOMString* value) {
-    em_Val_set(Node_as_val(self->inner), "dir", value);
+void Document_set_dir(Document* self, jb_DOMString * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("dir"), em_Val_from(value));
 }
 
 
 HTMLElement Document_body(const Document *self) {
-    return em_Val_as(HTMLElement, em_Val_get(Node_as_val(self->inner), "body"));
+    return em_Val_as(HTMLElement, em_Val_get(Node_as_val(self->inner), em_Val_from("body")));
 }
 
 
-void Document_set_body(Document* self, const HTMLElement* value) {
-    em_Val_set(Node_as_val(self->inner), "body", value);
+void Document_set_body(Document* self, HTMLElement * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("body"), em_Val_from(value));
 }
 
 
 HTMLHeadElement Document_head(const Document *self) {
-    return em_Val_as(HTMLHeadElement, em_Val_get(Node_as_val(self->inner), "head"));
+    return em_Val_as(HTMLHeadElement, em_Val_get(Node_as_val(self->inner), em_Val_from("head")));
 }
 
 
 HTMLCollection Document_images(const Document *self) {
-    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), "images"));
+    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), em_Val_from("images")));
 }
 
 
 HTMLCollection Document_embeds(const Document *self) {
-    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), "embeds"));
+    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), em_Val_from("embeds")));
 }
 
 
 HTMLCollection Document_plugins(const Document *self) {
-    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), "plugins"));
+    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), em_Val_from("plugins")));
 }
 
 
 HTMLCollection Document_links(const Document *self) {
-    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), "links"));
+    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), em_Val_from("links")));
 }
 
 
 HTMLCollection Document_forms(const Document *self) {
-    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), "forms"));
+    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), em_Val_from("forms")));
 }
 
 
 HTMLCollection Document_scripts(const Document *self) {
-    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), "scripts"));
+    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), em_Val_from("scripts")));
 }
 
 
-NodeList Document_getElementsByName(Document* self , const jb_DOMString* elementName) {
+NodeList Document_getElementsByName(Document* self , jb_DOMString * elementName) {
     return em_Val_as(NodeList, em_Val_call(Node_as_val(self->inner), "getElementsByName", em_Val_from(elementName)));
 }
 
 
 jb_Any Document_currentScript(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "currentScript"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("currentScript")));
 }
 
 
-jb_Any Document_open(Document* self , const jb_USVString* url, const jb_DOMString* name, const jb_DOMString* features) {
+jb_Any Document_open(Document* self , jb_USVString * url, jb_DOMString * name, jb_DOMString * features) {
     return em_Val_as(jb_Any, em_Val_call(Node_as_val(self->inner), "open", em_Val_from(url), em_Val_from(name), em_Val_from(features)));
 }
 
@@ -539,18 +540,18 @@ jb_Undefined Document_close(Document* self ) {
 }
 
 
-jb_Undefined Document_write(Document* self , const jb_Any* text) {
+jb_Undefined Document_write(Document* self , jb_Any * text) {
     return em_Val_as(jb_Undefined, em_Val_call(Node_as_val(self->inner), "write", em_Val_from(text)));
 }
 
 
-jb_Undefined Document_writeln(Document* self , const jb_Any* text) {
+jb_Undefined Document_writeln(Document* self , jb_Any * text) {
     return em_Val_as(jb_Undefined, em_Val_call(Node_as_val(self->inner), "writeln", em_Val_from(text)));
 }
 
 
 jb_Any Document_defaultView(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "defaultView"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("defaultView")));
 }
 
 
@@ -560,142 +561,142 @@ bool Document_hasFocus(Document* self ) {
 
 
 jb_DOMString Document_designMode(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "designMode"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("designMode")));
 }
 
 
-void Document_set_designMode(Document* self, const jb_DOMString* value) {
-    em_Val_set(Node_as_val(self->inner), "designMode", value);
+void Document_set_designMode(Document* self, jb_DOMString * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("designMode"), em_Val_from(value));
 }
 
 
-bool Document_execCommand(Document* self , const jb_DOMString* commandId) {
+bool Document_execCommand0(Document* self , jb_DOMString * commandId) {
     return em_Val_as(bool, em_Val_call(Node_as_val(self->inner), "execCommand", em_Val_from(commandId)));
 }
 
 
-bool Document_execCommand(Document* self , const jb_DOMString* commandId, bool showUI) {
+bool Document_execCommand1(Document* self , jb_DOMString * commandId, bool showUI) {
     return em_Val_as(bool, em_Val_call(Node_as_val(self->inner), "execCommand", em_Val_from(commandId), em_Val_from(showUI)));
 }
 
 
-bool Document_execCommand(Document* self , const jb_DOMString* commandId, bool showUI, const jb_DOMString* value) {
+bool Document_execCommand2(Document* self , jb_DOMString * commandId, bool showUI, jb_DOMString * value) {
     return em_Val_as(bool, em_Val_call(Node_as_val(self->inner), "execCommand", em_Val_from(commandId), em_Val_from(showUI), em_Val_from(value)));
 }
 
 
-bool Document_queryCommandEnabled(Document* self , const jb_DOMString* commandId) {
+bool Document_queryCommandEnabled(Document* self , jb_DOMString * commandId) {
     return em_Val_as(bool, em_Val_call(Node_as_val(self->inner), "queryCommandEnabled", em_Val_from(commandId)));
 }
 
 
-bool Document_queryCommandIndeterm(Document* self , const jb_DOMString* commandId) {
+bool Document_queryCommandIndeterm(Document* self , jb_DOMString * commandId) {
     return em_Val_as(bool, em_Val_call(Node_as_val(self->inner), "queryCommandIndeterm", em_Val_from(commandId)));
 }
 
 
-bool Document_queryCommandState(Document* self , const jb_DOMString* commandId) {
+bool Document_queryCommandState(Document* self , jb_DOMString * commandId) {
     return em_Val_as(bool, em_Val_call(Node_as_val(self->inner), "queryCommandState", em_Val_from(commandId)));
 }
 
 
-bool Document_queryCommandSupported(Document* self , const jb_DOMString* commandId) {
+bool Document_queryCommandSupported(Document* self , jb_DOMString * commandId) {
     return em_Val_as(bool, em_Val_call(Node_as_val(self->inner), "queryCommandSupported", em_Val_from(commandId)));
 }
 
 
-jb_DOMString Document_queryCommandValue(Document* self , const jb_DOMString* commandId) {
+jb_DOMString Document_queryCommandValue(Document* self , jb_DOMString * commandId) {
     return em_Val_as(jb_DOMString, em_Val_call(Node_as_val(self->inner), "queryCommandValue", em_Val_from(commandId)));
 }
 
 
 bool Document_hidden(const Document *self) {
-    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), "hidden"));
+    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), em_Val_from("hidden")));
 }
 
 
 DocumentVisibilityState Document_visibilityState(const Document *self) {
-    return em_Val_as(DocumentVisibilityState, em_Val_get(Node_as_val(self->inner), "visibilityState"));
+    return em_Val_as(DocumentVisibilityState, em_Val_get(Node_as_val(self->inner), em_Val_from("visibilityState")));
 }
 
 
 jb_Any Document_onreadystatechange(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "onreadystatechange"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("onreadystatechange")));
 }
 
 
-void Document_set_onreadystatechange(Document* self, const jb_Any* value) {
-    em_Val_set(Node_as_val(self->inner), "onreadystatechange", value);
+void Document_set_onreadystatechange(Document* self, jb_Any * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("onreadystatechange"), em_Val_from(value));
 }
 
 
 jb_Any Document_onvisibilitychange(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "onvisibilitychange"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("onvisibilitychange")));
 }
 
 
-void Document_set_onvisibilitychange(Document* self, const jb_Any* value) {
-    em_Val_set(Node_as_val(self->inner), "onvisibilitychange", value);
+void Document_set_onvisibilitychange(Document* self, jb_Any * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("onvisibilitychange"), em_Val_from(value));
 }
 
 
 jb_DOMString Document_fgColor(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "fgColor"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("fgColor")));
 }
 
 
-void Document_set_fgColor(Document* self, const jb_DOMString* value) {
-    em_Val_set(Node_as_val(self->inner), "fgColor", value);
+void Document_set_fgColor(Document* self, jb_DOMString * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("fgColor"), em_Val_from(value));
 }
 
 
 jb_DOMString Document_linkColor(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "linkColor"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("linkColor")));
 }
 
 
-void Document_set_linkColor(Document* self, const jb_DOMString* value) {
-    em_Val_set(Node_as_val(self->inner), "linkColor", value);
+void Document_set_linkColor(Document* self, jb_DOMString * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("linkColor"), em_Val_from(value));
 }
 
 
 jb_DOMString Document_vlinkColor(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "vlinkColor"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("vlinkColor")));
 }
 
 
-void Document_set_vlinkColor(Document* self, const jb_DOMString* value) {
-    em_Val_set(Node_as_val(self->inner), "vlinkColor", value);
+void Document_set_vlinkColor(Document* self, jb_DOMString * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("vlinkColor"), em_Val_from(value));
 }
 
 
 jb_DOMString Document_alinkColor(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "alinkColor"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("alinkColor")));
 }
 
 
-void Document_set_alinkColor(Document* self, const jb_DOMString* value) {
-    em_Val_set(Node_as_val(self->inner), "alinkColor", value);
+void Document_set_alinkColor(Document* self, jb_DOMString * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("alinkColor"), em_Val_from(value));
 }
 
 
 jb_DOMString Document_bgColor(const Document *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "bgColor"));
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("bgColor")));
 }
 
 
-void Document_set_bgColor(Document* self, const jb_DOMString* value) {
-    em_Val_set(Node_as_val(self->inner), "bgColor", value);
+void Document_set_bgColor(Document* self, jb_DOMString * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("bgColor"), em_Val_from(value));
 }
 
 
 HTMLCollection Document_anchors(const Document *self) {
-    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), "anchors"));
+    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), em_Val_from("anchors")));
 }
 
 
 HTMLCollection Document_applets(const Document *self) {
-    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), "applets"));
+    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), em_Val_from("applets")));
 }
 
 
@@ -715,42 +716,42 @@ jb_Undefined Document_releaseEvents(Document* self ) {
 
 
 HTMLAllCollection Document_all(const Document *self) {
-    return em_Val_as(HTMLAllCollection, em_Val_get(Node_as_val(self->inner), "all"));
+    return em_Val_as(HTMLAllCollection, em_Val_get(Node_as_val(self->inner), em_Val_from("all")));
 }
 
 
 jb_Any Document_onfreeze(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "onfreeze"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("onfreeze")));
 }
 
 
-void Document_set_onfreeze(Document* self, const jb_Any* value) {
-    em_Val_set(Node_as_val(self->inner), "onfreeze", value);
+void Document_set_onfreeze(Document* self, jb_Any * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("onfreeze"), em_Val_from(value));
 }
 
 
 jb_Any Document_onresume(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "onresume"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("onresume")));
 }
 
 
-void Document_set_onresume(Document* self, const jb_Any* value) {
-    em_Val_set(Node_as_val(self->inner), "onresume", value);
+void Document_set_onresume(Document* self, jb_Any * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("onresume"), em_Val_from(value));
 }
 
 
 bool Document_wasDiscarded(const Document *self) {
-    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), "wasDiscarded"));
+    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), em_Val_from("wasDiscarded")));
 }
 
 
 PermissionsPolicy Document_permissionsPolicy(const Document *self) {
-    return em_Val_as(PermissionsPolicy, em_Val_get(Node_as_val(self->inner), "permissionsPolicy"));
+    return em_Val_as(PermissionsPolicy, em_Val_get(Node_as_val(self->inner), em_Val_from("permissionsPolicy")));
 }
 
 
 bool Document_pictureInPictureEnabled(const Document *self) {
-    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), "pictureInPictureEnabled"));
+    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), em_Val_from("pictureInPictureEnabled")));
 }
 
 
@@ -760,22 +761,22 @@ jb_Promise Document_exitPictureInPicture(Document* self ) {
 
 
 jb_Any Document_onpointerlockchange(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "onpointerlockchange"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("onpointerlockchange")));
 }
 
 
-void Document_set_onpointerlockchange(Document* self, const jb_Any* value) {
-    em_Val_set(Node_as_val(self->inner), "onpointerlockchange", value);
+void Document_set_onpointerlockchange(Document* self, jb_Any * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("onpointerlockchange"), em_Val_from(value));
 }
 
 
 jb_Any Document_onpointerlockerror(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "onpointerlockerror"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("onpointerlockerror")));
 }
 
 
-void Document_set_onpointerlockerror(Document* self, const jb_Any* value) {
-    em_Val_set(Node_as_val(self->inner), "onpointerlockerror", value);
+void Document_set_onpointerlockerror(Document* self, jb_Any * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("onpointerlockerror"), em_Val_from(value));
 }
 
 
@@ -785,21 +786,21 @@ jb_Undefined Document_exitPointerLock(Document* self ) {
 
 
 bool Document_prerendering(const Document *self) {
-    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), "prerendering"));
+    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), em_Val_from("prerendering")));
 }
 
 
 jb_Any Document_onprerenderingchange(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "onprerenderingchange"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("onprerenderingchange")));
 }
 
 
-void Document_set_onprerenderingchange(Document* self, const jb_Any* value) {
-    em_Val_set(Node_as_val(self->inner), "onprerenderingchange", value);
+void Document_set_onprerenderingchange(Document* self, jb_Any * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("onprerenderingchange"), em_Val_from(value));
 }
 
 
-jb_Promise Document_requestStorageAccessFor(Document* self , const jb_USVString* requestedOrigin) {
+jb_Promise Document_requestStorageAccessFor(Document* self , jb_USVString * requestedOrigin) {
     return em_Val_as(jb_Promise, em_Val_call(Node_as_val(self->inner), "requestStorageAccessFor", em_Val_from(requestedOrigin)));
 }
 
@@ -810,7 +811,7 @@ jb_Promise Document_hasUnpartitionedCookieAccess(Document* self ) {
 
 
 FragmentDirective Document_fragmentDirective(const Document *self) {
-    return em_Val_as(FragmentDirective, em_Val_get(Node_as_val(self->inner), "fragmentDirective"));
+    return em_Val_as(FragmentDirective, em_Val_get(Node_as_val(self->inner), em_Val_from("fragmentDirective")));
 }
 
 
@@ -829,67 +830,67 @@ jb_Promise Document_requestStorageAccess(Document* self ) {
 }
 
 
-jb_Promise Document_hasPrivateToken(Document* self , const jb_USVString* issuer) {
+jb_Promise Document_hasPrivateToken(Document* self , jb_USVString * issuer) {
     return em_Val_as(jb_Promise, em_Val_call(Node_as_val(self->inner), "hasPrivateToken", em_Val_from(issuer)));
 }
 
 
-jb_Promise Document_hasRedemptionRecord(Document* self , const jb_USVString* issuer) {
+jb_Promise Document_hasRedemptionRecord(Document* self , jb_USVString * issuer) {
     return em_Val_as(jb_Promise, em_Val_call(Node_as_val(self->inner), "hasRedemptionRecord", em_Val_from(issuer)));
 }
 
 
 DocumentTimeline Document_timeline(const Document *self) {
-    return em_Val_as(DocumentTimeline, em_Val_get(Node_as_val(self->inner), "timeline"));
+    return em_Val_as(DocumentTimeline, em_Val_get(Node_as_val(self->inner), em_Val_from("timeline")));
 }
 
 
 FontFaceSet Document_fonts(const Document *self) {
-    return em_Val_as(FontFaceSet, em_Val_get(Node_as_val(self->inner), "fonts"));
+    return em_Val_as(FontFaceSet, em_Val_get(Node_as_val(self->inner), em_Val_from("fonts")));
 }
 
 
-jb_Sequence Document_getBoxQuads(Document* self ) {
+jb_Sequence Document_getBoxQuads0(Document* self ) {
     return em_Val_as(jb_Sequence, em_Val_call(Node_as_val(self->inner), "getBoxQuads"));
 }
 
 
-jb_Sequence Document_getBoxQuads(Document* self , const BoxQuadOptions* options) {
+jb_Sequence Document_getBoxQuads1(Document* self , BoxQuadOptions * options) {
     return em_Val_as(jb_Sequence, em_Val_call(Node_as_val(self->inner), "getBoxQuads", em_Val_from(options)));
 }
 
 
-DOMQuad Document_convertQuadFromNode(Document* self , const DOMQuadInit* quad, const jb_Any* from) {
+DOMQuad Document_convertQuadFromNode0(Document* self , DOMQuadInit * quad, jb_Any * from) {
     return em_Val_as(DOMQuad, em_Val_call(Node_as_val(self->inner), "convertQuadFromNode", em_Val_from(quad), em_Val_from(from)));
 }
 
 
-DOMQuad Document_convertQuadFromNode(Document* self , const DOMQuadInit* quad, const jb_Any* from, const ConvertCoordinateOptions* options) {
+DOMQuad Document_convertQuadFromNode1(Document* self , DOMQuadInit * quad, jb_Any * from, ConvertCoordinateOptions * options) {
     return em_Val_as(DOMQuad, em_Val_call(Node_as_val(self->inner), "convertQuadFromNode", em_Val_from(quad), em_Val_from(from), em_Val_from(options)));
 }
 
 
-DOMQuad Document_convertRectFromNode(Document* self , const DOMRectReadOnly* rect, const jb_Any* from) {
+DOMQuad Document_convertRectFromNode0(Document* self , DOMRectReadOnly * rect, jb_Any * from) {
     return em_Val_as(DOMQuad, em_Val_call(Node_as_val(self->inner), "convertRectFromNode", em_Val_from(rect), em_Val_from(from)));
 }
 
 
-DOMQuad Document_convertRectFromNode(Document* self , const DOMRectReadOnly* rect, const jb_Any* from, const ConvertCoordinateOptions* options) {
+DOMQuad Document_convertRectFromNode1(Document* self , DOMRectReadOnly * rect, jb_Any * from, ConvertCoordinateOptions * options) {
     return em_Val_as(DOMQuad, em_Val_call(Node_as_val(self->inner), "convertRectFromNode", em_Val_from(rect), em_Val_from(from), em_Val_from(options)));
 }
 
 
-DOMPoint Document_convertPointFromNode(Document* self , const DOMPointInit* point, const jb_Any* from) {
+DOMPoint Document_convertPointFromNode0(Document* self , DOMPointInit * point, jb_Any * from) {
     return em_Val_as(DOMPoint, em_Val_call(Node_as_val(self->inner), "convertPointFromNode", em_Val_from(point), em_Val_from(from)));
 }
 
 
-DOMPoint Document_convertPointFromNode(Document* self , const DOMPointInit* point, const jb_Any* from, const ConvertCoordinateOptions* options) {
+DOMPoint Document_convertPointFromNode1(Document* self , DOMPointInit * point, jb_Any * from, ConvertCoordinateOptions * options) {
     return em_Val_as(DOMPoint, em_Val_call(Node_as_val(self->inner), "convertPointFromNode", em_Val_from(point), em_Val_from(from), em_Val_from(options)));
 }
 
 
-Element Document_getElementById(Document* self , const jb_DOMString* elementId) {
+Element Document_getElementById(Document* self , jb_DOMString * elementId) {
     return em_Val_as(Element, em_Val_call(Node_as_val(self->inner), "getElementById", em_Val_from(elementId)));
 }
 
@@ -900,96 +901,96 @@ jb_Sequence Document_getAnimations(Document* self ) {
 
 
 HTMLCollection Document_children(const Document *self) {
-    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), "children"));
+    return em_Val_as(HTMLCollection, em_Val_get(Node_as_val(self->inner), em_Val_from("children")));
 }
 
 
 Element Document_firstElementChild(const Document *self) {
-    return em_Val_as(Element, em_Val_get(Node_as_val(self->inner), "firstElementChild"));
+    return em_Val_as(Element, em_Val_get(Node_as_val(self->inner), em_Val_from("firstElementChild")));
 }
 
 
 Element Document_lastElementChild(const Document *self) {
-    return em_Val_as(Element, em_Val_get(Node_as_val(self->inner), "lastElementChild"));
+    return em_Val_as(Element, em_Val_get(Node_as_val(self->inner), em_Val_from("lastElementChild")));
 }
 
 
 unsigned long Document_childElementCount(const Document *self) {
-    return em_Val_as(unsigned long, em_Val_get(Node_as_val(self->inner), "childElementCount"));
+    return em_Val_as(unsigned long, em_Val_get(Node_as_val(self->inner), em_Val_from("childElementCount")));
 }
 
 
-jb_Undefined Document_prepend(Document* self , const jb_Any* nodes) {
+jb_Undefined Document_prepend(Document* self , jb_Any * nodes) {
     return em_Val_as(jb_Undefined, em_Val_call(Node_as_val(self->inner), "prepend", em_Val_from(nodes)));
 }
 
 
-jb_Undefined Document_append(Document* self , const jb_Any* nodes) {
+jb_Undefined Document_append(Document* self , jb_Any * nodes) {
     return em_Val_as(jb_Undefined, em_Val_call(Node_as_val(self->inner), "append", em_Val_from(nodes)));
 }
 
 
-jb_Undefined Document_replaceChildren(Document* self , const jb_Any* nodes) {
+jb_Undefined Document_replaceChildren(Document* self , jb_Any * nodes) {
     return em_Val_as(jb_Undefined, em_Val_call(Node_as_val(self->inner), "replaceChildren", em_Val_from(nodes)));
 }
 
 
-jb_Undefined Document_moveBefore(Document* self , const Node* node, const Node* child) {
+jb_Undefined Document_moveBefore(Document* self , Node * node, Node * child) {
     return em_Val_as(jb_Undefined, em_Val_call(Node_as_val(self->inner), "moveBefore", em_Val_from(node), em_Val_from(child)));
 }
 
 
-Element Document_querySelector(Document* self , const jb_DOMString* selectors) {
+Element Document_querySelector(Document* self , jb_DOMString * selectors) {
     return em_Val_as(Element, em_Val_call(Node_as_val(self->inner), "querySelector", em_Val_from(selectors)));
 }
 
 
-NodeList Document_querySelectorAll(Document* self , const jb_DOMString* selectors) {
+NodeList Document_querySelectorAll(Document* self , jb_DOMString * selectors) {
     return em_Val_as(NodeList, em_Val_call(Node_as_val(self->inner), "querySelectorAll", em_Val_from(selectors)));
 }
 
 
-XPathExpression Document_createExpression(Document* self , const jb_DOMString* expression) {
+XPathExpression Document_createExpression0(Document* self , jb_DOMString * expression) {
     return em_Val_as(XPathExpression, em_Val_call(Node_as_val(self->inner), "createExpression", em_Val_from(expression)));
 }
 
 
-XPathExpression Document_createExpression(Document* self , const jb_DOMString* expression, const jb_Function* resolver) {
+XPathExpression Document_createExpression1(Document* self , jb_DOMString * expression, jb_Function * resolver) {
     return em_Val_as(XPathExpression, em_Val_call(Node_as_val(self->inner), "createExpression", em_Val_from(expression), em_Val_from(resolver)));
 }
 
 
-Node Document_createNSResolver(Document* self , const Node* nodeResolver) {
+Node Document_createNSResolver(Document* self , Node * nodeResolver) {
     return em_Val_as(Node, em_Val_call(Node_as_val(self->inner), "createNSResolver", em_Val_from(nodeResolver)));
 }
 
 
-XPathResult Document_evaluate(Document* self , const jb_DOMString* expression, const Node* contextNode) {
+XPathResult Document_evaluate0(Document* self , jb_DOMString * expression, Node * contextNode) {
     return em_Val_as(XPathResult, em_Val_call(Node_as_val(self->inner), "evaluate", em_Val_from(expression), em_Val_from(contextNode)));
 }
 
 
-XPathResult Document_evaluate(Document* self , const jb_DOMString* expression, const Node* contextNode, const jb_Function* resolver) {
+XPathResult Document_evaluate1(Document* self , jb_DOMString * expression, Node * contextNode, jb_Function * resolver) {
     return em_Val_as(XPathResult, em_Val_call(Node_as_val(self->inner), "evaluate", em_Val_from(expression), em_Val_from(contextNode), em_Val_from(resolver)));
 }
 
 
-XPathResult Document_evaluate(Document* self , const jb_DOMString* expression, const Node* contextNode, const jb_Function* resolver, unsigned short type) {
+XPathResult Document_evaluate2(Document* self , jb_DOMString * expression, Node * contextNode, jb_Function * resolver, unsigned short type) {
     return em_Val_as(XPathResult, em_Val_call(Node_as_val(self->inner), "evaluate", em_Val_from(expression), em_Val_from(contextNode), em_Val_from(resolver), em_Val_from(type)));
 }
 
 
-XPathResult Document_evaluate(Document* self , const jb_DOMString* expression, const Node* contextNode, const jb_Function* resolver, unsigned short type, const XPathResult* result) {
+XPathResult Document_evaluate3(Document* self , jb_DOMString * expression, Node * contextNode, jb_Function * resolver, unsigned short type, XPathResult * result) {
     return em_Val_as(XPathResult, em_Val_call(Node_as_val(self->inner), "evaluate", em_Val_from(expression), em_Val_from(contextNode), em_Val_from(resolver), em_Val_from(type), em_Val_from(result)));
 }
 
 
 jb_Any Document_onbeforexrselect(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), "onbeforexrselect"));
+    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("onbeforexrselect")));
 }
 
 
-void Document_set_onbeforexrselect(Document* self, const jb_Any* value) {
-    em_Val_set(Node_as_val(self->inner), "onbeforexrselect", value);
+void Document_set_onbeforexrselect(Document* self, jb_Any * value) {
+    em_Val_set(Node_as_val(self->inner), em_Val_from("onbeforexrselect"), em_Val_from(value));
 }
 

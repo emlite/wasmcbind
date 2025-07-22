@@ -12,11 +12,6 @@ typedef struct DOMRectReadOnly DOMRectReadOnly;
 typedef struct DOMPointReadOnly DOMPointReadOnly;
 
 
-typedef struct {
-  em_Val inner;
-} GamepadTouch;
-
-
 DECLARE_EMLITE_TYPE(GamepadTouch, em_Val);
 
 unsigned long GamepadTouch_touchId( const GamepadTouch *self);
@@ -29,16 +24,11 @@ void GamepadTouch_set_surfaceId(GamepadTouch* self, unsigned char value);
 
 DOMPointReadOnly GamepadTouch_position( const GamepadTouch *self);
 
-void GamepadTouch_set_position(GamepadTouch* self, const DOMPointReadOnly* value);
+void GamepadTouch_set_position(GamepadTouch* self, DOMPointReadOnly * value);
 
 DOMRectReadOnly GamepadTouch_surfaceDimensions( const GamepadTouch *self);
 
-void GamepadTouch_set_surfaceDimensions(GamepadTouch* self, const DOMRectReadOnly* value);
-typedef struct {
-  em_Val inner;
-} Gamepad;
-
-
+void GamepadTouch_set_surfaceDimensions(GamepadTouch* self, DOMRectReadOnly * value);
 DECLARE_EMLITE_TYPE(Gamepad, em_Val);
 
 jb_DOMString Gamepad_id( const Gamepad *self);

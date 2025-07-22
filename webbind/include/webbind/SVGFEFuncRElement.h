@@ -6,9 +6,4 @@
 #include "enums.h"
 
 
-typedef struct {
-  SVGComponentTransferFunctionElement inner;
-} SVGFEFuncRElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEFuncRElement, SVGComponentTransferFunctionElement);

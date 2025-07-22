@@ -8,11 +8,6 @@
 typedef struct NodeList NodeList;
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLProgressElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLProgressElement, HTMLElement);
 
 HTMLProgressElement HTMLProgressElement_new();

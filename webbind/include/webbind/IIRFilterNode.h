@@ -6,13 +6,8 @@
 #include "enums.h"
 
 
-typedef struct {
-  AudioNode inner;
-} IIRFilterNode;
-
-
 DECLARE_EMLITE_TYPE(IIRFilterNode, AudioNode);
 
-IIRFilterNode IIRFilterNode_new(const BaseAudioContext* context, const jb_Any* options);
+IIRFilterNode IIRFilterNode_new(BaseAudioContext * context, jb_Any * options);
 
-jb_Undefined IIRFilterNode_getFrequencyResponse(IIRFilterNode* self , const jb_Float32Array* frequencyHz, const jb_Float32Array* magResponse, const jb_Float32Array* phaseResponse);
+jb_Undefined IIRFilterNode_getFrequencyResponse(IIRFilterNode* self , jb_Float32Array * frequencyHz, jb_Float32Array * magResponse, jb_Float32Array * phaseResponse);

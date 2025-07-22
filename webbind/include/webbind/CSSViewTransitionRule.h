@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSRule inner;
-} CSSViewTransitionRule;
-
-
 DECLARE_EMLITE_TYPE(CSSViewTransitionRule, CSSRule);
 
 jb_CSSOMString CSSViewTransitionRule_navigation( const CSSViewTransitionRule *self);

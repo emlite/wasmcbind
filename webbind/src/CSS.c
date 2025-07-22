@@ -5,339 +5,339 @@
 
 
 
-bool CSS_supports(const jb_CSSOMString* property, const jb_CSSOMString* value) {
-    return em_Val_as(bool, em_Val_global("css").call("supports", property, value));
+bool CSS_supports(jb_CSSOMString * property, jb_CSSOMString * value) {
+    return em_Val_as(bool, em_Val_call(em_Val_global("css", "supports", property, value));
 }
 
-bool CSS_supports(const jb_CSSOMString* conditionText) {
-    return em_Val_as(bool, em_Val_global("css").call("supports", conditionText));
-}
-
-
-
-
-
-
-
-
-
-
-
-jb_Promise CSS_parseStylesheet(const jb_Any* css) {
-    return em_Val_as(jb_Promise, em_Val_global("css").call("parseStylesheet", css));
-}
-
-jb_Promise CSS_parseStylesheet(const jb_Any* css, const jb_Any* options) {
-    return em_Val_as(jb_Promise, em_Val_global("css").call("parseStylesheet", css, options));
-}
-
-jb_Promise CSS_parseRuleList(const jb_Any* css) {
-    return em_Val_as(jb_Promise, em_Val_global("css").call("parseRuleList", css));
-}
-
-jb_Promise CSS_parseRuleList(const jb_Any* css, const jb_Any* options) {
-    return em_Val_as(jb_Promise, em_Val_global("css").call("parseRuleList", css, options));
-}
-
-jb_Promise CSS_parseRule(const jb_Any* css) {
-    return em_Val_as(jb_Promise, em_Val_global("css").call("parseRule", css));
-}
-
-jb_Promise CSS_parseRule(const jb_Any* css, const jb_Any* options) {
-    return em_Val_as(jb_Promise, em_Val_global("css").call("parseRule", css, options));
-}
-
-jb_Promise CSS_parseDeclarationList(const jb_Any* css) {
-    return em_Val_as(jb_Promise, em_Val_global("css").call("parseDeclarationList", css));
-}
-
-jb_Promise CSS_parseDeclarationList(const jb_Any* css, const jb_Any* options) {
-    return em_Val_as(jb_Promise, em_Val_global("css").call("parseDeclarationList", css, options));
-}
-
-CSSParserDeclaration CSS_parseDeclaration(const jb_DOMString* css) {
-    return em_Val_as(CSSParserDeclaration, em_Val_global("css").call("parseDeclaration", css));
-}
-
-CSSParserDeclaration CSS_parseDeclaration(const jb_DOMString* css, const jb_Any* options) {
-    return em_Val_as(CSSParserDeclaration, em_Val_global("css").call("parseDeclaration", css, options));
-}
-
-jb_Any CSS_parseValue(const jb_DOMString* css) {
-    return em_Val_as(jb_Any, em_Val_global("css").call("parseValue", css));
-}
-
-jb_Sequence CSS_parseValueList(const jb_DOMString* css) {
-    return em_Val_as(jb_Sequence, em_Val_global("css").call("parseValueList", css));
-}
-
-jb_Sequence CSS_parseCommaValueList(const jb_DOMString* css) {
-    return em_Val_as(jb_Sequence, em_Val_global("css").call("parseCommaValueList", css));
+bool CSS_supports(jb_CSSOMString * conditionText) {
+    return em_Val_as(bool, em_Val_call(em_Val_global("css", "supports", conditionText));
 }
 
 
 
-jb_Undefined CSS_registerProperty(const jb_Any* definition) {
-    return em_Val_as(jb_Undefined, em_Val_global("css").call("registerProperty", definition));
+
+
+
+
+
+
+
+
+jb_Promise CSS_parseStylesheet0(jb_Any * css) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css", "parseStylesheet", css));
+}
+
+jb_Promise CSS_parseStylesheet1(jb_Any * css, jb_Any * options) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css", "parseStylesheet", css, options));
+}
+
+jb_Promise CSS_parseRuleList0(jb_Any * css) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css", "parseRuleList", css));
+}
+
+jb_Promise CSS_parseRuleList1(jb_Any * css, jb_Any * options) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css", "parseRuleList", css, options));
+}
+
+jb_Promise CSS_parseRule0(jb_Any * css) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css", "parseRule", css));
+}
+
+jb_Promise CSS_parseRule1(jb_Any * css, jb_Any * options) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css", "parseRule", css, options));
+}
+
+jb_Promise CSS_parseDeclarationList0(jb_Any * css) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css", "parseDeclarationList", css));
+}
+
+jb_Promise CSS_parseDeclarationList1(jb_Any * css, jb_Any * options) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css", "parseDeclarationList", css, options));
+}
+
+CSSParserDeclaration CSS_parseDeclaration0(jb_DOMString * css) {
+    return em_Val_as(CSSParserDeclaration, em_Val_call(em_Val_global("css", "parseDeclaration", css));
+}
+
+CSSParserDeclaration CSS_parseDeclaration1(jb_DOMString * css, jb_Any * options) {
+    return em_Val_as(CSSParserDeclaration, em_Val_call(em_Val_global("css", "parseDeclaration", css, options));
+}
+
+jb_Any CSS_parseValue(jb_DOMString * css) {
+    return em_Val_as(jb_Any, em_Val_call(em_Val_global("css", "parseValue", css));
+}
+
+jb_Sequence CSS_parseValueList(jb_DOMString * css) {
+    return em_Val_as(jb_Sequence, em_Val_call(em_Val_global("css", "parseValueList", css));
+}
+
+jb_Sequence CSS_parseCommaValueList(jb_DOMString * css) {
+    return em_Val_as(jb_Sequence, em_Val_call(em_Val_global("css", "parseCommaValueList", css));
+}
+
+
+
+jb_Undefined CSS_registerProperty(jb_Any * definition) {
+    return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("css", "registerProperty", definition));
 }
 
 
 
 CSSUnitValue CSS_number(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("number", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "number", value));
 }
 
 CSSUnitValue CSS_percent(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("percent", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "percent", value));
 }
 
 CSSUnitValue CSS_cap(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("cap", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "cap", value));
 }
 
 CSSUnitValue CSS_ch(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("ch", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "ch", value));
 }
 
 CSSUnitValue CSS_em(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("em", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "em", value));
 }
 
 CSSUnitValue CSS_ex(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("ex", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "ex", value));
 }
 
 CSSUnitValue CSS_ic(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("ic", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "ic", value));
 }
 
 CSSUnitValue CSS_lh(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("lh", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "lh", value));
 }
 
 CSSUnitValue CSS_rcap(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("rcap", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "rcap", value));
 }
 
 CSSUnitValue CSS_rch(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("rch", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "rch", value));
 }
 
 CSSUnitValue CSS_rem(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("rem", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "rem", value));
 }
 
 CSSUnitValue CSS_rex(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("rex", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "rex", value));
 }
 
 CSSUnitValue CSS_ric(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("ric", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "ric", value));
 }
 
 CSSUnitValue CSS_rlh(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("rlh", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "rlh", value));
 }
 
 CSSUnitValue CSS_vw(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("vw", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "vw", value));
 }
 
 CSSUnitValue CSS_vh(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("vh", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "vh", value));
 }
 
 CSSUnitValue CSS_vi(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("vi", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "vi", value));
 }
 
 CSSUnitValue CSS_vb(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("vb", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "vb", value));
 }
 
 CSSUnitValue CSS_vmin(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("vmin", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "vmin", value));
 }
 
 CSSUnitValue CSS_vmax(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("vmax", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "vmax", value));
 }
 
 CSSUnitValue CSS_svw(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("svw", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "svw", value));
 }
 
 CSSUnitValue CSS_svh(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("svh", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "svh", value));
 }
 
 CSSUnitValue CSS_svi(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("svi", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "svi", value));
 }
 
 CSSUnitValue CSS_svb(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("svb", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "svb", value));
 }
 
 CSSUnitValue CSS_svmin(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("svmin", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "svmin", value));
 }
 
 CSSUnitValue CSS_svmax(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("svmax", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "svmax", value));
 }
 
 CSSUnitValue CSS_lvw(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("lvw", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "lvw", value));
 }
 
 CSSUnitValue CSS_lvh(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("lvh", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "lvh", value));
 }
 
 CSSUnitValue CSS_lvi(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("lvi", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "lvi", value));
 }
 
 CSSUnitValue CSS_lvb(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("lvb", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "lvb", value));
 }
 
 CSSUnitValue CSS_lvmin(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("lvmin", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "lvmin", value));
 }
 
 CSSUnitValue CSS_lvmax(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("lvmax", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "lvmax", value));
 }
 
 CSSUnitValue CSS_dvw(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("dvw", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "dvw", value));
 }
 
 CSSUnitValue CSS_dvh(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("dvh", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "dvh", value));
 }
 
 CSSUnitValue CSS_dvi(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("dvi", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "dvi", value));
 }
 
 CSSUnitValue CSS_dvb(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("dvb", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "dvb", value));
 }
 
 CSSUnitValue CSS_dvmin(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("dvmin", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "dvmin", value));
 }
 
 CSSUnitValue CSS_dvmax(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("dvmax", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "dvmax", value));
 }
 
 CSSUnitValue CSS_cqw(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("cqw", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "cqw", value));
 }
 
 CSSUnitValue CSS_cqh(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("cqh", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "cqh", value));
 }
 
 CSSUnitValue CSS_cqi(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("cqi", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "cqi", value));
 }
 
 CSSUnitValue CSS_cqb(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("cqb", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "cqb", value));
 }
 
 CSSUnitValue CSS_cqmin(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("cqmin", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "cqmin", value));
 }
 
 CSSUnitValue CSS_cqmax(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("cqmax", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "cqmax", value));
 }
 
 CSSUnitValue CSS_cm(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("cm", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "cm", value));
 }
 
 CSSUnitValue CSS_mm(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("mm", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "mm", value));
 }
 
 CSSUnitValue CSS_Q(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("Q", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "Q", value));
 }
 
 CSSUnitValue CSS_in(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("in", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "in", value));
 }
 
 CSSUnitValue CSS_pt(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("pt", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "pt", value));
 }
 
 CSSUnitValue CSS_pc(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("pc", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "pc", value));
 }
 
 CSSUnitValue CSS_px(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("px", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "px", value));
 }
 
 CSSUnitValue CSS_deg(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("deg", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "deg", value));
 }
 
 CSSUnitValue CSS_grad(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("grad", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "grad", value));
 }
 
 CSSUnitValue CSS_rad(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("rad", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "rad", value));
 }
 
 CSSUnitValue CSS_turn(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("turn", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "turn", value));
 }
 
 CSSUnitValue CSS_s(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("s", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "s", value));
 }
 
 CSSUnitValue CSS_ms(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("ms", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "ms", value));
 }
 
 CSSUnitValue CSS_Hz(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("Hz", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "Hz", value));
 }
 
 CSSUnitValue CSS_kHz(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("kHz", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "kHz", value));
 }
 
 CSSUnitValue CSS_dpi(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("dpi", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "dpi", value));
 }
 
 CSSUnitValue CSS_dpcm(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("dpcm", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "dpcm", value));
 }
 
 CSSUnitValue CSS_dppx(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("dppx", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "dppx", value));
 }
 
 CSSUnitValue CSS_fr(double value) {
-    return em_Val_as(CSSUnitValue, em_Val_global("css").call("fr", value));
+    return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css", "fr", value));
 }
 
 
 
-jb_CSSOMString CSS_escape(const jb_CSSOMString* ident) {
-    return em_Val_as(jb_CSSOMString, em_Val_global("css").call("escape", ident));
+jb_CSSOMString CSS_escape(jb_CSSOMString * ident) {
+    return em_Val_as(jb_CSSOMString, em_Val_call(em_Val_global("css", "escape", ident));
 }
 

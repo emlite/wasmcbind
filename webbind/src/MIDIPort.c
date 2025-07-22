@@ -5,47 +5,47 @@ DEFINE_EMLITE_TYPE(MIDIPort, EventTarget);
 
 
 jb_DOMString MIDIPort_id(const MIDIPort *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), "id"));
+    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
 jb_DOMString MIDIPort_manufacturer(const MIDIPort *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), "manufacturer"));
+    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("manufacturer")));
 }
 
 
 jb_DOMString MIDIPort_name(const MIDIPort *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
 }
 
 
 MIDIPortType MIDIPort_type(const MIDIPort *self) {
-    return em_Val_as(MIDIPortType, em_Val_get(EventTarget_as_val(self->inner), "type"));
+    return em_Val_as(MIDIPortType, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("type")));
 }
 
 
 jb_DOMString MIDIPort_version(const MIDIPort *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), "version"));
+    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("version")));
 }
 
 
 MIDIPortDeviceState MIDIPort_state(const MIDIPort *self) {
-    return em_Val_as(MIDIPortDeviceState, em_Val_get(EventTarget_as_val(self->inner), "state"));
+    return em_Val_as(MIDIPortDeviceState, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("state")));
 }
 
 
 MIDIPortConnectionState MIDIPort_connection(const MIDIPort *self) {
-    return em_Val_as(MIDIPortConnectionState, em_Val_get(EventTarget_as_val(self->inner), "connection"));
+    return em_Val_as(MIDIPortConnectionState, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("connection")));
 }
 
 
 jb_Any MIDIPort_onstatechange(const MIDIPort *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onstatechange"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onstatechange")));
 }
 
 
-void MIDIPort_set_onstatechange(MIDIPort* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onstatechange", value);
+void MIDIPort_set_onstatechange(MIDIPort* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onstatechange"), em_Val_from(value));
 }
 
 

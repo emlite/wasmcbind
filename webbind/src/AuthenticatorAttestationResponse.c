@@ -5,7 +5,7 @@ DEFINE_EMLITE_TYPE(AuthenticatorAttestationResponse, AuthenticatorResponse);
 
 
 jb_ArrayBuffer AuthenticatorAttestationResponse_attestationObject(const AuthenticatorAttestationResponse *self) {
-    return em_Val_as(jb_ArrayBuffer, em_Val_get(AuthenticatorResponse_as_val(self->inner), "attestationObject"));
+    return em_Val_as(jb_ArrayBuffer, em_Val_get(AuthenticatorResponse_as_val(self->inner), em_Val_from("attestationObject")));
 }
 
 

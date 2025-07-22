@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} SVGLength;
-
-
 DECLARE_EMLITE_TYPE(SVGLength, em_Val);
 
 unsigned short SVGLength_unitType( const SVGLength *self);
@@ -24,7 +19,7 @@ void SVGLength_set_valueInSpecifiedUnits(SVGLength* self, float value);
 
 jb_DOMString SVGLength_valueAsString( const SVGLength *self);
 
-void SVGLength_set_valueAsString(SVGLength* self, const jb_DOMString* value);
+void SVGLength_set_valueAsString(SVGLength* self, jb_DOMString * value);
 
 jb_Undefined SVGLength_newValueSpecifiedUnits(SVGLength* self , unsigned short unitType, float valueInSpecifiedUnits);
 

@@ -13,11 +13,6 @@ typedef struct FocusOptions FocusOptions;
 typedef struct CSSStyleDeclaration CSSStyleDeclaration;
 
 
-typedef struct {
-  em_Val inner;
-} FocusOptions;
-
-
 DECLARE_EMLITE_TYPE(FocusOptions, em_Val);
 
 bool FocusOptions_preventScroll( const FocusOptions *self);
@@ -27,11 +22,6 @@ void FocusOptions_set_preventScroll(FocusOptions* self, bool value);
 bool FocusOptions_focusVisible( const FocusOptions *self);
 
 void FocusOptions_set_focusVisible(FocusOptions* self, bool value);
-typedef struct {
-  Element inner;
-} SVGElement;
-
-
 DECLARE_EMLITE_TYPE(SVGElement, Element);
 
 SVGAnimatedString SVGElement_className( const SVGElement *self);
@@ -42,7 +32,7 @@ SVGElement SVGElement_viewportElement( const SVGElement *self);
 
 jb_Any SVGElement_onbeforexrselect( const SVGElement *self);
 
-void SVGElement_set_onbeforexrselect(SVGElement* self, const jb_Any* value);
+void SVGElement_set_onbeforexrselect(SVGElement* self, jb_Any * value);
 
 SVGElement SVGElement_correspondingElement( const SVGElement *self);
 
@@ -52,7 +42,7 @@ DOMStringMap SVGElement_dataset( const SVGElement *self);
 
 jb_DOMString SVGElement_nonce( const SVGElement *self);
 
-void SVGElement_set_nonce(SVGElement* self, const jb_DOMString* value);
+void SVGElement_set_nonce(SVGElement* self, jb_DOMString * value);
 
 bool SVGElement_autofocus( const SVGElement *self);
 
@@ -62,9 +52,9 @@ long SVGElement_tabIndex( const SVGElement *self);
 
 void SVGElement_set_tabIndex(SVGElement* self, long value);
 
-jb_Undefined SVGElement_focus(SVGElement* self );
+jb_Undefined SVGElement_focus0(SVGElement* self );
 
-jb_Undefined SVGElement_focus(SVGElement* self , const FocusOptions* options);
+jb_Undefined SVGElement_focus1(SVGElement* self , FocusOptions * options);
 
 jb_Undefined SVGElement_blur(SVGElement* self );
 

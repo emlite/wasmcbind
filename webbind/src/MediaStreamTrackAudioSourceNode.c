@@ -5,7 +5,8 @@
 DEFINE_EMLITE_TYPE(MediaStreamTrackAudioSourceNode, AudioNode);
 
 
-MediaStreamTrackAudioSourceNode MediaStreamTrackAudioSourceNode_new(const AudioContext* context, const jb_Any* options) : AudioNode(em_Val_global("MediaStreamTrackAudioSourceNode").new_(em_Val_from(context), em_Val_from(options))) {
-        return MediaStreamTrackAudioSourceNode(em_Val_new(em_Val_global("MediaStreamTrackAudioSourceNode", em_Val_from(context), em_Val_from(options)));
+MediaStreamTrackAudioSourceNode MediaStreamTrackAudioSourceNode_new(AudioContext * context, jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("MediaStreamTrackAudioSourceNode") , em_Val_from(context), em_Val_from(options));
+        return MediaStreamTrackAudioSourceNode_from_val(&vv);
       }
 

@@ -8,11 +8,6 @@ typedef struct WebTransportReceiveStream WebTransportReceiveStream;
 typedef struct WebTransportSendStream WebTransportSendStream;
 
 
-typedef struct {
-  em_Val inner;
-} WebTransportBidirectionalStream;
-
-
 DECLARE_EMLITE_TYPE(WebTransportBidirectionalStream, em_Val);
 
 WebTransportReceiveStream WebTransportBidirectionalStream_readable( const WebTransportBidirectionalStream *self);

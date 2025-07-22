@@ -7,11 +7,6 @@
 typedef struct SpeechRecognitionAlternative SpeechRecognitionAlternative;
 
 
-typedef struct {
-  em_Val inner;
-} SpeechRecognitionResult;
-
-
 DECLARE_EMLITE_TYPE(SpeechRecognitionResult, em_Val);
 
 unsigned long SpeechRecognitionResult_length( const SpeechRecognitionResult *self);

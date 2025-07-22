@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSConditionRule inner;
-} CSSSupportsRule;
-
-
 DECLARE_EMLITE_TYPE(CSSSupportsRule, CSSConditionRule);
 
 bool CSSSupportsRule_matches( const CSSSupportsRule *self);

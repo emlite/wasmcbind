@@ -5,47 +5,50 @@
 DEFINE_EMLITE_TYPE(Blob, em_Val);
 
 
-Blob Blob_new() : em_Val(em_Val_global("Blob").new_()) {
-        return Blob(em_Val_new(em_Val_global("Blob", ));
+Blob Blob_new0() {
+        em_Val vv = em_Val_new(em_Val_global("Blob") );
+        return Blob_from_val(&vv);
       }
 
 
-Blob Blob_new(const jb_Sequence* blobParts) : em_Val(em_Val_global("Blob").new_(em_Val_from(blobParts))) {
-        return Blob(em_Val_new(em_Val_global("Blob", em_Val_from(blobParts)));
+Blob Blob_new1(jb_Sequence * blobParts) {
+        em_Val vv = em_Val_new(em_Val_global("Blob") , em_Val_from(blobParts));
+        return Blob_from_val(&vv);
       }
 
 
-Blob Blob_new(const jb_Sequence* blobParts, const jb_Any* options) : em_Val(em_Val_global("Blob").new_(em_Val_from(blobParts), em_Val_from(options))) {
-        return Blob(em_Val_new(em_Val_global("Blob", em_Val_from(blobParts), em_Val_from(options)));
+Blob Blob_new2(jb_Sequence * blobParts, jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("Blob") , em_Val_from(blobParts), em_Val_from(options));
+        return Blob_from_val(&vv);
       }
 
 
 long long Blob_size(const Blob *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "size"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("size")));
 }
 
 
 jb_DOMString Blob_type(const Blob *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "type"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
-Blob Blob_slice(Blob* self ) {
+Blob Blob_slice0(Blob* self ) {
     return em_Val_as(Blob, em_Val_call(em_Val_as_val(self->inner), "slice"));
 }
 
 
-Blob Blob_slice(Blob* self , long long start) {
+Blob Blob_slice1(Blob* self , long long start) {
     return em_Val_as(Blob, em_Val_call(em_Val_as_val(self->inner), "slice", em_Val_from(start)));
 }
 
 
-Blob Blob_slice(Blob* self , long long start, long long end) {
+Blob Blob_slice2(Blob* self , long long start, long long end) {
     return em_Val_as(Blob, em_Val_call(em_Val_as_val(self->inner), "slice", em_Val_from(start), em_Val_from(end)));
 }
 
 
-Blob Blob_slice(Blob* self , long long start, long long end, const jb_DOMString* contentType) {
+Blob Blob_slice3(Blob* self , long long start, long long end, jb_DOMString * contentType) {
     return em_Val_as(Blob, em_Val_call(em_Val_as_val(self->inner), "slice", em_Val_from(start), em_Val_from(end), em_Val_from(contentType)));
 }
 

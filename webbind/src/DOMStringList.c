@@ -5,7 +5,7 @@ DEFINE_EMLITE_TYPE(DOMStringList, em_Val);
 
 
 unsigned long DOMStringList_length(const DOMStringList *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "length"));
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("length")));
 }
 
 
@@ -14,7 +14,7 @@ jb_DOMString DOMStringList_item(DOMStringList* self , unsigned long index) {
 }
 
 
-bool DOMStringList_contains(DOMStringList* self , const jb_DOMString* string) {
+bool DOMStringList_contains(DOMStringList* self , jb_DOMString * string) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "contains", em_Val_from(string)));
 }
 

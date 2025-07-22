@@ -9,29 +9,19 @@ typedef struct TaskSignal TaskSignal;
 typedef struct TaskSignalAnyInit TaskSignalAnyInit;
 
 
-typedef struct {
-  em_Val inner;
-} TaskSignalAnyInit;
-
-
 DECLARE_EMLITE_TYPE(TaskSignalAnyInit, em_Val);
 
 jb_Any TaskSignalAnyInit_priority( const TaskSignalAnyInit *self);
 
-void TaskSignalAnyInit_set_priority(TaskSignalAnyInit* self, const jb_Any* value);
-typedef struct {
-  AbortSignal inner;
-} TaskSignal;
-
-
+void TaskSignalAnyInit_set_priority(TaskSignalAnyInit* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(TaskSignal, AbortSignal);
 
-TaskSignal TaskSignal_any(TaskSignal* self , const jb_Sequence* signals);
+TaskSignal TaskSignal_any0(TaskSignal* self , jb_Sequence * signals);
 
-TaskSignal TaskSignal_any(TaskSignal* self , const jb_Sequence* signals, const TaskSignalAnyInit* init);
+TaskSignal TaskSignal_any1(TaskSignal* self , jb_Sequence * signals, TaskSignalAnyInit * init);
 
 TaskPriority TaskSignal_priority( const TaskSignal *self);
 
 jb_Any TaskSignal_onprioritychange( const TaskSignal *self);
 
-void TaskSignal_set_onprioritychange(TaskSignal* self, const jb_Any* value);
+void TaskSignal_set_onprioritychange(TaskSignal* self, jb_Any * value);

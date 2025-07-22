@@ -7,11 +7,6 @@
 typedef struct FileSystemDirectoryEntry FileSystemDirectoryEntry;
 
 
-typedef struct {
-  em_Val inner;
-} FileSystem;
-
-
 DECLARE_EMLITE_TYPE(FileSystem, em_Val);
 
 jb_USVString FileSystem_name( const FileSystem *self);

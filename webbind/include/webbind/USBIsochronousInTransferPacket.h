@@ -5,16 +5,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} USBIsochronousInTransferPacket;
-
-
 DECLARE_EMLITE_TYPE(USBIsochronousInTransferPacket, em_Val);
 
-USBIsochronousInTransferPacket USBIsochronousInTransferPacket_new(const USBTransferStatus* status);
+USBIsochronousInTransferPacket USBIsochronousInTransferPacket_new0(USBTransferStatus * status);
 
-USBIsochronousInTransferPacket USBIsochronousInTransferPacket_new(const USBTransferStatus* status, const jb_DataView* data);
+USBIsochronousInTransferPacket USBIsochronousInTransferPacket_new1(USBTransferStatus * status, jb_DataView * data);
 
 jb_DataView USBIsochronousInTransferPacket_data( const USBIsochronousInTransferPacket *self);
 

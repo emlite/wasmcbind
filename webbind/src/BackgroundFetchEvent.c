@@ -5,12 +5,13 @@
 DEFINE_EMLITE_TYPE(BackgroundFetchEvent, ExtendableEvent);
 
 
-BackgroundFetchEvent BackgroundFetchEvent_new(const jb_DOMString* type, const jb_Any* init) : ExtendableEvent(em_Val_global("BackgroundFetchEvent").new_(em_Val_from(type), em_Val_from(init))) {
-        return BackgroundFetchEvent(em_Val_new(em_Val_global("BackgroundFetchEvent", em_Val_from(type), em_Val_from(init)));
+BackgroundFetchEvent BackgroundFetchEvent_new(jb_DOMString * type, jb_Any * init) {
+        em_Val vv = em_Val_new(em_Val_global("BackgroundFetchEvent") , em_Val_from(type), em_Val_from(init));
+        return BackgroundFetchEvent_from_val(&vv);
       }
 
 
 BackgroundFetchRegistration BackgroundFetchEvent_registration(const BackgroundFetchEvent *self) {
-    return em_Val_as(BackgroundFetchRegistration, em_Val_get(ExtendableEvent_as_val(self->inner), "registration"));
+    return em_Val_as(BackgroundFetchRegistration, em_Val_get(ExtendableEvent_as_val(self->inner), em_Val_from("registration")));
 }
 

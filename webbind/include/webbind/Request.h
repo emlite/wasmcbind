@@ -12,16 +12,11 @@ typedef struct Blob Blob;
 typedef struct FormData FormData;
 
 
-typedef struct {
-  em_Val inner;
-} Request;
-
-
 DECLARE_EMLITE_TYPE(Request, em_Val);
 
-Request Request_new(const jb_Any* input);
+Request Request_new0(jb_Any * input);
 
-Request Request_new(const jb_Any* input, const jb_Any* init);
+Request Request_new1(jb_Any * input, jb_Any * init);
 
 jb_ByteString Request_method( const Request *self);
 

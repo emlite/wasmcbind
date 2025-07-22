@@ -5,37 +5,37 @@ DEFINE_EMLITE_TYPE(AudioParam, em_Val);
 
 
 float AudioParam_value(const AudioParam *self) {
-    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), "value"));
+    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), em_Val_from("value")));
 }
 
 
 void AudioParam_set_value(AudioParam* self, float value) {
-    em_Val_set(em_Val_as_val(self->inner), "value", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
 }
 
 
 AutomationRate AudioParam_automationRate(const AudioParam *self) {
-    return em_Val_as(AutomationRate, em_Val_get(em_Val_as_val(self->inner), "automationRate"));
+    return em_Val_as(AutomationRate, em_Val_get(em_Val_as_val(self->inner), em_Val_from("automationRate")));
 }
 
 
-void AudioParam_set_automationRate(AudioParam* self, const AutomationRate* value) {
-    em_Val_set(em_Val_as_val(self->inner), "automationRate", value);
+void AudioParam_set_automationRate(AudioParam* self, AutomationRate * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("automationRate"), em_Val_from(value));
 }
 
 
 float AudioParam_defaultValue(const AudioParam *self) {
-    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), "defaultValue"));
+    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), em_Val_from("defaultValue")));
 }
 
 
 float AudioParam_minValue(const AudioParam *self) {
-    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), "minValue"));
+    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), em_Val_from("minValue")));
 }
 
 
 float AudioParam_maxValue(const AudioParam *self) {
-    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), "maxValue"));
+    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), em_Val_from("maxValue")));
 }
 
 
@@ -59,7 +59,7 @@ AudioParam AudioParam_setTargetAtTime(AudioParam* self , float target, double st
 }
 
 
-AudioParam AudioParam_setValueCurveAtTime(AudioParam* self , const jb_Sequence* values, double startTime, double duration) {
+AudioParam AudioParam_setValueCurveAtTime(AudioParam* self , jb_Sequence * values, double startTime, double duration) {
     return em_Val_as(AudioParam, em_Val_call(em_Val_as_val(self->inner), "setValueCurveAtTime", em_Val_from(values), em_Val_from(startTime), em_Val_from(duration)));
 }
 

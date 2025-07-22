@@ -9,11 +9,6 @@ typedef struct Element Element;
 typedef struct Node Node;
 
 
-typedef struct {
-  EventTarget inner;
-} NamedFlow;
-
-
 DECLARE_EMLITE_TYPE(NamedFlow, EventTarget);
 
 jb_CSSOMString NamedFlow_name( const NamedFlow *self);
@@ -26,4 +21,4 @@ short NamedFlow_firstEmptyRegionIndex( const NamedFlow *self);
 
 jb_Sequence NamedFlow_getContent(NamedFlow* self );
 
-jb_Sequence NamedFlow_getRegionsByContent(NamedFlow* self , const Node* node);
+jb_Sequence NamedFlow_getRegionsByContent(NamedFlow* self , Node * node);

@@ -8,20 +8,15 @@
 typedef struct Path2D Path2D;
 
 
-typedef struct {
-  em_Val inner;
-} Path2D;
-
-
 DECLARE_EMLITE_TYPE(Path2D, em_Val);
 
-Path2D Path2D_new();
+Path2D Path2D_new0();
 
-Path2D Path2D_new(const jb_Any* path);
+Path2D Path2D_new1(jb_Any * path);
 
-jb_Undefined Path2D_addPath(Path2D* self , const Path2D* path);
+jb_Undefined Path2D_addPath0(Path2D* self , Path2D * path);
 
-jb_Undefined Path2D_addPath(Path2D* self , const Path2D* path, const DOMMatrix2DInit* transform);
+jb_Undefined Path2D_addPath1(Path2D* self , Path2D * path, DOMMatrix2DInit * transform);
 
 jb_Undefined Path2D_closePath(Path2D* self );
 
@@ -37,14 +32,14 @@ jb_Undefined Path2D_arcTo(Path2D* self , double x1, double y1, double x2, double
 
 jb_Undefined Path2D_rect(Path2D* self , double x, double y, double w, double h);
 
-jb_Undefined Path2D_roundRect(Path2D* self , double x, double y, double w, double h);
+jb_Undefined Path2D_roundRect0(Path2D* self , double x, double y, double w, double h);
 
-jb_Undefined Path2D_roundRect(Path2D* self , double x, double y, double w, double h, const jb_Any* radii);
+jb_Undefined Path2D_roundRect1(Path2D* self , double x, double y, double w, double h, jb_Any * radii);
 
-jb_Undefined Path2D_arc(Path2D* self , double x, double y, double radius, double startAngle, double endAngle);
+jb_Undefined Path2D_arc0(Path2D* self , double x, double y, double radius, double startAngle, double endAngle);
 
-jb_Undefined Path2D_arc(Path2D* self , double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise);
+jb_Undefined Path2D_arc1(Path2D* self , double x, double y, double radius, double startAngle, double endAngle, bool counterclockwise);
 
-jb_Undefined Path2D_ellipse(Path2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle);
+jb_Undefined Path2D_ellipse0(Path2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle);
 
-jb_Undefined Path2D_ellipse(Path2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise);
+jb_Undefined Path2D_ellipse1(Path2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise);

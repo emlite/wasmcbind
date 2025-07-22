@@ -8,138 +8,139 @@
 DEFINE_EMLITE_TYPE(HTMLButtonElement, HTMLElement);
 
 
-HTMLButtonElement HTMLButtonElement_new() : HTMLElement(em_Val_global("HTMLButtonElement").new_()) {
-        return HTMLButtonElement(em_Val_new(em_Val_global("HTMLButtonElement", ));
+HTMLButtonElement HTMLButtonElement_new() {
+        em_Val vv = em_Val_new(em_Val_global("HTMLButtonElement") );
+        return HTMLButtonElement_from_val(&vv);
       }
 
 
 jb_DOMString HTMLButtonElement_command(const HTMLButtonElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "command"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("command")));
 }
 
 
-void HTMLButtonElement_set_command(HTMLButtonElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "command", value);
+void HTMLButtonElement_set_command(HTMLButtonElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("command"), em_Val_from(value));
 }
 
 
 Element HTMLButtonElement_commandForElement(const HTMLButtonElement *self) {
-    return em_Val_as(Element, em_Val_get(HTMLElement_as_val(self->inner), "commandForElement"));
+    return em_Val_as(Element, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("commandForElement")));
 }
 
 
-void HTMLButtonElement_set_commandForElement(HTMLButtonElement* self, const Element* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "commandForElement", value);
+void HTMLButtonElement_set_commandForElement(HTMLButtonElement* self, Element * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("commandForElement"), em_Val_from(value));
 }
 
 
 bool HTMLButtonElement_disabled(const HTMLButtonElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "disabled"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("disabled")));
 }
 
 
 void HTMLButtonElement_set_disabled(HTMLButtonElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "disabled", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("disabled"), em_Val_from(value));
 }
 
 
 HTMLFormElement HTMLButtonElement_form(const HTMLButtonElement *self) {
-    return em_Val_as(HTMLFormElement, em_Val_get(HTMLElement_as_val(self->inner), "form"));
+    return em_Val_as(HTMLFormElement, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("form")));
 }
 
 
 jb_USVString HTMLButtonElement_formAction(const HTMLButtonElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "formAction"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formAction")));
 }
 
 
-void HTMLButtonElement_set_formAction(HTMLButtonElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "formAction", value);
+void HTMLButtonElement_set_formAction(HTMLButtonElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("formAction"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLButtonElement_formEnctype(const HTMLButtonElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "formEnctype"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formEnctype")));
 }
 
 
-void HTMLButtonElement_set_formEnctype(HTMLButtonElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "formEnctype", value);
+void HTMLButtonElement_set_formEnctype(HTMLButtonElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("formEnctype"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLButtonElement_formMethod(const HTMLButtonElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "formMethod"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formMethod")));
 }
 
 
-void HTMLButtonElement_set_formMethod(HTMLButtonElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "formMethod", value);
+void HTMLButtonElement_set_formMethod(HTMLButtonElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("formMethod"), em_Val_from(value));
 }
 
 
 bool HTMLButtonElement_formNoValidate(const HTMLButtonElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "formNoValidate"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formNoValidate")));
 }
 
 
 void HTMLButtonElement_set_formNoValidate(HTMLButtonElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "formNoValidate", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("formNoValidate"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLButtonElement_formTarget(const HTMLButtonElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "formTarget"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formTarget")));
 }
 
 
-void HTMLButtonElement_set_formTarget(HTMLButtonElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "formTarget", value);
+void HTMLButtonElement_set_formTarget(HTMLButtonElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("formTarget"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLButtonElement_name(const HTMLButtonElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLButtonElement_set_name(HTMLButtonElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "name", value);
+void HTMLButtonElement_set_name(HTMLButtonElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLButtonElement_type(const HTMLButtonElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "type"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void HTMLButtonElement_set_type(HTMLButtonElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "type", value);
+void HTMLButtonElement_set_type(HTMLButtonElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLButtonElement_value(const HTMLButtonElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "value"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
 }
 
 
-void HTMLButtonElement_set_value(HTMLButtonElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "value", value);
+void HTMLButtonElement_set_value(HTMLButtonElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
 }
 
 
 bool HTMLButtonElement_willValidate(const HTMLButtonElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "willValidate"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("willValidate")));
 }
 
 
 ValidityState HTMLButtonElement_validity(const HTMLButtonElement *self) {
-    return em_Val_as(ValidityState, em_Val_get(HTMLElement_as_val(self->inner), "validity"));
+    return em_Val_as(ValidityState, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validity")));
 }
 
 
 jb_DOMString HTMLButtonElement_validationMessage(const HTMLButtonElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "validationMessage"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
 }
 
 
@@ -153,32 +154,32 @@ bool HTMLButtonElement_reportValidity(HTMLButtonElement* self ) {
 }
 
 
-jb_Undefined HTMLButtonElement_setCustomValidity(HTMLButtonElement* self , const jb_DOMString* error) {
+jb_Undefined HTMLButtonElement_setCustomValidity(HTMLButtonElement* self , jb_DOMString * error) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setCustomValidity", em_Val_from(error)));
 }
 
 
 NodeList HTMLButtonElement_labels(const HTMLButtonElement *self) {
-    return em_Val_as(NodeList, em_Val_get(HTMLElement_as_val(self->inner), "labels"));
+    return em_Val_as(NodeList, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("labels")));
 }
 
 
 Element HTMLButtonElement_popoverTargetElement(const HTMLButtonElement *self) {
-    return em_Val_as(Element, em_Val_get(HTMLElement_as_val(self->inner), "popoverTargetElement"));
+    return em_Val_as(Element, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("popoverTargetElement")));
 }
 
 
-void HTMLButtonElement_set_popoverTargetElement(HTMLButtonElement* self, const Element* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "popoverTargetElement", value);
+void HTMLButtonElement_set_popoverTargetElement(HTMLButtonElement* self, Element * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("popoverTargetElement"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLButtonElement_popoverTargetAction(const HTMLButtonElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "popoverTargetAction"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("popoverTargetAction")));
 }
 
 
-void HTMLButtonElement_set_popoverTargetAction(HTMLButtonElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "popoverTargetAction", value);
+void HTMLButtonElement_set_popoverTargetAction(HTMLButtonElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("popoverTargetAction"), em_Val_from(value));
 }
 

@@ -10,15 +10,10 @@ typedef struct BrowserCaptureMediaStreamTrack BrowserCaptureMediaStreamTrack;
 typedef struct RestrictionTarget RestrictionTarget;
 
 
-typedef struct {
-  MediaStreamTrack inner;
-} BrowserCaptureMediaStreamTrack;
-
-
 DECLARE_EMLITE_TYPE(BrowserCaptureMediaStreamTrack, MediaStreamTrack);
 
-jb_Promise BrowserCaptureMediaStreamTrack_cropTo(BrowserCaptureMediaStreamTrack* self , const CropTarget* cropTarget);
+jb_Promise BrowserCaptureMediaStreamTrack_cropTo(BrowserCaptureMediaStreamTrack* self , CropTarget * cropTarget);
 
 BrowserCaptureMediaStreamTrack BrowserCaptureMediaStreamTrack_clone(BrowserCaptureMediaStreamTrack* self );
 
-jb_Promise BrowserCaptureMediaStreamTrack_restrictTo(BrowserCaptureMediaStreamTrack* self , const RestrictionTarget* RestrictionTarget);
+jb_Promise BrowserCaptureMediaStreamTrack_restrictTo(BrowserCaptureMediaStreamTrack* self , RestrictionTarget * RestrictionTarget);

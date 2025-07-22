@@ -10,11 +10,6 @@ typedef struct SVGAnimatedNumberList SVGAnimatedNumberList;
 typedef struct SVGAnimatedNumber SVGAnimatedNumber;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGComponentTransferFunctionElement;
-
-
 DECLARE_EMLITE_TYPE(SVGComponentTransferFunctionElement, SVGElement);
 
 SVGAnimatedEnumeration SVGComponentTransferFunctionElement_type( const SVGComponentTransferFunctionElement *self);

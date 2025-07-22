@@ -8,13 +8,8 @@
 typedef struct CSSNumericArray CSSNumericArray;
 
 
-typedef struct {
-  CSSMathValue inner;
-} CSSMathMin;
-
-
 DECLARE_EMLITE_TYPE(CSSMathMin, CSSMathValue);
 
-CSSMathMin CSSMathMin_new(const jb_Any* args);
+CSSMathMin CSSMathMin_new(jb_Any * args);
 
 CSSNumericArray CSSMathMin_values( const CSSMathMin *self);

@@ -14,11 +14,6 @@ typedef struct BroadcastChannel BroadcastChannel;
 typedef struct SharedWorker SharedWorker;
 
 
-typedef struct {
-  em_Val inner;
-} StorageAccessHandle;
-
-
 DECLARE_EMLITE_TYPE(StorageAccessHandle, em_Val);
 
 Storage StorageAccessHandle_sessionStorage( const StorageAccessHandle *self);
@@ -35,12 +30,12 @@ jb_Promise StorageAccessHandle_getDirectory(StorageAccessHandle* self );
 
 jb_Promise StorageAccessHandle_estimate(StorageAccessHandle* self );
 
-jb_DOMString StorageAccessHandle_createObjectURL(StorageAccessHandle* self , const jb_Any* obj);
+jb_DOMString StorageAccessHandle_createObjectURL(StorageAccessHandle* self , jb_Any * obj);
 
-jb_Undefined StorageAccessHandle_revokeObjectURL(StorageAccessHandle* self , const jb_DOMString* url);
+jb_Undefined StorageAccessHandle_revokeObjectURL(StorageAccessHandle* self , jb_DOMString * url);
 
-BroadcastChannel StorageAccessHandle_BroadcastChannel_(StorageAccessHandle* self , const jb_DOMString* name);
+BroadcastChannel StorageAccessHandle_BroadcastChannel_(StorageAccessHandle* self , jb_DOMString * name);
 
-SharedWorker StorageAccessHandle_SharedWorker_(StorageAccessHandle* self , const jb_USVString* scriptURL);
+SharedWorker StorageAccessHandle_SharedWorker_0(StorageAccessHandle* self , jb_USVString * scriptURL);
 
-SharedWorker StorageAccessHandle_SharedWorker_(StorageAccessHandle* self , const jb_USVString* scriptURL, const jb_Any* options);
+SharedWorker StorageAccessHandle_SharedWorker_1(StorageAccessHandle* self , jb_USVString * scriptURL, jb_Any * options);

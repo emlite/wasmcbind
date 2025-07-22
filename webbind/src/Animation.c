@@ -7,113 +7,116 @@
 DEFINE_EMLITE_TYPE(Animation, EventTarget);
 
 
-Animation Animation_new() : EventTarget(em_Val_global("Animation").new_()) {
-        return Animation(em_Val_new(em_Val_global("Animation", ));
+Animation Animation_new0() {
+        em_Val vv = em_Val_new(em_Val_global("Animation") );
+        return Animation_from_val(&vv);
       }
 
 
-Animation Animation_new(const AnimationEffect* effect) : EventTarget(em_Val_global("Animation").new_(em_Val_from(effect))) {
-        return Animation(em_Val_new(em_Val_global("Animation", em_Val_from(effect)));
+Animation Animation_new1(AnimationEffect * effect) {
+        em_Val vv = em_Val_new(em_Val_global("Animation") , em_Val_from(effect));
+        return Animation_from_val(&vv);
       }
 
 
-Animation Animation_new(const AnimationEffect* effect, const AnimationTimeline* timeline) : EventTarget(em_Val_global("Animation").new_(em_Val_from(effect), em_Val_from(timeline))) {
-        return Animation(em_Val_new(em_Val_global("Animation", em_Val_from(effect), em_Val_from(timeline)));
+Animation Animation_new2(AnimationEffect * effect, AnimationTimeline * timeline) {
+        em_Val vv = em_Val_new(em_Val_global("Animation") , em_Val_from(effect), em_Val_from(timeline));
+        return Animation_from_val(&vv);
       }
 
 
 jb_DOMString Animation_id(const Animation *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), "id"));
+    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
-void Animation_set_id(Animation* self, const jb_DOMString* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "id", value);
+void Animation_set_id(Animation* self, jb_DOMString * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("id"), em_Val_from(value));
 }
 
 
 AnimationEffect Animation_effect(const Animation *self) {
-    return em_Val_as(AnimationEffect, em_Val_get(EventTarget_as_val(self->inner), "effect"));
+    return em_Val_as(AnimationEffect, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("effect")));
 }
 
 
-void Animation_set_effect(Animation* self, const AnimationEffect* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "effect", value);
+void Animation_set_effect(Animation* self, AnimationEffect * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("effect"), em_Val_from(value));
 }
 
 
 AnimationTimeline Animation_timeline(const Animation *self) {
-    return em_Val_as(AnimationTimeline, em_Val_get(EventTarget_as_val(self->inner), "timeline"));
+    return em_Val_as(AnimationTimeline, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("timeline")));
 }
 
 
-void Animation_set_timeline(Animation* self, const AnimationTimeline* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "timeline", value);
+void Animation_set_timeline(Animation* self, AnimationTimeline * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("timeline"), em_Val_from(value));
 }
 
 
 double Animation_playbackRate(const Animation *self) {
-    return em_Val_as(double, em_Val_get(EventTarget_as_val(self->inner), "playbackRate"));
+    return em_Val_as(double, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("playbackRate")));
 }
 
 
 void Animation_set_playbackRate(Animation* self, double value) {
-    em_Val_set(EventTarget_as_val(self->inner), "playbackRate", value);
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("playbackRate"), em_Val_from(value));
 }
 
 
 AnimationPlayState Animation_playState(const Animation *self) {
-    return em_Val_as(AnimationPlayState, em_Val_get(EventTarget_as_val(self->inner), "playState"));
+    return em_Val_as(AnimationPlayState, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("playState")));
 }
 
 
 AnimationReplaceState Animation_replaceState(const Animation *self) {
-    return em_Val_as(AnimationReplaceState, em_Val_get(EventTarget_as_val(self->inner), "replaceState"));
+    return em_Val_as(AnimationReplaceState, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("replaceState")));
 }
 
 
 bool Animation_pending(const Animation *self) {
-    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), "pending"));
+    return em_Val_as(bool, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("pending")));
 }
 
 
 jb_Promise Animation_ready(const Animation *self) {
-    return em_Val_as(jb_Promise, em_Val_get(EventTarget_as_val(self->inner), "ready"));
+    return em_Val_as(jb_Promise, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("ready")));
 }
 
 
 jb_Promise Animation_finished(const Animation *self) {
-    return em_Val_as(jb_Promise, em_Val_get(EventTarget_as_val(self->inner), "finished"));
+    return em_Val_as(jb_Promise, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("finished")));
 }
 
 
 jb_Any Animation_onfinish(const Animation *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onfinish"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onfinish")));
 }
 
 
-void Animation_set_onfinish(Animation* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onfinish", value);
+void Animation_set_onfinish(Animation* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onfinish"), em_Val_from(value));
 }
 
 
 jb_Any Animation_oncancel(const Animation *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "oncancel"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("oncancel")));
 }
 
 
-void Animation_set_oncancel(Animation* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "oncancel", value);
+void Animation_set_oncancel(Animation* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("oncancel"), em_Val_from(value));
 }
 
 
 jb_Any Animation_onremove(const Animation *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onremove"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onremove")));
 }
 
 
-void Animation_set_onremove(Animation* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onremove", value);
+void Animation_set_onremove(Animation* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onremove"), em_Val_from(value));
 }
 
 
@@ -158,36 +161,36 @@ jb_Undefined Animation_commitStyles(Animation* self ) {
 
 
 jb_Any Animation_startTime(const Animation *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "startTime"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("startTime")));
 }
 
 
-void Animation_set_startTime(Animation* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "startTime", value);
+void Animation_set_startTime(Animation* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("startTime"), em_Val_from(value));
 }
 
 
 jb_Any Animation_currentTime(const Animation *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "currentTime"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("currentTime")));
 }
 
 
-void Animation_set_currentTime(Animation* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "currentTime", value);
+void Animation_set_currentTime(Animation* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("currentTime"), em_Val_from(value));
 }
 
 
 AnimationTrigger Animation_trigger(const Animation *self) {
-    return em_Val_as(AnimationTrigger, em_Val_get(EventTarget_as_val(self->inner), "trigger"));
+    return em_Val_as(AnimationTrigger, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("trigger")));
 }
 
 
-void Animation_set_trigger(Animation* self, const AnimationTrigger* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "trigger", value);
+void Animation_set_trigger(Animation* self, AnimationTrigger * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("trigger"), em_Val_from(value));
 }
 
 
 double Animation_overallProgress(const Animation *self) {
-    return em_Val_as(double, em_Val_get(EventTarget_as_val(self->inner), "overallProgress"));
+    return em_Val_as(double, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("overallProgress")));
 }
 

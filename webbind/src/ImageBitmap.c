@@ -5,12 +5,12 @@ DEFINE_EMLITE_TYPE(ImageBitmap, em_Val);
 
 
 unsigned long ImageBitmap_width(const ImageBitmap *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "width"));
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("width")));
 }
 
 
 unsigned long ImageBitmap_height(const ImageBitmap *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "height"));
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("height")));
 }
 
 

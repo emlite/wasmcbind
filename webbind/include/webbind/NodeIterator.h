@@ -7,11 +7,6 @@
 typedef struct Node Node;
 
 
-typedef struct {
-  em_Val inner;
-} NodeIterator;
-
-
 DECLARE_EMLITE_TYPE(NodeIterator, em_Val);
 
 Node NodeIterator_root( const NodeIterator *self);

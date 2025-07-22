@@ -13,11 +13,6 @@ typedef struct DOMRectReadOnly DOMRectReadOnly;
 typedef struct DOMPoint DOMPoint;
 
 
-typedef struct {
-  EventTarget inner;
-} CSSPseudoElement;
-
-
 DECLARE_EMLITE_TYPE(CSSPseudoElement, EventTarget);
 
 jb_CSSOMString CSSPseudoElement_type( const CSSPseudoElement *self);
@@ -26,20 +21,20 @@ Element CSSPseudoElement_element( const CSSPseudoElement *self);
 
 jb_Any CSSPseudoElement_parent( const CSSPseudoElement *self);
 
-CSSPseudoElement CSSPseudoElement_pseudo(CSSPseudoElement* self , const jb_CSSOMString* type);
+CSSPseudoElement CSSPseudoElement_pseudo(CSSPseudoElement* self , jb_CSSOMString * type);
 
-jb_Sequence CSSPseudoElement_getBoxQuads(CSSPseudoElement* self );
+jb_Sequence CSSPseudoElement_getBoxQuads0(CSSPseudoElement* self );
 
-jb_Sequence CSSPseudoElement_getBoxQuads(CSSPseudoElement* self , const BoxQuadOptions* options);
+jb_Sequence CSSPseudoElement_getBoxQuads1(CSSPseudoElement* self , BoxQuadOptions * options);
 
-DOMQuad CSSPseudoElement_convertQuadFromNode(CSSPseudoElement* self , const DOMQuadInit* quad, const jb_Any* from);
+DOMQuad CSSPseudoElement_convertQuadFromNode0(CSSPseudoElement* self , DOMQuadInit * quad, jb_Any * from);
 
-DOMQuad CSSPseudoElement_convertQuadFromNode(CSSPseudoElement* self , const DOMQuadInit* quad, const jb_Any* from, const ConvertCoordinateOptions* options);
+DOMQuad CSSPseudoElement_convertQuadFromNode1(CSSPseudoElement* self , DOMQuadInit * quad, jb_Any * from, ConvertCoordinateOptions * options);
 
-DOMQuad CSSPseudoElement_convertRectFromNode(CSSPseudoElement* self , const DOMRectReadOnly* rect, const jb_Any* from);
+DOMQuad CSSPseudoElement_convertRectFromNode0(CSSPseudoElement* self , DOMRectReadOnly * rect, jb_Any * from);
 
-DOMQuad CSSPseudoElement_convertRectFromNode(CSSPseudoElement* self , const DOMRectReadOnly* rect, const jb_Any* from, const ConvertCoordinateOptions* options);
+DOMQuad CSSPseudoElement_convertRectFromNode1(CSSPseudoElement* self , DOMRectReadOnly * rect, jb_Any * from, ConvertCoordinateOptions * options);
 
-DOMPoint CSSPseudoElement_convertPointFromNode(CSSPseudoElement* self , const DOMPointInit* point, const jb_Any* from);
+DOMPoint CSSPseudoElement_convertPointFromNode0(CSSPseudoElement* self , DOMPointInit * point, jb_Any * from);
 
-DOMPoint CSSPseudoElement_convertPointFromNode(CSSPseudoElement* self , const DOMPointInit* point, const jb_Any* from, const ConvertCoordinateOptions* options);
+DOMPoint CSSPseudoElement_convertPointFromNode1(CSSPseudoElement* self , DOMPointInit * point, jb_Any * from, ConvertCoordinateOptions * options);

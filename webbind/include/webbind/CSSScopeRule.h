@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSGroupingRule inner;
-} CSSScopeRule;
-
-
 DECLARE_EMLITE_TYPE(CSSScopeRule, CSSGroupingRule);
 
 jb_CSSOMString CSSScopeRule_start( const CSSScopeRule *self);

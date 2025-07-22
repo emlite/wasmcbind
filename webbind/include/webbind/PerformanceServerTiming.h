@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} PerformanceServerTiming;
-
-
 DECLARE_EMLITE_TYPE(PerformanceServerTiming, em_Val);
 
 jb_DOMString PerformanceServerTiming_name( const PerformanceServerTiming *self);

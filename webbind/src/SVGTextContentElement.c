@@ -10,12 +10,12 @@ DEFINE_EMLITE_TYPE(SVGTextContentElement, SVGGraphicsElement);
 
 
 SVGAnimatedLength SVGTextContentElement_textLength(const SVGTextContentElement *self) {
-    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), "textLength"));
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("textLength")));
 }
 
 
 SVGAnimatedEnumeration SVGTextContentElement_lengthAdjust(const SVGTextContentElement *self) {
-    return em_Val_as(SVGAnimatedEnumeration, em_Val_get(SVGGraphicsElement_as_val(self->inner), "lengthAdjust"));
+    return em_Val_as(SVGAnimatedEnumeration, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("lengthAdjust")));
 }
 
 
@@ -54,12 +54,12 @@ float SVGTextContentElement_getRotationOfChar(SVGTextContentElement* self , unsi
 }
 
 
-long SVGTextContentElement_getCharNumAtPosition(SVGTextContentElement* self ) {
+long SVGTextContentElement_getCharNumAtPosition0(SVGTextContentElement* self ) {
     return em_Val_as(long, em_Val_call(SVGGraphicsElement_as_val(self->inner), "getCharNumAtPosition"));
 }
 
 
-long SVGTextContentElement_getCharNumAtPosition(SVGTextContentElement* self , const DOMPointInit* point) {
+long SVGTextContentElement_getCharNumAtPosition1(SVGTextContentElement* self , DOMPointInit * point) {
     return em_Val_as(long, em_Val_call(SVGGraphicsElement_as_val(self->inner), "getCharNumAtPosition", em_Val_from(point)));
 }
 

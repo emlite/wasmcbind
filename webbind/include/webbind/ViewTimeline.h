@@ -9,16 +9,11 @@ typedef struct Element Element;
 typedef struct CSSNumericValue CSSNumericValue;
 
 
-typedef struct {
-  ScrollTimeline inner;
-} ViewTimeline;
-
-
 DECLARE_EMLITE_TYPE(ViewTimeline, ScrollTimeline);
 
-ViewTimeline ViewTimeline_new();
+ViewTimeline ViewTimeline_new0();
 
-ViewTimeline ViewTimeline_new(const jb_Any* options);
+ViewTimeline ViewTimeline_new1(jb_Any * options);
 
 Element ViewTimeline_subject( const ViewTimeline *self);
 

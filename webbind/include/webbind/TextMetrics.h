@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} TextMetrics;
-
-
 DECLARE_EMLITE_TYPE(TextMetrics, em_Val);
 
 double TextMetrics_width( const TextMetrics *self);

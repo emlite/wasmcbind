@@ -8,16 +8,11 @@
 typedef struct Element Element;
 
 
-typedef struct {
-  AnimationTimeline inner;
-} PointerTimeline;
-
-
 DECLARE_EMLITE_TYPE(PointerTimeline, AnimationTimeline);
 
-PointerTimeline PointerTimeline_new();
+PointerTimeline PointerTimeline_new0();
 
-PointerTimeline PointerTimeline_new(const jb_Any* options);
+PointerTimeline PointerTimeline_new1(jb_Any * options);
 
 Element PointerTimeline_source( const PointerTimeline *self);
 

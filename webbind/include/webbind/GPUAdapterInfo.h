@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} GPUAdapterInfo;
-
-
 DECLARE_EMLITE_TYPE(GPUAdapterInfo, em_Val);
 
 jb_DOMString GPUAdapterInfo_vendor( const GPUAdapterInfo *self);

@@ -9,20 +9,15 @@ typedef struct XRSpace XRSpace;
 typedef struct XRRigidTransform XRRigidTransform;
 
 
-typedef struct {
-  XRCompositionLayer inner;
-} XREquirectLayer;
-
-
 DECLARE_EMLITE_TYPE(XREquirectLayer, XRCompositionLayer);
 
 XRSpace XREquirectLayer_space( const XREquirectLayer *self);
 
-void XREquirectLayer_set_space(XREquirectLayer* self, const XRSpace* value);
+void XREquirectLayer_set_space(XREquirectLayer* self, XRSpace * value);
 
 XRRigidTransform XREquirectLayer_transform( const XREquirectLayer *self);
 
-void XREquirectLayer_set_transform(XREquirectLayer* self, const XRRigidTransform* value);
+void XREquirectLayer_set_transform(XREquirectLayer* self, XRRigidTransform * value);
 
 float XREquirectLayer_radius( const XREquirectLayer *self);
 
@@ -42,4 +37,4 @@ void XREquirectLayer_set_lowerVerticalAngle(XREquirectLayer* self, float value);
 
 jb_Any XREquirectLayer_onredraw( const XREquirectLayer *self);
 
-void XREquirectLayer_set_onredraw(XREquirectLayer* self, const jb_Any* value);
+void XREquirectLayer_set_onredraw(XREquirectLayer* self, jb_Any * value);

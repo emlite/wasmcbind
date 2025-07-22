@@ -10,11 +10,6 @@ typedef struct SVGAnimatedTransformList SVGAnimatedTransformList;
 typedef struct SVGAnimatedString SVGAnimatedString;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGGradientElement;
-
-
 DECLARE_EMLITE_TYPE(SVGGradientElement, SVGElement);
 
 SVGAnimatedEnumeration SVGGradientElement_gradientUnits( const SVGGradientElement *self);

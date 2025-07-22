@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} MediaDeviceInfo;
-
-
 DECLARE_EMLITE_TYPE(MediaDeviceInfo, em_Val);
 
 jb_DOMString MediaDeviceInfo_deviceId( const MediaDeviceInfo *self);

@@ -6,46 +6,46 @@ DEFINE_EMLITE_TYPE(CSSFontFeatureValuesRule, CSSRule);
 
 
 jb_CSSOMString CSSFontFeatureValuesRule_fontFamily(const CSSFontFeatureValuesRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), "fontFamily"));
+    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("fontFamily")));
 }
 
 
-void CSSFontFeatureValuesRule_set_fontFamily(CSSFontFeatureValuesRule* self, const jb_CSSOMString* value) {
-    em_Val_set(CSSRule_as_val(self->inner), "fontFamily", value);
+void CSSFontFeatureValuesRule_set_fontFamily(CSSFontFeatureValuesRule* self, jb_CSSOMString * value) {
+    em_Val_set(CSSRule_as_val(self->inner), em_Val_from("fontFamily"), em_Val_from(value));
 }
 
 
 CSSFontFeatureValuesMap CSSFontFeatureValuesRule_annotation(const CSSFontFeatureValuesRule *self) {
-    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), "annotation"));
+    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("annotation")));
 }
 
 
 CSSFontFeatureValuesMap CSSFontFeatureValuesRule_ornaments(const CSSFontFeatureValuesRule *self) {
-    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), "ornaments"));
+    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("ornaments")));
 }
 
 
 CSSFontFeatureValuesMap CSSFontFeatureValuesRule_stylistic(const CSSFontFeatureValuesRule *self) {
-    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), "stylistic"));
+    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("stylistic")));
 }
 
 
 CSSFontFeatureValuesMap CSSFontFeatureValuesRule_swash(const CSSFontFeatureValuesRule *self) {
-    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), "swash"));
+    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("swash")));
 }
 
 
 CSSFontFeatureValuesMap CSSFontFeatureValuesRule_characterVariant(const CSSFontFeatureValuesRule *self) {
-    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), "characterVariant"));
+    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("characterVariant")));
 }
 
 
 CSSFontFeatureValuesMap CSSFontFeatureValuesRule_styleset(const CSSFontFeatureValuesRule *self) {
-    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), "styleset"));
+    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("styleset")));
 }
 
 
 CSSFontFeatureValuesMap CSSFontFeatureValuesRule_historicalForms(const CSSFontFeatureValuesRule *self) {
-    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), "historicalForms"));
+    return em_Val_as(CSSFontFeatureValuesMap, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("historicalForms")));
 }
 

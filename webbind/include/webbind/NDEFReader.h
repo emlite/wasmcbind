@@ -11,21 +11,11 @@ typedef struct NDEFMakeReadOnlyOptions NDEFMakeReadOnlyOptions;
 typedef struct AbortSignal AbortSignal;
 
 
-typedef struct {
-  em_Val inner;
-} NDEFScanOptions;
-
-
 DECLARE_EMLITE_TYPE(NDEFScanOptions, em_Val);
 
 AbortSignal NDEFScanOptions_signal( const NDEFScanOptions *self);
 
-void NDEFScanOptions_set_signal(NDEFScanOptions* self, const AbortSignal* value);
-typedef struct {
-  em_Val inner;
-} NDEFWriteOptions;
-
-
+void NDEFScanOptions_set_signal(NDEFScanOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(NDEFWriteOptions, em_Val);
 
 bool NDEFWriteOptions_overwrite( const NDEFWriteOptions *self);
@@ -34,42 +24,32 @@ void NDEFWriteOptions_set_overwrite(NDEFWriteOptions* self, bool value);
 
 AbortSignal NDEFWriteOptions_signal( const NDEFWriteOptions *self);
 
-void NDEFWriteOptions_set_signal(NDEFWriteOptions* self, const AbortSignal* value);
-typedef struct {
-  em_Val inner;
-} NDEFMakeReadOnlyOptions;
-
-
+void NDEFWriteOptions_set_signal(NDEFWriteOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(NDEFMakeReadOnlyOptions, em_Val);
 
 AbortSignal NDEFMakeReadOnlyOptions_signal( const NDEFMakeReadOnlyOptions *self);
 
-void NDEFMakeReadOnlyOptions_set_signal(NDEFMakeReadOnlyOptions* self, const AbortSignal* value);
-typedef struct {
-  EventTarget inner;
-} NDEFReader;
-
-
+void NDEFMakeReadOnlyOptions_set_signal(NDEFMakeReadOnlyOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(NDEFReader, EventTarget);
 
 NDEFReader NDEFReader_new();
 
 jb_Any NDEFReader_onreading( const NDEFReader *self);
 
-void NDEFReader_set_onreading(NDEFReader* self, const jb_Any* value);
+void NDEFReader_set_onreading(NDEFReader* self, jb_Any * value);
 
 jb_Any NDEFReader_onreadingerror( const NDEFReader *self);
 
-void NDEFReader_set_onreadingerror(NDEFReader* self, const jb_Any* value);
+void NDEFReader_set_onreadingerror(NDEFReader* self, jb_Any * value);
 
-jb_Promise NDEFReader_scan(NDEFReader* self );
+jb_Promise NDEFReader_scan0(NDEFReader* self );
 
-jb_Promise NDEFReader_scan(NDEFReader* self , const NDEFScanOptions* options);
+jb_Promise NDEFReader_scan1(NDEFReader* self , NDEFScanOptions * options);
 
-jb_Promise NDEFReader_write(NDEFReader* self , const jb_Any* message);
+jb_Promise NDEFReader_write0(NDEFReader* self , jb_Any * message);
 
-jb_Promise NDEFReader_write(NDEFReader* self , const jb_Any* message, const NDEFWriteOptions* options);
+jb_Promise NDEFReader_write1(NDEFReader* self , jb_Any * message, NDEFWriteOptions * options);
 
-jb_Promise NDEFReader_makeReadOnly(NDEFReader* self );
+jb_Promise NDEFReader_makeReadOnly0(NDEFReader* self );
 
-jb_Promise NDEFReader_makeReadOnly(NDEFReader* self , const NDEFMakeReadOnlyOptions* options);
+jb_Promise NDEFReader_makeReadOnly1(NDEFReader* self , NDEFMakeReadOnlyOptions * options);

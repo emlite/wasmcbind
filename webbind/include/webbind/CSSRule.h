@@ -8,16 +8,11 @@ typedef struct CSSRule CSSRule;
 typedef struct CSSStyleSheet CSSStyleSheet;
 
 
-typedef struct {
-  em_Val inner;
-} CSSRule;
-
-
 DECLARE_EMLITE_TYPE(CSSRule, em_Val);
 
 jb_CSSOMString CSSRule_cssText( const CSSRule *self);
 
-void CSSRule_set_cssText(CSSRule* self, const jb_CSSOMString* value);
+void CSSRule_set_cssText(CSSRule* self, jb_CSSOMString * value);
 
 CSSRule CSSRule_parentRule( const CSSRule *self);
 

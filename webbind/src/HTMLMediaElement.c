@@ -14,62 +14,62 @@ DEFINE_EMLITE_TYPE(HTMLMediaElement, HTMLElement);
 
 
 MediaError HTMLMediaElement_error(const HTMLMediaElement *self) {
-    return em_Val_as(MediaError, em_Val_get(HTMLElement_as_val(self->inner), "error"));
+    return em_Val_as(MediaError, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("error")));
 }
 
 
 jb_USVString HTMLMediaElement_src(const HTMLMediaElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "src"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLMediaElement_set_src(HTMLMediaElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "src", value);
+void HTMLMediaElement_set_src(HTMLMediaElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
 
 jb_Any HTMLMediaElement_srcObject(const HTMLMediaElement *self) {
-    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), "srcObject"));
+    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("srcObject")));
 }
 
 
-void HTMLMediaElement_set_srcObject(HTMLMediaElement* self, const jb_Any* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "srcObject", value);
+void HTMLMediaElement_set_srcObject(HTMLMediaElement* self, jb_Any * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("srcObject"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLMediaElement_currentSrc(const HTMLMediaElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "currentSrc"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("currentSrc")));
 }
 
 
 jb_DOMString HTMLMediaElement_crossOrigin(const HTMLMediaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "crossOrigin"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("crossOrigin")));
 }
 
 
-void HTMLMediaElement_set_crossOrigin(HTMLMediaElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "crossOrigin", value);
+void HTMLMediaElement_set_crossOrigin(HTMLMediaElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("crossOrigin"), em_Val_from(value));
 }
 
 
 unsigned short HTMLMediaElement_networkState(const HTMLMediaElement *self) {
-    return em_Val_as(unsigned short, em_Val_get(HTMLElement_as_val(self->inner), "networkState"));
+    return em_Val_as(unsigned short, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("networkState")));
 }
 
 
 jb_DOMString HTMLMediaElement_preload(const HTMLMediaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "preload"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("preload")));
 }
 
 
-void HTMLMediaElement_set_preload(HTMLMediaElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "preload", value);
+void HTMLMediaElement_set_preload(HTMLMediaElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("preload"), em_Val_from(value));
 }
 
 
 TimeRanges HTMLMediaElement_buffered(const HTMLMediaElement *self) {
-    return em_Val_as(TimeRanges, em_Val_get(HTMLElement_as_val(self->inner), "buffered"));
+    return em_Val_as(TimeRanges, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("buffered")));
 }
 
 
@@ -78,28 +78,28 @@ jb_Undefined HTMLMediaElement_load(HTMLMediaElement* self ) {
 }
 
 
-CanPlayTypeResult HTMLMediaElement_canPlayType(HTMLMediaElement* self , const jb_DOMString* type) {
+CanPlayTypeResult HTMLMediaElement_canPlayType(HTMLMediaElement* self , jb_DOMString * type) {
     return em_Val_as(CanPlayTypeResult, em_Val_call(HTMLElement_as_val(self->inner), "canPlayType", em_Val_from(type)));
 }
 
 
 unsigned short HTMLMediaElement_readyState(const HTMLMediaElement *self) {
-    return em_Val_as(unsigned short, em_Val_get(HTMLElement_as_val(self->inner), "readyState"));
+    return em_Val_as(unsigned short, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("readyState")));
 }
 
 
 bool HTMLMediaElement_seeking(const HTMLMediaElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "seeking"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("seeking")));
 }
 
 
 double HTMLMediaElement_currentTime(const HTMLMediaElement *self) {
-    return em_Val_as(double, em_Val_get(HTMLElement_as_val(self->inner), "currentTime"));
+    return em_Val_as(double, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("currentTime")));
 }
 
 
 void HTMLMediaElement_set_currentTime(HTMLMediaElement* self, double value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "currentTime", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("currentTime"), em_Val_from(value));
 }
 
 
@@ -109,7 +109,7 @@ jb_Undefined HTMLMediaElement_fastSeek(HTMLMediaElement* self , double time) {
 
 
 double HTMLMediaElement_duration(const HTMLMediaElement *self) {
-    return em_Val_as(double, em_Val_get(HTMLElement_as_val(self->inner), "duration"));
+    return em_Val_as(double, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("duration")));
 }
 
 
@@ -119,72 +119,72 @@ jb_Object HTMLMediaElement_getStartDate(HTMLMediaElement* self ) {
 
 
 bool HTMLMediaElement_paused(const HTMLMediaElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "paused"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("paused")));
 }
 
 
 double HTMLMediaElement_defaultPlaybackRate(const HTMLMediaElement *self) {
-    return em_Val_as(double, em_Val_get(HTMLElement_as_val(self->inner), "defaultPlaybackRate"));
+    return em_Val_as(double, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("defaultPlaybackRate")));
 }
 
 
 void HTMLMediaElement_set_defaultPlaybackRate(HTMLMediaElement* self, double value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "defaultPlaybackRate", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("defaultPlaybackRate"), em_Val_from(value));
 }
 
 
 double HTMLMediaElement_playbackRate(const HTMLMediaElement *self) {
-    return em_Val_as(double, em_Val_get(HTMLElement_as_val(self->inner), "playbackRate"));
+    return em_Val_as(double, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("playbackRate")));
 }
 
 
 void HTMLMediaElement_set_playbackRate(HTMLMediaElement* self, double value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "playbackRate", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("playbackRate"), em_Val_from(value));
 }
 
 
 bool HTMLMediaElement_preservesPitch(const HTMLMediaElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "preservesPitch"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("preservesPitch")));
 }
 
 
 void HTMLMediaElement_set_preservesPitch(HTMLMediaElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "preservesPitch", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("preservesPitch"), em_Val_from(value));
 }
 
 
 TimeRanges HTMLMediaElement_played(const HTMLMediaElement *self) {
-    return em_Val_as(TimeRanges, em_Val_get(HTMLElement_as_val(self->inner), "played"));
+    return em_Val_as(TimeRanges, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("played")));
 }
 
 
 TimeRanges HTMLMediaElement_seekable(const HTMLMediaElement *self) {
-    return em_Val_as(TimeRanges, em_Val_get(HTMLElement_as_val(self->inner), "seekable"));
+    return em_Val_as(TimeRanges, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("seekable")));
 }
 
 
 bool HTMLMediaElement_ended(const HTMLMediaElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "ended"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("ended")));
 }
 
 
 bool HTMLMediaElement_autoplay(const HTMLMediaElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "autoplay"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("autoplay")));
 }
 
 
 void HTMLMediaElement_set_autoplay(HTMLMediaElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "autoplay", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("autoplay"), em_Val_from(value));
 }
 
 
 bool HTMLMediaElement_loop(const HTMLMediaElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "loop"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("loop")));
 }
 
 
 void HTMLMediaElement_set_loop(HTMLMediaElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "loop", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("loop"), em_Val_from(value));
 }
 
 
@@ -199,111 +199,111 @@ jb_Undefined HTMLMediaElement_pause(HTMLMediaElement* self ) {
 
 
 bool HTMLMediaElement_controls(const HTMLMediaElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "controls"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("controls")));
 }
 
 
 void HTMLMediaElement_set_controls(HTMLMediaElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "controls", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("controls"), em_Val_from(value));
 }
 
 
 double HTMLMediaElement_volume(const HTMLMediaElement *self) {
-    return em_Val_as(double, em_Val_get(HTMLElement_as_val(self->inner), "volume"));
+    return em_Val_as(double, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("volume")));
 }
 
 
 void HTMLMediaElement_set_volume(HTMLMediaElement* self, double value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "volume", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("volume"), em_Val_from(value));
 }
 
 
 bool HTMLMediaElement_muted(const HTMLMediaElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "muted"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("muted")));
 }
 
 
 void HTMLMediaElement_set_muted(HTMLMediaElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "muted", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("muted"), em_Val_from(value));
 }
 
 
 bool HTMLMediaElement_defaultMuted(const HTMLMediaElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "defaultMuted"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("defaultMuted")));
 }
 
 
 void HTMLMediaElement_set_defaultMuted(HTMLMediaElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "defaultMuted", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("defaultMuted"), em_Val_from(value));
 }
 
 
 AudioTrackList HTMLMediaElement_audioTracks(const HTMLMediaElement *self) {
-    return em_Val_as(AudioTrackList, em_Val_get(HTMLElement_as_val(self->inner), "audioTracks"));
+    return em_Val_as(AudioTrackList, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("audioTracks")));
 }
 
 
 VideoTrackList HTMLMediaElement_videoTracks(const HTMLMediaElement *self) {
-    return em_Val_as(VideoTrackList, em_Val_get(HTMLElement_as_val(self->inner), "videoTracks"));
+    return em_Val_as(VideoTrackList, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("videoTracks")));
 }
 
 
 TextTrackList HTMLMediaElement_textTracks(const HTMLMediaElement *self) {
-    return em_Val_as(TextTrackList, em_Val_get(HTMLElement_as_val(self->inner), "textTracks"));
+    return em_Val_as(TextTrackList, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("textTracks")));
 }
 
 
-TextTrack HTMLMediaElement_addTextTrack(HTMLMediaElement* self , const TextTrackKind* kind) {
+TextTrack HTMLMediaElement_addTextTrack0(HTMLMediaElement* self , TextTrackKind * kind) {
     return em_Val_as(TextTrack, em_Val_call(HTMLElement_as_val(self->inner), "addTextTrack", em_Val_from(kind)));
 }
 
 
-TextTrack HTMLMediaElement_addTextTrack(HTMLMediaElement* self , const TextTrackKind* kind, const jb_DOMString* label) {
+TextTrack HTMLMediaElement_addTextTrack1(HTMLMediaElement* self , TextTrackKind * kind, jb_DOMString * label) {
     return em_Val_as(TextTrack, em_Val_call(HTMLElement_as_val(self->inner), "addTextTrack", em_Val_from(kind), em_Val_from(label)));
 }
 
 
-TextTrack HTMLMediaElement_addTextTrack(HTMLMediaElement* self , const TextTrackKind* kind, const jb_DOMString* label, const jb_DOMString* language) {
+TextTrack HTMLMediaElement_addTextTrack2(HTMLMediaElement* self , TextTrackKind * kind, jb_DOMString * label, jb_DOMString * language) {
     return em_Val_as(TextTrack, em_Val_call(HTMLElement_as_val(self->inner), "addTextTrack", em_Val_from(kind), em_Val_from(label), em_Val_from(language)));
 }
 
 
 jb_DOMString HTMLMediaElement_sinkId(const HTMLMediaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "sinkId"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("sinkId")));
 }
 
 
-jb_Promise HTMLMediaElement_setSinkId(HTMLMediaElement* self , const jb_DOMString* sinkId) {
+jb_Promise HTMLMediaElement_setSinkId(HTMLMediaElement* self , jb_DOMString * sinkId) {
     return em_Val_as(jb_Promise, em_Val_call(HTMLElement_as_val(self->inner), "setSinkId", em_Val_from(sinkId)));
 }
 
 
 MediaKeys HTMLMediaElement_mediaKeys(const HTMLMediaElement *self) {
-    return em_Val_as(MediaKeys, em_Val_get(HTMLElement_as_val(self->inner), "mediaKeys"));
+    return em_Val_as(MediaKeys, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("mediaKeys")));
 }
 
 
 jb_Any HTMLMediaElement_onencrypted(const HTMLMediaElement *self) {
-    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), "onencrypted"));
+    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("onencrypted")));
 }
 
 
-void HTMLMediaElement_set_onencrypted(HTMLMediaElement* self, const jb_Any* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "onencrypted", value);
+void HTMLMediaElement_set_onencrypted(HTMLMediaElement* self, jb_Any * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("onencrypted"), em_Val_from(value));
 }
 
 
 jb_Any HTMLMediaElement_onwaitingforkey(const HTMLMediaElement *self) {
-    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), "onwaitingforkey"));
+    return em_Val_as(jb_Any, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("onwaitingforkey")));
 }
 
 
-void HTMLMediaElement_set_onwaitingforkey(HTMLMediaElement* self, const jb_Any* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "onwaitingforkey", value);
+void HTMLMediaElement_set_onwaitingforkey(HTMLMediaElement* self, jb_Any * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("onwaitingforkey"), em_Val_from(value));
 }
 
 
-jb_Promise HTMLMediaElement_setMediaKeys(HTMLMediaElement* self , const MediaKeys* mediaKeys) {
+jb_Promise HTMLMediaElement_setMediaKeys(HTMLMediaElement* self , MediaKeys * mediaKeys) {
     return em_Val_as(jb_Promise, em_Val_call(HTMLElement_as_val(self->inner), "setMediaKeys", em_Val_from(mediaKeys)));
 }
 
@@ -314,16 +314,16 @@ MediaStream HTMLMediaElement_captureStream(HTMLMediaElement* self ) {
 
 
 RemotePlayback HTMLMediaElement_remote(const HTMLMediaElement *self) {
-    return em_Val_as(RemotePlayback, em_Val_get(HTMLElement_as_val(self->inner), "remote"));
+    return em_Val_as(RemotePlayback, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("remote")));
 }
 
 
 bool HTMLMediaElement_disableRemotePlayback(const HTMLMediaElement *self) {
-    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), "disableRemotePlayback"));
+    return em_Val_as(bool, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("disableRemotePlayback")));
 }
 
 
 void HTMLMediaElement_set_disableRemotePlayback(HTMLMediaElement* self, bool value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "disableRemotePlayback", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("disableRemotePlayback"), em_Val_from(value));
 }
 

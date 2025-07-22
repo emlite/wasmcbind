@@ -8,11 +8,6 @@ typedef struct PushSubscription PushSubscription;
 typedef struct PushSubscriptionOptionsInit PushSubscriptionOptionsInit;
 
 
-typedef struct {
-  em_Val inner;
-} PushSubscriptionOptionsInit;
-
-
 DECLARE_EMLITE_TYPE(PushSubscriptionOptionsInit, em_Val);
 
 bool PushSubscriptionOptionsInit_userVisibleOnly( const PushSubscriptionOptionsInit *self);
@@ -21,22 +16,17 @@ void PushSubscriptionOptionsInit_set_userVisibleOnly(PushSubscriptionOptionsInit
 
 jb_Any PushSubscriptionOptionsInit_applicationServerKey( const PushSubscriptionOptionsInit *self);
 
-void PushSubscriptionOptionsInit_set_applicationServerKey(PushSubscriptionOptionsInit* self, const jb_Any* value);
-typedef struct {
-  em_Val inner;
-} PushManager;
-
-
+void PushSubscriptionOptionsInit_set_applicationServerKey(PushSubscriptionOptionsInit* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(PushManager, em_Val);
 
 jb_FrozenArray PushManager_supportedContentEncodings( PushManager *self);
 
-jb_Promise PushManager_subscribe(PushManager* self );
+jb_Promise PushManager_subscribe0(PushManager* self );
 
-jb_Promise PushManager_subscribe(PushManager* self , const PushSubscriptionOptionsInit* options);
+jb_Promise PushManager_subscribe1(PushManager* self , PushSubscriptionOptionsInit * options);
 
 jb_Promise PushManager_getSubscription(PushManager* self );
 
-jb_Promise PushManager_permissionState(PushManager* self );
+jb_Promise PushManager_permissionState0(PushManager* self );
 
-jb_Promise PushManager_permissionState(PushManager* self , const PushSubscriptionOptionsInit* options);
+jb_Promise PushManager_permissionState1(PushManager* self , PushSubscriptionOptionsInit * options);

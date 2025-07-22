@@ -8,11 +8,6 @@
 typedef struct XRRigidTransform XRRigidTransform;
 
 
-typedef struct {
-  XRCompositionLayer inner;
-} XRProjectionLayer;
-
-
 DECLARE_EMLITE_TYPE(XRProjectionLayer, XRCompositionLayer);
 
 unsigned long XRProjectionLayer_textureWidth( const XRProjectionLayer *self);
@@ -29,4 +24,4 @@ void XRProjectionLayer_set_fixedFoveation(XRProjectionLayer* self, float value);
 
 XRRigidTransform XRProjectionLayer_deltaPose( const XRProjectionLayer *self);
 
-void XRProjectionLayer_set_deltaPose(XRProjectionLayer* self, const XRRigidTransform* value);
+void XRProjectionLayer_set_deltaPose(XRProjectionLayer* self, XRRigidTransform * value);

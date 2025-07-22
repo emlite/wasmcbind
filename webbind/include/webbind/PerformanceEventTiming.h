@@ -8,11 +8,6 @@
 typedef struct Node Node;
 
 
-typedef struct {
-  PerformanceEntry inner;
-} PerformanceEventTiming;
-
-
 DECLARE_EMLITE_TYPE(PerformanceEventTiming, PerformanceEntry);
 
 jb_Any PerformanceEventTiming_processingStart( const PerformanceEventTiming *self);

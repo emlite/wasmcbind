@@ -6,13 +6,8 @@
 #include "enums.h"
 
 
-typedef struct {
-  Event inner;
-} BeforeUnloadEvent;
-
-
 DECLARE_EMLITE_TYPE(BeforeUnloadEvent, Event);
 
 jb_DOMString BeforeUnloadEvent_returnValue( const BeforeUnloadEvent *self);
 
-void BeforeUnloadEvent_set_returnValue(BeforeUnloadEvent* self, const jb_DOMString* value);
+void BeforeUnloadEvent_set_returnValue(BeforeUnloadEvent* self, jb_DOMString * value);

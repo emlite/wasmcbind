@@ -6,14 +6,9 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSParserValue inner;
-} CSSParserFunction;
-
-
 DECLARE_EMLITE_TYPE(CSSParserFunction, CSSParserValue);
 
-CSSParserFunction CSSParserFunction_new(const jb_DOMString* name, const jb_Sequence* args);
+CSSParserFunction CSSParserFunction_new(jb_DOMString * name, jb_Sequence * args);
 
 jb_DOMString CSSParserFunction_name( const CSSParserFunction *self);
 

@@ -8,11 +8,6 @@
 typedef struct MediaKeyStatusMap MediaKeyStatusMap;
 
 
-typedef struct {
-  EventTarget inner;
-} MediaKeySession;
-
-
 DECLARE_EMLITE_TYPE(MediaKeySession, EventTarget);
 
 jb_DOMString MediaKeySession_sessionId( const MediaKeySession *self);
@@ -25,17 +20,17 @@ MediaKeyStatusMap MediaKeySession_keyStatuses( const MediaKeySession *self);
 
 jb_Any MediaKeySession_onkeystatuseschange( const MediaKeySession *self);
 
-void MediaKeySession_set_onkeystatuseschange(MediaKeySession* self, const jb_Any* value);
+void MediaKeySession_set_onkeystatuseschange(MediaKeySession* self, jb_Any * value);
 
 jb_Any MediaKeySession_onmessage( const MediaKeySession *self);
 
-void MediaKeySession_set_onmessage(MediaKeySession* self, const jb_Any* value);
+void MediaKeySession_set_onmessage(MediaKeySession* self, jb_Any * value);
 
-jb_Promise MediaKeySession_generateRequest(MediaKeySession* self , const jb_DOMString* initDataType, const jb_Any* initData);
+jb_Promise MediaKeySession_generateRequest(MediaKeySession* self , jb_DOMString * initDataType, jb_Any * initData);
 
-jb_Promise MediaKeySession_load(MediaKeySession* self , const jb_DOMString* sessionId);
+jb_Promise MediaKeySession_load(MediaKeySession* self , jb_DOMString * sessionId);
 
-jb_Promise MediaKeySession_update(MediaKeySession* self , const jb_Any* response);
+jb_Promise MediaKeySession_update(MediaKeySession* self , jb_Any * response);
 
 jb_Promise MediaKeySession_close(MediaKeySession* self );
 

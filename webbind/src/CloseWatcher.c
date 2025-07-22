@@ -4,13 +4,15 @@
 DEFINE_EMLITE_TYPE(CloseWatcher, EventTarget);
 
 
-CloseWatcher CloseWatcher_new() : EventTarget(em_Val_global("CloseWatcher").new_()) {
-        return CloseWatcher(em_Val_new(em_Val_global("CloseWatcher", ));
+CloseWatcher CloseWatcher_new0() {
+        em_Val vv = em_Val_new(em_Val_global("CloseWatcher") );
+        return CloseWatcher_from_val(&vv);
       }
 
 
-CloseWatcher CloseWatcher_new(const jb_Any* options) : EventTarget(em_Val_global("CloseWatcher").new_(em_Val_from(options))) {
-        return CloseWatcher(em_Val_new(em_Val_global("CloseWatcher", em_Val_from(options)));
+CloseWatcher CloseWatcher_new1(jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("CloseWatcher") , em_Val_from(options));
+        return CloseWatcher_from_val(&vv);
       }
 
 
@@ -30,21 +32,21 @@ jb_Undefined CloseWatcher_destroy(CloseWatcher* self ) {
 
 
 jb_Any CloseWatcher_oncancel(const CloseWatcher *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "oncancel"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("oncancel")));
 }
 
 
-void CloseWatcher_set_oncancel(CloseWatcher* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "oncancel", value);
+void CloseWatcher_set_oncancel(CloseWatcher* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("oncancel"), em_Val_from(value));
 }
 
 
 jb_Any CloseWatcher_onclose(const CloseWatcher *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onclose"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onclose")));
 }
 
 
-void CloseWatcher_set_onclose(CloseWatcher* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onclose", value);
+void CloseWatcher_set_onclose(CloseWatcher* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onclose"), em_Val_from(value));
 }
 

@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} BluetoothCharacteristicProperties;
-
-
 DECLARE_EMLITE_TYPE(BluetoothCharacteristicProperties, em_Val);
 
 bool BluetoothCharacteristicProperties_broadcast( const BluetoothCharacteristicProperties *self);

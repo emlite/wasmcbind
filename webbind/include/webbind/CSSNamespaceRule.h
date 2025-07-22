@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  CSSRule inner;
-} CSSNamespaceRule;
-
-
 DECLARE_EMLITE_TYPE(CSSNamespaceRule, CSSRule);
 
 jb_CSSOMString CSSNamespaceRule_namespaceURI( const CSSNamespaceRule *self);

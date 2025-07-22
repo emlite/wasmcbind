@@ -8,11 +8,6 @@
 typedef struct DOMPointReadOnly DOMPointReadOnly;
 
 
-typedef struct {
-  XRReferenceSpace inner;
-} XRBoundedReferenceSpace;
-
-
 DECLARE_EMLITE_TYPE(XRBoundedReferenceSpace, XRReferenceSpace);
 
 jb_FrozenArray XRBoundedReferenceSpace_boundsGeometry( const XRBoundedReferenceSpace *self);

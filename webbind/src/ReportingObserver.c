@@ -4,13 +4,15 @@
 DEFINE_EMLITE_TYPE(ReportingObserver, em_Val);
 
 
-ReportingObserver ReportingObserver_new(const jb_Function* callback) : em_Val(em_Val_global("ReportingObserver").new_(em_Val_from(callback))) {
-        return ReportingObserver(em_Val_new(em_Val_global("ReportingObserver", em_Val_from(callback)));
+ReportingObserver ReportingObserver_new0(jb_Function * callback) {
+        em_Val vv = em_Val_new(em_Val_global("ReportingObserver") , em_Val_from(callback));
+        return ReportingObserver_from_val(&vv);
       }
 
 
-ReportingObserver ReportingObserver_new(const jb_Function* callback, const jb_Any* options) : em_Val(em_Val_global("ReportingObserver").new_(em_Val_from(callback), em_Val_from(options))) {
-        return ReportingObserver(em_Val_new(em_Val_global("ReportingObserver", em_Val_from(callback), em_Val_from(options)));
+ReportingObserver ReportingObserver_new1(jb_Function * callback, jb_Any * options) {
+        em_Val vv = em_Val_new(em_Val_global("ReportingObserver") , em_Val_from(callback), em_Val_from(options));
+        return ReportingObserver_from_val(&vv);
       }
 
 

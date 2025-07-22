@@ -13,8 +13,8 @@ typedef struct CSSParserRule CSSParserRule;
 
 
 
-bool CSS_supports(const jb_CSSOMString* property, const jb_CSSOMString* value);
-bool CSS_supports(const jb_CSSOMString* conditionText);
+bool CSS_supports(jb_CSSOMString * property, jb_CSSOMString * value);
+bool CSS_supports(jb_CSSOMString * conditionText);
 } // namespace CSS
 
 
@@ -35,24 +35,24 @@ bool CSS_supports(const jb_CSSOMString* conditionText);
 
 
 
-jb_Promise CSS_parseStylesheet(const jb_Any* css);
-jb_Promise CSS_parseStylesheet(const jb_Any* css, const jb_Any* options);
-jb_Promise CSS_parseRuleList(const jb_Any* css);
-jb_Promise CSS_parseRuleList(const jb_Any* css, const jb_Any* options);
-jb_Promise CSS_parseRule(const jb_Any* css);
-jb_Promise CSS_parseRule(const jb_Any* css, const jb_Any* options);
-jb_Promise CSS_parseDeclarationList(const jb_Any* css);
-jb_Promise CSS_parseDeclarationList(const jb_Any* css, const jb_Any* options);
-CSSParserDeclaration CSS_parseDeclaration(const jb_DOMString* css);
-CSSParserDeclaration CSS_parseDeclaration(const jb_DOMString* css, const jb_Any* options);
-jb_Any CSS_parseValue(const jb_DOMString* css);
-jb_Sequence CSS_parseValueList(const jb_DOMString* css);
-jb_Sequence CSS_parseCommaValueList(const jb_DOMString* css);
+jb_Promise CSS_parseStylesheet0(jb_Any * css);
+jb_Promise CSS_parseStylesheet1(jb_Any * css, jb_Any * options);
+jb_Promise CSS_parseRuleList0(jb_Any * css);
+jb_Promise CSS_parseRuleList1(jb_Any * css, jb_Any * options);
+jb_Promise CSS_parseRule0(jb_Any * css);
+jb_Promise CSS_parseRule1(jb_Any * css, jb_Any * options);
+jb_Promise CSS_parseDeclarationList0(jb_Any * css);
+jb_Promise CSS_parseDeclarationList1(jb_Any * css, jb_Any * options);
+CSSParserDeclaration CSS_parseDeclaration0(jb_DOMString * css);
+CSSParserDeclaration CSS_parseDeclaration1(jb_DOMString * css, jb_Any * options);
+jb_Any CSS_parseValue(jb_DOMString * css);
+jb_Sequence CSS_parseValueList(jb_DOMString * css);
+jb_Sequence CSS_parseCommaValueList(jb_DOMString * css);
 } // namespace CSS
 
 
 
-jb_Undefined CSS_registerProperty(const jb_Any* definition);
+jb_Undefined CSS_registerProperty(jb_Any * definition);
 } // namespace CSS
 
 
@@ -124,6 +124,6 @@ CSSUnitValue CSS_fr(double value);
 
 
 
-jb_CSSOMString CSS_escape(const jb_CSSOMString* ident);
+jb_CSSOMString CSS_escape(jb_CSSOMString * ident);
 } // namespace CSS
 

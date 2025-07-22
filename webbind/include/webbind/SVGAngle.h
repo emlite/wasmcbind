@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} SVGAngle;
-
-
 DECLARE_EMLITE_TYPE(SVGAngle, em_Val);
 
 unsigned short SVGAngle_unitType( const SVGAngle *self);
@@ -24,7 +19,7 @@ void SVGAngle_set_valueInSpecifiedUnits(SVGAngle* self, float value);
 
 jb_DOMString SVGAngle_valueAsString( const SVGAngle *self);
 
-void SVGAngle_set_valueAsString(SVGAngle* self, const jb_DOMString* value);
+void SVGAngle_set_valueAsString(SVGAngle* self, jb_DOMString * value);
 
 jb_Undefined SVGAngle_newValueSpecifiedUnits(SVGAngle* self , unsigned short unitType, float valueInSpecifiedUnits);
 

@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} SVGAnimatedInteger;
-
-
 DECLARE_EMLITE_TYPE(SVGAnimatedInteger, em_Val);
 
 long SVGAnimatedInteger_baseVal( const SVGAnimatedInteger *self);

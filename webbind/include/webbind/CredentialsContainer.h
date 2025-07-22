@@ -12,41 +12,26 @@ typedef struct PublicKeyCredential PublicKeyCredential;
 typedef struct PublicKeyCredentialRequestOptions PublicKeyCredentialRequestOptions;
 
 
-typedef struct {
-  em_Val inner;
-} CredentialRequestOptions;
-
-
 DECLARE_EMLITE_TYPE(CredentialRequestOptions, em_Val);
 
 PublicKeyCredentialRequestOptions CredentialRequestOptions_publicKey( const CredentialRequestOptions *self);
 
-void CredentialRequestOptions_set_publicKey(CredentialRequestOptions* self, const PublicKeyCredentialRequestOptions* value);
-typedef struct {
-  em_Val inner;
-} CredentialCreationOptions;
-
-
+void CredentialRequestOptions_set_publicKey(CredentialRequestOptions* self, PublicKeyCredentialRequestOptions * value);
 DECLARE_EMLITE_TYPE(CredentialCreationOptions, em_Val);
 
 PublicKeyCredentialCreationOptions CredentialCreationOptions_publicKey( const CredentialCreationOptions *self);
 
-void CredentialCreationOptions_set_publicKey(CredentialCreationOptions* self, const PublicKeyCredentialCreationOptions* value);
-typedef struct {
-  em_Val inner;
-} CredentialsContainer;
-
-
+void CredentialCreationOptions_set_publicKey(CredentialCreationOptions* self, PublicKeyCredentialCreationOptions * value);
 DECLARE_EMLITE_TYPE(CredentialsContainer, em_Val);
 
-jb_Promise CredentialsContainer_get(CredentialsContainer* self );
+jb_Promise CredentialsContainer_get0(CredentialsContainer* self );
 
-jb_Promise CredentialsContainer_get(CredentialsContainer* self , const CredentialRequestOptions* options);
+jb_Promise CredentialsContainer_get1(CredentialsContainer* self , CredentialRequestOptions * options);
 
-jb_Promise CredentialsContainer_store(CredentialsContainer* self , const Credential* credential);
+jb_Promise CredentialsContainer_store(CredentialsContainer* self , Credential * credential);
 
-jb_Promise CredentialsContainer_create(CredentialsContainer* self );
+jb_Promise CredentialsContainer_create0(CredentialsContainer* self );
 
-jb_Promise CredentialsContainer_create(CredentialsContainer* self , const CredentialCreationOptions* options);
+jb_Promise CredentialsContainer_create1(CredentialsContainer* self , CredentialCreationOptions * options);
 
 jb_Promise CredentialsContainer_preventSilentAccess(CredentialsContainer* self );

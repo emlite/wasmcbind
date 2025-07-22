@@ -8,11 +8,6 @@
 typedef struct HTMLCanvasElement HTMLCanvasElement;
 
 
-typedef struct {
-  MediaStreamTrack inner;
-} CanvasCaptureMediaStreamTrack;
-
-
 DECLARE_EMLITE_TYPE(CanvasCaptureMediaStreamTrack, MediaStreamTrack);
 
 HTMLCanvasElement CanvasCaptureMediaStreamTrack_canvas( const CanvasCaptureMediaStreamTrack *self);

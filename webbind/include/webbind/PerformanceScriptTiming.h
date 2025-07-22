@@ -8,11 +8,6 @@
 typedef struct Window Window;
 
 
-typedef struct {
-  PerformanceEntry inner;
-} PerformanceScriptTiming;
-
-
 DECLARE_EMLITE_TYPE(PerformanceScriptTiming, PerformanceEntry);
 
 jb_Any PerformanceScriptTiming_startTime( const PerformanceScriptTiming *self);

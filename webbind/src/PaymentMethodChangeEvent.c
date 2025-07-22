@@ -4,22 +4,24 @@
 DEFINE_EMLITE_TYPE(PaymentMethodChangeEvent, PaymentRequestUpdateEvent);
 
 
-PaymentMethodChangeEvent PaymentMethodChangeEvent_new(const jb_DOMString* type) : PaymentRequestUpdateEvent(em_Val_global("PaymentMethodChangeEvent").new_(em_Val_from(type))) {
-        return PaymentMethodChangeEvent(em_Val_new(em_Val_global("PaymentMethodChangeEvent", em_Val_from(type)));
+PaymentMethodChangeEvent PaymentMethodChangeEvent_new0(jb_DOMString * type) {
+        em_Val vv = em_Val_new(em_Val_global("PaymentMethodChangeEvent") , em_Val_from(type));
+        return PaymentMethodChangeEvent_from_val(&vv);
       }
 
 
-PaymentMethodChangeEvent PaymentMethodChangeEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict) : PaymentRequestUpdateEvent(em_Val_global("PaymentMethodChangeEvent").new_(em_Val_from(type), em_Val_from(eventInitDict))) {
-        return PaymentMethodChangeEvent(em_Val_new(em_Val_global("PaymentMethodChangeEvent", em_Val_from(type), em_Val_from(eventInitDict)));
+PaymentMethodChangeEvent PaymentMethodChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("PaymentMethodChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
+        return PaymentMethodChangeEvent_from_val(&vv);
       }
 
 
 jb_DOMString PaymentMethodChangeEvent_methodName(const PaymentMethodChangeEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PaymentRequestUpdateEvent_as_val(self->inner), "methodName"));
+    return em_Val_as(jb_DOMString, em_Val_get(PaymentRequestUpdateEvent_as_val(self->inner), em_Val_from("methodName")));
 }
 
 
 jb_Object PaymentMethodChangeEvent_methodDetails(const PaymentMethodChangeEvent *self) {
-    return em_Val_as(jb_Object, em_Val_get(PaymentRequestUpdateEvent_as_val(self->inner), "methodDetails"));
+    return em_Val_as(jb_Object, em_Val_get(PaymentRequestUpdateEvent_as_val(self->inner), em_Val_from("methodDetails")));
 }
 

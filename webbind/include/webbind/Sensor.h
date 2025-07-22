@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  EventTarget inner;
-} Sensor;
-
-
 DECLARE_EMLITE_TYPE(Sensor, EventTarget);
 
 bool Sensor_activated( const Sensor *self);
@@ -25,12 +20,12 @@ jb_Undefined Sensor_stop(Sensor* self );
 
 jb_Any Sensor_onreading( const Sensor *self);
 
-void Sensor_set_onreading(Sensor* self, const jb_Any* value);
+void Sensor_set_onreading(Sensor* self, jb_Any * value);
 
 jb_Any Sensor_onactivate( const Sensor *self);
 
-void Sensor_set_onactivate(Sensor* self, const jb_Any* value);
+void Sensor_set_onactivate(Sensor* self, jb_Any * value);
 
 jb_Any Sensor_onerror( const Sensor *self);
 
-void Sensor_set_onerror(Sensor* self, const jb_Any* value);
+void Sensor_set_onerror(Sensor* self, jb_Any * value);

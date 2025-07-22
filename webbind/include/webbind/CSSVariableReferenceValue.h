@@ -7,19 +7,14 @@
 typedef struct CSSUnparsedValue CSSUnparsedValue;
 
 
-typedef struct {
-  em_Val inner;
-} CSSVariableReferenceValue;
-
-
 DECLARE_EMLITE_TYPE(CSSVariableReferenceValue, em_Val);
 
-CSSVariableReferenceValue CSSVariableReferenceValue_new(const jb_USVString* variable);
+CSSVariableReferenceValue CSSVariableReferenceValue_new0(jb_USVString * variable);
 
-CSSVariableReferenceValue CSSVariableReferenceValue_new(const jb_USVString* variable, const CSSUnparsedValue* fallback);
+CSSVariableReferenceValue CSSVariableReferenceValue_new1(jb_USVString * variable, CSSUnparsedValue * fallback);
 
 jb_USVString CSSVariableReferenceValue_variable( const CSSVariableReferenceValue *self);
 
-void CSSVariableReferenceValue_set_variable(CSSVariableReferenceValue* self, const jb_USVString* value);
+void CSSVariableReferenceValue_set_variable(CSSVariableReferenceValue* self, jb_USVString * value);
 
 CSSUnparsedValue CSSVariableReferenceValue_fallback( const CSSVariableReferenceValue *self);

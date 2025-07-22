@@ -8,16 +8,11 @@
 typedef struct Node Node;
 
 
-typedef struct {
-  Event inner;
-} SnapEvent;
-
-
 DECLARE_EMLITE_TYPE(SnapEvent, Event);
 
-SnapEvent SnapEvent_new(const jb_DOMString* type);
+SnapEvent SnapEvent_new0(jb_DOMString * type);
 
-SnapEvent SnapEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+SnapEvent SnapEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 Node SnapEvent_snapTargetBlock( const SnapEvent *self);
 

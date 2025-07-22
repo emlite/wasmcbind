@@ -10,11 +10,6 @@ typedef struct SVGAnimatedString SVGAnimatedString;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGFEImageElement;
-
-
 DECLARE_EMLITE_TYPE(SVGFEImageElement, SVGElement);
 
 SVGAnimatedPreserveAspectRatio SVGFEImageElement_preserveAspectRatio( const SVGFEImageElement *self);

@@ -7,47 +7,47 @@ DEFINE_EMLITE_TYPE(PerformanceElementTiming, PerformanceEntry);
 
 
 jb_Any PerformanceElementTiming_renderTime(const PerformanceElementTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "renderTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("renderTime")));
 }
 
 
 jb_Any PerformanceElementTiming_loadTime(const PerformanceElementTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "loadTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("loadTime")));
 }
 
 
 DOMRectReadOnly PerformanceElementTiming_intersectionRect(const PerformanceElementTiming *self) {
-    return em_Val_as(DOMRectReadOnly, em_Val_get(PerformanceEntry_as_val(self->inner), "intersectionRect"));
+    return em_Val_as(DOMRectReadOnly, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("intersectionRect")));
 }
 
 
 jb_DOMString PerformanceElementTiming_identifier(const PerformanceElementTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "identifier"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("identifier")));
 }
 
 
 unsigned long PerformanceElementTiming_naturalWidth(const PerformanceElementTiming *self) {
-    return em_Val_as(unsigned long, em_Val_get(PerformanceEntry_as_val(self->inner), "naturalWidth"));
+    return em_Val_as(unsigned long, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("naturalWidth")));
 }
 
 
 unsigned long PerformanceElementTiming_naturalHeight(const PerformanceElementTiming *self) {
-    return em_Val_as(unsigned long, em_Val_get(PerformanceEntry_as_val(self->inner), "naturalHeight"));
+    return em_Val_as(unsigned long, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("naturalHeight")));
 }
 
 
 jb_DOMString PerformanceElementTiming_id(const PerformanceElementTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), "id"));
+    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("id")));
 }
 
 
 Element PerformanceElementTiming_element(const PerformanceElementTiming *self) {
-    return em_Val_as(Element, em_Val_get(PerformanceEntry_as_val(self->inner), "element"));
+    return em_Val_as(Element, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("element")));
 }
 
 
 jb_USVString PerformanceElementTiming_url(const PerformanceElementTiming *self) {
-    return em_Val_as(jb_USVString, em_Val_get(PerformanceEntry_as_val(self->inner), "url"));
+    return em_Val_as(jb_USVString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("url")));
 }
 
 
@@ -57,11 +57,11 @@ jb_Object PerformanceElementTiming_toJSON(PerformanceElementTiming* self ) {
 
 
 jb_Any PerformanceElementTiming_paintTime(const PerformanceElementTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "paintTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("paintTime")));
 }
 
 
 jb_Any PerformanceElementTiming_presentationTime(const PerformanceElementTiming *self) {
-    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), "presentationTime"));
+    return em_Val_as(jb_Any, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("presentationTime")));
 }
 

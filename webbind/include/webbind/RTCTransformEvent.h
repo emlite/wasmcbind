@@ -8,11 +8,6 @@
 typedef struct RTCRtpScriptTransformer RTCRtpScriptTransformer;
 
 
-typedef struct {
-  Event inner;
-} RTCTransformEvent;
-
-
 DECLARE_EMLITE_TYPE(RTCTransformEvent, Event);
 
 RTCRtpScriptTransformer RTCTransformEvent_transformer( const RTCTransformEvent *self);

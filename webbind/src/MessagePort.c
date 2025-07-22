@@ -5,23 +5,23 @@ DEFINE_EMLITE_TYPE(StructuredSerializeOptions, em_Val);
 
 
 jb_Sequence StructuredSerializeOptions_transfer(const StructuredSerializeOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), "transfer"));
+    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("transfer")));
 }
 
 
-void StructuredSerializeOptions_set_transfer(StructuredSerializeOptions* self, const jb_Sequence* value) {
-    em_Val_set(em_Val_as_val(self->inner), "transfer", value);
+void StructuredSerializeOptions_set_transfer(StructuredSerializeOptions* self, jb_Sequence * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("transfer"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(MessagePort, EventTarget);
 
 
-jb_Undefined MessagePort_postMessage(MessagePort* self , const jb_Any* message) {
+jb_Undefined MessagePort_postMessage0(MessagePort* self , jb_Any * message) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "postMessage", em_Val_from(message)));
 }
 
 
-jb_Undefined MessagePort_postMessage(MessagePort* self , const jb_Any* message, const StructuredSerializeOptions* options) {
+jb_Undefined MessagePort_postMessage1(MessagePort* self , jb_Any * message, StructuredSerializeOptions * options) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "postMessage", em_Val_from(message), em_Val_from(options)));
 }
 
@@ -37,31 +37,31 @@ jb_Undefined MessagePort_close(MessagePort* self ) {
 
 
 jb_Any MessagePort_onclose(const MessagePort *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onclose"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onclose")));
 }
 
 
-void MessagePort_set_onclose(MessagePort* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onclose", value);
+void MessagePort_set_onclose(MessagePort* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onclose"), em_Val_from(value));
 }
 
 
 jb_Any MessagePort_onmessage(const MessagePort *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onmessage"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onmessage")));
 }
 
 
-void MessagePort_set_onmessage(MessagePort* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onmessage", value);
+void MessagePort_set_onmessage(MessagePort* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onmessage"), em_Val_from(value));
 }
 
 
 jb_Any MessagePort_onmessageerror(const MessagePort *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onmessageerror"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onmessageerror")));
 }
 
 
-void MessagePort_set_onmessageerror(MessagePort* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onmessageerror", value);
+void MessagePort_set_onmessageerror(MessagePort* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onmessageerror"), em_Val_from(value));
 }
 

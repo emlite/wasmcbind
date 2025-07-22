@@ -26,59 +26,59 @@ DEFINE_EMLITE_TYPE(PeriodicWaveConstraints, em_Val);
 
 
 bool PeriodicWaveConstraints_disableNormalization(const PeriodicWaveConstraints *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "disableNormalization"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("disableNormalization")));
 }
 
 
 void PeriodicWaveConstraints_set_disableNormalization(PeriodicWaveConstraints* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "disableNormalization", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("disableNormalization"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(BaseAudioContext, EventTarget);
 
 
 AudioDestinationNode BaseAudioContext_destination(const BaseAudioContext *self) {
-    return em_Val_as(AudioDestinationNode, em_Val_get(EventTarget_as_val(self->inner), "destination"));
+    return em_Val_as(AudioDestinationNode, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("destination")));
 }
 
 
 float BaseAudioContext_sampleRate(const BaseAudioContext *self) {
-    return em_Val_as(float, em_Val_get(EventTarget_as_val(self->inner), "sampleRate"));
+    return em_Val_as(float, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("sampleRate")));
 }
 
 
 double BaseAudioContext_currentTime(const BaseAudioContext *self) {
-    return em_Val_as(double, em_Val_get(EventTarget_as_val(self->inner), "currentTime"));
+    return em_Val_as(double, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("currentTime")));
 }
 
 
 AudioListener BaseAudioContext_listener(const BaseAudioContext *self) {
-    return em_Val_as(AudioListener, em_Val_get(EventTarget_as_val(self->inner), "listener"));
+    return em_Val_as(AudioListener, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("listener")));
 }
 
 
 AudioContextState BaseAudioContext_state(const BaseAudioContext *self) {
-    return em_Val_as(AudioContextState, em_Val_get(EventTarget_as_val(self->inner), "state"));
+    return em_Val_as(AudioContextState, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("state")));
 }
 
 
 unsigned long BaseAudioContext_renderQuantumSize(const BaseAudioContext *self) {
-    return em_Val_as(unsigned long, em_Val_get(EventTarget_as_val(self->inner), "renderQuantumSize"));
+    return em_Val_as(unsigned long, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("renderQuantumSize")));
 }
 
 
 AudioWorklet BaseAudioContext_audioWorklet(const BaseAudioContext *self) {
-    return em_Val_as(AudioWorklet, em_Val_get(EventTarget_as_val(self->inner), "audioWorklet"));
+    return em_Val_as(AudioWorklet, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("audioWorklet")));
 }
 
 
 jb_Any BaseAudioContext_onstatechange(const BaseAudioContext *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onstatechange"));
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("onstatechange")));
 }
 
 
-void BaseAudioContext_set_onstatechange(BaseAudioContext* self, const jb_Any* value) {
-    em_Val_set(EventTarget_as_val(self->inner), "onstatechange", value);
+void BaseAudioContext_set_onstatechange(BaseAudioContext* self, jb_Any * value) {
+    em_Val_set(EventTarget_as_val(self->inner), em_Val_from("onstatechange"), em_Val_from(value));
 }
 
 
@@ -102,22 +102,22 @@ AudioBufferSourceNode BaseAudioContext_createBufferSource(BaseAudioContext* self
 }
 
 
-ChannelMergerNode BaseAudioContext_createChannelMerger(BaseAudioContext* self ) {
+ChannelMergerNode BaseAudioContext_createChannelMerger0(BaseAudioContext* self ) {
     return em_Val_as(ChannelMergerNode, em_Val_call(EventTarget_as_val(self->inner), "createChannelMerger"));
 }
 
 
-ChannelMergerNode BaseAudioContext_createChannelMerger(BaseAudioContext* self , unsigned long numberOfInputs) {
+ChannelMergerNode BaseAudioContext_createChannelMerger1(BaseAudioContext* self , unsigned long numberOfInputs) {
     return em_Val_as(ChannelMergerNode, em_Val_call(EventTarget_as_val(self->inner), "createChannelMerger", em_Val_from(numberOfInputs)));
 }
 
 
-ChannelSplitterNode BaseAudioContext_createChannelSplitter(BaseAudioContext* self ) {
+ChannelSplitterNode BaseAudioContext_createChannelSplitter0(BaseAudioContext* self ) {
     return em_Val_as(ChannelSplitterNode, em_Val_call(EventTarget_as_val(self->inner), "createChannelSplitter"));
 }
 
 
-ChannelSplitterNode BaseAudioContext_createChannelSplitter(BaseAudioContext* self , unsigned long numberOfOutputs) {
+ChannelSplitterNode BaseAudioContext_createChannelSplitter1(BaseAudioContext* self , unsigned long numberOfOutputs) {
     return em_Val_as(ChannelSplitterNode, em_Val_call(EventTarget_as_val(self->inner), "createChannelSplitter", em_Val_from(numberOfOutputs)));
 }
 
@@ -132,12 +132,12 @@ ConvolverNode BaseAudioContext_createConvolver(BaseAudioContext* self ) {
 }
 
 
-DelayNode BaseAudioContext_createDelay(BaseAudioContext* self ) {
+DelayNode BaseAudioContext_createDelay0(BaseAudioContext* self ) {
     return em_Val_as(DelayNode, em_Val_call(EventTarget_as_val(self->inner), "createDelay"));
 }
 
 
-DelayNode BaseAudioContext_createDelay(BaseAudioContext* self , double maxDelayTime) {
+DelayNode BaseAudioContext_createDelay1(BaseAudioContext* self , double maxDelayTime) {
     return em_Val_as(DelayNode, em_Val_call(EventTarget_as_val(self->inner), "createDelay", em_Val_from(maxDelayTime)));
 }
 
@@ -152,7 +152,7 @@ GainNode BaseAudioContext_createGain(BaseAudioContext* self ) {
 }
 
 
-IIRFilterNode BaseAudioContext_createIIRFilter(BaseAudioContext* self , const jb_Sequence* feedforward, const jb_Sequence* feedback) {
+IIRFilterNode BaseAudioContext_createIIRFilter(BaseAudioContext* self , jb_Sequence * feedforward, jb_Sequence * feedback) {
     return em_Val_as(IIRFilterNode, em_Val_call(EventTarget_as_val(self->inner), "createIIRFilter", em_Val_from(feedforward), em_Val_from(feedback)));
 }
 
@@ -167,32 +167,32 @@ PannerNode BaseAudioContext_createPanner(BaseAudioContext* self ) {
 }
 
 
-PeriodicWave BaseAudioContext_createPeriodicWave(BaseAudioContext* self , const jb_Sequence* real, const jb_Sequence* imag) {
+PeriodicWave BaseAudioContext_createPeriodicWave0(BaseAudioContext* self , jb_Sequence * real, jb_Sequence * imag) {
     return em_Val_as(PeriodicWave, em_Val_call(EventTarget_as_val(self->inner), "createPeriodicWave", em_Val_from(real), em_Val_from(imag)));
 }
 
 
-PeriodicWave BaseAudioContext_createPeriodicWave(BaseAudioContext* self , const jb_Sequence* real, const jb_Sequence* imag, const PeriodicWaveConstraints* constraints) {
+PeriodicWave BaseAudioContext_createPeriodicWave1(BaseAudioContext* self , jb_Sequence * real, jb_Sequence * imag, PeriodicWaveConstraints * constraints) {
     return em_Val_as(PeriodicWave, em_Val_call(EventTarget_as_val(self->inner), "createPeriodicWave", em_Val_from(real), em_Val_from(imag), em_Val_from(constraints)));
 }
 
 
-ScriptProcessorNode BaseAudioContext_createScriptProcessor(BaseAudioContext* self ) {
+ScriptProcessorNode BaseAudioContext_createScriptProcessor0(BaseAudioContext* self ) {
     return em_Val_as(ScriptProcessorNode, em_Val_call(EventTarget_as_val(self->inner), "createScriptProcessor"));
 }
 
 
-ScriptProcessorNode BaseAudioContext_createScriptProcessor(BaseAudioContext* self , unsigned long bufferSize) {
+ScriptProcessorNode BaseAudioContext_createScriptProcessor1(BaseAudioContext* self , unsigned long bufferSize) {
     return em_Val_as(ScriptProcessorNode, em_Val_call(EventTarget_as_val(self->inner), "createScriptProcessor", em_Val_from(bufferSize)));
 }
 
 
-ScriptProcessorNode BaseAudioContext_createScriptProcessor(BaseAudioContext* self , unsigned long bufferSize, unsigned long numberOfInputChannels) {
+ScriptProcessorNode BaseAudioContext_createScriptProcessor2(BaseAudioContext* self , unsigned long bufferSize, unsigned long numberOfInputChannels) {
     return em_Val_as(ScriptProcessorNode, em_Val_call(EventTarget_as_val(self->inner), "createScriptProcessor", em_Val_from(bufferSize), em_Val_from(numberOfInputChannels)));
 }
 
 
-ScriptProcessorNode BaseAudioContext_createScriptProcessor(BaseAudioContext* self , unsigned long bufferSize, unsigned long numberOfInputChannels, unsigned long numberOfOutputChannels) {
+ScriptProcessorNode BaseAudioContext_createScriptProcessor3(BaseAudioContext* self , unsigned long bufferSize, unsigned long numberOfInputChannels, unsigned long numberOfOutputChannels) {
     return em_Val_as(ScriptProcessorNode, em_Val_call(EventTarget_as_val(self->inner), "createScriptProcessor", em_Val_from(bufferSize), em_Val_from(numberOfInputChannels), em_Val_from(numberOfOutputChannels)));
 }
 
@@ -207,17 +207,17 @@ WaveShaperNode BaseAudioContext_createWaveShaper(BaseAudioContext* self ) {
 }
 
 
-jb_Promise BaseAudioContext_decodeAudioData(BaseAudioContext* self , const jb_ArrayBuffer* audioData) {
+jb_Promise BaseAudioContext_decodeAudioData0(BaseAudioContext* self , jb_ArrayBuffer * audioData) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "decodeAudioData", em_Val_from(audioData)));
 }
 
 
-jb_Promise BaseAudioContext_decodeAudioData(BaseAudioContext* self , const jb_ArrayBuffer* audioData, const jb_Function* successCallback) {
+jb_Promise BaseAudioContext_decodeAudioData1(BaseAudioContext* self , jb_ArrayBuffer * audioData, jb_Function * successCallback) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "decodeAudioData", em_Val_from(audioData), em_Val_from(successCallback)));
 }
 
 
-jb_Promise BaseAudioContext_decodeAudioData(BaseAudioContext* self , const jb_ArrayBuffer* audioData, const jb_Function* successCallback, const jb_Function* errorCallback) {
+jb_Promise BaseAudioContext_decodeAudioData2(BaseAudioContext* self , jb_ArrayBuffer * audioData, jb_Function * successCallback, jb_Function * errorCallback) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "decodeAudioData", em_Val_from(audioData), em_Val_from(successCallback), em_Val_from(errorCallback)));
 }
 

@@ -4,72 +4,74 @@
 DEFINE_EMLITE_TYPE(SecurityPolicyViolationEvent, Event);
 
 
-SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new(const jb_DOMString* type) : Event(em_Val_global("SecurityPolicyViolationEvent").new_(em_Val_from(type))) {
-        return SecurityPolicyViolationEvent(em_Val_new(em_Val_global("SecurityPolicyViolationEvent", em_Val_from(type)));
+SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new0(jb_DOMString * type) {
+        em_Val vv = em_Val_new(em_Val_global("SecurityPolicyViolationEvent") , em_Val_from(type));
+        return SecurityPolicyViolationEvent_from_val(&vv);
       }
 
 
-SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict) : Event(em_Val_global("SecurityPolicyViolationEvent").new_(em_Val_from(type), em_Val_from(eventInitDict))) {
-        return SecurityPolicyViolationEvent(em_Val_new(em_Val_global("SecurityPolicyViolationEvent", em_Val_from(type), em_Val_from(eventInitDict)));
+SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("SecurityPolicyViolationEvent") , em_Val_from(type), em_Val_from(eventInitDict));
+        return SecurityPolicyViolationEvent_from_val(&vv);
       }
 
 
 jb_USVString SecurityPolicyViolationEvent_documentURI(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), "documentURI"));
+    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), em_Val_from("documentURI")));
 }
 
 
 jb_USVString SecurityPolicyViolationEvent_referrer(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), "referrer"));
+    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), em_Val_from("referrer")));
 }
 
 
 jb_USVString SecurityPolicyViolationEvent_blockedURI(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), "blockedURI"));
+    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), em_Val_from("blockedURI")));
 }
 
 
 jb_DOMString SecurityPolicyViolationEvent_effectiveDirective(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), "effectiveDirective"));
+    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("effectiveDirective")));
 }
 
 
 jb_DOMString SecurityPolicyViolationEvent_violatedDirective(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), "violatedDirective"));
+    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("violatedDirective")));
 }
 
 
 jb_DOMString SecurityPolicyViolationEvent_originalPolicy(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), "originalPolicy"));
+    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("originalPolicy")));
 }
 
 
 jb_USVString SecurityPolicyViolationEvent_sourceFile(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), "sourceFile"));
+    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), em_Val_from("sourceFile")));
 }
 
 
 jb_DOMString SecurityPolicyViolationEvent_sample(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), "sample"));
+    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("sample")));
 }
 
 
 SecurityPolicyViolationEventDisposition SecurityPolicyViolationEvent_disposition(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(SecurityPolicyViolationEventDisposition, em_Val_get(Event_as_val(self->inner), "disposition"));
+    return em_Val_as(SecurityPolicyViolationEventDisposition, em_Val_get(Event_as_val(self->inner), em_Val_from("disposition")));
 }
 
 
 unsigned short SecurityPolicyViolationEvent_statusCode(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(unsigned short, em_Val_get(Event_as_val(self->inner), "statusCode"));
+    return em_Val_as(unsigned short, em_Val_get(Event_as_val(self->inner), em_Val_from("statusCode")));
 }
 
 
 unsigned long SecurityPolicyViolationEvent_lineNumber(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(unsigned long, em_Val_get(Event_as_val(self->inner), "lineNumber"));
+    return em_Val_as(unsigned long, em_Val_get(Event_as_val(self->inner), em_Val_from("lineNumber")));
 }
 
 
 unsigned long SecurityPolicyViolationEvent_columnNumber(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(unsigned long, em_Val_get(Event_as_val(self->inner), "columnNumber"));
+    return em_Val_as(unsigned long, em_Val_get(Event_as_val(self->inner), em_Val_from("columnNumber")));
 }
 

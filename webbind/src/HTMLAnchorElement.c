@@ -5,267 +5,268 @@
 DEFINE_EMLITE_TYPE(HTMLAnchorElement, HTMLElement);
 
 
-HTMLAnchorElement HTMLAnchorElement_new() : HTMLElement(em_Val_global("HTMLAnchorElement").new_()) {
-        return HTMLAnchorElement(em_Val_new(em_Val_global("HTMLAnchorElement", ));
+HTMLAnchorElement HTMLAnchorElement_new() {
+        em_Val vv = em_Val_new(em_Val_global("HTMLAnchorElement") );
+        return HTMLAnchorElement_from_val(&vv);
       }
 
 
 jb_DOMString HTMLAnchorElement_target(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "target"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("target")));
 }
 
 
-void HTMLAnchorElement_set_target(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "target", value);
+void HTMLAnchorElement_set_target(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("target"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLAnchorElement_download(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "download"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("download")));
 }
 
 
-void HTMLAnchorElement_set_download(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "download", value);
+void HTMLAnchorElement_set_download(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("download"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_ping(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "ping"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("ping")));
 }
 
 
-void HTMLAnchorElement_set_ping(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "ping", value);
+void HTMLAnchorElement_set_ping(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("ping"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLAnchorElement_rel(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "rel"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("rel")));
 }
 
 
-void HTMLAnchorElement_set_rel(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "rel", value);
+void HTMLAnchorElement_set_rel(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("rel"), em_Val_from(value));
 }
 
 
 DOMTokenList HTMLAnchorElement_relList(const HTMLAnchorElement *self) {
-    return em_Val_as(DOMTokenList, em_Val_get(HTMLElement_as_val(self->inner), "relList"));
+    return em_Val_as(DOMTokenList, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("relList")));
 }
 
 
 jb_DOMString HTMLAnchorElement_hreflang(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "hreflang"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("hreflang")));
 }
 
 
-void HTMLAnchorElement_set_hreflang(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "hreflang", value);
+void HTMLAnchorElement_set_hreflang(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("hreflang"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLAnchorElement_type(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "type"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void HTMLAnchorElement_set_type(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "type", value);
+void HTMLAnchorElement_set_type(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLAnchorElement_text(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "text"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("text")));
 }
 
 
-void HTMLAnchorElement_set_text(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "text", value);
+void HTMLAnchorElement_set_text(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("text"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLAnchorElement_referrerPolicy(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "referrerPolicy"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("referrerPolicy")));
 }
 
 
-void HTMLAnchorElement_set_referrerPolicy(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "referrerPolicy", value);
+void HTMLAnchorElement_set_referrerPolicy(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("referrerPolicy"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLAnchorElement_coords(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "coords"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("coords")));
 }
 
 
-void HTMLAnchorElement_set_coords(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "coords", value);
+void HTMLAnchorElement_set_coords(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("coords"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLAnchorElement_charset(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "charset"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("charset")));
 }
 
 
-void HTMLAnchorElement_set_charset(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "charset", value);
+void HTMLAnchorElement_set_charset(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("charset"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLAnchorElement_name(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "name"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLAnchorElement_set_name(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "name", value);
+void HTMLAnchorElement_set_name(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLAnchorElement_rev(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "rev"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("rev")));
 }
 
 
-void HTMLAnchorElement_set_rev(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "rev", value);
+void HTMLAnchorElement_set_rev(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("rev"), em_Val_from(value));
 }
 
 
 jb_DOMString HTMLAnchorElement_shape(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "shape"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("shape")));
 }
 
 
-void HTMLAnchorElement_set_shape(HTMLAnchorElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "shape", value);
+void HTMLAnchorElement_set_shape(HTMLAnchorElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("shape"), em_Val_from(value));
 }
 
 
 unsigned long HTMLAnchorElement_attributionSourceId(const HTMLAnchorElement *self) {
-    return em_Val_as(unsigned long, em_Val_get(HTMLElement_as_val(self->inner), "attributionSourceId"));
+    return em_Val_as(unsigned long, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("attributionSourceId")));
 }
 
 
 void HTMLAnchorElement_set_attributionSourceId(HTMLAnchorElement* self, unsigned long value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "attributionSourceId", value);
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("attributionSourceId"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_attributionSrc(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "attributionSrc"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("attributionSrc")));
 }
 
 
-void HTMLAnchorElement_set_attributionSrc(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "attributionSrc", value);
+void HTMLAnchorElement_set_attributionSrc(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("attributionSrc"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_href(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "href"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("href")));
 }
 
 
-void HTMLAnchorElement_set_href(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "href", value);
+void HTMLAnchorElement_set_href(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("href"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_origin(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "origin"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("origin")));
 }
 
 
 jb_USVString HTMLAnchorElement_protocol(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "protocol"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("protocol")));
 }
 
 
-void HTMLAnchorElement_set_protocol(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "protocol", value);
+void HTMLAnchorElement_set_protocol(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("protocol"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_username(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "username"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("username")));
 }
 
 
-void HTMLAnchorElement_set_username(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "username", value);
+void HTMLAnchorElement_set_username(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("username"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_password(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "password"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("password")));
 }
 
 
-void HTMLAnchorElement_set_password(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "password", value);
+void HTMLAnchorElement_set_password(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("password"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_host(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "host"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("host")));
 }
 
 
-void HTMLAnchorElement_set_host(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "host", value);
+void HTMLAnchorElement_set_host(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("host"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_hostname(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "hostname"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("hostname")));
 }
 
 
-void HTMLAnchorElement_set_hostname(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "hostname", value);
+void HTMLAnchorElement_set_hostname(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("hostname"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_port(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "port"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("port")));
 }
 
 
-void HTMLAnchorElement_set_port(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "port", value);
+void HTMLAnchorElement_set_port(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("port"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_pathname(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "pathname"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("pathname")));
 }
 
 
-void HTMLAnchorElement_set_pathname(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "pathname", value);
+void HTMLAnchorElement_set_pathname(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("pathname"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_search(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "search"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("search")));
 }
 
 
-void HTMLAnchorElement_set_search(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "search", value);
+void HTMLAnchorElement_set_search(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("search"), em_Val_from(value));
 }
 
 
 jb_USVString HTMLAnchorElement_hash(const HTMLAnchorElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), "hash"));
+    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("hash")));
 }
 
 
-void HTMLAnchorElement_set_hash(HTMLAnchorElement* self, const jb_USVString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "hash", value);
+void HTMLAnchorElement_set_hash(HTMLAnchorElement* self, jb_USVString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("hash"), em_Val_from(value));
 }
 

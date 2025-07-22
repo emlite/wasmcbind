@@ -4,17 +4,18 @@
 DEFINE_EMLITE_TYPE(HTMLTitleElement, HTMLElement);
 
 
-HTMLTitleElement HTMLTitleElement_new() : HTMLElement(em_Val_global("HTMLTitleElement").new_()) {
-        return HTMLTitleElement(em_Val_new(em_Val_global("HTMLTitleElement", ));
+HTMLTitleElement HTMLTitleElement_new() {
+        em_Val vv = em_Val_new(em_Val_global("HTMLTitleElement") );
+        return HTMLTitleElement_from_val(&vv);
       }
 
 
 jb_DOMString HTMLTitleElement_text(const HTMLTitleElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), "text"));
+    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("text")));
 }
 
 
-void HTMLTitleElement_set_text(HTMLTitleElement* self, const jb_DOMString* value) {
-    em_Val_set(HTMLElement_as_val(self->inner), "text", value);
+void HTMLTitleElement_set_text(HTMLTitleElement* self, jb_DOMString * value) {
+    em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("text"), em_Val_from(value));
 }
 

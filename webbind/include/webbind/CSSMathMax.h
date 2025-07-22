@@ -8,13 +8,8 @@
 typedef struct CSSNumericArray CSSNumericArray;
 
 
-typedef struct {
-  CSSMathValue inner;
-} CSSMathMax;
-
-
 DECLARE_EMLITE_TYPE(CSSMathMax, CSSMathValue);
 
-CSSMathMax CSSMathMax_new(const jb_Any* args);
+CSSMathMax CSSMathMax_new(jb_Any * args);
 
 CSSNumericArray CSSMathMax_values( const CSSMathMax *self);

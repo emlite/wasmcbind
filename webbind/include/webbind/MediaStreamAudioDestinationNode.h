@@ -8,15 +8,10 @@
 typedef struct MediaStream MediaStream;
 
 
-typedef struct {
-  AudioNode inner;
-} MediaStreamAudioDestinationNode;
-
-
 DECLARE_EMLITE_TYPE(MediaStreamAudioDestinationNode, AudioNode);
 
-MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode_new(const AudioContext* context);
+MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode_new0(AudioContext * context);
 
-MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode_new(const AudioContext* context, const jb_Any* options);
+MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode_new1(AudioContext * context, jb_Any * options);
 
 MediaStream MediaStreamAudioDestinationNode_stream( const MediaStreamAudioDestinationNode *self);

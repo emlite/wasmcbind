@@ -6,15 +6,10 @@
 #include "enums.h"
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLParagraphElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLParagraphElement, HTMLElement);
 
 HTMLParagraphElement HTMLParagraphElement_new();
 
 jb_DOMString HTMLParagraphElement_align( const HTMLParagraphElement *self);
 
-void HTMLParagraphElement_set_align(HTMLParagraphElement* self, const jb_DOMString* value);
+void HTMLParagraphElement_set_align(HTMLParagraphElement* self, jb_DOMString * value);

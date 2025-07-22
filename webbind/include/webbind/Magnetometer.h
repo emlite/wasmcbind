@@ -6,16 +6,11 @@
 #include "enums.h"
 
 
-typedef struct {
-  Sensor inner;
-} Magnetometer;
-
-
 DECLARE_EMLITE_TYPE(Magnetometer, Sensor);
 
-Magnetometer Magnetometer_new();
+Magnetometer Magnetometer_new0();
 
-Magnetometer Magnetometer_new(const jb_Any* sensorOptions);
+Magnetometer Magnetometer_new1(jb_Any * sensorOptions);
 
 double Magnetometer_x( const Magnetometer *self);
 

@@ -7,63 +7,64 @@ DEFINE_EMLITE_TYPE(ObservableEventListenerOptions, em_Val);
 
 
 bool ObservableEventListenerOptions_capture(const ObservableEventListenerOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "capture"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("capture")));
 }
 
 
 void ObservableEventListenerOptions_set_capture(ObservableEventListenerOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "capture", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("capture"), em_Val_from(value));
 }
 
 
 bool ObservableEventListenerOptions_passive(const ObservableEventListenerOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "passive"));
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("passive")));
 }
 
 
 void ObservableEventListenerOptions_set_passive(ObservableEventListenerOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), "passive", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("passive"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(EventTarget, em_Val);
 
 
-EventTarget EventTarget_new() : em_Val(em_Val_global("EventTarget").new_()) {
-        return EventTarget(em_Val_new(em_Val_global("EventTarget", ));
+EventTarget EventTarget_new() {
+        em_Val vv = em_Val_new(em_Val_global("EventTarget") );
+        return EventTarget_from_val(&vv);
       }
 
 
-jb_Undefined EventTarget_addEventListener(EventTarget* self , const jb_DOMString* type, const jb_Function* callback) {
+jb_Undefined EventTarget_addEventListener0(EventTarget* self , jb_DOMString * type, jb_Function * callback) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "addEventListener", em_Val_from(type), em_Val_from(callback)));
 }
 
 
-jb_Undefined EventTarget_addEventListener(EventTarget* self , const jb_DOMString* type, const jb_Function* callback, const jb_Any* options) {
+jb_Undefined EventTarget_addEventListener1(EventTarget* self , jb_DOMString * type, jb_Function * callback, jb_Any * options) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "addEventListener", em_Val_from(type), em_Val_from(callback), em_Val_from(options)));
 }
 
 
-jb_Undefined EventTarget_removeEventListener(EventTarget* self , const jb_DOMString* type, const jb_Function* callback) {
+jb_Undefined EventTarget_removeEventListener0(EventTarget* self , jb_DOMString * type, jb_Function * callback) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "removeEventListener", em_Val_from(type), em_Val_from(callback)));
 }
 
 
-jb_Undefined EventTarget_removeEventListener(EventTarget* self , const jb_DOMString* type, const jb_Function* callback, const jb_Any* options) {
+jb_Undefined EventTarget_removeEventListener1(EventTarget* self , jb_DOMString * type, jb_Function * callback, jb_Any * options) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "removeEventListener", em_Val_from(type), em_Val_from(callback), em_Val_from(options)));
 }
 
 
-bool EventTarget_dispatchEvent(EventTarget* self , const Event* event) {
+bool EventTarget_dispatchEvent(EventTarget* self , Event * event) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "dispatchEvent", em_Val_from(event)));
 }
 
 
-Observable EventTarget_when(EventTarget* self , const jb_DOMString* type) {
+Observable EventTarget_when0(EventTarget* self , jb_DOMString * type) {
     return em_Val_as(Observable, em_Val_call(em_Val_as_val(self->inner), "when", em_Val_from(type)));
 }
 
 
-Observable EventTarget_when(EventTarget* self , const jb_DOMString* type, const ObservableEventListenerOptions* options) {
+Observable EventTarget_when1(EventTarget* self , jb_DOMString * type, ObservableEventListenerOptions * options) {
     return em_Val_as(Observable, em_Val_call(em_Val_as_val(self->inner), "when", em_Val_from(type), em_Val_from(options)));
 }
 

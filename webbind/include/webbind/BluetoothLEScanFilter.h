@@ -8,16 +8,11 @@ typedef struct BluetoothManufacturerDataFilter BluetoothManufacturerDataFilter;
 typedef struct BluetoothServiceDataFilter BluetoothServiceDataFilter;
 
 
-typedef struct {
-  em_Val inner;
-} BluetoothLEScanFilter;
-
-
 DECLARE_EMLITE_TYPE(BluetoothLEScanFilter, em_Val);
 
-BluetoothLEScanFilter BluetoothLEScanFilter_new();
+BluetoothLEScanFilter BluetoothLEScanFilter_new0();
 
-BluetoothLEScanFilter BluetoothLEScanFilter_new(const jb_Any* init);
+BluetoothLEScanFilter BluetoothLEScanFilter_new1(jb_Any * init);
 
 jb_DOMString BluetoothLEScanFilter_name( const BluetoothLEScanFilter *self);
 

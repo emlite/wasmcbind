@@ -6,11 +6,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  WorkletGlobalScope inner;
-} LayoutWorkletGlobalScope;
-
-
 DECLARE_EMLITE_TYPE(LayoutWorkletGlobalScope, WorkletGlobalScope);
 
-jb_Undefined LayoutWorkletGlobalScope_registerLayout(LayoutWorkletGlobalScope* self , const jb_DOMString* name, const jb_Any* layoutCtor);
+jb_Undefined LayoutWorkletGlobalScope_registerLayout(LayoutWorkletGlobalScope* self , jb_DOMString * name, jb_Any * layoutCtor);

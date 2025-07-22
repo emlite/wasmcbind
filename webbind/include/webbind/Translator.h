@@ -12,70 +12,50 @@ typedef struct ReadableStream ReadableStream;
 typedef struct AbortSignal AbortSignal;
 
 
-typedef struct {
-  em_Val inner;
-} TranslatorCreateOptions;
-
-
 DECLARE_EMLITE_TYPE(TranslatorCreateOptions, em_Val);
 
 AbortSignal TranslatorCreateOptions_signal( const TranslatorCreateOptions *self);
 
-void TranslatorCreateOptions_set_signal(TranslatorCreateOptions* self, const AbortSignal* value);
+void TranslatorCreateOptions_set_signal(TranslatorCreateOptions* self, AbortSignal * value);
 
 jb_Function TranslatorCreateOptions_monitor( const TranslatorCreateOptions *self);
 
-void TranslatorCreateOptions_set_monitor(TranslatorCreateOptions* self, const jb_Function* value);
-typedef struct {
-  em_Val inner;
-} TranslatorCreateCoreOptions;
-
-
+void TranslatorCreateOptions_set_monitor(TranslatorCreateOptions* self, jb_Function * value);
 DECLARE_EMLITE_TYPE(TranslatorCreateCoreOptions, em_Val);
 
 jb_DOMString TranslatorCreateCoreOptions_sourceLanguage( const TranslatorCreateCoreOptions *self);
 
-void TranslatorCreateCoreOptions_set_sourceLanguage(TranslatorCreateCoreOptions* self, const jb_DOMString* value);
+void TranslatorCreateCoreOptions_set_sourceLanguage(TranslatorCreateCoreOptions* self, jb_DOMString * value);
 
 jb_DOMString TranslatorCreateCoreOptions_targetLanguage( const TranslatorCreateCoreOptions *self);
 
-void TranslatorCreateCoreOptions_set_targetLanguage(TranslatorCreateCoreOptions* self, const jb_DOMString* value);
-typedef struct {
-  em_Val inner;
-} TranslatorTranslateOptions;
-
-
+void TranslatorCreateCoreOptions_set_targetLanguage(TranslatorCreateCoreOptions* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(TranslatorTranslateOptions, em_Val);
 
 AbortSignal TranslatorTranslateOptions_signal( const TranslatorTranslateOptions *self);
 
-void TranslatorTranslateOptions_set_signal(TranslatorTranslateOptions* self, const AbortSignal* value);
-typedef struct {
-  em_Val inner;
-} Translator;
-
-
+void TranslatorTranslateOptions_set_signal(TranslatorTranslateOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(Translator, em_Val);
 
-jb_Promise Translator_create(Translator* self , const TranslatorCreateOptions* options);
+jb_Promise Translator_create(Translator* self , TranslatorCreateOptions * options);
 
-jb_Promise Translator_availability(Translator* self , const TranslatorCreateCoreOptions* options);
+jb_Promise Translator_availability(Translator* self , TranslatorCreateCoreOptions * options);
 
-jb_Promise Translator_translate(Translator* self , const jb_DOMString* input);
+jb_Promise Translator_translate0(Translator* self , jb_DOMString * input);
 
-jb_Promise Translator_translate(Translator* self , const jb_DOMString* input, const TranslatorTranslateOptions* options);
+jb_Promise Translator_translate1(Translator* self , jb_DOMString * input, TranslatorTranslateOptions * options);
 
-ReadableStream Translator_translateStreaming(Translator* self , const jb_DOMString* input);
+ReadableStream Translator_translateStreaming0(Translator* self , jb_DOMString * input);
 
-ReadableStream Translator_translateStreaming(Translator* self , const jb_DOMString* input, const TranslatorTranslateOptions* options);
+ReadableStream Translator_translateStreaming1(Translator* self , jb_DOMString * input, TranslatorTranslateOptions * options);
 
 jb_DOMString Translator_sourceLanguage( const Translator *self);
 
 jb_DOMString Translator_targetLanguage( const Translator *self);
 
-jb_Promise Translator_measureInputUsage(Translator* self , const jb_DOMString* input);
+jb_Promise Translator_measureInputUsage0(Translator* self , jb_DOMString * input);
 
-jb_Promise Translator_measureInputUsage(Translator* self , const jb_DOMString* input, const TranslatorTranslateOptions* options);
+jb_Promise Translator_measureInputUsage1(Translator* self , jb_DOMString * input, TranslatorTranslateOptions * options);
 
 double Translator_inputQuota( const Translator *self);
 

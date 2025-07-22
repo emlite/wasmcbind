@@ -8,11 +8,6 @@ typedef struct DOMRectReadOnly DOMRectReadOnly;
 typedef struct DOMRectInit DOMRectInit;
 
 
-typedef struct {
-  em_Val inner;
-} DOMRectInit;
-
-
 DECLARE_EMLITE_TYPE(DOMRectInit, em_Val);
 
 double DOMRectInit_x( const DOMRectInit *self);
@@ -30,26 +25,21 @@ void DOMRectInit_set_width(DOMRectInit* self, double value);
 double DOMRectInit_height( const DOMRectInit *self);
 
 void DOMRectInit_set_height(DOMRectInit* self, double value);
-typedef struct {
-  em_Val inner;
-} DOMRectReadOnly;
-
-
 DECLARE_EMLITE_TYPE(DOMRectReadOnly, em_Val);
 
-DOMRectReadOnly DOMRectReadOnly_new();
+DOMRectReadOnly DOMRectReadOnly_new0();
 
-DOMRectReadOnly DOMRectReadOnly_new(double x);
+DOMRectReadOnly DOMRectReadOnly_new1(double x);
 
-DOMRectReadOnly DOMRectReadOnly_new(double x, double y);
+DOMRectReadOnly DOMRectReadOnly_new2(double x, double y);
 
-DOMRectReadOnly DOMRectReadOnly_new(double x, double y, double width);
+DOMRectReadOnly DOMRectReadOnly_new3(double x, double y, double width);
 
-DOMRectReadOnly DOMRectReadOnly_new(double x, double y, double width, double height);
+DOMRectReadOnly DOMRectReadOnly_new4(double x, double y, double width, double height);
 
-DOMRectReadOnly DOMRectReadOnly_fromRect(DOMRectReadOnly* self );
+DOMRectReadOnly DOMRectReadOnly_fromRect0(DOMRectReadOnly* self );
 
-DOMRectReadOnly DOMRectReadOnly_fromRect(DOMRectReadOnly* self , const DOMRectInit* other);
+DOMRectReadOnly DOMRectReadOnly_fromRect1(DOMRectReadOnly* self , DOMRectInit * other);
 
 double DOMRectReadOnly_x( const DOMRectReadOnly *self);
 

@@ -8,16 +8,11 @@
 typedef struct TouchList TouchList;
 
 
-typedef struct {
-  UIEvent inner;
-} TouchEvent;
-
-
 DECLARE_EMLITE_TYPE(TouchEvent, UIEvent);
 
-TouchEvent TouchEvent_new(const jb_DOMString* type);
+TouchEvent TouchEvent_new0(jb_DOMString * type);
 
-TouchEvent TouchEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+TouchEvent TouchEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 TouchList TouchEvent_touches( const TouchEvent *self);
 
@@ -33,4 +28,4 @@ bool TouchEvent_ctrlKey( const TouchEvent *self);
 
 bool TouchEvent_shiftKey( const TouchEvent *self);
 
-bool TouchEvent_getModifierState(TouchEvent* self , const jb_DOMString* keyArg);
+bool TouchEvent_getModifierState(TouchEvent* self , jb_DOMString * keyArg);

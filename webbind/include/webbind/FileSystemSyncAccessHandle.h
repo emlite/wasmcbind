@@ -7,30 +7,20 @@
 typedef struct FileSystemReadWriteOptions FileSystemReadWriteOptions;
 
 
-typedef struct {
-  em_Val inner;
-} FileSystemReadWriteOptions;
-
-
 DECLARE_EMLITE_TYPE(FileSystemReadWriteOptions, em_Val);
 
 long long FileSystemReadWriteOptions_at( const FileSystemReadWriteOptions *self);
 
 void FileSystemReadWriteOptions_set_at(FileSystemReadWriteOptions* self, long long value);
-typedef struct {
-  em_Val inner;
-} FileSystemSyncAccessHandle;
-
-
 DECLARE_EMLITE_TYPE(FileSystemSyncAccessHandle, em_Val);
 
-long long FileSystemSyncAccessHandle_read(FileSystemSyncAccessHandle* self , const jb_Any* buffer);
+long long FileSystemSyncAccessHandle_read0(FileSystemSyncAccessHandle* self , jb_Any * buffer);
 
-long long FileSystemSyncAccessHandle_read(FileSystemSyncAccessHandle* self , const jb_Any* buffer, const FileSystemReadWriteOptions* options);
+long long FileSystemSyncAccessHandle_read1(FileSystemSyncAccessHandle* self , jb_Any * buffer, FileSystemReadWriteOptions * options);
 
-long long FileSystemSyncAccessHandle_write(FileSystemSyncAccessHandle* self , const jb_Any* buffer);
+long long FileSystemSyncAccessHandle_write0(FileSystemSyncAccessHandle* self , jb_Any * buffer);
 
-long long FileSystemSyncAccessHandle_write(FileSystemSyncAccessHandle* self , const jb_Any* buffer, const FileSystemReadWriteOptions* options);
+long long FileSystemSyncAccessHandle_write1(FileSystemSyncAccessHandle* self , jb_Any * buffer, FileSystemReadWriteOptions * options);
 
 jb_Undefined FileSystemSyncAccessHandle_truncate(FileSystemSyncAccessHandle* self , long long newSize);
 

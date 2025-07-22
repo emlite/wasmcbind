@@ -9,11 +9,6 @@ typedef struct SVGAnimatedRect SVGAnimatedRect;
 typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
 
 
-typedef struct {
-  SVGElement inner;
-} SVGViewElement;
-
-
 DECLARE_EMLITE_TYPE(SVGViewElement, SVGElement);
 
 SVGAnimatedRect SVGViewElement_viewBox( const SVGViewElement *self);

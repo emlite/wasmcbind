@@ -5,140 +5,140 @@ DEFINE_EMLITE_TYPE(ItemDetails, em_Val);
 
 
 jb_DOMString ItemDetails_itemId(const ItemDetails *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "itemId"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("itemId")));
 }
 
 
-void ItemDetails_set_itemId(ItemDetails* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "itemId", value);
+void ItemDetails_set_itemId(ItemDetails* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("itemId"), em_Val_from(value));
 }
 
 
 jb_DOMString ItemDetails_title(const ItemDetails *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "title"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("title")));
 }
 
 
-void ItemDetails_set_title(ItemDetails* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "title", value);
+void ItemDetails_set_title(ItemDetails* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("title"), em_Val_from(value));
 }
 
 
 jb_Any ItemDetails_price(const ItemDetails *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "price"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("price")));
 }
 
 
-void ItemDetails_set_price(ItemDetails* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "price", value);
+void ItemDetails_set_price(ItemDetails* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("price"), em_Val_from(value));
 }
 
 
 ItemType ItemDetails_type(const ItemDetails *self) {
-    return em_Val_as(ItemType, em_Val_get(em_Val_as_val(self->inner), "type"));
+    return em_Val_as(ItemType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void ItemDetails_set_type(ItemDetails* self, const ItemType* value) {
-    em_Val_set(em_Val_as_val(self->inner), "type", value);
+void ItemDetails_set_type(ItemDetails* self, ItemType * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
 jb_DOMString ItemDetails_description(const ItemDetails *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "description"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("description")));
 }
 
 
-void ItemDetails_set_description(ItemDetails* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "description", value);
+void ItemDetails_set_description(ItemDetails* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("description"), em_Val_from(value));
 }
 
 
 jb_Sequence ItemDetails_iconURLs(const ItemDetails *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), "iconURLs"));
+    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("iconURLs")));
 }
 
 
-void ItemDetails_set_iconURLs(ItemDetails* self, const jb_Sequence* value) {
-    em_Val_set(em_Val_as_val(self->inner), "iconURLs", value);
+void ItemDetails_set_iconURLs(ItemDetails* self, jb_Sequence * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("iconURLs"), em_Val_from(value));
 }
 
 
 jb_DOMString ItemDetails_subscriptionPeriod(const ItemDetails *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "subscriptionPeriod"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("subscriptionPeriod")));
 }
 
 
-void ItemDetails_set_subscriptionPeriod(ItemDetails* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "subscriptionPeriod", value);
+void ItemDetails_set_subscriptionPeriod(ItemDetails* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("subscriptionPeriod"), em_Val_from(value));
 }
 
 
 jb_DOMString ItemDetails_freeTrialPeriod(const ItemDetails *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "freeTrialPeriod"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("freeTrialPeriod")));
 }
 
 
-void ItemDetails_set_freeTrialPeriod(ItemDetails* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "freeTrialPeriod", value);
+void ItemDetails_set_freeTrialPeriod(ItemDetails* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("freeTrialPeriod"), em_Val_from(value));
 }
 
 
 jb_Any ItemDetails_introductoryPrice(const ItemDetails *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "introductoryPrice"));
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("introductoryPrice")));
 }
 
 
-void ItemDetails_set_introductoryPrice(ItemDetails* self, const jb_Any* value) {
-    em_Val_set(em_Val_as_val(self->inner), "introductoryPrice", value);
+void ItemDetails_set_introductoryPrice(ItemDetails* self, jb_Any * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("introductoryPrice"), em_Val_from(value));
 }
 
 
 jb_DOMString ItemDetails_introductoryPricePeriod(const ItemDetails *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "introductoryPricePeriod"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("introductoryPricePeriod")));
 }
 
 
-void ItemDetails_set_introductoryPricePeriod(ItemDetails* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "introductoryPricePeriod", value);
+void ItemDetails_set_introductoryPricePeriod(ItemDetails* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("introductoryPricePeriod"), em_Val_from(value));
 }
 
 
 long long ItemDetails_introductoryPriceCycles(const ItemDetails *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "introductoryPriceCycles"));
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("introductoryPriceCycles")));
 }
 
 
 void ItemDetails_set_introductoryPriceCycles(ItemDetails* self, long long value) {
-    em_Val_set(em_Val_as_val(self->inner), "introductoryPriceCycles", value);
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("introductoryPriceCycles"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(PurchaseDetails, em_Val);
 
 
 jb_DOMString PurchaseDetails_itemId(const PurchaseDetails *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "itemId"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("itemId")));
 }
 
 
-void PurchaseDetails_set_itemId(PurchaseDetails* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "itemId", value);
+void PurchaseDetails_set_itemId(PurchaseDetails* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("itemId"), em_Val_from(value));
 }
 
 
 jb_DOMString PurchaseDetails_purchaseToken(const PurchaseDetails *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "purchaseToken"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("purchaseToken")));
 }
 
 
-void PurchaseDetails_set_purchaseToken(PurchaseDetails* self, const jb_DOMString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "purchaseToken", value);
+void PurchaseDetails_set_purchaseToken(PurchaseDetails* self, jb_DOMString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("purchaseToken"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(DigitalGoodsService, em_Val);
 
 
-jb_Promise DigitalGoodsService_getDetails(DigitalGoodsService* self , const jb_Sequence* itemIds) {
+jb_Promise DigitalGoodsService_getDetails(DigitalGoodsService* self , jb_Sequence * itemIds) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "getDetails", em_Val_from(itemIds)));
 }
 
@@ -153,7 +153,7 @@ jb_Promise DigitalGoodsService_listPurchaseHistory(DigitalGoodsService* self ) {
 }
 
 
-jb_Promise DigitalGoodsService_consume(DigitalGoodsService* self , const jb_DOMString* purchaseToken) {
+jb_Promise DigitalGoodsService_consume(DigitalGoodsService* self , jb_DOMString * purchaseToken) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "consume", em_Val_from(purchaseToken)));
 }
 

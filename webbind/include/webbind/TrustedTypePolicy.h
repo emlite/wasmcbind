@@ -9,17 +9,12 @@ typedef struct TrustedScript TrustedScript;
 typedef struct TrustedScriptURL TrustedScriptURL;
 
 
-typedef struct {
-  em_Val inner;
-} TrustedTypePolicy;
-
-
 DECLARE_EMLITE_TYPE(TrustedTypePolicy, em_Val);
 
 jb_DOMString TrustedTypePolicy_name( const TrustedTypePolicy *self);
 
-TrustedHTML TrustedTypePolicy_createHTML(TrustedTypePolicy* self , const jb_DOMString* input, const jb_Any* arguments);
+TrustedHTML TrustedTypePolicy_createHTML(TrustedTypePolicy* self , jb_DOMString * input, jb_Any * arguments);
 
-TrustedScript TrustedTypePolicy_createScript(TrustedTypePolicy* self , const jb_DOMString* input, const jb_Any* arguments);
+TrustedScript TrustedTypePolicy_createScript(TrustedTypePolicy* self , jb_DOMString * input, jb_Any * arguments);
 
-TrustedScriptURL TrustedTypePolicy_createScriptURL(TrustedTypePolicy* self , const jb_DOMString* input, const jb_Any* arguments);
+TrustedScriptURL TrustedTypePolicy_createScriptURL(TrustedTypePolicy* self , jb_DOMString * input, jb_Any * arguments);

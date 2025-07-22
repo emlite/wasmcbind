@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} ImageTrack;
-
-
 DECLARE_EMLITE_TYPE(ImageTrack, em_Val);
 
 bool ImageTrack_animated( const ImageTrack *self);

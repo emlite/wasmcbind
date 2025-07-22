@@ -10,11 +10,6 @@ typedef struct Element Element;
 typedef struct Animation Animation;
 
 
-typedef struct {
-  DocumentFragment inner;
-} ShadowRoot;
-
-
 DECLARE_EMLITE_TYPE(ShadowRoot, DocumentFragment);
 
 ShadowRootMode ShadowRoot_mode( const ShadowRoot *self);
@@ -31,16 +26,16 @@ Element ShadowRoot_host( const ShadowRoot *self);
 
 jb_Any ShadowRoot_onslotchange( const ShadowRoot *self);
 
-void ShadowRoot_set_onslotchange(ShadowRoot* self, const jb_Any* value);
+void ShadowRoot_set_onslotchange(ShadowRoot* self, jb_Any * value);
 
-jb_Undefined ShadowRoot_setHTMLUnsafe(ShadowRoot* self , const jb_Any* html);
+jb_Undefined ShadowRoot_setHTMLUnsafe(ShadowRoot* self , jb_Any * html);
 
-jb_DOMString ShadowRoot_getHTML(ShadowRoot* self );
+jb_DOMString ShadowRoot_getHTML0(ShadowRoot* self );
 
-jb_DOMString ShadowRoot_getHTML(ShadowRoot* self , const GetHTMLOptions* options);
+jb_DOMString ShadowRoot_getHTML1(ShadowRoot* self , GetHTMLOptions * options);
 
 jb_Any ShadowRoot_innerHTML( const ShadowRoot *self);
 
-void ShadowRoot_set_innerHTML(ShadowRoot* self, const jb_Any* value);
+void ShadowRoot_set_innerHTML(ShadowRoot* self, jb_Any * value);
 
 jb_Sequence ShadowRoot_getAnimations(ShadowRoot* self );

@@ -8,13 +8,8 @@
 typedef struct XRLayer XRLayer;
 
 
-typedef struct {
-  Event inner;
-} XRLayerEvent;
-
-
 DECLARE_EMLITE_TYPE(XRLayerEvent, Event);
 
-XRLayerEvent XRLayerEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+XRLayerEvent XRLayerEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 XRLayer XRLayerEvent_layer( const XRLayerEvent *self);

@@ -7,11 +7,6 @@
 typedef struct CSSStyleSheet CSSStyleSheet;
 
 
-typedef struct {
-  em_Val inner;
-} StyleSheetList;
-
-
 DECLARE_EMLITE_TYPE(StyleSheetList, em_Val);
 
 CSSStyleSheet StyleSheetList_item(StyleSheetList* self , unsigned long index);

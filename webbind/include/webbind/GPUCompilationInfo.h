@@ -7,11 +7,6 @@
 typedef struct GPUCompilationMessage GPUCompilationMessage;
 
 
-typedef struct {
-  em_Val inner;
-} GPUCompilationInfo;
-
-
 DECLARE_EMLITE_TYPE(GPUCompilationInfo, em_Val);
 
 jb_FrozenArray GPUCompilationInfo_messages( const GPUCompilationInfo *self);

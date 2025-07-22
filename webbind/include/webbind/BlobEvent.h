@@ -8,14 +8,9 @@
 typedef struct Blob Blob;
 
 
-typedef struct {
-  Event inner;
-} BlobEvent;
-
-
 DECLARE_EMLITE_TYPE(BlobEvent, Event);
 
-BlobEvent BlobEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+BlobEvent BlobEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
 Blob BlobEvent_data( const BlobEvent *self);
 

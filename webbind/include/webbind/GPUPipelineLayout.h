@@ -5,13 +5,8 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} GPUPipelineLayout;
-
-
 DECLARE_EMLITE_TYPE(GPUPipelineLayout, em_Val);
 
 jb_USVString GPUPipelineLayout_label( const GPUPipelineLayout *self);
 
-void GPUPipelineLayout_set_label(GPUPipelineLayout* self, const jb_USVString* value);
+void GPUPipelineLayout_set_label(GPUPipelineLayout* self, jb_USVString * value);

@@ -7,11 +7,6 @@
 typedef struct AnimationEffect AnimationEffect;
 
 
-typedef struct {
-  em_Val inner;
-} AnimationNodeList;
-
-
 DECLARE_EMLITE_TYPE(AnimationNodeList, em_Val);
 
 unsigned long AnimationNodeList_length( const AnimationNodeList *self);

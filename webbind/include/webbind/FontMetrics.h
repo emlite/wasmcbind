@@ -8,11 +8,6 @@ typedef struct Baseline Baseline;
 typedef struct Font Font;
 
 
-typedef struct {
-  em_Val inner;
-} FontMetrics;
-
-
 DECLARE_EMLITE_TYPE(FontMetrics, em_Val);
 
 double FontMetrics_width( const FontMetrics *self);

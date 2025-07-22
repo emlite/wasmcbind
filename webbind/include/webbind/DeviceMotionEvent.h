@@ -9,16 +9,11 @@ typedef struct DeviceMotionEventAcceleration DeviceMotionEventAcceleration;
 typedef struct DeviceMotionEventRotationRate DeviceMotionEventRotationRate;
 
 
-typedef struct {
-  Event inner;
-} DeviceMotionEvent;
-
-
 DECLARE_EMLITE_TYPE(DeviceMotionEvent, Event);
 
-DeviceMotionEvent DeviceMotionEvent_new(const jb_DOMString* type);
+DeviceMotionEvent DeviceMotionEvent_new0(jb_DOMString * type);
 
-DeviceMotionEvent DeviceMotionEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+DeviceMotionEvent DeviceMotionEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 DeviceMotionEventAcceleration DeviceMotionEvent_acceleration( const DeviceMotionEvent *self);
 

@@ -8,16 +8,11 @@
 typedef struct MediaDeviceInfo MediaDeviceInfo;
 
 
-typedef struct {
-  Event inner;
-} DeviceChangeEvent;
-
-
 DECLARE_EMLITE_TYPE(DeviceChangeEvent, Event);
 
-DeviceChangeEvent DeviceChangeEvent_new(const jb_DOMString* type);
+DeviceChangeEvent DeviceChangeEvent_new0(jb_DOMString * type);
 
-DeviceChangeEvent DeviceChangeEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+DeviceChangeEvent DeviceChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
 jb_FrozenArray DeviceChangeEvent_devices( const DeviceChangeEvent *self);
 

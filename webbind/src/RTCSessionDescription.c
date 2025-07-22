@@ -5,18 +5,19 @@
 DEFINE_EMLITE_TYPE(RTCSessionDescription, em_Val);
 
 
-RTCSessionDescription RTCSessionDescription_new(const RTCSessionDescriptionInit* descriptionInitDict) : em_Val(em_Val_global("RTCSessionDescription").new_(em_Val_from(descriptionInitDict))) {
-        return RTCSessionDescription(em_Val_new(em_Val_global("RTCSessionDescription", em_Val_from(descriptionInitDict)));
+RTCSessionDescription RTCSessionDescription_new(RTCSessionDescriptionInit * descriptionInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("RTCSessionDescription") , em_Val_from(descriptionInitDict));
+        return RTCSessionDescription_from_val(&vv);
       }
 
 
 RTCSdpType RTCSessionDescription_type(const RTCSessionDescription *self) {
-    return em_Val_as(RTCSdpType, em_Val_get(em_Val_as_val(self->inner), "type"));
+    return em_Val_as(RTCSdpType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
 jb_DOMString RTCSessionDescription_sdp(const RTCSessionDescription *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "sdp"));
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sdp")));
 }
 
 

@@ -5,14 +5,9 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} ByteLengthQueuingStrategy;
-
-
 DECLARE_EMLITE_TYPE(ByteLengthQueuingStrategy, em_Val);
 
-ByteLengthQueuingStrategy ByteLengthQueuingStrategy_new(const jb_Any* init);
+ByteLengthQueuingStrategy ByteLengthQueuingStrategy_new(jb_Any * init);
 
 double ByteLengthQueuingStrategy_highWaterMark( const ByteLengthQueuingStrategy *self);
 

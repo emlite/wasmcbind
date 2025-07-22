@@ -7,7 +7,7 @@
 DEFINE_EMLITE_TYPE(XRHitTestResult, em_Val);
 
 
-XRPose XRHitTestResult_getPose(XRHitTestResult* self , const XRSpace* baseSpace) {
+XRPose XRHitTestResult_getPose(XRHitTestResult* self , XRSpace * baseSpace) {
     return em_Val_as(XRPose, em_Val_call(em_Val_as_val(self->inner), "getPose", em_Val_from(baseSpace)));
 }
 

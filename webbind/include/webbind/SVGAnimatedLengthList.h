@@ -7,11 +7,6 @@
 typedef struct SVGLengthList SVGLengthList;
 
 
-typedef struct {
-  em_Val inner;
-} SVGAnimatedLengthList;
-
-
 DECLARE_EMLITE_TYPE(SVGAnimatedLengthList, em_Val);
 
 SVGLengthList SVGAnimatedLengthList_baseVal( const SVGAnimatedLengthList *self);

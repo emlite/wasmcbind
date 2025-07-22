@@ -6,7 +6,7 @@ DEFINE_EMLITE_TYPE(CanvasCaptureMediaStreamTrack, MediaStreamTrack);
 
 
 HTMLCanvasElement CanvasCaptureMediaStreamTrack_canvas(const CanvasCaptureMediaStreamTrack *self) {
-    return em_Val_as(HTMLCanvasElement, em_Val_get(MediaStreamTrack_as_val(self->inner), "canvas"));
+    return em_Val_as(HTMLCanvasElement, em_Val_get(MediaStreamTrack_as_val(self->inner), em_Val_from("canvas")));
 }
 
 

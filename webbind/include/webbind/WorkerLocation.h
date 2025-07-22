@@ -5,11 +5,6 @@
 #include "enums.h"
 
 
-typedef struct {
-  em_Val inner;
-} WorkerLocation;
-
-
 DECLARE_EMLITE_TYPE(WorkerLocation, em_Val);
 
 jb_USVString WorkerLocation_href( const WorkerLocation *self);

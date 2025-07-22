@@ -6,96 +6,96 @@ DEFINE_EMLITE_TYPE(Location, em_Val);
 
 
 jb_USVString Location_href(const Location *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "href"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("href")));
 }
 
 
-void Location_set_href(Location* self, const jb_USVString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "href", value);
+void Location_set_href(Location* self, jb_USVString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("href"), em_Val_from(value));
 }
 
 
 jb_USVString Location_origin(const Location *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "origin"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("origin")));
 }
 
 
 jb_USVString Location_protocol(const Location *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "protocol"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("protocol")));
 }
 
 
-void Location_set_protocol(Location* self, const jb_USVString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "protocol", value);
+void Location_set_protocol(Location* self, jb_USVString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("protocol"), em_Val_from(value));
 }
 
 
 jb_USVString Location_host(const Location *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "host"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("host")));
 }
 
 
-void Location_set_host(Location* self, const jb_USVString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "host", value);
+void Location_set_host(Location* self, jb_USVString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("host"), em_Val_from(value));
 }
 
 
 jb_USVString Location_hostname(const Location *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "hostname"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hostname")));
 }
 
 
-void Location_set_hostname(Location* self, const jb_USVString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "hostname", value);
+void Location_set_hostname(Location* self, jb_USVString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("hostname"), em_Val_from(value));
 }
 
 
 jb_USVString Location_port(const Location *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "port"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("port")));
 }
 
 
-void Location_set_port(Location* self, const jb_USVString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "port", value);
+void Location_set_port(Location* self, jb_USVString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("port"), em_Val_from(value));
 }
 
 
 jb_USVString Location_pathname(const Location *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "pathname"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pathname")));
 }
 
 
-void Location_set_pathname(Location* self, const jb_USVString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "pathname", value);
+void Location_set_pathname(Location* self, jb_USVString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("pathname"), em_Val_from(value));
 }
 
 
 jb_USVString Location_search(const Location *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "search"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("search")));
 }
 
 
-void Location_set_search(Location* self, const jb_USVString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "search", value);
+void Location_set_search(Location* self, jb_USVString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("search"), em_Val_from(value));
 }
 
 
 jb_USVString Location_hash(const Location *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "hash"));
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hash")));
 }
 
 
-void Location_set_hash(Location* self, const jb_USVString* value) {
-    em_Val_set(em_Val_as_val(self->inner), "hash", value);
+void Location_set_hash(Location* self, jb_USVString * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("hash"), em_Val_from(value));
 }
 
 
-jb_Undefined Location_assign(Location* self , const jb_USVString* url) {
+jb_Undefined Location_assign(Location* self , jb_USVString * url) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "assign", em_Val_from(url)));
 }
 
 
-jb_Undefined Location_replace(Location* self , const jb_USVString* url) {
+jb_Undefined Location_replace(Location* self , jb_USVString * url) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "replace", em_Val_from(url)));
 }
 
@@ -106,6 +106,6 @@ jb_Undefined Location_reload(Location* self ) {
 
 
 DOMStringList Location_ancestorOrigins(const Location *self) {
-    return em_Val_as(DOMStringList, em_Val_get(em_Val_as_val(self->inner), "ancestorOrigins"));
+    return em_Val_as(DOMStringList, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ancestorOrigins")));
 }
 

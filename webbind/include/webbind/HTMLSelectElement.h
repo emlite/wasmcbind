@@ -13,18 +13,13 @@ typedef struct ValidityState ValidityState;
 typedef struct NodeList NodeList;
 
 
-typedef struct {
-  HTMLElement inner;
-} HTMLSelectElement;
-
-
 DECLARE_EMLITE_TYPE(HTMLSelectElement, HTMLElement);
 
 HTMLSelectElement HTMLSelectElement_new();
 
 jb_DOMString HTMLSelectElement_autocomplete( const HTMLSelectElement *self);
 
-void HTMLSelectElement_set_autocomplete(HTMLSelectElement* self, const jb_DOMString* value);
+void HTMLSelectElement_set_autocomplete(HTMLSelectElement* self, jb_DOMString * value);
 
 bool HTMLSelectElement_disabled( const HTMLSelectElement *self);
 
@@ -38,7 +33,7 @@ void HTMLSelectElement_set_multiple(HTMLSelectElement* self, bool value);
 
 jb_DOMString HTMLSelectElement_name( const HTMLSelectElement *self);
 
-void HTMLSelectElement_set_name(HTMLSelectElement* self, const jb_DOMString* value);
+void HTMLSelectElement_set_name(HTMLSelectElement* self, jb_DOMString * value);
 
 bool HTMLSelectElement_required( const HTMLSelectElement *self);
 
@@ -58,11 +53,11 @@ void HTMLSelectElement_set_length(HTMLSelectElement* self, unsigned long value);
 
 HTMLOptionElement HTMLSelectElement_item(HTMLSelectElement* self , unsigned long index);
 
-HTMLOptionElement HTMLSelectElement_namedItem(HTMLSelectElement* self , const jb_DOMString* name);
+HTMLOptionElement HTMLSelectElement_namedItem(HTMLSelectElement* self , jb_DOMString * name);
 
-jb_Undefined HTMLSelectElement_add(HTMLSelectElement* self , const jb_Any* element);
+jb_Undefined HTMLSelectElement_add0(HTMLSelectElement* self , jb_Any * element);
 
-jb_Undefined HTMLSelectElement_add(HTMLSelectElement* self , const jb_Any* element, const jb_Any* before);
+jb_Undefined HTMLSelectElement_add1(HTMLSelectElement* self , jb_Any * element, jb_Any * before);
 
 jb_Undefined HTMLSelectElement_remove(HTMLSelectElement* self , long index);
 
@@ -74,7 +69,7 @@ void HTMLSelectElement_set_selectedIndex(HTMLSelectElement* self, long value);
 
 jb_DOMString HTMLSelectElement_value( const HTMLSelectElement *self);
 
-void HTMLSelectElement_set_value(HTMLSelectElement* self, const jb_DOMString* value);
+void HTMLSelectElement_set_value(HTMLSelectElement* self, jb_DOMString * value);
 
 bool HTMLSelectElement_willValidate( const HTMLSelectElement *self);
 
@@ -86,7 +81,7 @@ bool HTMLSelectElement_checkValidity(HTMLSelectElement* self );
 
 bool HTMLSelectElement_reportValidity(HTMLSelectElement* self );
 
-jb_Undefined HTMLSelectElement_setCustomValidity(HTMLSelectElement* self , const jb_DOMString* error);
+jb_Undefined HTMLSelectElement_setCustomValidity(HTMLSelectElement* self , jb_DOMString * error);
 
 jb_Undefined HTMLSelectElement_showPicker(HTMLSelectElement* self );
 

@@ -11,7 +11,7 @@ jb_Undefined PluginArray_refresh(PluginArray* self ) {
 
 
 unsigned long PluginArray_length(const PluginArray *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "length"));
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("length")));
 }
 
 
@@ -20,7 +20,7 @@ Plugin PluginArray_item(PluginArray* self , unsigned long index) {
 }
 
 
-Plugin PluginArray_namedItem(PluginArray* self , const jb_DOMString* name) {
+Plugin PluginArray_namedItem(PluginArray* self , jb_DOMString * name) {
     return em_Val_as(Plugin, em_Val_call(em_Val_as_val(self->inner), "namedItem", em_Val_from(name)));
 }
 

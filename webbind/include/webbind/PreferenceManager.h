@@ -7,11 +7,6 @@
 typedef struct PreferenceObject PreferenceObject;
 
 
-typedef struct {
-  em_Val inner;
-} PreferenceManager;
-
-
 DECLARE_EMLITE_TYPE(PreferenceManager, em_Val);
 
 PreferenceObject PreferenceManager_colorScheme( const PreferenceManager *self);

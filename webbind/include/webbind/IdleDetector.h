@@ -9,11 +9,6 @@ typedef struct IdleOptions IdleOptions;
 typedef struct AbortSignal AbortSignal;
 
 
-typedef struct {
-  em_Val inner;
-} IdleOptions;
-
-
 DECLARE_EMLITE_TYPE(IdleOptions, em_Val);
 
 long long IdleOptions_threshold( const IdleOptions *self);
@@ -22,12 +17,7 @@ void IdleOptions_set_threshold(IdleOptions* self, long long value);
 
 AbortSignal IdleOptions_signal( const IdleOptions *self);
 
-void IdleOptions_set_signal(IdleOptions* self, const AbortSignal* value);
-typedef struct {
-  EventTarget inner;
-} IdleDetector;
-
-
+void IdleOptions_set_signal(IdleOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(IdleDetector, EventTarget);
 
 IdleDetector IdleDetector_new();
@@ -38,10 +28,10 @@ ScreenIdleState IdleDetector_screenState( const IdleDetector *self);
 
 jb_Any IdleDetector_onchange( const IdleDetector *self);
 
-void IdleDetector_set_onchange(IdleDetector* self, const jb_Any* value);
+void IdleDetector_set_onchange(IdleDetector* self, jb_Any * value);
 
 jb_Promise IdleDetector_requestPermission(IdleDetector* self );
 
-jb_Promise IdleDetector_start(IdleDetector* self );
+jb_Promise IdleDetector_start0(IdleDetector* self );
 
-jb_Promise IdleDetector_start(IdleDetector* self , const IdleOptions* options);
+jb_Promise IdleDetector_start1(IdleDetector* self , IdleOptions * options);

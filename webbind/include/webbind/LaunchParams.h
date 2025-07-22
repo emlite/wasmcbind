@@ -7,11 +7,6 @@
 typedef struct FileSystemHandle FileSystemHandle;
 
 
-typedef struct {
-  em_Val inner;
-} LaunchParams;
-
-
 DECLARE_EMLITE_TYPE(LaunchParams, em_Val);
 
 jb_DOMString LaunchParams_targetURL( const LaunchParams *self);
