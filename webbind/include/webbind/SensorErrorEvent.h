@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class DOMException;
+typedef struct wb_DOMException wb_DOMException;

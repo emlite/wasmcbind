@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class IdleOptions;
-class AbortSignal;
+typedef struct wb_IdleOptions wb_IdleOptions;
+typedef struct wb_AbortSignal wb_AbortSignal;

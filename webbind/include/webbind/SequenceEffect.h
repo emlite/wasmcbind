@@ -5,4 +5,4 @@
 #include "GroupEffect.h"
 #include "enums.h"
 
-class SequenceEffect;
+typedef struct wb_SequenceEffect wb_SequenceEffect;

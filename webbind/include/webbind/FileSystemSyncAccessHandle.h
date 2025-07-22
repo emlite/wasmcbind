@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class FileSystemReadWriteOptions;
+typedef struct wb_FileSystemReadWriteOptions wb_FileSystemReadWriteOptions;

@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class PresentationConnectionList;
+typedef struct wb_PresentationConnectionList wb_PresentationConnectionList;

@@ -5,4 +5,4 @@
 #include "XRDepthInformation.h"
 #include "enums.h"
 
-class WebGLTexture;
+typedef struct wb_WebGLTexture wb_WebGLTexture;

@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class Window;
+typedef struct wb_Window wb_Window;

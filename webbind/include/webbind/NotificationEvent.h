@@ -5,4 +5,4 @@
 #include "ExtendableEvent.h"
 #include "enums.h"
 
-class Notification;
+typedef struct wb_Notification wb_Notification;

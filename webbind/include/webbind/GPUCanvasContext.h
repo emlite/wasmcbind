@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class GPUCanvasConfiguration;
-class GPUTexture;
-class GPUDevice;
+typedef struct wb_GPUCanvasConfiguration wb_GPUCanvasConfiguration;
+typedef struct wb_GPUTexture wb_GPUTexture;
+typedef struct wb_GPUDevice wb_GPUDevice;

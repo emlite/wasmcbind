@@ -4,8 +4,8 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class DOMStringList;
-class IDBTransaction;
-class IDBRequest;
-class IDBIndex;
-class IDBIndexParameters;
+typedef struct wb_DOMStringList wb_DOMStringList;
+typedef struct wb_IDBTransaction wb_IDBTransaction;
+typedef struct wb_IDBRequest wb_IDBRequest;
+typedef struct wb_IDBIndex wb_IDBIndex;
+typedef struct wb_IDBIndexParameters wb_IDBIndexParameters;

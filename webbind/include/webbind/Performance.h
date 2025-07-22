@@ -5,10 +5,10 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class EventCounts;
-class PerformanceTiming;
-class PerformanceNavigation;
-class MemoryMeasurement;
-class PerformanceMark;
-class PerformanceMarkOptions;
-class PerformanceMeasure;
+typedef struct wb_EventCounts wb_EventCounts;
+typedef struct wb_PerformanceTiming wb_PerformanceTiming;
+typedef struct wb_PerformanceNavigation wb_PerformanceNavigation;
+typedef struct wb_MemoryMeasurement wb_MemoryMeasurement;
+typedef struct wb_PerformanceMark wb_PerformanceMark;
+typedef struct wb_PerformanceMarkOptions wb_PerformanceMarkOptions;
+typedef struct wb_PerformanceMeasure wb_PerformanceMeasure;

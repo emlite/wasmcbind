@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WritableStream;
-class MediaStreamTrack;
+typedef struct wb_WritableStream wb_WritableStream;
+typedef struct wb_MediaStreamTrack wb_MediaStreamTrack;

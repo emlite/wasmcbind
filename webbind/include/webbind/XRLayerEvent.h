@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class XRLayer;
+typedef struct wb_XRLayer wb_XRLayer;

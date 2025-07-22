@@ -5,8 +5,8 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-class SVGAnimatedTransformList;
-class DOMRect;
-class SVGBoundingBoxOptions;
-class DOMMatrix;
-class SVGStringList;
+typedef struct wb_SVGAnimatedTransformList wb_SVGAnimatedTransformList;
+typedef struct wb_DOMRect wb_DOMRect;
+typedef struct wb_SVGBoundingBoxOptions wb_SVGBoundingBoxOptions;
+typedef struct wb_DOMMatrix wb_DOMMatrix;
+typedef struct wb_SVGStringList wb_SVGStringList;

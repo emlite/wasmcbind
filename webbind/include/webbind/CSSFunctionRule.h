@@ -5,4 +5,4 @@
 #include "CSSGroupingRule.h"
 #include "enums.h"
 
-class FunctionParameter;
+typedef struct wb_FunctionParameter wb_FunctionParameter;

@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SpeechRecognitionPhrase;
+typedef struct wb_SpeechRecognitionPhrase wb_SpeechRecognitionPhrase;

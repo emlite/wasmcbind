@@ -5,13 +5,13 @@
 #include "SVGSVGElement.h"
 #include "enums.h"
 
-class HTMLCanvasElement;
+typedef struct wb_HTMLCanvasElement wb_HTMLCanvasElement;
 class CanvasRenderingContext2DSettings;
-class DOMMatrix;
-class CanvasGradient;
-class CanvasPattern;
+typedef struct wb_DOMMatrix wb_DOMMatrix;
+typedef struct wb_CanvasGradient wb_CanvasGradient;
+typedef struct wb_CanvasPattern wb_CanvasPattern;
 class Path2D;
-class Element;
-class TextMetrics;
-class ImageData;
-class ImageDataSettings;
+typedef struct wb_Element wb_Element;
+typedef struct wb_TextMetrics wb_TextMetrics;
+typedef struct wb_ImageData wb_ImageData;
+typedef struct wb_ImageDataSettings wb_ImageDataSettings;

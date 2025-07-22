@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class Node;
+typedef struct wb_Node wb_Node;

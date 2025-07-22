@@ -5,5 +5,5 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-class MediaList;
-class CSSStyleSheet;
+typedef struct wb_MediaList wb_MediaList;
+typedef struct wb_CSSStyleSheet wb_CSSStyleSheet;

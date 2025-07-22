@@ -5,5 +5,5 @@
 #include "BackgroundFetchRegistration.h"
 #include "enums.h"
 
-class Response;
-class Request;
+typedef struct wb_Response wb_Response;
+typedef struct wb_Request wb_Request;

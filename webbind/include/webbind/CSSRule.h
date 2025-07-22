@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class CSSRule;
-class CSSStyleSheet;
+typedef struct wb_CSSRule wb_CSSRule;
+typedef struct wb_CSSStyleSheet wb_CSSStyleSheet;

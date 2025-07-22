@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WritableStream;
+typedef struct wb_WritableStream wb_WritableStream;

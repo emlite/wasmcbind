@@ -5,7 +5,7 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class NDEFScanOptions;
-class NDEFWriteOptions;
-class NDEFMakeReadOnlyOptions;
-class AbortSignal;
+typedef struct wb_NDEFScanOptions wb_NDEFScanOptions;
+typedef struct wb_NDEFWriteOptions wb_NDEFWriteOptions;
+typedef struct wb_NDEFMakeReadOnlyOptions wb_NDEFMakeReadOnlyOptions;
+typedef struct wb_AbortSignal wb_AbortSignal;

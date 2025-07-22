@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class SourceBuffer;
+typedef struct wb_SourceBuffer wb_SourceBuffer;

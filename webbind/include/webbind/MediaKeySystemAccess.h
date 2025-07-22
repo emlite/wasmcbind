@@ -5,4 +5,4 @@
 #include "Navigator.h"
 #include "enums.h"
 
-class MediaKeys;
+typedef struct wb_MediaKeys wb_MediaKeys;

@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class MessagePort;
+typedef struct wb_MessagePort wb_MessagePort;

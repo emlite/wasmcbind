@@ -6,4 +6,4 @@
 #include "MessagePort.h"
 #include "enums.h"
 
-class PortalActivateOptions;
+typedef struct wb_PortalActivateOptions wb_PortalActivateOptions;

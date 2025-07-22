@@ -5,4 +5,4 @@
 #include "PerformanceEntry.h"
 #include "enums.h"
 
-class TaskAttributionTiming;
+typedef struct wb_TaskAttributionTiming wb_TaskAttributionTiming;

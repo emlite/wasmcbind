@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class MIDIInputMap;
-class MIDIOutputMap;
+typedef struct wb_MIDIInputMap wb_MIDIInputMap;
+typedef struct wb_MIDIOutputMap wb_MIDIOutputMap;

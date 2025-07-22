@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class RTCEncodedAudioFrameMetadata;
+typedef struct wb_RTCEncodedAudioFrameMetadata wb_RTCEncodedAudioFrameMetadata;

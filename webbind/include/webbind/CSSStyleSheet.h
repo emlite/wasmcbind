@@ -5,6 +5,6 @@
 #include "StyleSheet.h"
 #include "enums.h"
 
-class CSSRule;
-class CSSRuleList;
-class CSSStyleSheet;
+typedef struct wb_CSSRule wb_CSSRule;
+typedef struct wb_CSSRuleList wb_CSSRuleList;
+typedef struct wb_CSSStyleSheet wb_CSSStyleSheet;

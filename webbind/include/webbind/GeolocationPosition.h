@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class GeolocationCoordinates;
+typedef struct wb_GeolocationCoordinates wb_GeolocationCoordinates;

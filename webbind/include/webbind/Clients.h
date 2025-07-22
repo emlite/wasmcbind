@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Client;
-class ClientQueryOptions;
-class WindowClient;
+typedef struct wb_Client wb_Client;
+typedef struct wb_ClientQueryOptions wb_ClientQueryOptions;
+typedef struct wb_WindowClient wb_WindowClient;

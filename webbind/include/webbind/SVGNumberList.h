@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SVGNumber;
+typedef struct wb_SVGNumber wb_SVGNumber;

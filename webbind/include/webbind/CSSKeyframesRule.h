@@ -5,5 +5,5 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-class CSSRuleList;
-class CSSKeyframeRule;
+typedef struct wb_CSSRuleList wb_CSSRuleList;
+typedef struct wb_CSSKeyframeRule wb_CSSKeyframeRule;

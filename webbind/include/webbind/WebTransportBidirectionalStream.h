@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WebTransportReceiveStream;
-class WebTransportSendStream;
+typedef struct wb_WebTransportReceiveStream wb_WebTransportReceiveStream;
+typedef struct wb_WebTransportSendStream wb_WebTransportSendStream;

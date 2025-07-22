@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WorkletAnimationEffect;
+typedef struct wb_WorkletAnimationEffect wb_WorkletAnimationEffect;

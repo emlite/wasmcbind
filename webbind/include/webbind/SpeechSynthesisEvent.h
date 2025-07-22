@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class SpeechSynthesisUtterance;
+typedef struct wb_SpeechSynthesisUtterance wb_SpeechSynthesisUtterance;

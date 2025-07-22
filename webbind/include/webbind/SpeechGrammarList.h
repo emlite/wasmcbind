@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SpeechGrammar;
+typedef struct wb_SpeechGrammar wb_SpeechGrammar;

@@ -5,8 +5,8 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class MediaStreamTrack;
-class MediaTrackCapabilities;
-class MediaTrackConstraints;
-class MediaTrackSettings;
-class CaptureHandle;
+typedef struct wb_MediaStreamTrack wb_MediaStreamTrack;
+typedef struct wb_MediaTrackCapabilities wb_MediaTrackCapabilities;
+typedef struct wb_MediaTrackConstraints wb_MediaTrackConstraints;
+typedef struct wb_MediaTrackSettings wb_MediaTrackSettings;
+typedef struct wb_CaptureHandle wb_CaptureHandle;

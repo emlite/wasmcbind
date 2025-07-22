@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class CSSStyleSheet;
+typedef struct wb_CSSStyleSheet wb_CSSStyleSheet;

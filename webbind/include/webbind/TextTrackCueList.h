@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class TextTrackCue;
+typedef struct wb_TextTrackCue wb_TextTrackCue;

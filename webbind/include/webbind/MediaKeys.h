@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class MediaKeySession;
-class MediaKeysPolicy;
+typedef struct wb_MediaKeySession wb_MediaKeySession;
+typedef struct wb_MediaKeysPolicy wb_MediaKeysPolicy;

@@ -4,7 +4,7 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ContactInfo;
-class ContactsSelectOptions;
-class ContactAddress;
-class Blob;
+typedef struct wb_ContactInfo wb_ContactInfo;
+typedef struct wb_ContactsSelectOptions wb_ContactsSelectOptions;
+typedef struct wb_ContactAddress wb_ContactAddress;
+typedef struct wb_Blob wb_Blob;

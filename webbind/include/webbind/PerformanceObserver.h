@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class PerformanceObserverInit;
+typedef struct wb_PerformanceObserverInit wb_PerformanceObserverInit;

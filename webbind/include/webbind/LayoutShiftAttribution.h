@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Node;
-class DOMRectReadOnly;
+typedef struct wb_Node wb_Node;
+typedef struct wb_DOMRectReadOnly wb_DOMRectReadOnly;

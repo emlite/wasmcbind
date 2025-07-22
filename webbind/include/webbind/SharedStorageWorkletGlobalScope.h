@@ -5,7 +5,7 @@
 #include "WorkletGlobalScope.h"
 #include "enums.h"
 
-class SharedStorage;
-class PrivateAggregation;
-class StorageInterestGroup;
-class SharedStorageWorkletNavigator;
+typedef struct wb_SharedStorage wb_SharedStorage;
+typedef struct wb_PrivateAggregation wb_PrivateAggregation;
+typedef struct wb_StorageInterestGroup wb_StorageInterestGroup;
+typedef struct wb_SharedStorageWorkletNavigator wb_SharedStorageWorkletNavigator;

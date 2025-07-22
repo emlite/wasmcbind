@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class AnimationTimeline;
+typedef struct wb_AnimationTimeline wb_AnimationTimeline;

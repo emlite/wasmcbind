@@ -6,5 +6,5 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-class CSSStyleDeclaration;
-class DOMStringMap;
+typedef struct wb_CSSStyleDeclaration wb_CSSStyleDeclaration;
+typedef struct wb_DOMStringMap wb_DOMStringMap;

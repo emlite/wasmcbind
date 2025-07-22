@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class HTMLElement;
+typedef struct wb_HTMLElement wb_HTMLElement;

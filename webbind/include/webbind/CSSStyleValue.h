@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class CSSStyleValue;
+typedef struct wb_CSSStyleValue wb_CSSStyleValue;

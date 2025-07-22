@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class BackgroundFetchRecord;
-class CacheQueryOptions;
+typedef struct wb_BackgroundFetchRecord wb_BackgroundFetchRecord;
+typedef struct wb_CacheQueryOptions wb_CacheQueryOptions;

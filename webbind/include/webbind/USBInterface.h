@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class USBAlternateInterface;
-class USBConfiguration;
+typedef struct wb_USBAlternateInterface wb_USBAlternateInterface;
+typedef struct wb_USBConfiguration wb_USBConfiguration;

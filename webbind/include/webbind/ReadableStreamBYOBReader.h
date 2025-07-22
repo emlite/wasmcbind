@@ -5,4 +5,4 @@
 #include "ReadableStreamDefaultReader.h"
 #include "enums.h"
 
-class ReadableStreamBYOBReaderReadOptions;
+typedef struct wb_ReadableStreamBYOBReaderReadOptions wb_ReadableStreamBYOBReaderReadOptions;

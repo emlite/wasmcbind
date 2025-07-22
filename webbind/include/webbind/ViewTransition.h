@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ViewTransitionTypeSet;
+typedef struct wb_ViewTransitionTypeSet wb_ViewTransitionTypeSet;

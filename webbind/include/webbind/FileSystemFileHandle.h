@@ -5,7 +5,7 @@
 #include "FileSystemHandle.h"
 #include "enums.h"
 
-class File;
-class FileSystemWritableFileStream;
-class FileSystemCreateWritableOptions;
-class FileSystemSyncAccessHandle;
+typedef struct wb_File wb_File;
+typedef struct wb_FileSystemWritableFileStream wb_FileSystemWritableFileStream;
+typedef struct wb_FileSystemCreateWritableOptions wb_FileSystemCreateWritableOptions;
+typedef struct wb_FileSystemSyncAccessHandle wb_FileSystemSyncAccessHandle;

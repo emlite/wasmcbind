@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class MediaMetadata;
-class MediaPositionState;
+typedef struct wb_MediaMetadata wb_MediaMetadata;
+typedef struct wb_MediaPositionState wb_MediaPositionState;

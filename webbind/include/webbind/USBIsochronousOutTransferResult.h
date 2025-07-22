@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class USBIsochronousOutTransferPacket;
+typedef struct wb_USBIsochronousOutTransferPacket wb_USBIsochronousOutTransferPacket;

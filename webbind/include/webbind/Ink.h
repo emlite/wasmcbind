@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class DelegatedInkTrailPresenter;
-class InkPresenterParam;
-class Element;
+typedef struct wb_DelegatedInkTrailPresenter wb_DelegatedInkTrailPresenter;
+typedef struct wb_InkPresenterParam wb_InkPresenterParam;
+typedef struct wb_Element wb_Element;

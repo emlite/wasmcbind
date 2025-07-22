@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Plugin;
+typedef struct wb_Plugin wb_Plugin;

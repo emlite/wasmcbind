@@ -5,5 +5,5 @@
 #include "SVGTextContentElement.h"
 #include "enums.h"
 
-class SVGAnimatedLengthList;
-class SVGAnimatedNumberList;
+typedef struct wb_SVGAnimatedLengthList wb_SVGAnimatedLengthList;
+typedef struct wb_SVGAnimatedNumberList wb_SVGAnimatedNumberList;

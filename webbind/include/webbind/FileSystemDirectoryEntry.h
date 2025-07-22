@@ -5,5 +5,5 @@
 #include "FileSystemEntry.h"
 #include "enums.h"
 
-class FileSystemDirectoryReader;
-class FileSystemFlags;
+typedef struct wb_FileSystemDirectoryReader wb_FileSystemDirectoryReader;
+typedef struct wb_FileSystemFlags wb_FileSystemFlags;

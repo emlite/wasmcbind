@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class DetectedBarcode;
-class DOMRectReadOnly;
+typedef struct wb_DetectedBarcode wb_DetectedBarcode;
+typedef struct wb_DOMRectReadOnly wb_DOMRectReadOnly;

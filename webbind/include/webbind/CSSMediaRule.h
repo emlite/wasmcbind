@@ -5,4 +5,4 @@
 #include "CSSConditionRule.h"
 #include "enums.h"
 
-class MediaList;
+typedef struct wb_MediaList wb_MediaList;

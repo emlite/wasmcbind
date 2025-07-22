@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Element;
-class PointerEvent;
-class InkTrailStyle;
+typedef struct wb_Element wb_Element;
+typedef struct wb_PointerEvent wb_PointerEvent;
+typedef struct wb_InkTrailStyle wb_InkTrailStyle;

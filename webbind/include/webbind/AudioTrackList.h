@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class AudioTrack;
+typedef struct wb_AudioTrack wb_AudioTrack;

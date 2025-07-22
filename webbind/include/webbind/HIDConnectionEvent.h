@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class HIDDevice;
+typedef struct wb_HIDDevice wb_HIDDevice;

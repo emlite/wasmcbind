@@ -5,4 +5,4 @@
 #include "UIEvent.h"
 #include "enums.h"
 
-class EventTarget;
+typedef struct wb_EventTarget wb_EventTarget;

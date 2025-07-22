@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ChildBreakToken;
+typedef struct wb_ChildBreakToken wb_ChildBreakToken;

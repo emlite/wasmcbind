@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WebGLTimerQueryEXT;
+typedef struct wb_WebGLTimerQueryEXT wb_WebGLTimerQueryEXT;

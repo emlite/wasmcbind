@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class ViewTransition;
+typedef struct wb_ViewTransition wb_ViewTransition;

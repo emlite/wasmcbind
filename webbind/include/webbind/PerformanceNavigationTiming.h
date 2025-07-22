@@ -5,4 +5,4 @@
 #include "PerformanceResourceTiming.h"
 #include "enums.h"
 
-class NotRestoredReasons;
+typedef struct wb_NotRestoredReasons wb_NotRestoredReasons;

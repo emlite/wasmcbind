@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class GPUTextureView;
-class GPUTextureViewDescriptor;
+typedef struct wb_GPUTextureView wb_GPUTextureView;
+typedef struct wb_GPUTextureViewDescriptor wb_GPUTextureViewDescriptor;

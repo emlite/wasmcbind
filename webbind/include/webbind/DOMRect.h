@@ -5,4 +5,4 @@
 #include "DOMRectReadOnly.h"
 #include "enums.h"
 
-class DOMRect;
+typedef struct wb_DOMRect wb_DOMRect;

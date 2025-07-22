@@ -5,7 +5,7 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class BluetoothDevice;
-class RequestDeviceOptions;
-class BluetoothLEScan;
-class BluetoothLEScanOptions;
+typedef struct wb_BluetoothDevice wb_BluetoothDevice;
+typedef struct wb_RequestDeviceOptions wb_RequestDeviceOptions;
+typedef struct wb_BluetoothLEScan wb_BluetoothLEScan;
+typedef struct wb_BluetoothLEScanOptions wb_BluetoothLEScanOptions;

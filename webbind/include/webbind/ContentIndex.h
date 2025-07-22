@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ContentDescription;
+typedef struct wb_ContentDescription wb_ContentDescription;

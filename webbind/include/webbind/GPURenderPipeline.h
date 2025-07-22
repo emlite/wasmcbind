@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class GPUBindGroupLayout;
+typedef struct wb_GPUBindGroupLayout wb_GPUBindGroupLayout;

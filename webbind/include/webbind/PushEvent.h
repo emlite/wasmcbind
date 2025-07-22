@@ -5,4 +5,4 @@
 #include "ExtendableEvent.h"
 #include "enums.h"
 
-class PushMessageData;
+typedef struct wb_PushMessageData wb_PushMessageData;

@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Worker;
+typedef struct wb_Worker wb_Worker;

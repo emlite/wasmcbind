@@ -5,4 +5,4 @@
 #include "SharedStorageModifierMethod.h"
 #include "enums.h"
 
-class SharedStorageSetMethodOptions;
+typedef struct wb_SharedStorageSetMethodOptions wb_SharedStorageSetMethodOptions;

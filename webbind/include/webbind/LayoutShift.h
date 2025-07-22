@@ -5,4 +5,4 @@
 #include "PerformanceEntry.h"
 #include "enums.h"
 
-class LayoutShiftAttribution;
+typedef struct wb_LayoutShiftAttribution wb_LayoutShiftAttribution;

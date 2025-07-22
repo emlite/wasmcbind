@@ -5,4 +5,4 @@
 #include "Client.h"
 #include "enums.h"
 
-class WindowClient;
+typedef struct wb_WindowClient wb_WindowClient;

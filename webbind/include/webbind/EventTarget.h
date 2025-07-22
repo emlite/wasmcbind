@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Event;
-class Observable;
-class ObservableEventListenerOptions;
+typedef struct wb_Event wb_Event;
+typedef struct wb_Observable wb_Observable;
+typedef struct wb_ObservableEventListenerOptions wb_ObservableEventListenerOptions;

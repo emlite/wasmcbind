@@ -5,6 +5,6 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class ContactAddress;
-class PaymentCompleteDetails;
-class PaymentValidationErrors;
+typedef struct wb_ContactAddress wb_ContactAddress;
+typedef struct wb_PaymentCompleteDetails wb_PaymentCompleteDetails;
+typedef struct wb_PaymentValidationErrors wb_PaymentValidationErrors;

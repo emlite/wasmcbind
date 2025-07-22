@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class CSSNumericValue;
+typedef struct wb_CSSNumericValue wb_CSSNumericValue;

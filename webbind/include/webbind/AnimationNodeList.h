@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class AnimationEffect;
+typedef struct wb_AnimationEffect wb_AnimationEffect;

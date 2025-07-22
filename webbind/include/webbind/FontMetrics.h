@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Baseline;
-class Font;
+typedef struct wb_Baseline wb_Baseline;
+typedef struct wb_Font wb_Font;

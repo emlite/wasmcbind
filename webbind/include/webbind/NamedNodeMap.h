@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Attr;
+typedef struct wb_Attr wb_Attr;

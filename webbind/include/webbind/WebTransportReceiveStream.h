@@ -5,4 +5,4 @@
 #include "ReadableStream.h"
 #include "enums.h"
 
-class WebTransportReceiveStreamStats;
+typedef struct wb_WebTransportReceiveStreamStats wb_WebTransportReceiveStreamStats;

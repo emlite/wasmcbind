@@ -5,4 +5,4 @@
 #include "ExtendableEvent.h"
 #include "enums.h"
 
-class BackgroundFetchRegistration;
+typedef struct wb_BackgroundFetchRegistration wb_BackgroundFetchRegistration;

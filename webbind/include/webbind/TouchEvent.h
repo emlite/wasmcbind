@@ -5,4 +5,4 @@
 #include "UIEvent.h"
 #include "enums.h"
 
-class TouchList;
+typedef struct wb_TouchList wb_TouchList;

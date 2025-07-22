@@ -5,10 +5,10 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class HTMLFormElement;
-class FileList;
-class HTMLDataListElement;
-class ValidityState;
-class NodeList;
-class FileSystemEntry;
-class Element;
+typedef struct wb_HTMLFormElement wb_HTMLFormElement;
+typedef struct wb_FileList wb_FileList;
+typedef struct wb_HTMLDataListElement wb_HTMLDataListElement;
+typedef struct wb_ValidityState wb_ValidityState;
+typedef struct wb_NodeList wb_NodeList;
+typedef struct wb_FileSystemEntry wb_FileSystemEntry;
+typedef struct wb_Element wb_Element;

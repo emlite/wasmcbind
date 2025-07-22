@@ -5,7 +5,7 @@
 #include "CSSStyleValue.h"
 #include "enums.h"
 
-class CSSNumericValue;
-class CSSUnitValue;
-class CSSMathSum;
-class CSSNumericType;
+typedef struct wb_CSSNumericValue wb_CSSNumericValue;
+typedef struct wb_CSSUnitValue wb_CSSUnitValue;
+typedef struct wb_CSSMathSum wb_CSSMathSum;
+typedef struct wb_CSSNumericType wb_CSSNumericType;

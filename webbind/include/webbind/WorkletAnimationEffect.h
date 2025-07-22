@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class EffectTiming;
-class ComputedEffectTiming;
+typedef struct wb_EffectTiming wb_EffectTiming;
+typedef struct wb_ComputedEffectTiming wb_ComputedEffectTiming;

@@ -5,8 +5,8 @@
 #include "FileSystemHandle.h"
 #include "enums.h"
 
-class FileSystemFileHandle;
-class FileSystemGetFileOptions;
-class FileSystemDirectoryHandle;
-class FileSystemGetDirectoryOptions;
-class FileSystemRemoveOptions;
+typedef struct wb_FileSystemFileHandle wb_FileSystemFileHandle;
+typedef struct wb_FileSystemGetFileOptions wb_FileSystemGetFileOptions;
+typedef struct wb_FileSystemDirectoryHandle wb_FileSystemDirectoryHandle;
+typedef struct wb_FileSystemGetDirectoryOptions wb_FileSystemGetDirectoryOptions;
+typedef struct wb_FileSystemRemoveOptions wb_FileSystemRemoveOptions;

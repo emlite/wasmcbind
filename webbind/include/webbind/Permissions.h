@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class PermissionStatus;
+typedef struct wb_PermissionStatus wb_PermissionStatus;

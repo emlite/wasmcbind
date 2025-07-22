@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class LayoutChild;
+typedef struct wb_LayoutChild wb_LayoutChild;

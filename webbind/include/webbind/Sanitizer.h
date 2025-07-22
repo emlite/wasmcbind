@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SanitizerConfig;
+typedef struct wb_SanitizerConfig wb_SanitizerConfig;

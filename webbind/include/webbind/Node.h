@@ -5,7 +5,7 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class Document;
-class GetRootNodeOptions;
-class Element;
-class NodeList;
+typedef struct wb_Document wb_Document;
+typedef struct wb_GetRootNodeOptions wb_GetRootNodeOptions;
+typedef struct wb_Element wb_Element;
+typedef struct wb_NodeList wb_NodeList;

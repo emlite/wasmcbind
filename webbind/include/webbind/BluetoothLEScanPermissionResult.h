@@ -5,4 +5,4 @@
 #include "PermissionStatus.h"
 #include "enums.h"
 
-class BluetoothLEScan;
+typedef struct wb_BluetoothLEScan wb_BluetoothLEScan;

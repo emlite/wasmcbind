@@ -5,4 +5,4 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-class CSSFunctionDescriptors;
+typedef struct wb_CSSFunctionDescriptors wb_CSSFunctionDescriptors;

@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class TextFormat;
+typedef struct wb_TextFormat wb_TextFormat;

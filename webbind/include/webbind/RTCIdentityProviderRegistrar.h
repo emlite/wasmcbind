@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class RTCIdentityProvider;
+typedef struct wb_RTCIdentityProvider wb_RTCIdentityProvider;

@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class ReadableStream;
-class WritableStream;
+typedef struct wb_ReadableStream wb_ReadableStream;
+typedef struct wb_WritableStream wb_WritableStream;

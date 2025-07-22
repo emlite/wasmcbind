@@ -5,7 +5,7 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class DOMStringList;
-class IDBDatabase;
-class DOMException;
-class IDBObjectStore;
+typedef struct wb_DOMStringList wb_DOMStringList;
+typedef struct wb_IDBDatabase wb_IDBDatabase;
+typedef struct wb_DOMException wb_DOMException;
+typedef struct wb_IDBObjectStore wb_IDBObjectStore;

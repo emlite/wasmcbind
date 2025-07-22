@@ -5,4 +5,4 @@
 #include "Credential.h"
 #include "enums.h"
 
-class IdentityCredentialDisconnectOptions;
+typedef struct wb_IdentityCredentialDisconnectOptions wb_IdentityCredentialDisconnectOptions;

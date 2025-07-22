@@ -5,4 +5,4 @@
 #include "CSSMathValue.h"
 #include "enums.h"
 
-class CSSNumericArray;
+typedef struct wb_CSSNumericArray wb_CSSNumericArray;

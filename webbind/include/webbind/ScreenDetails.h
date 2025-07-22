@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class ScreenDetailed;
+typedef struct wb_ScreenDetailed wb_ScreenDetailed;

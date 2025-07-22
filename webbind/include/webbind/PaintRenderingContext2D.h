@@ -5,7 +5,7 @@
 #include "SVGSVGElement.h"
 #include "enums.h"
 
-class DOMMatrix;
-class CanvasGradient;
-class CanvasPattern;
+typedef struct wb_DOMMatrix wb_DOMMatrix;
+typedef struct wb_CanvasGradient wb_CanvasGradient;
+typedef struct wb_CanvasPattern wb_CanvasPattern;
 class Path2D;

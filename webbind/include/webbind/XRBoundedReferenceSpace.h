@@ -5,4 +5,4 @@
 #include "XRReferenceSpace.h"
 #include "enums.h"
 
-class DOMPointReadOnly;
+typedef struct wb_DOMPointReadOnly wb_DOMPointReadOnly;

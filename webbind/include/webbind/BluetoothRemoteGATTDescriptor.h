@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class BluetoothRemoteGATTCharacteristic;
+typedef struct wb_BluetoothRemoteGATTCharacteristic wb_BluetoothRemoteGATTCharacteristic;

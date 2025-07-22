@@ -5,4 +5,4 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-class CSSFontFeatureValuesMap;
+typedef struct wb_CSSFontFeatureValuesMap wb_CSSFontFeatureValuesMap;

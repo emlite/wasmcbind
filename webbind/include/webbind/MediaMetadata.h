@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ChapterInformation;
+typedef struct wb_ChapterInformation wb_ChapterInformation;

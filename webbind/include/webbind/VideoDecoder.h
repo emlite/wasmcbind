@@ -5,7 +5,7 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class VideoDecoderConfig;
-class EncodedVideoChunk;
-class VideoDecoderSupport;
-class VideoColorSpaceInit;
+typedef struct wb_VideoDecoderConfig wb_VideoDecoderConfig;
+typedef struct wb_EncodedVideoChunk wb_EncodedVideoChunk;
+typedef struct wb_VideoDecoderSupport wb_VideoDecoderSupport;
+typedef struct wb_VideoColorSpaceInit wb_VideoColorSpaceInit;

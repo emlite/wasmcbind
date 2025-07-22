@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class FormData;
+typedef struct wb_FormData wb_FormData;

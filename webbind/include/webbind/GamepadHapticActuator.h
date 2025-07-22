@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class GamepadEffectParameters;
+typedef struct wb_GamepadEffectParameters wb_GamepadEffectParameters;

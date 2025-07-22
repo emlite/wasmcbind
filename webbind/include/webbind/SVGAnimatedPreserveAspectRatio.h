@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SVGPreserveAspectRatio;
+typedef struct wb_SVGPreserveAspectRatio wb_SVGPreserveAspectRatio;

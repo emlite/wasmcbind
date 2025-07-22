@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class Element;
-class Node;
+typedef struct wb_Element wb_Element;
+typedef struct wb_Node wb_Node;

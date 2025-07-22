@@ -5,4 +5,4 @@
 #include "MouseEvent.h"
 #include "enums.h"
 
-class PointerEvent;
+typedef struct wb_PointerEvent wb_PointerEvent;

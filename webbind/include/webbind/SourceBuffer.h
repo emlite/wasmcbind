@@ -5,7 +5,7 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class TimeRanges;
-class AudioTrackList;
-class VideoTrackList;
-class TextTrackList;
+typedef struct wb_TimeRanges wb_TimeRanges;
+typedef struct wb_AudioTrackList wb_AudioTrackList;
+typedef struct wb_VideoTrackList wb_VideoTrackList;
+typedef struct wb_TextTrackList wb_TextTrackList;

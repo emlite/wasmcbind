@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class ProfilerTrace;
+typedef struct wb_ProfilerTrace wb_ProfilerTrace;

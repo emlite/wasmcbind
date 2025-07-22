@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class XRPose;
-class XRSpace;
-class XRAnchor;
+typedef struct wb_XRPose wb_XRPose;
+typedef struct wb_XRSpace wb_XRSpace;
+typedef struct wb_XRAnchor wb_XRAnchor;

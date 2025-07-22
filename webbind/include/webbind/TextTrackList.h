@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class TextTrack;
+typedef struct wb_TextTrack wb_TextTrack;

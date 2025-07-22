@@ -6,7 +6,7 @@
 #include "SVGGeometryElement.h"
 #include "enums.h"
 
-class SVGAnimatedLength;
-class SVGAnimatedEnumeration;
-class DOMPoint;
-class DOMRect;
+typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
+typedef struct wb_DOMPoint wb_DOMPoint;
+typedef struct wb_DOMRect wb_DOMRect;

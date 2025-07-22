@@ -6,8 +6,8 @@
 #include "SVGGeometryElement.h"
 #include "enums.h"
 
-class Element;
-class CSSPseudoElement;
-class DOMQuad;
-class DOMRectReadOnly;
-class DOMPoint;
+typedef struct wb_Element wb_Element;
+typedef struct wb_CSSPseudoElement wb_CSSPseudoElement;
+typedef struct wb_DOMQuad wb_DOMQuad;
+typedef struct wb_DOMRectReadOnly wb_DOMRectReadOnly;
+typedef struct wb_DOMPoint wb_DOMPoint;

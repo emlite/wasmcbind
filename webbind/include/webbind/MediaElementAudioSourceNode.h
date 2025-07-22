@@ -5,5 +5,5 @@
 #include "AudioNode.h"
 #include "enums.h"
 
-class HTMLMediaElement;
-class AudioContext;
+typedef struct wb_HTMLMediaElement wb_HTMLMediaElement;
+typedef struct wb_AudioContext wb_AudioContext;

@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class FileSystemHandle;
+typedef struct wb_FileSystemHandle wb_FileSystemHandle;

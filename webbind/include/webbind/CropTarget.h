@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class CropTarget;
-class Element;
+typedef struct wb_CropTarget wb_CropTarget;
+typedef struct wb_Element wb_Element;

@@ -5,5 +5,5 @@
 #include "CSSTransformComponent.h"
 #include "enums.h"
 
-class DOMMatrix;
-class DOMMatrixReadOnly;
+typedef struct wb_DOMMatrix wb_DOMMatrix;
+typedef struct wb_DOMMatrixReadOnly wb_DOMMatrixReadOnly;

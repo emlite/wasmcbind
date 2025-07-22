@@ -5,4 +5,4 @@
 #include "ExtendableEvent.h"
 #include "enums.h"
 
-class PushSubscription;
+typedef struct wb_PushSubscription wb_PushSubscription;

@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class NavigationHistoryEntry;
+typedef struct wb_NavigationHistoryEntry wb_NavigationHistoryEntry;

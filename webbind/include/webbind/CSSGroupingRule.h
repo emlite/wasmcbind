@@ -5,4 +5,4 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-class CSSRuleList;
+typedef struct wb_CSSRuleList wb_CSSRuleList;

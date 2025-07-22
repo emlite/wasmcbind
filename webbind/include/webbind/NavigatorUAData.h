@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class NavigatorUABrandVersion;
-class UADataValues;
-class UALowEntropyJSON;
+typedef struct wb_NavigatorUABrandVersion wb_NavigatorUABrandVersion;
+typedef struct wb_UADataValues wb_UADataValues;
+typedef struct wb_UALowEntropyJSON wb_UALowEntropyJSON;

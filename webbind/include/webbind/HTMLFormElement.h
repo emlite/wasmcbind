@@ -5,5 +5,5 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class DOMTokenList;
-class HTMLFormControlsCollection;
+typedef struct wb_DOMTokenList wb_DOMTokenList;
+typedef struct wb_HTMLFormControlsCollection wb_HTMLFormControlsCollection;

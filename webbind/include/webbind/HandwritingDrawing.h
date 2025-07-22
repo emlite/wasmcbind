@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class HandwritingStroke;
-class HandwritingPrediction;
+typedef struct wb_HandwritingStroke wb_HandwritingStroke;
+typedef struct wb_HandwritingPrediction wb_HandwritingPrediction;

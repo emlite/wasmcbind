@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class PromptResponseObject;
+typedef struct wb_PromptResponseObject wb_PromptResponseObject;

@@ -5,5 +5,5 @@
 #include "XRCompositionLayer.h"
 #include "enums.h"
 
-class XRSpace;
-class XRRigidTransform;
+typedef struct wb_XRSpace wb_XRSpace;
+typedef struct wb_XRRigidTransform wb_XRRigidTransform;

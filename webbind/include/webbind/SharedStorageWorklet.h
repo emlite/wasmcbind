@@ -5,5 +5,5 @@
 #include "Worklet.h"
 #include "enums.h"
 
-class SharedStorageUrlWithMetadata;
-class SharedStorageRunOperationMethodOptions;
+typedef struct wb_SharedStorageUrlWithMetadata wb_SharedStorageUrlWithMetadata;
+typedef struct wb_SharedStorageRunOperationMethodOptions wb_SharedStorageRunOperationMethodOptions;

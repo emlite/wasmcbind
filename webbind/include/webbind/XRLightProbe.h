@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class XRSpace;
+typedef struct wb_XRSpace wb_XRSpace;

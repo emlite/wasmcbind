@@ -4,9 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Translator;
-class TranslatorCreateOptions;
-class TranslatorCreateCoreOptions;
-class TranslatorTranslateOptions;
-class ReadableStream;
-class AbortSignal;
+typedef struct wb_Translator wb_Translator;
+typedef struct wb_TranslatorCreateOptions wb_TranslatorCreateOptions;
+typedef struct wb_TranslatorCreateCoreOptions wb_TranslatorCreateCoreOptions;
+typedef struct wb_TranslatorTranslateOptions wb_TranslatorTranslateOptions;
+typedef struct wb_ReadableStream wb_ReadableStream;
+typedef struct wb_AbortSignal wb_AbortSignal;

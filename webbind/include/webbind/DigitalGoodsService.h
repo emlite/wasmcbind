@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ItemDetails;
-class PurchaseDetails;
+typedef struct wb_ItemDetails wb_ItemDetails;
+typedef struct wb_PurchaseDetails wb_PurchaseDetails;

@@ -5,4 +5,4 @@
 #include "MouseEvent.h"
 #include "enums.h"
 
-class DataTransfer;
+typedef struct wb_DataTransfer wb_DataTransfer;

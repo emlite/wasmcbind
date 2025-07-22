@@ -5,8 +5,8 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class RTCIceCandidate;
-class RTCIceCandidatePair;
-class RTCIceParameters;
-class RTCIceGatherOptions;
-class RTCIceCandidateInit;
+typedef struct wb_RTCIceCandidate wb_RTCIceCandidate;
+typedef struct wb_RTCIceCandidatePair wb_RTCIceCandidatePair;
+typedef struct wb_RTCIceParameters wb_RTCIceParameters;
+typedef struct wb_RTCIceGatherOptions wb_RTCIceGatherOptions;
+typedef struct wb_RTCIceCandidateInit wb_RTCIceCandidateInit;

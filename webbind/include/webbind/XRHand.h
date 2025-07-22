@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class XRJointSpace;
+typedef struct wb_XRJointSpace wb_XRJointSpace;

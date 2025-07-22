@@ -5,6 +5,6 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class Node;
-class AssignedNodesOptions;
-class Element;
+typedef struct wb_Node wb_Node;
+typedef struct wb_AssignedNodesOptions wb_AssignedNodesOptions;
+typedef struct wb_Element wb_Element;

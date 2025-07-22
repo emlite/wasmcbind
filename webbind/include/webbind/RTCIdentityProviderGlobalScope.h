@@ -5,4 +5,4 @@
 #include "WorkerGlobalScope.h"
 #include "enums.h"
 
-class RTCIdentityProviderRegistrar;
+typedef struct wb_RTCIdentityProviderRegistrar wb_RTCIdentityProviderRegistrar;

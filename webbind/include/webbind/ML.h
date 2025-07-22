@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class MLContext;
-class GPUDevice;
+typedef struct wb_MLContext wb_MLContext;
+typedef struct wb_GPUDevice wb_GPUDevice;

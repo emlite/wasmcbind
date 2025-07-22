@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SVGAngle;
+typedef struct wb_SVGAngle wb_SVGAngle;

@@ -5,6 +5,6 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class CryptoKey;
-class ReadableStream;
-class WritableStream;
+typedef struct wb_CryptoKey wb_CryptoKey;
+typedef struct wb_ReadableStream wb_ReadableStream;
+typedef struct wb_WritableStream wb_WritableStream;

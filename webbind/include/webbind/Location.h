@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class DOMStringList;
+typedef struct wb_DOMStringList wb_DOMStringList;

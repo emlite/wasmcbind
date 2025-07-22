@@ -5,4 +5,4 @@
 #include "PerformanceEntry.h"
 #include "enums.h"
 
-class PerformanceServerTiming;
+typedef struct wb_PerformanceServerTiming wb_PerformanceServerTiming;

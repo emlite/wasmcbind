@@ -5,5 +5,5 @@
 #include "PerformanceEntry.h"
 #include "enums.h"
 
-class DOMRectReadOnly;
-class Element;
+typedef struct wb_DOMRectReadOnly wb_DOMRectReadOnly;
+typedef struct wb_Element wb_Element;

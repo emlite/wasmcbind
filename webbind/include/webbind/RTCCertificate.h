@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class RTCDtlsFingerprint;
+typedef struct wb_RTCDtlsFingerprint wb_RTCDtlsFingerprint;

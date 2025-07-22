@@ -5,5 +5,5 @@
 #include "CSSStyleValue.h"
 #include "enums.h"
 
-class CSSTransformComponent;
-class DOMMatrix;
+typedef struct wb_CSSTransformComponent wb_CSSTransformComponent;
+typedef struct wb_DOMMatrix wb_DOMMatrix;

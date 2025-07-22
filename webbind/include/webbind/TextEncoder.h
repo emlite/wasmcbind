@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class TextEncoderEncodeIntoResult;
+typedef struct wb_TextEncoderEncodeIntoResult wb_TextEncoderEncodeIntoResult;

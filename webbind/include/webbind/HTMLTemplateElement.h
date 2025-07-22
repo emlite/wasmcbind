@@ -5,4 +5,4 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class DocumentFragment;
+typedef struct wb_DocumentFragment wb_DocumentFragment;

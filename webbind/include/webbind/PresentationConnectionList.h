@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class PresentationConnection;
+typedef struct wb_PresentationConnection wb_PresentationConnection;

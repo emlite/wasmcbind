@@ -5,6 +5,6 @@
 #include "SVGGeometryElement.h"
 #include "enums.h"
 
-class DOMPointReadOnly;
-class DOMPoint;
-class DOMMatrixInit;
+typedef struct wb_DOMPointReadOnly wb_DOMPointReadOnly;
+typedef struct wb_DOMPoint wb_DOMPoint;
+typedef struct wb_DOMMatrixInit wb_DOMMatrixInit;

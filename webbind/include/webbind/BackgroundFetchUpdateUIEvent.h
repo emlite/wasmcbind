@@ -5,4 +5,4 @@
 #include "BackgroundFetchEvent.h"
 #include "enums.h"
 
-class BackgroundFetchUIOptions;
+typedef struct wb_BackgroundFetchUIOptions wb_BackgroundFetchUIOptions;

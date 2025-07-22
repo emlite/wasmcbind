@@ -5,6 +5,6 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class BluetoothRemoteGATTServer;
-class WatchAdvertisementsOptions;
-class AbortSignal;
+typedef struct wb_BluetoothRemoteGATTServer wb_BluetoothRemoteGATTServer;
+typedef struct wb_WatchAdvertisementsOptions wb_WatchAdvertisementsOptions;
+typedef struct wb_AbortSignal wb_AbortSignal;

@@ -5,5 +5,5 @@
 #include "XRSpace.h"
 #include "enums.h"
 
-class XRReferenceSpace;
-class XRRigidTransform;
+typedef struct wb_XRReferenceSpace wb_XRReferenceSpace;
+typedef struct wb_XRRigidTransform wb_XRRigidTransform;

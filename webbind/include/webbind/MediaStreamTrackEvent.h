@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class MediaStreamTrack;
+typedef struct wb_MediaStreamTrack wb_MediaStreamTrack;

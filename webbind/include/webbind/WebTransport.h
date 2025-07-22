@@ -4,11 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WebTransportConnectionStats;
-class WebTransportCloseInfo;
-class WebTransportDatagramDuplexStream;
-class WebTransportBidirectionalStream;
-class WebTransportSendStreamOptions;
-class ReadableStream;
-class WebTransportSendStream;
-class WebTransportSendGroup;
+typedef struct wb_WebTransportConnectionStats wb_WebTransportConnectionStats;
+typedef struct wb_WebTransportCloseInfo wb_WebTransportCloseInfo;
+typedef struct wb_WebTransportDatagramDuplexStream wb_WebTransportDatagramDuplexStream;
+typedef struct wb_WebTransportBidirectionalStream wb_WebTransportBidirectionalStream;
+typedef struct wb_WebTransportSendStreamOptions wb_WebTransportSendStreamOptions;
+typedef struct wb_ReadableStream wb_ReadableStream;
+typedef struct wb_WebTransportSendStream wb_WebTransportSendStream;
+typedef struct wb_WebTransportSendGroup wb_WebTransportSendGroup;

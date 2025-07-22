@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class IsInputPendingOptions;
+typedef struct wb_IsInputPendingOptions wb_IsInputPendingOptions;

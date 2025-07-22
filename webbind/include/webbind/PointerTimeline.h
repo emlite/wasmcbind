@@ -5,4 +5,4 @@
 #include "AnimationTimeline.h"
 #include "enums.h"
 
-class Element;
+typedef struct wb_Element wb_Element;

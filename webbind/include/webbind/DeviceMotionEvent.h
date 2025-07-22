@@ -5,5 +5,5 @@
 #include "Event.h"
 #include "enums.h"
 
-class DeviceMotionEventAcceleration;
-class DeviceMotionEventRotationRate;
+typedef struct wb_DeviceMotionEventAcceleration wb_DeviceMotionEventAcceleration;
+typedef struct wb_DeviceMotionEventRotationRate wb_DeviceMotionEventRotationRate;

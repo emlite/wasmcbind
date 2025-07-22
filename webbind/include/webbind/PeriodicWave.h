@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class BaseAudioContext;
+typedef struct wb_BaseAudioContext wb_BaseAudioContext;

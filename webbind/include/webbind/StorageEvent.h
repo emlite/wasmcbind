@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class Storage;
+typedef struct wb_Storage wb_Storage;

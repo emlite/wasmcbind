@@ -5,4 +5,4 @@
 #include "PermissionStatus.h"
 #include "enums.h"
 
-class BluetoothDevice;
+typedef struct wb_BluetoothDevice wb_BluetoothDevice;

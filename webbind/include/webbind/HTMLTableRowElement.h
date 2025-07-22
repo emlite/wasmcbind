@@ -5,5 +5,5 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class HTMLCollection;
-class HTMLTableCellElement;
+typedef struct wb_HTMLCollection wb_HTMLCollection;
+typedef struct wb_HTMLTableCellElement wb_HTMLTableCellElement;

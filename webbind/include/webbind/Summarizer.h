@@ -4,9 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Summarizer;
-class SummarizerCreateOptions;
-class SummarizerCreateCoreOptions;
-class SummarizerSummarizeOptions;
-class ReadableStream;
-class AbortSignal;
+typedef struct wb_Summarizer wb_Summarizer;
+typedef struct wb_SummarizerCreateOptions wb_SummarizerCreateOptions;
+typedef struct wb_SummarizerCreateCoreOptions wb_SummarizerCreateCoreOptions;
+typedef struct wb_SummarizerSummarizeOptions wb_SummarizerSummarizeOptions;
+typedef struct wb_ReadableStream wb_ReadableStream;
+typedef struct wb_AbortSignal wb_AbortSignal;

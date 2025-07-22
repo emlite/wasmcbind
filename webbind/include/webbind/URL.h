@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class URL;
-class URLSearchParams;
+typedef struct wb_URL wb_URL;
+typedef struct wb_URLSearchParams wb_URLSearchParams;

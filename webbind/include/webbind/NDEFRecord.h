@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class NDEFRecord;
+typedef struct wb_NDEFRecord wb_NDEFRecord;

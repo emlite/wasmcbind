@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class DocumentType;
-class XMLDocument;
-class Document;
+typedef struct wb_DocumentType wb_DocumentType;
+typedef struct wb_XMLDocument wb_XMLDocument;
+typedef struct wb_Document wb_Document;

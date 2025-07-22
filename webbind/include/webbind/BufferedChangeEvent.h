@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class TimeRanges;
+typedef struct wb_TimeRanges wb_TimeRanges;

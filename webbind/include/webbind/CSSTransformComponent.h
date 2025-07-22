@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class DOMMatrix;
+typedef struct wb_DOMMatrix wb_DOMMatrix;

@@ -5,5 +5,5 @@
 #include "HTMLMediaElement.h"
 #include "enums.h"
 
-class VideoPlaybackQuality;
-class PictureInPictureWindow;
+typedef struct wb_VideoPlaybackQuality wb_VideoPlaybackQuality;
+typedef struct wb_PictureInPictureWindow wb_PictureInPictureWindow;

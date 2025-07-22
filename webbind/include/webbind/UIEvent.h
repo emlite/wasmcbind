@@ -5,5 +5,5 @@
 #include "Event.h"
 #include "enums.h"
 
-class Window;
-class InputDeviceCapabilities;
+typedef struct wb_Window wb_Window;
+typedef struct wb_InputDeviceCapabilities wb_InputDeviceCapabilities;

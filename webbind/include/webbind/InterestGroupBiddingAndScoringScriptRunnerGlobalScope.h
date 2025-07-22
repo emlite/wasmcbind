@@ -5,5 +5,5 @@
 #include "InterestGroupScriptRunnerGlobalScope.h"
 #include "enums.h"
 
-class ForDebuggingOnly;
-class RealTimeReporting;
+typedef struct wb_ForDebuggingOnly wb_ForDebuggingOnly;
+typedef struct wb_RealTimeReporting wb_RealTimeReporting;

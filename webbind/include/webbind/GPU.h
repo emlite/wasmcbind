@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class GPUAdapter;
-class GPURequestAdapterOptions;
-class WGSLLanguageFeatures;
+typedef struct wb_GPUAdapter wb_GPUAdapter;
+typedef struct wb_GPURequestAdapterOptions wb_GPURequestAdapterOptions;
+typedef struct wb_WGSLLanguageFeatures wb_WGSLLanguageFeatures;

@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class DOMRect;
-class HTMLElement;
+typedef struct wb_DOMRect wb_DOMRect;
+typedef struct wb_HTMLElement wb_HTMLElement;

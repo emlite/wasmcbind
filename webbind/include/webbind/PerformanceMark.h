@@ -5,4 +5,4 @@
 #include "PerformanceEntry.h"
 #include "enums.h"
 
-class PerformanceMarkOptions;
+typedef struct wb_PerformanceMarkOptions wb_PerformanceMarkOptions;

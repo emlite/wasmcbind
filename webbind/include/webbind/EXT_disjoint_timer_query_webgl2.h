@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WebGLQuery;
+typedef struct wb_WebGLQuery wb_WebGLQuery;

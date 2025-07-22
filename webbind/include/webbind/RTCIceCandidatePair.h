@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class RTCIceCandidate;
+typedef struct wb_RTCIceCandidate wb_RTCIceCandidate;

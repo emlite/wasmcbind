@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Node;
-class DocumentFragment;
-class Document;
+typedef struct wb_Node wb_Node;
+typedef struct wb_DocumentFragment wb_DocumentFragment;
+typedef struct wb_Document wb_Document;

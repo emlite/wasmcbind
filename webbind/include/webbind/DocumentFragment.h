@@ -5,6 +5,6 @@
 #include "Node.h"
 #include "enums.h"
 
-class Element;
-class HTMLCollection;
-class NodeList;
+typedef struct wb_Element wb_Element;
+typedef struct wb_HTMLCollection wb_HTMLCollection;
+typedef struct wb_NodeList wb_NodeList;

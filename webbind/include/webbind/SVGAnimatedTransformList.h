@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SVGTransformList;
+typedef struct wb_SVGTransformList wb_SVGTransformList;

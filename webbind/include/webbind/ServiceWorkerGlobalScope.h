@@ -5,7 +5,7 @@
 #include "WorkerGlobalScope.h"
 #include "enums.h"
 
-class Clients;
-class ServiceWorkerRegistration;
-class ServiceWorker;
-class CookieStore;
+typedef struct wb_Clients wb_Clients;
+typedef struct wb_ServiceWorkerRegistration wb_ServiceWorkerRegistration;
+typedef struct wb_ServiceWorker wb_ServiceWorker;
+typedef struct wb_CookieStore wb_CookieStore;

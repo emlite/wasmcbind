@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SourceBuffer;
+typedef struct wb_SourceBuffer wb_SourceBuffer;

@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class FileSystemHandle;
-class FileSystemHandlePermissionDescriptor;
+typedef struct wb_FileSystemHandle wb_FileSystemHandle;
+typedef struct wb_FileSystemHandlePermissionDescriptor wb_FileSystemHandlePermissionDescriptor;

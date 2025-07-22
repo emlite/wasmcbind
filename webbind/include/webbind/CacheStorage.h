@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class MultiCacheQueryOptions;
-class Cache;
+typedef struct wb_MultiCacheQueryOptions wb_MultiCacheQueryOptions;
+typedef struct wb_Cache wb_Cache;

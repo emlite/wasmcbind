@@ -5,6 +5,6 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class AudioEncoderConfig;
-class AudioData;
-class AudioEncoderSupport;
+typedef struct wb_AudioEncoderConfig wb_AudioEncoderConfig;
+typedef struct wb_AudioData wb_AudioData;
+typedef struct wb_AudioEncoderSupport wb_AudioEncoderSupport;

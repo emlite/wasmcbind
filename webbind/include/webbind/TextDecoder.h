@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class TextDecodeOptions;
+typedef struct wb_TextDecodeOptions wb_TextDecodeOptions;

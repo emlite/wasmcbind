@@ -5,6 +5,6 @@
 #include "AudioNode.h"
 #include "enums.h"
 
-class AudioParamMap;
-class MessagePort;
-class BaseAudioContext;
+typedef struct wb_AudioParamMap wb_AudioParamMap;
+typedef struct wb_MessagePort wb_MessagePort;
+typedef struct wb_BaseAudioContext wb_BaseAudioContext;

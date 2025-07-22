@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class IDBKeyRange;
+typedef struct wb_IDBKeyRange wb_IDBKeyRange;

@@ -5,5 +5,5 @@
 #include "AudioScheduledSourceNode.h"
 #include "enums.h"
 
-class AudioBuffer;
-class AudioParam;
+typedef struct wb_AudioBuffer wb_AudioBuffer;
+typedef struct wb_AudioParam wb_AudioParam;

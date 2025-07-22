@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class MediaDeviceInfo;
+typedef struct wb_MediaDeviceInfo wb_MediaDeviceInfo;

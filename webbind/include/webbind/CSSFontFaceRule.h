@@ -5,4 +5,4 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-class CSSFontFaceDescriptors;
+typedef struct wb_CSSFontFaceDescriptors wb_CSSFontFaceDescriptors;

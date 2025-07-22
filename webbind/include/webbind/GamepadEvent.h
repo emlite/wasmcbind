@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class Gamepad;
+typedef struct wb_Gamepad wb_Gamepad;

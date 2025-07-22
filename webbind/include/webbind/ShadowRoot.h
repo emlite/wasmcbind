@@ -6,5 +6,5 @@
 #include "Element.h"
 #include "enums.h"
 
-class Element;
-class Animation;
+typedef struct wb_Element wb_Element;
+typedef struct wb_Animation wb_Animation;

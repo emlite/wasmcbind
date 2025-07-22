@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ReadableStreamBYOBRequest;
+typedef struct wb_ReadableStreamBYOBRequest wb_ReadableStreamBYOBRequest;

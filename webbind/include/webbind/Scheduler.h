@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SchedulerPostTaskOptions;
-class AbortSignal;
+typedef struct wb_SchedulerPostTaskOptions wb_SchedulerPostTaskOptions;
+typedef struct wb_AbortSignal wb_AbortSignal;

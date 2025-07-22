@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class BackgroundSyncOptions;
+typedef struct wb_BackgroundSyncOptions wb_BackgroundSyncOptions;

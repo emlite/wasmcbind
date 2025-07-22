@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ImageBitmap;
+typedef struct wb_ImageBitmap wb_ImageBitmap;

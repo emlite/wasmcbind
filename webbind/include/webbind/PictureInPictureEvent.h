@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class PictureInPictureWindow;
+typedef struct wb_PictureInPictureWindow wb_PictureInPictureWindow;

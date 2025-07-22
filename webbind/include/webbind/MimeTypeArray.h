@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class MimeType;
+typedef struct wb_MimeType wb_MimeType;

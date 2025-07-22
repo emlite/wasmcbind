@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class ClipboardUnsanitizedFormats;
+typedef struct wb_ClipboardUnsanitizedFormats wb_ClipboardUnsanitizedFormats;

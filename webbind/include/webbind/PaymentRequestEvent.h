@@ -5,10 +5,10 @@
 #include "ExtendableEvent.h"
 #include "enums.h"
 
-class PaymentMethodData;
-class PaymentDetailsModifier;
-class PaymentShippingOption;
-class WindowClient;
-class PaymentRequestDetailsUpdate;
-class AddressInit;
-class PaymentHandlerResponse;
+typedef struct wb_PaymentMethodData wb_PaymentMethodData;
+typedef struct wb_PaymentDetailsModifier wb_PaymentDetailsModifier;
+typedef struct wb_PaymentShippingOption wb_PaymentShippingOption;
+typedef struct wb_WindowClient wb_WindowClient;
+typedef struct wb_PaymentRequestDetailsUpdate wb_PaymentRequestDetailsUpdate;
+typedef struct wb_AddressInit wb_AddressInit;
+typedef struct wb_PaymentHandlerResponse wb_PaymentHandlerResponse;

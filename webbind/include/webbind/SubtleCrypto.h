@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class CryptoKey;
+typedef struct wb_CryptoKey wb_CryptoKey;

@@ -5,4 +5,4 @@
 #include "PermissionStatus.h"
 #include "enums.h"
 
-class USBDevice;
+typedef struct wb_USBDevice wb_USBDevice;

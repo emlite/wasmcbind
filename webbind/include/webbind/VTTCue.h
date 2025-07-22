@@ -5,5 +5,5 @@
 #include "TextTrackCue.h"
 #include "enums.h"
 
-class VTTRegion;
-class DocumentFragment;
+typedef struct wb_VTTRegion wb_VTTRegion;
+typedef struct wb_DocumentFragment wb_DocumentFragment;

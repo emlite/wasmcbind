@@ -5,5 +5,5 @@
 #include "Event.h"
 #include "enums.h"
 
-class XRFrame;
-class XRInputSource;
+typedef struct wb_XRFrame wb_XRFrame;
+typedef struct wb_XRInputSource wb_XRInputSource;

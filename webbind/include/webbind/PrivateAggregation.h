@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class PAHistogramContribution;
-class PADebugModeOptions;
+typedef struct wb_PAHistogramContribution wb_PAHistogramContribution;
+typedef struct wb_PADebugModeOptions wb_PADebugModeOptions;

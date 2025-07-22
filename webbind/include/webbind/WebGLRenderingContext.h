@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WebGLUniformLocation;
+typedef struct wb_WebGLUniformLocation wb_WebGLUniformLocation;

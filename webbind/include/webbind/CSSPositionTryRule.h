@@ -5,4 +5,4 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-class CSSPositionTryDescriptors;
+typedef struct wb_CSSPositionTryDescriptors wb_CSSPositionTryDescriptors;

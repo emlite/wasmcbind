@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SubtleCrypto;
+typedef struct wb_SubtleCrypto wb_SubtleCrypto;

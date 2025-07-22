@@ -5,7 +5,7 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class AnimationEffect;
-class AnimationTimeline;
-class Animation;
-class AnimationTrigger;
+typedef struct wb_AnimationEffect wb_AnimationEffect;
+typedef struct wb_AnimationTimeline wb_AnimationTimeline;
+typedef struct wb_Animation wb_Animation;
+typedef struct wb_AnimationTrigger wb_AnimationTrigger;

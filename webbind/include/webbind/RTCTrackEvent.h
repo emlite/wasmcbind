@@ -5,7 +5,7 @@
 #include "Event.h"
 #include "enums.h"
 
-class RTCRtpReceiver;
-class MediaStreamTrack;
-class MediaStream;
-class RTCRtpTransceiver;
+typedef struct wb_RTCRtpReceiver wb_RTCRtpReceiver;
+typedef struct wb_MediaStreamTrack wb_MediaStreamTrack;
+typedef struct wb_MediaStream wb_MediaStream;
+typedef struct wb_RTCRtpTransceiver wb_RTCRtpTransceiver;

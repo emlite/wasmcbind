@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class HTMLPortalElement;
+typedef struct wb_HTMLPortalElement wb_HTMLPortalElement;

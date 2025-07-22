@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class BluetoothLEScanFilter;
+typedef struct wb_BluetoothLEScanFilter wb_BluetoothLEScanFilter;

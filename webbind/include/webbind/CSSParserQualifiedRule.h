@@ -5,4 +5,4 @@
 #include "CSSParserRule.h"
 #include "enums.h"
 
-class CSSParserValue;
+typedef struct wb_CSSParserValue wb_CSSParserValue;

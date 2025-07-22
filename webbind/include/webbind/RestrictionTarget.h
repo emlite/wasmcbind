@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class RestrictionTarget;
-class Element;
+typedef struct wb_RestrictionTarget wb_RestrictionTarget;
+typedef struct wb_Element wb_Element;

@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class XRInputSource;
-class XRHitTestResult;
+typedef struct wb_XRInputSource wb_XRInputSource;
+typedef struct wb_XRHitTestResult wb_XRHitTestResult;

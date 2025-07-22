@@ -5,5 +5,5 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class DOMTokenList;
-class CSSStyleSheet;
+typedef struct wb_DOMTokenList wb_DOMTokenList;
+typedef struct wb_CSSStyleSheet wb_CSSStyleSheet;

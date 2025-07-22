@@ -5,9 +5,9 @@
 #include "RTCRtpSender.h"
 #include "enums.h"
 
-class MediaStreamTrack;
-class RTCDtlsTransport;
-class RTCRtpReceiveParameters;
-class RTCRtpContributingSource;
-class RTCRtpSynchronizationSource;
-class RTCStatsReport;
+typedef struct wb_MediaStreamTrack wb_MediaStreamTrack;
+typedef struct wb_RTCDtlsTransport wb_RTCDtlsTransport;
+typedef struct wb_RTCRtpReceiveParameters wb_RTCRtpReceiveParameters;
+typedef struct wb_RTCRtpContributingSource wb_RTCRtpContributingSource;
+typedef struct wb_RTCRtpSynchronizationSource wb_RTCRtpSynchronizationSource;
+typedef struct wb_RTCStatsReport wb_RTCStatsReport;

@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class XRRigidTransform;
+typedef struct wb_XRRigidTransform wb_XRRigidTransform;

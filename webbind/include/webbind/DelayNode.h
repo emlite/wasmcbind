@@ -5,4 +5,4 @@
 #include "AudioNode.h"
 #include "enums.h"
 
-class AudioParam;
+typedef struct wb_AudioParam wb_AudioParam;

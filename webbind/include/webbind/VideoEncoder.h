@@ -5,7 +5,7 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class VideoEncoderConfig;
-class VideoFrame;
-class VideoEncoderEncodeOptions;
-class VideoEncoderSupport;
+typedef struct wb_VideoEncoderConfig wb_VideoEncoderConfig;
+typedef struct wb_VideoFrame wb_VideoFrame;
+typedef struct wb_VideoEncoderEncodeOptions wb_VideoEncoderEncodeOptions;
+typedef struct wb_VideoEncoderSupport wb_VideoEncoderSupport;

@@ -5,11 +5,11 @@
 #include "BaseAudioContext.h"
 #include "enums.h"
 
-class AudioTimestamp;
-class MediaElementAudioSourceNode;
-class HTMLMediaElement;
-class MediaStreamAudioSourceNode;
-class MediaStream;
-class MediaStreamTrackAudioSourceNode;
-class MediaStreamTrack;
-class MediaStreamAudioDestinationNode;
+typedef struct wb_AudioTimestamp wb_AudioTimestamp;
+typedef struct wb_MediaElementAudioSourceNode wb_MediaElementAudioSourceNode;
+typedef struct wb_HTMLMediaElement wb_HTMLMediaElement;
+typedef struct wb_MediaStreamAudioSourceNode wb_MediaStreamAudioSourceNode;
+typedef struct wb_MediaStream wb_MediaStream;
+typedef struct wb_MediaStreamTrackAudioSourceNode wb_MediaStreamTrackAudioSourceNode;
+typedef struct wb_MediaStreamTrack wb_MediaStreamTrack;
+typedef struct wb_MediaStreamAudioDestinationNode wb_MediaStreamAudioDestinationNode;

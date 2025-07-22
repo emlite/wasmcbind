@@ -5,6 +5,6 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class HTMLFormElement;
-class HTMLCollection;
-class ValidityState;
+typedef struct wb_HTMLFormElement wb_HTMLFormElement;
+typedef struct wb_HTMLCollection wb_HTMLCollection;
+typedef struct wb_ValidityState wb_ValidityState;

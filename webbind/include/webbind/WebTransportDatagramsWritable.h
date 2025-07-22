@@ -5,4 +5,4 @@
 #include "WritableStream.h"
 #include "enums.h"
 
-class WebTransportSendGroup;
+typedef struct wb_WebTransportSendGroup wb_WebTransportSendGroup;

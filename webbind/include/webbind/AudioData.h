@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class AudioDataCopyToOptions;
-class AudioData;
+typedef struct wb_AudioDataCopyToOptions wb_AudioDataCopyToOptions;
+typedef struct wb_AudioData wb_AudioData;

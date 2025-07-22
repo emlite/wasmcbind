@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class KeyboardLayoutMap;
+typedef struct wb_KeyboardLayoutMap wb_KeyboardLayoutMap;

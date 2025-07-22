@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class DOMPointReadOnly;
-class XRRigidTransform;
-class DOMPointInit;
+typedef struct wb_DOMPointReadOnly wb_DOMPointReadOnly;
+typedef struct wb_XRRigidTransform wb_XRRigidTransform;
+typedef struct wb_DOMPointInit wb_DOMPointInit;

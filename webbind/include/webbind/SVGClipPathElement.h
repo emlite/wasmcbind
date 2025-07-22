@@ -5,5 +5,5 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-class SVGAnimatedEnumeration;
-class SVGAnimatedTransformList;
+typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
+typedef struct wb_SVGAnimatedTransformList wb_SVGAnimatedTransformList;

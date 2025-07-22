@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class PresentationRequest;
-class PresentationReceiver;
+typedef struct wb_PresentationRequest wb_PresentationRequest;
+typedef struct wb_PresentationReceiver wb_PresentationReceiver;

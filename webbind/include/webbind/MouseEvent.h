@@ -5,5 +5,5 @@
 #include "UIEvent.h"
 #include "enums.h"
 
-class EventTarget;
-class Window;
+typedef struct wb_EventTarget wb_EventTarget;
+typedef struct wb_Window wb_Window;

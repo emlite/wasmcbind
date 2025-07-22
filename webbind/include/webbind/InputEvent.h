@@ -5,5 +5,5 @@
 #include "UIEvent.h"
 #include "enums.h"
 
-class DataTransfer;
-class StaticRange;
+typedef struct wb_DataTransfer wb_DataTransfer;
+typedef struct wb_StaticRange wb_StaticRange;

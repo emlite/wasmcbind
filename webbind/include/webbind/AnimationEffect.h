@@ -5,6 +5,6 @@
 #include "WorkletAnimationEffect.h"
 #include "enums.h"
 
-class OptionalEffectTiming;
-class GroupEffect;
-class AnimationEffect;
+typedef struct wb_OptionalEffectTiming wb_OptionalEffectTiming;
+typedef struct wb_GroupEffect wb_GroupEffect;
+typedef struct wb_AnimationEffect wb_AnimationEffect;

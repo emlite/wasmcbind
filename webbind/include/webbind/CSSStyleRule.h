@@ -5,5 +5,5 @@
 #include "CSSGroupingRule.h"
 #include "enums.h"
 
-class CSSStyleProperties;
-class StylePropertyMap;
+typedef struct wb_CSSStyleProperties wb_CSSStyleProperties;
+typedef struct wb_StylePropertyMap wb_StylePropertyMap;

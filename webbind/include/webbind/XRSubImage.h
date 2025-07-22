@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class XRViewport;
+typedef struct wb_XRViewport wb_XRViewport;

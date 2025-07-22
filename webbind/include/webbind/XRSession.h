@@ -5,19 +5,19 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class XRRenderState;
-class XRInputSourceArray;
-class XRRenderStateInit;
-class XRReferenceSpace;
-class XRAnchor;
-class XRDOMOverlayState;
-class XRHitTestSource;
-class XRHitTestOptionsInit;
-class XRTransientInputHitTestSource;
-class XRTransientInputHitTestOptionsInit;
-class XRLightProbe;
-class XRLightProbeInit;
-class XRRay;
-class XRLayer;
-class XRSpace;
-class XRWebGLLayer;
+typedef struct wb_XRRenderState wb_XRRenderState;
+typedef struct wb_XRInputSourceArray wb_XRInputSourceArray;
+typedef struct wb_XRRenderStateInit wb_XRRenderStateInit;
+typedef struct wb_XRReferenceSpace wb_XRReferenceSpace;
+typedef struct wb_XRAnchor wb_XRAnchor;
+typedef struct wb_XRDOMOverlayState wb_XRDOMOverlayState;
+typedef struct wb_XRHitTestSource wb_XRHitTestSource;
+typedef struct wb_XRHitTestOptionsInit wb_XRHitTestOptionsInit;
+typedef struct wb_XRTransientInputHitTestSource wb_XRTransientInputHitTestSource;
+typedef struct wb_XRTransientInputHitTestOptionsInit wb_XRTransientInputHitTestOptionsInit;
+typedef struct wb_XRLightProbe wb_XRLightProbe;
+typedef struct wb_XRLightProbeInit wb_XRLightProbeInit;
+typedef struct wb_XRRay wb_XRRay;
+typedef struct wb_XRLayer wb_XRLayer;
+typedef struct wb_XRSpace wb_XRSpace;
+typedef struct wb_XRWebGLLayer wb_XRWebGLLayer;

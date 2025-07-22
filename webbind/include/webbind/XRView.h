@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class XRCamera;
-class XRRigidTransform;
+typedef struct wb_XRCamera wb_XRCamera;
+typedef struct wb_XRRigidTransform wb_XRRigidTransform;

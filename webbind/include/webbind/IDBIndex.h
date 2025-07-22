@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class IDBObjectStore;
-class IDBRequest;
+typedef struct wb_IDBObjectStore wb_IDBObjectStore;
+typedef struct wb_IDBRequest wb_IDBRequest;

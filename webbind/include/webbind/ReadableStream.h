@@ -4,9 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ReadableStream;
-class ReadableStreamGetReaderOptions;
-class ReadableWritablePair;
-class StreamPipeOptions;
-class WritableStream;
-class AbortSignal;
+typedef struct wb_ReadableStream wb_ReadableStream;
+typedef struct wb_ReadableStreamGetReaderOptions wb_ReadableStreamGetReaderOptions;
+typedef struct wb_ReadableWritablePair wb_ReadableWritablePair;
+typedef struct wb_StreamPipeOptions wb_StreamPipeOptions;
+typedef struct wb_WritableStream wb_WritableStream;
+typedef struct wb_AbortSignal wb_AbortSignal;

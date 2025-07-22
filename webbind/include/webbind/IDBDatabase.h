@@ -5,8 +5,8 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class DOMStringList;
-class IDBTransaction;
-class IDBTransactionOptions;
-class IDBObjectStore;
-class IDBObjectStoreParameters;
+typedef struct wb_DOMStringList wb_DOMStringList;
+typedef struct wb_IDBTransaction wb_IDBTransaction;
+typedef struct wb_IDBTransactionOptions wb_IDBTransactionOptions;
+typedef struct wb_IDBObjectStore wb_IDBObjectStore;
+typedef struct wb_IDBObjectStoreParameters wb_IDBObjectStoreParameters;

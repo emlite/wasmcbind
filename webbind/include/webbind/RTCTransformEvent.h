@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class RTCRtpScriptTransformer;
+typedef struct wb_RTCRtpScriptTransformer wb_RTCRtpScriptTransformer;

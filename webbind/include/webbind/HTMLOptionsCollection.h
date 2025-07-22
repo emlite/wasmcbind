@@ -5,4 +5,4 @@
 #include "HTMLCollection.h"
 #include "enums.h"
 
-class HTMLOptionElement;
+typedef struct wb_HTMLOptionElement wb_HTMLOptionElement;

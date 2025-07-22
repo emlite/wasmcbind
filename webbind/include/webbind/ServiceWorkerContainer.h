@@ -5,6 +5,6 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class ServiceWorker;
-class ServiceWorkerRegistration;
-class RegistrationOptions;
+typedef struct wb_ServiceWorker wb_ServiceWorker;
+typedef struct wb_ServiceWorkerRegistration wb_ServiceWorkerRegistration;
+typedef struct wb_RegistrationOptions wb_RegistrationOptions;

@@ -5,4 +5,4 @@
 #include "XRPose.h"
 #include "enums.h"
 
-class XRView;
+typedef struct wb_XRView wb_XRView;

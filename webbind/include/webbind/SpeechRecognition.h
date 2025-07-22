@@ -5,7 +5,7 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class SpeechGrammarList;
-class SpeechRecognitionPhraseList;
-class MediaStreamTrack;
-class SpeechRecognitionOptions;
+typedef struct wb_SpeechGrammarList wb_SpeechGrammarList;
+typedef struct wb_SpeechRecognitionPhraseList wb_SpeechRecognitionPhraseList;
+typedef struct wb_MediaStreamTrack wb_MediaStreamTrack;
+typedef struct wb_SpeechRecognitionOptions wb_SpeechRecognitionOptions;

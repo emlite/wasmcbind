@@ -5,5 +5,5 @@
 #include "SVGGraphicsElement.h"
 #include "enums.h"
 
-class SVGAnimatedString;
-class DOMTokenList;
+typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
+typedef struct wb_DOMTokenList wb_DOMTokenList;

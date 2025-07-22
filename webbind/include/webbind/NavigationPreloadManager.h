@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class NavigationPreloadState;
+typedef struct wb_NavigationPreloadState wb_NavigationPreloadState;

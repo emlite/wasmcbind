@@ -4,7 +4,7 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class TrustedTypePolicy;
-class TrustedTypePolicyOptions;
-class TrustedHTML;
-class TrustedScript;
+typedef struct wb_TrustedTypePolicy wb_TrustedTypePolicy;
+typedef struct wb_TrustedTypePolicyOptions wb_TrustedTypePolicyOptions;
+typedef struct wb_TrustedHTML wb_TrustedHTML;
+typedef struct wb_TrustedScript wb_TrustedScript;

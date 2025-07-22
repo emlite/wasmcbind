@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Blob;
-class ReadableStream;
+typedef struct wb_Blob wb_Blob;
+typedef struct wb_ReadableStream wb_ReadableStream;

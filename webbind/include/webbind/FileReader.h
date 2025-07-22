@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class Blob;
-class DOMException;
+typedef struct wb_Blob wb_Blob;
+typedef struct wb_DOMException wb_DOMException;

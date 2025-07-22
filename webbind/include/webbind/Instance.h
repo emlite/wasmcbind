@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Module;
+typedef struct wb_Module wb_Module;

@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class FontFace;
+typedef struct wb_FontFace wb_FontFace;

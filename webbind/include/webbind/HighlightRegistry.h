@@ -4,7 +4,7 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Highlight;
-class HighlightsFromPointOptions;
-class ShadowRoot;
-class AbstractRange;
+typedef struct wb_Highlight wb_Highlight;
+typedef struct wb_HighlightsFromPointOptions wb_HighlightsFromPointOptions;
+typedef struct wb_ShadowRoot wb_ShadowRoot;
+typedef struct wb_AbstractRange wb_AbstractRange;

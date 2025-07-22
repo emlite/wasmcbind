@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class GPUError;
+typedef struct wb_GPUError wb_GPUError;

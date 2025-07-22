@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class USBDevice;
-class USBDeviceRequestOptions;
+typedef struct wb_USBDevice wb_USBDevice;
+typedef struct wb_USBDeviceRequestOptions wb_USBDeviceRequestOptions;

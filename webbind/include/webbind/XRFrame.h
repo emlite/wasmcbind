@@ -4,23 +4,23 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class XRSession;
-class XRViewerPose;
-class XRReferenceSpace;
-class XRPose;
-class XRSpace;
-class XRAnchor;
-class XRRigidTransform;
-class XRAnchorSet;
-class XRMeshSet;
-class XRCPUDepthInformation;
-class XRView;
-class XRJointPose;
-class XRJointSpace;
-class XRHitTestResult;
-class XRHitTestSource;
-class XRTransientInputHitTestResult;
-class XRTransientInputHitTestSource;
-class XRLightEstimate;
-class XRLightProbe;
-class XRPlaneSet;
+typedef struct wb_XRSession wb_XRSession;
+typedef struct wb_XRViewerPose wb_XRViewerPose;
+typedef struct wb_XRReferenceSpace wb_XRReferenceSpace;
+typedef struct wb_XRPose wb_XRPose;
+typedef struct wb_XRSpace wb_XRSpace;
+typedef struct wb_XRAnchor wb_XRAnchor;
+typedef struct wb_XRRigidTransform wb_XRRigidTransform;
+typedef struct wb_XRAnchorSet wb_XRAnchorSet;
+typedef struct wb_XRMeshSet wb_XRMeshSet;
+typedef struct wb_XRCPUDepthInformation wb_XRCPUDepthInformation;
+typedef struct wb_XRView wb_XRView;
+typedef struct wb_XRJointPose wb_XRJointPose;
+typedef struct wb_XRJointSpace wb_XRJointSpace;
+typedef struct wb_XRHitTestResult wb_XRHitTestResult;
+typedef struct wb_XRHitTestSource wb_XRHitTestSource;
+typedef struct wb_XRTransientInputHitTestResult wb_XRTransientInputHitTestResult;
+typedef struct wb_XRTransientInputHitTestSource wb_XRTransientInputHitTestSource;
+typedef struct wb_XRLightEstimate wb_XRLightEstimate;
+typedef struct wb_XRLightProbe wb_XRLightProbe;
+typedef struct wb_XRPlaneSet wb_XRPlaneSet;

@@ -5,5 +5,5 @@
 #include "Event.h"
 #include "enums.h"
 
-class NavigationActivation;
-class ViewTransition;
+typedef struct wb_NavigationActivation wb_NavigationActivation;
+typedef struct wb_ViewTransition wb_ViewTransition;

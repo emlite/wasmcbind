@@ -5,4 +5,4 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class HTMLFormElement;
+typedef struct wb_HTMLFormElement wb_HTMLFormElement;

@@ -5,4 +5,4 @@
 #include "SVGGraphicsElement.h"
 #include "enums.h"
 
-class SVGAnimatedLength;
+typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;

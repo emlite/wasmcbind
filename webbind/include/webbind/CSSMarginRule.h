@@ -5,4 +5,4 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-class CSSStyleDeclaration;
+typedef struct wb_CSSStyleDeclaration wb_CSSStyleDeclaration;

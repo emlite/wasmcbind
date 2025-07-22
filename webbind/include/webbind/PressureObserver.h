@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class PressureObserverOptions;
-class PressureRecord;
+typedef struct wb_PressureObserverOptions wb_PressureObserverOptions;
+typedef struct wb_PressureRecord wb_PressureRecord;

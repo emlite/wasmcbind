@@ -5,8 +5,8 @@
 #include "GPUCommandEncoder.h"
 #include "enums.h"
 
-class GPUCommandBuffer;
-class GPUBuffer;
-class GPUTexelCopyBufferLayout;
-class GPUCopyExternalImageSourceInfo;
-class GPUCopyExternalImageDestInfo;
+typedef struct wb_GPUCommandBuffer wb_GPUCommandBuffer;
+typedef struct wb_GPUBuffer wb_GPUBuffer;
+typedef struct wb_GPUTexelCopyBufferLayout wb_GPUTexelCopyBufferLayout;
+typedef struct wb_GPUCopyExternalImageSourceInfo wb_GPUCopyExternalImageSourceInfo;
+typedef struct wb_GPUCopyExternalImageDestInfo wb_GPUCopyExternalImageDestInfo;

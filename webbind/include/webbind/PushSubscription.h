@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class PushSubscriptionOptions;
-class PushSubscriptionJSON;
+typedef struct wb_PushSubscriptionOptions wb_PushSubscriptionOptions;
+typedef struct wb_PushSubscriptionJSON wb_PushSubscriptionJSON;

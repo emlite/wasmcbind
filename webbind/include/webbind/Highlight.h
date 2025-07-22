@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class AbstractRange;
+typedef struct wb_AbstractRange wb_AbstractRange;

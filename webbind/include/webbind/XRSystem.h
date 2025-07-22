@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class XRSession;
-class XRSessionInit;
+typedef struct wb_XRSession wb_XRSession;
+typedef struct wb_XRSessionInit wb_XRSessionInit;

@@ -5,4 +5,4 @@
 #include "SVGGeometryElement.h"
 #include "enums.h"
 
-class SVGPointList;
+typedef struct wb_SVGPointList wb_SVGPointList;

@@ -5,4 +5,4 @@
 #include "CSSGroupingRule.h"
 #include "enums.h"
 
-class CSSPageDescriptors;
+typedef struct wb_CSSPageDescriptors wb_CSSPageDescriptors;

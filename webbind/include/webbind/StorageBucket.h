@@ -5,6 +5,6 @@
 #include "StorageManager.h"
 #include "enums.h"
 
-class IDBFactory;
-class CacheStorage;
-class FileSystemDirectoryHandle;
+typedef struct wb_IDBFactory wb_IDBFactory;
+typedef struct wb_CacheStorage wb_CacheStorage;
+typedef struct wb_FileSystemDirectoryHandle wb_FileSystemDirectoryHandle;

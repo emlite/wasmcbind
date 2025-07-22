@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ModuleExportDescriptor;
-class Module;
-class ModuleImportDescriptor;
+typedef struct wb_ModuleExportDescriptor wb_ModuleExportDescriptor;
+typedef struct wb_Module wb_Module;
+typedef struct wb_ModuleImportDescriptor wb_ModuleImportDescriptor;

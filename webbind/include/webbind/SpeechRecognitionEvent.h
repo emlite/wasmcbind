@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class SpeechRecognitionResultList;
+typedef struct wb_SpeechRecognitionResultList wb_SpeechRecognitionResultList;

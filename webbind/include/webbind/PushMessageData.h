@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Blob;
+typedef struct wb_Blob wb_Blob;

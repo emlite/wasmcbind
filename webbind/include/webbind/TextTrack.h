@@ -5,6 +5,6 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class TextTrackCueList;
-class TextTrackCue;
-class SourceBuffer;
+typedef struct wb_TextTrackCueList wb_TextTrackCueList;
+typedef struct wb_TextTrackCue wb_TextTrackCue;
+typedef struct wb_SourceBuffer wb_SourceBuffer;

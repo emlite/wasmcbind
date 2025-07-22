@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ImageDataSettings;
+typedef struct wb_ImageDataSettings wb_ImageDataSettings;

@@ -6,8 +6,8 @@
 #include "SVGGeometryElement.h"
 #include "enums.h"
 
-class Text;
-class DOMQuad;
-class DOMRectReadOnly;
-class DOMPoint;
-class HTMLSlotElement;
+typedef struct wb_Text wb_Text;
+typedef struct wb_DOMQuad wb_DOMQuad;
+typedef struct wb_DOMRectReadOnly wb_DOMRectReadOnly;
+typedef struct wb_DOMPoint wb_DOMPoint;
+typedef struct wb_HTMLSlotElement wb_HTMLSlotElement;

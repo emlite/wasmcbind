@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class BackgroundFetchRegistration;
-class BackgroundFetchOptions;
+typedef struct wb_BackgroundFetchRegistration wb_BackgroundFetchRegistration;
+typedef struct wb_BackgroundFetchOptions wb_BackgroundFetchOptions;

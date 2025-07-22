@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class NotificationAction;
-class NotificationOptions;
+typedef struct wb_NotificationAction wb_NotificationAction;
+typedef struct wb_NotificationOptions wb_NotificationOptions;

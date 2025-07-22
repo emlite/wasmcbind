@@ -5,6 +5,6 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class ImageBitmap;
-class Blob;
-class ImageEncodeOptions;
+typedef struct wb_ImageBitmap wb_ImageBitmap;
+typedef struct wb_Blob wb_Blob;
+typedef struct wb_ImageEncodeOptions wb_ImageEncodeOptions;

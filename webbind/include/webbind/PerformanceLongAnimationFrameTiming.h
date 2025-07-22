@@ -5,4 +5,4 @@
 #include "PerformanceEntry.h"
 #include "enums.h"
 
-class PerformanceScriptTiming;
+typedef struct wb_PerformanceScriptTiming wb_PerformanceScriptTiming;

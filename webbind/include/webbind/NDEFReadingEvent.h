@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class NDEFMessage;
+typedef struct wb_NDEFMessage wb_NDEFMessage;

@@ -5,4 +5,4 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class Document;
+typedef struct wb_Document wb_Document;

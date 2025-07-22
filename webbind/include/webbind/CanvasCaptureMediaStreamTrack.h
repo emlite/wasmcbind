@@ -5,4 +5,4 @@
 #include "MediaStreamTrack.h"
 #include "enums.h"
 
-class HTMLCanvasElement;
+typedef struct wb_HTMLCanvasElement wb_HTMLCanvasElement;

@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class GPUCompilationMessage;
+typedef struct wb_GPUCompilationMessage wb_GPUCompilationMessage;

@@ -6,9 +6,9 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-class ElementInternals;
-class ShowPopoverOptions;
-class EditContext;
-class CSSStyleDeclaration;
-class DOMStringMap;
-class HTMLElement;
+typedef struct wb_ElementInternals wb_ElementInternals;
+typedef struct wb_ShowPopoverOptions wb_ShowPopoverOptions;
+typedef struct wb_EditContext wb_EditContext;
+typedef struct wb_CSSStyleDeclaration wb_CSSStyleDeclaration;
+typedef struct wb_DOMStringMap wb_DOMStringMap;
+typedef struct wb_HTMLElement wb_HTMLElement;

@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class MediaKeyStatusMap;
+typedef struct wb_MediaKeyStatusMap wb_MediaKeyStatusMap;

@@ -5,5 +5,5 @@
 #include "ScrollTimeline.h"
 #include "enums.h"
 
-class Element;
-class CSSNumericValue;
+typedef struct wb_Element wb_Element;
+typedef struct wb_CSSNumericValue wb_CSSNumericValue;

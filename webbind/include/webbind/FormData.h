@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Blob;
-class HTMLElement;
-class HTMLFormElement;
+typedef struct wb_Blob wb_Blob;
+typedef struct wb_HTMLElement wb_HTMLElement;
+typedef struct wb_HTMLFormElement wb_HTMLFormElement;

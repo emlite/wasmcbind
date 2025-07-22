@@ -5,7 +5,7 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class CookieListItem;
-class CookieStoreGetOptions;
-class CookieInit;
-class CookieStoreDeleteOptions;
+typedef struct wb_CookieListItem wb_CookieListItem;
+typedef struct wb_CookieStoreGetOptions wb_CookieStoreGetOptions;
+typedef struct wb_CookieInit wb_CookieInit;
+typedef struct wb_CookieStoreDeleteOptions wb_CookieStoreDeleteOptions;

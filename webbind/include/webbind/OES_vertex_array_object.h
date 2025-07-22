@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WebGLVertexArrayObjectOES;
+typedef struct wb_WebGLVertexArrayObjectOES wb_WebGLVertexArrayObjectOES;

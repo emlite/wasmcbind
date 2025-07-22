@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class StorageEstimate;
-class FileSystemDirectoryHandle;
+typedef struct wb_StorageEstimate wb_StorageEstimate;
+typedef struct wb_FileSystemDirectoryHandle wb_FileSystemDirectoryHandle;

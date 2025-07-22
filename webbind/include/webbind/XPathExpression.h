@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class XPathResult;
-class Node;
+typedef struct wb_XPathResult wb_XPathResult;
+typedef struct wb_Node wb_Node;

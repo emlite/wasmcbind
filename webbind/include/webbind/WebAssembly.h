@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Module;
-class Response;
-class Instance;
+typedef struct wb_Module wb_Module;
+typedef struct wb_Response wb_Response;
+typedef struct wb_Instance wb_Instance;

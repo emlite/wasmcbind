@@ -5,6 +5,6 @@
 #include "Event.h"
 #include "enums.h"
 
-class BluetoothDevice;
-class BluetoothManufacturerDataMap;
-class BluetoothServiceDataMap;
+typedef struct wb_BluetoothDevice wb_BluetoothDevice;
+typedef struct wb_BluetoothManufacturerDataMap wb_BluetoothManufacturerDataMap;
+typedef struct wb_BluetoothServiceDataMap wb_BluetoothServiceDataMap;

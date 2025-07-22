@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class RTCError;
+typedef struct wb_RTCError wb_RTCError;

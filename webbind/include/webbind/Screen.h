@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ScreenOrientation;
+typedef struct wb_ScreenOrientation wb_ScreenOrientation;

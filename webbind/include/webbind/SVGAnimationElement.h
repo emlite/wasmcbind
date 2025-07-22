@@ -5,4 +5,4 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-class SVGStringList;
+typedef struct wb_SVGStringList wb_SVGStringList;

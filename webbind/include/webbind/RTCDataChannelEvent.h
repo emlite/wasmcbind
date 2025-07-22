@@ -5,4 +5,4 @@
 #include "Event.h"
 #include "enums.h"
 
-class RTCDataChannel;
+typedef struct wb_RTCDataChannel wb_RTCDataChannel;

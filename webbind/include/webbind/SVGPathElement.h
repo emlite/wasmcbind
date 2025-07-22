@@ -5,7 +5,7 @@
 #include "SVGGeometryElement.h"
 #include "enums.h"
 
-class SVGAnimatedNumber;
-class DOMPoint;
-class SVGPathSegment;
-class SVGPathDataSettings;
+typedef struct wb_SVGAnimatedNumber wb_SVGAnimatedNumber;
+typedef struct wb_DOMPoint wb_DOMPoint;
+typedef struct wb_SVGPathSegment wb_SVGPathSegment;
+typedef struct wb_SVGPathDataSettings wb_SVGPathDataSettings;

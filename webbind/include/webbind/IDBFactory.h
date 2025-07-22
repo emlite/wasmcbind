@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class IDBOpenDBRequest;
-class IDBDatabaseInfo;
+typedef struct wb_IDBOpenDBRequest wb_IDBOpenDBRequest;
+typedef struct wb_IDBDatabaseInfo wb_IDBDatabaseInfo;

@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class LockOptions;
-class LockManagerSnapshot;
-class AbortSignal;
+typedef struct wb_LockOptions wb_LockOptions;
+typedef struct wb_LockManagerSnapshot wb_LockManagerSnapshot;
+typedef struct wb_AbortSignal wb_AbortSignal;

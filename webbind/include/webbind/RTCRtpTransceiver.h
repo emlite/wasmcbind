@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class RTCRtpSender;
-class RTCRtpReceiver;
-class RTCRtpCodec;
+typedef struct wb_RTCRtpSender wb_RTCRtpSender;
+typedef struct wb_RTCRtpReceiver wb_RTCRtpReceiver;
+typedef struct wb_RTCRtpCodec wb_RTCRtpCodec;

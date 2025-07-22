@@ -5,12 +5,12 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class MediaError;
-class TimeRanges;
-class AudioTrackList;
-class VideoTrackList;
-class TextTrackList;
-class TextTrack;
-class MediaKeys;
-class MediaStream;
-class RemotePlayback;
+typedef struct wb_MediaError wb_MediaError;
+typedef struct wb_TimeRanges wb_TimeRanges;
+typedef struct wb_AudioTrackList wb_AudioTrackList;
+typedef struct wb_VideoTrackList wb_VideoTrackList;
+typedef struct wb_TextTrackList wb_TextTrackList;
+typedef struct wb_TextTrack wb_TextTrack;
+typedef struct wb_MediaKeys wb_MediaKeys;
+typedef struct wb_MediaStream wb_MediaStream;
+typedef struct wb_RemotePlayback wb_RemotePlayback;

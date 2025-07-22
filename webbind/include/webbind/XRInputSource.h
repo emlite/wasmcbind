@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class XRSpace;
-class Gamepad;
-class XRHand;
+typedef struct wb_XRSpace wb_XRSpace;
+typedef struct wb_Gamepad wb_Gamepad;
+typedef struct wb_XRHand wb_XRHand;

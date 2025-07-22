@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ImageTrack;
+typedef struct wb_ImageTrack wb_ImageTrack;

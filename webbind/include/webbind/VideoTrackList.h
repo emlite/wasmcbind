@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class VideoTrack;
+typedef struct wb_VideoTrack wb_VideoTrack;

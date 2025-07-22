@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Node;
-class MutationObserverInit;
-class MutationRecord;
+typedef struct wb_Node wb_Node;
+typedef struct wb_MutationObserverInit wb_MutationObserverInit;
+typedef struct wb_MutationRecord wb_MutationRecord;

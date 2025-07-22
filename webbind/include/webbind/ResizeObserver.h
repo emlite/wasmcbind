@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Element;
-class ResizeObserverOptions;
+typedef struct wb_Element wb_Element;
+typedef struct wb_ResizeObserverOptions wb_ResizeObserverOptions;

@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class SerialPort;
-class SerialPortRequestOptions;
+typedef struct wb_SerialPort wb_SerialPort;
+typedef struct wb_SerialPortRequestOptions wb_SerialPortRequestOptions;

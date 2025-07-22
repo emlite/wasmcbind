@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SVGLength;
+typedef struct wb_SVGLength wb_SVGLength;

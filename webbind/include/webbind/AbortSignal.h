@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class AbortSignal;
+typedef struct wb_AbortSignal wb_AbortSignal;

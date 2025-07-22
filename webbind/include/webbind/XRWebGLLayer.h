@@ -5,7 +5,7 @@
 #include "XRLayer.h"
 #include "enums.h"
 
-class WebGLFramebuffer;
-class XRViewport;
-class XRView;
-class XRSession;
+typedef struct wb_WebGLFramebuffer wb_WebGLFramebuffer;
+typedef struct wb_XRViewport wb_XRViewport;
+typedef struct wb_XRView wb_XRView;
+typedef struct wb_XRSession wb_XRSession;

@@ -5,6 +5,6 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class BluetoothDevice;
-class BluetoothRemoteGATTCharacteristic;
-class BluetoothRemoteGATTService;
+typedef struct wb_BluetoothDevice wb_BluetoothDevice;
+typedef struct wb_BluetoothRemoteGATTCharacteristic wb_BluetoothRemoteGATTCharacteristic;
+typedef struct wb_BluetoothRemoteGATTService wb_BluetoothRemoteGATTService;

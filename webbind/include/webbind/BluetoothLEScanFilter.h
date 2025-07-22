@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class BluetoothManufacturerDataFilter;
-class BluetoothServiceDataFilter;
+typedef struct wb_BluetoothManufacturerDataFilter wb_BluetoothManufacturerDataFilter;
+typedef struct wb_BluetoothServiceDataFilter wb_BluetoothServiceDataFilter;

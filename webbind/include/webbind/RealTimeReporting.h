@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class RealTimeContribution;
+typedef struct wb_RealTimeContribution wb_RealTimeContribution;

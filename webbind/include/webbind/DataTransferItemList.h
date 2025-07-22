@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class DataTransferItem;
-class File;
+typedef struct wb_DataTransferItem wb_DataTransferItem;
+typedef struct wb_File wb_File;

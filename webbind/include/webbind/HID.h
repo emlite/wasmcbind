@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class HIDDevice;
-class HIDDeviceRequestOptions;
+typedef struct wb_HIDDevice wb_HIDDevice;
+typedef struct wb_HIDDeviceRequestOptions wb_HIDDeviceRequestOptions;

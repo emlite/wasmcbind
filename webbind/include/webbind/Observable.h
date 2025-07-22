@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class SubscribeOptions;
-class Observable;
-class AbortSignal;
+typedef struct wb_SubscribeOptions wb_SubscribeOptions;
+typedef struct wb_Observable wb_Observable;
+typedef struct wb_AbortSignal wb_AbortSignal;

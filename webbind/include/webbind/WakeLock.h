@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WakeLockSentinel;
+typedef struct wb_WakeLockSentinel wb_WakeLockSentinel;

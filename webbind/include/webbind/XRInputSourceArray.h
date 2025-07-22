@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class XRInputSource;
+typedef struct wb_XRInputSource wb_XRInputSource;

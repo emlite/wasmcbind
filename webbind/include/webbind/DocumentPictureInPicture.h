@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class Window;
-class DocumentPictureInPictureOptions;
+typedef struct wb_Window wb_Window;
+typedef struct wb_DocumentPictureInPictureOptions wb_DocumentPictureInPictureOptions;

@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WorkletOptions;
+typedef struct wb_WorkletOptions wb_WorkletOptions;

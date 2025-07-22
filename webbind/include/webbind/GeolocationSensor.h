@@ -5,6 +5,6 @@
 #include "Sensor.h"
 #include "enums.h"
 
-class GeolocationSensorReading;
-class ReadOptions;
-class AbortSignal;
+typedef struct wb_GeolocationSensorReading wb_GeolocationSensorReading;
+typedef struct wb_ReadOptions wb_ReadOptions;
+typedef struct wb_AbortSignal wb_AbortSignal;

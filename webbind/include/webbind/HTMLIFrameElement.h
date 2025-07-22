@@ -5,6 +5,6 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class DOMTokenList;
-class Document;
-class PermissionsPolicy;
+typedef struct wb_DOMTokenList wb_DOMTokenList;
+typedef struct wb_Document wb_Document;
+typedef struct wb_PermissionsPolicy wb_PermissionsPolicy;

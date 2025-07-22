@@ -4,8 +4,8 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Blob;
-class PhotoSettings;
-class PhotoCapabilities;
-class ImageBitmap;
-class MediaStreamTrack;
+typedef struct wb_Blob wb_Blob;
+typedef struct wb_PhotoSettings wb_PhotoSettings;
+typedef struct wb_PhotoCapabilities wb_PhotoCapabilities;
+typedef struct wb_ImageBitmap wb_ImageBitmap;
+typedef struct wb_MediaStreamTrack wb_MediaStreamTrack;

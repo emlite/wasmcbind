@@ -4,7 +4,7 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class GPURenderBundle;
-class GPUBindGroup;
-class GPURenderPipeline;
-class GPUBuffer;
+typedef struct wb_GPURenderBundle wb_GPURenderBundle;
+typedef struct wb_GPUBindGroup wb_GPUBindGroup;
+typedef struct wb_GPURenderPipeline wb_GPURenderPipeline;
+typedef struct wb_GPUBuffer wb_GPUBuffer;

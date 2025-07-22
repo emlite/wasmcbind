@@ -6,6 +6,6 @@
 #include "SVGGeometryElement.h"
 #include "enums.h"
 
-class DOMMatrixReadOnly;
-class DOMMatrix;
-class DOMPoint;
+typedef struct wb_DOMMatrixReadOnly wb_DOMMatrixReadOnly;
+typedef struct wb_DOMMatrix wb_DOMMatrix;
+typedef struct wb_DOMPoint wb_DOMPoint;

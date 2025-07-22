@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class FontFaceSet;
-class FontFace;
+typedef struct wb_FontFaceSet wb_FontFaceSet;
+typedef struct wb_FontFace wb_FontFace;

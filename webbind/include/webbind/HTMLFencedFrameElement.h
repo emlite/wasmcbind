@@ -5,5 +5,5 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class FencedFrameConfig;
-class DOMTokenList;
+typedef struct wb_FencedFrameConfig wb_FencedFrameConfig;
+typedef struct wb_DOMTokenList wb_DOMTokenList;

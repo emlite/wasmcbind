@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class PositionOptions;
+typedef struct wb_PositionOptions wb_PositionOptions;

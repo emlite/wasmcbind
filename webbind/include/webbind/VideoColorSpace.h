@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class VideoColorSpaceInit;
+typedef struct wb_VideoColorSpaceInit wb_VideoColorSpaceInit;

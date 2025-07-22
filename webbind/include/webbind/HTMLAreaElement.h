@@ -5,4 +5,4 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class DOMTokenList;
+typedef struct wb_DOMTokenList wb_DOMTokenList;

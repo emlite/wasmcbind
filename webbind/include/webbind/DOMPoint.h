@@ -6,4 +6,4 @@
 #include "SVGGeometryElement.h"
 #include "enums.h"
 
-class DOMPoint;
+typedef struct wb_DOMPoint wb_DOMPoint;

@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Touch;
+typedef struct wb_Touch wb_Touch;

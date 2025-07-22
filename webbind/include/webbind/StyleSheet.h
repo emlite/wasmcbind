@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class CSSStyleSheet;
-class MediaList;
+typedef struct wb_CSSStyleSheet wb_CSSStyleSheet;
+typedef struct wb_MediaList wb_MediaList;

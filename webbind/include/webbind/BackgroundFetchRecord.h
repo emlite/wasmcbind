@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class Request;
-class Response;
+typedef struct wb_Request wb_Request;
+typedef struct wb_Response wb_Response;

@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class DOMPointReadOnly;
+typedef struct wb_DOMPointReadOnly wb_DOMPointReadOnly;

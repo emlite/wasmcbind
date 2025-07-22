@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class LockManager;
+typedef struct wb_LockManager wb_LockManager;

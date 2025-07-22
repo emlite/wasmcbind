@@ -4,6 +4,6 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class ColorSelectionResult;
-class ColorSelectionOptions;
-class AbortSignal;
+typedef struct wb_ColorSelectionResult wb_ColorSelectionResult;
+typedef struct wb_ColorSelectionOptions wb_ColorSelectionOptions;
+typedef struct wb_AbortSignal wb_AbortSignal;

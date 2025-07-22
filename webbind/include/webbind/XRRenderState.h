@@ -4,5 +4,5 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class XRWebGLLayer;
-class XRLayer;
+typedef struct wb_XRWebGLLayer wb_XRWebGLLayer;
+typedef struct wb_XRLayer wb_XRLayer;

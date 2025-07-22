@@ -5,6 +5,6 @@
 #include "SVGGraphicsElement.h"
 #include "enums.h"
 
-class SVGAnimatedLength;
-class SVGAnimatedPreserveAspectRatio;
-class SVGAnimatedString;
+typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct wb_SVGAnimatedPreserveAspectRatio wb_SVGAnimatedPreserveAspectRatio;
+typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;

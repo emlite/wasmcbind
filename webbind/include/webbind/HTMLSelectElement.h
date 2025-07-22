@@ -5,9 +5,9 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class HTMLFormElement;
-class HTMLOptionsCollection;
-class HTMLOptionElement;
-class HTMLCollection;
-class ValidityState;
-class NodeList;
+typedef struct wb_HTMLFormElement wb_HTMLFormElement;
+typedef struct wb_HTMLOptionsCollection wb_HTMLOptionsCollection;
+typedef struct wb_HTMLOptionElement wb_HTMLOptionElement;
+typedef struct wb_HTMLCollection wb_HTMLCollection;
+typedef struct wb_ValidityState wb_ValidityState;
+typedef struct wb_NodeList wb_NodeList;

@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class FontFacePalette;
+typedef struct wb_FontFacePalette wb_FontFacePalette;

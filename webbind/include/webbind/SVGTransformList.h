@@ -5,4 +5,4 @@
 #include "SVGSVGElement.h"
 #include "enums.h"
 
-class SVGTransform;
+typedef struct wb_SVGTransform wb_SVGTransform;

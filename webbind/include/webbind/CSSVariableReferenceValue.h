@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class CSSUnparsedValue;
+typedef struct wb_CSSUnparsedValue wb_CSSUnparsedValue;

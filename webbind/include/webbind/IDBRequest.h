@@ -5,5 +5,5 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class DOMException;
-class IDBTransaction;
+typedef struct wb_DOMException wb_DOMException;
+typedef struct wb_IDBTransaction wb_IDBTransaction;

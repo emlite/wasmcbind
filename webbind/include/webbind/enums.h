@@ -3,4 +3,4 @@
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
 
-class ReadableStream;
+typedef struct wb_ReadableStream wb_ReadableStream;

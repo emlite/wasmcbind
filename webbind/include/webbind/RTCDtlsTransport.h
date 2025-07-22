@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class RTCIceTransport;
+typedef struct wb_RTCIceTransport wb_RTCIceTransport;

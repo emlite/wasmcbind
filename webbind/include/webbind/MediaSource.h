@@ -5,6 +5,6 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class MediaSourceHandle;
-class SourceBufferList;
-class SourceBuffer;
+typedef struct wb_MediaSourceHandle wb_MediaSourceHandle;
+typedef struct wb_SourceBufferList wb_SourceBufferList;
+typedef struct wb_SourceBuffer wb_SourceBuffer;

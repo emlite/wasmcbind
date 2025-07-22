@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class WebGLShader;
+typedef struct wb_WebGLShader wb_WebGLShader;

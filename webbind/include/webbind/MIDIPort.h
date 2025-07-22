@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class MIDIPort;
+typedef struct wb_MIDIPort wb_MIDIPort;

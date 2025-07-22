@@ -5,6 +5,6 @@
 #include "WritableStream.h"
 #include "enums.h"
 
-class WebTransportSendGroup;
-class WebTransportSendStreamStats;
-class WebTransportWriter;
+typedef struct wb_WebTransportSendGroup wb_WebTransportSendGroup;
+typedef struct wb_WebTransportSendStreamStats wb_WebTransportSendStreamStats;
+typedef struct wb_WebTransportWriter wb_WebTransportWriter;

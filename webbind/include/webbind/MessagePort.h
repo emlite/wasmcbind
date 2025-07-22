@@ -5,4 +5,4 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-class StructuredSerializeOptions;
+typedef struct wb_StructuredSerializeOptions wb_StructuredSerializeOptions;

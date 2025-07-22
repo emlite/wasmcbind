@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class PreferenceObject;
+typedef struct wb_PreferenceObject wb_PreferenceObject;

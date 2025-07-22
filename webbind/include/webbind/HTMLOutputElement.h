@@ -5,7 +5,7 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-class DOMTokenList;
-class HTMLFormElement;
-class ValidityState;
-class NodeList;
+typedef struct wb_DOMTokenList wb_DOMTokenList;
+typedef struct wb_HTMLFormElement wb_HTMLFormElement;
+typedef struct wb_ValidityState wb_ValidityState;
+typedef struct wb_NodeList wb_NodeList;

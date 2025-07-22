@@ -4,4 +4,4 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-class HandwritingPoint;
+typedef struct wb_HandwritingPoint wb_HandwritingPoint;
