@@ -4,5 +4,21 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_ReadableStream wb_ReadableStream;
-typedef struct wb_WritableStream wb_WritableStream;
+typedef struct ReadableStream ReadableStream;
+typedef struct WritableStream WritableStream;
+
+
+typedef struct {
+  em_Val inner;
+} TextEncoderStream;
+
+
+DECLARE_EMLITE_TYPE(TextEncoderStream, em_Val);
+
+TextEncoderStream TextEncoderStream_new();
+
+jb_DOMString TextEncoderStream_encoding( const TextEncoderStream *self);
+
+ReadableStream TextEncoderStream_readable( const TextEncoderStream *self);
+
+WritableStream TextEncoderStream_writable( const TextEncoderStream *self);

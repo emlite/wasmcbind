@@ -5,6 +5,36 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
-typedef struct wb_SVGAnimatedNumber wb_SVGAnimatedNumber;
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct SVGAnimatedString SVGAnimatedString;
+typedef struct SVGAnimatedNumber SVGAnimatedNumber;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGFESpecularLightingElement;
+
+
+DECLARE_EMLITE_TYPE(SVGFESpecularLightingElement, SVGElement);
+
+SVGAnimatedString SVGFESpecularLightingElement_in1( const SVGFESpecularLightingElement *self);
+
+SVGAnimatedNumber SVGFESpecularLightingElement_surfaceScale( const SVGFESpecularLightingElement *self);
+
+SVGAnimatedNumber SVGFESpecularLightingElement_specularConstant( const SVGFESpecularLightingElement *self);
+
+SVGAnimatedNumber SVGFESpecularLightingElement_specularExponent( const SVGFESpecularLightingElement *self);
+
+SVGAnimatedNumber SVGFESpecularLightingElement_kernelUnitLengthX( const SVGFESpecularLightingElement *self);
+
+SVGAnimatedNumber SVGFESpecularLightingElement_kernelUnitLengthY( const SVGFESpecularLightingElement *self);
+
+SVGAnimatedLength SVGFESpecularLightingElement_x( const SVGFESpecularLightingElement *self);
+
+SVGAnimatedLength SVGFESpecularLightingElement_y( const SVGFESpecularLightingElement *self);
+
+SVGAnimatedLength SVGFESpecularLightingElement_width( const SVGFESpecularLightingElement *self);
+
+SVGAnimatedLength SVGFESpecularLightingElement_height( const SVGFESpecularLightingElement *self);
+
+SVGAnimatedString SVGFESpecularLightingElement_result( const SVGFESpecularLightingElement *self);

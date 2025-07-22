@@ -9,3 +9,266 @@
 #include <webbind/PaymentManager.h>
 #include <webbind/PeriodicSyncManager.h>
 #include <webbind/PushManager.h>
+
+
+DEFINE_EMLITE_TYPE(NotificationOptions, em_Val);
+
+
+NotificationDirection NotificationOptions_dir(const NotificationOptions *self) {
+    return em_Val_as(NotificationDirection, em_Val_get(em_Val_as_val(self->inner), "dir"));
+}
+
+
+void NotificationOptions_set_dir(NotificationOptions* self, const NotificationDirection* value) {
+    em_Val_set(em_Val_as_val(self->inner), "dir", value);
+}
+
+
+jb_DOMString NotificationOptions_lang(const NotificationOptions *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "lang"));
+}
+
+
+void NotificationOptions_set_lang(NotificationOptions* self, const jb_DOMString* value) {
+    em_Val_set(em_Val_as_val(self->inner), "lang", value);
+}
+
+
+jb_DOMString NotificationOptions_body(const NotificationOptions *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "body"));
+}
+
+
+void NotificationOptions_set_body(NotificationOptions* self, const jb_DOMString* value) {
+    em_Val_set(em_Val_as_val(self->inner), "body", value);
+}
+
+
+jb_DOMString NotificationOptions_tag(const NotificationOptions *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "tag"));
+}
+
+
+void NotificationOptions_set_tag(NotificationOptions* self, const jb_DOMString* value) {
+    em_Val_set(em_Val_as_val(self->inner), "tag", value);
+}
+
+
+jb_USVString NotificationOptions_image(const NotificationOptions *self) {
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "image"));
+}
+
+
+void NotificationOptions_set_image(NotificationOptions* self, const jb_USVString* value) {
+    em_Val_set(em_Val_as_val(self->inner), "image", value);
+}
+
+
+jb_USVString NotificationOptions_icon(const NotificationOptions *self) {
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "icon"));
+}
+
+
+void NotificationOptions_set_icon(NotificationOptions* self, const jb_USVString* value) {
+    em_Val_set(em_Val_as_val(self->inner), "icon", value);
+}
+
+
+jb_USVString NotificationOptions_badge(const NotificationOptions *self) {
+    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), "badge"));
+}
+
+
+void NotificationOptions_set_badge(NotificationOptions* self, const jb_USVString* value) {
+    em_Val_set(em_Val_as_val(self->inner), "badge", value);
+}
+
+
+jb_Any NotificationOptions_vibrate(const NotificationOptions *self) {
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "vibrate"));
+}
+
+
+void NotificationOptions_set_vibrate(NotificationOptions* self, const jb_Any* value) {
+    em_Val_set(em_Val_as_val(self->inner), "vibrate", value);
+}
+
+
+jb_Any NotificationOptions_timestamp(const NotificationOptions *self) {
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "timestamp"));
+}
+
+
+void NotificationOptions_set_timestamp(NotificationOptions* self, const jb_Any* value) {
+    em_Val_set(em_Val_as_val(self->inner), "timestamp", value);
+}
+
+
+bool NotificationOptions_renotify(const NotificationOptions *self) {
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "renotify"));
+}
+
+
+void NotificationOptions_set_renotify(NotificationOptions* self, bool value) {
+    em_Val_set(em_Val_as_val(self->inner), "renotify", value);
+}
+
+
+bool NotificationOptions_silent(const NotificationOptions *self) {
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "silent"));
+}
+
+
+void NotificationOptions_set_silent(NotificationOptions* self, bool value) {
+    em_Val_set(em_Val_as_val(self->inner), "silent", value);
+}
+
+
+bool NotificationOptions_requireInteraction(const NotificationOptions *self) {
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "requireInteraction"));
+}
+
+
+void NotificationOptions_set_requireInteraction(NotificationOptions* self, bool value) {
+    em_Val_set(em_Val_as_val(self->inner), "requireInteraction", value);
+}
+
+
+jb_Any NotificationOptions_data(const NotificationOptions *self) {
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), "data"));
+}
+
+
+void NotificationOptions_set_data(NotificationOptions* self, const jb_Any* value) {
+    em_Val_set(em_Val_as_val(self->inner), "data", value);
+}
+
+
+jb_Sequence NotificationOptions_actions(const NotificationOptions *self) {
+    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), "actions"));
+}
+
+
+void NotificationOptions_set_actions(NotificationOptions* self, const jb_Sequence* value) {
+    em_Val_set(em_Val_as_val(self->inner), "actions", value);
+}
+
+DEFINE_EMLITE_TYPE(GetNotificationOptions, em_Val);
+
+
+jb_DOMString GetNotificationOptions_tag(const GetNotificationOptions *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "tag"));
+}
+
+
+void GetNotificationOptions_set_tag(GetNotificationOptions* self, const jb_DOMString* value) {
+    em_Val_set(em_Val_as_val(self->inner), "tag", value);
+}
+
+DEFINE_EMLITE_TYPE(ServiceWorkerRegistration, EventTarget);
+
+
+ServiceWorker ServiceWorkerRegistration_installing(const ServiceWorkerRegistration *self) {
+    return em_Val_as(ServiceWorker, em_Val_get(EventTarget_as_val(self->inner), "installing"));
+}
+
+
+ServiceWorker ServiceWorkerRegistration_waiting(const ServiceWorkerRegistration *self) {
+    return em_Val_as(ServiceWorker, em_Val_get(EventTarget_as_val(self->inner), "waiting"));
+}
+
+
+ServiceWorker ServiceWorkerRegistration_active(const ServiceWorkerRegistration *self) {
+    return em_Val_as(ServiceWorker, em_Val_get(EventTarget_as_val(self->inner), "active"));
+}
+
+
+NavigationPreloadManager ServiceWorkerRegistration_navigationPreload(const ServiceWorkerRegistration *self) {
+    return em_Val_as(NavigationPreloadManager, em_Val_get(EventTarget_as_val(self->inner), "navigationPreload"));
+}
+
+
+jb_USVString ServiceWorkerRegistration_scope(const ServiceWorkerRegistration *self) {
+    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), "scope"));
+}
+
+
+ServiceWorkerUpdateViaCache ServiceWorkerRegistration_updateViaCache(const ServiceWorkerRegistration *self) {
+    return em_Val_as(ServiceWorkerUpdateViaCache, em_Val_get(EventTarget_as_val(self->inner), "updateViaCache"));
+}
+
+
+jb_Promise ServiceWorkerRegistration_update(ServiceWorkerRegistration* self ) {
+    return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "update"));
+}
+
+
+jb_Promise ServiceWorkerRegistration_unregister(ServiceWorkerRegistration* self ) {
+    return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "unregister"));
+}
+
+
+jb_Any ServiceWorkerRegistration_onupdatefound(const ServiceWorkerRegistration *self) {
+    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), "onupdatefound"));
+}
+
+
+void ServiceWorkerRegistration_set_onupdatefound(ServiceWorkerRegistration* self, const jb_Any* value) {
+    em_Val_set(EventTarget_as_val(self->inner), "onupdatefound", value);
+}
+
+
+BackgroundFetchManager ServiceWorkerRegistration_backgroundFetch(const ServiceWorkerRegistration *self) {
+    return em_Val_as(BackgroundFetchManager, em_Val_get(EventTarget_as_val(self->inner), "backgroundFetch"));
+}
+
+
+SyncManager ServiceWorkerRegistration_sync(const ServiceWorkerRegistration *self) {
+    return em_Val_as(SyncManager, em_Val_get(EventTarget_as_val(self->inner), "sync"));
+}
+
+
+ContentIndex ServiceWorkerRegistration_index(const ServiceWorkerRegistration *self) {
+    return em_Val_as(ContentIndex, em_Val_get(EventTarget_as_val(self->inner), "index"));
+}
+
+
+CookieStoreManager ServiceWorkerRegistration_cookies(const ServiceWorkerRegistration *self) {
+    return em_Val_as(CookieStoreManager, em_Val_get(EventTarget_as_val(self->inner), "cookies"));
+}
+
+
+jb_Promise ServiceWorkerRegistration_showNotification(ServiceWorkerRegistration* self , const jb_DOMString* title) {
+    return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "showNotification", em_Val_from(title)));
+}
+
+
+jb_Promise ServiceWorkerRegistration_showNotification(ServiceWorkerRegistration* self , const jb_DOMString* title, const NotificationOptions* options) {
+    return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "showNotification", em_Val_from(title), em_Val_from(options)));
+}
+
+
+jb_Promise ServiceWorkerRegistration_getNotifications(ServiceWorkerRegistration* self ) {
+    return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "getNotifications"));
+}
+
+
+jb_Promise ServiceWorkerRegistration_getNotifications(ServiceWorkerRegistration* self , const GetNotificationOptions* filter) {
+    return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "getNotifications", em_Val_from(filter)));
+}
+
+
+PaymentManager ServiceWorkerRegistration_paymentManager(const ServiceWorkerRegistration *self) {
+    return em_Val_as(PaymentManager, em_Val_get(EventTarget_as_val(self->inner), "paymentManager"));
+}
+
+
+PeriodicSyncManager ServiceWorkerRegistration_periodicSync(const ServiceWorkerRegistration *self) {
+    return em_Val_as(PeriodicSyncManager, em_Val_get(EventTarget_as_val(self->inner), "periodicSync"));
+}
+
+
+PushManager ServiceWorkerRegistration_pushManager(const ServiceWorkerRegistration *self) {
+    return em_Val_as(PushManager, em_Val_get(EventTarget_as_val(self->inner), "pushManager"));
+}
+

@@ -22,32 +22,30 @@ function emitAttr(attr, owner, isStatic = false, parent0) {
   const staticKw = isStatic ? "static " : "";
   const constQual = isStatic ? "" : " const";
 
-  let parent = parent0 ? parent0 : "emlite::Val";
+  let parent = parent0 ? parent0 : "em_Val";
 
-  H.push(`    ${staticKw}${type} ${fixIdent(attr.name)}()${constQual};`);
+  H.push(`\n${type} ${owner}_${fixIdent(attr.name)}(${constQual} ${owner} *self);`);
 
   if (isStatic) {
     S.push(
-      `${type} ${owner}::${fixIdent(attr.name)}() {`,
-      `    return em_Val_global("${owner.toLowerCase()}").get("${
-        attr.name
-      }").as<${type}>();`,
+      `\n${type} ${owner}_${fixIdent(attr.name)}() {`,
+      `    return em_Val_as(${type}, em_Val_get(em_Val_global("${owner.toLowerCase()}", "${attr.name}")));`,
       `}`,
       ""
     );
   } else {
     S.push(
-      `${type} ${owner}::${fixIdent(attr.name)}() const {`,
-      `    return ${parent}::get("${attr.name}").as<${type}>();`,
+      `\n${type} ${owner}_${fixIdent(attr.name)}(const ${owner} *self) {`,
+      `    return em_Val_as(${type}, em_Val_get(${parent}_as_val(self->inner), "${attr.name}"));`,
       `}`,
       ""
     );
 
     if (!attr.readonly) {
-      H.push(`    void ${fixIdent(attr.name)}(${argtypeFix(type)} value);`);
+      H.push(`\nvoid ${owner}_set_${fixIdent(attr.name)}(${owner}* self, ${argtypeFix(type)} value);`);
       S.push(
-        `void ${owner}::${fixIdent(attr.name)}(${argtypeFix(type)} value) {`,
-        `    ${parent}::set("${attr.name}", value);`,
+        `\nvoid ${owner}_set_${fixIdent(attr.name)}(${owner}* self, ${argtypeFix(type)} value) {`,
+        `    em_Val_set(${parent}_as_val(self->inner), "${attr.name}", value);`,
         `}`,
         ""
       );
@@ -59,28 +57,27 @@ function emitAttr(attr, owner, isStatic = false, parent0) {
 function emitOp(op, owner, isStatic = false, parent0) {
   const H = [],
     S = [];
-  const parent = parent0 ? parent0 : "emlite::Val";
+  const parent = parent0 ? parent0 : "em_Val";
   if (!op.name) return { H, S };
   const ret = cpp(op.idlType || "undefined");
   const cppName = fixIdent(op.name);
   const variants = variantsOf(op.arguments);
-  const staticKw = isStatic ? "static " : "";
 
   for (const v of variants) {
     const declHdr = argDecl(v);
     const declSrc = declHdr;
-    const callArgs = v.map((a) => fixIdent(a.name)).join(", ");
+    const callArgs = v.map((a) => `em_Val_from(${fixIdent(a.name)})`).join(", ");
     const callExpr = isStatic
-      ? `em_Val_global("${owner.toLowerCase()}").call("${op.name}"${
+      ? `em_Val_call(em_Val_global("${owner.toLowerCase()}"), "${op.name}"${
           callArgs ? ", " + callArgs : ""
         })`
-      : `${parent}::call("${op.name}"${callArgs ? ", " + callArgs : ""})`;
+      : `em_Val_call(${parent}_as_val(self->inner), "${op.name}"${callArgs ? ", " + callArgs : ""})`;
 
-    H.push(`    ${staticKw}${ret} ${cppName}(${declHdr});`);
+    H.push(`\n${ret} ${owner}_${cppName}(${owner}* self ${declHdr.length === 0 ? "" : ", " + declHdr});`);
 
     S.push(
-      `${ret} ${owner}::${cppName}(${declSrc}) {`,
-      `    return ${callExpr}.as<${ret}>();`,
+      `\n${ret} ${owner}_${cppName}(${owner}* self ${declSrc.length === 0 ? "" : ", " + declSrc}) {`,
+      `    return em_Val_as(${ret}, ${callExpr});`,
       `}`,
       ""
     );
@@ -96,12 +93,14 @@ function emitCtor(ctor, owner, parent) {
   for (const v of variants) {
     const declHdr = argDecl(v);
     const declSrc = declHdr;
-    const callArgs = v.map((a) => fixIdent(a.name)).join(", ");
+    const callArgs = v.map((a) => `em_Val_from(${fixIdent(a.name)})`).join(", ");
 
-    H.push(`    ${owner}(${declHdr});`);
+    H.push(`\n${owner} ${owner}_new(${declHdr});`);
 
     S.push(
-      `${owner}::${owner}(${declSrc}) : ${parent}(em_Val_global("${owner}").new_(${callArgs})) {}`,
+      `\n${owner} ${owner}_new(${declSrc}) : ${parent}(em_Val_global("${owner}").new_(${callArgs})) {
+        return ${owner}(em_Val_new(em_Val_global("${owner}", ${callArgs}));
+      }`,
       ""
     );
   }
@@ -115,22 +114,14 @@ function embedDict(dict, hdr, src, ownerName) {
     dictOwner.set(dict.name, `${ownerName}.h`);
   }
   hdr.push(
-    `class ${dict.name} : public emlite::Val {`,
-    `  explicit ${dict.name}(Handle h) noexcept;`,
-    "public:",
-    `    static ${dict.name} from_handle(Handle h) noexcept;`,
-    `    explicit ${dict.name}(const emlite::Val &val) noexcept;`,
-    `    ${dict.name}() noexcept;`,
-    `    ${dict.name} clone() const noexcept;`
+    `typedef struct {`,
+    `  em_Val inner;`,
+    `} ${dict.name};`,
+    "\n",
+    `DECLARE_EMLITE_TYPE(${dict.name}, em_Val);`,
   );
   src.push(
-    `${dict.name}::${dict.name}(Handle h) noexcept : em_Val_from(em_Val_from_handle(h)) {}`,
-    `${dict.name} ${dict.name}::from_handle(Handle h) noexcept {
-        return ${dict.name}(h);
-    }`,
-    `${dict.name}::${dict.name}(const emlite::Val &val) noexcept: em_Val_from(val) {}`,
-    `${dict.name}::${dict.name}() noexcept: em_Val_from(em_Val_object()) {}`,
-    `${dict.name} ${dict.name}::clone() const noexcept { return *this; }`,
+    `DEFINE_EMLITE_TYPE(${dict.name}, em_Val);`,
     ""
   );
   dict.members.forEach((m) => {
@@ -138,7 +129,6 @@ function embedDict(dict, hdr, src, ownerName) {
     hdr.push(...H);
     src.push(...S);
   });
-  hdr.push("};", "");
 }
 
 function refNames(member) {
@@ -353,34 +343,22 @@ export function generate(specAst) {
     localDicts.forEach((d) => embedDict(d, hdr, src, iname));
 
     hdr.push(
-      parent
-        ? `class ${iname} : public ${parent} {`
-        : `class ${iname} : public emlite::Val {`
-    );
+    `typedef struct {`,
+    `  ${parent ? `${parent}` : "em_Val"} inner;`,
+    `} ${iname};`,
+    "\n",
+    `DECLARE_EMLITE_TYPE(${iname}, ${parent ? `${parent}` : "em_Val"});`,
+  );
+  src.push(
+    `DEFINE_EMLITE_TYPE(${iname}, ${parent ? `${parent}` : "em_Val"});`,
+    ""
+  );
 
-    if (!parent) parent = "emlite::Val";
-
-    hdr.push(`    explicit ${iname}(Handle h) noexcept;\n`);
-    hdr.push("public:");
-    hdr.push(`    explicit ${iname}(const emlite::Val &val) noexcept;`);
-    hdr.push(`    static ${iname} from_handle(Handle h) noexcept;\n`);
-    hdr.push(`    ${iname} clone() const noexcept;`);
-    src.push(`${iname} ${iname}::from_handle(Handle h) noexcept {
-        return ${iname}(h);
-    }`);
-    src.push(`${iname} ${iname}::clone() const noexcept { return *this; }`);
-    src.push(
-      `${iname}::${iname}(Handle h) noexcept : ${parent}(em_Val_from_handle(h)) {}`
-    );
-    src.push(
-      `${iname}::${iname}(const emlite::Val &val) noexcept: ${parent}(val) {}`,
-      ""
-    );
-    src.push("");
+    if (!parent) parent = "em_Val";
 
     rec.consts.forEach((c) =>
       hdr.push(
-        `    static constexpr ${cpp(c.idlType)} ${c.name} = ${c.value.value};`
+        `const ${cpp(c.idlType)} ${iname}_${c.name} = ${c.value.value};`
       )
     );
     rec.members.forEach((m) => {
@@ -402,12 +380,11 @@ export function generate(specAst) {
         src.push(...S);
       }
     });
-    hdr.push("};", "");
 
     writePair(iname, hdr, src);
   }
   for (const ns of namespaces) {
-    const hdr = ["\n", `namespace ${ns.name} {`];
+    const hdr = ["\n"];
     const src = ["\n"];
 
     ns.members
@@ -420,7 +397,7 @@ export function generate(specAst) {
           const declSrc = declHdr;
           const callArgs = v.map((a) => fixIdent(a.name)).join(", ");
 
-          hdr.push(`    ${ret} ${cppName}(${declHdr});`);
+          hdr.push(`${ret} ${ns.name}_${cppName}(${declHdr});`);
 
           const callExpr =
             `em_Val_global("${ns.name.toLowerCase()}").call("${
@@ -428,8 +405,8 @@ export function generate(specAst) {
             }"` + (callArgs ? `, ${callArgs})` : ")");
 
           src.push(
-            `${ret} ${ns.name}::${cppName}(${declSrc}) {`,
-            `    return ${callExpr}.as<${ret}>();`,
+            `${ret} ${ns.name}_${cppName}(${declSrc}) {`,
+            `    return em_Val_as(${ret}, ${callExpr});`,
             `}`,
             ""
           );

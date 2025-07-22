@@ -5,4 +5,22 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct wb_HTMLFormElement wb_HTMLFormElement;
+typedef struct HTMLFormElement HTMLFormElement;
+
+
+typedef struct {
+  HTMLElement inner;
+} HTMLLabelElement;
+
+
+DECLARE_EMLITE_TYPE(HTMLLabelElement, HTMLElement);
+
+HTMLLabelElement HTMLLabelElement_new();
+
+HTMLFormElement HTMLLabelElement_form( const HTMLLabelElement *self);
+
+jb_DOMString HTMLLabelElement_htmlFor( const HTMLLabelElement *self);
+
+void HTMLLabelElement_set_htmlFor(HTMLLabelElement* self, const jb_DOMString* value);
+
+HTMLElement HTMLLabelElement_control( const HTMLLabelElement *self);

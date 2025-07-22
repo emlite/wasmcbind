@@ -5,6 +5,30 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
-typedef struct wb_SVGAnimatedNumber wb_SVGAnimatedNumber;
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct SVGAnimatedString SVGAnimatedString;
+typedef struct SVGAnimatedNumber SVGAnimatedNumber;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGFEOffsetElement;
+
+
+DECLARE_EMLITE_TYPE(SVGFEOffsetElement, SVGElement);
+
+SVGAnimatedString SVGFEOffsetElement_in1( const SVGFEOffsetElement *self);
+
+SVGAnimatedNumber SVGFEOffsetElement_dx( const SVGFEOffsetElement *self);
+
+SVGAnimatedNumber SVGFEOffsetElement_dy( const SVGFEOffsetElement *self);
+
+SVGAnimatedLength SVGFEOffsetElement_x( const SVGFEOffsetElement *self);
+
+SVGAnimatedLength SVGFEOffsetElement_y( const SVGFEOffsetElement *self);
+
+SVGAnimatedLength SVGFEOffsetElement_width( const SVGFEOffsetElement *self);
+
+SVGAnimatedLength SVGFEOffsetElement_height( const SVGFEOffsetElement *self);
+
+SVGAnimatedString SVGFEOffsetElement_result( const SVGFEOffsetElement *self);

@@ -5,4 +5,20 @@
 #include "SVGGeometryElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+
+
+typedef struct {
+  SVGGeometryElement inner;
+} SVGEllipseElement;
+
+
+DECLARE_EMLITE_TYPE(SVGEllipseElement, SVGGeometryElement);
+
+SVGAnimatedLength SVGEllipseElement_cx( const SVGEllipseElement *self);
+
+SVGAnimatedLength SVGEllipseElement_cy( const SVGEllipseElement *self);
+
+SVGAnimatedLength SVGEllipseElement_rx( const SVGEllipseElement *self);
+
+SVGAnimatedLength SVGEllipseElement_ry( const SVGEllipseElement *self);

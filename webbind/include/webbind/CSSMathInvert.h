@@ -5,4 +5,16 @@
 #include "CSSMathValue.h"
 #include "enums.h"
 
-typedef struct wb_CSSNumericValue wb_CSSNumericValue;
+typedef struct CSSNumericValue CSSNumericValue;
+
+
+typedef struct {
+  CSSMathValue inner;
+} CSSMathInvert;
+
+
+DECLARE_EMLITE_TYPE(CSSMathInvert, CSSMathValue);
+
+CSSMathInvert CSSMathInvert_new(const jb_Any* arg);
+
+CSSNumericValue CSSMathInvert_value( const CSSMathInvert *self);

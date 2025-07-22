@@ -5,6 +5,42 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct wb_HTMLFormElement wb_HTMLFormElement;
-typedef struct wb_HTMLCollection wb_HTMLCollection;
-typedef struct wb_ValidityState wb_ValidityState;
+typedef struct HTMLFormElement HTMLFormElement;
+typedef struct HTMLCollection HTMLCollection;
+typedef struct ValidityState ValidityState;
+
+
+typedef struct {
+  HTMLElement inner;
+} HTMLFieldSetElement;
+
+
+DECLARE_EMLITE_TYPE(HTMLFieldSetElement, HTMLElement);
+
+HTMLFieldSetElement HTMLFieldSetElement_new();
+
+bool HTMLFieldSetElement_disabled( const HTMLFieldSetElement *self);
+
+void HTMLFieldSetElement_set_disabled(HTMLFieldSetElement* self, bool value);
+
+HTMLFormElement HTMLFieldSetElement_form( const HTMLFieldSetElement *self);
+
+jb_DOMString HTMLFieldSetElement_name( const HTMLFieldSetElement *self);
+
+void HTMLFieldSetElement_set_name(HTMLFieldSetElement* self, const jb_DOMString* value);
+
+jb_DOMString HTMLFieldSetElement_type( const HTMLFieldSetElement *self);
+
+HTMLCollection HTMLFieldSetElement_elements( const HTMLFieldSetElement *self);
+
+bool HTMLFieldSetElement_willValidate( const HTMLFieldSetElement *self);
+
+ValidityState HTMLFieldSetElement_validity( const HTMLFieldSetElement *self);
+
+jb_DOMString HTMLFieldSetElement_validationMessage( const HTMLFieldSetElement *self);
+
+bool HTMLFieldSetElement_checkValidity(HTMLFieldSetElement* self );
+
+bool HTMLFieldSetElement_reportValidity(HTMLFieldSetElement* self );
+
+jb_Undefined HTMLFieldSetElement_setCustomValidity(HTMLFieldSetElement* self , const jb_DOMString* error);

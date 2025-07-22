@@ -4,4 +4,60 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_EventTarget wb_EventTarget;
+typedef struct EventTarget EventTarget;
+
+
+typedef struct {
+  em_Val inner;
+} Event;
+
+
+DECLARE_EMLITE_TYPE(Event, em_Val);
+
+Event Event_new(const jb_DOMString* type);
+
+Event Event_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+
+jb_DOMString Event_type( const Event *self);
+
+EventTarget Event_target( const Event *self);
+
+EventTarget Event_srcElement( const Event *self);
+
+EventTarget Event_currentTarget( const Event *self);
+
+jb_Sequence Event_composedPath(Event* self );
+
+unsigned short Event_eventPhase( const Event *self);
+
+jb_Undefined Event_stopPropagation(Event* self );
+
+bool Event_cancelBubble( const Event *self);
+
+void Event_set_cancelBubble(Event* self, bool value);
+
+jb_Undefined Event_stopImmediatePropagation(Event* self );
+
+bool Event_bubbles( const Event *self);
+
+bool Event_cancelable( const Event *self);
+
+bool Event_returnValue( const Event *self);
+
+void Event_set_returnValue(Event* self, bool value);
+
+jb_Undefined Event_preventDefault(Event* self );
+
+bool Event_defaultPrevented( const Event *self);
+
+bool Event_composed( const Event *self);
+
+bool Event_isTrusted( const Event *self);
+
+jb_Any Event_timeStamp( const Event *self);
+
+jb_Undefined Event_initEvent(Event* self , const jb_DOMString* type);
+
+jb_Undefined Event_initEvent(Event* self , const jb_DOMString* type, bool bubbles);
+
+jb_Undefined Event_initEvent(Event* self , const jb_DOMString* type, bool bubbles, bool cancelable);

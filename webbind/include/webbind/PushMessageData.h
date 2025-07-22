@@ -4,4 +4,22 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_Blob wb_Blob;
+typedef struct Blob Blob;
+
+
+typedef struct {
+  em_Val inner;
+} PushMessageData;
+
+
+DECLARE_EMLITE_TYPE(PushMessageData, em_Val);
+
+jb_ArrayBuffer PushMessageData_arrayBuffer(PushMessageData* self );
+
+Blob PushMessageData_blob(PushMessageData* self );
+
+jb_Uint8Array PushMessageData_bytes(PushMessageData* self );
+
+jb_Any PushMessageData_json(PushMessageData* self );
+
+jb_USVString PushMessageData_text(PushMessageData* self );

@@ -1,2 +1,16 @@
 #include <webbind/CSSMediaRule.h>
 #include <webbind/MediaList.h>
+
+
+DEFINE_EMLITE_TYPE(CSSMediaRule, CSSConditionRule);
+
+
+MediaList CSSMediaRule_media(const CSSMediaRule *self) {
+    return em_Val_as(MediaList, em_Val_get(CSSConditionRule_as_val(self->inner), "media"));
+}
+
+
+bool CSSMediaRule_matches(const CSSMediaRule *self) {
+    return em_Val_as(bool, em_Val_get(CSSConditionRule_as_val(self->inner), "matches"));
+}
+

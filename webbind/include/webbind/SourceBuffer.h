@@ -5,7 +5,69 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-typedef struct wb_TimeRanges wb_TimeRanges;
-typedef struct wb_AudioTrackList wb_AudioTrackList;
-typedef struct wb_VideoTrackList wb_VideoTrackList;
-typedef struct wb_TextTrackList wb_TextTrackList;
+typedef struct TimeRanges TimeRanges;
+typedef struct AudioTrackList AudioTrackList;
+typedef struct VideoTrackList VideoTrackList;
+typedef struct TextTrackList TextTrackList;
+
+
+typedef struct {
+  EventTarget inner;
+} SourceBuffer;
+
+
+DECLARE_EMLITE_TYPE(SourceBuffer, EventTarget);
+
+AppendMode SourceBuffer_mode( const SourceBuffer *self);
+
+void SourceBuffer_set_mode(SourceBuffer* self, const AppendMode* value);
+
+bool SourceBuffer_updating( const SourceBuffer *self);
+
+TimeRanges SourceBuffer_buffered( const SourceBuffer *self);
+
+double SourceBuffer_timestampOffset( const SourceBuffer *self);
+
+void SourceBuffer_set_timestampOffset(SourceBuffer* self, double value);
+
+AudioTrackList SourceBuffer_audioTracks( const SourceBuffer *self);
+
+VideoTrackList SourceBuffer_videoTracks( const SourceBuffer *self);
+
+TextTrackList SourceBuffer_textTracks( const SourceBuffer *self);
+
+double SourceBuffer_appendWindowStart( const SourceBuffer *self);
+
+void SourceBuffer_set_appendWindowStart(SourceBuffer* self, double value);
+
+double SourceBuffer_appendWindowEnd( const SourceBuffer *self);
+
+void SourceBuffer_set_appendWindowEnd(SourceBuffer* self, double value);
+
+jb_Any SourceBuffer_onupdatestart( const SourceBuffer *self);
+
+void SourceBuffer_set_onupdatestart(SourceBuffer* self, const jb_Any* value);
+
+jb_Any SourceBuffer_onupdate( const SourceBuffer *self);
+
+void SourceBuffer_set_onupdate(SourceBuffer* self, const jb_Any* value);
+
+jb_Any SourceBuffer_onupdateend( const SourceBuffer *self);
+
+void SourceBuffer_set_onupdateend(SourceBuffer* self, const jb_Any* value);
+
+jb_Any SourceBuffer_onerror( const SourceBuffer *self);
+
+void SourceBuffer_set_onerror(SourceBuffer* self, const jb_Any* value);
+
+jb_Any SourceBuffer_onabort( const SourceBuffer *self);
+
+void SourceBuffer_set_onabort(SourceBuffer* self, const jb_Any* value);
+
+jb_Undefined SourceBuffer_appendBuffer(SourceBuffer* self , const jb_Any* data);
+
+jb_Undefined SourceBuffer_abort(SourceBuffer* self );
+
+jb_Undefined SourceBuffer_changeType(SourceBuffer* self , const jb_DOMString* type);
+
+jb_Undefined SourceBuffer_remove(SourceBuffer* self , double start, double end);

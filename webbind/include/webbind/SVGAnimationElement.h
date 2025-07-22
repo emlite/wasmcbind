@@ -5,4 +5,44 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGStringList wb_SVGStringList;
+typedef struct SVGStringList SVGStringList;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGAnimationElement;
+
+
+DECLARE_EMLITE_TYPE(SVGAnimationElement, SVGElement);
+
+SVGElement SVGAnimationElement_targetElement( const SVGAnimationElement *self);
+
+jb_Any SVGAnimationElement_onbegin( const SVGAnimationElement *self);
+
+void SVGAnimationElement_set_onbegin(SVGAnimationElement* self, const jb_Any* value);
+
+jb_Any SVGAnimationElement_onend( const SVGAnimationElement *self);
+
+void SVGAnimationElement_set_onend(SVGAnimationElement* self, const jb_Any* value);
+
+jb_Any SVGAnimationElement_onrepeat( const SVGAnimationElement *self);
+
+void SVGAnimationElement_set_onrepeat(SVGAnimationElement* self, const jb_Any* value);
+
+float SVGAnimationElement_getStartTime(SVGAnimationElement* self );
+
+float SVGAnimationElement_getCurrentTime(SVGAnimationElement* self );
+
+float SVGAnimationElement_getSimpleDuration(SVGAnimationElement* self );
+
+jb_Undefined SVGAnimationElement_beginElement(SVGAnimationElement* self );
+
+jb_Undefined SVGAnimationElement_beginElementAt(SVGAnimationElement* self , float offset);
+
+jb_Undefined SVGAnimationElement_endElement(SVGAnimationElement* self );
+
+jb_Undefined SVGAnimationElement_endElementAt(SVGAnimationElement* self , float offset);
+
+SVGStringList SVGAnimationElement_requiredExtensions( const SVGAnimationElement *self);
+
+SVGStringList SVGAnimationElement_systemLanguage( const SVGAnimationElement *self);

@@ -4,8 +4,118 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_AttributionAggregationServices wb_AttributionAggregationServices;
-typedef struct wb_AttributionImpressionResult wb_AttributionImpressionResult;
-typedef struct wb_AttributionImpressionOptions wb_AttributionImpressionOptions;
-typedef struct wb_AttributionConversionResult wb_AttributionConversionResult;
-typedef struct wb_AttributionConversionOptions wb_AttributionConversionOptions;
+typedef struct AttributionAggregationServices AttributionAggregationServices;
+typedef struct AttributionImpressionResult AttributionImpressionResult;
+typedef struct AttributionImpressionOptions AttributionImpressionOptions;
+typedef struct AttributionConversionResult AttributionConversionResult;
+typedef struct AttributionConversionOptions AttributionConversionOptions;
+
+
+typedef struct {
+  em_Val inner;
+} AttributionImpressionResult;
+
+
+DECLARE_EMLITE_TYPE(AttributionImpressionResult, em_Val);
+typedef struct {
+  em_Val inner;
+} AttributionImpressionOptions;
+
+
+DECLARE_EMLITE_TYPE(AttributionImpressionOptions, em_Val);
+
+unsigned long AttributionImpressionOptions_histogramIndex( const AttributionImpressionOptions *self);
+
+void AttributionImpressionOptions_set_histogramIndex(AttributionImpressionOptions* self, unsigned long value);
+
+unsigned long AttributionImpressionOptions_matchValue( const AttributionImpressionOptions *self);
+
+void AttributionImpressionOptions_set_matchValue(AttributionImpressionOptions* self, unsigned long value);
+
+jb_Sequence AttributionImpressionOptions_conversionSites( const AttributionImpressionOptions *self);
+
+void AttributionImpressionOptions_set_conversionSites(AttributionImpressionOptions* self, const jb_Sequence* value);
+
+jb_Sequence AttributionImpressionOptions_conversionCallers( const AttributionImpressionOptions *self);
+
+void AttributionImpressionOptions_set_conversionCallers(AttributionImpressionOptions* self, const jb_Sequence* value);
+
+unsigned long AttributionImpressionOptions_lifetimeDays( const AttributionImpressionOptions *self);
+
+void AttributionImpressionOptions_set_lifetimeDays(AttributionImpressionOptions* self, unsigned long value);
+
+long AttributionImpressionOptions_priority( const AttributionImpressionOptions *self);
+
+void AttributionImpressionOptions_set_priority(AttributionImpressionOptions* self, long value);
+typedef struct {
+  em_Val inner;
+} AttributionConversionResult;
+
+
+DECLARE_EMLITE_TYPE(AttributionConversionResult, em_Val);
+
+jb_Uint8Array AttributionConversionResult_report( const AttributionConversionResult *self);
+
+void AttributionConversionResult_set_report(AttributionConversionResult* self, const jb_Uint8Array* value);
+typedef struct {
+  em_Val inner;
+} AttributionConversionOptions;
+
+
+DECLARE_EMLITE_TYPE(AttributionConversionOptions, em_Val);
+
+jb_USVString AttributionConversionOptions_aggregationService( const AttributionConversionOptions *self);
+
+void AttributionConversionOptions_set_aggregationService(AttributionConversionOptions* self, const jb_USVString* value);
+
+double AttributionConversionOptions_epsilon( const AttributionConversionOptions *self);
+
+void AttributionConversionOptions_set_epsilon(AttributionConversionOptions* self, double value);
+
+unsigned long AttributionConversionOptions_histogramSize( const AttributionConversionOptions *self);
+
+void AttributionConversionOptions_set_histogramSize(AttributionConversionOptions* self, unsigned long value);
+
+unsigned long AttributionConversionOptions_lookbackDays( const AttributionConversionOptions *self);
+
+void AttributionConversionOptions_set_lookbackDays(AttributionConversionOptions* self, unsigned long value);
+
+jb_Sequence AttributionConversionOptions_matchValues( const AttributionConversionOptions *self);
+
+void AttributionConversionOptions_set_matchValues(AttributionConversionOptions* self, const jb_Sequence* value);
+
+jb_Sequence AttributionConversionOptions_impressionSites( const AttributionConversionOptions *self);
+
+void AttributionConversionOptions_set_impressionSites(AttributionConversionOptions* self, const jb_Sequence* value);
+
+jb_Sequence AttributionConversionOptions_impressionCallers( const AttributionConversionOptions *self);
+
+void AttributionConversionOptions_set_impressionCallers(AttributionConversionOptions* self, const jb_Sequence* value);
+
+AttributionLogic AttributionConversionOptions_logic( const AttributionConversionOptions *self);
+
+void AttributionConversionOptions_set_logic(AttributionConversionOptions* self, const AttributionLogic* value);
+
+AttributionLogicOptions AttributionConversionOptions_logicOptions( const AttributionConversionOptions *self);
+
+void AttributionConversionOptions_set_logicOptions(AttributionConversionOptions* self, const AttributionLogicOptions* value);
+
+unsigned long AttributionConversionOptions_value( const AttributionConversionOptions *self);
+
+void AttributionConversionOptions_set_value(AttributionConversionOptions* self, unsigned long value);
+
+unsigned long AttributionConversionOptions_maxValue( const AttributionConversionOptions *self);
+
+void AttributionConversionOptions_set_maxValue(AttributionConversionOptions* self, unsigned long value);
+typedef struct {
+  em_Val inner;
+} Attribution;
+
+
+DECLARE_EMLITE_TYPE(Attribution, em_Val);
+
+AttributionAggregationServices Attribution_aggregationServices( const Attribution *self);
+
+jb_Promise Attribution_saveImpression(Attribution* self , const AttributionImpressionOptions* options);
+
+jb_Promise Attribution_measureConversion(Attribution* self , const AttributionConversionOptions* options);

@@ -1,2 +1,46 @@
 #include <webbind/Attr.h>
 #include <webbind/Element.h>
+
+
+DEFINE_EMLITE_TYPE(Attr, Node);
+
+
+jb_DOMString Attr_namespaceURI(const Attr *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "namespaceURI"));
+}
+
+
+jb_DOMString Attr_prefix(const Attr *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "prefix"));
+}
+
+
+jb_DOMString Attr_localName(const Attr *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "localName"));
+}
+
+
+jb_DOMString Attr_name(const Attr *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "name"));
+}
+
+
+jb_DOMString Attr_value(const Attr *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), "value"));
+}
+
+
+void Attr_set_value(Attr* self, const jb_DOMString* value) {
+    em_Val_set(Node_as_val(self->inner), "value", value);
+}
+
+
+Element Attr_ownerElement(const Attr *self) {
+    return em_Val_as(Element, em_Val_get(Node_as_val(self->inner), "ownerElement"));
+}
+
+
+bool Attr_specified(const Attr *self) {
+    return em_Val_as(bool, em_Val_get(Node_as_val(self->inner), "specified"));
+}
+

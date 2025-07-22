@@ -5,5 +5,33 @@
 #include "XRCompositionLayer.h"
 #include "enums.h"
 
-typedef struct wb_XRSpace wb_XRSpace;
-typedef struct wb_XRRigidTransform wb_XRRigidTransform;
+typedef struct XRSpace XRSpace;
+typedef struct XRRigidTransform XRRigidTransform;
+
+
+typedef struct {
+  XRCompositionLayer inner;
+} XRQuadLayer;
+
+
+DECLARE_EMLITE_TYPE(XRQuadLayer, XRCompositionLayer);
+
+XRSpace XRQuadLayer_space( const XRQuadLayer *self);
+
+void XRQuadLayer_set_space(XRQuadLayer* self, const XRSpace* value);
+
+XRRigidTransform XRQuadLayer_transform( const XRQuadLayer *self);
+
+void XRQuadLayer_set_transform(XRQuadLayer* self, const XRRigidTransform* value);
+
+float XRQuadLayer_width( const XRQuadLayer *self);
+
+void XRQuadLayer_set_width(XRQuadLayer* self, float value);
+
+float XRQuadLayer_height( const XRQuadLayer *self);
+
+void XRQuadLayer_set_height(XRQuadLayer* self, float value);
+
+jb_Any XRQuadLayer_onredraw( const XRQuadLayer *self);
+
+void XRQuadLayer_set_onredraw(XRQuadLayer* self, const jb_Any* value);

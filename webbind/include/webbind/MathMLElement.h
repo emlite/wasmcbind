@@ -6,5 +6,39 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_CSSStyleDeclaration wb_CSSStyleDeclaration;
-typedef struct wb_DOMStringMap wb_DOMStringMap;
+typedef struct CSSStyleDeclaration CSSStyleDeclaration;
+typedef struct DOMStringMap DOMStringMap;
+
+
+typedef struct {
+  Element inner;
+} MathMLElement;
+
+
+DECLARE_EMLITE_TYPE(MathMLElement, Element);
+
+CSSStyleProperties MathMLElement_style( const MathMLElement *self);
+
+jb_Any MathMLElement_onbeforexrselect( const MathMLElement *self);
+
+void MathMLElement_set_onbeforexrselect(MathMLElement* self, const jb_Any* value);
+
+DOMStringMap MathMLElement_dataset( const MathMLElement *self);
+
+jb_DOMString MathMLElement_nonce( const MathMLElement *self);
+
+void MathMLElement_set_nonce(MathMLElement* self, const jb_DOMString* value);
+
+bool MathMLElement_autofocus( const MathMLElement *self);
+
+void MathMLElement_set_autofocus(MathMLElement* self, bool value);
+
+long MathMLElement_tabIndex( const MathMLElement *self);
+
+void MathMLElement_set_tabIndex(MathMLElement* self, long value);
+
+jb_Undefined MathMLElement_focus(MathMLElement* self );
+
+jb_Undefined MathMLElement_focus(MathMLElement* self , const FocusOptions* options);
+
+jb_Undefined MathMLElement_blur(MathMLElement* self );

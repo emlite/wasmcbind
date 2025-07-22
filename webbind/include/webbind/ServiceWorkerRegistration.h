@@ -5,17 +5,139 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-typedef struct wb_ServiceWorker wb_ServiceWorker;
-typedef struct wb_NavigationPreloadManager wb_NavigationPreloadManager;
-typedef struct wb_ServiceWorkerRegistration wb_ServiceWorkerRegistration;
-typedef struct wb_BackgroundFetchManager wb_BackgroundFetchManager;
-typedef struct wb_SyncManager wb_SyncManager;
-typedef struct wb_ContentIndex wb_ContentIndex;
-typedef struct wb_CookieStoreManager wb_CookieStoreManager;
-typedef struct wb_NotificationOptions wb_NotificationOptions;
-typedef struct wb_Notification wb_Notification;
-typedef struct wb_GetNotificationOptions wb_GetNotificationOptions;
-typedef struct wb_PaymentManager wb_PaymentManager;
-typedef struct wb_PeriodicSyncManager wb_PeriodicSyncManager;
-typedef struct wb_PushManager wb_PushManager;
-typedef struct wb_NotificationAction wb_NotificationAction;
+typedef struct ServiceWorker ServiceWorker;
+typedef struct NavigationPreloadManager NavigationPreloadManager;
+typedef struct ServiceWorkerRegistration ServiceWorkerRegistration;
+typedef struct BackgroundFetchManager BackgroundFetchManager;
+typedef struct SyncManager SyncManager;
+typedef struct ContentIndex ContentIndex;
+typedef struct CookieStoreManager CookieStoreManager;
+typedef struct NotificationOptions NotificationOptions;
+typedef struct Notification Notification;
+typedef struct GetNotificationOptions GetNotificationOptions;
+typedef struct PaymentManager PaymentManager;
+typedef struct PeriodicSyncManager PeriodicSyncManager;
+typedef struct PushManager PushManager;
+typedef struct NotificationAction NotificationAction;
+
+
+typedef struct {
+  em_Val inner;
+} NotificationOptions;
+
+
+DECLARE_EMLITE_TYPE(NotificationOptions, em_Val);
+
+NotificationDirection NotificationOptions_dir( const NotificationOptions *self);
+
+void NotificationOptions_set_dir(NotificationOptions* self, const NotificationDirection* value);
+
+jb_DOMString NotificationOptions_lang( const NotificationOptions *self);
+
+void NotificationOptions_set_lang(NotificationOptions* self, const jb_DOMString* value);
+
+jb_DOMString NotificationOptions_body( const NotificationOptions *self);
+
+void NotificationOptions_set_body(NotificationOptions* self, const jb_DOMString* value);
+
+jb_DOMString NotificationOptions_tag( const NotificationOptions *self);
+
+void NotificationOptions_set_tag(NotificationOptions* self, const jb_DOMString* value);
+
+jb_USVString NotificationOptions_image( const NotificationOptions *self);
+
+void NotificationOptions_set_image(NotificationOptions* self, const jb_USVString* value);
+
+jb_USVString NotificationOptions_icon( const NotificationOptions *self);
+
+void NotificationOptions_set_icon(NotificationOptions* self, const jb_USVString* value);
+
+jb_USVString NotificationOptions_badge( const NotificationOptions *self);
+
+void NotificationOptions_set_badge(NotificationOptions* self, const jb_USVString* value);
+
+jb_Any NotificationOptions_vibrate( const NotificationOptions *self);
+
+void NotificationOptions_set_vibrate(NotificationOptions* self, const jb_Any* value);
+
+jb_Any NotificationOptions_timestamp( const NotificationOptions *self);
+
+void NotificationOptions_set_timestamp(NotificationOptions* self, const jb_Any* value);
+
+bool NotificationOptions_renotify( const NotificationOptions *self);
+
+void NotificationOptions_set_renotify(NotificationOptions* self, bool value);
+
+bool NotificationOptions_silent( const NotificationOptions *self);
+
+void NotificationOptions_set_silent(NotificationOptions* self, bool value);
+
+bool NotificationOptions_requireInteraction( const NotificationOptions *self);
+
+void NotificationOptions_set_requireInteraction(NotificationOptions* self, bool value);
+
+jb_Any NotificationOptions_data( const NotificationOptions *self);
+
+void NotificationOptions_set_data(NotificationOptions* self, const jb_Any* value);
+
+jb_Sequence NotificationOptions_actions( const NotificationOptions *self);
+
+void NotificationOptions_set_actions(NotificationOptions* self, const jb_Sequence* value);
+typedef struct {
+  em_Val inner;
+} GetNotificationOptions;
+
+
+DECLARE_EMLITE_TYPE(GetNotificationOptions, em_Val);
+
+jb_DOMString GetNotificationOptions_tag( const GetNotificationOptions *self);
+
+void GetNotificationOptions_set_tag(GetNotificationOptions* self, const jb_DOMString* value);
+typedef struct {
+  EventTarget inner;
+} ServiceWorkerRegistration;
+
+
+DECLARE_EMLITE_TYPE(ServiceWorkerRegistration, EventTarget);
+
+ServiceWorker ServiceWorkerRegistration_installing( const ServiceWorkerRegistration *self);
+
+ServiceWorker ServiceWorkerRegistration_waiting( const ServiceWorkerRegistration *self);
+
+ServiceWorker ServiceWorkerRegistration_active( const ServiceWorkerRegistration *self);
+
+NavigationPreloadManager ServiceWorkerRegistration_navigationPreload( const ServiceWorkerRegistration *self);
+
+jb_USVString ServiceWorkerRegistration_scope( const ServiceWorkerRegistration *self);
+
+ServiceWorkerUpdateViaCache ServiceWorkerRegistration_updateViaCache( const ServiceWorkerRegistration *self);
+
+jb_Promise ServiceWorkerRegistration_update(ServiceWorkerRegistration* self );
+
+jb_Promise ServiceWorkerRegistration_unregister(ServiceWorkerRegistration* self );
+
+jb_Any ServiceWorkerRegistration_onupdatefound( const ServiceWorkerRegistration *self);
+
+void ServiceWorkerRegistration_set_onupdatefound(ServiceWorkerRegistration* self, const jb_Any* value);
+
+BackgroundFetchManager ServiceWorkerRegistration_backgroundFetch( const ServiceWorkerRegistration *self);
+
+SyncManager ServiceWorkerRegistration_sync( const ServiceWorkerRegistration *self);
+
+ContentIndex ServiceWorkerRegistration_index( const ServiceWorkerRegistration *self);
+
+CookieStoreManager ServiceWorkerRegistration_cookies( const ServiceWorkerRegistration *self);
+
+jb_Promise ServiceWorkerRegistration_showNotification(ServiceWorkerRegistration* self , const jb_DOMString* title);
+
+jb_Promise ServiceWorkerRegistration_showNotification(ServiceWorkerRegistration* self , const jb_DOMString* title, const NotificationOptions* options);
+
+jb_Promise ServiceWorkerRegistration_getNotifications(ServiceWorkerRegistration* self );
+
+jb_Promise ServiceWorkerRegistration_getNotifications(ServiceWorkerRegistration* self , const GetNotificationOptions* filter);
+
+PaymentManager ServiceWorkerRegistration_paymentManager( const ServiceWorkerRegistration *self);
+
+PeriodicSyncManager ServiceWorkerRegistration_periodicSync( const ServiceWorkerRegistration *self);
+
+PushManager ServiceWorkerRegistration_pushManager( const ServiceWorkerRegistration *self);

@@ -4,4 +4,18 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_SpeechRecognitionAlternative wb_SpeechRecognitionAlternative;
+typedef struct SpeechRecognitionAlternative SpeechRecognitionAlternative;
+
+
+typedef struct {
+  em_Val inner;
+} SpeechRecognitionResult;
+
+
+DECLARE_EMLITE_TYPE(SpeechRecognitionResult, em_Val);
+
+unsigned long SpeechRecognitionResult_length( const SpeechRecognitionResult *self);
+
+SpeechRecognitionAlternative SpeechRecognitionResult_item(SpeechRecognitionResult* self , unsigned long index);
+
+bool SpeechRecognitionResult_isFinal( const SpeechRecognitionResult *self);

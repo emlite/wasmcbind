@@ -5,4 +5,28 @@
 #include "PerformanceEntry.h"
 #include "enums.h"
 
-typedef struct wb_Element wb_Element;
+typedef struct Element Element;
+
+
+typedef struct {
+  PerformanceEntry inner;
+} LargestContentfulPaint;
+
+
+DECLARE_EMLITE_TYPE(LargestContentfulPaint, PerformanceEntry);
+
+jb_Any LargestContentfulPaint_loadTime( const LargestContentfulPaint *self);
+
+unsigned long LargestContentfulPaint_size( const LargestContentfulPaint *self);
+
+jb_DOMString LargestContentfulPaint_id( const LargestContentfulPaint *self);
+
+jb_DOMString LargestContentfulPaint_url( const LargestContentfulPaint *self);
+
+Element LargestContentfulPaint_element( const LargestContentfulPaint *self);
+
+jb_Object LargestContentfulPaint_toJSON(LargestContentfulPaint* self );
+
+jb_Any LargestContentfulPaint_paintTime( const LargestContentfulPaint *self);
+
+jb_Any LargestContentfulPaint_presentationTime( const LargestContentfulPaint *self);

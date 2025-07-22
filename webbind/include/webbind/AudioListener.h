@@ -4,4 +4,34 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_AudioParam wb_AudioParam;
+typedef struct AudioParam AudioParam;
+
+
+typedef struct {
+  em_Val inner;
+} AudioListener;
+
+
+DECLARE_EMLITE_TYPE(AudioListener, em_Val);
+
+AudioParam AudioListener_positionX( const AudioListener *self);
+
+AudioParam AudioListener_positionY( const AudioListener *self);
+
+AudioParam AudioListener_positionZ( const AudioListener *self);
+
+AudioParam AudioListener_forwardX( const AudioListener *self);
+
+AudioParam AudioListener_forwardY( const AudioListener *self);
+
+AudioParam AudioListener_forwardZ( const AudioListener *self);
+
+AudioParam AudioListener_upX( const AudioListener *self);
+
+AudioParam AudioListener_upY( const AudioListener *self);
+
+AudioParam AudioListener_upZ( const AudioListener *self);
+
+jb_Undefined AudioListener_setPosition(AudioListener* self , float x, float y, float z);
+
+jb_Undefined AudioListener_setOrientation(AudioListener* self , float x, float y, float z, float xUp, float yUp, float zUp);

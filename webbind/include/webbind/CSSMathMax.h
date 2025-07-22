@@ -5,4 +5,16 @@
 #include "CSSMathValue.h"
 #include "enums.h"
 
-typedef struct wb_CSSNumericArray wb_CSSNumericArray;
+typedef struct CSSNumericArray CSSNumericArray;
+
+
+typedef struct {
+  CSSMathValue inner;
+} CSSMathMax;
+
+
+DECLARE_EMLITE_TYPE(CSSMathMax, CSSMathValue);
+
+CSSMathMax CSSMathMax_new(const jb_Any* args);
+
+CSSNumericArray CSSMathMax_values( const CSSMathMax *self);

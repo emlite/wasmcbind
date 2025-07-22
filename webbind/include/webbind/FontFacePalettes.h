@@ -4,4 +4,14 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_FontFacePalette wb_FontFacePalette;
+typedef struct FontFacePalette FontFacePalette;
+
+
+typedef struct {
+  em_Val inner;
+} FontFacePalettes;
+
+
+DECLARE_EMLITE_TYPE(FontFacePalettes, em_Val);
+
+unsigned long FontFacePalettes_length( const FontFacePalettes *self);

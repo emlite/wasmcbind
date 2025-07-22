@@ -5,4 +5,16 @@
 #include "PermissionStatus.h"
 #include "enums.h"
 
-typedef struct wb_USBDevice wb_USBDevice;
+typedef struct USBDevice USBDevice;
+
+
+typedef struct {
+  PermissionStatus inner;
+} USBPermissionResult;
+
+
+DECLARE_EMLITE_TYPE(USBPermissionResult, PermissionStatus);
+
+jb_FrozenArray USBPermissionResult_devices( const USBPermissionResult *self);
+
+void USBPermissionResult_set_devices(USBPermissionResult* self, const jb_FrozenArray* value);

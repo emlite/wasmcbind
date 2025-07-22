@@ -4,6 +4,54 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_LockOptions wb_LockOptions;
-typedef struct wb_LockManagerSnapshot wb_LockManagerSnapshot;
-typedef struct wb_AbortSignal wb_AbortSignal;
+typedef struct LockOptions LockOptions;
+typedef struct LockManagerSnapshot LockManagerSnapshot;
+typedef struct AbortSignal AbortSignal;
+
+
+typedef struct {
+  em_Val inner;
+} LockOptions;
+
+
+DECLARE_EMLITE_TYPE(LockOptions, em_Val);
+
+LockMode LockOptions_mode( const LockOptions *self);
+
+void LockOptions_set_mode(LockOptions* self, const LockMode* value);
+
+bool LockOptions_ifAvailable( const LockOptions *self);
+
+void LockOptions_set_ifAvailable(LockOptions* self, bool value);
+
+bool LockOptions_steal( const LockOptions *self);
+
+void LockOptions_set_steal(LockOptions* self, bool value);
+
+AbortSignal LockOptions_signal( const LockOptions *self);
+
+void LockOptions_set_signal(LockOptions* self, const AbortSignal* value);
+typedef struct {
+  em_Val inner;
+} LockManagerSnapshot;
+
+
+DECLARE_EMLITE_TYPE(LockManagerSnapshot, em_Val);
+
+jb_Sequence LockManagerSnapshot_held( const LockManagerSnapshot *self);
+
+void LockManagerSnapshot_set_held(LockManagerSnapshot* self, const jb_Sequence* value);
+
+jb_Sequence LockManagerSnapshot_pending( const LockManagerSnapshot *self);
+
+void LockManagerSnapshot_set_pending(LockManagerSnapshot* self, const jb_Sequence* value);
+typedef struct {
+  em_Val inner;
+} LockManager;
+
+
+DECLARE_EMLITE_TYPE(LockManager, em_Val);
+
+jb_Promise LockManager_request(LockManager* self , const jb_DOMString* name, const LockOptions* options, const jb_Function* callback);
+
+jb_Promise LockManager_query(LockManager* self );

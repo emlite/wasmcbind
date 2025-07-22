@@ -4,3 +4,19 @@
 #include <jsbind/jsbind.h>
 #include "Credential.h"
 #include "enums.h"
+
+
+typedef struct {
+  Credential inner;
+} PasswordCredential;
+
+
+DECLARE_EMLITE_TYPE(PasswordCredential, Credential);
+
+PasswordCredential PasswordCredential_new(const jb_Any* data);
+
+jb_USVString PasswordCredential_password( const PasswordCredential *self);
+
+jb_USVString PasswordCredential_name( const PasswordCredential *self);
+
+jb_USVString PasswordCredential_iconURL( const PasswordCredential *self);

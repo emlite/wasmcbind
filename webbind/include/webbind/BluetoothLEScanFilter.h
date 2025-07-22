@@ -4,5 +4,27 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_BluetoothManufacturerDataFilter wb_BluetoothManufacturerDataFilter;
-typedef struct wb_BluetoothServiceDataFilter wb_BluetoothServiceDataFilter;
+typedef struct BluetoothManufacturerDataFilter BluetoothManufacturerDataFilter;
+typedef struct BluetoothServiceDataFilter BluetoothServiceDataFilter;
+
+
+typedef struct {
+  em_Val inner;
+} BluetoothLEScanFilter;
+
+
+DECLARE_EMLITE_TYPE(BluetoothLEScanFilter, em_Val);
+
+BluetoothLEScanFilter BluetoothLEScanFilter_new();
+
+BluetoothLEScanFilter BluetoothLEScanFilter_new(const jb_Any* init);
+
+jb_DOMString BluetoothLEScanFilter_name( const BluetoothLEScanFilter *self);
+
+jb_DOMString BluetoothLEScanFilter_namePrefix( const BluetoothLEScanFilter *self);
+
+jb_FrozenArray BluetoothLEScanFilter_services( const BluetoothLEScanFilter *self);
+
+BluetoothManufacturerDataFilter BluetoothLEScanFilter_manufacturerData( const BluetoothLEScanFilter *self);
+
+BluetoothServiceDataFilter BluetoothLEScanFilter_serviceData( const BluetoothLEScanFilter *self);

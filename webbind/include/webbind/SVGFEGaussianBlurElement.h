@@ -5,7 +5,35 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
-typedef struct wb_SVGAnimatedNumber wb_SVGAnimatedNumber;
-typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct SVGAnimatedString SVGAnimatedString;
+typedef struct SVGAnimatedNumber SVGAnimatedNumber;
+typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGFEGaussianBlurElement;
+
+
+DECLARE_EMLITE_TYPE(SVGFEGaussianBlurElement, SVGElement);
+
+SVGAnimatedString SVGFEGaussianBlurElement_in1( const SVGFEGaussianBlurElement *self);
+
+SVGAnimatedNumber SVGFEGaussianBlurElement_stdDeviationX( const SVGFEGaussianBlurElement *self);
+
+SVGAnimatedNumber SVGFEGaussianBlurElement_stdDeviationY( const SVGFEGaussianBlurElement *self);
+
+SVGAnimatedEnumeration SVGFEGaussianBlurElement_edgeMode( const SVGFEGaussianBlurElement *self);
+
+jb_Undefined SVGFEGaussianBlurElement_setStdDeviation(SVGFEGaussianBlurElement* self , float stdDeviationX, float stdDeviationY);
+
+SVGAnimatedLength SVGFEGaussianBlurElement_x( const SVGFEGaussianBlurElement *self);
+
+SVGAnimatedLength SVGFEGaussianBlurElement_y( const SVGFEGaussianBlurElement *self);
+
+SVGAnimatedLength SVGFEGaussianBlurElement_width( const SVGFEGaussianBlurElement *self);
+
+SVGAnimatedLength SVGFEGaussianBlurElement_height( const SVGFEGaussianBlurElement *self);
+
+SVGAnimatedString SVGFEGaussianBlurElement_result( const SVGFEGaussianBlurElement *self);

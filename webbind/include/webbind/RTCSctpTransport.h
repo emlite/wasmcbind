@@ -5,4 +5,24 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-typedef struct wb_RTCDtlsTransport wb_RTCDtlsTransport;
+typedef struct RTCDtlsTransport RTCDtlsTransport;
+
+
+typedef struct {
+  EventTarget inner;
+} RTCSctpTransport;
+
+
+DECLARE_EMLITE_TYPE(RTCSctpTransport, EventTarget);
+
+RTCDtlsTransport RTCSctpTransport_transport( const RTCSctpTransport *self);
+
+RTCSctpTransportState RTCSctpTransport_state( const RTCSctpTransport *self);
+
+double RTCSctpTransport_maxMessageSize( const RTCSctpTransport *self);
+
+unsigned short RTCSctpTransport_maxChannels( const RTCSctpTransport *self);
+
+jb_Any RTCSctpTransport_onstatechange( const RTCSctpTransport *self);
+
+void RTCSctpTransport_set_onstatechange(RTCSctpTransport* self, const jb_Any* value);

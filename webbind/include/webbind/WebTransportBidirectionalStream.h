@@ -4,5 +4,17 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_WebTransportReceiveStream wb_WebTransportReceiveStream;
-typedef struct wb_WebTransportSendStream wb_WebTransportSendStream;
+typedef struct WebTransportReceiveStream WebTransportReceiveStream;
+typedef struct WebTransportSendStream WebTransportSendStream;
+
+
+typedef struct {
+  em_Val inner;
+} WebTransportBidirectionalStream;
+
+
+DECLARE_EMLITE_TYPE(WebTransportBidirectionalStream, em_Val);
+
+WebTransportReceiveStream WebTransportBidirectionalStream_readable( const WebTransportBidirectionalStream *self);
+
+WebTransportSendStream WebTransportBidirectionalStream_writable( const WebTransportBidirectionalStream *self);

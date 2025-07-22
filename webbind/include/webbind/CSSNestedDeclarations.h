@@ -5,4 +5,14 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-typedef struct wb_CSSStyleProperties wb_CSSStyleProperties;
+typedef struct CSSStyleProperties CSSStyleProperties;
+
+
+typedef struct {
+  CSSRule inner;
+} CSSNestedDeclarations;
+
+
+DECLARE_EMLITE_TYPE(CSSNestedDeclarations, CSSRule);
+
+CSSStyleProperties CSSNestedDeclarations_style( const CSSNestedDeclarations *self);

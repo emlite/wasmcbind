@@ -1,3 +1,101 @@
 #include <webbind/ImageDecoder.h>
 #include <webbind/ImageTrackList.h>
 #include <webbind/VideoFrame.h>
+
+
+DEFINE_EMLITE_TYPE(ImageDecodeResult, em_Val);
+
+
+VideoFrame ImageDecodeResult_image(const ImageDecodeResult *self) {
+    return em_Val_as(VideoFrame, em_Val_get(em_Val_as_val(self->inner), "image"));
+}
+
+
+void ImageDecodeResult_set_image(ImageDecodeResult* self, const VideoFrame* value) {
+    em_Val_set(em_Val_as_val(self->inner), "image", value);
+}
+
+
+bool ImageDecodeResult_complete(const ImageDecodeResult *self) {
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "complete"));
+}
+
+
+void ImageDecodeResult_set_complete(ImageDecodeResult* self, bool value) {
+    em_Val_set(em_Val_as_val(self->inner), "complete", value);
+}
+
+DEFINE_EMLITE_TYPE(ImageDecodeOptions, em_Val);
+
+
+unsigned long ImageDecodeOptions_frameIndex(const ImageDecodeOptions *self) {
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), "frameIndex"));
+}
+
+
+void ImageDecodeOptions_set_frameIndex(ImageDecodeOptions* self, unsigned long value) {
+    em_Val_set(em_Val_as_val(self->inner), "frameIndex", value);
+}
+
+
+bool ImageDecodeOptions_completeFramesOnly(const ImageDecodeOptions *self) {
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "completeFramesOnly"));
+}
+
+
+void ImageDecodeOptions_set_completeFramesOnly(ImageDecodeOptions* self, bool value) {
+    em_Val_set(em_Val_as_val(self->inner), "completeFramesOnly", value);
+}
+
+DEFINE_EMLITE_TYPE(ImageDecoder, em_Val);
+
+
+ImageDecoder ImageDecoder_new(const jb_Any* init) : em_Val(em_Val_global("ImageDecoder").new_(em_Val_from(init))) {
+        return ImageDecoder(em_Val_new(em_Val_global("ImageDecoder", em_Val_from(init)));
+      }
+
+
+jb_DOMString ImageDecoder_type(const ImageDecoder *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "type"));
+}
+
+
+bool ImageDecoder_complete(const ImageDecoder *self) {
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "complete"));
+}
+
+
+jb_Promise ImageDecoder_completed(const ImageDecoder *self) {
+    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), "completed"));
+}
+
+
+ImageTrackList ImageDecoder_tracks(const ImageDecoder *self) {
+    return em_Val_as(ImageTrackList, em_Val_get(em_Val_as_val(self->inner), "tracks"));
+}
+
+
+jb_Promise ImageDecoder_decode(ImageDecoder* self ) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "decode"));
+}
+
+
+jb_Promise ImageDecoder_decode(ImageDecoder* self , const ImageDecodeOptions* options) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "decode", em_Val_from(options)));
+}
+
+
+jb_Undefined ImageDecoder_reset(ImageDecoder* self ) {
+    return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "reset"));
+}
+
+
+jb_Undefined ImageDecoder_close(ImageDecoder* self ) {
+    return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "close"));
+}
+
+
+jb_Promise ImageDecoder_isTypeSupported(ImageDecoder* self , const jb_DOMString* type) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_global("imagedecoder"), "isTypeSupported", em_Val_from(type)));
+}
+

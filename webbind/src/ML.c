@@ -1,3 +1,12 @@
 #include <webbind/ML.h>
 #include <webbind/MLContext.h>
 #include <webbind/GPUDevice.h>
+
+
+DEFINE_EMLITE_TYPE(ML, em_Val);
+
+
+jb_Promise ML_createContext(ML* self , const GPUDevice* gpuDevice) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "createContext", em_Val_from(gpuDevice)));
+}
+

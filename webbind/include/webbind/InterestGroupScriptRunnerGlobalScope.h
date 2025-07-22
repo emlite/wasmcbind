@@ -4,5 +4,17 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_PrivateAggregation wb_PrivateAggregation;
-typedef struct wb_ProtectedAudienceUtilities wb_ProtectedAudienceUtilities;
+typedef struct PrivateAggregation PrivateAggregation;
+typedef struct ProtectedAudienceUtilities ProtectedAudienceUtilities;
+
+
+typedef struct {
+  em_Val inner;
+} InterestGroupScriptRunnerGlobalScope;
+
+
+DECLARE_EMLITE_TYPE(InterestGroupScriptRunnerGlobalScope, em_Val);
+
+PrivateAggregation InterestGroupScriptRunnerGlobalScope_privateAggregation( const InterestGroupScriptRunnerGlobalScope *self);
+
+ProtectedAudienceUtilities InterestGroupScriptRunnerGlobalScope_protectedAudience( const InterestGroupScriptRunnerGlobalScope *self);

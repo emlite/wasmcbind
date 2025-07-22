@@ -1,1 +1,15 @@
 #include <webbind/FileSystemDirectoryReader.h>
+
+
+DEFINE_EMLITE_TYPE(FileSystemDirectoryReader, em_Val);
+
+
+jb_Undefined FileSystemDirectoryReader_readEntries(FileSystemDirectoryReader* self , const jb_Function* successCallback) {
+    return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "readEntries", em_Val_from(successCallback)));
+}
+
+
+jb_Undefined FileSystemDirectoryReader_readEntries(FileSystemDirectoryReader* self , const jb_Function* successCallback, const jb_Function* errorCallback) {
+    return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "readEntries", em_Val_from(successCallback), em_Val_from(errorCallback)));
+}
+

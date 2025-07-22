@@ -5,4 +5,28 @@
 #include "ReadableStream.h"
 #include "enums.h"
 
-typedef struct wb_WebTransportReceiveStreamStats wb_WebTransportReceiveStreamStats;
+typedef struct WebTransportReceiveStreamStats WebTransportReceiveStreamStats;
+
+
+typedef struct {
+  em_Val inner;
+} WebTransportReceiveStreamStats;
+
+
+DECLARE_EMLITE_TYPE(WebTransportReceiveStreamStats, em_Val);
+
+long long WebTransportReceiveStreamStats_bytesReceived( const WebTransportReceiveStreamStats *self);
+
+void WebTransportReceiveStreamStats_set_bytesReceived(WebTransportReceiveStreamStats* self, long long value);
+
+long long WebTransportReceiveStreamStats_bytesRead( const WebTransportReceiveStreamStats *self);
+
+void WebTransportReceiveStreamStats_set_bytesRead(WebTransportReceiveStreamStats* self, long long value);
+typedef struct {
+  ReadableStream inner;
+} WebTransportReceiveStream;
+
+
+DECLARE_EMLITE_TYPE(WebTransportReceiveStream, ReadableStream);
+
+jb_Promise WebTransportReceiveStream_getStats(WebTransportReceiveStream* self );

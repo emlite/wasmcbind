@@ -5,4 +5,16 @@
 #include "CharacterData.h"
 #include "enums.h"
 
-typedef struct wb_CSSStyleSheet wb_CSSStyleSheet;
+typedef struct CSSStyleSheet CSSStyleSheet;
+
+
+typedef struct {
+  CharacterData inner;
+} ProcessingInstruction;
+
+
+DECLARE_EMLITE_TYPE(ProcessingInstruction, CharacterData);
+
+jb_DOMString ProcessingInstruction_target( const ProcessingInstruction *self);
+
+CSSStyleSheet ProcessingInstruction_sheet( const ProcessingInstruction *self);

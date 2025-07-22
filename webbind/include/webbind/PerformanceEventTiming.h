@@ -5,4 +5,24 @@
 #include "PerformanceEntry.h"
 #include "enums.h"
 
-typedef struct wb_Node wb_Node;
+typedef struct Node Node;
+
+
+typedef struct {
+  PerformanceEntry inner;
+} PerformanceEventTiming;
+
+
+DECLARE_EMLITE_TYPE(PerformanceEventTiming, PerformanceEntry);
+
+jb_Any PerformanceEventTiming_processingStart( const PerformanceEventTiming *self);
+
+jb_Any PerformanceEventTiming_processingEnd( const PerformanceEventTiming *self);
+
+bool PerformanceEventTiming_cancelable( const PerformanceEventTiming *self);
+
+Node PerformanceEventTiming_target( const PerformanceEventTiming *self);
+
+long long PerformanceEventTiming_interactionId( const PerformanceEventTiming *self);
+
+jb_Object PerformanceEventTiming_toJSON(PerformanceEventTiming* self );

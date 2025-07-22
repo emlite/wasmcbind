@@ -5,7 +5,33 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
-typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
-typedef struct wb_SVGAnimatedNumber wb_SVGAnimatedNumber;
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct SVGAnimatedString SVGAnimatedString;
+typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
+typedef struct SVGAnimatedNumber SVGAnimatedNumber;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGFEMorphologyElement;
+
+
+DECLARE_EMLITE_TYPE(SVGFEMorphologyElement, SVGElement);
+
+SVGAnimatedString SVGFEMorphologyElement_in1( const SVGFEMorphologyElement *self);
+
+SVGAnimatedEnumeration SVGFEMorphologyElement_operator_( const SVGFEMorphologyElement *self);
+
+SVGAnimatedNumber SVGFEMorphologyElement_radiusX( const SVGFEMorphologyElement *self);
+
+SVGAnimatedNumber SVGFEMorphologyElement_radiusY( const SVGFEMorphologyElement *self);
+
+SVGAnimatedLength SVGFEMorphologyElement_x( const SVGFEMorphologyElement *self);
+
+SVGAnimatedLength SVGFEMorphologyElement_y( const SVGFEMorphologyElement *self);
+
+SVGAnimatedLength SVGFEMorphologyElement_width( const SVGFEMorphologyElement *self);
+
+SVGAnimatedLength SVGFEMorphologyElement_height( const SVGFEMorphologyElement *self);
+
+SVGAnimatedString SVGFEMorphologyElement_result( const SVGFEMorphologyElement *self);

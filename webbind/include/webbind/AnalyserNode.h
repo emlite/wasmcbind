@@ -4,3 +4,41 @@
 #include <jsbind/jsbind.h>
 #include "AudioNode.h"
 #include "enums.h"
+
+
+typedef struct {
+  AudioNode inner;
+} AnalyserNode;
+
+
+DECLARE_EMLITE_TYPE(AnalyserNode, AudioNode);
+
+AnalyserNode AnalyserNode_new(const BaseAudioContext* context);
+
+AnalyserNode AnalyserNode_new(const BaseAudioContext* context, const jb_Any* options);
+
+jb_Undefined AnalyserNode_getFloatFrequencyData(AnalyserNode* self , const jb_Float32Array* array);
+
+jb_Undefined AnalyserNode_getByteFrequencyData(AnalyserNode* self , const jb_Uint8Array* array);
+
+jb_Undefined AnalyserNode_getFloatTimeDomainData(AnalyserNode* self , const jb_Float32Array* array);
+
+jb_Undefined AnalyserNode_getByteTimeDomainData(AnalyserNode* self , const jb_Uint8Array* array);
+
+unsigned long AnalyserNode_fftSize( const AnalyserNode *self);
+
+void AnalyserNode_set_fftSize(AnalyserNode* self, unsigned long value);
+
+unsigned long AnalyserNode_frequencyBinCount( const AnalyserNode *self);
+
+double AnalyserNode_minDecibels( const AnalyserNode *self);
+
+void AnalyserNode_set_minDecibels(AnalyserNode* self, double value);
+
+double AnalyserNode_maxDecibels( const AnalyserNode *self);
+
+void AnalyserNode_set_maxDecibels(AnalyserNode* self, double value);
+
+double AnalyserNode_smoothingTimeConstant( const AnalyserNode *self);
+
+void AnalyserNode_set_smoothingTimeConstant(AnalyserNode* self, double value);

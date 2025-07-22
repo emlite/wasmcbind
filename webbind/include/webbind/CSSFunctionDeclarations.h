@@ -5,4 +5,14 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-typedef struct wb_CSSFunctionDescriptors wb_CSSFunctionDescriptors;
+typedef struct CSSFunctionDescriptors CSSFunctionDescriptors;
+
+
+typedef struct {
+  CSSRule inner;
+} CSSFunctionDeclarations;
+
+
+DECLARE_EMLITE_TYPE(CSSFunctionDeclarations, CSSRule);
+
+CSSFunctionDescriptors CSSFunctionDeclarations_style( const CSSFunctionDeclarations *self);

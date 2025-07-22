@@ -33,7 +33,7 @@ target_sources(webbind
 )
 
 target_link_libraries(webbind PUBLIC emlite::emlite jsbind::jsbind)
-target_compile_features(webbind PUBLIC cxx_std_20)
+target_compile_features(webbind PUBLIC c_std_11)
 add_library(webbind::webbind ALIAS webbind)
 
 include(GNUInstallDirs)

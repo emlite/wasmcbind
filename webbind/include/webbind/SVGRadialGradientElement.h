@@ -5,4 +5,24 @@
 #include "SVGGradientElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+
+
+typedef struct {
+  SVGGradientElement inner;
+} SVGRadialGradientElement;
+
+
+DECLARE_EMLITE_TYPE(SVGRadialGradientElement, SVGGradientElement);
+
+SVGAnimatedLength SVGRadialGradientElement_cx( const SVGRadialGradientElement *self);
+
+SVGAnimatedLength SVGRadialGradientElement_cy( const SVGRadialGradientElement *self);
+
+SVGAnimatedLength SVGRadialGradientElement_r( const SVGRadialGradientElement *self);
+
+SVGAnimatedLength SVGRadialGradientElement_fx( const SVGRadialGradientElement *self);
+
+SVGAnimatedLength SVGRadialGradientElement_fy( const SVGRadialGradientElement *self);
+
+SVGAnimatedLength SVGRadialGradientElement_fr( const SVGRadialGradientElement *self);

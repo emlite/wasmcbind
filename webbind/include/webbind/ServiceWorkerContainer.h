@@ -5,6 +5,60 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-typedef struct wb_ServiceWorker wb_ServiceWorker;
-typedef struct wb_ServiceWorkerRegistration wb_ServiceWorkerRegistration;
-typedef struct wb_RegistrationOptions wb_RegistrationOptions;
+typedef struct ServiceWorker ServiceWorker;
+typedef struct ServiceWorkerRegistration ServiceWorkerRegistration;
+typedef struct RegistrationOptions RegistrationOptions;
+
+
+typedef struct {
+  em_Val inner;
+} RegistrationOptions;
+
+
+DECLARE_EMLITE_TYPE(RegistrationOptions, em_Val);
+
+jb_USVString RegistrationOptions_scope( const RegistrationOptions *self);
+
+void RegistrationOptions_set_scope(RegistrationOptions* self, const jb_USVString* value);
+
+WorkerType RegistrationOptions_type( const RegistrationOptions *self);
+
+void RegistrationOptions_set_type(RegistrationOptions* self, const WorkerType* value);
+
+ServiceWorkerUpdateViaCache RegistrationOptions_updateViaCache( const RegistrationOptions *self);
+
+void RegistrationOptions_set_updateViaCache(RegistrationOptions* self, const ServiceWorkerUpdateViaCache* value);
+typedef struct {
+  EventTarget inner;
+} ServiceWorkerContainer;
+
+
+DECLARE_EMLITE_TYPE(ServiceWorkerContainer, EventTarget);
+
+ServiceWorker ServiceWorkerContainer_controller( const ServiceWorkerContainer *self);
+
+jb_Promise ServiceWorkerContainer_ready( const ServiceWorkerContainer *self);
+
+jb_Promise ServiceWorkerContainer_register_(ServiceWorkerContainer* self , const jb_Any* scriptURL);
+
+jb_Promise ServiceWorkerContainer_register_(ServiceWorkerContainer* self , const jb_Any* scriptURL, const RegistrationOptions* options);
+
+jb_Promise ServiceWorkerContainer_getRegistration(ServiceWorkerContainer* self );
+
+jb_Promise ServiceWorkerContainer_getRegistration(ServiceWorkerContainer* self , const jb_USVString* clientURL);
+
+jb_Promise ServiceWorkerContainer_getRegistrations(ServiceWorkerContainer* self );
+
+jb_Undefined ServiceWorkerContainer_startMessages(ServiceWorkerContainer* self );
+
+jb_Any ServiceWorkerContainer_oncontrollerchange( const ServiceWorkerContainer *self);
+
+void ServiceWorkerContainer_set_oncontrollerchange(ServiceWorkerContainer* self, const jb_Any* value);
+
+jb_Any ServiceWorkerContainer_onmessage( const ServiceWorkerContainer *self);
+
+void ServiceWorkerContainer_set_onmessage(ServiceWorkerContainer* self, const jb_Any* value);
+
+jb_Any ServiceWorkerContainer_onmessageerror( const ServiceWorkerContainer *self);
+
+void ServiceWorkerContainer_set_onmessageerror(ServiceWorkerContainer* self, const jb_Any* value);

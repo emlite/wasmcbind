@@ -5,4 +5,16 @@
 #include "SharedStorageModifierMethod.h"
 #include "enums.h"
 
-typedef struct wb_SharedStorageModifierMethodOptions wb_SharedStorageModifierMethodOptions;
+typedef struct SharedStorageModifierMethodOptions SharedStorageModifierMethodOptions;
+
+
+typedef struct {
+  SharedStorageModifierMethod inner;
+} SharedStorageDeleteMethod;
+
+
+DECLARE_EMLITE_TYPE(SharedStorageDeleteMethod, SharedStorageModifierMethod);
+
+SharedStorageDeleteMethod SharedStorageDeleteMethod_new(const jb_DOMString* key);
+
+SharedStorageDeleteMethod SharedStorageDeleteMethod_new(const jb_DOMString* key, const SharedStorageModifierMethodOptions* options);

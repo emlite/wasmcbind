@@ -5,6 +5,28 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
-typedef struct wb_SVGAnimatedNumberList wb_SVGAnimatedNumberList;
-typedef struct wb_SVGAnimatedNumber wb_SVGAnimatedNumber;
+typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
+typedef struct SVGAnimatedNumberList SVGAnimatedNumberList;
+typedef struct SVGAnimatedNumber SVGAnimatedNumber;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGComponentTransferFunctionElement;
+
+
+DECLARE_EMLITE_TYPE(SVGComponentTransferFunctionElement, SVGElement);
+
+SVGAnimatedEnumeration SVGComponentTransferFunctionElement_type( const SVGComponentTransferFunctionElement *self);
+
+SVGAnimatedNumberList SVGComponentTransferFunctionElement_tableValues( const SVGComponentTransferFunctionElement *self);
+
+SVGAnimatedNumber SVGComponentTransferFunctionElement_slope( const SVGComponentTransferFunctionElement *self);
+
+SVGAnimatedNumber SVGComponentTransferFunctionElement_intercept( const SVGComponentTransferFunctionElement *self);
+
+SVGAnimatedNumber SVGComponentTransferFunctionElement_amplitude( const SVGComponentTransferFunctionElement *self);
+
+SVGAnimatedNumber SVGComponentTransferFunctionElement_exponent( const SVGComponentTransferFunctionElement *self);
+
+SVGAnimatedNumber SVGComponentTransferFunctionElement_offset( const SVGComponentTransferFunctionElement *self);

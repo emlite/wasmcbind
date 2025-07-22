@@ -3,3 +3,13 @@
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
 #include "enums.h"
+
+
+typedef struct {
+  em_Val inner;
+} WEBGL_compressed_texture_astc;
+
+
+DECLARE_EMLITE_TYPE(WEBGL_compressed_texture_astc, em_Val);
+
+jb_Sequence WEBGL_compressed_texture_astc_getSupportedProfiles(WEBGL_compressed_texture_astc* self );

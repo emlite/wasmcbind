@@ -4,8 +4,60 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_Response wb_Response;
-typedef struct wb_Headers wb_Headers;
-typedef struct wb_ReadableStream wb_ReadableStream;
-typedef struct wb_Blob wb_Blob;
-typedef struct wb_FormData wb_FormData;
+typedef struct Response Response;
+typedef struct Headers Headers;
+typedef struct ReadableStream ReadableStream;
+typedef struct Blob Blob;
+typedef struct FormData FormData;
+
+
+typedef struct {
+  em_Val inner;
+} Response;
+
+
+DECLARE_EMLITE_TYPE(Response, em_Val);
+
+Response Response_new();
+
+Response Response_new(const jb_Any* body);
+
+Response Response_new(const jb_Any* body, const jb_Any* init);
+
+Response Response_error(Response* self );
+
+Response Response_redirect(Response* self , const jb_USVString* url);
+
+Response Response_redirect(Response* self , const jb_USVString* url, unsigned short status);
+
+jb_Promise Response_json(Response* self );
+
+ResponseType Response_type( const Response *self);
+
+jb_USVString Response_url( const Response *self);
+
+bool Response_redirected( const Response *self);
+
+unsigned short Response_status( const Response *self);
+
+bool Response_ok( const Response *self);
+
+jb_ByteString Response_statusText( const Response *self);
+
+Headers Response_headers( const Response *self);
+
+Response Response_clone(Response* self );
+
+ReadableStream Response_body( const Response *self);
+
+bool Response_bodyUsed( const Response *self);
+
+jb_Promise Response_arrayBuffer(Response* self );
+
+jb_Promise Response_blob(Response* self );
+
+jb_Promise Response_bytes(Response* self );
+
+jb_Promise Response_formData(Response* self );
+
+jb_Promise Response_text(Response* self );

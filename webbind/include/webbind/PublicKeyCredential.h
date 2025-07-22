@@ -5,12 +5,278 @@
 #include "Credential.h"
 #include "enums.h"
 
-typedef struct wb_AuthenticatorResponse wb_AuthenticatorResponse;
-typedef struct wb_AuthenticationExtensionsClientOutputs wb_AuthenticationExtensionsClientOutputs;
-typedef struct wb_PublicKeyCredentialCreationOptions wb_PublicKeyCredentialCreationOptions;
-typedef struct wb_PublicKeyCredentialCreationOptionsJSON wb_PublicKeyCredentialCreationOptionsJSON;
-typedef struct wb_PublicKeyCredentialRequestOptions wb_PublicKeyCredentialRequestOptions;
-typedef struct wb_PublicKeyCredentialRequestOptionsJSON wb_PublicKeyCredentialRequestOptionsJSON;
-typedef struct wb_UnknownCredentialOptions wb_UnknownCredentialOptions;
-typedef struct wb_AllAcceptedCredentialsOptions wb_AllAcceptedCredentialsOptions;
-typedef struct wb_CurrentUserDetailsOptions wb_CurrentUserDetailsOptions;
+typedef struct AuthenticatorResponse AuthenticatorResponse;
+typedef struct AuthenticationExtensionsClientOutputs AuthenticationExtensionsClientOutputs;
+typedef struct PublicKeyCredentialCreationOptions PublicKeyCredentialCreationOptions;
+typedef struct PublicKeyCredentialCreationOptionsJSON PublicKeyCredentialCreationOptionsJSON;
+typedef struct PublicKeyCredentialRequestOptions PublicKeyCredentialRequestOptions;
+typedef struct PublicKeyCredentialRequestOptionsJSON PublicKeyCredentialRequestOptionsJSON;
+typedef struct UnknownCredentialOptions UnknownCredentialOptions;
+typedef struct AllAcceptedCredentialsOptions AllAcceptedCredentialsOptions;
+typedef struct CurrentUserDetailsOptions CurrentUserDetailsOptions;
+
+
+typedef struct {
+  em_Val inner;
+} AuthenticationExtensionsClientOutputs;
+
+
+DECLARE_EMLITE_TYPE(AuthenticationExtensionsClientOutputs, em_Val);
+
+jb_Any AuthenticationExtensionsClientOutputs_largeBlob( const AuthenticationExtensionsClientOutputs *self);
+
+void AuthenticationExtensionsClientOutputs_set_largeBlob(AuthenticationExtensionsClientOutputs* self, const jb_Any* value);
+typedef struct {
+  em_Val inner;
+} PublicKeyCredentialCreationOptions;
+
+
+DECLARE_EMLITE_TYPE(PublicKeyCredentialCreationOptions, em_Val);
+
+jb_Any PublicKeyCredentialCreationOptions_rp( const PublicKeyCredentialCreationOptions *self);
+
+void PublicKeyCredentialCreationOptions_set_rp(PublicKeyCredentialCreationOptions* self, const jb_Any* value);
+
+jb_Any PublicKeyCredentialCreationOptions_user( const PublicKeyCredentialCreationOptions *self);
+
+void PublicKeyCredentialCreationOptions_set_user(PublicKeyCredentialCreationOptions* self, const jb_Any* value);
+
+jb_Any PublicKeyCredentialCreationOptions_challenge( const PublicKeyCredentialCreationOptions *self);
+
+void PublicKeyCredentialCreationOptions_set_challenge(PublicKeyCredentialCreationOptions* self, const jb_Any* value);
+
+jb_Sequence PublicKeyCredentialCreationOptions_pubKeyCredParams( const PublicKeyCredentialCreationOptions *self);
+
+void PublicKeyCredentialCreationOptions_set_pubKeyCredParams(PublicKeyCredentialCreationOptions* self, const jb_Sequence* value);
+
+unsigned long PublicKeyCredentialCreationOptions_timeout( const PublicKeyCredentialCreationOptions *self);
+
+void PublicKeyCredentialCreationOptions_set_timeout(PublicKeyCredentialCreationOptions* self, unsigned long value);
+
+jb_Sequence PublicKeyCredentialCreationOptions_excludeCredentials( const PublicKeyCredentialCreationOptions *self);
+
+void PublicKeyCredentialCreationOptions_set_excludeCredentials(PublicKeyCredentialCreationOptions* self, const jb_Sequence* value);
+
+jb_Any PublicKeyCredentialCreationOptions_authenticatorSelection( const PublicKeyCredentialCreationOptions *self);
+
+void PublicKeyCredentialCreationOptions_set_authenticatorSelection(PublicKeyCredentialCreationOptions* self, const jb_Any* value);
+
+jb_Sequence PublicKeyCredentialCreationOptions_hints( const PublicKeyCredentialCreationOptions *self);
+
+void PublicKeyCredentialCreationOptions_set_hints(PublicKeyCredentialCreationOptions* self, const jb_Sequence* value);
+
+jb_DOMString PublicKeyCredentialCreationOptions_attestation( const PublicKeyCredentialCreationOptions *self);
+
+void PublicKeyCredentialCreationOptions_set_attestation(PublicKeyCredentialCreationOptions* self, const jb_DOMString* value);
+
+jb_Sequence PublicKeyCredentialCreationOptions_attestationFormats( const PublicKeyCredentialCreationOptions *self);
+
+void PublicKeyCredentialCreationOptions_set_attestationFormats(PublicKeyCredentialCreationOptions* self, const jb_Sequence* value);
+
+jb_Any PublicKeyCredentialCreationOptions_extensions( const PublicKeyCredentialCreationOptions *self);
+
+void PublicKeyCredentialCreationOptions_set_extensions(PublicKeyCredentialCreationOptions* self, const jb_Any* value);
+typedef struct {
+  em_Val inner;
+} PublicKeyCredentialCreationOptionsJSON;
+
+
+DECLARE_EMLITE_TYPE(PublicKeyCredentialCreationOptionsJSON, em_Val);
+
+jb_Any PublicKeyCredentialCreationOptionsJSON_rp( const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_rp(PublicKeyCredentialCreationOptionsJSON* self, const jb_Any* value);
+
+jb_Any PublicKeyCredentialCreationOptionsJSON_user( const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_user(PublicKeyCredentialCreationOptionsJSON* self, const jb_Any* value);
+
+jb_Any PublicKeyCredentialCreationOptionsJSON_challenge( const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_challenge(PublicKeyCredentialCreationOptionsJSON* self, const jb_Any* value);
+
+jb_Sequence PublicKeyCredentialCreationOptionsJSON_pubKeyCredParams( const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_pubKeyCredParams(PublicKeyCredentialCreationOptionsJSON* self, const jb_Sequence* value);
+
+unsigned long PublicKeyCredentialCreationOptionsJSON_timeout( const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_timeout(PublicKeyCredentialCreationOptionsJSON* self, unsigned long value);
+
+jb_Sequence PublicKeyCredentialCreationOptionsJSON_excludeCredentials( const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_excludeCredentials(PublicKeyCredentialCreationOptionsJSON* self, const jb_Sequence* value);
+
+jb_Any PublicKeyCredentialCreationOptionsJSON_authenticatorSelection( const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_authenticatorSelection(PublicKeyCredentialCreationOptionsJSON* self, const jb_Any* value);
+
+jb_Sequence PublicKeyCredentialCreationOptionsJSON_hints( const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_hints(PublicKeyCredentialCreationOptionsJSON* self, const jb_Sequence* value);
+
+jb_DOMString PublicKeyCredentialCreationOptionsJSON_attestation( const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_attestation(PublicKeyCredentialCreationOptionsJSON* self, const jb_DOMString* value);
+
+jb_Sequence PublicKeyCredentialCreationOptionsJSON_attestationFormats( const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_attestationFormats(PublicKeyCredentialCreationOptionsJSON* self, const jb_Sequence* value);
+
+jb_Any PublicKeyCredentialCreationOptionsJSON_extensions( const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_extensions(PublicKeyCredentialCreationOptionsJSON* self, const jb_Any* value);
+typedef struct {
+  em_Val inner;
+} PublicKeyCredentialRequestOptions;
+
+
+DECLARE_EMLITE_TYPE(PublicKeyCredentialRequestOptions, em_Val);
+
+jb_Any PublicKeyCredentialRequestOptions_challenge( const PublicKeyCredentialRequestOptions *self);
+
+void PublicKeyCredentialRequestOptions_set_challenge(PublicKeyCredentialRequestOptions* self, const jb_Any* value);
+
+unsigned long PublicKeyCredentialRequestOptions_timeout( const PublicKeyCredentialRequestOptions *self);
+
+void PublicKeyCredentialRequestOptions_set_timeout(PublicKeyCredentialRequestOptions* self, unsigned long value);
+
+jb_DOMString PublicKeyCredentialRequestOptions_rpId( const PublicKeyCredentialRequestOptions *self);
+
+void PublicKeyCredentialRequestOptions_set_rpId(PublicKeyCredentialRequestOptions* self, const jb_DOMString* value);
+
+jb_Sequence PublicKeyCredentialRequestOptions_allowCredentials( const PublicKeyCredentialRequestOptions *self);
+
+void PublicKeyCredentialRequestOptions_set_allowCredentials(PublicKeyCredentialRequestOptions* self, const jb_Sequence* value);
+
+jb_DOMString PublicKeyCredentialRequestOptions_userVerification( const PublicKeyCredentialRequestOptions *self);
+
+void PublicKeyCredentialRequestOptions_set_userVerification(PublicKeyCredentialRequestOptions* self, const jb_DOMString* value);
+
+jb_Sequence PublicKeyCredentialRequestOptions_hints( const PublicKeyCredentialRequestOptions *self);
+
+void PublicKeyCredentialRequestOptions_set_hints(PublicKeyCredentialRequestOptions* self, const jb_Sequence* value);
+
+jb_Any PublicKeyCredentialRequestOptions_extensions( const PublicKeyCredentialRequestOptions *self);
+
+void PublicKeyCredentialRequestOptions_set_extensions(PublicKeyCredentialRequestOptions* self, const jb_Any* value);
+typedef struct {
+  em_Val inner;
+} PublicKeyCredentialRequestOptionsJSON;
+
+
+DECLARE_EMLITE_TYPE(PublicKeyCredentialRequestOptionsJSON, em_Val);
+
+jb_Any PublicKeyCredentialRequestOptionsJSON_challenge( const PublicKeyCredentialRequestOptionsJSON *self);
+
+void PublicKeyCredentialRequestOptionsJSON_set_challenge(PublicKeyCredentialRequestOptionsJSON* self, const jb_Any* value);
+
+unsigned long PublicKeyCredentialRequestOptionsJSON_timeout( const PublicKeyCredentialRequestOptionsJSON *self);
+
+void PublicKeyCredentialRequestOptionsJSON_set_timeout(PublicKeyCredentialRequestOptionsJSON* self, unsigned long value);
+
+jb_DOMString PublicKeyCredentialRequestOptionsJSON_rpId( const PublicKeyCredentialRequestOptionsJSON *self);
+
+void PublicKeyCredentialRequestOptionsJSON_set_rpId(PublicKeyCredentialRequestOptionsJSON* self, const jb_DOMString* value);
+
+jb_Sequence PublicKeyCredentialRequestOptionsJSON_allowCredentials( const PublicKeyCredentialRequestOptionsJSON *self);
+
+void PublicKeyCredentialRequestOptionsJSON_set_allowCredentials(PublicKeyCredentialRequestOptionsJSON* self, const jb_Sequence* value);
+
+jb_DOMString PublicKeyCredentialRequestOptionsJSON_userVerification( const PublicKeyCredentialRequestOptionsJSON *self);
+
+void PublicKeyCredentialRequestOptionsJSON_set_userVerification(PublicKeyCredentialRequestOptionsJSON* self, const jb_DOMString* value);
+
+jb_Sequence PublicKeyCredentialRequestOptionsJSON_hints( const PublicKeyCredentialRequestOptionsJSON *self);
+
+void PublicKeyCredentialRequestOptionsJSON_set_hints(PublicKeyCredentialRequestOptionsJSON* self, const jb_Sequence* value);
+
+jb_Any PublicKeyCredentialRequestOptionsJSON_extensions( const PublicKeyCredentialRequestOptionsJSON *self);
+
+void PublicKeyCredentialRequestOptionsJSON_set_extensions(PublicKeyCredentialRequestOptionsJSON* self, const jb_Any* value);
+typedef struct {
+  em_Val inner;
+} UnknownCredentialOptions;
+
+
+DECLARE_EMLITE_TYPE(UnknownCredentialOptions, em_Val);
+
+jb_DOMString UnknownCredentialOptions_rpId( const UnknownCredentialOptions *self);
+
+void UnknownCredentialOptions_set_rpId(UnknownCredentialOptions* self, const jb_DOMString* value);
+
+jb_Any UnknownCredentialOptions_credentialId( const UnknownCredentialOptions *self);
+
+void UnknownCredentialOptions_set_credentialId(UnknownCredentialOptions* self, const jb_Any* value);
+typedef struct {
+  em_Val inner;
+} AllAcceptedCredentialsOptions;
+
+
+DECLARE_EMLITE_TYPE(AllAcceptedCredentialsOptions, em_Val);
+
+jb_DOMString AllAcceptedCredentialsOptions_rpId( const AllAcceptedCredentialsOptions *self);
+
+void AllAcceptedCredentialsOptions_set_rpId(AllAcceptedCredentialsOptions* self, const jb_DOMString* value);
+
+jb_Any AllAcceptedCredentialsOptions_userId( const AllAcceptedCredentialsOptions *self);
+
+void AllAcceptedCredentialsOptions_set_userId(AllAcceptedCredentialsOptions* self, const jb_Any* value);
+
+jb_Sequence AllAcceptedCredentialsOptions_allAcceptedCredentialIds( const AllAcceptedCredentialsOptions *self);
+
+void AllAcceptedCredentialsOptions_set_allAcceptedCredentialIds(AllAcceptedCredentialsOptions* self, const jb_Sequence* value);
+typedef struct {
+  em_Val inner;
+} CurrentUserDetailsOptions;
+
+
+DECLARE_EMLITE_TYPE(CurrentUserDetailsOptions, em_Val);
+
+jb_DOMString CurrentUserDetailsOptions_rpId( const CurrentUserDetailsOptions *self);
+
+void CurrentUserDetailsOptions_set_rpId(CurrentUserDetailsOptions* self, const jb_DOMString* value);
+
+jb_Any CurrentUserDetailsOptions_userId( const CurrentUserDetailsOptions *self);
+
+void CurrentUserDetailsOptions_set_userId(CurrentUserDetailsOptions* self, const jb_Any* value);
+
+jb_DOMString CurrentUserDetailsOptions_name( const CurrentUserDetailsOptions *self);
+
+void CurrentUserDetailsOptions_set_name(CurrentUserDetailsOptions* self, const jb_DOMString* value);
+
+jb_DOMString CurrentUserDetailsOptions_displayName( const CurrentUserDetailsOptions *self);
+
+void CurrentUserDetailsOptions_set_displayName(CurrentUserDetailsOptions* self, const jb_DOMString* value);
+typedef struct {
+  Credential inner;
+} PublicKeyCredential;
+
+
+DECLARE_EMLITE_TYPE(PublicKeyCredential, Credential);
+
+jb_ArrayBuffer PublicKeyCredential_rawId( const PublicKeyCredential *self);
+
+AuthenticatorResponse PublicKeyCredential_response( const PublicKeyCredential *self);
+
+jb_DOMString PublicKeyCredential_authenticatorAttachment( const PublicKeyCredential *self);
+
+AuthenticationExtensionsClientOutputs PublicKeyCredential_getClientExtensionResults(PublicKeyCredential* self );
+
+jb_Promise PublicKeyCredential_isConditionalMediationAvailable(PublicKeyCredential* self );
+
+jb_Any PublicKeyCredential_toJSON(PublicKeyCredential* self );
+
+jb_Promise PublicKeyCredential_isUserVerifyingPlatformAuthenticatorAvailable(PublicKeyCredential* self );
+
+jb_Promise PublicKeyCredential_getClientCapabilities(PublicKeyCredential* self );
+
+PublicKeyCredentialCreationOptions PublicKeyCredential_parseCreationOptionsFromJSON(PublicKeyCredential* self , const PublicKeyCredentialCreationOptionsJSON* options);
+
+PublicKeyCredentialRequestOptions PublicKeyCredential_parseRequestOptionsFromJSON(PublicKeyCredential* self , const PublicKeyCredentialRequestOptionsJSON* options);
+
+jb_Promise PublicKeyCredential_signalUnknownCredential(PublicKeyCredential* self , const UnknownCredentialOptions* options);
+
+jb_Promise PublicKeyCredential_signalAllAcceptedCredentials(PublicKeyCredential* self , const AllAcceptedCredentialsOptions* options);
+
+jb_Promise PublicKeyCredential_signalCurrentUserDetails(PublicKeyCredential* self , const CurrentUserDetailsOptions* options);

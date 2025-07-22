@@ -5,6 +5,74 @@
 #include "WorkletAnimationEffect.h"
 #include "enums.h"
 
-typedef struct wb_OptionalEffectTiming wb_OptionalEffectTiming;
-typedef struct wb_GroupEffect wb_GroupEffect;
-typedef struct wb_AnimationEffect wb_AnimationEffect;
+typedef struct OptionalEffectTiming OptionalEffectTiming;
+typedef struct GroupEffect GroupEffect;
+typedef struct AnimationEffect AnimationEffect;
+
+
+typedef struct {
+  em_Val inner;
+} OptionalEffectTiming;
+
+
+DECLARE_EMLITE_TYPE(OptionalEffectTiming, em_Val);
+
+double OptionalEffectTiming_delay( const OptionalEffectTiming *self);
+
+void OptionalEffectTiming_set_delay(OptionalEffectTiming* self, double value);
+
+double OptionalEffectTiming_endDelay( const OptionalEffectTiming *self);
+
+void OptionalEffectTiming_set_endDelay(OptionalEffectTiming* self, double value);
+
+FillMode OptionalEffectTiming_fill( const OptionalEffectTiming *self);
+
+void OptionalEffectTiming_set_fill(OptionalEffectTiming* self, const FillMode* value);
+
+double OptionalEffectTiming_iterationStart( const OptionalEffectTiming *self);
+
+void OptionalEffectTiming_set_iterationStart(OptionalEffectTiming* self, double value);
+
+double OptionalEffectTiming_iterations( const OptionalEffectTiming *self);
+
+void OptionalEffectTiming_set_iterations(OptionalEffectTiming* self, double value);
+
+jb_Any OptionalEffectTiming_duration( const OptionalEffectTiming *self);
+
+void OptionalEffectTiming_set_duration(OptionalEffectTiming* self, const jb_Any* value);
+
+PlaybackDirection OptionalEffectTiming_direction( const OptionalEffectTiming *self);
+
+void OptionalEffectTiming_set_direction(OptionalEffectTiming* self, const PlaybackDirection* value);
+
+jb_DOMString OptionalEffectTiming_easing( const OptionalEffectTiming *self);
+
+void OptionalEffectTiming_set_easing(OptionalEffectTiming* self, const jb_DOMString* value);
+typedef struct {
+  em_Val inner;
+} AnimationEffect;
+
+
+DECLARE_EMLITE_TYPE(AnimationEffect, em_Val);
+
+EffectTiming AnimationEffect_getTiming(AnimationEffect* self );
+
+ComputedEffectTiming AnimationEffect_getComputedTiming(AnimationEffect* self );
+
+jb_Undefined AnimationEffect_updateTiming(AnimationEffect* self );
+
+jb_Undefined AnimationEffect_updateTiming(AnimationEffect* self , const OptionalEffectTiming* timing);
+
+GroupEffect AnimationEffect_parent( const AnimationEffect *self);
+
+AnimationEffect AnimationEffect_previousSibling( const AnimationEffect *self);
+
+AnimationEffect AnimationEffect_nextSibling( const AnimationEffect *self);
+
+jb_Undefined AnimationEffect_before(AnimationEffect* self , const AnimationEffect* effects);
+
+jb_Undefined AnimationEffect_after(AnimationEffect* self , const AnimationEffect* effects);
+
+jb_Undefined AnimationEffect_replace(AnimationEffect* self , const AnimationEffect* effects);
+
+jb_Undefined AnimationEffect_remove(AnimationEffect* self );

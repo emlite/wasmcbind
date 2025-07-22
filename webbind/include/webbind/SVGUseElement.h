@@ -5,6 +5,28 @@
 #include "SVGGraphicsElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
-typedef struct wb_SVGElement wb_SVGElement;
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+typedef struct SVGElement SVGElement;
+typedef struct SVGAnimatedString SVGAnimatedString;
+
+
+typedef struct {
+  SVGGraphicsElement inner;
+} SVGUseElement;
+
+
+DECLARE_EMLITE_TYPE(SVGUseElement, SVGGraphicsElement);
+
+SVGAnimatedLength SVGUseElement_x( const SVGUseElement *self);
+
+SVGAnimatedLength SVGUseElement_y( const SVGUseElement *self);
+
+SVGAnimatedLength SVGUseElement_width( const SVGUseElement *self);
+
+SVGAnimatedLength SVGUseElement_height( const SVGUseElement *self);
+
+SVGElement SVGUseElement_instanceRoot( const SVGUseElement *self);
+
+SVGElement SVGUseElement_animatedInstanceRoot( const SVGUseElement *self);
+
+SVGAnimatedString SVGUseElement_href( const SVGUseElement *self);

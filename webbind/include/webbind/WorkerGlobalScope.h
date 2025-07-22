@@ -5,8 +5,52 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-typedef struct wb_WorkerGlobalScope wb_WorkerGlobalScope;
-typedef struct wb_WorkerLocation wb_WorkerLocation;
-typedef struct wb_WorkerNavigator wb_WorkerNavigator;
-typedef struct wb_FontFaceSet wb_FontFaceSet;
-typedef struct wb_Crypto wb_Crypto;
+typedef struct WorkerGlobalScope WorkerGlobalScope;
+typedef struct WorkerLocation WorkerLocation;
+typedef struct WorkerNavigator WorkerNavigator;
+typedef struct FontFaceSet FontFaceSet;
+typedef struct Crypto Crypto;
+
+
+typedef struct {
+  EventTarget inner;
+} WorkerGlobalScope;
+
+
+DECLARE_EMLITE_TYPE(WorkerGlobalScope, EventTarget);
+
+WorkerGlobalScope WorkerGlobalScope_self( const WorkerGlobalScope *self);
+
+WorkerLocation WorkerGlobalScope_location( const WorkerGlobalScope *self);
+
+WorkerNavigator WorkerGlobalScope_navigator( const WorkerGlobalScope *self);
+
+jb_Undefined WorkerGlobalScope_importScripts(WorkerGlobalScope* self , const jb_Any* urls);
+
+jb_Any WorkerGlobalScope_onerror( const WorkerGlobalScope *self);
+
+void WorkerGlobalScope_set_onerror(WorkerGlobalScope* self, const jb_Any* value);
+
+jb_Any WorkerGlobalScope_onlanguagechange( const WorkerGlobalScope *self);
+
+void WorkerGlobalScope_set_onlanguagechange(WorkerGlobalScope* self, const jb_Any* value);
+
+jb_Any WorkerGlobalScope_onoffline( const WorkerGlobalScope *self);
+
+void WorkerGlobalScope_set_onoffline(WorkerGlobalScope* self, const jb_Any* value);
+
+jb_Any WorkerGlobalScope_ononline( const WorkerGlobalScope *self);
+
+void WorkerGlobalScope_set_ononline(WorkerGlobalScope* self, const jb_Any* value);
+
+jb_Any WorkerGlobalScope_onrejectionhandled( const WorkerGlobalScope *self);
+
+void WorkerGlobalScope_set_onrejectionhandled(WorkerGlobalScope* self, const jb_Any* value);
+
+jb_Any WorkerGlobalScope_onunhandledrejection( const WorkerGlobalScope *self);
+
+void WorkerGlobalScope_set_onunhandledrejection(WorkerGlobalScope* self, const jb_Any* value);
+
+FontFaceSet WorkerGlobalScope_fonts( const WorkerGlobalScope *self);
+
+Crypto WorkerGlobalScope_crypto( const WorkerGlobalScope *self);

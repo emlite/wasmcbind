@@ -5,4 +5,22 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-typedef struct wb_MessagePort wb_MessagePort;
+typedef struct MessagePort MessagePort;
+
+
+typedef struct {
+  EventTarget inner;
+} SharedWorker;
+
+
+DECLARE_EMLITE_TYPE(SharedWorker, EventTarget);
+
+SharedWorker SharedWorker_new(const jb_Any* scriptURL);
+
+SharedWorker SharedWorker_new(const jb_Any* scriptURL, const jb_Any* options);
+
+jb_Any SharedWorker_port( const SharedWorker *self);
+
+jb_Any SharedWorker_onerror( const SharedWorker *self);
+
+void SharedWorker_set_onerror(SharedWorker* self, const jb_Any* value);

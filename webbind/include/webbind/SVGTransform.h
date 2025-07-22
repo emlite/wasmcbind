@@ -5,4 +5,32 @@
 #include "SVGSVGElement.h"
 #include "enums.h"
 
-typedef struct wb_DOMMatrix wb_DOMMatrix;
+typedef struct DOMMatrix DOMMatrix;
+
+
+typedef struct {
+  em_Val inner;
+} SVGTransform;
+
+
+DECLARE_EMLITE_TYPE(SVGTransform, em_Val);
+
+unsigned short SVGTransform_type( const SVGTransform *self);
+
+DOMMatrix SVGTransform_matrix( const SVGTransform *self);
+
+float SVGTransform_angle( const SVGTransform *self);
+
+jb_Undefined SVGTransform_setMatrix(SVGTransform* self );
+
+jb_Undefined SVGTransform_setMatrix(SVGTransform* self , const DOMMatrix2DInit* matrix);
+
+jb_Undefined SVGTransform_setTranslate(SVGTransform* self , float tx, float ty);
+
+jb_Undefined SVGTransform_setScale(SVGTransform* self , float sx, float sy);
+
+jb_Undefined SVGTransform_setRotate(SVGTransform* self , float angle, float cx, float cy);
+
+jb_Undefined SVGTransform_setSkewX(SVGTransform* self , float angle);
+
+jb_Undefined SVGTransform_setSkewY(SVGTransform* self , float angle);

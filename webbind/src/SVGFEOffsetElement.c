@@ -2,3 +2,47 @@
 #include <webbind/SVGAnimatedString.h>
 #include <webbind/SVGAnimatedNumber.h>
 #include <webbind/SVGAnimatedLength.h>
+
+
+DEFINE_EMLITE_TYPE(SVGFEOffsetElement, SVGElement);
+
+
+SVGAnimatedString SVGFEOffsetElement_in1(const SVGFEOffsetElement *self) {
+    return em_Val_as(SVGAnimatedString, em_Val_get(SVGElement_as_val(self->inner), "in1"));
+}
+
+
+SVGAnimatedNumber SVGFEOffsetElement_dx(const SVGFEOffsetElement *self) {
+    return em_Val_as(SVGAnimatedNumber, em_Val_get(SVGElement_as_val(self->inner), "dx"));
+}
+
+
+SVGAnimatedNumber SVGFEOffsetElement_dy(const SVGFEOffsetElement *self) {
+    return em_Val_as(SVGAnimatedNumber, em_Val_get(SVGElement_as_val(self->inner), "dy"));
+}
+
+
+SVGAnimatedLength SVGFEOffsetElement_x(const SVGFEOffsetElement *self) {
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "x"));
+}
+
+
+SVGAnimatedLength SVGFEOffsetElement_y(const SVGFEOffsetElement *self) {
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "y"));
+}
+
+
+SVGAnimatedLength SVGFEOffsetElement_width(const SVGFEOffsetElement *self) {
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "width"));
+}
+
+
+SVGAnimatedLength SVGFEOffsetElement_height(const SVGFEOffsetElement *self) {
+    return em_Val_as(SVGAnimatedLength, em_Val_get(SVGElement_as_val(self->inner), "height"));
+}
+
+
+SVGAnimatedString SVGFEOffsetElement_result(const SVGFEOffsetElement *self) {
+    return em_Val_as(SVGAnimatedString, em_Val_get(SVGElement_as_val(self->inner), "result"));
+}
+

@@ -4,4 +4,30 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_RTCDtlsFingerprint wb_RTCDtlsFingerprint;
+typedef struct RTCDtlsFingerprint RTCDtlsFingerprint;
+
+
+typedef struct {
+  em_Val inner;
+} RTCDtlsFingerprint;
+
+
+DECLARE_EMLITE_TYPE(RTCDtlsFingerprint, em_Val);
+
+jb_DOMString RTCDtlsFingerprint_algorithm( const RTCDtlsFingerprint *self);
+
+void RTCDtlsFingerprint_set_algorithm(RTCDtlsFingerprint* self, const jb_DOMString* value);
+
+jb_DOMString RTCDtlsFingerprint_value( const RTCDtlsFingerprint *self);
+
+void RTCDtlsFingerprint_set_value(RTCDtlsFingerprint* self, const jb_DOMString* value);
+typedef struct {
+  em_Val inner;
+} RTCCertificate;
+
+
+DECLARE_EMLITE_TYPE(RTCCertificate, em_Val);
+
+jb_Any RTCCertificate_expires( const RTCCertificate *self);
+
+jb_Sequence RTCCertificate_getFingerprints(RTCCertificate* self );

@@ -5,4 +5,16 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct wb_HTMLCollection wb_HTMLCollection;
+typedef struct HTMLCollection HTMLCollection;
+
+
+typedef struct {
+  HTMLElement inner;
+} HTMLDataListElement;
+
+
+DECLARE_EMLITE_TYPE(HTMLDataListElement, HTMLElement);
+
+HTMLDataListElement HTMLDataListElement_new();
+
+HTMLCollection HTMLDataListElement_options( const HTMLDataListElement *self);

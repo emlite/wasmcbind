@@ -4,6 +4,58 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_Node wb_Node;
-typedef struct wb_MutationObserverInit wb_MutationObserverInit;
-typedef struct wb_MutationRecord wb_MutationRecord;
+typedef struct Node Node;
+typedef struct MutationObserverInit MutationObserverInit;
+typedef struct MutationRecord MutationRecord;
+
+
+typedef struct {
+  em_Val inner;
+} MutationObserverInit;
+
+
+DECLARE_EMLITE_TYPE(MutationObserverInit, em_Val);
+
+bool MutationObserverInit_childList( const MutationObserverInit *self);
+
+void MutationObserverInit_set_childList(MutationObserverInit* self, bool value);
+
+bool MutationObserverInit_attributes( const MutationObserverInit *self);
+
+void MutationObserverInit_set_attributes(MutationObserverInit* self, bool value);
+
+bool MutationObserverInit_characterData( const MutationObserverInit *self);
+
+void MutationObserverInit_set_characterData(MutationObserverInit* self, bool value);
+
+bool MutationObserverInit_subtree( const MutationObserverInit *self);
+
+void MutationObserverInit_set_subtree(MutationObserverInit* self, bool value);
+
+bool MutationObserverInit_attributeOldValue( const MutationObserverInit *self);
+
+void MutationObserverInit_set_attributeOldValue(MutationObserverInit* self, bool value);
+
+bool MutationObserverInit_characterDataOldValue( const MutationObserverInit *self);
+
+void MutationObserverInit_set_characterDataOldValue(MutationObserverInit* self, bool value);
+
+jb_Sequence MutationObserverInit_attributeFilter( const MutationObserverInit *self);
+
+void MutationObserverInit_set_attributeFilter(MutationObserverInit* self, const jb_Sequence* value);
+typedef struct {
+  em_Val inner;
+} MutationObserver;
+
+
+DECLARE_EMLITE_TYPE(MutationObserver, em_Val);
+
+MutationObserver MutationObserver_new(const jb_Function* callback);
+
+jb_Undefined MutationObserver_observe(MutationObserver* self , const Node* target);
+
+jb_Undefined MutationObserver_observe(MutationObserver* self , const Node* target, const MutationObserverInit* options);
+
+jb_Undefined MutationObserver_disconnect(MutationObserver* self );
+
+jb_Sequence MutationObserver_takeRecords(MutationObserver* self );

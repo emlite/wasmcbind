@@ -5,9 +5,37 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
-typedef struct wb_SVGAnimatedTransformList wb_SVGAnimatedTransformList;
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
-typedef struct wb_SVGAnimatedRect wb_SVGAnimatedRect;
-typedef struct wb_SVGAnimatedPreserveAspectRatio wb_SVGAnimatedPreserveAspectRatio;
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
+typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
+typedef struct SVGAnimatedTransformList SVGAnimatedTransformList;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+typedef struct SVGAnimatedRect SVGAnimatedRect;
+typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
+typedef struct SVGAnimatedString SVGAnimatedString;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGPatternElement;
+
+
+DECLARE_EMLITE_TYPE(SVGPatternElement, SVGElement);
+
+SVGAnimatedEnumeration SVGPatternElement_patternUnits( const SVGPatternElement *self);
+
+SVGAnimatedEnumeration SVGPatternElement_patternContentUnits( const SVGPatternElement *self);
+
+SVGAnimatedTransformList SVGPatternElement_patternTransform( const SVGPatternElement *self);
+
+SVGAnimatedLength SVGPatternElement_x( const SVGPatternElement *self);
+
+SVGAnimatedLength SVGPatternElement_y( const SVGPatternElement *self);
+
+SVGAnimatedLength SVGPatternElement_width( const SVGPatternElement *self);
+
+SVGAnimatedLength SVGPatternElement_height( const SVGPatternElement *self);
+
+SVGAnimatedRect SVGPatternElement_viewBox( const SVGPatternElement *self);
+
+SVGAnimatedPreserveAspectRatio SVGPatternElement_preserveAspectRatio( const SVGPatternElement *self);
+
+SVGAnimatedString SVGPatternElement_href( const SVGPatternElement *self);

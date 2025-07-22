@@ -5,4 +5,16 @@
 #include "SVGGeometryElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGPointList wb_SVGPointList;
+typedef struct SVGPointList SVGPointList;
+
+
+typedef struct {
+  SVGGeometryElement inner;
+} SVGPolygonElement;
+
+
+DECLARE_EMLITE_TYPE(SVGPolygonElement, SVGGeometryElement);
+
+SVGPointList SVGPolygonElement_points( const SVGPolygonElement *self);
+
+SVGPointList SVGPolygonElement_animatedPoints( const SVGPolygonElement *self);

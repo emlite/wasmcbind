@@ -4,4 +4,24 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_ViewTransitionTypeSet wb_ViewTransitionTypeSet;
+typedef struct ViewTransitionTypeSet ViewTransitionTypeSet;
+
+
+typedef struct {
+  em_Val inner;
+} ViewTransition;
+
+
+DECLARE_EMLITE_TYPE(ViewTransition, em_Val);
+
+jb_Promise ViewTransition_updateCallbackDone( const ViewTransition *self);
+
+jb_Promise ViewTransition_ready( const ViewTransition *self);
+
+jb_Promise ViewTransition_finished( const ViewTransition *self);
+
+jb_Undefined ViewTransition_skipTransition(ViewTransition* self );
+
+ViewTransitionTypeSet ViewTransition_types( const ViewTransition *self);
+
+void ViewTransition_set_types(ViewTransition* self, const ViewTransitionTypeSet* value);

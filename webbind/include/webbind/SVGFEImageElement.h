@@ -5,6 +5,30 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedPreserveAspectRatio wb_SVGAnimatedPreserveAspectRatio;
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
+typedef struct SVGAnimatedString SVGAnimatedString;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGFEImageElement;
+
+
+DECLARE_EMLITE_TYPE(SVGFEImageElement, SVGElement);
+
+SVGAnimatedPreserveAspectRatio SVGFEImageElement_preserveAspectRatio( const SVGFEImageElement *self);
+
+SVGAnimatedString SVGFEImageElement_crossOrigin( const SVGFEImageElement *self);
+
+SVGAnimatedLength SVGFEImageElement_x( const SVGFEImageElement *self);
+
+SVGAnimatedLength SVGFEImageElement_y( const SVGFEImageElement *self);
+
+SVGAnimatedLength SVGFEImageElement_width( const SVGFEImageElement *self);
+
+SVGAnimatedLength SVGFEImageElement_height( const SVGFEImageElement *self);
+
+SVGAnimatedString SVGFEImageElement_result( const SVGFEImageElement *self);
+
+SVGAnimatedString SVGFEImageElement_href( const SVGFEImageElement *self);

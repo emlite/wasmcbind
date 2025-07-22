@@ -3,3 +3,19 @@
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
 #include "enums.h"
+
+
+typedef struct {
+  em_Val inner;
+} VideoPlaybackQuality;
+
+
+DECLARE_EMLITE_TYPE(VideoPlaybackQuality, em_Val);
+
+jb_Any VideoPlaybackQuality_creationTime( const VideoPlaybackQuality *self);
+
+unsigned long VideoPlaybackQuality_droppedVideoFrames( const VideoPlaybackQuality *self);
+
+unsigned long VideoPlaybackQuality_totalVideoFrames( const VideoPlaybackQuality *self);
+
+unsigned long VideoPlaybackQuality_corruptedVideoFrames( const VideoPlaybackQuality *self);

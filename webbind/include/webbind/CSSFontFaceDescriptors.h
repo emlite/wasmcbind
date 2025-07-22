@@ -4,3 +4,175 @@
 #include <jsbind/jsbind.h>
 #include "CSSStyleDeclaration.h"
 #include "enums.h"
+
+
+typedef struct {
+  CSSStyleDeclaration inner;
+} CSSFontFaceDescriptors;
+
+
+DECLARE_EMLITE_TYPE(CSSFontFaceDescriptors, CSSStyleDeclaration);
+
+jb_CSSOMString CSSFontFaceDescriptors_src( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_src(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_fontFamily( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_fontFamily(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_font_family( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_font_family(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_fontStyle( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_fontStyle(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_font_style( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_font_style(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_fontWeight( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_fontWeight(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_font_weight( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_font_weight(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_fontStretch( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_fontStretch(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_font_stretch( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_font_stretch(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_fontWidth( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_fontWidth(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_font_width( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_font_width(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_fontSize( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_fontSize(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_font_size( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_font_size(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_sizeAdjust( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_sizeAdjust(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_size_adjust( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_size_adjust(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_unicodeRange( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_unicodeRange(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_unicode_range( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_unicode_range(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_fontFeatureSettings( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_fontFeatureSettings(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_font_feature_settings( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_font_feature_settings(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_fontVariationSettings( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_fontVariationSettings(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_font_variation_settings( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_font_variation_settings(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_fontNamedInstance( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_fontNamedInstance(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_font_named_instance( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_font_named_instance(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_fontDisplay( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_fontDisplay(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_font_display( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_font_display(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_fontLanguageOverride( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_fontLanguageOverride(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_font_language_override( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_font_language_override(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_ascentOverride( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_ascentOverride(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_ascent_override( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_ascent_override(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_descentOverride( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_descentOverride(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_descent_override( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_descent_override(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_lineGapOverride( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_lineGapOverride(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_line_gap_override( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_line_gap_override(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_superscriptPositionOverride( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_superscriptPositionOverride(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_superscript_position_override( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_superscript_position_override(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_subscriptPositionOverride( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_subscriptPositionOverride(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_subscript_position_override( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_subscript_position_override(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_superscriptSizeOverride( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_superscriptSizeOverride(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_superscript_size_override( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_superscript_size_override(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_subscriptSizeOverride( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_subscriptSizeOverride(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);
+
+jb_CSSOMString CSSFontFaceDescriptors_subscript_size_override( const CSSFontFaceDescriptors *self);
+
+void CSSFontFaceDescriptors_set_subscript_size_override(CSSFontFaceDescriptors* self, const jb_CSSOMString* value);

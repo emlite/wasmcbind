@@ -4,5 +4,23 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_XRSpace wb_XRSpace;
-typedef struct wb_DOMPointReadOnly wb_DOMPointReadOnly;
+typedef struct XRSpace XRSpace;
+typedef struct DOMPointReadOnly DOMPointReadOnly;
+
+
+typedef struct {
+  em_Val inner;
+} XRPlane;
+
+
+DECLARE_EMLITE_TYPE(XRPlane, em_Val);
+
+XRSpace XRPlane_planeSpace( const XRPlane *self);
+
+jb_FrozenArray XRPlane_polygon( const XRPlane *self);
+
+XRPlaneOrientation XRPlane_orientation( const XRPlane *self);
+
+jb_Any XRPlane_lastChangedTime( const XRPlane *self);
+
+jb_DOMString XRPlane_semanticLabel( const XRPlane *self);

@@ -5,7 +5,37 @@
 #include "XRLayer.h"
 #include "enums.h"
 
-typedef struct wb_WebGLFramebuffer wb_WebGLFramebuffer;
-typedef struct wb_XRViewport wb_XRViewport;
-typedef struct wb_XRView wb_XRView;
-typedef struct wb_XRSession wb_XRSession;
+typedef struct WebGLFramebuffer WebGLFramebuffer;
+typedef struct XRViewport XRViewport;
+typedef struct XRView XRView;
+typedef struct XRSession XRSession;
+
+
+typedef struct {
+  XRLayer inner;
+} XRWebGLLayer;
+
+
+DECLARE_EMLITE_TYPE(XRWebGLLayer, XRLayer);
+
+XRWebGLLayer XRWebGLLayer_new(const XRSession* session, const jb_Any* context);
+
+XRWebGLLayer XRWebGLLayer_new(const XRSession* session, const jb_Any* context, const jb_Any* layerInit);
+
+bool XRWebGLLayer_antialias( const XRWebGLLayer *self);
+
+bool XRWebGLLayer_ignoreDepthValues( const XRWebGLLayer *self);
+
+float XRWebGLLayer_fixedFoveation( const XRWebGLLayer *self);
+
+void XRWebGLLayer_set_fixedFoveation(XRWebGLLayer* self, float value);
+
+WebGLFramebuffer XRWebGLLayer_framebuffer( const XRWebGLLayer *self);
+
+unsigned long XRWebGLLayer_framebufferWidth( const XRWebGLLayer *self);
+
+unsigned long XRWebGLLayer_framebufferHeight( const XRWebGLLayer *self);
+
+XRViewport XRWebGLLayer_getViewport(XRWebGLLayer* self , const XRView* view);
+
+double XRWebGLLayer_getNativeFramebufferScaleFactor(XRWebGLLayer* self , const XRSession* session);

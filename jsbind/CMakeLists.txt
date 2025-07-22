@@ -3,7 +3,7 @@ add_library(jsbind)
 set(JSBIND_SOURCES
     # src/Function.cpp 
     # src/Any.cpp 
-    src/lib.cpp 
+    src/lib.c
     # src/Object.cpp 
     # src/Undefined.cpp
     # src/Array.cpp
@@ -58,6 +58,9 @@ target_sources(jsbind
 
 target_compile_features(jsbind PUBLIC c_std_11)
 target_link_libraries(jsbind PUBLIC emlite::emlite)
+set_target_properties(jsbind PROPERTIES
+    LINKER_LANGUAGE C
+)
 
 add_library(jsbind::jsbind ALIAS jsbind)
 

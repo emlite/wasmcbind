@@ -5,4 +5,18 @@
 #include "Event.h"
 #include "enums.h"
 
-typedef struct wb_Window wb_Window;
+typedef struct Window Window;
+
+
+typedef struct {
+  Event inner;
+} TimeEvent;
+
+
+DECLARE_EMLITE_TYPE(TimeEvent, Event);
+
+jb_Any TimeEvent_view( const TimeEvent *self);
+
+long TimeEvent_detail( const TimeEvent *self);
+
+jb_Undefined TimeEvent_initTimeEvent(TimeEvent* self , const jb_DOMString* typeArg, const Window* viewArg, long detailArg);

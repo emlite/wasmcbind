@@ -4,3 +4,17 @@
 #include <jsbind/jsbind.h>
 #include "HTMLElement.h"
 #include "enums.h"
+
+
+typedef struct {
+  HTMLElement inner;
+} HTMLDirectoryElement;
+
+
+DECLARE_EMLITE_TYPE(HTMLDirectoryElement, HTMLElement);
+
+HTMLDirectoryElement HTMLDirectoryElement_new();
+
+bool HTMLDirectoryElement_compact( const HTMLDirectoryElement *self);
+
+void HTMLDirectoryElement_set_compact(HTMLDirectoryElement* self, bool value);

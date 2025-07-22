@@ -5,4 +5,14 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
+typedef struct SVGAnimatedString SVGAnimatedString;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGFEMergeNodeElement;
+
+
+DECLARE_EMLITE_TYPE(SVGFEMergeNodeElement, SVGElement);
+
+SVGAnimatedString SVGFEMergeNodeElement_in1( const SVGFEMergeNodeElement *self);

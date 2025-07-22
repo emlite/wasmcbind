@@ -4,23 +4,61 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_XRSession wb_XRSession;
-typedef struct wb_XRViewerPose wb_XRViewerPose;
-typedef struct wb_XRReferenceSpace wb_XRReferenceSpace;
-typedef struct wb_XRPose wb_XRPose;
-typedef struct wb_XRSpace wb_XRSpace;
-typedef struct wb_XRAnchor wb_XRAnchor;
-typedef struct wb_XRRigidTransform wb_XRRigidTransform;
-typedef struct wb_XRAnchorSet wb_XRAnchorSet;
-typedef struct wb_XRMeshSet wb_XRMeshSet;
-typedef struct wb_XRCPUDepthInformation wb_XRCPUDepthInformation;
-typedef struct wb_XRView wb_XRView;
-typedef struct wb_XRJointPose wb_XRJointPose;
-typedef struct wb_XRJointSpace wb_XRJointSpace;
-typedef struct wb_XRHitTestResult wb_XRHitTestResult;
-typedef struct wb_XRHitTestSource wb_XRHitTestSource;
-typedef struct wb_XRTransientInputHitTestResult wb_XRTransientInputHitTestResult;
-typedef struct wb_XRTransientInputHitTestSource wb_XRTransientInputHitTestSource;
-typedef struct wb_XRLightEstimate wb_XRLightEstimate;
-typedef struct wb_XRLightProbe wb_XRLightProbe;
-typedef struct wb_XRPlaneSet wb_XRPlaneSet;
+typedef struct XRSession XRSession;
+typedef struct XRViewerPose XRViewerPose;
+typedef struct XRReferenceSpace XRReferenceSpace;
+typedef struct XRPose XRPose;
+typedef struct XRSpace XRSpace;
+typedef struct XRAnchor XRAnchor;
+typedef struct XRRigidTransform XRRigidTransform;
+typedef struct XRAnchorSet XRAnchorSet;
+typedef struct XRMeshSet XRMeshSet;
+typedef struct XRCPUDepthInformation XRCPUDepthInformation;
+typedef struct XRView XRView;
+typedef struct XRJointPose XRJointPose;
+typedef struct XRJointSpace XRJointSpace;
+typedef struct XRHitTestResult XRHitTestResult;
+typedef struct XRHitTestSource XRHitTestSource;
+typedef struct XRTransientInputHitTestResult XRTransientInputHitTestResult;
+typedef struct XRTransientInputHitTestSource XRTransientInputHitTestSource;
+typedef struct XRLightEstimate XRLightEstimate;
+typedef struct XRLightProbe XRLightProbe;
+typedef struct XRPlaneSet XRPlaneSet;
+
+
+typedef struct {
+  em_Val inner;
+} XRFrame;
+
+
+DECLARE_EMLITE_TYPE(XRFrame, em_Val);
+
+XRSession XRFrame_session( const XRFrame *self);
+
+jb_Any XRFrame_predictedDisplayTime( const XRFrame *self);
+
+XRViewerPose XRFrame_getViewerPose(XRFrame* self , const XRReferenceSpace* referenceSpace);
+
+XRPose XRFrame_getPose(XRFrame* self , const XRSpace* space, const XRSpace* baseSpace);
+
+jb_Promise XRFrame_createAnchor(XRFrame* self , const XRRigidTransform* pose, const XRSpace* space);
+
+XRAnchorSet XRFrame_trackedAnchors( const XRFrame *self);
+
+XRMeshSet XRFrame_detectedMeshes( const XRFrame *self);
+
+XRCPUDepthInformation XRFrame_getDepthInformation(XRFrame* self , const XRView* view);
+
+XRJointPose XRFrame_getJointPose(XRFrame* self , const XRJointSpace* joint, const XRSpace* baseSpace);
+
+bool XRFrame_fillJointRadii(XRFrame* self , const jb_Sequence* jointSpaces, const jb_Float32Array* radii);
+
+bool XRFrame_fillPoses(XRFrame* self , const jb_Sequence* spaces, const XRSpace* baseSpace, const jb_Float32Array* transforms);
+
+jb_Sequence XRFrame_getHitTestResults(XRFrame* self , const XRHitTestSource* hitTestSource);
+
+jb_Sequence XRFrame_getHitTestResultsForTransientInput(XRFrame* self , const XRTransientInputHitTestSource* hitTestSource);
+
+XRLightEstimate XRFrame_getLightEstimate(XRFrame* self , const XRLightProbe* lightProbe);
+
+XRPlaneSet XRFrame_detectedPlanes( const XRFrame *self);

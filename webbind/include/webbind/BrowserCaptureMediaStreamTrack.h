@@ -5,6 +5,20 @@
 #include "MediaStreamTrack.h"
 #include "enums.h"
 
-typedef struct wb_CropTarget wb_CropTarget;
-typedef struct wb_BrowserCaptureMediaStreamTrack wb_BrowserCaptureMediaStreamTrack;
-typedef struct wb_RestrictionTarget wb_RestrictionTarget;
+typedef struct CropTarget CropTarget;
+typedef struct BrowserCaptureMediaStreamTrack BrowserCaptureMediaStreamTrack;
+typedef struct RestrictionTarget RestrictionTarget;
+
+
+typedef struct {
+  MediaStreamTrack inner;
+} BrowserCaptureMediaStreamTrack;
+
+
+DECLARE_EMLITE_TYPE(BrowserCaptureMediaStreamTrack, MediaStreamTrack);
+
+jb_Promise BrowserCaptureMediaStreamTrack_cropTo(BrowserCaptureMediaStreamTrack* self , const CropTarget* cropTarget);
+
+BrowserCaptureMediaStreamTrack BrowserCaptureMediaStreamTrack_clone(BrowserCaptureMediaStreamTrack* self );
+
+jb_Promise BrowserCaptureMediaStreamTrack_restrictTo(BrowserCaptureMediaStreamTrack* self , const RestrictionTarget* RestrictionTarget);

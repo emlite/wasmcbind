@@ -4,5 +4,23 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_USBAlternateInterface wb_USBAlternateInterface;
-typedef struct wb_USBConfiguration wb_USBConfiguration;
+typedef struct USBAlternateInterface USBAlternateInterface;
+typedef struct USBConfiguration USBConfiguration;
+
+
+typedef struct {
+  em_Val inner;
+} USBInterface;
+
+
+DECLARE_EMLITE_TYPE(USBInterface, em_Val);
+
+USBInterface USBInterface_new(const USBConfiguration* configuration, unsigned char interfaceNumber);
+
+unsigned char USBInterface_interfaceNumber( const USBInterface *self);
+
+USBAlternateInterface USBInterface_alternate( const USBInterface *self);
+
+jb_FrozenArray USBInterface_alternates( const USBInterface *self);
+
+bool USBInterface_claimed( const USBInterface *self);

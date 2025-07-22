@@ -4,8 +4,44 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_GPUSupportedFeatures wb_GPUSupportedFeatures;
-typedef struct wb_GPUSupportedLimits wb_GPUSupportedLimits;
-typedef struct wb_GPUAdapterInfo wb_GPUAdapterInfo;
-typedef struct wb_GPUDevice wb_GPUDevice;
-typedef struct wb_GPUDeviceDescriptor wb_GPUDeviceDescriptor;
+typedef struct GPUSupportedFeatures GPUSupportedFeatures;
+typedef struct GPUSupportedLimits GPUSupportedLimits;
+typedef struct GPUAdapterInfo GPUAdapterInfo;
+typedef struct GPUDevice GPUDevice;
+typedef struct GPUDeviceDescriptor GPUDeviceDescriptor;
+
+
+typedef struct {
+  em_Val inner;
+} GPUDeviceDescriptor;
+
+
+DECLARE_EMLITE_TYPE(GPUDeviceDescriptor, em_Val);
+
+jb_Sequence GPUDeviceDescriptor_requiredFeatures( const GPUDeviceDescriptor *self);
+
+void GPUDeviceDescriptor_set_requiredFeatures(GPUDeviceDescriptor* self, const jb_Sequence* value);
+
+jb_Record GPUDeviceDescriptor_requiredLimits( const GPUDeviceDescriptor *self);
+
+void GPUDeviceDescriptor_set_requiredLimits(GPUDeviceDescriptor* self, const jb_Record* value);
+
+jb_Any GPUDeviceDescriptor_defaultQueue( const GPUDeviceDescriptor *self);
+
+void GPUDeviceDescriptor_set_defaultQueue(GPUDeviceDescriptor* self, const jb_Any* value);
+typedef struct {
+  em_Val inner;
+} GPUAdapter;
+
+
+DECLARE_EMLITE_TYPE(GPUAdapter, em_Val);
+
+GPUSupportedFeatures GPUAdapter_features( const GPUAdapter *self);
+
+GPUSupportedLimits GPUAdapter_limits( const GPUAdapter *self);
+
+GPUAdapterInfo GPUAdapter_info( const GPUAdapter *self);
+
+jb_Promise GPUAdapter_requestDevice(GPUAdapter* self );
+
+jb_Promise GPUAdapter_requestDevice(GPUAdapter* self , const GPUDeviceDescriptor* descriptor);

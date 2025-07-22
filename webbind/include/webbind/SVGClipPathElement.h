@@ -5,5 +5,17 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
-typedef struct wb_SVGAnimatedTransformList wb_SVGAnimatedTransformList;
+typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
+typedef struct SVGAnimatedTransformList SVGAnimatedTransformList;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGClipPathElement;
+
+
+DECLARE_EMLITE_TYPE(SVGClipPathElement, SVGElement);
+
+SVGAnimatedEnumeration SVGClipPathElement_clipPathUnits( const SVGClipPathElement *self);
+
+SVGAnimatedTransformList SVGClipPathElement_transform( const SVGClipPathElement *self);

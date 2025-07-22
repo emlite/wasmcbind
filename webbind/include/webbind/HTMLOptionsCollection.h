@@ -5,4 +5,26 @@
 #include "HTMLCollection.h"
 #include "enums.h"
 
-typedef struct wb_HTMLOptionElement wb_HTMLOptionElement;
+typedef struct HTMLOptionElement HTMLOptionElement;
+
+
+typedef struct {
+  HTMLCollection inner;
+} HTMLOptionsCollection;
+
+
+DECLARE_EMLITE_TYPE(HTMLOptionsCollection, HTMLCollection);
+
+unsigned long HTMLOptionsCollection_length( const HTMLOptionsCollection *self);
+
+void HTMLOptionsCollection_set_length(HTMLOptionsCollection* self, unsigned long value);
+
+jb_Undefined HTMLOptionsCollection_add(HTMLOptionsCollection* self , const jb_Any* element);
+
+jb_Undefined HTMLOptionsCollection_add(HTMLOptionsCollection* self , const jb_Any* element, const jb_Any* before);
+
+jb_Undefined HTMLOptionsCollection_remove(HTMLOptionsCollection* self , long index);
+
+long HTMLOptionsCollection_selectedIndex( const HTMLOptionsCollection *self);
+
+void HTMLOptionsCollection_set_selectedIndex(HTMLOptionsCollection* self, long value);

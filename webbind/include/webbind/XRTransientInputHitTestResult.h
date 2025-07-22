@@ -4,5 +4,17 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_XRInputSource wb_XRInputSource;
-typedef struct wb_XRHitTestResult wb_XRHitTestResult;
+typedef struct XRInputSource XRInputSource;
+typedef struct XRHitTestResult XRHitTestResult;
+
+
+typedef struct {
+  em_Val inner;
+} XRTransientInputHitTestResult;
+
+
+DECLARE_EMLITE_TYPE(XRTransientInputHitTestResult, em_Val);
+
+XRInputSource XRTransientInputHitTestResult_inputSource( const XRTransientInputHitTestResult *self);
+
+jb_FrozenArray XRTransientInputHitTestResult_results( const XRTransientInputHitTestResult *self);

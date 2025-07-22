@@ -5,4 +5,16 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedNumber wb_SVGAnimatedNumber;
+typedef struct SVGAnimatedNumber SVGAnimatedNumber;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGFEDistantLightElement;
+
+
+DECLARE_EMLITE_TYPE(SVGFEDistantLightElement, SVGElement);
+
+SVGAnimatedNumber SVGFEDistantLightElement_azimuth( const SVGFEDistantLightElement *self);
+
+SVGAnimatedNumber SVGFEDistantLightElement_elevation( const SVGFEDistantLightElement *self);

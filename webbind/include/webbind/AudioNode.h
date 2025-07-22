@@ -5,6 +5,38 @@
 #include "EventTarget.h"
 #include "enums.h"
 
-typedef struct wb_AudioParam wb_AudioParam;
-typedef struct wb_BaseAudioContext wb_BaseAudioContext;
-typedef struct wb_AudioContext wb_AudioContext;
+typedef struct AudioParam AudioParam;
+typedef struct BaseAudioContext BaseAudioContext;
+typedef struct AudioContext AudioContext;
+
+
+typedef struct {
+  EventTarget inner;
+} AudioNode;
+
+
+DECLARE_EMLITE_TYPE(AudioNode, EventTarget);
+
+jb_Undefined AudioNode_connect(AudioNode* self , const AudioParam* destinationParam);
+
+jb_Undefined AudioNode_connect(AudioNode* self , const AudioParam* destinationParam, unsigned long output);
+
+jb_Undefined AudioNode_disconnect(AudioNode* self , const AudioParam* destinationParam, unsigned long output);
+
+BaseAudioContext AudioNode_context( const AudioNode *self);
+
+unsigned long AudioNode_numberOfInputs( const AudioNode *self);
+
+unsigned long AudioNode_numberOfOutputs( const AudioNode *self);
+
+unsigned long AudioNode_channelCount( const AudioNode *self);
+
+void AudioNode_set_channelCount(AudioNode* self, unsigned long value);
+
+ChannelCountMode AudioNode_channelCountMode( const AudioNode *self);
+
+void AudioNode_set_channelCountMode(AudioNode* self, const ChannelCountMode* value);
+
+ChannelInterpretation AudioNode_channelInterpretation( const AudioNode *self);
+
+void AudioNode_set_channelInterpretation(AudioNode* self, const ChannelInterpretation* value);

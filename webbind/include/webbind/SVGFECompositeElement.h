@@ -5,7 +5,39 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
-typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
-typedef struct wb_SVGAnimatedNumber wb_SVGAnimatedNumber;
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct SVGAnimatedString SVGAnimatedString;
+typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
+typedef struct SVGAnimatedNumber SVGAnimatedNumber;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGFECompositeElement;
+
+
+DECLARE_EMLITE_TYPE(SVGFECompositeElement, SVGElement);
+
+SVGAnimatedString SVGFECompositeElement_in1( const SVGFECompositeElement *self);
+
+SVGAnimatedString SVGFECompositeElement_in2( const SVGFECompositeElement *self);
+
+SVGAnimatedEnumeration SVGFECompositeElement_operator_( const SVGFECompositeElement *self);
+
+SVGAnimatedNumber SVGFECompositeElement_k1( const SVGFECompositeElement *self);
+
+SVGAnimatedNumber SVGFECompositeElement_k2( const SVGFECompositeElement *self);
+
+SVGAnimatedNumber SVGFECompositeElement_k3( const SVGFECompositeElement *self);
+
+SVGAnimatedNumber SVGFECompositeElement_k4( const SVGFECompositeElement *self);
+
+SVGAnimatedLength SVGFECompositeElement_x( const SVGFECompositeElement *self);
+
+SVGAnimatedLength SVGFECompositeElement_y( const SVGFECompositeElement *self);
+
+SVGAnimatedLength SVGFECompositeElement_width( const SVGFECompositeElement *self);
+
+SVGAnimatedLength SVGFECompositeElement_height( const SVGFECompositeElement *self);
+
+SVGAnimatedString SVGFECompositeElement_result( const SVGFECompositeElement *self);

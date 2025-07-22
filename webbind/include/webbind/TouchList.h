@@ -4,4 +4,16 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_Touch wb_Touch;
+typedef struct Touch Touch;
+
+
+typedef struct {
+  em_Val inner;
+} TouchList;
+
+
+DECLARE_EMLITE_TYPE(TouchList, em_Val);
+
+unsigned long TouchList_length( const TouchList *self);
+
+Touch TouchList_item(TouchList* self , unsigned long index);

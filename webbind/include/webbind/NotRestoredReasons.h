@@ -4,5 +4,27 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_NotRestoredReasonDetails wb_NotRestoredReasonDetails;
-typedef struct wb_NotRestoredReasons wb_NotRestoredReasons;
+typedef struct NotRestoredReasonDetails NotRestoredReasonDetails;
+typedef struct NotRestoredReasons NotRestoredReasons;
+
+
+typedef struct {
+  em_Val inner;
+} NotRestoredReasons;
+
+
+DECLARE_EMLITE_TYPE(NotRestoredReasons, em_Val);
+
+jb_USVString NotRestoredReasons_src( const NotRestoredReasons *self);
+
+jb_DOMString NotRestoredReasons_id( const NotRestoredReasons *self);
+
+jb_DOMString NotRestoredReasons_name( const NotRestoredReasons *self);
+
+jb_USVString NotRestoredReasons_url( const NotRestoredReasons *self);
+
+jb_FrozenArray NotRestoredReasons_reasons( const NotRestoredReasons *self);
+
+jb_FrozenArray NotRestoredReasons_children( const NotRestoredReasons *self);
+
+jb_Object NotRestoredReasons_toJSON(NotRestoredReasons* self );

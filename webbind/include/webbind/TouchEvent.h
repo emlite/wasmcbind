@@ -5,4 +5,32 @@
 #include "UIEvent.h"
 #include "enums.h"
 
-typedef struct wb_TouchList wb_TouchList;
+typedef struct TouchList TouchList;
+
+
+typedef struct {
+  UIEvent inner;
+} TouchEvent;
+
+
+DECLARE_EMLITE_TYPE(TouchEvent, UIEvent);
+
+TouchEvent TouchEvent_new(const jb_DOMString* type);
+
+TouchEvent TouchEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+
+TouchList TouchEvent_touches( const TouchEvent *self);
+
+TouchList TouchEvent_targetTouches( const TouchEvent *self);
+
+TouchList TouchEvent_changedTouches( const TouchEvent *self);
+
+bool TouchEvent_altKey( const TouchEvent *self);
+
+bool TouchEvent_metaKey( const TouchEvent *self);
+
+bool TouchEvent_ctrlKey( const TouchEvent *self);
+
+bool TouchEvent_shiftKey( const TouchEvent *self);
+
+bool TouchEvent_getModifierState(TouchEvent* self , const jb_DOMString* keyArg);

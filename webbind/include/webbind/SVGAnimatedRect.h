@@ -4,5 +4,17 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_DOMRect wb_DOMRect;
-typedef struct wb_DOMRectReadOnly wb_DOMRectReadOnly;
+typedef struct DOMRect DOMRect;
+typedef struct DOMRectReadOnly DOMRectReadOnly;
+
+
+typedef struct {
+  em_Val inner;
+} SVGAnimatedRect;
+
+
+DECLARE_EMLITE_TYPE(SVGAnimatedRect, em_Val);
+
+DOMRect SVGAnimatedRect_baseVal( const SVGAnimatedRect *self);
+
+DOMRectReadOnly SVGAnimatedRect_animVal( const SVGAnimatedRect *self);

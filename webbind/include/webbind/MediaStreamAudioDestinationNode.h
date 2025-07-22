@@ -5,4 +5,18 @@
 #include "AudioNode.h"
 #include "enums.h"
 
-typedef struct wb_MediaStream wb_MediaStream;
+typedef struct MediaStream MediaStream;
+
+
+typedef struct {
+  AudioNode inner;
+} MediaStreamAudioDestinationNode;
+
+
+DECLARE_EMLITE_TYPE(MediaStreamAudioDestinationNode, AudioNode);
+
+MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode_new(const AudioContext* context);
+
+MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode_new(const AudioContext* context, const jb_Any* options);
+
+MediaStream MediaStreamAudioDestinationNode_stream( const MediaStreamAudioDestinationNode *self);

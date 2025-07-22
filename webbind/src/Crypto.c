@@ -1,2 +1,21 @@
 #include <webbind/Crypto.h>
 #include <webbind/SubtleCrypto.h>
+
+
+DEFINE_EMLITE_TYPE(Crypto, em_Val);
+
+
+SubtleCrypto Crypto_subtle(const Crypto *self) {
+    return em_Val_as(SubtleCrypto, em_Val_get(em_Val_as_val(self->inner), "subtle"));
+}
+
+
+jb_Any Crypto_getRandomValues(Crypto* self , const jb_Any* array) {
+    return em_Val_as(jb_Any, em_Val_call(em_Val_as_val(self->inner), "getRandomValues", em_Val_from(array)));
+}
+
+
+jb_DOMString Crypto_randomUUID(Crypto* self ) {
+    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "randomUUID"));
+}
+

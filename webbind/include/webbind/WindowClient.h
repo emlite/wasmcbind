@@ -5,4 +5,22 @@
 #include "Client.h"
 #include "enums.h"
 
-typedef struct wb_WindowClient wb_WindowClient;
+typedef struct WindowClient WindowClient;
+
+
+typedef struct {
+  Client inner;
+} WindowClient;
+
+
+DECLARE_EMLITE_TYPE(WindowClient, Client);
+
+DocumentVisibilityState WindowClient_visibilityState( const WindowClient *self);
+
+bool WindowClient_focused( const WindowClient *self);
+
+jb_FrozenArray WindowClient_ancestorOrigins( const WindowClient *self);
+
+jb_Promise WindowClient_focus(WindowClient* self );
+
+jb_Promise WindowClient_navigate(WindowClient* self , const jb_USVString* url);

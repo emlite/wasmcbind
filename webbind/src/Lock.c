@@ -1,1 +1,15 @@
 #include <webbind/Lock.h>
+
+
+DEFINE_EMLITE_TYPE(Lock, em_Val);
+
+
+jb_DOMString Lock_name(const Lock *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "name"));
+}
+
+
+LockMode Lock_mode(const Lock *self) {
+    return em_Val_as(LockMode, em_Val_get(em_Val_as_val(self->inner), "mode"));
+}
+

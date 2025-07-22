@@ -12,3 +12,127 @@
 #include <webbind/LockManager.h>
 #include <webbind/GPU.h>
 #include <webbind/ML.h>
+
+
+DEFINE_EMLITE_TYPE(WorkerNavigator, em_Val);
+
+
+MediaCapabilities WorkerNavigator_mediaCapabilities(const WorkerNavigator *self) {
+    return em_Val_as(MediaCapabilities, em_Val_get(em_Val_as_val(self->inner), "mediaCapabilities"));
+}
+
+
+Permissions WorkerNavigator_permissions(const WorkerNavigator *self) {
+    return em_Val_as(Permissions, em_Val_get(em_Val_as_val(self->inner), "permissions"));
+}
+
+
+Serial WorkerNavigator_serial(const WorkerNavigator *self) {
+    return em_Val_as(Serial, em_Val_get(em_Val_as_val(self->inner), "serial"));
+}
+
+
+ServiceWorkerContainer WorkerNavigator_serviceWorker(const WorkerNavigator *self) {
+    return em_Val_as(ServiceWorkerContainer, em_Val_get(em_Val_as_val(self->inner), "serviceWorker"));
+}
+
+
+HID WorkerNavigator_hid(const WorkerNavigator *self) {
+    return em_Val_as(HID, em_Val_get(em_Val_as_val(self->inner), "hid"));
+}
+
+
+USB WorkerNavigator_usb(const WorkerNavigator *self) {
+    return em_Val_as(USB, em_Val_get(em_Val_as_val(self->inner), "usb"));
+}
+
+
+jb_Promise WorkerNavigator_setAppBadge(WorkerNavigator* self ) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "setAppBadge"));
+}
+
+
+jb_Promise WorkerNavigator_setAppBadge(WorkerNavigator* self , long long contents) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "setAppBadge", em_Val_from(contents)));
+}
+
+
+jb_Promise WorkerNavigator_clearAppBadge(WorkerNavigator* self ) {
+    return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "clearAppBadge"));
+}
+
+
+double WorkerNavigator_deviceMemory(const WorkerNavigator *self) {
+    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), "deviceMemory"));
+}
+
+
+bool WorkerNavigator_globalPrivacyControl(const WorkerNavigator *self) {
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "globalPrivacyControl"));
+}
+
+
+bool WorkerNavigator_taintEnabled(WorkerNavigator* self ) {
+    return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "taintEnabled"));
+}
+
+
+jb_DOMString WorkerNavigator_oscpu(const WorkerNavigator *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "oscpu"));
+}
+
+
+jb_DOMString WorkerNavigator_language(const WorkerNavigator *self) {
+    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), "language"));
+}
+
+
+jb_FrozenArray WorkerNavigator_languages(const WorkerNavigator *self) {
+    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), "languages"));
+}
+
+
+bool WorkerNavigator_onLine(const WorkerNavigator *self) {
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), "onLine"));
+}
+
+
+long long WorkerNavigator_hardwareConcurrency(const WorkerNavigator *self) {
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), "hardwareConcurrency"));
+}
+
+
+NetworkInformation WorkerNavigator_connection(const WorkerNavigator *self) {
+    return em_Val_as(NetworkInformation, em_Val_get(em_Val_as_val(self->inner), "connection"));
+}
+
+
+StorageBucketManager WorkerNavigator_storageBuckets(const WorkerNavigator *self) {
+    return em_Val_as(StorageBucketManager, em_Val_get(em_Val_as_val(self->inner), "storageBuckets"));
+}
+
+
+StorageManager WorkerNavigator_storage(const WorkerNavigator *self) {
+    return em_Val_as(StorageManager, em_Val_get(em_Val_as_val(self->inner), "storage"));
+}
+
+
+NavigatorUAData WorkerNavigator_userAgentData(const WorkerNavigator *self) {
+    return em_Val_as(NavigatorUAData, em_Val_get(em_Val_as_val(self->inner), "userAgentData"));
+}
+
+
+LockManager WorkerNavigator_locks(const WorkerNavigator *self) {
+    return em_Val_as(LockManager, em_Val_get(em_Val_as_val(self->inner), "locks"));
+}
+
+
+GPU WorkerNavigator_gpu(const WorkerNavigator *self) {
+    return em_Val_as(GPU, em_Val_get(em_Val_as_val(self->inner), "gpu"));
+}
+
+
+ML WorkerNavigator_ml(const WorkerNavigator *self) {
+    return em_Val_as(ML, em_Val_get(em_Val_as_val(self->inner), "ml"));
+}
+

@@ -5,7 +5,31 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
-typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
-typedef struct wb_SVGAnimatedNumberList wb_SVGAnimatedNumberList;
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct SVGAnimatedString SVGAnimatedString;
+typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
+typedef struct SVGAnimatedNumberList SVGAnimatedNumberList;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGFEColorMatrixElement;
+
+
+DECLARE_EMLITE_TYPE(SVGFEColorMatrixElement, SVGElement);
+
+SVGAnimatedString SVGFEColorMatrixElement_in1( const SVGFEColorMatrixElement *self);
+
+SVGAnimatedEnumeration SVGFEColorMatrixElement_type( const SVGFEColorMatrixElement *self);
+
+SVGAnimatedNumberList SVGFEColorMatrixElement_values( const SVGFEColorMatrixElement *self);
+
+SVGAnimatedLength SVGFEColorMatrixElement_x( const SVGFEColorMatrixElement *self);
+
+SVGAnimatedLength SVGFEColorMatrixElement_y( const SVGFEColorMatrixElement *self);
+
+SVGAnimatedLength SVGFEColorMatrixElement_width( const SVGFEColorMatrixElement *self);
+
+SVGAnimatedLength SVGFEColorMatrixElement_height( const SVGFEColorMatrixElement *self);
+
+SVGAnimatedString SVGFEColorMatrixElement_result( const SVGFEColorMatrixElement *self);

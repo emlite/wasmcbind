@@ -4,4 +4,22 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_PreferenceObject wb_PreferenceObject;
+typedef struct PreferenceObject PreferenceObject;
+
+
+typedef struct {
+  em_Val inner;
+} PreferenceManager;
+
+
+DECLARE_EMLITE_TYPE(PreferenceManager, em_Val);
+
+PreferenceObject PreferenceManager_colorScheme( const PreferenceManager *self);
+
+PreferenceObject PreferenceManager_contrast( const PreferenceManager *self);
+
+PreferenceObject PreferenceManager_reducedMotion( const PreferenceManager *self);
+
+PreferenceObject PreferenceManager_reducedTransparency( const PreferenceManager *self);
+
+PreferenceObject PreferenceManager_reducedData( const PreferenceManager *self);

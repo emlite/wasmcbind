@@ -5,4 +5,16 @@
 #include "MediaStreamTrack.h"
 #include "enums.h"
 
-typedef struct wb_HTMLCanvasElement wb_HTMLCanvasElement;
+typedef struct HTMLCanvasElement HTMLCanvasElement;
+
+
+typedef struct {
+  MediaStreamTrack inner;
+} CanvasCaptureMediaStreamTrack;
+
+
+DECLARE_EMLITE_TYPE(CanvasCaptureMediaStreamTrack, MediaStreamTrack);
+
+HTMLCanvasElement CanvasCaptureMediaStreamTrack_canvas( const CanvasCaptureMediaStreamTrack *self);
+
+jb_Undefined CanvasCaptureMediaStreamTrack_requestFrame(CanvasCaptureMediaStreamTrack* self );

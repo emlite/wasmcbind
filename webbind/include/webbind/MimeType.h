@@ -4,4 +4,20 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_Plugin wb_Plugin;
+typedef struct Plugin Plugin;
+
+
+typedef struct {
+  em_Val inner;
+} MimeType;
+
+
+DECLARE_EMLITE_TYPE(MimeType, em_Val);
+
+jb_DOMString MimeType_type( const MimeType *self);
+
+jb_DOMString MimeType_description( const MimeType *self);
+
+jb_DOMString MimeType_suffixes( const MimeType *self);
+
+Plugin MimeType_enabledPlugin( const MimeType *self);

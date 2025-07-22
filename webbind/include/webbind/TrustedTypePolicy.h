@@ -4,6 +4,22 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_TrustedHTML wb_TrustedHTML;
-typedef struct wb_TrustedScript wb_TrustedScript;
-typedef struct wb_TrustedScriptURL wb_TrustedScriptURL;
+typedef struct TrustedHTML TrustedHTML;
+typedef struct TrustedScript TrustedScript;
+typedef struct TrustedScriptURL TrustedScriptURL;
+
+
+typedef struct {
+  em_Val inner;
+} TrustedTypePolicy;
+
+
+DECLARE_EMLITE_TYPE(TrustedTypePolicy, em_Val);
+
+jb_DOMString TrustedTypePolicy_name( const TrustedTypePolicy *self);
+
+TrustedHTML TrustedTypePolicy_createHTML(TrustedTypePolicy* self , const jb_DOMString* input, const jb_Any* arguments);
+
+TrustedScript TrustedTypePolicy_createScript(TrustedTypePolicy* self , const jb_DOMString* input, const jb_Any* arguments);
+
+TrustedScriptURL TrustedTypePolicy_createScriptURL(TrustedTypePolicy* self , const jb_DOMString* input, const jb_Any* arguments);

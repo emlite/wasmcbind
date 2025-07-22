@@ -5,4 +5,14 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-typedef struct wb_CSSFontFaceDescriptors wb_CSSFontFaceDescriptors;
+typedef struct CSSFontFaceDescriptors CSSFontFaceDescriptors;
+
+
+typedef struct {
+  CSSRule inner;
+} CSSFontFaceRule;
+
+
+DECLARE_EMLITE_TYPE(CSSFontFaceRule, CSSRule);
+
+CSSFontFaceDescriptors CSSFontFaceRule_style( const CSSFontFaceRule *self);

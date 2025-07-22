@@ -4,5 +4,19 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_Node wb_Node;
-typedef struct wb_DOMRectReadOnly wb_DOMRectReadOnly;
+typedef struct Node Node;
+typedef struct DOMRectReadOnly DOMRectReadOnly;
+
+
+typedef struct {
+  em_Val inner;
+} LayoutShiftAttribution;
+
+
+DECLARE_EMLITE_TYPE(LayoutShiftAttribution, em_Val);
+
+Node LayoutShiftAttribution_node( const LayoutShiftAttribution *self);
+
+DOMRectReadOnly LayoutShiftAttribution_previousRect( const LayoutShiftAttribution *self);
+
+DOMRectReadOnly LayoutShiftAttribution_currentRect( const LayoutShiftAttribution *self);

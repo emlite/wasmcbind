@@ -5,4 +5,28 @@
 #include "AudioNode.h"
 #include "enums.h"
 
-typedef struct wb_AudioParam wb_AudioParam;
+typedef struct AudioParam AudioParam;
+
+
+typedef struct {
+  AudioNode inner;
+} DynamicsCompressorNode;
+
+
+DECLARE_EMLITE_TYPE(DynamicsCompressorNode, AudioNode);
+
+DynamicsCompressorNode DynamicsCompressorNode_new(const BaseAudioContext* context);
+
+DynamicsCompressorNode DynamicsCompressorNode_new(const BaseAudioContext* context, const jb_Any* options);
+
+AudioParam DynamicsCompressorNode_threshold( const DynamicsCompressorNode *self);
+
+AudioParam DynamicsCompressorNode_knee( const DynamicsCompressorNode *self);
+
+AudioParam DynamicsCompressorNode_ratio( const DynamicsCompressorNode *self);
+
+float DynamicsCompressorNode_reduction( const DynamicsCompressorNode *self);
+
+AudioParam DynamicsCompressorNode_attack( const DynamicsCompressorNode *self);
+
+AudioParam DynamicsCompressorNode_release( const DynamicsCompressorNode *self);

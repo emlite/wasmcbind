@@ -5,6 +5,22 @@
 #include "SVGTextContentElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
-typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
+typedef struct SVGAnimatedString SVGAnimatedString;
+
+
+typedef struct {
+  SVGTextContentElement inner;
+} SVGTextPathElement;
+
+
+DECLARE_EMLITE_TYPE(SVGTextPathElement, SVGTextContentElement);
+
+SVGAnimatedLength SVGTextPathElement_startOffset( const SVGTextPathElement *self);
+
+SVGAnimatedEnumeration SVGTextPathElement_method( const SVGTextPathElement *self);
+
+SVGAnimatedEnumeration SVGTextPathElement_spacing( const SVGTextPathElement *self);
+
+SVGAnimatedString SVGTextPathElement_href( const SVGTextPathElement *self);

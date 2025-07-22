@@ -5,9 +5,43 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
-typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
-typedef struct wb_SVGAnimatedAngle wb_SVGAnimatedAngle;
-typedef struct wb_SVGAngle wb_SVGAngle;
-typedef struct wb_SVGAnimatedRect wb_SVGAnimatedRect;
-typedef struct wb_SVGAnimatedPreserveAspectRatio wb_SVGAnimatedPreserveAspectRatio;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
+typedef struct SVGAnimatedAngle SVGAnimatedAngle;
+typedef struct SVGAngle SVGAngle;
+typedef struct SVGAnimatedRect SVGAnimatedRect;
+typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGMarkerElement;
+
+
+DECLARE_EMLITE_TYPE(SVGMarkerElement, SVGElement);
+
+SVGAnimatedLength SVGMarkerElement_refX( const SVGMarkerElement *self);
+
+SVGAnimatedLength SVGMarkerElement_refY( const SVGMarkerElement *self);
+
+SVGAnimatedEnumeration SVGMarkerElement_markerUnits( const SVGMarkerElement *self);
+
+SVGAnimatedLength SVGMarkerElement_markerWidth( const SVGMarkerElement *self);
+
+SVGAnimatedLength SVGMarkerElement_markerHeight( const SVGMarkerElement *self);
+
+SVGAnimatedEnumeration SVGMarkerElement_orientType( const SVGMarkerElement *self);
+
+SVGAnimatedAngle SVGMarkerElement_orientAngle( const SVGMarkerElement *self);
+
+jb_DOMString SVGMarkerElement_orient( const SVGMarkerElement *self);
+
+void SVGMarkerElement_set_orient(SVGMarkerElement* self, const jb_DOMString* value);
+
+jb_Undefined SVGMarkerElement_setOrientToAuto(SVGMarkerElement* self );
+
+jb_Undefined SVGMarkerElement_setOrientToAngle(SVGMarkerElement* self , const SVGAngle* angle);
+
+SVGAnimatedRect SVGMarkerElement_viewBox( const SVGMarkerElement *self);
+
+SVGAnimatedPreserveAspectRatio SVGMarkerElement_preserveAspectRatio( const SVGMarkerElement *self);

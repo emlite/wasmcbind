@@ -4,3 +4,21 @@
 #include <jsbind/jsbind.h>
 #include "HTMLElement.h"
 #include "enums.h"
+
+
+typedef struct {
+  HTMLElement inner;
+} HTMLOptGroupElement;
+
+
+DECLARE_EMLITE_TYPE(HTMLOptGroupElement, HTMLElement);
+
+HTMLOptGroupElement HTMLOptGroupElement_new();
+
+bool HTMLOptGroupElement_disabled( const HTMLOptGroupElement *self);
+
+void HTMLOptGroupElement_set_disabled(HTMLOptGroupElement* self, bool value);
+
+jb_DOMString HTMLOptGroupElement_label( const HTMLOptGroupElement *self);
+
+void HTMLOptGroupElement_set_label(HTMLOptGroupElement* self, const jb_DOMString* value);

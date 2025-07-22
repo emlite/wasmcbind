@@ -5,5 +5,21 @@
 #include "Event.h"
 #include "enums.h"
 
-typedef struct wb_NavigationActivation wb_NavigationActivation;
-typedef struct wb_ViewTransition wb_ViewTransition;
+typedef struct NavigationActivation NavigationActivation;
+typedef struct ViewTransition ViewTransition;
+
+
+typedef struct {
+  Event inner;
+} PageSwapEvent;
+
+
+DECLARE_EMLITE_TYPE(PageSwapEvent, Event);
+
+PageSwapEvent PageSwapEvent_new(const jb_DOMString* type);
+
+PageSwapEvent PageSwapEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+
+NavigationActivation PageSwapEvent_activation( const PageSwapEvent *self);
+
+ViewTransition PageSwapEvent_viewTransition( const PageSwapEvent *self);

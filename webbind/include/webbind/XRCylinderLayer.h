@@ -5,5 +5,37 @@
 #include "XRCompositionLayer.h"
 #include "enums.h"
 
-typedef struct wb_XRSpace wb_XRSpace;
-typedef struct wb_XRRigidTransform wb_XRRigidTransform;
+typedef struct XRSpace XRSpace;
+typedef struct XRRigidTransform XRRigidTransform;
+
+
+typedef struct {
+  XRCompositionLayer inner;
+} XRCylinderLayer;
+
+
+DECLARE_EMLITE_TYPE(XRCylinderLayer, XRCompositionLayer);
+
+XRSpace XRCylinderLayer_space( const XRCylinderLayer *self);
+
+void XRCylinderLayer_set_space(XRCylinderLayer* self, const XRSpace* value);
+
+XRRigidTransform XRCylinderLayer_transform( const XRCylinderLayer *self);
+
+void XRCylinderLayer_set_transform(XRCylinderLayer* self, const XRRigidTransform* value);
+
+float XRCylinderLayer_radius( const XRCylinderLayer *self);
+
+void XRCylinderLayer_set_radius(XRCylinderLayer* self, float value);
+
+float XRCylinderLayer_centralAngle( const XRCylinderLayer *self);
+
+void XRCylinderLayer_set_centralAngle(XRCylinderLayer* self, float value);
+
+float XRCylinderLayer_aspectRatio( const XRCylinderLayer *self);
+
+void XRCylinderLayer_set_aspectRatio(XRCylinderLayer* self, float value);
+
+jb_Any XRCylinderLayer_onredraw( const XRCylinderLayer *self);
+
+void XRCylinderLayer_set_onredraw(XRCylinderLayer* self, const jb_Any* value);

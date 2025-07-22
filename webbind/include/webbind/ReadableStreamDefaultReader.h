@@ -4,4 +4,38 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_ReadableStreamReadResult wb_ReadableStreamReadResult;
+typedef struct ReadableStreamReadResult ReadableStreamReadResult;
+
+
+typedef struct {
+  em_Val inner;
+} ReadableStreamReadResult;
+
+
+DECLARE_EMLITE_TYPE(ReadableStreamReadResult, em_Val);
+
+jb_Any ReadableStreamReadResult_value( const ReadableStreamReadResult *self);
+
+void ReadableStreamReadResult_set_value(ReadableStreamReadResult* self, const jb_Any* value);
+
+bool ReadableStreamReadResult_done( const ReadableStreamReadResult *self);
+
+void ReadableStreamReadResult_set_done(ReadableStreamReadResult* self, bool value);
+typedef struct {
+  em_Val inner;
+} ReadableStreamDefaultReader;
+
+
+DECLARE_EMLITE_TYPE(ReadableStreamDefaultReader, em_Val);
+
+ReadableStreamDefaultReader ReadableStreamDefaultReader_new(const ReadableStream* stream);
+
+jb_Promise ReadableStreamDefaultReader_read(ReadableStreamDefaultReader* self );
+
+jb_Undefined ReadableStreamDefaultReader_releaseLock(ReadableStreamDefaultReader* self );
+
+jb_Promise ReadableStreamDefaultReader_closed( const ReadableStreamDefaultReader *self);
+
+jb_Promise ReadableStreamDefaultReader_cancel(ReadableStreamDefaultReader* self );
+
+jb_Promise ReadableStreamDefaultReader_cancel(ReadableStreamDefaultReader* self , const jb_Any* reason);

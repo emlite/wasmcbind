@@ -5,4 +5,14 @@
 #include "Worklet.h"
 #include "enums.h"
 
-typedef struct wb_MessagePort wb_MessagePort;
+typedef struct MessagePort MessagePort;
+
+
+typedef struct {
+  Worklet inner;
+} AudioWorklet;
+
+
+DECLARE_EMLITE_TYPE(AudioWorklet, Worklet);
+
+jb_Any AudioWorklet_port( const AudioWorklet *self);

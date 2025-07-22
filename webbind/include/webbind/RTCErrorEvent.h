@@ -5,4 +5,16 @@
 #include "Event.h"
 #include "enums.h"
 
-typedef struct wb_RTCError wb_RTCError;
+typedef struct RTCError RTCError;
+
+
+typedef struct {
+  Event inner;
+} RTCErrorEvent;
+
+
+DECLARE_EMLITE_TYPE(RTCErrorEvent, Event);
+
+RTCErrorEvent RTCErrorEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+
+RTCError RTCErrorEvent_error( const RTCErrorEvent *self);

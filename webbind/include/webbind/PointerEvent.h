@@ -5,4 +5,46 @@
 #include "MouseEvent.h"
 #include "enums.h"
 
-typedef struct wb_PointerEvent wb_PointerEvent;
+typedef struct PointerEvent PointerEvent;
+
+
+typedef struct {
+  MouseEvent inner;
+} PointerEvent;
+
+
+DECLARE_EMLITE_TYPE(PointerEvent, MouseEvent);
+
+PointerEvent PointerEvent_new(const jb_DOMString* type);
+
+PointerEvent PointerEvent_new(const jb_DOMString* type, const jb_Any* eventInitDict);
+
+long PointerEvent_pointerId( const PointerEvent *self);
+
+double PointerEvent_width( const PointerEvent *self);
+
+double PointerEvent_height( const PointerEvent *self);
+
+float PointerEvent_pressure( const PointerEvent *self);
+
+float PointerEvent_tangentialPressure( const PointerEvent *self);
+
+long PointerEvent_tiltX( const PointerEvent *self);
+
+long PointerEvent_tiltY( const PointerEvent *self);
+
+long PointerEvent_twist( const PointerEvent *self);
+
+double PointerEvent_altitudeAngle( const PointerEvent *self);
+
+double PointerEvent_azimuthAngle( const PointerEvent *self);
+
+jb_DOMString PointerEvent_pointerType( const PointerEvent *self);
+
+bool PointerEvent_isPrimary( const PointerEvent *self);
+
+long PointerEvent_persistentDeviceId( const PointerEvent *self);
+
+jb_Sequence PointerEvent_getCoalescedEvents(PointerEvent* self );
+
+jb_Sequence PointerEvent_getPredictedEvents(PointerEvent* self );

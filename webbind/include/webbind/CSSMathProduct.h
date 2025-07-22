@@ -5,4 +5,16 @@
 #include "CSSMathValue.h"
 #include "enums.h"
 
-typedef struct wb_CSSNumericArray wb_CSSNumericArray;
+typedef struct CSSNumericArray CSSNumericArray;
+
+
+typedef struct {
+  CSSMathValue inner;
+} CSSMathProduct;
+
+
+DECLARE_EMLITE_TYPE(CSSMathProduct, CSSMathValue);
+
+CSSMathProduct CSSMathProduct_new(const jb_Any* args);
+
+CSSNumericArray CSSMathProduct_values( const CSSMathProduct *self);

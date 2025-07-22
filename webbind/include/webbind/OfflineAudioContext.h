@@ -5,4 +5,26 @@
 #include "BaseAudioContext.h"
 #include "enums.h"
 
-typedef struct wb_AudioBuffer wb_AudioBuffer;
+typedef struct AudioBuffer AudioBuffer;
+
+
+typedef struct {
+  BaseAudioContext inner;
+} OfflineAudioContext;
+
+
+DECLARE_EMLITE_TYPE(OfflineAudioContext, BaseAudioContext);
+
+OfflineAudioContext OfflineAudioContext_new(unsigned long numberOfChannels, unsigned long length, float sampleRate);
+
+jb_Promise OfflineAudioContext_startRendering(OfflineAudioContext* self );
+
+jb_Promise OfflineAudioContext_resume(OfflineAudioContext* self );
+
+jb_Promise OfflineAudioContext_suspend(OfflineAudioContext* self , double suspendTime);
+
+unsigned long OfflineAudioContext_length( const OfflineAudioContext *self);
+
+jb_Any OfflineAudioContext_oncomplete( const OfflineAudioContext *self);
+
+void OfflineAudioContext_set_oncomplete(OfflineAudioContext* self, const jb_Any* value);

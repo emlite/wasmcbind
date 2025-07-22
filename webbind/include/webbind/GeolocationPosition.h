@@ -4,4 +4,18 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_GeolocationCoordinates wb_GeolocationCoordinates;
+typedef struct GeolocationCoordinates GeolocationCoordinates;
+
+
+typedef struct {
+  em_Val inner;
+} GeolocationPosition;
+
+
+DECLARE_EMLITE_TYPE(GeolocationPosition, em_Val);
+
+GeolocationCoordinates GeolocationPosition_coords( const GeolocationPosition *self);
+
+jb_Any GeolocationPosition_timestamp( const GeolocationPosition *self);
+
+jb_Object GeolocationPosition_toJSON(GeolocationPosition* self );

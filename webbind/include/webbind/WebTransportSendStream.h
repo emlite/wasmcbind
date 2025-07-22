@@ -5,6 +5,44 @@
 #include "WritableStream.h"
 #include "enums.h"
 
-typedef struct wb_WebTransportSendGroup wb_WebTransportSendGroup;
-typedef struct wb_WebTransportSendStreamStats wb_WebTransportSendStreamStats;
-typedef struct wb_WebTransportWriter wb_WebTransportWriter;
+typedef struct WebTransportSendGroup WebTransportSendGroup;
+typedef struct WebTransportSendStreamStats WebTransportSendStreamStats;
+typedef struct WebTransportWriter WebTransportWriter;
+
+
+typedef struct {
+  em_Val inner;
+} WebTransportSendStreamStats;
+
+
+DECLARE_EMLITE_TYPE(WebTransportSendStreamStats, em_Val);
+
+long long WebTransportSendStreamStats_bytesWritten( const WebTransportSendStreamStats *self);
+
+void WebTransportSendStreamStats_set_bytesWritten(WebTransportSendStreamStats* self, long long value);
+
+long long WebTransportSendStreamStats_bytesSent( const WebTransportSendStreamStats *self);
+
+void WebTransportSendStreamStats_set_bytesSent(WebTransportSendStreamStats* self, long long value);
+
+long long WebTransportSendStreamStats_bytesAcknowledged( const WebTransportSendStreamStats *self);
+
+void WebTransportSendStreamStats_set_bytesAcknowledged(WebTransportSendStreamStats* self, long long value);
+typedef struct {
+  WritableStream inner;
+} WebTransportSendStream;
+
+
+DECLARE_EMLITE_TYPE(WebTransportSendStream, WritableStream);
+
+WebTransportSendGroup WebTransportSendStream_sendGroup( const WebTransportSendStream *self);
+
+void WebTransportSendStream_set_sendGroup(WebTransportSendStream* self, const WebTransportSendGroup* value);
+
+long long WebTransportSendStream_sendOrder( const WebTransportSendStream *self);
+
+void WebTransportSendStream_set_sendOrder(WebTransportSendStream* self, long long value);
+
+jb_Promise WebTransportSendStream_getStats(WebTransportSendStream* self );
+
+WebTransportWriter WebTransportSendStream_getWriter(WebTransportSendStream* self );

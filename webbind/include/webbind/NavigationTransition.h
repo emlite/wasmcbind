@@ -4,4 +4,18 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_NavigationHistoryEntry wb_NavigationHistoryEntry;
+typedef struct NavigationHistoryEntry NavigationHistoryEntry;
+
+
+typedef struct {
+  em_Val inner;
+} NavigationTransition;
+
+
+DECLARE_EMLITE_TYPE(NavigationTransition, em_Val);
+
+NavigationType NavigationTransition_navigationType( const NavigationTransition *self);
+
+NavigationHistoryEntry NavigationTransition_from( const NavigationTransition *self);
+
+jb_Promise NavigationTransition_finished( const NavigationTransition *self);

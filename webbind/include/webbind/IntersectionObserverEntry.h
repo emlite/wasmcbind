@@ -4,5 +4,31 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_DOMRectReadOnly wb_DOMRectReadOnly;
-typedef struct wb_Element wb_Element;
+typedef struct DOMRectReadOnly DOMRectReadOnly;
+typedef struct Element Element;
+
+
+typedef struct {
+  em_Val inner;
+} IntersectionObserverEntry;
+
+
+DECLARE_EMLITE_TYPE(IntersectionObserverEntry, em_Val);
+
+IntersectionObserverEntry IntersectionObserverEntry_new(const jb_Any* intersectionObserverEntryInit);
+
+jb_Any IntersectionObserverEntry_time( const IntersectionObserverEntry *self);
+
+DOMRectReadOnly IntersectionObserverEntry_rootBounds( const IntersectionObserverEntry *self);
+
+DOMRectReadOnly IntersectionObserverEntry_boundingClientRect( const IntersectionObserverEntry *self);
+
+DOMRectReadOnly IntersectionObserverEntry_intersectionRect( const IntersectionObserverEntry *self);
+
+bool IntersectionObserverEntry_isIntersecting( const IntersectionObserverEntry *self);
+
+bool IntersectionObserverEntry_isVisible( const IntersectionObserverEntry *self);
+
+double IntersectionObserverEntry_intersectionRatio( const IntersectionObserverEntry *self);
+
+Element IntersectionObserverEntry_target( const IntersectionObserverEntry *self);

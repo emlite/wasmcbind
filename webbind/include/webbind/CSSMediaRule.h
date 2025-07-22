@@ -5,4 +5,16 @@
 #include "CSSConditionRule.h"
 #include "enums.h"
 
-typedef struct wb_MediaList wb_MediaList;
+typedef struct MediaList MediaList;
+
+
+typedef struct {
+  CSSConditionRule inner;
+} CSSMediaRule;
+
+
+DECLARE_EMLITE_TYPE(CSSMediaRule, CSSConditionRule);
+
+MediaList CSSMediaRule_media( const CSSMediaRule *self);
+
+bool CSSMediaRule_matches( const CSSMediaRule *self);

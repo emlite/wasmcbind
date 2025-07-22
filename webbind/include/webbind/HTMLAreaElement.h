@@ -5,4 +5,98 @@
 #include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct wb_DOMTokenList wb_DOMTokenList;
+typedef struct DOMTokenList DOMTokenList;
+
+
+typedef struct {
+  HTMLElement inner;
+} HTMLAreaElement;
+
+
+DECLARE_EMLITE_TYPE(HTMLAreaElement, HTMLElement);
+
+HTMLAreaElement HTMLAreaElement_new();
+
+jb_DOMString HTMLAreaElement_alt( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_alt(HTMLAreaElement* self, const jb_DOMString* value);
+
+jb_DOMString HTMLAreaElement_coords( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_coords(HTMLAreaElement* self, const jb_DOMString* value);
+
+jb_DOMString HTMLAreaElement_shape( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_shape(HTMLAreaElement* self, const jb_DOMString* value);
+
+jb_DOMString HTMLAreaElement_target( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_target(HTMLAreaElement* self, const jb_DOMString* value);
+
+jb_DOMString HTMLAreaElement_download( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_download(HTMLAreaElement* self, const jb_DOMString* value);
+
+jb_USVString HTMLAreaElement_ping( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_ping(HTMLAreaElement* self, const jb_USVString* value);
+
+jb_DOMString HTMLAreaElement_rel( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_rel(HTMLAreaElement* self, const jb_DOMString* value);
+
+DOMTokenList HTMLAreaElement_relList( const HTMLAreaElement *self);
+
+jb_DOMString HTMLAreaElement_referrerPolicy( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_referrerPolicy(HTMLAreaElement* self, const jb_DOMString* value);
+
+bool HTMLAreaElement_noHref( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_noHref(HTMLAreaElement* self, bool value);
+
+jb_USVString HTMLAreaElement_attributionSrc( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_attributionSrc(HTMLAreaElement* self, const jb_USVString* value);
+
+jb_USVString HTMLAreaElement_href( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_href(HTMLAreaElement* self, const jb_USVString* value);
+
+jb_USVString HTMLAreaElement_origin( const HTMLAreaElement *self);
+
+jb_USVString HTMLAreaElement_protocol( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_protocol(HTMLAreaElement* self, const jb_USVString* value);
+
+jb_USVString HTMLAreaElement_username( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_username(HTMLAreaElement* self, const jb_USVString* value);
+
+jb_USVString HTMLAreaElement_password( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_password(HTMLAreaElement* self, const jb_USVString* value);
+
+jb_USVString HTMLAreaElement_host( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_host(HTMLAreaElement* self, const jb_USVString* value);
+
+jb_USVString HTMLAreaElement_hostname( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_hostname(HTMLAreaElement* self, const jb_USVString* value);
+
+jb_USVString HTMLAreaElement_port( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_port(HTMLAreaElement* self, const jb_USVString* value);
+
+jb_USVString HTMLAreaElement_pathname( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_pathname(HTMLAreaElement* self, const jb_USVString* value);
+
+jb_USVString HTMLAreaElement_search( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_search(HTMLAreaElement* self, const jb_USVString* value);
+
+jb_USVString HTMLAreaElement_hash( const HTMLAreaElement *self);
+
+void HTMLAreaElement_set_hash(HTMLAreaElement* self, const jb_USVString* value);

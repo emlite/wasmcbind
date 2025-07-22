@@ -4,5 +4,17 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_Request wb_Request;
-typedef struct wb_Response wb_Response;
+typedef struct Request Request;
+typedef struct Response Response;
+
+
+typedef struct {
+  em_Val inner;
+} BackgroundFetchRecord;
+
+
+DECLARE_EMLITE_TYPE(BackgroundFetchRecord, em_Val);
+
+Request BackgroundFetchRecord_request( const BackgroundFetchRecord *self);
+
+jb_Promise BackgroundFetchRecord_responseReady( const BackgroundFetchRecord *self);

@@ -22,6 +22,7 @@ function pair(name) {
 }
 
 export function writePair(name, hdrLines, srcLines) {
+  // if (name !== "AbortSignal") return;
   const header = hdrLines.join("\n");
   const { h, c } = pair(name);
   fs.appendFileSync(h, header + "\n", "utf8");
@@ -133,7 +134,7 @@ export function cpp(idlType) {
 
 const primitiveRE = /\b(?:long|short|float|double|bool|char|int)\b/;
 export function argtypeFix(type) {
-  return primitiveRE.test(type) ? type : `const ${type}&`;
+  return primitiveRE.test(type) ? type : `const ${type}*`;
 }
 
 export function fixIdent(name) {

@@ -5,5 +5,23 @@
 #include "SVGTextContentElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedLengthList wb_SVGAnimatedLengthList;
-typedef struct wb_SVGAnimatedNumberList wb_SVGAnimatedNumberList;
+typedef struct SVGAnimatedLengthList SVGAnimatedLengthList;
+typedef struct SVGAnimatedNumberList SVGAnimatedNumberList;
+
+
+typedef struct {
+  SVGTextContentElement inner;
+} SVGTextPositioningElement;
+
+
+DECLARE_EMLITE_TYPE(SVGTextPositioningElement, SVGTextContentElement);
+
+SVGAnimatedLengthList SVGTextPositioningElement_x( const SVGTextPositioningElement *self);
+
+SVGAnimatedLengthList SVGTextPositioningElement_y( const SVGTextPositioningElement *self);
+
+SVGAnimatedLengthList SVGTextPositioningElement_dx( const SVGTextPositioningElement *self);
+
+SVGAnimatedLengthList SVGTextPositioningElement_dy( const SVGTextPositioningElement *self);
+
+SVGAnimatedNumberList SVGTextPositioningElement_rotate( const SVGTextPositioningElement *self);

@@ -4,4 +4,16 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_SVGNumberList wb_SVGNumberList;
+typedef struct SVGNumberList SVGNumberList;
+
+
+typedef struct {
+  em_Val inner;
+} SVGAnimatedNumberList;
+
+
+DECLARE_EMLITE_TYPE(SVGAnimatedNumberList, em_Val);
+
+SVGNumberList SVGAnimatedNumberList_baseVal( const SVGAnimatedNumberList *self);
+
+SVGNumberList SVGAnimatedNumberList_animVal( const SVGAnimatedNumberList *self);

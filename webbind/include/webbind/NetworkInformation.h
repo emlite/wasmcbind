@@ -4,3 +4,27 @@
 #include <jsbind/jsbind.h>
 #include "EventTarget.h"
 #include "enums.h"
+
+
+typedef struct {
+  EventTarget inner;
+} NetworkInformation;
+
+
+DECLARE_EMLITE_TYPE(NetworkInformation, EventTarget);
+
+ConnectionType NetworkInformation_type( const NetworkInformation *self);
+
+EffectiveConnectionType NetworkInformation_effectiveType( const NetworkInformation *self);
+
+jb_Any NetworkInformation_downlinkMax( const NetworkInformation *self);
+
+jb_Any NetworkInformation_downlink( const NetworkInformation *self);
+
+jb_Any NetworkInformation_rtt( const NetworkInformation *self);
+
+jb_Any NetworkInformation_onchange( const NetworkInformation *self);
+
+void NetworkInformation_set_onchange(NetworkInformation* self, const jb_Any* value);
+
+bool NetworkInformation_saveData( const NetworkInformation *self);

@@ -5,4 +5,16 @@
 #include "CSSRule.h"
 #include "enums.h"
 
-typedef struct wb_CSSPositionTryDescriptors wb_CSSPositionTryDescriptors;
+typedef struct CSSPositionTryDescriptors CSSPositionTryDescriptors;
+
+
+typedef struct {
+  CSSRule inner;
+} CSSPositionTryRule;
+
+
+DECLARE_EMLITE_TYPE(CSSPositionTryRule, CSSRule);
+
+jb_CSSOMString CSSPositionTryRule_name( const CSSPositionTryRule *self);
+
+CSSPositionTryDescriptors CSSPositionTryRule_style( const CSSPositionTryRule *self);

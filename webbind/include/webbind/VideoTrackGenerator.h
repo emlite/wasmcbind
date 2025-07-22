@@ -4,5 +4,23 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct wb_WritableStream wb_WritableStream;
-typedef struct wb_MediaStreamTrack wb_MediaStreamTrack;
+typedef struct WritableStream WritableStream;
+typedef struct MediaStreamTrack MediaStreamTrack;
+
+
+typedef struct {
+  em_Val inner;
+} VideoTrackGenerator;
+
+
+DECLARE_EMLITE_TYPE(VideoTrackGenerator, em_Val);
+
+VideoTrackGenerator VideoTrackGenerator_new();
+
+WritableStream VideoTrackGenerator_writable( const VideoTrackGenerator *self);
+
+bool VideoTrackGenerator_muted( const VideoTrackGenerator *self);
+
+void VideoTrackGenerator_set_muted(VideoTrackGenerator* self, bool value);
+
+MediaStreamTrack VideoTrackGenerator_track( const VideoTrackGenerator *self);

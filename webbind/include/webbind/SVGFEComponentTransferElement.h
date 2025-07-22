@@ -5,5 +5,25 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
-typedef struct wb_SVGAnimatedLength wb_SVGAnimatedLength;
+typedef struct SVGAnimatedString SVGAnimatedString;
+typedef struct SVGAnimatedLength SVGAnimatedLength;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGFEComponentTransferElement;
+
+
+DECLARE_EMLITE_TYPE(SVGFEComponentTransferElement, SVGElement);
+
+SVGAnimatedString SVGFEComponentTransferElement_in1( const SVGFEComponentTransferElement *self);
+
+SVGAnimatedLength SVGFEComponentTransferElement_x( const SVGFEComponentTransferElement *self);
+
+SVGAnimatedLength SVGFEComponentTransferElement_y( const SVGFEComponentTransferElement *self);
+
+SVGAnimatedLength SVGFEComponentTransferElement_width( const SVGFEComponentTransferElement *self);
+
+SVGAnimatedLength SVGFEComponentTransferElement_height( const SVGFEComponentTransferElement *self);
+
+SVGAnimatedString SVGFEComponentTransferElement_result( const SVGFEComponentTransferElement *self);

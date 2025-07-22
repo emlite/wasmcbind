@@ -5,6 +5,22 @@
 #include "SVGElement.h"
 #include "enums.h"
 
-typedef struct wb_SVGAnimatedEnumeration wb_SVGAnimatedEnumeration;
-typedef struct wb_SVGAnimatedTransformList wb_SVGAnimatedTransformList;
-typedef struct wb_SVGAnimatedString wb_SVGAnimatedString;
+typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
+typedef struct SVGAnimatedTransformList SVGAnimatedTransformList;
+typedef struct SVGAnimatedString SVGAnimatedString;
+
+
+typedef struct {
+  SVGElement inner;
+} SVGGradientElement;
+
+
+DECLARE_EMLITE_TYPE(SVGGradientElement, SVGElement);
+
+SVGAnimatedEnumeration SVGGradientElement_gradientUnits( const SVGGradientElement *self);
+
+SVGAnimatedTransformList SVGGradientElement_gradientTransform( const SVGGradientElement *self);
+
+SVGAnimatedEnumeration SVGGradientElement_spreadMethod( const SVGGradientElement *self);
+
+SVGAnimatedString SVGGradientElement_href( const SVGGradientElement *self);

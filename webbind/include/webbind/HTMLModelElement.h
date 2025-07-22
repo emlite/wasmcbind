@@ -4,3 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "HTMLElement.h"
 #include "enums.h"
+
+
+typedef struct {
+  HTMLElement inner;
+} HTMLModelElement;
+
+
+DECLARE_EMLITE_TYPE(HTMLModelElement, HTMLElement);

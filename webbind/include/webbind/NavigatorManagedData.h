@@ -4,3 +4,27 @@
 #include <jsbind/jsbind.h>
 #include "EventTarget.h"
 #include "enums.h"
+
+
+typedef struct {
+  EventTarget inner;
+} NavigatorManagedData;
+
+
+DECLARE_EMLITE_TYPE(NavigatorManagedData, EventTarget);
+
+jb_Promise NavigatorManagedData_getManagedConfiguration(NavigatorManagedData* self , const jb_Sequence* keys);
+
+jb_Any NavigatorManagedData_onmanagedconfigurationchange( const NavigatorManagedData *self);
+
+void NavigatorManagedData_set_onmanagedconfigurationchange(NavigatorManagedData* self, const jb_Any* value);
+
+jb_Promise NavigatorManagedData_getAnnotatedAssetId(NavigatorManagedData* self );
+
+jb_Promise NavigatorManagedData_getAnnotatedLocation(NavigatorManagedData* self );
+
+jb_Promise NavigatorManagedData_getDirectoryId(NavigatorManagedData* self );
+
+jb_Promise NavigatorManagedData_getHostname(NavigatorManagedData* self );
+
+jb_Promise NavigatorManagedData_getSerialNumber(NavigatorManagedData* self );
