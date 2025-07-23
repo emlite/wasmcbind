@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(XRSessionEvent, Event);
 
 XRSessionEvent XRSessionEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-XRSession XRSessionEvent_session( const XRSessionEvent *self);
+XRSession XRSessionEvent_session(const XRSessionEvent *self);

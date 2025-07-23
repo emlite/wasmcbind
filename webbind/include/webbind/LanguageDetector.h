@@ -14,30 +14,30 @@ typedef struct AbortSignal AbortSignal;
 
 DECLARE_EMLITE_TYPE(LanguageDetectorCreateOptions, em_Val);
 
-AbortSignal LanguageDetectorCreateOptions_signal( const LanguageDetectorCreateOptions *self);
+AbortSignal LanguageDetectorCreateOptions_signal(const LanguageDetectorCreateOptions *self);
 
 void LanguageDetectorCreateOptions_set_signal(LanguageDetectorCreateOptions* self, AbortSignal * value);
 
-jb_Function LanguageDetectorCreateOptions_monitor( const LanguageDetectorCreateOptions *self);
+jb_Function LanguageDetectorCreateOptions_monitor(const LanguageDetectorCreateOptions *self);
 
 void LanguageDetectorCreateOptions_set_monitor(LanguageDetectorCreateOptions* self, jb_Function * value);
 DECLARE_EMLITE_TYPE(LanguageDetectorCreateCoreOptions, em_Val);
 
-jb_Sequence LanguageDetectorCreateCoreOptions_expectedInputLanguages( const LanguageDetectorCreateCoreOptions *self);
+jb_Sequence LanguageDetectorCreateCoreOptions_expectedInputLanguages(const LanguageDetectorCreateCoreOptions *self);
 
 void LanguageDetectorCreateCoreOptions_set_expectedInputLanguages(LanguageDetectorCreateCoreOptions* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(LanguageDetectionResult, em_Val);
 
-jb_DOMString LanguageDetectionResult_detectedLanguage( const LanguageDetectionResult *self);
+jb_DOMString LanguageDetectionResult_detectedLanguage(const LanguageDetectionResult *self);
 
 void LanguageDetectionResult_set_detectedLanguage(LanguageDetectionResult* self, jb_DOMString * value);
 
-double LanguageDetectionResult_confidence( const LanguageDetectionResult *self);
+double LanguageDetectionResult_confidence(const LanguageDetectionResult *self);
 
 void LanguageDetectionResult_set_confidence(LanguageDetectionResult* self, double value);
 DECLARE_EMLITE_TYPE(LanguageDetectorDetectOptions, em_Val);
 
-AbortSignal LanguageDetectorDetectOptions_signal( const LanguageDetectorDetectOptions *self);
+AbortSignal LanguageDetectorDetectOptions_signal(const LanguageDetectorDetectOptions *self);
 
 void LanguageDetectorDetectOptions_set_signal(LanguageDetectorDetectOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(LanguageDetector, em_Val);
@@ -54,12 +54,12 @@ jb_Promise LanguageDetector_detect0(LanguageDetector* self , jb_DOMString * inpu
 
 jb_Promise LanguageDetector_detect1(LanguageDetector* self , jb_DOMString * input, LanguageDetectorDetectOptions * options);
 
-jb_FrozenArray LanguageDetector_expectedInputLanguages( const LanguageDetector *self);
+jb_FrozenArray LanguageDetector_expectedInputLanguages(const LanguageDetector *self);
 
 jb_Promise LanguageDetector_measureInputUsage0(LanguageDetector* self , jb_DOMString * input);
 
 jb_Promise LanguageDetector_measureInputUsage1(LanguageDetector* self , jb_DOMString * input, LanguageDetectorDetectOptions * options);
 
-double LanguageDetector_inputQuota( const LanguageDetector *self);
+double LanguageDetector_inputQuota(const LanguageDetector *self);
 
 jb_Undefined LanguageDetector_destroy(LanguageDetector* self );

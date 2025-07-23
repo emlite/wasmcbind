@@ -17,84 +17,84 @@ typedef struct CaptureController CaptureController;
 
 DECLARE_EMLITE_TYPE(AudioOutputOptions, em_Val);
 
-jb_DOMString AudioOutputOptions_deviceId( const AudioOutputOptions *self);
+jb_DOMString AudioOutputOptions_deviceId(const AudioOutputOptions *self);
 
 void AudioOutputOptions_set_deviceId(AudioOutputOptions* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(CaptureHandleConfig, em_Val);
 
-bool CaptureHandleConfig_exposeOrigin( const CaptureHandleConfig *self);
+bool CaptureHandleConfig_exposeOrigin(const CaptureHandleConfig *self);
 
 void CaptureHandleConfig_set_exposeOrigin(CaptureHandleConfig* self, bool value);
 
-jb_DOMString CaptureHandleConfig_handle( const CaptureHandleConfig *self);
+jb_DOMString CaptureHandleConfig_handle(const CaptureHandleConfig *self);
 
 void CaptureHandleConfig_set_handle(CaptureHandleConfig* self, jb_DOMString * value);
 
-jb_Sequence CaptureHandleConfig_permittedOrigins( const CaptureHandleConfig *self);
+jb_Sequence CaptureHandleConfig_permittedOrigins(const CaptureHandleConfig *self);
 
 void CaptureHandleConfig_set_permittedOrigins(CaptureHandleConfig* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(MediaTrackSupportedConstraints, em_Val);
 
-bool MediaTrackSupportedConstraints_displaySurface( const MediaTrackSupportedConstraints *self);
+bool MediaTrackSupportedConstraints_displaySurface(const MediaTrackSupportedConstraints *self);
 
 void MediaTrackSupportedConstraints_set_displaySurface(MediaTrackSupportedConstraints* self, bool value);
 
-bool MediaTrackSupportedConstraints_logicalSurface( const MediaTrackSupportedConstraints *self);
+bool MediaTrackSupportedConstraints_logicalSurface(const MediaTrackSupportedConstraints *self);
 
 void MediaTrackSupportedConstraints_set_logicalSurface(MediaTrackSupportedConstraints* self, bool value);
 
-bool MediaTrackSupportedConstraints_cursor( const MediaTrackSupportedConstraints *self);
+bool MediaTrackSupportedConstraints_cursor(const MediaTrackSupportedConstraints *self);
 
 void MediaTrackSupportedConstraints_set_cursor(MediaTrackSupportedConstraints* self, bool value);
 
-bool MediaTrackSupportedConstraints_restrictOwnAudio( const MediaTrackSupportedConstraints *self);
+bool MediaTrackSupportedConstraints_restrictOwnAudio(const MediaTrackSupportedConstraints *self);
 
 void MediaTrackSupportedConstraints_set_restrictOwnAudio(MediaTrackSupportedConstraints* self, bool value);
 
-bool MediaTrackSupportedConstraints_suppressLocalAudioPlayback( const MediaTrackSupportedConstraints *self);
+bool MediaTrackSupportedConstraints_suppressLocalAudioPlayback(const MediaTrackSupportedConstraints *self);
 
 void MediaTrackSupportedConstraints_set_suppressLocalAudioPlayback(MediaTrackSupportedConstraints* self, bool value);
 DECLARE_EMLITE_TYPE(MediaStreamConstraints, em_Val);
 
-jb_DOMString MediaStreamConstraints_peerIdentity( const MediaStreamConstraints *self);
+jb_DOMString MediaStreamConstraints_peerIdentity(const MediaStreamConstraints *self);
 
 void MediaStreamConstraints_set_peerIdentity(MediaStreamConstraints* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(DisplayMediaStreamOptions, em_Val);
 
-jb_Any DisplayMediaStreamOptions_video( const DisplayMediaStreamOptions *self);
+jb_Any DisplayMediaStreamOptions_video(const DisplayMediaStreamOptions *self);
 
 void DisplayMediaStreamOptions_set_video(DisplayMediaStreamOptions* self, jb_Any * value);
 
-jb_Any DisplayMediaStreamOptions_audio( const DisplayMediaStreamOptions *self);
+jb_Any DisplayMediaStreamOptions_audio(const DisplayMediaStreamOptions *self);
 
 void DisplayMediaStreamOptions_set_audio(DisplayMediaStreamOptions* self, jb_Any * value);
 
-CaptureController DisplayMediaStreamOptions_controller( const DisplayMediaStreamOptions *self);
+CaptureController DisplayMediaStreamOptions_controller(const DisplayMediaStreamOptions *self);
 
 void DisplayMediaStreamOptions_set_controller(DisplayMediaStreamOptions* self, CaptureController * value);
 
-SelfCapturePreferenceEnum DisplayMediaStreamOptions_selfBrowserSurface( const DisplayMediaStreamOptions *self);
+SelfCapturePreferenceEnum DisplayMediaStreamOptions_selfBrowserSurface(const DisplayMediaStreamOptions *self);
 
 void DisplayMediaStreamOptions_set_selfBrowserSurface(DisplayMediaStreamOptions* self, SelfCapturePreferenceEnum * value);
 
-SystemAudioPreferenceEnum DisplayMediaStreamOptions_systemAudio( const DisplayMediaStreamOptions *self);
+SystemAudioPreferenceEnum DisplayMediaStreamOptions_systemAudio(const DisplayMediaStreamOptions *self);
 
 void DisplayMediaStreamOptions_set_systemAudio(DisplayMediaStreamOptions* self, SystemAudioPreferenceEnum * value);
 
-WindowAudioPreferenceEnum DisplayMediaStreamOptions_windowAudio( const DisplayMediaStreamOptions *self);
+WindowAudioPreferenceEnum DisplayMediaStreamOptions_windowAudio(const DisplayMediaStreamOptions *self);
 
 void DisplayMediaStreamOptions_set_windowAudio(DisplayMediaStreamOptions* self, WindowAudioPreferenceEnum * value);
 
-SurfaceSwitchingPreferenceEnum DisplayMediaStreamOptions_surfaceSwitching( const DisplayMediaStreamOptions *self);
+SurfaceSwitchingPreferenceEnum DisplayMediaStreamOptions_surfaceSwitching(const DisplayMediaStreamOptions *self);
 
 void DisplayMediaStreamOptions_set_surfaceSwitching(DisplayMediaStreamOptions* self, SurfaceSwitchingPreferenceEnum * value);
 
-MonitorTypeSurfacesEnum DisplayMediaStreamOptions_monitorTypeSurfaces( const DisplayMediaStreamOptions *self);
+MonitorTypeSurfacesEnum DisplayMediaStreamOptions_monitorTypeSurfaces(const DisplayMediaStreamOptions *self);
 
 void DisplayMediaStreamOptions_set_monitorTypeSurfaces(DisplayMediaStreamOptions* self, MonitorTypeSurfacesEnum * value);
 DECLARE_EMLITE_TYPE(MediaDevices, EventTarget);
 
-jb_Any MediaDevices_ondevicechange( const MediaDevices *self);
+jb_Any MediaDevices_ondevicechange(const MediaDevices *self);
 
 void MediaDevices_set_ondevicechange(MediaDevices* self, jb_Any * value);
 
@@ -110,7 +110,7 @@ jb_Undefined MediaDevices_setCaptureHandleConfig1(MediaDevices* self , CaptureHa
 
 jb_Undefined MediaDevices_setSupportedCaptureActions(MediaDevices* self , jb_Sequence * actions);
 
-jb_Any MediaDevices_oncaptureaction( const MediaDevices *self);
+jb_Any MediaDevices_oncaptureaction(const MediaDevices *self);
 
 void MediaDevices_set_oncaptureaction(MediaDevices* self, jb_Any * value);
 

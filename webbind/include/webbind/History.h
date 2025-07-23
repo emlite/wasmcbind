@@ -7,13 +7,13 @@
 
 DECLARE_EMLITE_TYPE(History, em_Val);
 
-unsigned long History_length( const History *self);
+unsigned long History_length(const History *self);
 
-ScrollRestoration History_scrollRestoration( const History *self);
+ScrollRestoration History_scrollRestoration(const History *self);
 
 void History_set_scrollRestoration(History* self, ScrollRestoration * value);
 
-jb_Any History_state( const History *self);
+jb_Any History_state(const History *self);
 
 jb_Undefined History_go0(History* self );
 

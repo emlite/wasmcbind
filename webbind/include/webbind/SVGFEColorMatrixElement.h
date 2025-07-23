@@ -13,18 +13,18 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 DECLARE_EMLITE_TYPE(SVGFEColorMatrixElement, SVGElement);
 
-SVGAnimatedString SVGFEColorMatrixElement_in1( const SVGFEColorMatrixElement *self);
+SVGAnimatedString SVGFEColorMatrixElement_in1(const SVGFEColorMatrixElement *self);
 
-SVGAnimatedEnumeration SVGFEColorMatrixElement_type( const SVGFEColorMatrixElement *self);
+SVGAnimatedEnumeration SVGFEColorMatrixElement_type(const SVGFEColorMatrixElement *self);
 
-SVGAnimatedNumberList SVGFEColorMatrixElement_values( const SVGFEColorMatrixElement *self);
+SVGAnimatedNumberList SVGFEColorMatrixElement_values(const SVGFEColorMatrixElement *self);
 
-SVGAnimatedLength SVGFEColorMatrixElement_x( const SVGFEColorMatrixElement *self);
+SVGAnimatedLength SVGFEColorMatrixElement_x(const SVGFEColorMatrixElement *self);
 
-SVGAnimatedLength SVGFEColorMatrixElement_y( const SVGFEColorMatrixElement *self);
+SVGAnimatedLength SVGFEColorMatrixElement_y(const SVGFEColorMatrixElement *self);
 
-SVGAnimatedLength SVGFEColorMatrixElement_width( const SVGFEColorMatrixElement *self);
+SVGAnimatedLength SVGFEColorMatrixElement_width(const SVGFEColorMatrixElement *self);
 
-SVGAnimatedLength SVGFEColorMatrixElement_height( const SVGFEColorMatrixElement *self);
+SVGAnimatedLength SVGFEColorMatrixElement_height(const SVGFEColorMatrixElement *self);
 
-SVGAnimatedString SVGFEColorMatrixElement_result( const SVGFEColorMatrixElement *self);
+SVGAnimatedString SVGFEColorMatrixElement_result(const SVGFEColorMatrixElement *self);

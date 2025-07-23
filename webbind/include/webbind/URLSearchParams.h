@@ -11,7 +11,7 @@ URLSearchParams URLSearchParams_new0();
 
 URLSearchParams URLSearchParams_new1(jb_Any * init);
 
-unsigned long URLSearchParams_size( const URLSearchParams *self);
+unsigned long URLSearchParams_size(const URLSearchParams *self);
 
 jb_Undefined URLSearchParams_append(URLSearchParams* self , jb_USVString * name, jb_USVString * value);
 

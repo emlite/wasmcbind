@@ -11,14 +11,14 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 DECLARE_EMLITE_TYPE(SVGFETileElement, SVGElement);
 
-SVGAnimatedString SVGFETileElement_in1( const SVGFETileElement *self);
+SVGAnimatedString SVGFETileElement_in1(const SVGFETileElement *self);
 
-SVGAnimatedLength SVGFETileElement_x( const SVGFETileElement *self);
+SVGAnimatedLength SVGFETileElement_x(const SVGFETileElement *self);
 
-SVGAnimatedLength SVGFETileElement_y( const SVGFETileElement *self);
+SVGAnimatedLength SVGFETileElement_y(const SVGFETileElement *self);
 
-SVGAnimatedLength SVGFETileElement_width( const SVGFETileElement *self);
+SVGAnimatedLength SVGFETileElement_width(const SVGFETileElement *self);
 
-SVGAnimatedLength SVGFETileElement_height( const SVGFETileElement *self);
+SVGAnimatedLength SVGFETileElement_height(const SVGFETileElement *self);
 
-SVGAnimatedString SVGFETileElement_result( const SVGFETileElement *self);
+SVGAnimatedString SVGFETileElement_result(const SVGFETileElement *self);

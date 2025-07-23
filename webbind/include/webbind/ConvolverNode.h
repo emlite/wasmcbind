@@ -14,10 +14,10 @@ ConvolverNode ConvolverNode_new0(BaseAudioContext * context);
 
 ConvolverNode ConvolverNode_new1(BaseAudioContext * context, jb_Any * options);
 
-AudioBuffer ConvolverNode_buffer( const ConvolverNode *self);
+AudioBuffer ConvolverNode_buffer(const ConvolverNode *self);
 
 void ConvolverNode_set_buffer(ConvolverNode* self, AudioBuffer * value);
 
-bool ConvolverNode_normalize( const ConvolverNode *self);
+bool ConvolverNode_normalize(const ConvolverNode *self);
 
 void ConvolverNode_set_normalize(ConvolverNode* self, bool value);

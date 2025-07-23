@@ -17,6 +17,6 @@ jb_Undefined Subscriber_complete(Subscriber* self );
 
 jb_Undefined Subscriber_addTeardown(Subscriber* self , jb_Any * teardown);
 
-bool Subscriber_active( const Subscriber *self);
+bool Subscriber_active(const Subscriber *self);
 
-AbortSignal Subscriber_signal( const Subscriber *self);
+AbortSignal Subscriber_signal(const Subscriber *self);

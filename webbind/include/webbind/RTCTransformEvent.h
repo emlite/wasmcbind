@@ -10,4 +10,4 @@ typedef struct RTCRtpScriptTransformer RTCRtpScriptTransformer;
 
 DECLARE_EMLITE_TYPE(RTCTransformEvent, Event);
 
-RTCRtpScriptTransformer RTCTransformEvent_transformer( const RTCTransformEvent *self);
+RTCRtpScriptTransformer RTCTransformEvent_transformer(const RTCTransformEvent *self);

@@ -14,4 +14,4 @@ ConstantSourceNode ConstantSourceNode_new0(BaseAudioContext * context);
 
 ConstantSourceNode ConstantSourceNode_new1(BaseAudioContext * context, jb_Any * options);
 
-AudioParam ConstantSourceNode_offset( const ConstantSourceNode *self);
+AudioParam ConstantSourceNode_offset(const ConstantSourceNode *self);

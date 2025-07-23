@@ -23,7 +23,7 @@ jb_Undefined GPUComputePassEncoder_dispatchWorkgroupsIndirect(GPUComputePassEnco
 
 jb_Undefined GPUComputePassEncoder_end(GPUComputePassEncoder* self );
 
-jb_USVString GPUComputePassEncoder_label( const GPUComputePassEncoder *self);
+jb_USVString GPUComputePassEncoder_label(const GPUComputePassEncoder *self);
 
 void GPUComputePassEncoder_set_label(GPUComputePassEncoder* self, jb_USVString * value);
 

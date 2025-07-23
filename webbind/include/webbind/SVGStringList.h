@@ -7,9 +7,9 @@
 
 DECLARE_EMLITE_TYPE(SVGStringList, em_Val);
 
-unsigned long SVGStringList_length( const SVGStringList *self);
+unsigned long SVGStringList_length(const SVGStringList *self);
 
-unsigned long SVGStringList_numberOfItems( const SVGStringList *self);
+unsigned long SVGStringList_numberOfItems(const SVGStringList *self);
 
 jb_Undefined SVGStringList_clear(SVGStringList* self );
 

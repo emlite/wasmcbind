@@ -62,7 +62,7 @@ jb_Any PerformanceObserver_takeRecords(PerformanceObserver* self ) {
 }
 
 
-jb_FrozenArray PerformanceObserver_supportedEntryTypes() {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_global("performanceobserver", em_Val_from("supportedEntryTypes"))));
+jb_FrozenArray PerformanceObserver_supportedEntryTypes(const PerformanceObserver *self) {
+    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_global("performanceobserver"), em_Val_from("supportedEntryTypes")));
 }
 

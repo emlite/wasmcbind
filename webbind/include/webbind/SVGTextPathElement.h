@@ -12,10 +12,10 @@ typedef struct SVGAnimatedString SVGAnimatedString;
 
 DECLARE_EMLITE_TYPE(SVGTextPathElement, SVGTextContentElement);
 
-SVGAnimatedLength SVGTextPathElement_startOffset( const SVGTextPathElement *self);
+SVGAnimatedLength SVGTextPathElement_startOffset(const SVGTextPathElement *self);
 
-SVGAnimatedEnumeration SVGTextPathElement_method( const SVGTextPathElement *self);
+SVGAnimatedEnumeration SVGTextPathElement_method(const SVGTextPathElement *self);
 
-SVGAnimatedEnumeration SVGTextPathElement_spacing( const SVGTextPathElement *self);
+SVGAnimatedEnumeration SVGTextPathElement_spacing(const SVGTextPathElement *self);
 
-SVGAnimatedString SVGTextPathElement_href( const SVGTextPathElement *self);
+SVGAnimatedString SVGTextPathElement_href(const SVGTextPathElement *self);

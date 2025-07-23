@@ -13,49 +13,49 @@ typedef struct TextTrackList TextTrackList;
 
 DECLARE_EMLITE_TYPE(SourceBuffer, EventTarget);
 
-AppendMode SourceBuffer_mode( const SourceBuffer *self);
+AppendMode SourceBuffer_mode(const SourceBuffer *self);
 
 void SourceBuffer_set_mode(SourceBuffer* self, AppendMode * value);
 
-bool SourceBuffer_updating( const SourceBuffer *self);
+bool SourceBuffer_updating(const SourceBuffer *self);
 
-TimeRanges SourceBuffer_buffered( const SourceBuffer *self);
+TimeRanges SourceBuffer_buffered(const SourceBuffer *self);
 
-double SourceBuffer_timestampOffset( const SourceBuffer *self);
+double SourceBuffer_timestampOffset(const SourceBuffer *self);
 
 void SourceBuffer_set_timestampOffset(SourceBuffer* self, double value);
 
-AudioTrackList SourceBuffer_audioTracks( const SourceBuffer *self);
+AudioTrackList SourceBuffer_audioTracks(const SourceBuffer *self);
 
-VideoTrackList SourceBuffer_videoTracks( const SourceBuffer *self);
+VideoTrackList SourceBuffer_videoTracks(const SourceBuffer *self);
 
-TextTrackList SourceBuffer_textTracks( const SourceBuffer *self);
+TextTrackList SourceBuffer_textTracks(const SourceBuffer *self);
 
-double SourceBuffer_appendWindowStart( const SourceBuffer *self);
+double SourceBuffer_appendWindowStart(const SourceBuffer *self);
 
 void SourceBuffer_set_appendWindowStart(SourceBuffer* self, double value);
 
-double SourceBuffer_appendWindowEnd( const SourceBuffer *self);
+double SourceBuffer_appendWindowEnd(const SourceBuffer *self);
 
 void SourceBuffer_set_appendWindowEnd(SourceBuffer* self, double value);
 
-jb_Any SourceBuffer_onupdatestart( const SourceBuffer *self);
+jb_Any SourceBuffer_onupdatestart(const SourceBuffer *self);
 
 void SourceBuffer_set_onupdatestart(SourceBuffer* self, jb_Any * value);
 
-jb_Any SourceBuffer_onupdate( const SourceBuffer *self);
+jb_Any SourceBuffer_onupdate(const SourceBuffer *self);
 
 void SourceBuffer_set_onupdate(SourceBuffer* self, jb_Any * value);
 
-jb_Any SourceBuffer_onupdateend( const SourceBuffer *self);
+jb_Any SourceBuffer_onupdateend(const SourceBuffer *self);
 
 void SourceBuffer_set_onupdateend(SourceBuffer* self, jb_Any * value);
 
-jb_Any SourceBuffer_onerror( const SourceBuffer *self);
+jb_Any SourceBuffer_onerror(const SourceBuffer *self);
 
 void SourceBuffer_set_onerror(SourceBuffer* self, jb_Any * value);
 
-jb_Any SourceBuffer_onabort( const SourceBuffer *self);
+jb_Any SourceBuffer_onabort(const SourceBuffer *self);
 
 void SourceBuffer_set_onabort(SourceBuffer* self, jb_Any * value);
 

@@ -14,23 +14,23 @@ KeyboardEvent KeyboardEvent_new0(jb_DOMString * type);
 
 KeyboardEvent KeyboardEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_DOMString KeyboardEvent_key( const KeyboardEvent *self);
+jb_DOMString KeyboardEvent_key(const KeyboardEvent *self);
 
-jb_DOMString KeyboardEvent_code( const KeyboardEvent *self);
+jb_DOMString KeyboardEvent_code(const KeyboardEvent *self);
 
-unsigned long KeyboardEvent_location( const KeyboardEvent *self);
+unsigned long KeyboardEvent_location(const KeyboardEvent *self);
 
-bool KeyboardEvent_ctrlKey( const KeyboardEvent *self);
+bool KeyboardEvent_ctrlKey(const KeyboardEvent *self);
 
-bool KeyboardEvent_shiftKey( const KeyboardEvent *self);
+bool KeyboardEvent_shiftKey(const KeyboardEvent *self);
 
-bool KeyboardEvent_altKey( const KeyboardEvent *self);
+bool KeyboardEvent_altKey(const KeyboardEvent *self);
 
-bool KeyboardEvent_metaKey( const KeyboardEvent *self);
+bool KeyboardEvent_metaKey(const KeyboardEvent *self);
 
-bool KeyboardEvent_repeat( const KeyboardEvent *self);
+bool KeyboardEvent_repeat(const KeyboardEvent *self);
 
-bool KeyboardEvent_isComposing( const KeyboardEvent *self);
+bool KeyboardEvent_isComposing(const KeyboardEvent *self);
 
 bool KeyboardEvent_getModifierState(KeyboardEvent* self , jb_DOMString * keyArg);
 
@@ -54,6 +54,6 @@ jb_Undefined KeyboardEvent_initKeyboardEvent8(KeyboardEvent* self , jb_DOMString
 
 jb_Undefined KeyboardEvent_initKeyboardEvent9(KeyboardEvent* self , jb_DOMString * typeArg, bool bubblesArg, bool cancelableArg, Window * viewArg, jb_DOMString * keyArg, unsigned long locationArg, bool ctrlKey, bool altKey, bool shiftKey, bool metaKey);
 
-unsigned long KeyboardEvent_charCode( const KeyboardEvent *self);
+unsigned long KeyboardEvent_charCode(const KeyboardEvent *self);
 
-unsigned long KeyboardEvent_keyCode( const KeyboardEvent *self);
+unsigned long KeyboardEvent_keyCode(const KeyboardEvent *self);

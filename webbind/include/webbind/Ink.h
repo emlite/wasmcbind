@@ -11,7 +11,7 @@ typedef struct Element Element;
 
 DECLARE_EMLITE_TYPE(InkPresenterParam, em_Val);
 
-Element InkPresenterParam_presentationArea( const InkPresenterParam *self);
+Element InkPresenterParam_presentationArea(const InkPresenterParam *self);
 
 void InkPresenterParam_set_presentationArea(InkPresenterParam* self, Element * value);
 DECLARE_EMLITE_TYPE(Ink, em_Val);

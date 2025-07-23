@@ -7,7 +7,7 @@
 
 DECLARE_EMLITE_TYPE(TimeRanges, em_Val);
 
-unsigned long TimeRanges_length( const TimeRanges *self);
+unsigned long TimeRanges_length(const TimeRanges *self);
 
 double TimeRanges_start(TimeRanges* self , unsigned long index);
 

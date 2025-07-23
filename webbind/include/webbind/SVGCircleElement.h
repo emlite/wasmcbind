@@ -10,8 +10,8 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 DECLARE_EMLITE_TYPE(SVGCircleElement, SVGGeometryElement);
 
-SVGAnimatedLength SVGCircleElement_cx( const SVGCircleElement *self);
+SVGAnimatedLength SVGCircleElement_cx(const SVGCircleElement *self);
 
-SVGAnimatedLength SVGCircleElement_cy( const SVGCircleElement *self);
+SVGAnimatedLength SVGCircleElement_cy(const SVGCircleElement *self);
 
-SVGAnimatedLength SVGCircleElement_r( const SVGCircleElement *self);
+SVGAnimatedLength SVGCircleElement_r(const SVGCircleElement *self);

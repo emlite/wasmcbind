@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(XRJointPose, XRPose);
 
-float XRJointPose_radius( const XRJointPose *self);
+float XRJointPose_radius(const XRJointPose *self);

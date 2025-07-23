@@ -10,6 +10,6 @@ typedef struct Response Response;
 
 DECLARE_EMLITE_TYPE(BackgroundFetchRecord, em_Val);
 
-Request BackgroundFetchRecord_request( const BackgroundFetchRecord *self);
+Request BackgroundFetchRecord_request(const BackgroundFetchRecord *self);
 
-jb_Promise BackgroundFetchRecord_responseReady( const BackgroundFetchRecord *self);
+jb_Promise BackgroundFetchRecord_responseReady(const BackgroundFetchRecord *self);

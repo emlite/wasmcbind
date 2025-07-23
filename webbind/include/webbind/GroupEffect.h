@@ -15,11 +15,11 @@ GroupEffect GroupEffect_new0(jb_Sequence * children);
 
 GroupEffect GroupEffect_new1(jb_Sequence * children, jb_Any * timing);
 
-AnimationNodeList GroupEffect_children( const GroupEffect *self);
+AnimationNodeList GroupEffect_children(const GroupEffect *self);
 
-AnimationEffect GroupEffect_firstChild( const GroupEffect *self);
+AnimationEffect GroupEffect_firstChild(const GroupEffect *self);
 
-AnimationEffect GroupEffect_lastChild( const GroupEffect *self);
+AnimationEffect GroupEffect_lastChild(const GroupEffect *self);
 
 GroupEffect GroupEffect_clone(GroupEffect* self );
 

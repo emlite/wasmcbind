@@ -9,19 +9,19 @@ typedef struct AudioParam AudioParam;
 
 DECLARE_EMLITE_TYPE(AudioParam, em_Val);
 
-float AudioParam_value( const AudioParam *self);
+float AudioParam_value(const AudioParam *self);
 
 void AudioParam_set_value(AudioParam* self, float value);
 
-AutomationRate AudioParam_automationRate( const AudioParam *self);
+AutomationRate AudioParam_automationRate(const AudioParam *self);
 
 void AudioParam_set_automationRate(AudioParam* self, AutomationRate * value);
 
-float AudioParam_defaultValue( const AudioParam *self);
+float AudioParam_defaultValue(const AudioParam *self);
 
-float AudioParam_minValue( const AudioParam *self);
+float AudioParam_minValue(const AudioParam *self);
 
-float AudioParam_maxValue( const AudioParam *self);
+float AudioParam_maxValue(const AudioParam *self);
 
 AudioParam AudioParam_setValueAtTime(AudioParam* self , float value, double startTime);
 

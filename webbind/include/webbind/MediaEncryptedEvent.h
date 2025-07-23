@@ -12,6 +12,6 @@ MediaEncryptedEvent MediaEncryptedEvent_new0(jb_DOMString * type);
 
 MediaEncryptedEvent MediaEncryptedEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_DOMString MediaEncryptedEvent_initDataType( const MediaEncryptedEvent *self);
+jb_DOMString MediaEncryptedEvent_initDataType(const MediaEncryptedEvent *self);
 
-jb_ArrayBuffer MediaEncryptedEvent_initData( const MediaEncryptedEvent *self);
+jb_ArrayBuffer MediaEncryptedEvent_initData(const MediaEncryptedEvent *self);

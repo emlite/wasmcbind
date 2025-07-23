@@ -16,15 +16,15 @@ typedef struct SharedWorker SharedWorker;
 
 DECLARE_EMLITE_TYPE(StorageAccessHandle, em_Val);
 
-Storage StorageAccessHandle_sessionStorage( const StorageAccessHandle *self);
+Storage StorageAccessHandle_sessionStorage(const StorageAccessHandle *self);
 
-Storage StorageAccessHandle_localStorage( const StorageAccessHandle *self);
+Storage StorageAccessHandle_localStorage(const StorageAccessHandle *self);
 
-IDBFactory StorageAccessHandle_indexedDB( const StorageAccessHandle *self);
+IDBFactory StorageAccessHandle_indexedDB(const StorageAccessHandle *self);
 
-LockManager StorageAccessHandle_locks( const StorageAccessHandle *self);
+LockManager StorageAccessHandle_locks(const StorageAccessHandle *self);
 
-CacheStorage StorageAccessHandle_caches( const StorageAccessHandle *self);
+CacheStorage StorageAccessHandle_caches(const StorageAccessHandle *self);
 
 jb_Promise StorageAccessHandle_getDirectory(StorageAccessHandle* self );
 

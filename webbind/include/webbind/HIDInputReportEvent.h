@@ -12,8 +12,8 @@ DECLARE_EMLITE_TYPE(HIDInputReportEvent, Event);
 
 HIDInputReportEvent HIDInputReportEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-HIDDevice HIDInputReportEvent_device( const HIDInputReportEvent *self);
+HIDDevice HIDInputReportEvent_device(const HIDInputReportEvent *self);
 
-unsigned char HIDInputReportEvent_reportId( const HIDInputReportEvent *self);
+unsigned char HIDInputReportEvent_reportId(const HIDInputReportEvent *self);
 
-jb_DataView HIDInputReportEvent_data( const HIDInputReportEvent *self);
+jb_DataView HIDInputReportEvent_data(const HIDInputReportEvent *self);

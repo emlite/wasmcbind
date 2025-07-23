@@ -27,25 +27,25 @@ Response Response_redirect1(Response* self , jb_USVString * url, unsigned short 
 
 jb_Promise Response_json(Response* self );
 
-ResponseType Response_type( const Response *self);
+ResponseType Response_type(const Response *self);
 
-jb_USVString Response_url( const Response *self);
+jb_USVString Response_url(const Response *self);
 
-bool Response_redirected( const Response *self);
+bool Response_redirected(const Response *self);
 
-unsigned short Response_status( const Response *self);
+unsigned short Response_status(const Response *self);
 
-bool Response_ok( const Response *self);
+bool Response_ok(const Response *self);
 
-jb_ByteString Response_statusText( const Response *self);
+jb_ByteString Response_statusText(const Response *self);
 
-Headers Response_headers( const Response *self);
+Headers Response_headers(const Response *self);
 
 Response Response_clone(Response* self );
 
-ReadableStream Response_body( const Response *self);
+ReadableStream Response_body(const Response *self);
 
-bool Response_bodyUsed( const Response *self);
+bool Response_bodyUsed(const Response *self);
 
 jb_Promise Response_arrayBuffer(Response* self );
 

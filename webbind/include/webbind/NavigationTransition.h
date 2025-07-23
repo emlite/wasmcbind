@@ -9,8 +9,8 @@ typedef struct NavigationHistoryEntry NavigationHistoryEntry;
 
 DECLARE_EMLITE_TYPE(NavigationTransition, em_Val);
 
-NavigationType NavigationTransition_navigationType( const NavigationTransition *self);
+NavigationType NavigationTransition_navigationType(const NavigationTransition *self);
 
-NavigationHistoryEntry NavigationTransition_from( const NavigationTransition *self);
+NavigationHistoryEntry NavigationTransition_from(const NavigationTransition *self);
 
-jb_Promise NavigationTransition_finished( const NavigationTransition *self);
+jb_Promise NavigationTransition_finished(const NavigationTransition *self);

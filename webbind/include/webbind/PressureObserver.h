@@ -10,7 +10,7 @@ typedef struct PressureRecord PressureRecord;
 
 DECLARE_EMLITE_TYPE(PressureObserverOptions, em_Val);
 
-unsigned long PressureObserverOptions_sampleInterval( const PressureObserverOptions *self);
+unsigned long PressureObserverOptions_sampleInterval(const PressureObserverOptions *self);
 
 void PressureObserverOptions_set_sampleInterval(PressureObserverOptions* self, unsigned long value);
 DECLARE_EMLITE_TYPE(PressureObserver, em_Val);
@@ -27,4 +27,4 @@ jb_Undefined PressureObserver_disconnect(PressureObserver* self );
 
 jb_Sequence PressureObserver_takeRecords(PressureObserver* self );
 
-jb_FrozenArray PressureObserver_knownSources( PressureObserver *self);
+jb_FrozenArray PressureObserver_knownSources(const PressureObserver *self);

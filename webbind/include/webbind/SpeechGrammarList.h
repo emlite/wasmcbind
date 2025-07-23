@@ -11,7 +11,7 @@ DECLARE_EMLITE_TYPE(SpeechGrammarList, em_Val);
 
 SpeechGrammarList SpeechGrammarList_new();
 
-unsigned long SpeechGrammarList_length( const SpeechGrammarList *self);
+unsigned long SpeechGrammarList_length(const SpeechGrammarList *self);
 
 SpeechGrammar SpeechGrammarList_item(SpeechGrammarList* self , unsigned long index);
 

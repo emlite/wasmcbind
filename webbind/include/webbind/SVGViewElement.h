@@ -11,6 +11,6 @@ typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
 
 DECLARE_EMLITE_TYPE(SVGViewElement, SVGElement);
 
-SVGAnimatedRect SVGViewElement_viewBox( const SVGViewElement *self);
+SVGAnimatedRect SVGViewElement_viewBox(const SVGViewElement *self);
 
-SVGAnimatedPreserveAspectRatio SVGViewElement_preserveAspectRatio( const SVGViewElement *self);
+SVGAnimatedPreserveAspectRatio SVGViewElement_preserveAspectRatio(const SVGViewElement *self);

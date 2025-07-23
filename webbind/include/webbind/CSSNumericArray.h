@@ -9,4 +9,4 @@ typedef struct CSSNumericValue CSSNumericValue;
 
 DECLARE_EMLITE_TYPE(CSSNumericArray, em_Val);
 
-unsigned long CSSNumericArray_length( const CSSNumericArray *self);
+unsigned long CSSNumericArray_length(const CSSNumericArray *self);

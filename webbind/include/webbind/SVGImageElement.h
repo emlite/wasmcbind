@@ -12,18 +12,18 @@ typedef struct SVGAnimatedString SVGAnimatedString;
 
 DECLARE_EMLITE_TYPE(SVGImageElement, SVGGraphicsElement);
 
-SVGAnimatedLength SVGImageElement_x( const SVGImageElement *self);
+SVGAnimatedLength SVGImageElement_x(const SVGImageElement *self);
 
-SVGAnimatedLength SVGImageElement_y( const SVGImageElement *self);
+SVGAnimatedLength SVGImageElement_y(const SVGImageElement *self);
 
-SVGAnimatedLength SVGImageElement_width( const SVGImageElement *self);
+SVGAnimatedLength SVGImageElement_width(const SVGImageElement *self);
 
-SVGAnimatedLength SVGImageElement_height( const SVGImageElement *self);
+SVGAnimatedLength SVGImageElement_height(const SVGImageElement *self);
 
-SVGAnimatedPreserveAspectRatio SVGImageElement_preserveAspectRatio( const SVGImageElement *self);
+SVGAnimatedPreserveAspectRatio SVGImageElement_preserveAspectRatio(const SVGImageElement *self);
 
-jb_DOMString SVGImageElement_crossOrigin( const SVGImageElement *self);
+jb_DOMString SVGImageElement_crossOrigin(const SVGImageElement *self);
 
 void SVGImageElement_set_crossOrigin(SVGImageElement* self, jb_DOMString * value);
 
-SVGAnimatedString SVGImageElement_href( const SVGImageElement *self);
+SVGAnimatedString SVGImageElement_href(const SVGImageElement *self);

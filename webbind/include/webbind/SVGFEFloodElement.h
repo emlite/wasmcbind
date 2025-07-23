@@ -11,12 +11,12 @@ typedef struct SVGAnimatedString SVGAnimatedString;
 
 DECLARE_EMLITE_TYPE(SVGFEFloodElement, SVGElement);
 
-SVGAnimatedLength SVGFEFloodElement_x( const SVGFEFloodElement *self);
+SVGAnimatedLength SVGFEFloodElement_x(const SVGFEFloodElement *self);
 
-SVGAnimatedLength SVGFEFloodElement_y( const SVGFEFloodElement *self);
+SVGAnimatedLength SVGFEFloodElement_y(const SVGFEFloodElement *self);
 
-SVGAnimatedLength SVGFEFloodElement_width( const SVGFEFloodElement *self);
+SVGAnimatedLength SVGFEFloodElement_width(const SVGFEFloodElement *self);
 
-SVGAnimatedLength SVGFEFloodElement_height( const SVGFEFloodElement *self);
+SVGAnimatedLength SVGFEFloodElement_height(const SVGFEFloodElement *self);
 
-SVGAnimatedString SVGFEFloodElement_result( const SVGFEFloodElement *self);
+SVGAnimatedString SVGFEFloodElement_result(const SVGFEFloodElement *self);

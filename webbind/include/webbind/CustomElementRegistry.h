@@ -10,7 +10,7 @@ typedef struct Node Node;
 
 DECLARE_EMLITE_TYPE(ElementDefinitionOptions, em_Val);
 
-jb_DOMString ElementDefinitionOptions_extends( const ElementDefinitionOptions *self);
+jb_DOMString ElementDefinitionOptions_extends(const ElementDefinitionOptions *self);
 
 void ElementDefinitionOptions_set_extends(ElementDefinitionOptions* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(CustomElementRegistry, em_Val);

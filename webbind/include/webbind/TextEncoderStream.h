@@ -12,8 +12,8 @@ DECLARE_EMLITE_TYPE(TextEncoderStream, em_Val);
 
 TextEncoderStream TextEncoderStream_new();
 
-jb_DOMString TextEncoderStream_encoding( const TextEncoderStream *self);
+jb_DOMString TextEncoderStream_encoding(const TextEncoderStream *self);
 
-ReadableStream TextEncoderStream_readable( const TextEncoderStream *self);
+ReadableStream TextEncoderStream_readable(const TextEncoderStream *self);
 
-WritableStream TextEncoderStream_writable( const TextEncoderStream *self);
+WritableStream TextEncoderStream_writable(const TextEncoderStream *self);

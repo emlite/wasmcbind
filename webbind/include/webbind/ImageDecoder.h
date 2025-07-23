@@ -12,33 +12,33 @@ typedef struct VideoFrame VideoFrame;
 
 DECLARE_EMLITE_TYPE(ImageDecodeResult, em_Val);
 
-VideoFrame ImageDecodeResult_image( const ImageDecodeResult *self);
+VideoFrame ImageDecodeResult_image(const ImageDecodeResult *self);
 
 void ImageDecodeResult_set_image(ImageDecodeResult* self, VideoFrame * value);
 
-bool ImageDecodeResult_complete( const ImageDecodeResult *self);
+bool ImageDecodeResult_complete(const ImageDecodeResult *self);
 
 void ImageDecodeResult_set_complete(ImageDecodeResult* self, bool value);
 DECLARE_EMLITE_TYPE(ImageDecodeOptions, em_Val);
 
-unsigned long ImageDecodeOptions_frameIndex( const ImageDecodeOptions *self);
+unsigned long ImageDecodeOptions_frameIndex(const ImageDecodeOptions *self);
 
 void ImageDecodeOptions_set_frameIndex(ImageDecodeOptions* self, unsigned long value);
 
-bool ImageDecodeOptions_completeFramesOnly( const ImageDecodeOptions *self);
+bool ImageDecodeOptions_completeFramesOnly(const ImageDecodeOptions *self);
 
 void ImageDecodeOptions_set_completeFramesOnly(ImageDecodeOptions* self, bool value);
 DECLARE_EMLITE_TYPE(ImageDecoder, em_Val);
 
 ImageDecoder ImageDecoder_new(jb_Any * init);
 
-jb_DOMString ImageDecoder_type( const ImageDecoder *self);
+jb_DOMString ImageDecoder_type(const ImageDecoder *self);
 
-bool ImageDecoder_complete( const ImageDecoder *self);
+bool ImageDecoder_complete(const ImageDecoder *self);
 
-jb_Promise ImageDecoder_completed( const ImageDecoder *self);
+jb_Promise ImageDecoder_completed(const ImageDecoder *self);
 
-ImageTrackList ImageDecoder_tracks( const ImageDecoder *self);
+ImageTrackList ImageDecoder_tracks(const ImageDecoder *self);
 
 jb_Promise ImageDecoder_decode0(ImageDecoder* self );
 

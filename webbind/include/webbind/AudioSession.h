@@ -8,12 +8,12 @@
 
 DECLARE_EMLITE_TYPE(AudioSession, EventTarget);
 
-AudioSessionType AudioSession_type( const AudioSession *self);
+AudioSessionType AudioSession_type(const AudioSession *self);
 
 void AudioSession_set_type(AudioSession* self, AudioSessionType * value);
 
-AudioSessionState AudioSession_state( const AudioSession *self);
+AudioSessionState AudioSession_state(const AudioSession *self);
 
-jb_Any AudioSession_onstatechange( const AudioSession *self);
+jb_Any AudioSession_onstatechange(const AudioSession *self);
 
 void AudioSession_set_onstatechange(AudioSession* self, jb_Any * value);

@@ -10,8 +10,8 @@ DECLARE_EMLITE_TYPE(RTCSessionDescription, em_Val);
 
 RTCSessionDescription RTCSessionDescription_new(RTCSessionDescriptionInit * descriptionInitDict);
 
-RTCSdpType RTCSessionDescription_type( const RTCSessionDescription *self);
+RTCSdpType RTCSessionDescription_type(const RTCSessionDescription *self);
 
-jb_DOMString RTCSessionDescription_sdp( const RTCSessionDescription *self);
+jb_DOMString RTCSessionDescription_sdp(const RTCSessionDescription *self);
 
 RTCSessionDescriptionInit RTCSessionDescription_toJSON(RTCSessionDescription* self );

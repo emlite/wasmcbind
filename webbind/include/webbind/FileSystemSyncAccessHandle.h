@@ -9,7 +9,7 @@ typedef struct FileSystemReadWriteOptions FileSystemReadWriteOptions;
 
 DECLARE_EMLITE_TYPE(FileSystemReadWriteOptions, em_Val);
 
-long long FileSystemReadWriteOptions_at( const FileSystemReadWriteOptions *self);
+long long FileSystemReadWriteOptions_at(const FileSystemReadWriteOptions *self);
 
 void FileSystemReadWriteOptions_set_at(FileSystemReadWriteOptions* self, long long value);
 DECLARE_EMLITE_TYPE(FileSystemSyncAccessHandle, em_Val);

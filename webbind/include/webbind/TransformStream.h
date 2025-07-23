@@ -18,6 +18,6 @@ TransformStream TransformStream_new2(jb_Object * transformer, jb_Any * writableS
 
 TransformStream TransformStream_new3(jb_Object * transformer, jb_Any * writableStrategy, jb_Any * readableStrategy);
 
-ReadableStream TransformStream_readable( const TransformStream *self);
+ReadableStream TransformStream_readable(const TransformStream *self);
 
-WritableStream TransformStream_writable( const TransformStream *self);
+WritableStream TransformStream_writable(const TransformStream *self);

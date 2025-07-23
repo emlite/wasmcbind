@@ -12,4 +12,4 @@ CaptureActionEvent CaptureActionEvent_new0();
 
 CaptureActionEvent CaptureActionEvent_new1(jb_Any * init);
 
-CaptureAction CaptureActionEvent_action( const CaptureActionEvent *self);
+CaptureAction CaptureActionEvent_action(const CaptureActionEvent *self);

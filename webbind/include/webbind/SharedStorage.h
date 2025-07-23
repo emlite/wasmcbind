@@ -14,17 +14,17 @@ typedef struct SharedStorageWorkletOptions SharedStorageWorkletOptions;
 
 DECLARE_EMLITE_TYPE(SharedStorageSetMethodOptions, em_Val);
 
-bool SharedStorageSetMethodOptions_ignoreIfPresent( const SharedStorageSetMethodOptions *self);
+bool SharedStorageSetMethodOptions_ignoreIfPresent(const SharedStorageSetMethodOptions *self);
 
 void SharedStorageSetMethodOptions_set_ignoreIfPresent(SharedStorageSetMethodOptions* self, bool value);
 DECLARE_EMLITE_TYPE(SharedStorageModifierMethodOptions, em_Val);
 
-jb_DOMString SharedStorageModifierMethodOptions_withLock( const SharedStorageModifierMethodOptions *self);
+jb_DOMString SharedStorageModifierMethodOptions_withLock(const SharedStorageModifierMethodOptions *self);
 
 void SharedStorageModifierMethodOptions_set_withLock(SharedStorageModifierMethodOptions* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(SharedStorageWorkletOptions, em_Val);
 
-jb_USVString SharedStorageWorkletOptions_dataOrigin( const SharedStorageWorkletOptions *self);
+jb_USVString SharedStorageWorkletOptions_dataOrigin(const SharedStorageWorkletOptions *self);
 
 void SharedStorageWorkletOptions_set_dataOrigin(SharedStorageWorkletOptions* self, jb_USVString * value);
 DECLARE_EMLITE_TYPE(SharedStorage, em_Val);
@@ -63,7 +63,7 @@ jb_Promise SharedStorage_createWorklet0(SharedStorage* self , jb_USVString * mod
 
 jb_Promise SharedStorage_createWorklet1(SharedStorage* self , jb_USVString * moduleURL, SharedStorageWorkletOptions * options);
 
-SharedStorageWorklet SharedStorage_worklet( const SharedStorage *self);
+SharedStorageWorklet SharedStorage_worklet(const SharedStorage *self);
 
 jb_Promise SharedStorage_length(SharedStorage* self );
 

@@ -9,4 +9,4 @@ typedef struct LockManager LockManager;
 
 DECLARE_EMLITE_TYPE(SharedStorageWorkletNavigator, em_Val);
 
-LockManager SharedStorageWorkletNavigator_locks( const SharedStorageWorkletNavigator *self);
+LockManager SharedStorageWorkletNavigator_locks(const SharedStorageWorkletNavigator *self);

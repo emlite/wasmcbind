@@ -21,17 +21,17 @@ typedef struct ML ML;
 
 DECLARE_EMLITE_TYPE(WorkerNavigator, em_Val);
 
-MediaCapabilities WorkerNavigator_mediaCapabilities( const WorkerNavigator *self);
+MediaCapabilities WorkerNavigator_mediaCapabilities(const WorkerNavigator *self);
 
-Permissions WorkerNavigator_permissions( const WorkerNavigator *self);
+Permissions WorkerNavigator_permissions(const WorkerNavigator *self);
 
-Serial WorkerNavigator_serial( const WorkerNavigator *self);
+Serial WorkerNavigator_serial(const WorkerNavigator *self);
 
-ServiceWorkerContainer WorkerNavigator_serviceWorker( const WorkerNavigator *self);
+ServiceWorkerContainer WorkerNavigator_serviceWorker(const WorkerNavigator *self);
 
-HID WorkerNavigator_hid( const WorkerNavigator *self);
+HID WorkerNavigator_hid(const WorkerNavigator *self);
 
-USB WorkerNavigator_usb( const WorkerNavigator *self);
+USB WorkerNavigator_usb(const WorkerNavigator *self);
 
 jb_Promise WorkerNavigator_setAppBadge0(WorkerNavigator* self );
 
@@ -39,32 +39,32 @@ jb_Promise WorkerNavigator_setAppBadge1(WorkerNavigator* self , long long conten
 
 jb_Promise WorkerNavigator_clearAppBadge(WorkerNavigator* self );
 
-double WorkerNavigator_deviceMemory( const WorkerNavigator *self);
+double WorkerNavigator_deviceMemory(const WorkerNavigator *self);
 
-bool WorkerNavigator_globalPrivacyControl( const WorkerNavigator *self);
+bool WorkerNavigator_globalPrivacyControl(const WorkerNavigator *self);
 
 bool WorkerNavigator_taintEnabled(WorkerNavigator* self );
 
-jb_DOMString WorkerNavigator_oscpu( const WorkerNavigator *self);
+jb_DOMString WorkerNavigator_oscpu(const WorkerNavigator *self);
 
-jb_DOMString WorkerNavigator_language( const WorkerNavigator *self);
+jb_DOMString WorkerNavigator_language(const WorkerNavigator *self);
 
-jb_FrozenArray WorkerNavigator_languages( const WorkerNavigator *self);
+jb_FrozenArray WorkerNavigator_languages(const WorkerNavigator *self);
 
-bool WorkerNavigator_onLine( const WorkerNavigator *self);
+bool WorkerNavigator_onLine(const WorkerNavigator *self);
 
-long long WorkerNavigator_hardwareConcurrency( const WorkerNavigator *self);
+long long WorkerNavigator_hardwareConcurrency(const WorkerNavigator *self);
 
-NetworkInformation WorkerNavigator_connection( const WorkerNavigator *self);
+NetworkInformation WorkerNavigator_connection(const WorkerNavigator *self);
 
-StorageBucketManager WorkerNavigator_storageBuckets( const WorkerNavigator *self);
+StorageBucketManager WorkerNavigator_storageBuckets(const WorkerNavigator *self);
 
-StorageManager WorkerNavigator_storage( const WorkerNavigator *self);
+StorageManager WorkerNavigator_storage(const WorkerNavigator *self);
 
-NavigatorUAData WorkerNavigator_userAgentData( const WorkerNavigator *self);
+NavigatorUAData WorkerNavigator_userAgentData(const WorkerNavigator *self);
 
-LockManager WorkerNavigator_locks( const WorkerNavigator *self);
+LockManager WorkerNavigator_locks(const WorkerNavigator *self);
 
-GPU WorkerNavigator_gpu( const WorkerNavigator *self);
+GPU WorkerNavigator_gpu(const WorkerNavigator *self);
 
-ML WorkerNavigator_ml( const WorkerNavigator *self);
+ML WorkerNavigator_ml(const WorkerNavigator *self);

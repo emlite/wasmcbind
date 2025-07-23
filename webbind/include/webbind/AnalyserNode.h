@@ -20,20 +20,20 @@ jb_Undefined AnalyserNode_getFloatTimeDomainData(AnalyserNode* self , jb_Float32
 
 jb_Undefined AnalyserNode_getByteTimeDomainData(AnalyserNode* self , jb_Uint8Array * array);
 
-unsigned long AnalyserNode_fftSize( const AnalyserNode *self);
+unsigned long AnalyserNode_fftSize(const AnalyserNode *self);
 
 void AnalyserNode_set_fftSize(AnalyserNode* self, unsigned long value);
 
-unsigned long AnalyserNode_frequencyBinCount( const AnalyserNode *self);
+unsigned long AnalyserNode_frequencyBinCount(const AnalyserNode *self);
 
-double AnalyserNode_minDecibels( const AnalyserNode *self);
+double AnalyserNode_minDecibels(const AnalyserNode *self);
 
 void AnalyserNode_set_minDecibels(AnalyserNode* self, double value);
 
-double AnalyserNode_maxDecibels( const AnalyserNode *self);
+double AnalyserNode_maxDecibels(const AnalyserNode *self);
 
 void AnalyserNode_set_maxDecibels(AnalyserNode* self, double value);
 
-double AnalyserNode_smoothingTimeConstant( const AnalyserNode *self);
+double AnalyserNode_smoothingTimeConstant(const AnalyserNode *self);
 
 void AnalyserNode_set_smoothingTimeConstant(AnalyserNode* self, double value);

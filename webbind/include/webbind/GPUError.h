@@ -7,4 +7,4 @@
 
 DECLARE_EMLITE_TYPE(GPUError, em_Val);
 
-jb_DOMString GPUError_message( const GPUError *self);
+jb_DOMString GPUError_message(const GPUError *self);

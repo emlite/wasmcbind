@@ -14,6 +14,6 @@ BufferedChangeEvent BufferedChangeEvent_new0(jb_DOMString * type);
 
 BufferedChangeEvent BufferedChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-TimeRanges BufferedChangeEvent_addedRanges( const BufferedChangeEvent *self);
+TimeRanges BufferedChangeEvent_addedRanges(const BufferedChangeEvent *self);
 
-TimeRanges BufferedChangeEvent_removedRanges( const BufferedChangeEvent *self);
+TimeRanges BufferedChangeEvent_removedRanges(const BufferedChangeEvent *self);

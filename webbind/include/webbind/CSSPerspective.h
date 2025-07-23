@@ -10,6 +10,6 @@ DECLARE_EMLITE_TYPE(CSSPerspective, CSSTransformComponent);
 
 CSSPerspective CSSPerspective_new(jb_Any * length);
 
-jb_Any CSSPerspective_length( const CSSPerspective *self);
+jb_Any CSSPerspective_length(const CSSPerspective *self);
 
 void CSSPerspective_set_length(CSSPerspective* self, jb_Any * value);

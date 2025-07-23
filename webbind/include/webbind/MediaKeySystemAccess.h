@@ -10,7 +10,7 @@ typedef struct MediaKeys MediaKeys;
 
 DECLARE_EMLITE_TYPE(MediaKeySystemAccess, em_Val);
 
-jb_DOMString MediaKeySystemAccess_keySystem( const MediaKeySystemAccess *self);
+jb_DOMString MediaKeySystemAccess_keySystem(const MediaKeySystemAccess *self);
 
 MediaKeySystemConfiguration MediaKeySystemAccess_getConfiguration(MediaKeySystemAccess* self );
 

@@ -10,8 +10,8 @@ typedef struct PresentationReceiver PresentationReceiver;
 
 DECLARE_EMLITE_TYPE(Presentation, em_Val);
 
-PresentationRequest Presentation_defaultRequest( const Presentation *self);
+PresentationRequest Presentation_defaultRequest(const Presentation *self);
 
 void Presentation_set_defaultRequest(Presentation* self, PresentationRequest * value);
 
-PresentationReceiver Presentation_receiver( const Presentation *self);
+PresentationReceiver Presentation_receiver(const Presentation *self);

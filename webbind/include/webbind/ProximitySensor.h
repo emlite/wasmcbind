@@ -12,8 +12,8 @@ ProximitySensor ProximitySensor_new0();
 
 ProximitySensor ProximitySensor_new1(jb_Any * sensorOptions);
 
-double ProximitySensor_distance( const ProximitySensor *self);
+double ProximitySensor_distance(const ProximitySensor *self);
 
-double ProximitySensor_max( const ProximitySensor *self);
+double ProximitySensor_max(const ProximitySensor *self);
 
-bool ProximitySensor_near( const ProximitySensor *self);
+bool ProximitySensor_near(const ProximitySensor *self);

@@ -11,22 +11,22 @@ typedef struct AbortSignal AbortSignal;
 
 DECLARE_EMLITE_TYPE(IdleOptions, em_Val);
 
-long long IdleOptions_threshold( const IdleOptions *self);
+long long IdleOptions_threshold(const IdleOptions *self);
 
 void IdleOptions_set_threshold(IdleOptions* self, long long value);
 
-AbortSignal IdleOptions_signal( const IdleOptions *self);
+AbortSignal IdleOptions_signal(const IdleOptions *self);
 
 void IdleOptions_set_signal(IdleOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(IdleDetector, EventTarget);
 
 IdleDetector IdleDetector_new();
 
-UserIdleState IdleDetector_userState( const IdleDetector *self);
+UserIdleState IdleDetector_userState(const IdleDetector *self);
 
-ScreenIdleState IdleDetector_screenState( const IdleDetector *self);
+ScreenIdleState IdleDetector_screenState(const IdleDetector *self);
 
-jb_Any IdleDetector_onchange( const IdleDetector *self);
+jb_Any IdleDetector_onchange(const IdleDetector *self);
 
 void IdleDetector_set_onchange(IdleDetector* self, jb_Any * value);
 

@@ -10,14 +10,14 @@ typedef struct FileSystemHandlePermissionDescriptor FileSystemHandlePermissionDe
 
 DECLARE_EMLITE_TYPE(FileSystemHandlePermissionDescriptor, em_Val);
 
-FileSystemPermissionMode FileSystemHandlePermissionDescriptor_mode( const FileSystemHandlePermissionDescriptor *self);
+FileSystemPermissionMode FileSystemHandlePermissionDescriptor_mode(const FileSystemHandlePermissionDescriptor *self);
 
 void FileSystemHandlePermissionDescriptor_set_mode(FileSystemHandlePermissionDescriptor* self, FileSystemPermissionMode * value);
 DECLARE_EMLITE_TYPE(FileSystemHandle, em_Val);
 
-FileSystemHandleKind FileSystemHandle_kind( const FileSystemHandle *self);
+FileSystemHandleKind FileSystemHandle_kind(const FileSystemHandle *self);
 
-jb_USVString FileSystemHandle_name( const FileSystemHandle *self);
+jb_USVString FileSystemHandle_name(const FileSystemHandle *self);
 
 jb_Promise FileSystemHandle_isSameEntry(FileSystemHandle* self , FileSystemHandle * other);
 

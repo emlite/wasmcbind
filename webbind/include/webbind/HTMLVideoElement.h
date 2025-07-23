@@ -13,23 +13,23 @@ DECLARE_EMLITE_TYPE(HTMLVideoElement, HTMLMediaElement);
 
 HTMLVideoElement HTMLVideoElement_new();
 
-unsigned long HTMLVideoElement_width( const HTMLVideoElement *self);
+unsigned long HTMLVideoElement_width(const HTMLVideoElement *self);
 
 void HTMLVideoElement_set_width(HTMLVideoElement* self, unsigned long value);
 
-unsigned long HTMLVideoElement_height( const HTMLVideoElement *self);
+unsigned long HTMLVideoElement_height(const HTMLVideoElement *self);
 
 void HTMLVideoElement_set_height(HTMLVideoElement* self, unsigned long value);
 
-unsigned long HTMLVideoElement_videoWidth( const HTMLVideoElement *self);
+unsigned long HTMLVideoElement_videoWidth(const HTMLVideoElement *self);
 
-unsigned long HTMLVideoElement_videoHeight( const HTMLVideoElement *self);
+unsigned long HTMLVideoElement_videoHeight(const HTMLVideoElement *self);
 
-jb_USVString HTMLVideoElement_poster( const HTMLVideoElement *self);
+jb_USVString HTMLVideoElement_poster(const HTMLVideoElement *self);
 
 void HTMLVideoElement_set_poster(HTMLVideoElement* self, jb_USVString * value);
 
-bool HTMLVideoElement_playsInline( const HTMLVideoElement *self);
+bool HTMLVideoElement_playsInline(const HTMLVideoElement *self);
 
 void HTMLVideoElement_set_playsInline(HTMLVideoElement* self, bool value);
 
@@ -37,15 +37,15 @@ VideoPlaybackQuality HTMLVideoElement_getVideoPlaybackQuality(HTMLVideoElement* 
 
 jb_Promise HTMLVideoElement_requestPictureInPicture(HTMLVideoElement* self );
 
-jb_Any HTMLVideoElement_onenterpictureinpicture( const HTMLVideoElement *self);
+jb_Any HTMLVideoElement_onenterpictureinpicture(const HTMLVideoElement *self);
 
 void HTMLVideoElement_set_onenterpictureinpicture(HTMLVideoElement* self, jb_Any * value);
 
-jb_Any HTMLVideoElement_onleavepictureinpicture( const HTMLVideoElement *self);
+jb_Any HTMLVideoElement_onleavepictureinpicture(const HTMLVideoElement *self);
 
 void HTMLVideoElement_set_onleavepictureinpicture(HTMLVideoElement* self, jb_Any * value);
 
-bool HTMLVideoElement_disablePictureInPicture( const HTMLVideoElement *self);
+bool HTMLVideoElement_disablePictureInPicture(const HTMLVideoElement *self);
 
 void HTMLVideoElement_set_disablePictureInPicture(HTMLVideoElement* self, bool value);
 

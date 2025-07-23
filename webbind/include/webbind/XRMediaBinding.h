@@ -17,53 +17,53 @@ typedef struct XRSession XRSession;
 
 DECLARE_EMLITE_TYPE(XRMediaQuadLayerInit, em_Val);
 
-XRRigidTransform XRMediaQuadLayerInit_transform( const XRMediaQuadLayerInit *self);
+XRRigidTransform XRMediaQuadLayerInit_transform(const XRMediaQuadLayerInit *self);
 
 void XRMediaQuadLayerInit_set_transform(XRMediaQuadLayerInit* self, XRRigidTransform * value);
 
-float XRMediaQuadLayerInit_width( const XRMediaQuadLayerInit *self);
+float XRMediaQuadLayerInit_width(const XRMediaQuadLayerInit *self);
 
 void XRMediaQuadLayerInit_set_width(XRMediaQuadLayerInit* self, float value);
 
-float XRMediaQuadLayerInit_height( const XRMediaQuadLayerInit *self);
+float XRMediaQuadLayerInit_height(const XRMediaQuadLayerInit *self);
 
 void XRMediaQuadLayerInit_set_height(XRMediaQuadLayerInit* self, float value);
 DECLARE_EMLITE_TYPE(XRMediaCylinderLayerInit, em_Val);
 
-XRRigidTransform XRMediaCylinderLayerInit_transform( const XRMediaCylinderLayerInit *self);
+XRRigidTransform XRMediaCylinderLayerInit_transform(const XRMediaCylinderLayerInit *self);
 
 void XRMediaCylinderLayerInit_set_transform(XRMediaCylinderLayerInit* self, XRRigidTransform * value);
 
-float XRMediaCylinderLayerInit_radius( const XRMediaCylinderLayerInit *self);
+float XRMediaCylinderLayerInit_radius(const XRMediaCylinderLayerInit *self);
 
 void XRMediaCylinderLayerInit_set_radius(XRMediaCylinderLayerInit* self, float value);
 
-float XRMediaCylinderLayerInit_centralAngle( const XRMediaCylinderLayerInit *self);
+float XRMediaCylinderLayerInit_centralAngle(const XRMediaCylinderLayerInit *self);
 
 void XRMediaCylinderLayerInit_set_centralAngle(XRMediaCylinderLayerInit* self, float value);
 
-float XRMediaCylinderLayerInit_aspectRatio( const XRMediaCylinderLayerInit *self);
+float XRMediaCylinderLayerInit_aspectRatio(const XRMediaCylinderLayerInit *self);
 
 void XRMediaCylinderLayerInit_set_aspectRatio(XRMediaCylinderLayerInit* self, float value);
 DECLARE_EMLITE_TYPE(XRMediaEquirectLayerInit, em_Val);
 
-XRRigidTransform XRMediaEquirectLayerInit_transform( const XRMediaEquirectLayerInit *self);
+XRRigidTransform XRMediaEquirectLayerInit_transform(const XRMediaEquirectLayerInit *self);
 
 void XRMediaEquirectLayerInit_set_transform(XRMediaEquirectLayerInit* self, XRRigidTransform * value);
 
-float XRMediaEquirectLayerInit_radius( const XRMediaEquirectLayerInit *self);
+float XRMediaEquirectLayerInit_radius(const XRMediaEquirectLayerInit *self);
 
 void XRMediaEquirectLayerInit_set_radius(XRMediaEquirectLayerInit* self, float value);
 
-float XRMediaEquirectLayerInit_centralHorizontalAngle( const XRMediaEquirectLayerInit *self);
+float XRMediaEquirectLayerInit_centralHorizontalAngle(const XRMediaEquirectLayerInit *self);
 
 void XRMediaEquirectLayerInit_set_centralHorizontalAngle(XRMediaEquirectLayerInit* self, float value);
 
-float XRMediaEquirectLayerInit_upperVerticalAngle( const XRMediaEquirectLayerInit *self);
+float XRMediaEquirectLayerInit_upperVerticalAngle(const XRMediaEquirectLayerInit *self);
 
 void XRMediaEquirectLayerInit_set_upperVerticalAngle(XRMediaEquirectLayerInit* self, float value);
 
-float XRMediaEquirectLayerInit_lowerVerticalAngle( const XRMediaEquirectLayerInit *self);
+float XRMediaEquirectLayerInit_lowerVerticalAngle(const XRMediaEquirectLayerInit *self);
 
 void XRMediaEquirectLayerInit_set_lowerVerticalAngle(XRMediaEquirectLayerInit* self, float value);
 DECLARE_EMLITE_TYPE(XRMediaBinding, em_Val);

@@ -9,11 +9,11 @@ typedef struct BluetoothRemoteGATTCharacteristic BluetoothRemoteGATTCharacterist
 
 DECLARE_EMLITE_TYPE(BluetoothRemoteGATTDescriptor, em_Val);
 
-BluetoothRemoteGATTCharacteristic BluetoothRemoteGATTDescriptor_characteristic( const BluetoothRemoteGATTDescriptor *self);
+BluetoothRemoteGATTCharacteristic BluetoothRemoteGATTDescriptor_characteristic(const BluetoothRemoteGATTDescriptor *self);
 
-jb_Any BluetoothRemoteGATTDescriptor_uuid( const BluetoothRemoteGATTDescriptor *self);
+jb_Any BluetoothRemoteGATTDescriptor_uuid(const BluetoothRemoteGATTDescriptor *self);
 
-jb_DataView BluetoothRemoteGATTDescriptor_value( const BluetoothRemoteGATTDescriptor *self);
+jb_DataView BluetoothRemoteGATTDescriptor_value(const BluetoothRemoteGATTDescriptor *self);
 
 jb_Promise BluetoothRemoteGATTDescriptor_readValue(BluetoothRemoteGATTDescriptor* self );
 

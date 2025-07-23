@@ -16,12 +16,12 @@ TextDecoderStream TextDecoderStream_new1(jb_DOMString * label);
 
 TextDecoderStream TextDecoderStream_new2(jb_DOMString * label, jb_Any * options);
 
-jb_DOMString TextDecoderStream_encoding( const TextDecoderStream *self);
+jb_DOMString TextDecoderStream_encoding(const TextDecoderStream *self);
 
-bool TextDecoderStream_fatal( const TextDecoderStream *self);
+bool TextDecoderStream_fatal(const TextDecoderStream *self);
 
-bool TextDecoderStream_ignoreBOM( const TextDecoderStream *self);
+bool TextDecoderStream_ignoreBOM(const TextDecoderStream *self);
 
-ReadableStream TextDecoderStream_readable( const TextDecoderStream *self);
+ReadableStream TextDecoderStream_readable(const TextDecoderStream *self);
 
-WritableStream TextDecoderStream_writable( const TextDecoderStream *self);
+WritableStream TextDecoderStream_writable(const TextDecoderStream *self);

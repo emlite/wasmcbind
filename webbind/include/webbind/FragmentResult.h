@@ -11,6 +11,6 @@ FragmentResult FragmentResult_new0();
 
 FragmentResult FragmentResult_new1(jb_Any * options);
 
-double FragmentResult_inlineSize( const FragmentResult *self);
+double FragmentResult_inlineSize(const FragmentResult *self);
 
-double FragmentResult_blockSize( const FragmentResult *self);
+double FragmentResult_blockSize(const FragmentResult *self);

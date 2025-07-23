@@ -9,6 +9,6 @@ typedef struct LayoutChild LayoutChild;
 
 DECLARE_EMLITE_TYPE(ChildBreakToken, em_Val);
 
-BreakType ChildBreakToken_breakType( const ChildBreakToken *self);
+BreakType ChildBreakToken_breakType(const ChildBreakToken *self);
 
-LayoutChild ChildBreakToken_child( const ChildBreakToken *self);
+LayoutChild ChildBreakToken_child(const ChildBreakToken *self);

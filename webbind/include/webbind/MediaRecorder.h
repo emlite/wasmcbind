@@ -14,41 +14,41 @@ MediaRecorder MediaRecorder_new0(MediaStream * stream);
 
 MediaRecorder MediaRecorder_new1(MediaStream * stream, jb_Any * options);
 
-MediaStream MediaRecorder_stream( const MediaRecorder *self);
+MediaStream MediaRecorder_stream(const MediaRecorder *self);
 
-jb_DOMString MediaRecorder_mimeType( const MediaRecorder *self);
+jb_DOMString MediaRecorder_mimeType(const MediaRecorder *self);
 
-RecordingState MediaRecorder_state( const MediaRecorder *self);
+RecordingState MediaRecorder_state(const MediaRecorder *self);
 
-jb_Any MediaRecorder_onstart( const MediaRecorder *self);
+jb_Any MediaRecorder_onstart(const MediaRecorder *self);
 
 void MediaRecorder_set_onstart(MediaRecorder* self, jb_Any * value);
 
-jb_Any MediaRecorder_onstop( const MediaRecorder *self);
+jb_Any MediaRecorder_onstop(const MediaRecorder *self);
 
 void MediaRecorder_set_onstop(MediaRecorder* self, jb_Any * value);
 
-jb_Any MediaRecorder_ondataavailable( const MediaRecorder *self);
+jb_Any MediaRecorder_ondataavailable(const MediaRecorder *self);
 
 void MediaRecorder_set_ondataavailable(MediaRecorder* self, jb_Any * value);
 
-jb_Any MediaRecorder_onpause( const MediaRecorder *self);
+jb_Any MediaRecorder_onpause(const MediaRecorder *self);
 
 void MediaRecorder_set_onpause(MediaRecorder* self, jb_Any * value);
 
-jb_Any MediaRecorder_onresume( const MediaRecorder *self);
+jb_Any MediaRecorder_onresume(const MediaRecorder *self);
 
 void MediaRecorder_set_onresume(MediaRecorder* self, jb_Any * value);
 
-jb_Any MediaRecorder_onerror( const MediaRecorder *self);
+jb_Any MediaRecorder_onerror(const MediaRecorder *self);
 
 void MediaRecorder_set_onerror(MediaRecorder* self, jb_Any * value);
 
-unsigned long MediaRecorder_videoBitsPerSecond( const MediaRecorder *self);
+unsigned long MediaRecorder_videoBitsPerSecond(const MediaRecorder *self);
 
-unsigned long MediaRecorder_audioBitsPerSecond( const MediaRecorder *self);
+unsigned long MediaRecorder_audioBitsPerSecond(const MediaRecorder *self);
 
-BitrateMode MediaRecorder_audioBitrateMode( const MediaRecorder *self);
+BitrateMode MediaRecorder_audioBitrateMode(const MediaRecorder *self);
 
 jb_Undefined MediaRecorder_start0(MediaRecorder* self );
 

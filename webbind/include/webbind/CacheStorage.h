@@ -10,7 +10,7 @@ typedef struct Cache Cache;
 
 DECLARE_EMLITE_TYPE(MultiCacheQueryOptions, em_Val);
 
-jb_DOMString MultiCacheQueryOptions_cacheName( const MultiCacheQueryOptions *self);
+jb_DOMString MultiCacheQueryOptions_cacheName(const MultiCacheQueryOptions *self);
 
 void MultiCacheQueryOptions_set_cacheName(MultiCacheQueryOptions* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(CacheStorage, em_Val);

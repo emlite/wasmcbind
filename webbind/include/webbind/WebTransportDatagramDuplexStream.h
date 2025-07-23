@@ -12,11 +12,11 @@ typedef struct WebTransportSendGroup WebTransportSendGroup;
 
 DECLARE_EMLITE_TYPE(WebTransportSendOptions, em_Val);
 
-WebTransportSendGroup WebTransportSendOptions_sendGroup( const WebTransportSendOptions *self);
+WebTransportSendGroup WebTransportSendOptions_sendGroup(const WebTransportSendOptions *self);
 
 void WebTransportSendOptions_set_sendGroup(WebTransportSendOptions* self, WebTransportSendGroup * value);
 
-long long WebTransportSendOptions_sendOrder( const WebTransportSendOptions *self);
+long long WebTransportSendOptions_sendOrder(const WebTransportSendOptions *self);
 
 void WebTransportSendOptions_set_sendOrder(WebTransportSendOptions* self, long long value);
 DECLARE_EMLITE_TYPE(WebTransportDatagramDuplexStream, em_Val);
@@ -25,22 +25,22 @@ WebTransportDatagramsWritable WebTransportDatagramDuplexStream_createWritable0(W
 
 WebTransportDatagramsWritable WebTransportDatagramDuplexStream_createWritable1(WebTransportDatagramDuplexStream* self , WebTransportSendOptions * options);
 
-ReadableStream WebTransportDatagramDuplexStream_readable( const WebTransportDatagramDuplexStream *self);
+ReadableStream WebTransportDatagramDuplexStream_readable(const WebTransportDatagramDuplexStream *self);
 
-unsigned long WebTransportDatagramDuplexStream_maxDatagramSize( const WebTransportDatagramDuplexStream *self);
+unsigned long WebTransportDatagramDuplexStream_maxDatagramSize(const WebTransportDatagramDuplexStream *self);
 
-double WebTransportDatagramDuplexStream_incomingMaxAge( const WebTransportDatagramDuplexStream *self);
+double WebTransportDatagramDuplexStream_incomingMaxAge(const WebTransportDatagramDuplexStream *self);
 
 void WebTransportDatagramDuplexStream_set_incomingMaxAge(WebTransportDatagramDuplexStream* self, double value);
 
-double WebTransportDatagramDuplexStream_outgoingMaxAge( const WebTransportDatagramDuplexStream *self);
+double WebTransportDatagramDuplexStream_outgoingMaxAge(const WebTransportDatagramDuplexStream *self);
 
 void WebTransportDatagramDuplexStream_set_outgoingMaxAge(WebTransportDatagramDuplexStream* self, double value);
 
-double WebTransportDatagramDuplexStream_incomingHighWaterMark( const WebTransportDatagramDuplexStream *self);
+double WebTransportDatagramDuplexStream_incomingHighWaterMark(const WebTransportDatagramDuplexStream *self);
 
 void WebTransportDatagramDuplexStream_set_incomingHighWaterMark(WebTransportDatagramDuplexStream* self, double value);
 
-double WebTransportDatagramDuplexStream_outgoingHighWaterMark( const WebTransportDatagramDuplexStream *self);
+double WebTransportDatagramDuplexStream_outgoingHighWaterMark(const WebTransportDatagramDuplexStream *self);
 
 void WebTransportDatagramDuplexStream_set_outgoingHighWaterMark(WebTransportDatagramDuplexStream* self, double value);

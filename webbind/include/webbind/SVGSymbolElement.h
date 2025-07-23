@@ -11,6 +11,6 @@ typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
 
 DECLARE_EMLITE_TYPE(SVGSymbolElement, SVGGraphicsElement);
 
-SVGAnimatedRect SVGSymbolElement_viewBox( const SVGSymbolElement *self);
+SVGAnimatedRect SVGSymbolElement_viewBox(const SVGSymbolElement *self);
 
-SVGAnimatedPreserveAspectRatio SVGSymbolElement_preserveAspectRatio( const SVGSymbolElement *self);
+SVGAnimatedPreserveAspectRatio SVGSymbolElement_preserveAspectRatio(const SVGSymbolElement *self);

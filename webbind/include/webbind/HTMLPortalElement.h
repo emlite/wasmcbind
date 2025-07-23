@@ -11,18 +11,18 @@ typedef struct PortalActivateOptions PortalActivateOptions;
 
 DECLARE_EMLITE_TYPE(PortalActivateOptions, em_Val);
 
-jb_Any PortalActivateOptions_data( const PortalActivateOptions *self);
+jb_Any PortalActivateOptions_data(const PortalActivateOptions *self);
 
 void PortalActivateOptions_set_data(PortalActivateOptions* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(HTMLPortalElement, HTMLElement);
 
 HTMLPortalElement HTMLPortalElement_new();
 
-jb_USVString HTMLPortalElement_src( const HTMLPortalElement *self);
+jb_USVString HTMLPortalElement_src(const HTMLPortalElement *self);
 
 void HTMLPortalElement_set_src(HTMLPortalElement* self, jb_USVString * value);
 
-jb_DOMString HTMLPortalElement_referrerPolicy( const HTMLPortalElement *self);
+jb_DOMString HTMLPortalElement_referrerPolicy(const HTMLPortalElement *self);
 
 void HTMLPortalElement_set_referrerPolicy(HTMLPortalElement* self, jb_DOMString * value);
 
@@ -34,10 +34,10 @@ jb_Undefined HTMLPortalElement_postMessage0(HTMLPortalElement* self , jb_Any * m
 
 jb_Undefined HTMLPortalElement_postMessage1(HTMLPortalElement* self , jb_Any * message, StructuredSerializeOptions * options);
 
-jb_Any HTMLPortalElement_onmessage( const HTMLPortalElement *self);
+jb_Any HTMLPortalElement_onmessage(const HTMLPortalElement *self);
 
 void HTMLPortalElement_set_onmessage(HTMLPortalElement* self, jb_Any * value);
 
-jb_Any HTMLPortalElement_onmessageerror( const HTMLPortalElement *self);
+jb_Any HTMLPortalElement_onmessageerror(const HTMLPortalElement *self);
 
 void HTMLPortalElement_set_onmessageerror(HTMLPortalElement* self, jb_Any * value);

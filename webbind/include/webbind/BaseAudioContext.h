@@ -31,26 +31,26 @@ typedef struct WaveShaperNode WaveShaperNode;
 
 DECLARE_EMLITE_TYPE(PeriodicWaveConstraints, em_Val);
 
-bool PeriodicWaveConstraints_disableNormalization( const PeriodicWaveConstraints *self);
+bool PeriodicWaveConstraints_disableNormalization(const PeriodicWaveConstraints *self);
 
 void PeriodicWaveConstraints_set_disableNormalization(PeriodicWaveConstraints* self, bool value);
 DECLARE_EMLITE_TYPE(BaseAudioContext, EventTarget);
 
-AudioDestinationNode BaseAudioContext_destination( const BaseAudioContext *self);
+AudioDestinationNode BaseAudioContext_destination(const BaseAudioContext *self);
 
-float BaseAudioContext_sampleRate( const BaseAudioContext *self);
+float BaseAudioContext_sampleRate(const BaseAudioContext *self);
 
-double BaseAudioContext_currentTime( const BaseAudioContext *self);
+double BaseAudioContext_currentTime(const BaseAudioContext *self);
 
-AudioListener BaseAudioContext_listener( const BaseAudioContext *self);
+AudioListener BaseAudioContext_listener(const BaseAudioContext *self);
 
-AudioContextState BaseAudioContext_state( const BaseAudioContext *self);
+AudioContextState BaseAudioContext_state(const BaseAudioContext *self);
 
-unsigned long BaseAudioContext_renderQuantumSize( const BaseAudioContext *self);
+unsigned long BaseAudioContext_renderQuantumSize(const BaseAudioContext *self);
 
-AudioWorklet BaseAudioContext_audioWorklet( const BaseAudioContext *self);
+AudioWorklet BaseAudioContext_audioWorklet(const BaseAudioContext *self);
 
-jb_Any BaseAudioContext_onstatechange( const BaseAudioContext *self);
+jb_Any BaseAudioContext_onstatechange(const BaseAudioContext *self);
 
 void BaseAudioContext_set_onstatechange(BaseAudioContext* self, jb_Any * value);
 

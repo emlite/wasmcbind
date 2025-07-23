@@ -14,31 +14,31 @@ DECLARE_EMLITE_TYPE(MediaSource, EventTarget);
 
 MediaSource MediaSource_new();
 
-MediaSourceHandle MediaSource_handle( const MediaSource *self);
+MediaSourceHandle MediaSource_handle(const MediaSource *self);
 
-SourceBufferList MediaSource_sourceBuffers( const MediaSource *self);
+SourceBufferList MediaSource_sourceBuffers(const MediaSource *self);
 
-SourceBufferList MediaSource_activeSourceBuffers( const MediaSource *self);
+SourceBufferList MediaSource_activeSourceBuffers(const MediaSource *self);
 
-ReadyState MediaSource_readyState( const MediaSource *self);
+ReadyState MediaSource_readyState(const MediaSource *self);
 
-double MediaSource_duration( const MediaSource *self);
+double MediaSource_duration(const MediaSource *self);
 
 void MediaSource_set_duration(MediaSource* self, double value);
 
-jb_Any MediaSource_onsourceopen( const MediaSource *self);
+jb_Any MediaSource_onsourceopen(const MediaSource *self);
 
 void MediaSource_set_onsourceopen(MediaSource* self, jb_Any * value);
 
-jb_Any MediaSource_onsourceended( const MediaSource *self);
+jb_Any MediaSource_onsourceended(const MediaSource *self);
 
 void MediaSource_set_onsourceended(MediaSource* self, jb_Any * value);
 
-jb_Any MediaSource_onsourceclose( const MediaSource *self);
+jb_Any MediaSource_onsourceclose(const MediaSource *self);
 
 void MediaSource_set_onsourceclose(MediaSource* self, jb_Any * value);
 
-bool MediaSource_canConstructInDedicatedWorker( MediaSource *self);
+bool MediaSource_canConstructInDedicatedWorker(const MediaSource *self);
 
 SourceBuffer MediaSource_addSourceBuffer(MediaSource* self , jb_DOMString * type);
 

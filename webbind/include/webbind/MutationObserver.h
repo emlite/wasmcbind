@@ -11,31 +11,31 @@ typedef struct MutationRecord MutationRecord;
 
 DECLARE_EMLITE_TYPE(MutationObserverInit, em_Val);
 
-bool MutationObserverInit_childList( const MutationObserverInit *self);
+bool MutationObserverInit_childList(const MutationObserverInit *self);
 
 void MutationObserverInit_set_childList(MutationObserverInit* self, bool value);
 
-bool MutationObserverInit_attributes( const MutationObserverInit *self);
+bool MutationObserverInit_attributes(const MutationObserverInit *self);
 
 void MutationObserverInit_set_attributes(MutationObserverInit* self, bool value);
 
-bool MutationObserverInit_characterData( const MutationObserverInit *self);
+bool MutationObserverInit_characterData(const MutationObserverInit *self);
 
 void MutationObserverInit_set_characterData(MutationObserverInit* self, bool value);
 
-bool MutationObserverInit_subtree( const MutationObserverInit *self);
+bool MutationObserverInit_subtree(const MutationObserverInit *self);
 
 void MutationObserverInit_set_subtree(MutationObserverInit* self, bool value);
 
-bool MutationObserverInit_attributeOldValue( const MutationObserverInit *self);
+bool MutationObserverInit_attributeOldValue(const MutationObserverInit *self);
 
 void MutationObserverInit_set_attributeOldValue(MutationObserverInit* self, bool value);
 
-bool MutationObserverInit_characterDataOldValue( const MutationObserverInit *self);
+bool MutationObserverInit_characterDataOldValue(const MutationObserverInit *self);
 
 void MutationObserverInit_set_characterDataOldValue(MutationObserverInit* self, bool value);
 
-jb_Sequence MutationObserverInit_attributeFilter( const MutationObserverInit *self);
+jb_Sequence MutationObserverInit_attributeFilter(const MutationObserverInit *self);
 
 void MutationObserverInit_set_attributeFilter(MutationObserverInit* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(MutationObserver, em_Val);

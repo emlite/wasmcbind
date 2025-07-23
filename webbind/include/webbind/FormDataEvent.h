@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(FormDataEvent, Event);
 
 FormDataEvent FormDataEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-FormData FormDataEvent_formData( const FormDataEvent *self);
+FormData FormDataEvent_formData(const FormDataEvent *self);

@@ -11,19 +11,19 @@ typedef struct WGSLLanguageFeatures WGSLLanguageFeatures;
 
 DECLARE_EMLITE_TYPE(GPURequestAdapterOptions, em_Val);
 
-jb_DOMString GPURequestAdapterOptions_featureLevel( const GPURequestAdapterOptions *self);
+jb_DOMString GPURequestAdapterOptions_featureLevel(const GPURequestAdapterOptions *self);
 
 void GPURequestAdapterOptions_set_featureLevel(GPURequestAdapterOptions* self, jb_DOMString * value);
 
-GPUPowerPreference GPURequestAdapterOptions_powerPreference( const GPURequestAdapterOptions *self);
+GPUPowerPreference GPURequestAdapterOptions_powerPreference(const GPURequestAdapterOptions *self);
 
 void GPURequestAdapterOptions_set_powerPreference(GPURequestAdapterOptions* self, GPUPowerPreference * value);
 
-bool GPURequestAdapterOptions_forceFallbackAdapter( const GPURequestAdapterOptions *self);
+bool GPURequestAdapterOptions_forceFallbackAdapter(const GPURequestAdapterOptions *self);
 
 void GPURequestAdapterOptions_set_forceFallbackAdapter(GPURequestAdapterOptions* self, bool value);
 
-bool GPURequestAdapterOptions_xrCompatible( const GPURequestAdapterOptions *self);
+bool GPURequestAdapterOptions_xrCompatible(const GPURequestAdapterOptions *self);
 
 void GPURequestAdapterOptions_set_xrCompatible(GPURequestAdapterOptions* self, bool value);
 DECLARE_EMLITE_TYPE(GPU, em_Val);
@@ -34,4 +34,4 @@ jb_Promise GPU_requestAdapter1(GPU* self , GPURequestAdapterOptions * options);
 
 GPUTextureFormat GPU_getPreferredCanvasFormat(GPU* self );
 
-WGSLLanguageFeatures GPU_wgslLanguageFeatures( const GPU *self);
+WGSLLanguageFeatures GPU_wgslLanguageFeatures(const GPU *self);

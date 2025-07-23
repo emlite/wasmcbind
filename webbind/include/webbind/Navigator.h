@@ -65,318 +65,318 @@ typedef struct AbortSignal AbortSignal;
 
 DECLARE_EMLITE_TYPE(MediaKeySystemConfiguration, em_Val);
 
-jb_DOMString MediaKeySystemConfiguration_label( const MediaKeySystemConfiguration *self);
+jb_DOMString MediaKeySystemConfiguration_label(const MediaKeySystemConfiguration *self);
 
 void MediaKeySystemConfiguration_set_label(MediaKeySystemConfiguration* self, jb_DOMString * value);
 
-jb_Sequence MediaKeySystemConfiguration_initDataTypes( const MediaKeySystemConfiguration *self);
+jb_Sequence MediaKeySystemConfiguration_initDataTypes(const MediaKeySystemConfiguration *self);
 
 void MediaKeySystemConfiguration_set_initDataTypes(MediaKeySystemConfiguration* self, jb_Sequence * value);
 
-jb_Sequence MediaKeySystemConfiguration_audioCapabilities( const MediaKeySystemConfiguration *self);
+jb_Sequence MediaKeySystemConfiguration_audioCapabilities(const MediaKeySystemConfiguration *self);
 
 void MediaKeySystemConfiguration_set_audioCapabilities(MediaKeySystemConfiguration* self, jb_Sequence * value);
 
-jb_Sequence MediaKeySystemConfiguration_videoCapabilities( const MediaKeySystemConfiguration *self);
+jb_Sequence MediaKeySystemConfiguration_videoCapabilities(const MediaKeySystemConfiguration *self);
 
 void MediaKeySystemConfiguration_set_videoCapabilities(MediaKeySystemConfiguration* self, jb_Sequence * value);
 
-MediaKeysRequirement MediaKeySystemConfiguration_distinctiveIdentifier( const MediaKeySystemConfiguration *self);
+MediaKeysRequirement MediaKeySystemConfiguration_distinctiveIdentifier(const MediaKeySystemConfiguration *self);
 
 void MediaKeySystemConfiguration_set_distinctiveIdentifier(MediaKeySystemConfiguration* self, MediaKeysRequirement * value);
 
-MediaKeysRequirement MediaKeySystemConfiguration_persistentState( const MediaKeySystemConfiguration *self);
+MediaKeysRequirement MediaKeySystemConfiguration_persistentState(const MediaKeySystemConfiguration *self);
 
 void MediaKeySystemConfiguration_set_persistentState(MediaKeySystemConfiguration* self, MediaKeysRequirement * value);
 
-jb_Sequence MediaKeySystemConfiguration_sessionTypes( const MediaKeySystemConfiguration *self);
+jb_Sequence MediaKeySystemConfiguration_sessionTypes(const MediaKeySystemConfiguration *self);
 
 void MediaKeySystemConfiguration_set_sessionTypes(MediaKeySystemConfiguration* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(RelatedApplication, em_Val);
 
-jb_USVString RelatedApplication_platform( const RelatedApplication *self);
+jb_USVString RelatedApplication_platform(const RelatedApplication *self);
 
 void RelatedApplication_set_platform(RelatedApplication* self, jb_USVString * value);
 
-jb_USVString RelatedApplication_url( const RelatedApplication *self);
+jb_USVString RelatedApplication_url(const RelatedApplication *self);
 
 void RelatedApplication_set_url(RelatedApplication* self, jb_USVString * value);
 
-jb_DOMString RelatedApplication_id( const RelatedApplication *self);
+jb_DOMString RelatedApplication_id(const RelatedApplication *self);
 
 void RelatedApplication_set_id(RelatedApplication* self, jb_DOMString * value);
 
-jb_USVString RelatedApplication_version( const RelatedApplication *self);
+jb_USVString RelatedApplication_version(const RelatedApplication *self);
 
 void RelatedApplication_set_version(RelatedApplication* self, jb_USVString * value);
 DECLARE_EMLITE_TYPE(HandwritingRecognizerQueryResult, em_Val);
 
-bool HandwritingRecognizerQueryResult_textAlternatives( const HandwritingRecognizerQueryResult *self);
+bool HandwritingRecognizerQueryResult_textAlternatives(const HandwritingRecognizerQueryResult *self);
 
 void HandwritingRecognizerQueryResult_set_textAlternatives(HandwritingRecognizerQueryResult* self, bool value);
 
-bool HandwritingRecognizerQueryResult_textSegmentation( const HandwritingRecognizerQueryResult *self);
+bool HandwritingRecognizerQueryResult_textSegmentation(const HandwritingRecognizerQueryResult *self);
 
 void HandwritingRecognizerQueryResult_set_textSegmentation(HandwritingRecognizerQueryResult* self, bool value);
 
-jb_Any HandwritingRecognizerQueryResult_hints( const HandwritingRecognizerQueryResult *self);
+jb_Any HandwritingRecognizerQueryResult_hints(const HandwritingRecognizerQueryResult *self);
 
 void HandwritingRecognizerQueryResult_set_hints(HandwritingRecognizerQueryResult* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(HandwritingModelConstraint, em_Val);
 
-jb_Sequence HandwritingModelConstraint_languages( const HandwritingModelConstraint *self);
+jb_Sequence HandwritingModelConstraint_languages(const HandwritingModelConstraint *self);
 
 void HandwritingModelConstraint_set_languages(HandwritingModelConstraint* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(AuctionAdInterestGroup, em_Val);
 
-double AuctionAdInterestGroup_priority( const AuctionAdInterestGroup *self);
+double AuctionAdInterestGroup_priority(const AuctionAdInterestGroup *self);
 
 void AuctionAdInterestGroup_set_priority(AuctionAdInterestGroup* self, double value);
 
-jb_Record AuctionAdInterestGroup_prioritySignalsOverrides( const AuctionAdInterestGroup *self);
+jb_Record AuctionAdInterestGroup_prioritySignalsOverrides(const AuctionAdInterestGroup *self);
 
 void AuctionAdInterestGroup_set_prioritySignalsOverrides(AuctionAdInterestGroup* self, jb_Record * value);
 
-double AuctionAdInterestGroup_lifetimeMs( const AuctionAdInterestGroup *self);
+double AuctionAdInterestGroup_lifetimeMs(const AuctionAdInterestGroup *self);
 
 void AuctionAdInterestGroup_set_lifetimeMs(AuctionAdInterestGroup* self, double value);
 
-jb_DOMString AuctionAdInterestGroup_additionalBidKey( const AuctionAdInterestGroup *self);
+jb_DOMString AuctionAdInterestGroup_additionalBidKey(const AuctionAdInterestGroup *self);
 
 void AuctionAdInterestGroup_set_additionalBidKey(AuctionAdInterestGroup* self, jb_DOMString * value);
 
-jb_Any AuctionAdInterestGroup_privateAggregationConfig( const AuctionAdInterestGroup *self);
+jb_Any AuctionAdInterestGroup_privateAggregationConfig(const AuctionAdInterestGroup *self);
 
 void AuctionAdInterestGroup_set_privateAggregationConfig(AuctionAdInterestGroup* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(AuctionAdInterestGroupKey, em_Val);
 
-jb_USVString AuctionAdInterestGroupKey_owner( const AuctionAdInterestGroupKey *self);
+jb_USVString AuctionAdInterestGroupKey_owner(const AuctionAdInterestGroupKey *self);
 
 void AuctionAdInterestGroupKey_set_owner(AuctionAdInterestGroupKey* self, jb_USVString * value);
 
-jb_USVString AuctionAdInterestGroupKey_name( const AuctionAdInterestGroupKey *self);
+jb_USVString AuctionAdInterestGroupKey_name(const AuctionAdInterestGroupKey *self);
 
 void AuctionAdInterestGroupKey_set_name(AuctionAdInterestGroupKey* self, jb_USVString * value);
 DECLARE_EMLITE_TYPE(AuctionAdConfig, em_Val);
 
-jb_USVString AuctionAdConfig_seller( const AuctionAdConfig *self);
+jb_USVString AuctionAdConfig_seller(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_seller(AuctionAdConfig* self, jb_USVString * value);
 
-jb_USVString AuctionAdConfig_decisionLogicURL( const AuctionAdConfig *self);
+jb_USVString AuctionAdConfig_decisionLogicURL(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_decisionLogicURL(AuctionAdConfig* self, jb_USVString * value);
 
-jb_USVString AuctionAdConfig_trustedScoringSignalsURL( const AuctionAdConfig *self);
+jb_USVString AuctionAdConfig_trustedScoringSignalsURL(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_trustedScoringSignalsURL(AuctionAdConfig* self, jb_USVString * value);
 
-long AuctionAdConfig_maxTrustedScoringSignalsURLLength( const AuctionAdConfig *self);
+long AuctionAdConfig_maxTrustedScoringSignalsURLLength(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_maxTrustedScoringSignalsURLLength(AuctionAdConfig* self, long value);
 
-jb_USVString AuctionAdConfig_trustedScoringSignalsCoordinator( const AuctionAdConfig *self);
+jb_USVString AuctionAdConfig_trustedScoringSignalsCoordinator(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_trustedScoringSignalsCoordinator(AuctionAdConfig* self, jb_USVString * value);
 
-bool AuctionAdConfig_sendCreativeScanningMetadata( const AuctionAdConfig *self);
+bool AuctionAdConfig_sendCreativeScanningMetadata(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_sendCreativeScanningMetadata(AuctionAdConfig* self, bool value);
 
-jb_Sequence AuctionAdConfig_interestGroupBuyers( const AuctionAdConfig *self);
+jb_Sequence AuctionAdConfig_interestGroupBuyers(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_interestGroupBuyers(AuctionAdConfig* self, jb_Sequence * value);
 
-jb_Promise AuctionAdConfig_auctionSignals( const AuctionAdConfig *self);
+jb_Promise AuctionAdConfig_auctionSignals(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_auctionSignals(AuctionAdConfig* self, jb_Promise * value);
 
-jb_Promise AuctionAdConfig_sellerSignals( const AuctionAdConfig *self);
+jb_Promise AuctionAdConfig_sellerSignals(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_sellerSignals(AuctionAdConfig* self, jb_Promise * value);
 
-jb_Promise AuctionAdConfig_directFromSellerSignalsHeaderAdSlot( const AuctionAdConfig *self);
+jb_Promise AuctionAdConfig_directFromSellerSignalsHeaderAdSlot(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_directFromSellerSignalsHeaderAdSlot(AuctionAdConfig* self, jb_Promise * value);
 
-jb_Promise AuctionAdConfig_deprecatedRenderURLReplacements( const AuctionAdConfig *self);
+jb_Promise AuctionAdConfig_deprecatedRenderURLReplacements(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_deprecatedRenderURLReplacements(AuctionAdConfig* self, jb_Promise * value);
 
-long long AuctionAdConfig_sellerTimeout( const AuctionAdConfig *self);
+long long AuctionAdConfig_sellerTimeout(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_sellerTimeout(AuctionAdConfig* self, long long value);
 
-unsigned short AuctionAdConfig_sellerExperimentGroupId( const AuctionAdConfig *self);
+unsigned short AuctionAdConfig_sellerExperimentGroupId(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_sellerExperimentGroupId(AuctionAdConfig* self, unsigned short value);
 
-jb_Promise AuctionAdConfig_perBuyerSignals( const AuctionAdConfig *self);
+jb_Promise AuctionAdConfig_perBuyerSignals(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_perBuyerSignals(AuctionAdConfig* self, jb_Promise * value);
 
-jb_Promise AuctionAdConfig_perBuyerTimeouts( const AuctionAdConfig *self);
+jb_Promise AuctionAdConfig_perBuyerTimeouts(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_perBuyerTimeouts(AuctionAdConfig* self, jb_Promise * value);
 
-jb_Promise AuctionAdConfig_perBuyerCumulativeTimeouts( const AuctionAdConfig *self);
+jb_Promise AuctionAdConfig_perBuyerCumulativeTimeouts(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_perBuyerCumulativeTimeouts(AuctionAdConfig* self, jb_Promise * value);
 
-long long AuctionAdConfig_reportingTimeout( const AuctionAdConfig *self);
+long long AuctionAdConfig_reportingTimeout(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_reportingTimeout(AuctionAdConfig* self, long long value);
 
-jb_USVString AuctionAdConfig_sellerCurrency( const AuctionAdConfig *self);
+jb_USVString AuctionAdConfig_sellerCurrency(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_sellerCurrency(AuctionAdConfig* self, jb_USVString * value);
 
-jb_Promise AuctionAdConfig_perBuyerCurrencies( const AuctionAdConfig *self);
+jb_Promise AuctionAdConfig_perBuyerCurrencies(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_perBuyerCurrencies(AuctionAdConfig* self, jb_Promise * value);
 
-jb_Record AuctionAdConfig_perBuyerMultiBidLimits( const AuctionAdConfig *self);
+jb_Record AuctionAdConfig_perBuyerMultiBidLimits(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_perBuyerMultiBidLimits(AuctionAdConfig* self, jb_Record * value);
 
-jb_Record AuctionAdConfig_perBuyerGroupLimits( const AuctionAdConfig *self);
+jb_Record AuctionAdConfig_perBuyerGroupLimits(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_perBuyerGroupLimits(AuctionAdConfig* self, jb_Record * value);
 
-jb_Record AuctionAdConfig_perBuyerExperimentGroupIds( const AuctionAdConfig *self);
+jb_Record AuctionAdConfig_perBuyerExperimentGroupIds(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_perBuyerExperimentGroupIds(AuctionAdConfig* self, jb_Record * value);
 
-jb_Record AuctionAdConfig_perBuyerPrioritySignals( const AuctionAdConfig *self);
+jb_Record AuctionAdConfig_perBuyerPrioritySignals(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_perBuyerPrioritySignals(AuctionAdConfig* self, jb_Record * value);
 
-jb_Sequence AuctionAdConfig_auctionReportBuyerKeys( const AuctionAdConfig *self);
+jb_Sequence AuctionAdConfig_auctionReportBuyerKeys(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_auctionReportBuyerKeys(AuctionAdConfig* self, jb_Sequence * value);
 
-jb_Record AuctionAdConfig_auctionReportBuyers( const AuctionAdConfig *self);
+jb_Record AuctionAdConfig_auctionReportBuyers(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_auctionReportBuyers(AuctionAdConfig* self, jb_Record * value);
 
-jb_Any AuctionAdConfig_auctionReportBuyerDebugModeConfig( const AuctionAdConfig *self);
+jb_Any AuctionAdConfig_auctionReportBuyerDebugModeConfig(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_auctionReportBuyerDebugModeConfig(AuctionAdConfig* self, jb_Any * value);
 
-jb_Sequence AuctionAdConfig_requiredSellerCapabilities( const AuctionAdConfig *self);
+jb_Sequence AuctionAdConfig_requiredSellerCapabilities(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_requiredSellerCapabilities(AuctionAdConfig* self, jb_Sequence * value);
 
-jb_Any AuctionAdConfig_privateAggregationConfig( const AuctionAdConfig *self);
+jb_Any AuctionAdConfig_privateAggregationConfig(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_privateAggregationConfig(AuctionAdConfig* self, jb_Any * value);
 
-jb_Record AuctionAdConfig_requestedSize( const AuctionAdConfig *self);
+jb_Record AuctionAdConfig_requestedSize(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_requestedSize(AuctionAdConfig* self, jb_Record * value);
 
-jb_Sequence AuctionAdConfig_allSlotsRequestedSizes( const AuctionAdConfig *self);
+jb_Sequence AuctionAdConfig_allSlotsRequestedSizes(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_allSlotsRequestedSizes(AuctionAdConfig* self, jb_Sequence * value);
 
-jb_Promise AuctionAdConfig_additionalBids( const AuctionAdConfig *self);
+jb_Promise AuctionAdConfig_additionalBids(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_additionalBids(AuctionAdConfig* self, jb_Promise * value);
 
-jb_DOMString AuctionAdConfig_auctionNonce( const AuctionAdConfig *self);
+jb_DOMString AuctionAdConfig_auctionNonce(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_auctionNonce(AuctionAdConfig* self, jb_DOMString * value);
 
-jb_Any AuctionAdConfig_sellerRealTimeReportingConfig( const AuctionAdConfig *self);
+jb_Any AuctionAdConfig_sellerRealTimeReportingConfig(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_sellerRealTimeReportingConfig(AuctionAdConfig* self, jb_Any * value);
 
-jb_Record AuctionAdConfig_perBuyerRealTimeReportingConfig( const AuctionAdConfig *self);
+jb_Record AuctionAdConfig_perBuyerRealTimeReportingConfig(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_perBuyerRealTimeReportingConfig(AuctionAdConfig* self, jb_Record * value);
 
-jb_Sequence AuctionAdConfig_componentAuctions( const AuctionAdConfig *self);
+jb_Sequence AuctionAdConfig_componentAuctions(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_componentAuctions(AuctionAdConfig* self, jb_Sequence * value);
 
-AbortSignal AuctionAdConfig_signal( const AuctionAdConfig *self);
+AbortSignal AuctionAdConfig_signal(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_signal(AuctionAdConfig* self, AbortSignal * value);
 
-jb_Promise AuctionAdConfig_resolveToConfig( const AuctionAdConfig *self);
+jb_Promise AuctionAdConfig_resolveToConfig(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_resolveToConfig(AuctionAdConfig* self, jb_Promise * value);
 
-jb_Promise AuctionAdConfig_serverResponse( const AuctionAdConfig *self);
+jb_Promise AuctionAdConfig_serverResponse(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_serverResponse(AuctionAdConfig* self, jb_Promise * value);
 
-jb_USVString AuctionAdConfig_requestId( const AuctionAdConfig *self);
+jb_USVString AuctionAdConfig_requestId(const AuctionAdConfig *self);
 
 void AuctionAdConfig_set_requestId(AuctionAdConfig* self, jb_USVString * value);
 DECLARE_EMLITE_TYPE(AdAuctionData, em_Val);
 
-jb_USVString AdAuctionData_requestId( const AdAuctionData *self);
+jb_USVString AdAuctionData_requestId(const AdAuctionData *self);
 
 void AdAuctionData_set_requestId(AdAuctionData* self, jb_USVString * value);
 
-jb_Uint8Array AdAuctionData_request( const AdAuctionData *self);
+jb_Uint8Array AdAuctionData_request(const AdAuctionData *self);
 
 void AdAuctionData_set_request(AdAuctionData* self, jb_Uint8Array * value);
 
-jb_Sequence AdAuctionData_requests( const AdAuctionData *self);
+jb_Sequence AdAuctionData_requests(const AdAuctionData *self);
 
 void AdAuctionData_set_requests(AdAuctionData* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(AdAuctionDataConfig, em_Val);
 
-jb_USVString AdAuctionDataConfig_seller( const AdAuctionDataConfig *self);
+jb_USVString AdAuctionDataConfig_seller(const AdAuctionDataConfig *self);
 
 void AdAuctionDataConfig_set_seller(AdAuctionDataConfig* self, jb_USVString * value);
 
-jb_USVString AdAuctionDataConfig_coordinatorOrigin( const AdAuctionDataConfig *self);
+jb_USVString AdAuctionDataConfig_coordinatorOrigin(const AdAuctionDataConfig *self);
 
 void AdAuctionDataConfig_set_coordinatorOrigin(AdAuctionDataConfig* self, jb_USVString * value);
 
-jb_Sequence AdAuctionDataConfig_sellers( const AdAuctionDataConfig *self);
+jb_Sequence AdAuctionDataConfig_sellers(const AdAuctionDataConfig *self);
 
 void AdAuctionDataConfig_set_sellers(AdAuctionDataConfig* self, jb_Sequence * value);
 
-unsigned long AdAuctionDataConfig_requestSize( const AdAuctionDataConfig *self);
+unsigned long AdAuctionDataConfig_requestSize(const AdAuctionDataConfig *self);
 
 void AdAuctionDataConfig_set_requestSize(AdAuctionDataConfig* self, unsigned long value);
 
-jb_Record AdAuctionDataConfig_perBuyerConfig( const AdAuctionDataConfig *self);
+jb_Record AdAuctionDataConfig_perBuyerConfig(const AdAuctionDataConfig *self);
 
 void AdAuctionDataConfig_set_perBuyerConfig(AdAuctionDataConfig* self, jb_Record * value);
 DECLARE_EMLITE_TYPE(ShareData, em_Val);
 
-jb_Sequence ShareData_files( const ShareData *self);
+jb_Sequence ShareData_files(const ShareData *self);
 
 void ShareData_set_files(ShareData* self, jb_Sequence * value);
 
-jb_USVString ShareData_title( const ShareData *self);
+jb_USVString ShareData_title(const ShareData *self);
 
 void ShareData_set_title(ShareData* self, jb_USVString * value);
 
-jb_USVString ShareData_text( const ShareData *self);
+jb_USVString ShareData_text(const ShareData *self);
 
 void ShareData_set_text(ShareData* self, jb_USVString * value);
 
-jb_USVString ShareData_url( const ShareData *self);
+jb_USVString ShareData_url(const ShareData *self);
 
 void ShareData_set_url(ShareData* self, jb_USVString * value);
 DECLARE_EMLITE_TYPE(MIDIOptions, em_Val);
 
-bool MIDIOptions_sysex( const MIDIOptions *self);
+bool MIDIOptions_sysex(const MIDIOptions *self);
 
 void MIDIOptions_set_sysex(MIDIOptions* self, bool value);
 
-bool MIDIOptions_software( const MIDIOptions *self);
+bool MIDIOptions_software(const MIDIOptions *self);
 
 void MIDIOptions_set_software(MIDIOptions* self, bool value);
 DECLARE_EMLITE_TYPE(Navigator, em_Val);
 
-AudioSession Navigator_audioSession( const Navigator *self);
+AudioSession Navigator_audioSession(const Navigator *self);
 
 AutoplayPolicy Navigator_getAutoplayPolicy(Navigator* self , AudioContext * context);
 
@@ -386,13 +386,13 @@ bool Navigator_sendBeacon0(Navigator* self , jb_USVString * url);
 
 bool Navigator_sendBeacon1(Navigator* self , jb_USVString * url, jb_Any * data);
 
-Clipboard Navigator_clipboard( const Navigator *self);
+Clipboard Navigator_clipboard(const Navigator *self);
 
-ContactsManager Navigator_contacts( const Navigator *self);
+ContactsManager Navigator_contacts(const Navigator *self);
 
-CredentialsContainer Navigator_credentials( const Navigator *self);
+CredentialsContainer Navigator_credentials(const Navigator *self);
 
-DevicePosture Navigator_devicePosture( const Navigator *self);
+DevicePosture Navigator_devicePosture(const Navigator *self);
 
 jb_Promise Navigator_requestMediaKeySystemAccess(Navigator* self , jb_DOMString * keySystem, jb_Sequence * supportedConfigurations);
 
@@ -406,7 +406,7 @@ jb_Sequence Navigator_adAuctionComponents(Navigator* self , unsigned short numAd
 
 jb_Sequence Navigator_getGamepads(Navigator* self );
 
-Geolocation Navigator_geolocation( const Navigator *self);
+Geolocation Navigator_geolocation(const Navigator *self);
 
 jb_Promise Navigator_getInstalledRelatedApps(Navigator* self );
 
@@ -414,39 +414,39 @@ jb_Promise Navigator_queryHandwritingRecognizer(Navigator* self , HandwritingMod
 
 jb_Promise Navigator_createHandwritingRecognizer(Navigator* self , HandwritingModelConstraint * constraint);
 
-UserActivation Navigator_userActivation( const Navigator *self);
+UserActivation Navigator_userActivation(const Navigator *self);
 
-Ink Navigator_ink( const Navigator *self);
+Ink Navigator_ink(const Navigator *self);
 
-Scheduling Navigator_scheduling( const Navigator *self);
+Scheduling Navigator_scheduling(const Navigator *self);
 
-Keyboard Navigator_keyboard( const Navigator *self);
+Keyboard Navigator_keyboard(const Navigator *self);
 
-NavigatorLogin Navigator_login( const Navigator *self);
+NavigatorLogin Navigator_login(const Navigator *self);
 
-NavigatorManagedData Navigator_managed( const Navigator *self);
+NavigatorManagedData Navigator_managed(const Navigator *self);
 
-MediaCapabilities Navigator_mediaCapabilities( const Navigator *self);
+MediaCapabilities Navigator_mediaCapabilities(const Navigator *self);
 
-MediaDevices Navigator_mediaDevices( const Navigator *self);
+MediaDevices Navigator_mediaDevices(const Navigator *self);
 
-PreferenceManager Navigator_preferences( const Navigator *self);
+PreferenceManager Navigator_preferences(const Navigator *self);
 
-MediaSession Navigator_mediaSession( const Navigator *self);
+MediaSession Navigator_mediaSession(const Navigator *self);
 
-Permissions Navigator_permissions( const Navigator *self);
+Permissions Navigator_permissions(const Navigator *self);
 
-long Navigator_maxTouchPoints( const Navigator *self);
+long Navigator_maxTouchPoints(const Navigator *self);
 
-Presentation Navigator_presentation( const Navigator *self);
+Presentation Navigator_presentation(const Navigator *self);
 
-Attribution Navigator_attribution( const Navigator *self);
+Attribution Navigator_attribution(const Navigator *self);
 
-WakeLock Navigator_wakeLock( const Navigator *self);
+WakeLock Navigator_wakeLock(const Navigator *self);
 
-Serial Navigator_serial( const Navigator *self);
+Serial Navigator_serial(const Navigator *self);
 
-ServiceWorkerContainer Navigator_serviceWorker( const Navigator *self);
+ServiceWorkerContainer Navigator_serviceWorker(const Navigator *self);
 
 jb_Promise Navigator_joinAdInterestGroup(Navigator* self , AuctionAdInterestGroup * group);
 
@@ -460,7 +460,7 @@ jb_Promise Navigator_clearOriginJoinedAdInterestGroups1(Navigator* self , jb_USV
 
 jb_Promise Navigator_runAdAuction(Navigator* self , AuctionAdConfig * config);
 
-bool Navigator_deprecatedRunAdAuctionEnforcesKAnonymity( const Navigator *self);
+bool Navigator_deprecatedRunAdAuctionEnforcesKAnonymity(const Navigator *self);
 
 bool Navigator_canLoadAdAuctionFencedFrame(Navigator* self );
 
@@ -472,13 +472,13 @@ jb_Promise Navigator_createAuctionNonce(Navigator* self );
 
 jb_Undefined Navigator_updateAdInterestGroups(Navigator* self );
 
-ProtectedAudience Navigator_protectedAudience( const Navigator *self);
+ProtectedAudience Navigator_protectedAudience(const Navigator *self);
 
 bool Navigator_vibrate(Navigator* self , jb_Any * pattern);
 
-VirtualKeyboard Navigator_virtualKeyboard( const Navigator *self);
+VirtualKeyboard Navigator_virtualKeyboard(const Navigator *self);
 
-Bluetooth Navigator_bluetooth( const Navigator *self);
+Bluetooth Navigator_bluetooth(const Navigator *self);
 
 jb_Promise Navigator_share0(Navigator* self );
 
@@ -488,17 +488,17 @@ bool Navigator_canShare0(Navigator* self );
 
 bool Navigator_canShare1(Navigator* self , ShareData * data);
 
-HID Navigator_hid( const Navigator *self);
+HID Navigator_hid(const Navigator *self);
 
 jb_Promise Navigator_requestMIDIAccess0(Navigator* self );
 
 jb_Promise Navigator_requestMIDIAccess1(Navigator* self , MIDIOptions * options);
 
-USB Navigator_usb( const Navigator *self);
+USB Navigator_usb(const Navigator *self);
 
-XRSystem Navigator_xr( const Navigator *self);
+XRSystem Navigator_xr(const Navigator *self);
 
-WindowControlsOverlay Navigator_windowControlsOverlay( const Navigator *self);
+WindowControlsOverlay Navigator_windowControlsOverlay(const Navigator *self);
 
 jb_Promise Navigator_setAppBadge0(Navigator* self );
 
@@ -506,48 +506,48 @@ jb_Promise Navigator_setAppBadge1(Navigator* self , long long contents);
 
 jb_Promise Navigator_clearAppBadge(Navigator* self );
 
-double Navigator_deviceMemory( const Navigator *self);
+double Navigator_deviceMemory(const Navigator *self);
 
-bool Navigator_globalPrivacyControl( const Navigator *self);
+bool Navigator_globalPrivacyControl(const Navigator *self);
 
 bool Navigator_taintEnabled(Navigator* self );
 
-jb_DOMString Navigator_oscpu( const Navigator *self);
+jb_DOMString Navigator_oscpu(const Navigator *self);
 
-jb_DOMString Navigator_language( const Navigator *self);
+jb_DOMString Navigator_language(const Navigator *self);
 
-jb_FrozenArray Navigator_languages( const Navigator *self);
+jb_FrozenArray Navigator_languages(const Navigator *self);
 
-bool Navigator_onLine( const Navigator *self);
+bool Navigator_onLine(const Navigator *self);
 
 jb_Undefined Navigator_registerProtocolHandler(Navigator* self , jb_DOMString * scheme, jb_USVString * url);
 
 jb_Undefined Navigator_unregisterProtocolHandler(Navigator* self , jb_DOMString * scheme, jb_USVString * url);
 
-bool Navigator_cookieEnabled( const Navigator *self);
+bool Navigator_cookieEnabled(const Navigator *self);
 
-PluginArray Navigator_plugins( const Navigator *self);
+PluginArray Navigator_plugins(const Navigator *self);
 
-MimeTypeArray Navigator_mimeTypes( const Navigator *self);
+MimeTypeArray Navigator_mimeTypes(const Navigator *self);
 
 bool Navigator_javaEnabled(Navigator* self );
 
-bool Navigator_pdfViewerEnabled( const Navigator *self);
+bool Navigator_pdfViewerEnabled(const Navigator *self);
 
-long long Navigator_hardwareConcurrency( const Navigator *self);
+long long Navigator_hardwareConcurrency(const Navigator *self);
 
-NetworkInformation Navigator_connection( const Navigator *self);
+NetworkInformation Navigator_connection(const Navigator *self);
 
-StorageBucketManager Navigator_storageBuckets( const Navigator *self);
+StorageBucketManager Navigator_storageBuckets(const Navigator *self);
 
-StorageManager Navigator_storage( const Navigator *self);
+StorageManager Navigator_storage(const Navigator *self);
 
-NavigatorUAData Navigator_userAgentData( const Navigator *self);
+NavigatorUAData Navigator_userAgentData(const Navigator *self);
 
-LockManager Navigator_locks( const Navigator *self);
+LockManager Navigator_locks(const Navigator *self);
 
-bool Navigator_webdriver( const Navigator *self);
+bool Navigator_webdriver(const Navigator *self);
 
-GPU Navigator_gpu( const Navigator *self);
+GPU Navigator_gpu(const Navigator *self);
 
-ML Navigator_ml( const Navigator *self);
+ML Navigator_ml(const Navigator *self);

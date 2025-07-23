@@ -1,11 +1,10 @@
 import fs from "fs/promises";
 import path from "path";
 import { OUT_INC, OUT_SRC } from "./utils.js";
+import { IGNOREDFILES } from "./ignored.js";
 
 const reHeaderLine =
   /^\s*(#|typedef\s+(?:struct|enum|union)\s+\w+\s+\*?\s*\w+\s*;)/; // for preprocessor directives and forward decls
-
-const ignore = new Set(["window.c", "window.h", ".clangd", "webbind.h"]);
 
 async function* walk(dir) {
   for (const dirent of await fs.readdir(dir, { withFileTypes: true })) {
@@ -20,7 +19,7 @@ export async function clean() {
 
   for (let dir of targetDirs) {
     for await (const file of walk(dir)) {
-      if (ignore.has(path.basename(file))) continue;
+      if (IGNOREDFILES.has(path.basename(file))) continue;
       let text;
       try {
         text = await fs.readFile(file, "utf8");

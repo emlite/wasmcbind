@@ -11,6 +11,6 @@ USBOutTransferResult USBOutTransferResult_new0(USBTransferStatus * status);
 
 USBOutTransferResult USBOutTransferResult_new1(USBTransferStatus * status, unsigned long bytesWritten);
 
-unsigned long USBOutTransferResult_bytesWritten( const USBOutTransferResult *self);
+unsigned long USBOutTransferResult_bytesWritten(const USBOutTransferResult *self);
 
-USBTransferStatus USBOutTransferResult_status( const USBOutTransferResult *self);
+USBTransferStatus USBOutTransferResult_status(const USBOutTransferResult *self);

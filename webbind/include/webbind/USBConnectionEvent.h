@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(USBConnectionEvent, Event);
 
 USBConnectionEvent USBConnectionEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-USBDevice USBConnectionEvent_device( const USBConnectionEvent *self);
+USBDevice USBConnectionEvent_device(const USBConnectionEvent *self);

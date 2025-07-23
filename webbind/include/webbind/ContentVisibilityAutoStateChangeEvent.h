@@ -12,4 +12,4 @@ ContentVisibilityAutoStateChangeEvent ContentVisibilityAutoStateChangeEvent_new0
 
 ContentVisibilityAutoStateChangeEvent ContentVisibilityAutoStateChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-bool ContentVisibilityAutoStateChangeEvent_skipped( const ContentVisibilityAutoStateChangeEvent *self);
+bool ContentVisibilityAutoStateChangeEvent_skipped(const ContentVisibilityAutoStateChangeEvent *self);

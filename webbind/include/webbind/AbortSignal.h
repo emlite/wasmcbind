@@ -16,12 +16,12 @@ AbortSignal AbortSignal_timeout(AbortSignal* self , long long milliseconds);
 
 AbortSignal AbortSignal_any(AbortSignal* self , jb_Sequence * signals);
 
-bool AbortSignal_aborted( const AbortSignal *self);
+bool AbortSignal_aborted(const AbortSignal *self);
 
-jb_Any AbortSignal_reason( const AbortSignal *self);
+jb_Any AbortSignal_reason(const AbortSignal *self);
 
 jb_Undefined AbortSignal_throwIfAborted(AbortSignal* self );
 
-jb_Any AbortSignal_onabort( const AbortSignal *self);
+jb_Any AbortSignal_onabort(const AbortSignal *self);
 
 void AbortSignal_set_onabort(AbortSignal* self, jb_Any * value);

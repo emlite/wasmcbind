@@ -14,9 +14,9 @@ typedef struct DOMRect DOMRect;
 
 DECLARE_EMLITE_TYPE(SVGTextContentElement, SVGGraphicsElement);
 
-SVGAnimatedLength SVGTextContentElement_textLength( const SVGTextContentElement *self);
+SVGAnimatedLength SVGTextContentElement_textLength(const SVGTextContentElement *self);
 
-SVGAnimatedEnumeration SVGTextContentElement_lengthAdjust( const SVGTextContentElement *self);
+SVGAnimatedEnumeration SVGTextContentElement_lengthAdjust(const SVGTextContentElement *self);
 
 long SVGTextContentElement_getNumberOfChars(SVGTextContentElement* self );
 

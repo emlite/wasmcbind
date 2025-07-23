@@ -12,4 +12,4 @@ TrackEvent TrackEvent_new0(jb_DOMString * type);
 
 TrackEvent TrackEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_Any TrackEvent_track( const TrackEvent *self);
+jb_Any TrackEvent_track(const TrackEvent *self);

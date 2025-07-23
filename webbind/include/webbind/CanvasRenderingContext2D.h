@@ -19,37 +19,37 @@ typedef struct ImageDataSettings ImageDataSettings;
 
 DECLARE_EMLITE_TYPE(CanvasRenderingContext2DSettings, em_Val);
 
-bool CanvasRenderingContext2DSettings_alpha( const CanvasRenderingContext2DSettings *self);
+bool CanvasRenderingContext2DSettings_alpha(const CanvasRenderingContext2DSettings *self);
 
 void CanvasRenderingContext2DSettings_set_alpha(CanvasRenderingContext2DSettings* self, bool value);
 
-bool CanvasRenderingContext2DSettings_desynchronized( const CanvasRenderingContext2DSettings *self);
+bool CanvasRenderingContext2DSettings_desynchronized(const CanvasRenderingContext2DSettings *self);
 
 void CanvasRenderingContext2DSettings_set_desynchronized(CanvasRenderingContext2DSettings* self, bool value);
 
-PredefinedColorSpace CanvasRenderingContext2DSettings_colorSpace( const CanvasRenderingContext2DSettings *self);
+PredefinedColorSpace CanvasRenderingContext2DSettings_colorSpace(const CanvasRenderingContext2DSettings *self);
 
 void CanvasRenderingContext2DSettings_set_colorSpace(CanvasRenderingContext2DSettings* self, PredefinedColorSpace * value);
 
-CanvasColorType CanvasRenderingContext2DSettings_colorType( const CanvasRenderingContext2DSettings *self);
+CanvasColorType CanvasRenderingContext2DSettings_colorType(const CanvasRenderingContext2DSettings *self);
 
 void CanvasRenderingContext2DSettings_set_colorType(CanvasRenderingContext2DSettings* self, CanvasColorType * value);
 
-bool CanvasRenderingContext2DSettings_willReadFrequently( const CanvasRenderingContext2DSettings *self);
+bool CanvasRenderingContext2DSettings_willReadFrequently(const CanvasRenderingContext2DSettings *self);
 
 void CanvasRenderingContext2DSettings_set_willReadFrequently(CanvasRenderingContext2DSettings* self, bool value);
 DECLARE_EMLITE_TYPE(ImageDataSettings, em_Val);
 
-PredefinedColorSpace ImageDataSettings_colorSpace( const ImageDataSettings *self);
+PredefinedColorSpace ImageDataSettings_colorSpace(const ImageDataSettings *self);
 
 void ImageDataSettings_set_colorSpace(ImageDataSettings* self, PredefinedColorSpace * value);
 
-ImageDataPixelFormat ImageDataSettings_pixelFormat( const ImageDataSettings *self);
+ImageDataPixelFormat ImageDataSettings_pixelFormat(const ImageDataSettings *self);
 
 void ImageDataSettings_set_pixelFormat(ImageDataSettings* self, ImageDataPixelFormat * value);
 DECLARE_EMLITE_TYPE(CanvasRenderingContext2D, em_Val);
 
-HTMLCanvasElement CanvasRenderingContext2D_canvas( const CanvasRenderingContext2D *self);
+HTMLCanvasElement CanvasRenderingContext2D_canvas(const CanvasRenderingContext2D *self);
 
 CanvasRenderingContext2DSettings CanvasRenderingContext2D_getContextAttributes(CanvasRenderingContext2D* self );
 
@@ -77,27 +77,27 @@ jb_Undefined CanvasRenderingContext2D_setTransform1(CanvasRenderingContext2D* se
 
 jb_Undefined CanvasRenderingContext2D_resetTransform(CanvasRenderingContext2D* self );
 
-double CanvasRenderingContext2D_globalAlpha( const CanvasRenderingContext2D *self);
+double CanvasRenderingContext2D_globalAlpha(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_globalAlpha(CanvasRenderingContext2D* self, double value);
 
-jb_DOMString CanvasRenderingContext2D_globalCompositeOperation( const CanvasRenderingContext2D *self);
+jb_DOMString CanvasRenderingContext2D_globalCompositeOperation(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_globalCompositeOperation(CanvasRenderingContext2D* self, jb_DOMString * value);
 
-bool CanvasRenderingContext2D_imageSmoothingEnabled( const CanvasRenderingContext2D *self);
+bool CanvasRenderingContext2D_imageSmoothingEnabled(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_imageSmoothingEnabled(CanvasRenderingContext2D* self, bool value);
 
-ImageSmoothingQuality CanvasRenderingContext2D_imageSmoothingQuality( const CanvasRenderingContext2D *self);
+ImageSmoothingQuality CanvasRenderingContext2D_imageSmoothingQuality(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_imageSmoothingQuality(CanvasRenderingContext2D* self, ImageSmoothingQuality * value);
 
-jb_Any CanvasRenderingContext2D_strokeStyle( const CanvasRenderingContext2D *self);
+jb_Any CanvasRenderingContext2D_strokeStyle(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_strokeStyle(CanvasRenderingContext2D* self, jb_Any * value);
 
-jb_Any CanvasRenderingContext2D_fillStyle( const CanvasRenderingContext2D *self);
+jb_Any CanvasRenderingContext2D_fillStyle(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_fillStyle(CanvasRenderingContext2D* self, jb_Any * value);
 
@@ -109,23 +109,23 @@ CanvasGradient CanvasRenderingContext2D_createConicGradient(CanvasRenderingConte
 
 CanvasPattern CanvasRenderingContext2D_createPattern(CanvasRenderingContext2D* self , jb_Any * image, jb_DOMString * repetition);
 
-double CanvasRenderingContext2D_shadowOffsetX( const CanvasRenderingContext2D *self);
+double CanvasRenderingContext2D_shadowOffsetX(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_shadowOffsetX(CanvasRenderingContext2D* self, double value);
 
-double CanvasRenderingContext2D_shadowOffsetY( const CanvasRenderingContext2D *self);
+double CanvasRenderingContext2D_shadowOffsetY(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_shadowOffsetY(CanvasRenderingContext2D* self, double value);
 
-double CanvasRenderingContext2D_shadowBlur( const CanvasRenderingContext2D *self);
+double CanvasRenderingContext2D_shadowBlur(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_shadowBlur(CanvasRenderingContext2D* self, double value);
 
-jb_DOMString CanvasRenderingContext2D_shadowColor( const CanvasRenderingContext2D *self);
+jb_DOMString CanvasRenderingContext2D_shadowColor(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_shadowColor(CanvasRenderingContext2D* self, jb_DOMString * value);
 
-jb_DOMString CanvasRenderingContext2D_filter( const CanvasRenderingContext2D *self);
+jb_DOMString CanvasRenderingContext2D_filter(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_filter(CanvasRenderingContext2D* self, jb_DOMString * value);
 
@@ -175,19 +175,19 @@ ImageData CanvasRenderingContext2D_getImageData1(CanvasRenderingContext2D* self 
 
 jb_Undefined CanvasRenderingContext2D_putImageData(CanvasRenderingContext2D* self , ImageData * imageData, long dx, long dy, long dirtyX, long dirtyY, long dirtyWidth, long dirtyHeight);
 
-double CanvasRenderingContext2D_lineWidth( const CanvasRenderingContext2D *self);
+double CanvasRenderingContext2D_lineWidth(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_lineWidth(CanvasRenderingContext2D* self, double value);
 
-CanvasLineCap CanvasRenderingContext2D_lineCap( const CanvasRenderingContext2D *self);
+CanvasLineCap CanvasRenderingContext2D_lineCap(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_lineCap(CanvasRenderingContext2D* self, CanvasLineCap * value);
 
-CanvasLineJoin CanvasRenderingContext2D_lineJoin( const CanvasRenderingContext2D *self);
+CanvasLineJoin CanvasRenderingContext2D_lineJoin(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_lineJoin(CanvasRenderingContext2D* self, CanvasLineJoin * value);
 
-double CanvasRenderingContext2D_miterLimit( const CanvasRenderingContext2D *self);
+double CanvasRenderingContext2D_miterLimit(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_miterLimit(CanvasRenderingContext2D* self, double value);
 
@@ -195,51 +195,51 @@ jb_Undefined CanvasRenderingContext2D_setLineDash(CanvasRenderingContext2D* self
 
 jb_Sequence CanvasRenderingContext2D_getLineDash(CanvasRenderingContext2D* self );
 
-double CanvasRenderingContext2D_lineDashOffset( const CanvasRenderingContext2D *self);
+double CanvasRenderingContext2D_lineDashOffset(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_lineDashOffset(CanvasRenderingContext2D* self, double value);
 
-jb_DOMString CanvasRenderingContext2D_lang( const CanvasRenderingContext2D *self);
+jb_DOMString CanvasRenderingContext2D_lang(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_lang(CanvasRenderingContext2D* self, jb_DOMString * value);
 
-jb_DOMString CanvasRenderingContext2D_font( const CanvasRenderingContext2D *self);
+jb_DOMString CanvasRenderingContext2D_font(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_font(CanvasRenderingContext2D* self, jb_DOMString * value);
 
-CanvasTextAlign CanvasRenderingContext2D_textAlign( const CanvasRenderingContext2D *self);
+CanvasTextAlign CanvasRenderingContext2D_textAlign(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_textAlign(CanvasRenderingContext2D* self, CanvasTextAlign * value);
 
-CanvasTextBaseline CanvasRenderingContext2D_textBaseline( const CanvasRenderingContext2D *self);
+CanvasTextBaseline CanvasRenderingContext2D_textBaseline(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_textBaseline(CanvasRenderingContext2D* self, CanvasTextBaseline * value);
 
-CanvasDirection CanvasRenderingContext2D_direction( const CanvasRenderingContext2D *self);
+CanvasDirection CanvasRenderingContext2D_direction(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_direction(CanvasRenderingContext2D* self, CanvasDirection * value);
 
-jb_DOMString CanvasRenderingContext2D_letterSpacing( const CanvasRenderingContext2D *self);
+jb_DOMString CanvasRenderingContext2D_letterSpacing(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_letterSpacing(CanvasRenderingContext2D* self, jb_DOMString * value);
 
-CanvasFontKerning CanvasRenderingContext2D_fontKerning( const CanvasRenderingContext2D *self);
+CanvasFontKerning CanvasRenderingContext2D_fontKerning(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_fontKerning(CanvasRenderingContext2D* self, CanvasFontKerning * value);
 
-CanvasFontStretch CanvasRenderingContext2D_fontStretch( const CanvasRenderingContext2D *self);
+CanvasFontStretch CanvasRenderingContext2D_fontStretch(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_fontStretch(CanvasRenderingContext2D* self, CanvasFontStretch * value);
 
-CanvasFontVariantCaps CanvasRenderingContext2D_fontVariantCaps( const CanvasRenderingContext2D *self);
+CanvasFontVariantCaps CanvasRenderingContext2D_fontVariantCaps(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_fontVariantCaps(CanvasRenderingContext2D* self, CanvasFontVariantCaps * value);
 
-CanvasTextRendering CanvasRenderingContext2D_textRendering( const CanvasRenderingContext2D *self);
+CanvasTextRendering CanvasRenderingContext2D_textRendering(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_textRendering(CanvasRenderingContext2D* self, CanvasTextRendering * value);
 
-jb_DOMString CanvasRenderingContext2D_wordSpacing( const CanvasRenderingContext2D *self);
+jb_DOMString CanvasRenderingContext2D_wordSpacing(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_wordSpacing(CanvasRenderingContext2D* self, jb_DOMString * value);
 

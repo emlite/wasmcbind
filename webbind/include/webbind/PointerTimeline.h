@@ -14,6 +14,6 @@ PointerTimeline PointerTimeline_new0();
 
 PointerTimeline PointerTimeline_new1(jb_Any * options);
 
-Element PointerTimeline_source( const PointerTimeline *self);
+Element PointerTimeline_source(const PointerTimeline *self);
 
-PointerAxis PointerTimeline_axis( const PointerTimeline *self);
+PointerAxis PointerTimeline_axis(const PointerTimeline *self);

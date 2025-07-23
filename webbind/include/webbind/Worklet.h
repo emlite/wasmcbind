@@ -9,7 +9,7 @@ typedef struct WorkletOptions WorkletOptions;
 
 DECLARE_EMLITE_TYPE(WorkletOptions, em_Val);
 
-RequestCredentials WorkletOptions_credentials( const WorkletOptions *self);
+RequestCredentials WorkletOptions_credentials(const WorkletOptions *self);
 
 void WorkletOptions_set_credentials(WorkletOptions* self, RequestCredentials * value);
 DECLARE_EMLITE_TYPE(Worklet, em_Val);

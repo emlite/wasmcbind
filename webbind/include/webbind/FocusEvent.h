@@ -14,4 +14,4 @@ FocusEvent FocusEvent_new0(jb_DOMString * type);
 
 FocusEvent FocusEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-EventTarget FocusEvent_relatedTarget( const FocusEvent *self);
+EventTarget FocusEvent_relatedTarget(const FocusEvent *self);

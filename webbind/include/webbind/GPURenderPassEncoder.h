@@ -28,7 +28,7 @@ jb_Undefined GPURenderPassEncoder_executeBundles(GPURenderPassEncoder* self , jb
 
 jb_Undefined GPURenderPassEncoder_end(GPURenderPassEncoder* self );
 
-jb_USVString GPURenderPassEncoder_label( const GPURenderPassEncoder *self);
+jb_USVString GPURenderPassEncoder_label(const GPURenderPassEncoder *self);
 
 void GPURenderPassEncoder_set_label(GPURenderPassEncoder* self, jb_USVString * value);
 

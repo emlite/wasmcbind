@@ -11,6 +11,6 @@ USBIsochronousInTransferPacket USBIsochronousInTransferPacket_new0(USBTransferSt
 
 USBIsochronousInTransferPacket USBIsochronousInTransferPacket_new1(USBTransferStatus * status, jb_DataView * data);
 
-jb_DataView USBIsochronousInTransferPacket_data( const USBIsochronousInTransferPacket *self);
+jb_DataView USBIsochronousInTransferPacket_data(const USBIsochronousInTransferPacket *self);
 
-USBTransferStatus USBIsochronousInTransferPacket_status( const USBIsochronousInTransferPacket *self);
+USBTransferStatus USBIsochronousInTransferPacket_status(const USBIsochronousInTransferPacket *self);

@@ -10,6 +10,6 @@ DECLARE_EMLITE_TYPE(SpeechRecognitionErrorEvent, Event);
 
 SpeechRecognitionErrorEvent SpeechRecognitionErrorEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-SpeechRecognitionErrorCode SpeechRecognitionErrorEvent_error( const SpeechRecognitionErrorEvent *self);
+SpeechRecognitionErrorCode SpeechRecognitionErrorEvent_error(const SpeechRecognitionErrorEvent *self);
 
-jb_DOMString SpeechRecognitionErrorEvent_message( const SpeechRecognitionErrorEvent *self);
+jb_DOMString SpeechRecognitionErrorEvent_message(const SpeechRecognitionErrorEvent *self);

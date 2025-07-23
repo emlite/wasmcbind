@@ -16,37 +16,37 @@ typedef struct PerformanceMeasure PerformanceMeasure;
 
 DECLARE_EMLITE_TYPE(MemoryMeasurement, em_Val);
 
-long long MemoryMeasurement_bytes( const MemoryMeasurement *self);
+long long MemoryMeasurement_bytes(const MemoryMeasurement *self);
 
 void MemoryMeasurement_set_bytes(MemoryMeasurement* self, long long value);
 
-jb_Sequence MemoryMeasurement_breakdown( const MemoryMeasurement *self);
+jb_Sequence MemoryMeasurement_breakdown(const MemoryMeasurement *self);
 
 void MemoryMeasurement_set_breakdown(MemoryMeasurement* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(PerformanceMarkOptions, em_Val);
 
-jb_Any PerformanceMarkOptions_detail( const PerformanceMarkOptions *self);
+jb_Any PerformanceMarkOptions_detail(const PerformanceMarkOptions *self);
 
 void PerformanceMarkOptions_set_detail(PerformanceMarkOptions* self, jb_Any * value);
 
-jb_Any PerformanceMarkOptions_startTime( const PerformanceMarkOptions *self);
+jb_Any PerformanceMarkOptions_startTime(const PerformanceMarkOptions *self);
 
 void PerformanceMarkOptions_set_startTime(PerformanceMarkOptions* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(Performance, EventTarget);
 
 jb_Any Performance_now(Performance* self );
 
-jb_Any Performance_timeOrigin( const Performance *self);
+jb_Any Performance_timeOrigin(const Performance *self);
 
 jb_Object Performance_toJSON(Performance* self );
 
-EventCounts Performance_eventCounts( const Performance *self);
+EventCounts Performance_eventCounts(const Performance *self);
 
-long long Performance_interactionCount( const Performance *self);
+long long Performance_interactionCount(const Performance *self);
 
-PerformanceTiming Performance_timing( const Performance *self);
+PerformanceTiming Performance_timing(const Performance *self);
 
-PerformanceNavigation Performance_navigation( const Performance *self);
+PerformanceNavigation Performance_navigation(const Performance *self);
 
 jb_Promise Performance_measureUserAgentSpecificMemory(Performance* self );
 
@@ -62,7 +62,7 @@ jb_Undefined Performance_clearResourceTimings(Performance* self );
 
 jb_Undefined Performance_setResourceTimingBufferSize(Performance* self , unsigned long maxSize);
 
-jb_Any Performance_onresourcetimingbufferfull( const Performance *self);
+jb_Any Performance_onresourcetimingbufferfull(const Performance *self);
 
 void Performance_set_onresourcetimingbufferfull(Performance* self, jb_Any * value);
 

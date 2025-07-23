@@ -9,29 +9,17 @@ typedef struct CSSParserDeclaration CSSParserDeclaration;
 typedef struct CSSParserRule CSSParserRule;
 
 
-} // namespace CSS
+
+
+bool CSS_supports0(jb_CSSOMString * property, jb_CSSOMString * value);
+bool CSS_supports1(jb_CSSOMString * conditionText);
 
 
 
-bool CSS_supports(jb_CSSOMString * property, jb_CSSOMString * value);
-bool CSS_supports(jb_CSSOMString * conditionText);
-} // namespace CSS
 
 
 
-} // namespace CSS
 
-
-
-} // namespace CSS
-
-
-
-} // namespace CSS
-
-
-
-} // namespace CSS
 
 
 
@@ -48,13 +36,9 @@ CSSParserDeclaration CSS_parseDeclaration1(jb_DOMString * css, jb_Any * options)
 jb_Any CSS_parseValue(jb_DOMString * css);
 jb_Sequence CSS_parseValueList(jb_DOMString * css);
 jb_Sequence CSS_parseCommaValueList(jb_DOMString * css);
-} // namespace CSS
-
 
 
 jb_Undefined CSS_registerProperty(jb_Any * definition);
-} // namespace CSS
-
 
 
 CSSUnitValue CSS_number(double value);
@@ -120,10 +104,6 @@ CSSUnitValue CSS_dpi(double value);
 CSSUnitValue CSS_dpcm(double value);
 CSSUnitValue CSS_dppx(double value);
 CSSUnitValue CSS_fr(double value);
-} // namespace CSS
-
 
 
 jb_CSSOMString CSS_escape(jb_CSSOMString * ident);
-} // namespace CSS
-

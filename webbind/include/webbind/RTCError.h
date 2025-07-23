@@ -12,14 +12,14 @@ RTCError RTCError_new0(jb_Any * init);
 
 RTCError RTCError_new1(jb_Any * init, jb_DOMString * message);
 
-RTCErrorDetailType RTCError_errorDetail( const RTCError *self);
+RTCErrorDetailType RTCError_errorDetail(const RTCError *self);
 
-long RTCError_sdpLineNumber( const RTCError *self);
+long RTCError_sdpLineNumber(const RTCError *self);
 
-long RTCError_sctpCauseCode( const RTCError *self);
+long RTCError_sctpCauseCode(const RTCError *self);
 
-unsigned long RTCError_receivedAlert( const RTCError *self);
+unsigned long RTCError_receivedAlert(const RTCError *self);
 
-unsigned long RTCError_sentAlert( const RTCError *self);
+unsigned long RTCError_sentAlert(const RTCError *self);
 
-long RTCError_httpRequestStatusCode( const RTCError *self);
+long RTCError_httpRequestStatusCode(const RTCError *self);

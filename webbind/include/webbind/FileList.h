@@ -11,4 +11,4 @@ DECLARE_EMLITE_TYPE(FileList, em_Val);
 
 File FileList_item(FileList* self , unsigned long index);
 
-unsigned long FileList_length( const FileList *self);
+unsigned long FileList_length(const FileList *self);

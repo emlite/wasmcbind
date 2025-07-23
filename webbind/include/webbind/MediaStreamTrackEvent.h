@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(MediaStreamTrackEvent, Event);
 
 MediaStreamTrackEvent MediaStreamTrackEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-MediaStreamTrack MediaStreamTrackEvent_track( const MediaStreamTrackEvent *self);
+MediaStreamTrack MediaStreamTrackEvent_track(const MediaStreamTrackEvent *self);

@@ -9,15 +9,15 @@ typedef struct IDBRequest IDBRequest;
 
 DECLARE_EMLITE_TYPE(IDBCursor, em_Val);
 
-jb_Any IDBCursor_source( const IDBCursor *self);
+jb_Any IDBCursor_source(const IDBCursor *self);
 
-IDBCursorDirection IDBCursor_direction( const IDBCursor *self);
+IDBCursorDirection IDBCursor_direction(const IDBCursor *self);
 
-jb_Any IDBCursor_key( const IDBCursor *self);
+jb_Any IDBCursor_key(const IDBCursor *self);
 
-jb_Any IDBCursor_primaryKey( const IDBCursor *self);
+jb_Any IDBCursor_primaryKey(const IDBCursor *self);
 
-IDBRequest IDBCursor_request( const IDBCursor *self);
+IDBRequest IDBCursor_request(const IDBCursor *self);
 
 jb_Undefined IDBCursor_advance(IDBCursor* self , unsigned long count);
 

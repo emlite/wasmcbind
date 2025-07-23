@@ -9,9 +9,9 @@ typedef struct SVGLength SVGLength;
 
 DECLARE_EMLITE_TYPE(SVGLengthList, em_Val);
 
-unsigned long SVGLengthList_length( const SVGLengthList *self);
+unsigned long SVGLengthList_length(const SVGLengthList *self);
 
-unsigned long SVGLengthList_numberOfItems( const SVGLengthList *self);
+unsigned long SVGLengthList_numberOfItems(const SVGLengthList *self);
 
 jb_Undefined SVGLengthList_clear(SVGLengthList* self );
 

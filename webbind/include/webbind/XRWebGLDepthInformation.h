@@ -10,8 +10,8 @@ typedef struct WebGLTexture WebGLTexture;
 
 DECLARE_EMLITE_TYPE(XRWebGLDepthInformation, XRDepthInformation);
 
-WebGLTexture XRWebGLDepthInformation_texture( const XRWebGLDepthInformation *self);
+WebGLTexture XRWebGLDepthInformation_texture(const XRWebGLDepthInformation *self);
 
-XRTextureType XRWebGLDepthInformation_textureType( const XRWebGLDepthInformation *self);
+XRTextureType XRWebGLDepthInformation_textureType(const XRWebGLDepthInformation *self);
 
-unsigned long XRWebGLDepthInformation_imageIndex( const XRWebGLDepthInformation *self);
+unsigned long XRWebGLDepthInformation_imageIndex(const XRWebGLDepthInformation *self);

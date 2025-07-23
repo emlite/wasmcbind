@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(SensorErrorEvent, Event);
 
 SensorErrorEvent SensorErrorEvent_new(jb_DOMString * type, jb_Any * errorEventInitDict);
 
-DOMException SensorErrorEvent_error( const SensorErrorEvent *self);
+DOMException SensorErrorEvent_error(const SensorErrorEvent *self);

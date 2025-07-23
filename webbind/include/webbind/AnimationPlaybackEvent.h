@@ -12,6 +12,6 @@ AnimationPlaybackEvent AnimationPlaybackEvent_new0(jb_DOMString * type);
 
 AnimationPlaybackEvent AnimationPlaybackEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_Any AnimationPlaybackEvent_currentTime( const AnimationPlaybackEvent *self);
+jb_Any AnimationPlaybackEvent_currentTime(const AnimationPlaybackEvent *self);
 
-jb_Any AnimationPlaybackEvent_timelineTime( const AnimationPlaybackEvent *self);
+jb_Any AnimationPlaybackEvent_timelineTime(const AnimationPlaybackEvent *self);

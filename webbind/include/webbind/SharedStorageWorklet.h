@@ -11,32 +11,32 @@ typedef struct SharedStorageRunOperationMethodOptions SharedStorageRunOperationM
 
 DECLARE_EMLITE_TYPE(SharedStorageUrlWithMetadata, em_Val);
 
-jb_USVString SharedStorageUrlWithMetadata_url( const SharedStorageUrlWithMetadata *self);
+jb_USVString SharedStorageUrlWithMetadata_url(const SharedStorageUrlWithMetadata *self);
 
 void SharedStorageUrlWithMetadata_set_url(SharedStorageUrlWithMetadata* self, jb_USVString * value);
 
-jb_Object SharedStorageUrlWithMetadata_reportingMetadata( const SharedStorageUrlWithMetadata *self);
+jb_Object SharedStorageUrlWithMetadata_reportingMetadata(const SharedStorageUrlWithMetadata *self);
 
 void SharedStorageUrlWithMetadata_set_reportingMetadata(SharedStorageUrlWithMetadata* self, jb_Object * value);
 DECLARE_EMLITE_TYPE(SharedStorageRunOperationMethodOptions, em_Val);
 
-jb_Object SharedStorageRunOperationMethodOptions_data( const SharedStorageRunOperationMethodOptions *self);
+jb_Object SharedStorageRunOperationMethodOptions_data(const SharedStorageRunOperationMethodOptions *self);
 
 void SharedStorageRunOperationMethodOptions_set_data(SharedStorageRunOperationMethodOptions* self, jb_Object * value);
 
-bool SharedStorageRunOperationMethodOptions_resolveToConfig( const SharedStorageRunOperationMethodOptions *self);
+bool SharedStorageRunOperationMethodOptions_resolveToConfig(const SharedStorageRunOperationMethodOptions *self);
 
 void SharedStorageRunOperationMethodOptions_set_resolveToConfig(SharedStorageRunOperationMethodOptions* self, bool value);
 
-bool SharedStorageRunOperationMethodOptions_keepAlive( const SharedStorageRunOperationMethodOptions *self);
+bool SharedStorageRunOperationMethodOptions_keepAlive(const SharedStorageRunOperationMethodOptions *self);
 
 void SharedStorageRunOperationMethodOptions_set_keepAlive(SharedStorageRunOperationMethodOptions* self, bool value);
 
-jb_Any SharedStorageRunOperationMethodOptions_privateAggregationConfig( const SharedStorageRunOperationMethodOptions *self);
+jb_Any SharedStorageRunOperationMethodOptions_privateAggregationConfig(const SharedStorageRunOperationMethodOptions *self);
 
 void SharedStorageRunOperationMethodOptions_set_privateAggregationConfig(SharedStorageRunOperationMethodOptions* self, jb_Any * value);
 
-jb_DOMString SharedStorageRunOperationMethodOptions_savedQuery( const SharedStorageRunOperationMethodOptions *self);
+jb_DOMString SharedStorageRunOperationMethodOptions_savedQuery(const SharedStorageRunOperationMethodOptions *self);
 
 void SharedStorageRunOperationMethodOptions_set_savedQuery(SharedStorageRunOperationMethodOptions* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(SharedStorageWorklet, Worklet);

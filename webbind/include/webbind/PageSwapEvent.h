@@ -15,6 +15,6 @@ PageSwapEvent PageSwapEvent_new0(jb_DOMString * type);
 
 PageSwapEvent PageSwapEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-NavigationActivation PageSwapEvent_activation( const PageSwapEvent *self);
+NavigationActivation PageSwapEvent_activation(const PageSwapEvent *self);
 
-ViewTransition PageSwapEvent_viewTransition( const PageSwapEvent *self);
+ViewTransition PageSwapEvent_viewTransition(const PageSwapEvent *self);

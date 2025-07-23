@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(CSSMathMin, CSSMathValue);
 
 CSSMathMin CSSMathMin_new(jb_Any * args);
 
-CSSNumericArray CSSMathMin_values( const CSSMathMin *self);
+CSSNumericArray CSSMathMin_values(const CSSMathMin *self);

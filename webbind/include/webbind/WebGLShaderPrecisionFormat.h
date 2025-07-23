@@ -7,8 +7,8 @@
 
 DECLARE_EMLITE_TYPE(WebGLShaderPrecisionFormat, em_Val);
 
-jb_Any WebGLShaderPrecisionFormat_rangeMin( const WebGLShaderPrecisionFormat *self);
+jb_Any WebGLShaderPrecisionFormat_rangeMin(const WebGLShaderPrecisionFormat *self);
 
-jb_Any WebGLShaderPrecisionFormat_rangeMax( const WebGLShaderPrecisionFormat *self);
+jb_Any WebGLShaderPrecisionFormat_rangeMax(const WebGLShaderPrecisionFormat *self);
 
-jb_Any WebGLShaderPrecisionFormat_precision( const WebGLShaderPrecisionFormat *self);
+jb_Any WebGLShaderPrecisionFormat_precision(const WebGLShaderPrecisionFormat *self);

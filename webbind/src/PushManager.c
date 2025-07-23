@@ -27,8 +27,8 @@ void PushSubscriptionOptionsInit_set_applicationServerKey(PushSubscriptionOption
 DEFINE_EMLITE_TYPE(PushManager, em_Val);
 
 
-jb_FrozenArray PushManager_supportedContentEncodings() {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_global("pushmanager", em_Val_from("supportedContentEncodings"))));
+jb_FrozenArray PushManager_supportedContentEncodings(const PushManager *self) {
+    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_global("pushmanager"), em_Val_from("supportedContentEncodings")));
 }
 
 

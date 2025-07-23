@@ -10,4 +10,4 @@ typedef struct RTCIdentityProviderRegistrar RTCIdentityProviderRegistrar;
 
 DECLARE_EMLITE_TYPE(RTCIdentityProviderGlobalScope, WorkerGlobalScope);
 
-RTCIdentityProviderRegistrar RTCIdentityProviderGlobalScope_rtcIdentityProvider( const RTCIdentityProviderGlobalScope *self);
+RTCIdentityProviderRegistrar RTCIdentityProviderGlobalScope_rtcIdentityProvider(const RTCIdentityProviderGlobalScope *self);

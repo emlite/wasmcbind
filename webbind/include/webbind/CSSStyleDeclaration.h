@@ -9,11 +9,11 @@ typedef struct CSSRule CSSRule;
 
 DECLARE_EMLITE_TYPE(CSSStyleDeclaration, em_Val);
 
-jb_CSSOMString CSSStyleDeclaration_cssText( const CSSStyleDeclaration *self);
+jb_CSSOMString CSSStyleDeclaration_cssText(const CSSStyleDeclaration *self);
 
 void CSSStyleDeclaration_set_cssText(CSSStyleDeclaration* self, jb_CSSOMString * value);
 
-unsigned long CSSStyleDeclaration_length( const CSSStyleDeclaration *self);
+unsigned long CSSStyleDeclaration_length(const CSSStyleDeclaration *self);
 
 jb_CSSOMString CSSStyleDeclaration_item(CSSStyleDeclaration* self , unsigned long index);
 
@@ -27,4 +27,4 @@ jb_Undefined CSSStyleDeclaration_setProperty1(CSSStyleDeclaration* self , jb_CSS
 
 jb_CSSOMString CSSStyleDeclaration_removeProperty(CSSStyleDeclaration* self , jb_CSSOMString * property);
 
-CSSRule CSSStyleDeclaration_parentRule( const CSSStyleDeclaration *self);
+CSSRule CSSStyleDeclaration_parentRule(const CSSStyleDeclaration *self);

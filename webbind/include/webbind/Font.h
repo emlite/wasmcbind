@@ -7,6 +7,6 @@
 
 DECLARE_EMLITE_TYPE(Font, em_Val);
 
-jb_DOMString Font_name( const Font *self);
+jb_DOMString Font_name(const Font *self);
 
-unsigned long Font_glyphsRendered( const Font *self);
+unsigned long Font_glyphsRendered(const Font *self);

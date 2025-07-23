@@ -10,7 +10,7 @@ typedef struct CSSRuleList CSSRuleList;
 
 DECLARE_EMLITE_TYPE(CSSGroupingRule, CSSRule);
 
-CSSRuleList CSSGroupingRule_cssRules( const CSSGroupingRule *self);
+CSSRuleList CSSGroupingRule_cssRules(const CSSGroupingRule *self);
 
 unsigned long CSSGroupingRule_insertRule0(CSSGroupingRule* self , jb_CSSOMString * rule);
 

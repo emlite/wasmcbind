@@ -10,19 +10,19 @@ typedef struct DOMRectReadOnly DOMRectReadOnly;
 
 DECLARE_EMLITE_TYPE(DetectedBarcode, em_Val);
 
-DOMRectReadOnly DetectedBarcode_boundingBox( const DetectedBarcode *self);
+DOMRectReadOnly DetectedBarcode_boundingBox(const DetectedBarcode *self);
 
 void DetectedBarcode_set_boundingBox(DetectedBarcode* self, DOMRectReadOnly * value);
 
-jb_DOMString DetectedBarcode_rawValue( const DetectedBarcode *self);
+jb_DOMString DetectedBarcode_rawValue(const DetectedBarcode *self);
 
 void DetectedBarcode_set_rawValue(DetectedBarcode* self, jb_DOMString * value);
 
-BarcodeFormat DetectedBarcode_format( const DetectedBarcode *self);
+BarcodeFormat DetectedBarcode_format(const DetectedBarcode *self);
 
 void DetectedBarcode_set_format(DetectedBarcode* self, BarcodeFormat * value);
 
-jb_Sequence DetectedBarcode_cornerPoints( const DetectedBarcode *self);
+jb_Sequence DetectedBarcode_cornerPoints(const DetectedBarcode *self);
 
 void DetectedBarcode_set_cornerPoints(DetectedBarcode* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(BarcodeDetector, em_Val);

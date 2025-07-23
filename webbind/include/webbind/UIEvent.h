@@ -15,11 +15,11 @@ UIEvent UIEvent_new0(jb_DOMString * type);
 
 UIEvent UIEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-Window UIEvent_view( const UIEvent *self);
+Window UIEvent_view(const UIEvent *self);
 
-long UIEvent_detail( const UIEvent *self);
+long UIEvent_detail(const UIEvent *self);
 
-InputDeviceCapabilities UIEvent_sourceCapabilities( const UIEvent *self);
+InputDeviceCapabilities UIEvent_sourceCapabilities(const UIEvent *self);
 
 jb_Undefined UIEvent_initUIEvent0(UIEvent* self , jb_DOMString * typeArg);
 
@@ -31,4 +31,4 @@ jb_Undefined UIEvent_initUIEvent3(UIEvent* self , jb_DOMString * typeArg, bool b
 
 jb_Undefined UIEvent_initUIEvent4(UIEvent* self , jb_DOMString * typeArg, bool bubblesArg, bool cancelableArg, Window * viewArg, long detailArg);
 
-unsigned long UIEvent_which( const UIEvent *self);
+unsigned long UIEvent_which(const UIEvent *self);

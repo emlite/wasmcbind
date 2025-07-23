@@ -12,8 +12,8 @@ Magnetometer Magnetometer_new0();
 
 Magnetometer Magnetometer_new1(jb_Any * sensorOptions);
 
-double Magnetometer_x( const Magnetometer *self);
+double Magnetometer_x(const Magnetometer *self);
 
-double Magnetometer_y( const Magnetometer *self);
+double Magnetometer_y(const Magnetometer *self);
 
-double Magnetometer_z( const Magnetometer *self);
+double Magnetometer_z(const Magnetometer *self);

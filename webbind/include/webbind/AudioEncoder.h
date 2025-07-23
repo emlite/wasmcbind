@@ -12,43 +12,43 @@ typedef struct AudioEncoderSupport AudioEncoderSupport;
 
 DECLARE_EMLITE_TYPE(AudioEncoderConfig, em_Val);
 
-jb_DOMString AudioEncoderConfig_codec( const AudioEncoderConfig *self);
+jb_DOMString AudioEncoderConfig_codec(const AudioEncoderConfig *self);
 
 void AudioEncoderConfig_set_codec(AudioEncoderConfig* self, jb_DOMString * value);
 
-unsigned long AudioEncoderConfig_sampleRate( const AudioEncoderConfig *self);
+unsigned long AudioEncoderConfig_sampleRate(const AudioEncoderConfig *self);
 
 void AudioEncoderConfig_set_sampleRate(AudioEncoderConfig* self, unsigned long value);
 
-unsigned long AudioEncoderConfig_numberOfChannels( const AudioEncoderConfig *self);
+unsigned long AudioEncoderConfig_numberOfChannels(const AudioEncoderConfig *self);
 
 void AudioEncoderConfig_set_numberOfChannels(AudioEncoderConfig* self, unsigned long value);
 
-long long AudioEncoderConfig_bitrate( const AudioEncoderConfig *self);
+long long AudioEncoderConfig_bitrate(const AudioEncoderConfig *self);
 
 void AudioEncoderConfig_set_bitrate(AudioEncoderConfig* self, long long value);
 
-BitrateMode AudioEncoderConfig_bitrateMode( const AudioEncoderConfig *self);
+BitrateMode AudioEncoderConfig_bitrateMode(const AudioEncoderConfig *self);
 
 void AudioEncoderConfig_set_bitrateMode(AudioEncoderConfig* self, BitrateMode * value);
 DECLARE_EMLITE_TYPE(AudioEncoderSupport, em_Val);
 
-bool AudioEncoderSupport_supported( const AudioEncoderSupport *self);
+bool AudioEncoderSupport_supported(const AudioEncoderSupport *self);
 
 void AudioEncoderSupport_set_supported(AudioEncoderSupport* self, bool value);
 
-AudioEncoderConfig AudioEncoderSupport_config( const AudioEncoderSupport *self);
+AudioEncoderConfig AudioEncoderSupport_config(const AudioEncoderSupport *self);
 
 void AudioEncoderSupport_set_config(AudioEncoderSupport* self, AudioEncoderConfig * value);
 DECLARE_EMLITE_TYPE(AudioEncoder, EventTarget);
 
 AudioEncoder AudioEncoder_new(jb_Any * init);
 
-CodecState AudioEncoder_state( const AudioEncoder *self);
+CodecState AudioEncoder_state(const AudioEncoder *self);
 
-unsigned long AudioEncoder_encodeQueueSize( const AudioEncoder *self);
+unsigned long AudioEncoder_encodeQueueSize(const AudioEncoder *self);
 
-jb_Any AudioEncoder_ondequeue( const AudioEncoder *self);
+jb_Any AudioEncoder_ondequeue(const AudioEncoder *self);
 
 void AudioEncoder_set_ondequeue(AudioEncoder* self, jb_Any * value);
 

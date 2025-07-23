@@ -12,8 +12,8 @@ TransitionEvent TransitionEvent_new0(jb_CSSOMString * type);
 
 TransitionEvent TransitionEvent_new1(jb_CSSOMString * type, jb_Any * transitionEventInitDict);
 
-jb_CSSOMString TransitionEvent_propertyName( const TransitionEvent *self);
+jb_CSSOMString TransitionEvent_propertyName(const TransitionEvent *self);
 
-double TransitionEvent_elapsedTime( const TransitionEvent *self);
+double TransitionEvent_elapsedTime(const TransitionEvent *self);
 
-jb_CSSOMString TransitionEvent_pseudoElement( const TransitionEvent *self);
+jb_CSSOMString TransitionEvent_pseudoElement(const TransitionEvent *self);

@@ -13,9 +13,9 @@ ClipboardItem ClipboardItem_new0(jb_Record * items);
 
 ClipboardItem ClipboardItem_new1(jb_Record * items, jb_Any * options);
 
-PresentationStyle ClipboardItem_presentationStyle( const ClipboardItem *self);
+PresentationStyle ClipboardItem_presentationStyle(const ClipboardItem *self);
 
-jb_FrozenArray ClipboardItem_types( const ClipboardItem *self);
+jb_FrozenArray ClipboardItem_types(const ClipboardItem *self);
 
 jb_Promise ClipboardItem_getType(ClipboardItem* self , jb_DOMString * type);
 

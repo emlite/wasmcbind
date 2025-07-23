@@ -10,4 +10,4 @@ DECLARE_EMLITE_TYPE(CSSUnparsedValue, CSSStyleValue);
 
 CSSUnparsedValue CSSUnparsedValue_new(jb_Sequence * members);
 
-unsigned long CSSUnparsedValue_length( const CSSUnparsedValue *self);
+unsigned long CSSUnparsedValue_length(const CSSUnparsedValue *self);

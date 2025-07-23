@@ -11,6 +11,6 @@ USBIsochronousOutTransferPacket USBIsochronousOutTransferPacket_new0(USBTransfer
 
 USBIsochronousOutTransferPacket USBIsochronousOutTransferPacket_new1(USBTransferStatus * status, unsigned long bytesWritten);
 
-unsigned long USBIsochronousOutTransferPacket_bytesWritten( const USBIsochronousOutTransferPacket *self);
+unsigned long USBIsochronousOutTransferPacket_bytesWritten(const USBIsochronousOutTransferPacket *self);
 
-USBTransferStatus USBIsochronousOutTransferPacket_status( const USBIsochronousOutTransferPacket *self);
+USBTransferStatus USBIsochronousOutTransferPacket_status(const USBIsochronousOutTransferPacket *self);

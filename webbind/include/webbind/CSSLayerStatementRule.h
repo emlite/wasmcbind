@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(CSSLayerStatementRule, CSSRule);
 
-jb_FrozenArray CSSLayerStatementRule_nameList( const CSSLayerStatementRule *self);
+jb_FrozenArray CSSLayerStatementRule_nameList(const CSSLayerStatementRule *self);

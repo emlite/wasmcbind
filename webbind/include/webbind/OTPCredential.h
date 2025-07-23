@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(OTPCredential, Credential);
 
-jb_DOMString OTPCredential_code( const OTPCredential *self);
+jb_DOMString OTPCredential_code(const OTPCredential *self);

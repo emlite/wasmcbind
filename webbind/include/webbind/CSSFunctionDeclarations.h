@@ -10,4 +10,4 @@ typedef struct CSSFunctionDescriptors CSSFunctionDescriptors;
 
 DECLARE_EMLITE_TYPE(CSSFunctionDeclarations, CSSRule);
 
-CSSFunctionDescriptors CSSFunctionDeclarations_style( const CSSFunctionDeclarations *self);
+CSSFunctionDescriptors CSSFunctionDeclarations_style(const CSSFunctionDeclarations *self);

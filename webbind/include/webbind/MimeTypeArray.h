@@ -9,7 +9,7 @@ typedef struct MimeType MimeType;
 
 DECLARE_EMLITE_TYPE(MimeTypeArray, em_Val);
 
-unsigned long MimeTypeArray_length( const MimeTypeArray *self);
+unsigned long MimeTypeArray_length(const MimeTypeArray *self);
 
 MimeType MimeTypeArray_item(MimeTypeArray* self , unsigned long index);
 

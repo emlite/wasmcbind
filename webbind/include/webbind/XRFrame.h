@@ -28,9 +28,9 @@ typedef struct XRPlaneSet XRPlaneSet;
 
 DECLARE_EMLITE_TYPE(XRFrame, em_Val);
 
-XRSession XRFrame_session( const XRFrame *self);
+XRSession XRFrame_session(const XRFrame *self);
 
-jb_Any XRFrame_predictedDisplayTime( const XRFrame *self);
+jb_Any XRFrame_predictedDisplayTime(const XRFrame *self);
 
 XRViewerPose XRFrame_getViewerPose(XRFrame* self , XRReferenceSpace * referenceSpace);
 
@@ -38,9 +38,9 @@ XRPose XRFrame_getPose(XRFrame* self , XRSpace * space, XRSpace * baseSpace);
 
 jb_Promise XRFrame_createAnchor(XRFrame* self , XRRigidTransform * pose, XRSpace * space);
 
-XRAnchorSet XRFrame_trackedAnchors( const XRFrame *self);
+XRAnchorSet XRFrame_trackedAnchors(const XRFrame *self);
 
-XRMeshSet XRFrame_detectedMeshes( const XRFrame *self);
+XRMeshSet XRFrame_detectedMeshes(const XRFrame *self);
 
 XRCPUDepthInformation XRFrame_getDepthInformation(XRFrame* self , XRView * view);
 
@@ -56,4 +56,4 @@ jb_Sequence XRFrame_getHitTestResultsForTransientInput(XRFrame* self , XRTransie
 
 XRLightEstimate XRFrame_getLightEstimate(XRFrame* self , XRLightProbe * lightProbe);
 
-XRPlaneSet XRFrame_detectedPlanes( const XRFrame *self);
+XRPlaneSet XRFrame_detectedPlanes(const XRFrame *self);

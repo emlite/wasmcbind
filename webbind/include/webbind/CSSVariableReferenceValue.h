@@ -13,8 +13,8 @@ CSSVariableReferenceValue CSSVariableReferenceValue_new0(jb_USVString * variable
 
 CSSVariableReferenceValue CSSVariableReferenceValue_new1(jb_USVString * variable, CSSUnparsedValue * fallback);
 
-jb_USVString CSSVariableReferenceValue_variable( const CSSVariableReferenceValue *self);
+jb_USVString CSSVariableReferenceValue_variable(const CSSVariableReferenceValue *self);
 
 void CSSVariableReferenceValue_set_variable(CSSVariableReferenceValue* self, jb_USVString * value);
 
-CSSUnparsedValue CSSVariableReferenceValue_fallback( const CSSVariableReferenceValue *self);
+CSSUnparsedValue CSSVariableReferenceValue_fallback(const CSSVariableReferenceValue *self);

@@ -14,15 +14,15 @@ StorageEvent StorageEvent_new0(jb_DOMString * type);
 
 StorageEvent StorageEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_DOMString StorageEvent_key( const StorageEvent *self);
+jb_DOMString StorageEvent_key(const StorageEvent *self);
 
-jb_DOMString StorageEvent_oldValue( const StorageEvent *self);
+jb_DOMString StorageEvent_oldValue(const StorageEvent *self);
 
-jb_DOMString StorageEvent_newValue( const StorageEvent *self);
+jb_DOMString StorageEvent_newValue(const StorageEvent *self);
 
-jb_USVString StorageEvent_url( const StorageEvent *self);
+jb_USVString StorageEvent_url(const StorageEvent *self);
 
-Storage StorageEvent_storageArea( const StorageEvent *self);
+Storage StorageEvent_storageArea(const StorageEvent *self);
 
 jb_Undefined StorageEvent_initStorageEvent0(StorageEvent* self , jb_DOMString * type);
 

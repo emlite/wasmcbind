@@ -13,7 +13,7 @@ typedef struct FileSystemSyncAccessHandle FileSystemSyncAccessHandle;
 
 DECLARE_EMLITE_TYPE(FileSystemCreateWritableOptions, em_Val);
 
-bool FileSystemCreateWritableOptions_keepExistingData( const FileSystemCreateWritableOptions *self);
+bool FileSystemCreateWritableOptions_keepExistingData(const FileSystemCreateWritableOptions *self);
 
 void FileSystemCreateWritableOptions_set_keepExistingData(FileSystemCreateWritableOptions* self, bool value);
 DECLARE_EMLITE_TYPE(FileSystemFileHandle, FileSystemHandle);

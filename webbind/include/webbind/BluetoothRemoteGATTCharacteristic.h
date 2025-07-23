@@ -13,13 +13,13 @@ typedef struct BluetoothRemoteGATTCharacteristic BluetoothRemoteGATTCharacterist
 
 DECLARE_EMLITE_TYPE(BluetoothRemoteGATTCharacteristic, EventTarget);
 
-BluetoothRemoteGATTService BluetoothRemoteGATTCharacteristic_service( const BluetoothRemoteGATTCharacteristic *self);
+BluetoothRemoteGATTService BluetoothRemoteGATTCharacteristic_service(const BluetoothRemoteGATTCharacteristic *self);
 
-jb_Any BluetoothRemoteGATTCharacteristic_uuid( const BluetoothRemoteGATTCharacteristic *self);
+jb_Any BluetoothRemoteGATTCharacteristic_uuid(const BluetoothRemoteGATTCharacteristic *self);
 
-BluetoothCharacteristicProperties BluetoothRemoteGATTCharacteristic_properties( const BluetoothRemoteGATTCharacteristic *self);
+BluetoothCharacteristicProperties BluetoothRemoteGATTCharacteristic_properties(const BluetoothRemoteGATTCharacteristic *self);
 
-jb_DataView BluetoothRemoteGATTCharacteristic_value( const BluetoothRemoteGATTCharacteristic *self);
+jb_DataView BluetoothRemoteGATTCharacteristic_value(const BluetoothRemoteGATTCharacteristic *self);
 
 jb_Promise BluetoothRemoteGATTCharacteristic_getDescriptor(BluetoothRemoteGATTCharacteristic* self , jb_Any * descriptor);
 
@@ -39,6 +39,6 @@ jb_Promise BluetoothRemoteGATTCharacteristic_startNotifications(BluetoothRemoteG
 
 jb_Promise BluetoothRemoteGATTCharacteristic_stopNotifications(BluetoothRemoteGATTCharacteristic* self );
 
-jb_Any BluetoothRemoteGATTCharacteristic_oncharacteristicvaluechanged( const BluetoothRemoteGATTCharacteristic *self);
+jb_Any BluetoothRemoteGATTCharacteristic_oncharacteristicvaluechanged(const BluetoothRemoteGATTCharacteristic *self);
 
 void BluetoothRemoteGATTCharacteristic_set_oncharacteristicvaluechanged(BluetoothRemoteGATTCharacteristic* self, jb_Any * value);

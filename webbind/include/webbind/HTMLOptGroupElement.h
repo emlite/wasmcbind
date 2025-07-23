@@ -10,10 +10,10 @@ DECLARE_EMLITE_TYPE(HTMLOptGroupElement, HTMLElement);
 
 HTMLOptGroupElement HTMLOptGroupElement_new();
 
-bool HTMLOptGroupElement_disabled( const HTMLOptGroupElement *self);
+bool HTMLOptGroupElement_disabled(const HTMLOptGroupElement *self);
 
 void HTMLOptGroupElement_set_disabled(HTMLOptGroupElement* self, bool value);
 
-jb_DOMString HTMLOptGroupElement_label( const HTMLOptGroupElement *self);
+jb_DOMString HTMLOptGroupElement_label(const HTMLOptGroupElement *self);
 
 void HTMLOptGroupElement_set_label(HTMLOptGroupElement* self, jb_DOMString * value);

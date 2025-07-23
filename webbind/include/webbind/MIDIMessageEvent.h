@@ -12,4 +12,4 @@ MIDIMessageEvent MIDIMessageEvent_new0(jb_DOMString * type);
 
 MIDIMessageEvent MIDIMessageEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_Uint8Array MIDIMessageEvent_data( const MIDIMessageEvent *self);
+jb_Uint8Array MIDIMessageEvent_data(const MIDIMessageEvent *self);

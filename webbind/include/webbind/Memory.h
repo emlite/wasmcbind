@@ -15,4 +15,4 @@ jb_ArrayBuffer Memory_toFixedLengthBuffer(Memory* self );
 
 jb_ArrayBuffer Memory_toResizableBuffer(Memory* self );
 
-jb_ArrayBuffer Memory_buffer( const Memory *self);
+jb_ArrayBuffer Memory_buffer(const Memory *self);

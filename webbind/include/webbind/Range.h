@@ -16,7 +16,7 @@ DECLARE_EMLITE_TYPE(Range, AbstractRange);
 
 Range Range_new();
 
-Node Range_commonAncestorContainer( const Range *self);
+Node Range_commonAncestorContainer(const Range *self);
 
 jb_Undefined Range_setStart(Range* self , Node * node, unsigned long offset);
 

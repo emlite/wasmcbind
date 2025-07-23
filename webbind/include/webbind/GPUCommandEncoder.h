@@ -19,50 +19,50 @@ typedef struct GPUTexture GPUTexture;
 
 DECLARE_EMLITE_TYPE(GPURenderPassDescriptor, em_Val);
 
-jb_Sequence GPURenderPassDescriptor_colorAttachments( const GPURenderPassDescriptor *self);
+jb_Sequence GPURenderPassDescriptor_colorAttachments(const GPURenderPassDescriptor *self);
 
 void GPURenderPassDescriptor_set_colorAttachments(GPURenderPassDescriptor* self, jb_Sequence * value);
 
-jb_Any GPURenderPassDescriptor_depthStencilAttachment( const GPURenderPassDescriptor *self);
+jb_Any GPURenderPassDescriptor_depthStencilAttachment(const GPURenderPassDescriptor *self);
 
 void GPURenderPassDescriptor_set_depthStencilAttachment(GPURenderPassDescriptor* self, jb_Any * value);
 
-GPUQuerySet GPURenderPassDescriptor_occlusionQuerySet( const GPURenderPassDescriptor *self);
+GPUQuerySet GPURenderPassDescriptor_occlusionQuerySet(const GPURenderPassDescriptor *self);
 
 void GPURenderPassDescriptor_set_occlusionQuerySet(GPURenderPassDescriptor* self, GPUQuerySet * value);
 
-jb_Any GPURenderPassDescriptor_timestampWrites( const GPURenderPassDescriptor *self);
+jb_Any GPURenderPassDescriptor_timestampWrites(const GPURenderPassDescriptor *self);
 
 void GPURenderPassDescriptor_set_timestampWrites(GPURenderPassDescriptor* self, jb_Any * value);
 
-jb_Any GPURenderPassDescriptor_maxDrawCount( const GPURenderPassDescriptor *self);
+jb_Any GPURenderPassDescriptor_maxDrawCount(const GPURenderPassDescriptor *self);
 
 void GPURenderPassDescriptor_set_maxDrawCount(GPURenderPassDescriptor* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(GPUComputePassDescriptor, em_Val);
 
-jb_Any GPUComputePassDescriptor_timestampWrites( const GPUComputePassDescriptor *self);
+jb_Any GPUComputePassDescriptor_timestampWrites(const GPUComputePassDescriptor *self);
 
 void GPUComputePassDescriptor_set_timestampWrites(GPUComputePassDescriptor* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(GPUTexelCopyBufferInfo, em_Val);
 
-GPUBuffer GPUTexelCopyBufferInfo_buffer( const GPUTexelCopyBufferInfo *self);
+GPUBuffer GPUTexelCopyBufferInfo_buffer(const GPUTexelCopyBufferInfo *self);
 
 void GPUTexelCopyBufferInfo_set_buffer(GPUTexelCopyBufferInfo* self, GPUBuffer * value);
 DECLARE_EMLITE_TYPE(GPUTexelCopyTextureInfo, em_Val);
 
-GPUTexture GPUTexelCopyTextureInfo_texture( const GPUTexelCopyTextureInfo *self);
+GPUTexture GPUTexelCopyTextureInfo_texture(const GPUTexelCopyTextureInfo *self);
 
 void GPUTexelCopyTextureInfo_set_texture(GPUTexelCopyTextureInfo* self, GPUTexture * value);
 
-jb_Any GPUTexelCopyTextureInfo_mipLevel( const GPUTexelCopyTextureInfo *self);
+jb_Any GPUTexelCopyTextureInfo_mipLevel(const GPUTexelCopyTextureInfo *self);
 
 void GPUTexelCopyTextureInfo_set_mipLevel(GPUTexelCopyTextureInfo* self, jb_Any * value);
 
-jb_Any GPUTexelCopyTextureInfo_origin( const GPUTexelCopyTextureInfo *self);
+jb_Any GPUTexelCopyTextureInfo_origin(const GPUTexelCopyTextureInfo *self);
 
 void GPUTexelCopyTextureInfo_set_origin(GPUTexelCopyTextureInfo* self, jb_Any * value);
 
-GPUTextureAspect GPUTexelCopyTextureInfo_aspect( const GPUTexelCopyTextureInfo *self);
+GPUTextureAspect GPUTexelCopyTextureInfo_aspect(const GPUTexelCopyTextureInfo *self);
 
 void GPUTexelCopyTextureInfo_set_aspect(GPUTexelCopyTextureInfo* self, GPUTextureAspect * value);
 DECLARE_EMLITE_TYPE(GPUCommandBufferDescriptor, em_Val);
@@ -96,7 +96,7 @@ GPUCommandBuffer GPUCommandEncoder_finish0(GPUCommandEncoder* self );
 
 GPUCommandBuffer GPUCommandEncoder_finish1(GPUCommandEncoder* self , GPUCommandBufferDescriptor * descriptor);
 
-jb_USVString GPUCommandEncoder_label( const GPUCommandEncoder *self);
+jb_USVString GPUCommandEncoder_label(const GPUCommandEncoder *self);
 
 void GPUCommandEncoder_set_label(GPUCommandEncoder* self, jb_USVString * value);
 

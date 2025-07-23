@@ -25,82 +25,82 @@ typedef struct XRWebGLLayer XRWebGLLayer;
 
 DECLARE_EMLITE_TYPE(XRRenderStateInit, em_Val);
 
-double XRRenderStateInit_depthNear( const XRRenderStateInit *self);
+double XRRenderStateInit_depthNear(const XRRenderStateInit *self);
 
 void XRRenderStateInit_set_depthNear(XRRenderStateInit* self, double value);
 
-double XRRenderStateInit_depthFar( const XRRenderStateInit *self);
+double XRRenderStateInit_depthFar(const XRRenderStateInit *self);
 
 void XRRenderStateInit_set_depthFar(XRRenderStateInit* self, double value);
 
-bool XRRenderStateInit_passthroughFullyObscured( const XRRenderStateInit *self);
+bool XRRenderStateInit_passthroughFullyObscured(const XRRenderStateInit *self);
 
 void XRRenderStateInit_set_passthroughFullyObscured(XRRenderStateInit* self, bool value);
 
-double XRRenderStateInit_inlineVerticalFieldOfView( const XRRenderStateInit *self);
+double XRRenderStateInit_inlineVerticalFieldOfView(const XRRenderStateInit *self);
 
 void XRRenderStateInit_set_inlineVerticalFieldOfView(XRRenderStateInit* self, double value);
 
-XRWebGLLayer XRRenderStateInit_baseLayer( const XRRenderStateInit *self);
+XRWebGLLayer XRRenderStateInit_baseLayer(const XRRenderStateInit *self);
 
 void XRRenderStateInit_set_baseLayer(XRRenderStateInit* self, XRWebGLLayer * value);
 
-jb_Sequence XRRenderStateInit_layers( const XRRenderStateInit *self);
+jb_Sequence XRRenderStateInit_layers(const XRRenderStateInit *self);
 
 void XRRenderStateInit_set_layers(XRRenderStateInit* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(XRDOMOverlayState, em_Val);
 
-XRDOMOverlayType XRDOMOverlayState_type( const XRDOMOverlayState *self);
+XRDOMOverlayType XRDOMOverlayState_type(const XRDOMOverlayState *self);
 
 void XRDOMOverlayState_set_type(XRDOMOverlayState* self, XRDOMOverlayType * value);
 DECLARE_EMLITE_TYPE(XRHitTestOptionsInit, em_Val);
 
-XRSpace XRHitTestOptionsInit_space( const XRHitTestOptionsInit *self);
+XRSpace XRHitTestOptionsInit_space(const XRHitTestOptionsInit *self);
 
 void XRHitTestOptionsInit_set_space(XRHitTestOptionsInit* self, XRSpace * value);
 
-jb_Sequence XRHitTestOptionsInit_entityTypes( const XRHitTestOptionsInit *self);
+jb_Sequence XRHitTestOptionsInit_entityTypes(const XRHitTestOptionsInit *self);
 
 void XRHitTestOptionsInit_set_entityTypes(XRHitTestOptionsInit* self, jb_Sequence * value);
 
-XRRay XRHitTestOptionsInit_offsetRay( const XRHitTestOptionsInit *self);
+XRRay XRHitTestOptionsInit_offsetRay(const XRHitTestOptionsInit *self);
 
 void XRHitTestOptionsInit_set_offsetRay(XRHitTestOptionsInit* self, XRRay * value);
 DECLARE_EMLITE_TYPE(XRTransientInputHitTestOptionsInit, em_Val);
 
-jb_DOMString XRTransientInputHitTestOptionsInit_profile( const XRTransientInputHitTestOptionsInit *self);
+jb_DOMString XRTransientInputHitTestOptionsInit_profile(const XRTransientInputHitTestOptionsInit *self);
 
 void XRTransientInputHitTestOptionsInit_set_profile(XRTransientInputHitTestOptionsInit* self, jb_DOMString * value);
 
-jb_Sequence XRTransientInputHitTestOptionsInit_entityTypes( const XRTransientInputHitTestOptionsInit *self);
+jb_Sequence XRTransientInputHitTestOptionsInit_entityTypes(const XRTransientInputHitTestOptionsInit *self);
 
 void XRTransientInputHitTestOptionsInit_set_entityTypes(XRTransientInputHitTestOptionsInit* self, jb_Sequence * value);
 
-XRRay XRTransientInputHitTestOptionsInit_offsetRay( const XRTransientInputHitTestOptionsInit *self);
+XRRay XRTransientInputHitTestOptionsInit_offsetRay(const XRTransientInputHitTestOptionsInit *self);
 
 void XRTransientInputHitTestOptionsInit_set_offsetRay(XRTransientInputHitTestOptionsInit* self, XRRay * value);
 DECLARE_EMLITE_TYPE(XRLightProbeInit, em_Val);
 
-XRReflectionFormat XRLightProbeInit_reflectionFormat( const XRLightProbeInit *self);
+XRReflectionFormat XRLightProbeInit_reflectionFormat(const XRLightProbeInit *self);
 
 void XRLightProbeInit_set_reflectionFormat(XRLightProbeInit* self, XRReflectionFormat * value);
 DECLARE_EMLITE_TYPE(XRSession, EventTarget);
 
-XRVisibilityState XRSession_visibilityState( const XRSession *self);
+XRVisibilityState XRSession_visibilityState(const XRSession *self);
 
-float XRSession_frameRate( const XRSession *self);
+float XRSession_frameRate(const XRSession *self);
 
-jb_Float32Array XRSession_supportedFrameRates( const XRSession *self);
+jb_Float32Array XRSession_supportedFrameRates(const XRSession *self);
 
-XRRenderState XRSession_renderState( const XRSession *self);
+XRRenderState XRSession_renderState(const XRSession *self);
 
-XRInputSourceArray XRSession_inputSources( const XRSession *self);
+XRInputSourceArray XRSession_inputSources(const XRSession *self);
 
-XRInputSourceArray XRSession_trackedSources( const XRSession *self);
+XRInputSourceArray XRSession_trackedSources(const XRSession *self);
 
-jb_FrozenArray XRSession_enabledFeatures( const XRSession *self);
+jb_FrozenArray XRSession_enabledFeatures(const XRSession *self);
 
-bool XRSession_isSystemKeyboardSupported( const XRSession *self);
+bool XRSession_isSystemKeyboardSupported(const XRSession *self);
 
 jb_Undefined XRSession_updateRenderState0(XRSession* self );
 
@@ -116,69 +116,69 @@ jb_Undefined XRSession_cancelAnimationFrame(XRSession* self , unsigned long hand
 
 jb_Promise XRSession_end(XRSession* self );
 
-jb_Any XRSession_onend( const XRSession *self);
+jb_Any XRSession_onend(const XRSession *self);
 
 void XRSession_set_onend(XRSession* self, jb_Any * value);
 
-jb_Any XRSession_oninputsourceschange( const XRSession *self);
+jb_Any XRSession_oninputsourceschange(const XRSession *self);
 
 void XRSession_set_oninputsourceschange(XRSession* self, jb_Any * value);
 
-jb_Any XRSession_onselect( const XRSession *self);
+jb_Any XRSession_onselect(const XRSession *self);
 
 void XRSession_set_onselect(XRSession* self, jb_Any * value);
 
-jb_Any XRSession_onselectstart( const XRSession *self);
+jb_Any XRSession_onselectstart(const XRSession *self);
 
 void XRSession_set_onselectstart(XRSession* self, jb_Any * value);
 
-jb_Any XRSession_onselectend( const XRSession *self);
+jb_Any XRSession_onselectend(const XRSession *self);
 
 void XRSession_set_onselectend(XRSession* self, jb_Any * value);
 
-jb_Any XRSession_onsqueeze( const XRSession *self);
+jb_Any XRSession_onsqueeze(const XRSession *self);
 
 void XRSession_set_onsqueeze(XRSession* self, jb_Any * value);
 
-jb_Any XRSession_onsqueezestart( const XRSession *self);
+jb_Any XRSession_onsqueezestart(const XRSession *self);
 
 void XRSession_set_onsqueezestart(XRSession* self, jb_Any * value);
 
-jb_Any XRSession_onsqueezeend( const XRSession *self);
+jb_Any XRSession_onsqueezeend(const XRSession *self);
 
 void XRSession_set_onsqueezeend(XRSession* self, jb_Any * value);
 
-jb_Any XRSession_onvisibilitychange( const XRSession *self);
+jb_Any XRSession_onvisibilitychange(const XRSession *self);
 
 void XRSession_set_onvisibilitychange(XRSession* self, jb_Any * value);
 
-jb_Any XRSession_onframeratechange( const XRSession *self);
+jb_Any XRSession_onframeratechange(const XRSession *self);
 
 void XRSession_set_onframeratechange(XRSession* self, jb_Any * value);
 
-jb_FrozenArray XRSession_persistentAnchors( const XRSession *self);
+jb_FrozenArray XRSession_persistentAnchors(const XRSession *self);
 
 jb_Promise XRSession_restorePersistentAnchor(XRSession* self , jb_DOMString * uuid);
 
 jb_Promise XRSession_deletePersistentAnchor(XRSession* self , jb_DOMString * uuid);
 
-XREnvironmentBlendMode XRSession_environmentBlendMode( const XRSession *self);
+XREnvironmentBlendMode XRSession_environmentBlendMode(const XRSession *self);
 
-XRInteractionMode XRSession_interactionMode( const XRSession *self);
+XRInteractionMode XRSession_interactionMode(const XRSession *self);
 
-XRDepthUsage XRSession_depthUsage( const XRSession *self);
+XRDepthUsage XRSession_depthUsage(const XRSession *self);
 
-XRDepthDataFormat XRSession_depthDataFormat( const XRSession *self);
+XRDepthDataFormat XRSession_depthDataFormat(const XRSession *self);
 
-XRDepthType XRSession_depthType( const XRSession *self);
+XRDepthType XRSession_depthType(const XRSession *self);
 
-bool XRSession_depthActive( const XRSession *self);
+bool XRSession_depthActive(const XRSession *self);
 
 jb_Undefined XRSession_pauseDepthSensing(XRSession* self );
 
 jb_Undefined XRSession_resumeDepthSensing(XRSession* self );
 
-XRDOMOverlayState XRSession_domOverlayState( const XRSession *self);
+XRDOMOverlayState XRSession_domOverlayState(const XRSession *self);
 
 jb_Promise XRSession_requestHitTestSource(XRSession* self , XRHitTestOptionsInit * options);
 
@@ -188,6 +188,6 @@ jb_Promise XRSession_requestLightProbe0(XRSession* self );
 
 jb_Promise XRSession_requestLightProbe1(XRSession* self , XRLightProbeInit * options);
 
-XRReflectionFormat XRSession_preferredReflectionFormat( const XRSession *self);
+XRReflectionFormat XRSession_preferredReflectionFormat(const XRSession *self);
 
 jb_Promise XRSession_initiateRoomCapture(XRSession* self );

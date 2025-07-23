@@ -12,6 +12,6 @@ MediaQueryListEvent MediaQueryListEvent_new0(jb_CSSOMString * type);
 
 MediaQueryListEvent MediaQueryListEvent_new1(jb_CSSOMString * type, jb_Any * eventInitDict);
 
-jb_CSSOMString MediaQueryListEvent_media( const MediaQueryListEvent *self);
+jb_CSSOMString MediaQueryListEvent_media(const MediaQueryListEvent *self);
 
-bool MediaQueryListEvent_matches( const MediaQueryListEvent *self);
+bool MediaQueryListEvent_matches(const MediaQueryListEvent *self);

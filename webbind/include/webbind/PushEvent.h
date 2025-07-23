@@ -14,4 +14,4 @@ PushEvent PushEvent_new0(jb_DOMString * type);
 
 PushEvent PushEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-PushMessageData PushEvent_data( const PushEvent *self);
+PushMessageData PushEvent_data(const PushEvent *self);

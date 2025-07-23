@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(HIDConnectionEvent, Event);
 
 HIDConnectionEvent HIDConnectionEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-HIDDevice HIDConnectionEvent_device( const HIDConnectionEvent *self);
+HIDDevice HIDConnectionEvent_device(const HIDConnectionEvent *self);

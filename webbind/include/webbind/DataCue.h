@@ -12,8 +12,8 @@ DataCue DataCue_new0(double startTime, double endTime, jb_Any * value);
 
 DataCue DataCue_new1(double startTime, double endTime, jb_Any * value, jb_DOMString * type);
 
-jb_Any DataCue_value( const DataCue *self);
+jb_Any DataCue_value(const DataCue *self);
 
 void DataCue_set_value(DataCue* self, jb_Any * value);
 
-jb_DOMString DataCue_type( const DataCue *self);
+jb_DOMString DataCue_type(const DataCue *self);

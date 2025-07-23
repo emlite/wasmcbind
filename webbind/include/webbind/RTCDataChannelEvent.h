@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(RTCDataChannelEvent, Event);
 
 RTCDataChannelEvent RTCDataChannelEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-RTCDataChannel RTCDataChannelEvent_channel( const RTCDataChannelEvent *self);
+RTCDataChannel RTCDataChannelEvent_channel(const RTCDataChannelEvent *self);

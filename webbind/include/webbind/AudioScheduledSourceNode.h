@@ -8,7 +8,7 @@
 
 DECLARE_EMLITE_TYPE(AudioScheduledSourceNode, AudioNode);
 
-jb_Any AudioScheduledSourceNode_onended( const AudioScheduledSourceNode *self);
+jb_Any AudioScheduledSourceNode_onended(const AudioScheduledSourceNode *self);
 
 void AudioScheduledSourceNode_set_onended(AudioScheduledSourceNode* self, jb_Any * value);
 

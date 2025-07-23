@@ -9,7 +9,7 @@ typedef struct Attr Attr;
 
 DECLARE_EMLITE_TYPE(NamedNodeMap, em_Val);
 
-unsigned long NamedNodeMap_length( const NamedNodeMap *self);
+unsigned long NamedNodeMap_length(const NamedNodeMap *self);
 
 Attr NamedNodeMap_item(NamedNodeMap* self , unsigned long index);
 

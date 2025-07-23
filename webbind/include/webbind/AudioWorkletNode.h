@@ -16,10 +16,10 @@ AudioWorkletNode AudioWorkletNode_new0(BaseAudioContext * context, jb_DOMString 
 
 AudioWorkletNode AudioWorkletNode_new1(BaseAudioContext * context, jb_DOMString * name, jb_Any * options);
 
-AudioParamMap AudioWorkletNode_parameters( const AudioWorkletNode *self);
+AudioParamMap AudioWorkletNode_parameters(const AudioWorkletNode *self);
 
-jb_Any AudioWorkletNode_port( const AudioWorkletNode *self);
+jb_Any AudioWorkletNode_port(const AudioWorkletNode *self);
 
-jb_Any AudioWorkletNode_onprocessorerror( const AudioWorkletNode *self);
+jb_Any AudioWorkletNode_onprocessorerror(const AudioWorkletNode *self);
 
 void AudioWorkletNode_set_onprocessorerror(AudioWorkletNode* self, jb_Any * value);

@@ -9,7 +9,7 @@ typedef struct BackgroundSyncOptions BackgroundSyncOptions;
 
 DECLARE_EMLITE_TYPE(BackgroundSyncOptions, em_Val);
 
-long long BackgroundSyncOptions_minInterval( const BackgroundSyncOptions *self);
+long long BackgroundSyncOptions_minInterval(const BackgroundSyncOptions *self);
 
 void BackgroundSyncOptions_set_minInterval(BackgroundSyncOptions* self, long long value);
 DECLARE_EMLITE_TYPE(PeriodicSyncManager, em_Val);

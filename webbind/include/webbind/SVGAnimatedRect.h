@@ -10,6 +10,6 @@ typedef struct DOMRectReadOnly DOMRectReadOnly;
 
 DECLARE_EMLITE_TYPE(SVGAnimatedRect, em_Val);
 
-DOMRect SVGAnimatedRect_baseVal( const SVGAnimatedRect *self);
+DOMRect SVGAnimatedRect_baseVal(const SVGAnimatedRect *self);
 
-DOMRectReadOnly SVGAnimatedRect_animVal( const SVGAnimatedRect *self);
+DOMRectReadOnly SVGAnimatedRect_animVal(const SVGAnimatedRect *self);

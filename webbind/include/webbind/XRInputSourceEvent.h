@@ -13,6 +13,6 @@ DECLARE_EMLITE_TYPE(XRInputSourceEvent, Event);
 
 XRInputSourceEvent XRInputSourceEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-XRFrame XRInputSourceEvent_frame( const XRInputSourceEvent *self);
+XRFrame XRInputSourceEvent_frame(const XRInputSourceEvent *self);
 
-XRInputSource XRInputSourceEvent_inputSource( const XRInputSourceEvent *self);
+XRInputSource XRInputSourceEvent_inputSource(const XRInputSourceEvent *self);

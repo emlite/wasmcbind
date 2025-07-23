@@ -14,6 +14,6 @@ CSSParserDeclaration CSSParserDeclaration_new0(jb_DOMString * name);
 
 CSSParserDeclaration CSSParserDeclaration_new1(jb_DOMString * name, jb_Sequence * body);
 
-jb_DOMString CSSParserDeclaration_name( const CSSParserDeclaration *self);
+jb_DOMString CSSParserDeclaration_name(const CSSParserDeclaration *self);
 
-jb_FrozenArray CSSParserDeclaration_body( const CSSParserDeclaration *self);
+jb_FrozenArray CSSParserDeclaration_body(const CSSParserDeclaration *self);

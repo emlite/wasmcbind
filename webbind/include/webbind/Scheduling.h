@@ -9,7 +9,7 @@ typedef struct IsInputPendingOptions IsInputPendingOptions;
 
 DECLARE_EMLITE_TYPE(IsInputPendingOptions, em_Val);
 
-bool IsInputPendingOptions_includeContinuous( const IsInputPendingOptions *self);
+bool IsInputPendingOptions_includeContinuous(const IsInputPendingOptions *self);
 
 void IsInputPendingOptions_set_includeContinuous(IsInputPendingOptions* self, bool value);
 DECLARE_EMLITE_TYPE(Scheduling, em_Val);

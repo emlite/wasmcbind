@@ -12,10 +12,10 @@ DECLARE_EMLITE_TYPE(HTMLLabelElement, HTMLElement);
 
 HTMLLabelElement HTMLLabelElement_new();
 
-HTMLFormElement HTMLLabelElement_form( const HTMLLabelElement *self);
+HTMLFormElement HTMLLabelElement_form(const HTMLLabelElement *self);
 
-jb_DOMString HTMLLabelElement_htmlFor( const HTMLLabelElement *self);
+jb_DOMString HTMLLabelElement_htmlFor(const HTMLLabelElement *self);
 
 void HTMLLabelElement_set_htmlFor(HTMLLabelElement* self, jb_DOMString * value);
 
-HTMLElement HTMLLabelElement_control( const HTMLLabelElement *self);
+HTMLElement HTMLLabelElement_control(const HTMLLabelElement *self);

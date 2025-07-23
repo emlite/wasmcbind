@@ -9,13 +9,13 @@ DECLARE_EMLITE_TYPE(AudioBuffer, em_Val);
 
 AudioBuffer AudioBuffer_new(jb_Any * options);
 
-float AudioBuffer_sampleRate( const AudioBuffer *self);
+float AudioBuffer_sampleRate(const AudioBuffer *self);
 
-unsigned long AudioBuffer_length( const AudioBuffer *self);
+unsigned long AudioBuffer_length(const AudioBuffer *self);
 
-double AudioBuffer_duration( const AudioBuffer *self);
+double AudioBuffer_duration(const AudioBuffer *self);
 
-unsigned long AudioBuffer_numberOfChannels( const AudioBuffer *self);
+unsigned long AudioBuffer_numberOfChannels(const AudioBuffer *self);
 
 jb_Float32Array AudioBuffer_getChannelData(AudioBuffer* self , unsigned long channel);
 

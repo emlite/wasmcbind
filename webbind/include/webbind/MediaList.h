@@ -7,11 +7,11 @@
 
 DECLARE_EMLITE_TYPE(MediaList, em_Val);
 
-jb_CSSOMString MediaList_mediaText( const MediaList *self);
+jb_CSSOMString MediaList_mediaText(const MediaList *self);
 
 void MediaList_set_mediaText(MediaList* self, jb_CSSOMString * value);
 
-unsigned long MediaList_length( const MediaList *self);
+unsigned long MediaList_length(const MediaList *self);
 
 jb_CSSOMString MediaList_item(MediaList* self , unsigned long index);
 

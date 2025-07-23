@@ -7,7 +7,7 @@
 
 DECLARE_EMLITE_TYPE(DOMStringList, em_Val);
 
-unsigned long DOMStringList_length( const DOMStringList *self);
+unsigned long DOMStringList_length(const DOMStringList *self);
 
 jb_DOMString DOMStringList_item(DOMStringList* self , unsigned long index);
 

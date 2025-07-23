@@ -11,27 +11,27 @@ typedef struct Event Event;
 
 DECLARE_EMLITE_TYPE(FenceEvent, em_Val);
 
-jb_DOMString FenceEvent_eventType( const FenceEvent *self);
+jb_DOMString FenceEvent_eventType(const FenceEvent *self);
 
 void FenceEvent_set_eventType(FenceEvent* self, jb_DOMString * value);
 
-jb_DOMString FenceEvent_eventData( const FenceEvent *self);
+jb_DOMString FenceEvent_eventData(const FenceEvent *self);
 
 void FenceEvent_set_eventData(FenceEvent* self, jb_DOMString * value);
 
-jb_Sequence FenceEvent_destination( const FenceEvent *self);
+jb_Sequence FenceEvent_destination(const FenceEvent *self);
 
 void FenceEvent_set_destination(FenceEvent* self, jb_Sequence * value);
 
-bool FenceEvent_crossOriginExposed( const FenceEvent *self);
+bool FenceEvent_crossOriginExposed(const FenceEvent *self);
 
 void FenceEvent_set_crossOriginExposed(FenceEvent* self, bool value);
 
-bool FenceEvent_once( const FenceEvent *self);
+bool FenceEvent_once(const FenceEvent *self);
 
 void FenceEvent_set_once(FenceEvent* self, bool value);
 
-jb_USVString FenceEvent_destinationURL( const FenceEvent *self);
+jb_USVString FenceEvent_destinationURL(const FenceEvent *self);
 
 void FenceEvent_set_destinationURL(FenceEvent* self, jb_USVString * value);
 DECLARE_EMLITE_TYPE(Fence, em_Val);

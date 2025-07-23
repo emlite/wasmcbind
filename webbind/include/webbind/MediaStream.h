@@ -13,7 +13,7 @@ DECLARE_EMLITE_TYPE(MediaStream, EventTarget);
 
 MediaStream MediaStream_new(jb_Sequence * tracks);
 
-jb_DOMString MediaStream_id( const MediaStream *self);
+jb_DOMString MediaStream_id(const MediaStream *self);
 
 jb_Sequence MediaStream_getAudioTracks(MediaStream* self );
 
@@ -29,12 +29,12 @@ jb_Undefined MediaStream_removeTrack(MediaStream* self , MediaStreamTrack * trac
 
 MediaStream MediaStream_clone(MediaStream* self );
 
-bool MediaStream_active( const MediaStream *self);
+bool MediaStream_active(const MediaStream *self);
 
-jb_Any MediaStream_onaddtrack( const MediaStream *self);
+jb_Any MediaStream_onaddtrack(const MediaStream *self);
 
 void MediaStream_set_onaddtrack(MediaStream* self, jb_Any * value);
 
-jb_Any MediaStream_onremovetrack( const MediaStream *self);
+jb_Any MediaStream_onremovetrack(const MediaStream *self);
 
 void MediaStream_set_onremovetrack(MediaStream* self, jb_Any * value);

@@ -11,11 +11,11 @@ typedef struct FileSystemFlags FileSystemFlags;
 
 DECLARE_EMLITE_TYPE(FileSystemFlags, em_Val);
 
-bool FileSystemFlags_create( const FileSystemFlags *self);
+bool FileSystemFlags_create(const FileSystemFlags *self);
 
 void FileSystemFlags_set_create(FileSystemFlags* self, bool value);
 
-bool FileSystemFlags_exclusive( const FileSystemFlags *self);
+bool FileSystemFlags_exclusive(const FileSystemFlags *self);
 
 void FileSystemFlags_set_exclusive(FileSystemFlags* self, bool value);
 DECLARE_EMLITE_TYPE(FileSystemDirectoryEntry, FileSystemEntry);

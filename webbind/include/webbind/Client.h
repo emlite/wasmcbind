@@ -8,16 +8,16 @@
 
 DECLARE_EMLITE_TYPE(Client, em_Val);
 
-jb_USVString Client_url( const Client *self);
+jb_USVString Client_url(const Client *self);
 
-FrameType Client_frameType( const Client *self);
+FrameType Client_frameType(const Client *self);
 
-jb_DOMString Client_id( const Client *self);
+jb_DOMString Client_id(const Client *self);
 
-ClientType Client_type( const Client *self);
+ClientType Client_type(const Client *self);
 
 jb_Undefined Client_postMessage0(Client* self , jb_Any * message);
 
 jb_Undefined Client_postMessage1(Client* self , jb_Any * message, StructuredSerializeOptions * options);
 
-ClientLifecycleState Client_lifecycleState( const Client *self);
+ClientLifecycleState Client_lifecycleState(const Client *self);

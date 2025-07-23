@@ -12,4 +12,4 @@ WebGLContextEvent WebGLContextEvent_new0(jb_DOMString * type);
 
 WebGLContextEvent WebGLContextEvent_new1(jb_DOMString * type, jb_Any * eventInit);
 
-jb_DOMString WebGLContextEvent_statusMessage( const WebGLContextEvent *self);
+jb_DOMString WebGLContextEvent_statusMessage(const WebGLContextEvent *self);

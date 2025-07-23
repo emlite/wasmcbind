@@ -11,9 +11,9 @@ typedef struct BluetoothRemoteGATTService BluetoothRemoteGATTService;
 
 DECLARE_EMLITE_TYPE(BluetoothRemoteGATTServer, em_Val);
 
-BluetoothDevice BluetoothRemoteGATTServer_device( const BluetoothRemoteGATTServer *self);
+BluetoothDevice BluetoothRemoteGATTServer_device(const BluetoothRemoteGATTServer *self);
 
-bool BluetoothRemoteGATTServer_connected( const BluetoothRemoteGATTServer *self);
+bool BluetoothRemoteGATTServer_connected(const BluetoothRemoteGATTServer *self);
 
 jb_Promise BluetoothRemoteGATTServer_connect(BluetoothRemoteGATTServer* self );
 

@@ -14,4 +14,4 @@ GPUPipelineError GPUPipelineError_new1(jb_DOMString * message);
 
 GPUPipelineError GPUPipelineError_new2(jb_DOMString * message, jb_Any * options);
 
-GPUPipelineErrorReason GPUPipelineError_reason( const GPUPipelineError *self);
+GPUPipelineErrorReason GPUPipelineError_reason(const GPUPipelineError *self);

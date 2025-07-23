@@ -10,6 +10,6 @@ typedef struct HTMLCanvasElement HTMLCanvasElement;
 
 DECLARE_EMLITE_TYPE(CanvasCaptureMediaStreamTrack, MediaStreamTrack);
 
-HTMLCanvasElement CanvasCaptureMediaStreamTrack_canvas( const CanvasCaptureMediaStreamTrack *self);
+HTMLCanvasElement CanvasCaptureMediaStreamTrack_canvas(const CanvasCaptureMediaStreamTrack *self);
 
 jb_Undefined CanvasCaptureMediaStreamTrack_requestFrame(CanvasCaptureMediaStreamTrack* self );

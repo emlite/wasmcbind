@@ -14,6 +14,6 @@ RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new0(jb_DOMString * type);
 
 RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-RTCIceCandidate RTCPeerConnectionIceEvent_candidate( const RTCPeerConnectionIceEvent *self);
+RTCIceCandidate RTCPeerConnectionIceEvent_candidate(const RTCPeerConnectionIceEvent *self);
 
-jb_USVString RTCPeerConnectionIceEvent_url( const RTCPeerConnectionIceEvent *self);
+jb_USVString RTCPeerConnectionIceEvent_url(const RTCPeerConnectionIceEvent *self);

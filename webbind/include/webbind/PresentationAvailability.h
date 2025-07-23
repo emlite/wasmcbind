@@ -8,8 +8,8 @@
 
 DECLARE_EMLITE_TYPE(PresentationAvailability, EventTarget);
 
-bool PresentationAvailability_value( const PresentationAvailability *self);
+bool PresentationAvailability_value(const PresentationAvailability *self);
 
-jb_Any PresentationAvailability_onchange( const PresentationAvailability *self);
+jb_Any PresentationAvailability_onchange(const PresentationAvailability *self);
 
 void PresentationAvailability_set_onchange(PresentationAvailability* self, jb_Any * value);

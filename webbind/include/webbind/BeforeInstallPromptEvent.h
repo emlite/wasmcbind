@@ -10,7 +10,7 @@ typedef struct PromptResponseObject PromptResponseObject;
 
 DECLARE_EMLITE_TYPE(PromptResponseObject, em_Val);
 
-AppBannerPromptOutcome PromptResponseObject_userChoice( const PromptResponseObject *self);
+AppBannerPromptOutcome PromptResponseObject_userChoice(const PromptResponseObject *self);
 
 void PromptResponseObject_set_userChoice(PromptResponseObject* self, AppBannerPromptOutcome * value);
 DECLARE_EMLITE_TYPE(BeforeInstallPromptEvent, Event);

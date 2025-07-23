@@ -11,11 +11,11 @@ typedef struct ObservableEventListenerOptions ObservableEventListenerOptions;
 
 DECLARE_EMLITE_TYPE(ObservableEventListenerOptions, em_Val);
 
-bool ObservableEventListenerOptions_capture( const ObservableEventListenerOptions *self);
+bool ObservableEventListenerOptions_capture(const ObservableEventListenerOptions *self);
 
 void ObservableEventListenerOptions_set_capture(ObservableEventListenerOptions* self, bool value);
 
-bool ObservableEventListenerOptions_passive( const ObservableEventListenerOptions *self);
+bool ObservableEventListenerOptions_passive(const ObservableEventListenerOptions *self);
 
 void ObservableEventListenerOptions_set_passive(ObservableEventListenerOptions* self, bool value);
 DECLARE_EMLITE_TYPE(EventTarget, em_Val);

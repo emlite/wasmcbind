@@ -13,18 +13,18 @@ DECLARE_EMLITE_TYPE(HTMLStyleElement, HTMLElement);
 
 HTMLStyleElement HTMLStyleElement_new();
 
-bool HTMLStyleElement_disabled( const HTMLStyleElement *self);
+bool HTMLStyleElement_disabled(const HTMLStyleElement *self);
 
 void HTMLStyleElement_set_disabled(HTMLStyleElement* self, bool value);
 
-jb_DOMString HTMLStyleElement_media( const HTMLStyleElement *self);
+jb_DOMString HTMLStyleElement_media(const HTMLStyleElement *self);
 
 void HTMLStyleElement_set_media(HTMLStyleElement* self, jb_DOMString * value);
 
-DOMTokenList HTMLStyleElement_blocking( const HTMLStyleElement *self);
+DOMTokenList HTMLStyleElement_blocking(const HTMLStyleElement *self);
 
-jb_DOMString HTMLStyleElement_type( const HTMLStyleElement *self);
+jb_DOMString HTMLStyleElement_type(const HTMLStyleElement *self);
 
 void HTMLStyleElement_set_type(HTMLStyleElement* self, jb_DOMString * value);
 
-CSSStyleSheet HTMLStyleElement_sheet( const HTMLStyleElement *self);
+CSSStyleSheet HTMLStyleElement_sheet(const HTMLStyleElement *self);

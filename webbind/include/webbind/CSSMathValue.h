@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(CSSMathValue, CSSNumericValue);
 
-CSSMathOperator CSSMathValue_operator_( const CSSMathValue *self);
+CSSMathOperator CSSMathValue_operator_(const CSSMathValue *self);

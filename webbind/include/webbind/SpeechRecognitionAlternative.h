@@ -7,6 +7,6 @@
 
 DECLARE_EMLITE_TYPE(SpeechRecognitionAlternative, em_Val);
 
-jb_DOMString SpeechRecognitionAlternative_transcript( const SpeechRecognitionAlternative *self);
+jb_DOMString SpeechRecognitionAlternative_transcript(const SpeechRecognitionAlternative *self);
 
-float SpeechRecognitionAlternative_confidence( const SpeechRecognitionAlternative *self);
+float SpeechRecognitionAlternative_confidence(const SpeechRecognitionAlternative *self);

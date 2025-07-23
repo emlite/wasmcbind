@@ -13,4 +13,4 @@ Instance Instance_new0(Module * module_);
 
 Instance Instance_new1(Module * module_, jb_Object * importObject);
 
-jb_Object Instance_exports( const Instance *self);
+jb_Object Instance_exports(const Instance *self);

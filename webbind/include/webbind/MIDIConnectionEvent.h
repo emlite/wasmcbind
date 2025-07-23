@@ -14,4 +14,4 @@ MIDIConnectionEvent MIDIConnectionEvent_new0(jb_DOMString * type);
 
 MIDIConnectionEvent MIDIConnectionEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-MIDIPort MIDIConnectionEvent_port( const MIDIConnectionEvent *self);
+MIDIPort MIDIConnectionEvent_port(const MIDIConnectionEvent *self);

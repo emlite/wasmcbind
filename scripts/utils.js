@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import {
   builtinNominals,
   cppKeywords,
+  IGNOREDFILES,
   missingDictFallback,
 } from "./ignored.js";
 import { enums, typedefs, callbacks } from "./globals.js";
@@ -23,8 +24,10 @@ function pair(name) {
 
 export function writePair(name, hdrLines, srcLines) {
   // if (name !== "AbortSignal") return;
-  const header = hdrLines.join("\n");
   const { h, c } = pair(name);
+  if (IGNOREDFILES.has(path.basename(h)) || IGNOREDFILES.has(path.basename(c)))
+    return; 
+  const header = hdrLines.join("\n");
   fs.appendFileSync(h, header + "\n", "utf8");
   fs.appendFileSync(c, srcLines.join("\n") + "\n", "utf8");
   //   console.log(`Parsed ${name}`);

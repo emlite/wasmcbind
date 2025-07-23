@@ -12,7 +12,7 @@ CustomEvent CustomEvent_new0(jb_DOMString * type);
 
 CustomEvent CustomEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_Any CustomEvent_detail( const CustomEvent *self);
+jb_Any CustomEvent_detail(const CustomEvent *self);
 
 jb_Undefined CustomEvent_initCustomEvent0(CustomEvent* self , jb_DOMString * type);
 

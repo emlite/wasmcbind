@@ -25,53 +25,53 @@ DOMMatrixReadOnly DOMMatrixReadOnly_fromFloat32Array(DOMMatrixReadOnly* self , j
 
 DOMMatrixReadOnly DOMMatrixReadOnly_fromFloat64Array(DOMMatrixReadOnly* self , jb_Float64Array * array64);
 
-double DOMMatrixReadOnly_a( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_a(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_b( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_b(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_c( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_c(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_d( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_d(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_e( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_e(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_f( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_f(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m11( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m11(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m12( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m12(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m13( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m13(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m14( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m14(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m21( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m21(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m22( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m22(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m23( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m23(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m24( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m24(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m31( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m31(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m32( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m32(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m33( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m33(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m34( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m34(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m41( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m41(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m42( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m42(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m43( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m43(const DOMMatrixReadOnly *self);
 
-double DOMMatrixReadOnly_m44( const DOMMatrixReadOnly *self);
+double DOMMatrixReadOnly_m44(const DOMMatrixReadOnly *self);
 
-bool DOMMatrixReadOnly_is2D( const DOMMatrixReadOnly *self);
+bool DOMMatrixReadOnly_is2D(const DOMMatrixReadOnly *self);
 
-bool DOMMatrixReadOnly_isIdentity( const DOMMatrixReadOnly *self);
+bool DOMMatrixReadOnly_isIdentity(const DOMMatrixReadOnly *self);
 
 DOMMatrix DOMMatrixReadOnly_translate0(DOMMatrixReadOnly* self );
 

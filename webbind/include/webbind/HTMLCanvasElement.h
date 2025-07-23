@@ -13,11 +13,11 @@ DECLARE_EMLITE_TYPE(HTMLCanvasElement, HTMLElement);
 
 HTMLCanvasElement HTMLCanvasElement_new();
 
-unsigned long HTMLCanvasElement_width( const HTMLCanvasElement *self);
+unsigned long HTMLCanvasElement_width(const HTMLCanvasElement *self);
 
 void HTMLCanvasElement_set_width(HTMLCanvasElement* self, unsigned long value);
 
-unsigned long HTMLCanvasElement_height( const HTMLCanvasElement *self);
+unsigned long HTMLCanvasElement_height(const HTMLCanvasElement *self);
 
 void HTMLCanvasElement_set_height(HTMLCanvasElement* self, unsigned long value);
 

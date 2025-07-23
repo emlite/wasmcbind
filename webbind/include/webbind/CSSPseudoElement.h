@@ -15,11 +15,11 @@ typedef struct DOMPoint DOMPoint;
 
 DECLARE_EMLITE_TYPE(CSSPseudoElement, EventTarget);
 
-jb_CSSOMString CSSPseudoElement_type( const CSSPseudoElement *self);
+jb_CSSOMString CSSPseudoElement_type(const CSSPseudoElement *self);
 
-Element CSSPseudoElement_element( const CSSPseudoElement *self);
+Element CSSPseudoElement_element(const CSSPseudoElement *self);
 
-jb_Any CSSPseudoElement_parent( const CSSPseudoElement *self);
+jb_Any CSSPseudoElement_parent(const CSSPseudoElement *self);
 
 CSSPseudoElement CSSPseudoElement_pseudo(CSSPseudoElement* self , jb_CSSOMString * type);
 

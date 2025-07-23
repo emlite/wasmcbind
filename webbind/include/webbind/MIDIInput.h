@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(MIDIInput, MIDIPort);
 
-jb_Any MIDIInput_onmidimessage( const MIDIInput *self);
+jb_Any MIDIInput_onmidimessage(const MIDIInput *self);
 
 void MIDIInput_set_onmidimessage(MIDIInput* self, jb_Any * value);

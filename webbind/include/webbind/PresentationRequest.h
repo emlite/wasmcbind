@@ -19,6 +19,6 @@ jb_Promise PresentationRequest_reconnect(PresentationRequest* self , jb_USVStrin
 
 jb_Promise PresentationRequest_getAvailability(PresentationRequest* self );
 
-jb_Any PresentationRequest_onconnectionavailable( const PresentationRequest *self);
+jb_Any PresentationRequest_onconnectionavailable(const PresentationRequest *self);
 
 void PresentationRequest_set_onconnectionavailable(PresentationRequest* self, jb_Any * value);

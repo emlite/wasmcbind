@@ -15,49 +15,49 @@ MouseEvent MouseEvent_new0(jb_DOMString * type);
 
 MouseEvent MouseEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-long MouseEvent_screenX( const MouseEvent *self);
+long MouseEvent_screenX(const MouseEvent *self);
 
-long MouseEvent_screenY( const MouseEvent *self);
+long MouseEvent_screenY(const MouseEvent *self);
 
-long MouseEvent_clientX( const MouseEvent *self);
+long MouseEvent_clientX(const MouseEvent *self);
 
-long MouseEvent_clientY( const MouseEvent *self);
+long MouseEvent_clientY(const MouseEvent *self);
 
-long MouseEvent_layerX( const MouseEvent *self);
+long MouseEvent_layerX(const MouseEvent *self);
 
-long MouseEvent_layerY( const MouseEvent *self);
+long MouseEvent_layerY(const MouseEvent *self);
 
-bool MouseEvent_ctrlKey( const MouseEvent *self);
+bool MouseEvent_ctrlKey(const MouseEvent *self);
 
-bool MouseEvent_shiftKey( const MouseEvent *self);
+bool MouseEvent_shiftKey(const MouseEvent *self);
 
-bool MouseEvent_altKey( const MouseEvent *self);
+bool MouseEvent_altKey(const MouseEvent *self);
 
-bool MouseEvent_metaKey( const MouseEvent *self);
+bool MouseEvent_metaKey(const MouseEvent *self);
 
-short MouseEvent_button( const MouseEvent *self);
+short MouseEvent_button(const MouseEvent *self);
 
-unsigned short MouseEvent_buttons( const MouseEvent *self);
+unsigned short MouseEvent_buttons(const MouseEvent *self);
 
-EventTarget MouseEvent_relatedTarget( const MouseEvent *self);
+EventTarget MouseEvent_relatedTarget(const MouseEvent *self);
 
 bool MouseEvent_getModifierState(MouseEvent* self , jb_DOMString * keyArg);
 
-double MouseEvent_pageX( const MouseEvent *self);
+double MouseEvent_pageX(const MouseEvent *self);
 
-double MouseEvent_pageY( const MouseEvent *self);
+double MouseEvent_pageY(const MouseEvent *self);
 
-double MouseEvent_x( const MouseEvent *self);
+double MouseEvent_x(const MouseEvent *self);
 
-double MouseEvent_y( const MouseEvent *self);
+double MouseEvent_y(const MouseEvent *self);
 
-double MouseEvent_offsetX( const MouseEvent *self);
+double MouseEvent_offsetX(const MouseEvent *self);
 
-double MouseEvent_offsetY( const MouseEvent *self);
+double MouseEvent_offsetY(const MouseEvent *self);
 
-double MouseEvent_movementX( const MouseEvent *self);
+double MouseEvent_movementX(const MouseEvent *self);
 
-double MouseEvent_movementY( const MouseEvent *self);
+double MouseEvent_movementY(const MouseEvent *self);
 
 jb_Undefined MouseEvent_initMouseEvent0(MouseEvent* self , jb_DOMString * typeArg);
 

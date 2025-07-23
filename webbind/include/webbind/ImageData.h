@@ -15,12 +15,12 @@ ImageData ImageData_new1(jb_Any * data, unsigned long sw, unsigned long sh);
 
 ImageData ImageData_new2(jb_Any * data, unsigned long sw, unsigned long sh, ImageDataSettings * settings);
 
-unsigned long ImageData_width( const ImageData *self);
+unsigned long ImageData_width(const ImageData *self);
 
-unsigned long ImageData_height( const ImageData *self);
+unsigned long ImageData_height(const ImageData *self);
 
-jb_Any ImageData_data( const ImageData *self);
+jb_Any ImageData_data(const ImageData *self);
 
-ImageDataPixelFormat ImageData_pixelFormat( const ImageData *self);
+ImageDataPixelFormat ImageData_pixelFormat(const ImageData *self);
 
-PredefinedColorSpace ImageData_colorSpace( const ImageData *self);
+PredefinedColorSpace ImageData_colorSpace(const ImageData *self);

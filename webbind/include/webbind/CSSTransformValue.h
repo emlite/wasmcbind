@@ -13,8 +13,8 @@ DECLARE_EMLITE_TYPE(CSSTransformValue, CSSStyleValue);
 
 CSSTransformValue CSSTransformValue_new(jb_Sequence * transforms);
 
-unsigned long CSSTransformValue_length( const CSSTransformValue *self);
+unsigned long CSSTransformValue_length(const CSSTransformValue *self);
 
-bool CSSTransformValue_is2D( const CSSTransformValue *self);
+bool CSSTransformValue_is2D(const CSSTransformValue *self);
 
 DOMMatrix CSSTransformValue_toMatrix(CSSTransformValue* self );

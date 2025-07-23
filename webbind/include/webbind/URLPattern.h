@@ -9,39 +9,39 @@ typedef struct URLPatternResult URLPatternResult;
 
 DECLARE_EMLITE_TYPE(URLPatternResult, em_Val);
 
-jb_Sequence URLPatternResult_inputs( const URLPatternResult *self);
+jb_Sequence URLPatternResult_inputs(const URLPatternResult *self);
 
 void URLPatternResult_set_inputs(URLPatternResult* self, jb_Sequence * value);
 
-jb_Any URLPatternResult_protocol( const URLPatternResult *self);
+jb_Any URLPatternResult_protocol(const URLPatternResult *self);
 
 void URLPatternResult_set_protocol(URLPatternResult* self, jb_Any * value);
 
-jb_Any URLPatternResult_username( const URLPatternResult *self);
+jb_Any URLPatternResult_username(const URLPatternResult *self);
 
 void URLPatternResult_set_username(URLPatternResult* self, jb_Any * value);
 
-jb_Any URLPatternResult_password( const URLPatternResult *self);
+jb_Any URLPatternResult_password(const URLPatternResult *self);
 
 void URLPatternResult_set_password(URLPatternResult* self, jb_Any * value);
 
-jb_Any URLPatternResult_hostname( const URLPatternResult *self);
+jb_Any URLPatternResult_hostname(const URLPatternResult *self);
 
 void URLPatternResult_set_hostname(URLPatternResult* self, jb_Any * value);
 
-jb_Any URLPatternResult_port( const URLPatternResult *self);
+jb_Any URLPatternResult_port(const URLPatternResult *self);
 
 void URLPatternResult_set_port(URLPatternResult* self, jb_Any * value);
 
-jb_Any URLPatternResult_pathname( const URLPatternResult *self);
+jb_Any URLPatternResult_pathname(const URLPatternResult *self);
 
 void URLPatternResult_set_pathname(URLPatternResult* self, jb_Any * value);
 
-jb_Any URLPatternResult_search( const URLPatternResult *self);
+jb_Any URLPatternResult_search(const URLPatternResult *self);
 
 void URLPatternResult_set_search(URLPatternResult* self, jb_Any * value);
 
-jb_Any URLPatternResult_hash( const URLPatternResult *self);
+jb_Any URLPatternResult_hash(const URLPatternResult *self);
 
 void URLPatternResult_set_hash(URLPatternResult* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(URLPattern, em_Val);
@@ -64,20 +64,20 @@ URLPatternResult URLPattern_exec1(URLPattern* self , jb_Any * input);
 
 URLPatternResult URLPattern_exec2(URLPattern* self , jb_Any * input, jb_USVString * baseURL);
 
-jb_USVString URLPattern_protocol( const URLPattern *self);
+jb_USVString URLPattern_protocol(const URLPattern *self);
 
-jb_USVString URLPattern_username( const URLPattern *self);
+jb_USVString URLPattern_username(const URLPattern *self);
 
-jb_USVString URLPattern_password( const URLPattern *self);
+jb_USVString URLPattern_password(const URLPattern *self);
 
-jb_USVString URLPattern_hostname( const URLPattern *self);
+jb_USVString URLPattern_hostname(const URLPattern *self);
 
-jb_USVString URLPattern_port( const URLPattern *self);
+jb_USVString URLPattern_port(const URLPattern *self);
 
-jb_USVString URLPattern_pathname( const URLPattern *self);
+jb_USVString URLPattern_pathname(const URLPattern *self);
 
-jb_USVString URLPattern_search( const URLPattern *self);
+jb_USVString URLPattern_search(const URLPattern *self);
 
-jb_USVString URLPattern_hash( const URLPattern *self);
+jb_USVString URLPattern_hash(const URLPattern *self);
 
-bool URLPattern_hasRegExpGroups( const URLPattern *self);
+bool URLPattern_hasRegExpGroups(const URLPattern *self);

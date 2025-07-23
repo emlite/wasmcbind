@@ -25,15 +25,15 @@ function emitAttr(attr, owner, isStatic = false, parent0) {
   let parent = parent0 ? parent0 : "em_Val";
 
   H.push(
-    `\n${type} ${owner}_${fixIdent(attr.name)}(${constQual} ${owner} *self);`
+    `\n${type} ${owner}_${fixIdent(attr.name)}(const ${owner} *self);`
   );
 
   if (isStatic) {
     S.push(
-      `\n${type} ${owner}_${fixIdent(attr.name)}() {`,
-      `    return em_Val_as(${type}, em_Val_get(em_Val_global("${owner.toLowerCase()}", em_Val_from("${
+      `\n${type} ${owner}_${fixIdent(attr.name)}(const ${owner} *self) {`,
+      `    return em_Val_as(${type}, em_Val_get(em_Val_global("${owner.toLowerCase()}"), em_Val_from("${
         attr.name
-      }"))));`,
+      }")));`,
       `}`,
       ""
     );
@@ -126,7 +126,9 @@ function emitCtor(ctor, owner, parent) {
 
     S.push(
       `\n${owner} ${owner}_new${sz === 1 ? "" : i}(${declSrc}) {
-        em_Val vv = em_Val_new(em_Val_global("${owner}") ${callArgs.length === 0 ? "" : ", " + callArgs});
+        em_Val vv = em_Val_new(em_Val_global("${owner}") ${
+        callArgs.length === 0 ? "" : ", " + callArgs
+      });
         return ${owner}_from_val(&vv);
       }`,
       ""
@@ -236,33 +238,16 @@ export function generate(specAst) {
     const hdr = ["\n"];
     const src = ["\n"];
 
-    // for (const e of enums.values()) {
-    //   hdr.push(`class ${e.name} : public emlite::Val {`);
-    //   hdr.push(`  explicit ${e.name}(Handle h) noexcept;`);
-    //   src.push(
-    //     `${e.name}::${e.name}(Handle h) noexcept : em_Val_from(em_Val_from_handle(h)) {}`
-    //   );
-    //   hdr.push("public:");
-    //   hdr.push(`   explicit ${e.name}(const emlite::Val &v) noexcept;`);
-    //   src.push(
-    //     `${e.name}::${e.name}(const emlite::Val &v) noexcept : em_Val_from(v) {}`
-    //   );
-    //   hdr.push(`  static ${e.name} from_handle(Handle h) noexcept;`);
-    //   hdr.push(`    ${e.name} clone() const noexcept;`);
-    //   src.push(
-    //     `${e.name} ${e.name}::from_handle(Handle h) noexcept { return ${e.name}(h); }`
-    //   );
-    //   src.push(`${e.name} ${e.name}::clone() const noexcept { return *this; }`);
-    //   for (const v of e.values) {
-    //     hdr.push(`  static const ${e.name} ${fixIdent(v.value)};`);
-    //   }
-    //   hdr.push("};", "");
-    // }
-
     for (const e of enums.values()) {
+      hdr.push(`DECLARE_EMLITE_TYPE(${e.name}, em_Val);`);
+      src.push(`DEFINE_EMLITE_TYPE(${e.name}, em_Val);`);
       for (const v of e.values) {
-        hdr.push(`extern const char *${e.name}_${fixIdent(v.value)};`);
-        src.push(`const char *${e.name}_${fixIdent(v.value)} = "${v.value}";`);
+        hdr.push(`${e.name} ${e.name}_${fixIdent(v.value)}();`);
+        src.push(
+          `${e.name} ${e.name}_${fixIdent(v.value)}() { return (${
+            e.name
+          }){em_Val_from_string("${v.value}")}; }`
+        );
       }
     }
 
@@ -409,13 +394,18 @@ export function generate(specAst) {
         for (const v of variants) {
           const declHdr = argDecl(v);
           const declSrc = declHdr;
-          const callArgs = v.map((a) => fixIdent(a.name)).join(", ");
+          const callArgs = v
+            .map((a) => `em_Val_from(${fixIdent(a.name)})`)
+            .join(", ");
 
-          hdr.push(`${ret} ${ns.name}_${cppName}${sz === 1 ? "" : i}(${declHdr});`);
+          hdr.push(
+            `${ret} ${ns.name}_${cppName}${sz === 1 ? "" : i}(${declHdr});`
+          );
 
           const callExpr =
-            `em_Val_call(em_Val_global("${ns.name.toLowerCase()}", "${op.name}"` +
-            (callArgs ? `, ${callArgs})` : ")");
+            `em_Val_call(em_Val_global("${ns.name.toLowerCase()}"), "${
+              op.name
+            }"` + (callArgs ? `, ${callArgs})` : ")");
 
           src.push(
             `${ret} ${ns.name}_${cppName}${sz === 1 ? "" : i}(${declSrc}) {`,
@@ -426,8 +416,6 @@ export function generate(specAst) {
           i += 1;
         }
       });
-
-    hdr.push(`} // namespace ${ns.name}`, "");
 
     writePair(ns.name, hdr, src);
   }

@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(CSSContainerRule, CSSConditionRule);
 
-jb_CSSOMString CSSContainerRule_containerName( const CSSContainerRule *self);
+jb_CSSOMString CSSContainerRule_containerName(const CSSContainerRule *self);
 
-jb_CSSOMString CSSContainerRule_containerQuery( const CSSContainerRule *self);
+jb_CSSOMString CSSContainerRule_containerQuery(const CSSContainerRule *self);

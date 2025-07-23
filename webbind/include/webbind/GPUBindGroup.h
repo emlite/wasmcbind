@@ -7,6 +7,6 @@
 
 DECLARE_EMLITE_TYPE(GPUBindGroup, em_Val);
 
-jb_USVString GPUBindGroup_label( const GPUBindGroup *self);
+jb_USVString GPUBindGroup_label(const GPUBindGroup *self);
 
 void GPUBindGroup_set_label(GPUBindGroup* self, jb_USVString * value);

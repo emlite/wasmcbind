@@ -10,6 +10,6 @@ DECLARE_EMLITE_TYPE(HTMLTimeElement, HTMLElement);
 
 HTMLTimeElement HTMLTimeElement_new();
 
-jb_DOMString HTMLTimeElement_dateTime( const HTMLTimeElement *self);
+jb_DOMString HTMLTimeElement_dateTime(const HTMLTimeElement *self);
 
 void HTMLTimeElement_set_dateTime(HTMLTimeElement* self, jb_DOMString * value);

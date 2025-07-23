@@ -10,7 +10,7 @@ typedef struct HTMLOptionElement HTMLOptionElement;
 
 DECLARE_EMLITE_TYPE(HTMLOptionsCollection, HTMLCollection);
 
-unsigned long HTMLOptionsCollection_length( const HTMLOptionsCollection *self);
+unsigned long HTMLOptionsCollection_length(const HTMLOptionsCollection *self);
 
 void HTMLOptionsCollection_set_length(HTMLOptionsCollection* self, unsigned long value);
 
@@ -20,6 +20,6 @@ jb_Undefined HTMLOptionsCollection_add1(HTMLOptionsCollection* self , jb_Any * e
 
 jb_Undefined HTMLOptionsCollection_remove(HTMLOptionsCollection* self , long index);
 
-long HTMLOptionsCollection_selectedIndex( const HTMLOptionsCollection *self);
+long HTMLOptionsCollection_selectedIndex(const HTMLOptionsCollection *self);
 
 void HTMLOptionsCollection_set_selectedIndex(HTMLOptionsCollection* self, long value);

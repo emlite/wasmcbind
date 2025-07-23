@@ -13,6 +13,6 @@ USBIsochronousInTransferResult USBIsochronousInTransferResult_new0(jb_Sequence *
 
 USBIsochronousInTransferResult USBIsochronousInTransferResult_new1(jb_Sequence * packets, jb_DataView * data);
 
-jb_DataView USBIsochronousInTransferResult_data( const USBIsochronousInTransferResult *self);
+jb_DataView USBIsochronousInTransferResult_data(const USBIsochronousInTransferResult *self);
 
-jb_FrozenArray USBIsochronousInTransferResult_packets( const USBIsochronousInTransferResult *self);
+jb_FrozenArray USBIsochronousInTransferResult_packets(const USBIsochronousInTransferResult *self);

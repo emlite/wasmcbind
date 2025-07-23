@@ -11,28 +11,28 @@ typedef struct AbortSignal AbortSignal;
 
 DECLARE_EMLITE_TYPE(LockOptions, em_Val);
 
-LockMode LockOptions_mode( const LockOptions *self);
+LockMode LockOptions_mode(const LockOptions *self);
 
 void LockOptions_set_mode(LockOptions* self, LockMode * value);
 
-bool LockOptions_ifAvailable( const LockOptions *self);
+bool LockOptions_ifAvailable(const LockOptions *self);
 
 void LockOptions_set_ifAvailable(LockOptions* self, bool value);
 
-bool LockOptions_steal( const LockOptions *self);
+bool LockOptions_steal(const LockOptions *self);
 
 void LockOptions_set_steal(LockOptions* self, bool value);
 
-AbortSignal LockOptions_signal( const LockOptions *self);
+AbortSignal LockOptions_signal(const LockOptions *self);
 
 void LockOptions_set_signal(LockOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(LockManagerSnapshot, em_Val);
 
-jb_Sequence LockManagerSnapshot_held( const LockManagerSnapshot *self);
+jb_Sequence LockManagerSnapshot_held(const LockManagerSnapshot *self);
 
 void LockManagerSnapshot_set_held(LockManagerSnapshot* self, jb_Sequence * value);
 
-jb_Sequence LockManagerSnapshot_pending( const LockManagerSnapshot *self);
+jb_Sequence LockManagerSnapshot_pending(const LockManagerSnapshot *self);
 
 void LockManagerSnapshot_set_pending(LockManagerSnapshot* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(LockManager, em_Val);

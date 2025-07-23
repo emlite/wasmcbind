@@ -12,6 +12,6 @@ HashChangeEvent HashChangeEvent_new0(jb_DOMString * type);
 
 HashChangeEvent HashChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_USVString HashChangeEvent_oldURL( const HashChangeEvent *self);
+jb_USVString HashChangeEvent_oldURL(const HashChangeEvent *self);
 
-jb_USVString HashChangeEvent_newURL( const HashChangeEvent *self);
+jb_USVString HashChangeEvent_newURL(const HashChangeEvent *self);

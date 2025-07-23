@@ -10,4 +10,4 @@ typedef struct CSSFontFaceDescriptors CSSFontFaceDescriptors;
 
 DECLARE_EMLITE_TYPE(CSSFontFaceRule, CSSRule);
 
-CSSFontFaceDescriptors CSSFontFaceRule_style( const CSSFontFaceRule *self);
+CSSFontFaceDescriptors CSSFontFaceRule_style(const CSSFontFaceRule *self);

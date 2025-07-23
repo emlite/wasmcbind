@@ -12,16 +12,16 @@ typedef struct SVGAnimatedString SVGAnimatedString;
 
 DECLARE_EMLITE_TYPE(SVGFilterElement, SVGElement);
 
-SVGAnimatedEnumeration SVGFilterElement_filterUnits( const SVGFilterElement *self);
+SVGAnimatedEnumeration SVGFilterElement_filterUnits(const SVGFilterElement *self);
 
-SVGAnimatedEnumeration SVGFilterElement_primitiveUnits( const SVGFilterElement *self);
+SVGAnimatedEnumeration SVGFilterElement_primitiveUnits(const SVGFilterElement *self);
 
-SVGAnimatedLength SVGFilterElement_x( const SVGFilterElement *self);
+SVGAnimatedLength SVGFilterElement_x(const SVGFilterElement *self);
 
-SVGAnimatedLength SVGFilterElement_y( const SVGFilterElement *self);
+SVGAnimatedLength SVGFilterElement_y(const SVGFilterElement *self);
 
-SVGAnimatedLength SVGFilterElement_width( const SVGFilterElement *self);
+SVGAnimatedLength SVGFilterElement_width(const SVGFilterElement *self);
 
-SVGAnimatedLength SVGFilterElement_height( const SVGFilterElement *self);
+SVGAnimatedLength SVGFilterElement_height(const SVGFilterElement *self);
 
-SVGAnimatedString SVGFilterElement_href( const SVGFilterElement *self);
+SVGAnimatedString SVGFilterElement_href(const SVGFilterElement *self);

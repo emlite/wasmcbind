@@ -10,4 +10,4 @@ typedef struct SVGAnimatedString SVGAnimatedString;
 
 DECLARE_EMLITE_TYPE(SVGFEMergeNodeElement, SVGElement);
 
-SVGAnimatedString SVGFEMergeNodeElement_in1( const SVGFEMergeNodeElement *self);
+SVGAnimatedString SVGFEMergeNodeElement_in1(const SVGFEMergeNodeElement *self);

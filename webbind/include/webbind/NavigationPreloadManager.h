@@ -9,11 +9,11 @@ typedef struct NavigationPreloadState NavigationPreloadState;
 
 DECLARE_EMLITE_TYPE(NavigationPreloadState, em_Val);
 
-bool NavigationPreloadState_enabled( const NavigationPreloadState *self);
+bool NavigationPreloadState_enabled(const NavigationPreloadState *self);
 
 void NavigationPreloadState_set_enabled(NavigationPreloadState* self, bool value);
 
-jb_ByteString NavigationPreloadState_headerValue( const NavigationPreloadState *self);
+jb_ByteString NavigationPreloadState_headerValue(const NavigationPreloadState *self);
 
 void NavigationPreloadState_set_headerValue(NavigationPreloadState* self, jb_ByteString * value);
 DECLARE_EMLITE_TYPE(NavigationPreloadManager, em_Val);

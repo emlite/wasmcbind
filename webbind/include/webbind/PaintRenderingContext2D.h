@@ -37,27 +37,27 @@ jb_Undefined PaintRenderingContext2D_setTransform1(PaintRenderingContext2D* self
 
 jb_Undefined PaintRenderingContext2D_resetTransform(PaintRenderingContext2D* self );
 
-double PaintRenderingContext2D_globalAlpha( const PaintRenderingContext2D *self);
+double PaintRenderingContext2D_globalAlpha(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_globalAlpha(PaintRenderingContext2D* self, double value);
 
-jb_DOMString PaintRenderingContext2D_globalCompositeOperation( const PaintRenderingContext2D *self);
+jb_DOMString PaintRenderingContext2D_globalCompositeOperation(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_globalCompositeOperation(PaintRenderingContext2D* self, jb_DOMString * value);
 
-bool PaintRenderingContext2D_imageSmoothingEnabled( const PaintRenderingContext2D *self);
+bool PaintRenderingContext2D_imageSmoothingEnabled(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_imageSmoothingEnabled(PaintRenderingContext2D* self, bool value);
 
-ImageSmoothingQuality PaintRenderingContext2D_imageSmoothingQuality( const PaintRenderingContext2D *self);
+ImageSmoothingQuality PaintRenderingContext2D_imageSmoothingQuality(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_imageSmoothingQuality(PaintRenderingContext2D* self, ImageSmoothingQuality * value);
 
-jb_Any PaintRenderingContext2D_strokeStyle( const PaintRenderingContext2D *self);
+jb_Any PaintRenderingContext2D_strokeStyle(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_strokeStyle(PaintRenderingContext2D* self, jb_Any * value);
 
-jb_Any PaintRenderingContext2D_fillStyle( const PaintRenderingContext2D *self);
+jb_Any PaintRenderingContext2D_fillStyle(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_fillStyle(PaintRenderingContext2D* self, jb_Any * value);
 
@@ -69,19 +69,19 @@ CanvasGradient PaintRenderingContext2D_createConicGradient(PaintRenderingContext
 
 CanvasPattern PaintRenderingContext2D_createPattern(PaintRenderingContext2D* self , jb_Any * image, jb_DOMString * repetition);
 
-double PaintRenderingContext2D_shadowOffsetX( const PaintRenderingContext2D *self);
+double PaintRenderingContext2D_shadowOffsetX(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_shadowOffsetX(PaintRenderingContext2D* self, double value);
 
-double PaintRenderingContext2D_shadowOffsetY( const PaintRenderingContext2D *self);
+double PaintRenderingContext2D_shadowOffsetY(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_shadowOffsetY(PaintRenderingContext2D* self, double value);
 
-double PaintRenderingContext2D_shadowBlur( const PaintRenderingContext2D *self);
+double PaintRenderingContext2D_shadowBlur(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_shadowBlur(PaintRenderingContext2D* self, double value);
 
-jb_DOMString PaintRenderingContext2D_shadowColor( const PaintRenderingContext2D *self);
+jb_DOMString PaintRenderingContext2D_shadowColor(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_shadowColor(PaintRenderingContext2D* self, jb_DOMString * value);
 
@@ -111,19 +111,19 @@ bool PaintRenderingContext2D_isPointInStroke(PaintRenderingContext2D* self , Pat
 
 jb_Undefined PaintRenderingContext2D_drawImage(PaintRenderingContext2D* self , jb_Any * image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
 
-double PaintRenderingContext2D_lineWidth( const PaintRenderingContext2D *self);
+double PaintRenderingContext2D_lineWidth(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_lineWidth(PaintRenderingContext2D* self, double value);
 
-CanvasLineCap PaintRenderingContext2D_lineCap( const PaintRenderingContext2D *self);
+CanvasLineCap PaintRenderingContext2D_lineCap(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_lineCap(PaintRenderingContext2D* self, CanvasLineCap * value);
 
-CanvasLineJoin PaintRenderingContext2D_lineJoin( const PaintRenderingContext2D *self);
+CanvasLineJoin PaintRenderingContext2D_lineJoin(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_lineJoin(PaintRenderingContext2D* self, CanvasLineJoin * value);
 
-double PaintRenderingContext2D_miterLimit( const PaintRenderingContext2D *self);
+double PaintRenderingContext2D_miterLimit(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_miterLimit(PaintRenderingContext2D* self, double value);
 
@@ -131,7 +131,7 @@ jb_Undefined PaintRenderingContext2D_setLineDash(PaintRenderingContext2D* self ,
 
 jb_Sequence PaintRenderingContext2D_getLineDash(PaintRenderingContext2D* self );
 
-double PaintRenderingContext2D_lineDashOffset( const PaintRenderingContext2D *self);
+double PaintRenderingContext2D_lineDashOffset(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_lineDashOffset(PaintRenderingContext2D* self, double value);
 

@@ -17,10 +17,10 @@ XRRigidTransform XRRigidTransform_new1(DOMPointInit * position);
 
 XRRigidTransform XRRigidTransform_new2(DOMPointInit * position, DOMPointInit * orientation);
 
-DOMPointReadOnly XRRigidTransform_position( const XRRigidTransform *self);
+DOMPointReadOnly XRRigidTransform_position(const XRRigidTransform *self);
 
-DOMPointReadOnly XRRigidTransform_orientation( const XRRigidTransform *self);
+DOMPointReadOnly XRRigidTransform_orientation(const XRRigidTransform *self);
 
-jb_Float32Array XRRigidTransform_matrix( const XRRigidTransform *self);
+jb_Float32Array XRRigidTransform_matrix(const XRRigidTransform *self);
 
-XRRigidTransform XRRigidTransform_inverse( const XRRigidTransform *self);
+XRRigidTransform XRRigidTransform_inverse(const XRRigidTransform *self);

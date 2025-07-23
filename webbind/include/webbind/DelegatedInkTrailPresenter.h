@@ -11,15 +11,15 @@ typedef struct InkTrailStyle InkTrailStyle;
 
 DECLARE_EMLITE_TYPE(InkTrailStyle, em_Val);
 
-jb_DOMString InkTrailStyle_color( const InkTrailStyle *self);
+jb_DOMString InkTrailStyle_color(const InkTrailStyle *self);
 
 void InkTrailStyle_set_color(InkTrailStyle* self, jb_DOMString * value);
 
-double InkTrailStyle_diameter( const InkTrailStyle *self);
+double InkTrailStyle_diameter(const InkTrailStyle *self);
 
 void InkTrailStyle_set_diameter(InkTrailStyle* self, double value);
 DECLARE_EMLITE_TYPE(DelegatedInkTrailPresenter, em_Val);
 
-Element DelegatedInkTrailPresenter_presentationArea( const DelegatedInkTrailPresenter *self);
+Element DelegatedInkTrailPresenter_presentationArea(const DelegatedInkTrailPresenter *self);
 
 jb_Undefined DelegatedInkTrailPresenter_updateInkTrailStartPoint(DelegatedInkTrailPresenter* self , PointerEvent * event, InkTrailStyle * style);

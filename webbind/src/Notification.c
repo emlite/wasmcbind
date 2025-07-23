@@ -49,8 +49,8 @@ Notification Notification_new1(jb_DOMString * title, NotificationOptions * optio
       }
 
 
-NotificationPermission Notification_permission() {
-    return em_Val_as(NotificationPermission, em_Val_get(em_Val_global("notification", em_Val_from("permission"))));
+NotificationPermission Notification_permission(const Notification *self) {
+    return em_Val_as(NotificationPermission, em_Val_get(em_Val_global("notification"), em_Val_from("permission")));
 }
 
 
@@ -64,8 +64,8 @@ jb_Promise Notification_requestPermission1(Notification* self , jb_Function * de
 }
 
 
-unsigned long Notification_maxActions() {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_global("notification", em_Val_from("maxActions"))));
+unsigned long Notification_maxActions(const Notification *self) {
+    return em_Val_as(unsigned long, em_Val_get(em_Val_global("notification"), em_Val_from("maxActions")));
 }
 
 

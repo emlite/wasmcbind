@@ -9,7 +9,7 @@ typedef struct GPUBindGroupLayout GPUBindGroupLayout;
 
 DECLARE_EMLITE_TYPE(GPURenderPipeline, em_Val);
 
-jb_USVString GPURenderPipeline_label( const GPURenderPipeline *self);
+jb_USVString GPURenderPipeline_label(const GPURenderPipeline *self);
 
 void GPURenderPipeline_set_label(GPURenderPipeline* self, jb_USVString * value);
 

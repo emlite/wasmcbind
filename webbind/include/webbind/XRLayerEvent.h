@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(XRLayerEvent, Event);
 
 XRLayerEvent XRLayerEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-XRLayer XRLayerEvent_layer( const XRLayerEvent *self);
+XRLayer XRLayerEvent_layer(const XRLayerEvent *self);

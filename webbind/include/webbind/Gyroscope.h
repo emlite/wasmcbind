@@ -12,8 +12,8 @@ Gyroscope Gyroscope_new0();
 
 Gyroscope Gyroscope_new1(jb_Any * sensorOptions);
 
-double Gyroscope_x( const Gyroscope *self);
+double Gyroscope_x(const Gyroscope *self);
 
-double Gyroscope_y( const Gyroscope *self);
+double Gyroscope_y(const Gyroscope *self);
 
-double Gyroscope_z( const Gyroscope *self);
+double Gyroscope_z(const Gyroscope *self);

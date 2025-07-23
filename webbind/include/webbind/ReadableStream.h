@@ -14,33 +14,33 @@ typedef struct AbortSignal AbortSignal;
 
 DECLARE_EMLITE_TYPE(ReadableStreamGetReaderOptions, em_Val);
 
-ReadableStreamReaderMode ReadableStreamGetReaderOptions_mode( const ReadableStreamGetReaderOptions *self);
+ReadableStreamReaderMode ReadableStreamGetReaderOptions_mode(const ReadableStreamGetReaderOptions *self);
 
 void ReadableStreamGetReaderOptions_set_mode(ReadableStreamGetReaderOptions* self, ReadableStreamReaderMode * value);
 DECLARE_EMLITE_TYPE(ReadableWritablePair, em_Val);
 
-ReadableStream ReadableWritablePair_readable( const ReadableWritablePair *self);
+ReadableStream ReadableWritablePair_readable(const ReadableWritablePair *self);
 
 void ReadableWritablePair_set_readable(ReadableWritablePair* self, ReadableStream * value);
 
-WritableStream ReadableWritablePair_writable( const ReadableWritablePair *self);
+WritableStream ReadableWritablePair_writable(const ReadableWritablePair *self);
 
 void ReadableWritablePair_set_writable(ReadableWritablePair* self, WritableStream * value);
 DECLARE_EMLITE_TYPE(StreamPipeOptions, em_Val);
 
-bool StreamPipeOptions_preventClose( const StreamPipeOptions *self);
+bool StreamPipeOptions_preventClose(const StreamPipeOptions *self);
 
 void StreamPipeOptions_set_preventClose(StreamPipeOptions* self, bool value);
 
-bool StreamPipeOptions_preventAbort( const StreamPipeOptions *self);
+bool StreamPipeOptions_preventAbort(const StreamPipeOptions *self);
 
 void StreamPipeOptions_set_preventAbort(StreamPipeOptions* self, bool value);
 
-bool StreamPipeOptions_preventCancel( const StreamPipeOptions *self);
+bool StreamPipeOptions_preventCancel(const StreamPipeOptions *self);
 
 void StreamPipeOptions_set_preventCancel(StreamPipeOptions* self, bool value);
 
-AbortSignal StreamPipeOptions_signal( const StreamPipeOptions *self);
+AbortSignal StreamPipeOptions_signal(const StreamPipeOptions *self);
 
 void StreamPipeOptions_set_signal(StreamPipeOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(ReadableStream, em_Val);
@@ -53,7 +53,7 @@ ReadableStream ReadableStream_new2(jb_Object * underlyingSource, jb_Any * strate
 
 ReadableStream ReadableStream_from(ReadableStream* self , jb_Any * asyncIterable);
 
-bool ReadableStream_locked( const ReadableStream *self);
+bool ReadableStream_locked(const ReadableStream *self);
 
 jb_Promise ReadableStream_cancel0(ReadableStream* self );
 

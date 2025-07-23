@@ -10,7 +10,7 @@ typedef struct BackgroundFetchOptions BackgroundFetchOptions;
 
 DECLARE_EMLITE_TYPE(BackgroundFetchOptions, em_Val);
 
-long long BackgroundFetchOptions_downloadTotal( const BackgroundFetchOptions *self);
+long long BackgroundFetchOptions_downloadTotal(const BackgroundFetchOptions *self);
 
 void BackgroundFetchOptions_set_downloadTotal(BackgroundFetchOptions* self, long long value);
 DECLARE_EMLITE_TYPE(BackgroundFetchManager, em_Val);

@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(CSSSupportsRule, CSSConditionRule);
 
-bool CSSSupportsRule_matches( const CSSSupportsRule *self);
+bool CSSSupportsRule_matches(const CSSSupportsRule *self);

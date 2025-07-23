@@ -13,26 +13,26 @@ typedef struct ShadowRoot ShadowRoot;
 
 DECLARE_EMLITE_TYPE(GetComposedRangesOptions, em_Val);
 
-jb_Sequence GetComposedRangesOptions_shadowRoots( const GetComposedRangesOptions *self);
+jb_Sequence GetComposedRangesOptions_shadowRoots(const GetComposedRangesOptions *self);
 
 void GetComposedRangesOptions_set_shadowRoots(GetComposedRangesOptions* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(Selection, em_Val);
 
-Node Selection_anchorNode( const Selection *self);
+Node Selection_anchorNode(const Selection *self);
 
-unsigned long Selection_anchorOffset( const Selection *self);
+unsigned long Selection_anchorOffset(const Selection *self);
 
-Node Selection_focusNode( const Selection *self);
+Node Selection_focusNode(const Selection *self);
 
-unsigned long Selection_focusOffset( const Selection *self);
+unsigned long Selection_focusOffset(const Selection *self);
 
-bool Selection_isCollapsed( const Selection *self);
+bool Selection_isCollapsed(const Selection *self);
 
-unsigned long Selection_rangeCount( const Selection *self);
+unsigned long Selection_rangeCount(const Selection *self);
 
-jb_DOMString Selection_type( const Selection *self);
+jb_DOMString Selection_type(const Selection *self);
 
-jb_DOMString Selection_direction( const Selection *self);
+jb_DOMString Selection_direction(const Selection *self);
 
 Range Selection_getRangeAt(Selection* self , unsigned long index);
 

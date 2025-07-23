@@ -13,6 +13,7 @@
 #include <webbind/Screen.h>
 #include <webbind/VisualViewport.h>
 #include <webbind/CSSStyleDeclaration.h>
+#include <webbind/CSSStyleProperties.h>
 #include <webbind/DigitalGoodsService.h>
 #include <webbind/DocumentPictureInPicture.h>
 #include <webbind/Fence.h>

@@ -11,6 +11,6 @@ typedef struct SVGAnimatedTransformList SVGAnimatedTransformList;
 
 DECLARE_EMLITE_TYPE(SVGClipPathElement, SVGElement);
 
-SVGAnimatedEnumeration SVGClipPathElement_clipPathUnits( const SVGClipPathElement *self);
+SVGAnimatedEnumeration SVGClipPathElement_clipPathUnits(const SVGClipPathElement *self);
 
-SVGAnimatedTransformList SVGClipPathElement_transform( const SVGClipPathElement *self);
+SVGAnimatedTransformList SVGClipPathElement_transform(const SVGClipPathElement *self);

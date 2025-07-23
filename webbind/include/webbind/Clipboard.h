@@ -10,7 +10,7 @@ typedef struct ClipboardUnsanitizedFormats ClipboardUnsanitizedFormats;
 
 DECLARE_EMLITE_TYPE(ClipboardUnsanitizedFormats, em_Val);
 
-jb_Sequence ClipboardUnsanitizedFormats_unsanitized( const ClipboardUnsanitizedFormats *self);
+jb_Sequence ClipboardUnsanitizedFormats_unsanitized(const ClipboardUnsanitizedFormats *self);
 
 void ClipboardUnsanitizedFormats_set_unsanitized(ClipboardUnsanitizedFormats* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(Clipboard, EventTarget);

@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(CSSLayerBlockRule, CSSGroupingRule);
 
-jb_CSSOMString CSSLayerBlockRule_name( const CSSLayerBlockRule *self);
+jb_CSSOMString CSSLayerBlockRule_name(const CSSLayerBlockRule *self);

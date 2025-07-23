@@ -10,4 +10,4 @@ typedef struct SVGAnimatedNumber SVGAnimatedNumber;
 
 DECLARE_EMLITE_TYPE(SVGStopElement, SVGElement);
 
-SVGAnimatedNumber SVGStopElement_offset( const SVGStopElement *self);
+SVGAnimatedNumber SVGStopElement_offset(const SVGStopElement *self);

@@ -9,9 +9,9 @@ typedef struct SVGNumber SVGNumber;
 
 DECLARE_EMLITE_TYPE(SVGNumberList, em_Val);
 
-unsigned long SVGNumberList_length( const SVGNumberList *self);
+unsigned long SVGNumberList_length(const SVGNumberList *self);
 
-unsigned long SVGNumberList_numberOfItems( const SVGNumberList *self);
+unsigned long SVGNumberList_numberOfItems(const SVGNumberList *self);
 
 jb_Undefined SVGNumberList_clear(SVGNumberList* self );
 

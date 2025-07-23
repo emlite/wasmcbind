@@ -11,11 +11,11 @@ DECLARE_EMLITE_TYPE(WritableStreamDefaultWriter, em_Val);
 
 WritableStreamDefaultWriter WritableStreamDefaultWriter_new(WritableStream * stream);
 
-jb_Promise WritableStreamDefaultWriter_closed( const WritableStreamDefaultWriter *self);
+jb_Promise WritableStreamDefaultWriter_closed(const WritableStreamDefaultWriter *self);
 
-double WritableStreamDefaultWriter_desiredSize( const WritableStreamDefaultWriter *self);
+double WritableStreamDefaultWriter_desiredSize(const WritableStreamDefaultWriter *self);
 
-jb_Promise WritableStreamDefaultWriter_ready( const WritableStreamDefaultWriter *self);
+jb_Promise WritableStreamDefaultWriter_ready(const WritableStreamDefaultWriter *self);
 
 jb_Promise WritableStreamDefaultWriter_abort0(WritableStreamDefaultWriter* self );
 

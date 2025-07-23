@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(GamepadEvent, Event);
 
 GamepadEvent GamepadEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-Gamepad GamepadEvent_gamepad( const GamepadEvent *self);
+Gamepad GamepadEvent_gamepad(const GamepadEvent *self);

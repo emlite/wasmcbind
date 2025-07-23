@@ -10,6 +10,6 @@ DECLARE_EMLITE_TYPE(HTMLDivElement, HTMLElement);
 
 HTMLDivElement HTMLDivElement_new();
 
-jb_DOMString HTMLDivElement_align( const HTMLDivElement *self);
+jb_DOMString HTMLDivElement_align(const HTMLDivElement *self);
 
 void HTMLDivElement_set_align(HTMLDivElement* self, jb_DOMString * value);

@@ -12,8 +12,8 @@ Accelerometer Accelerometer_new0();
 
 Accelerometer Accelerometer_new1(jb_Any * options);
 
-double Accelerometer_x( const Accelerometer *self);
+double Accelerometer_x(const Accelerometer *self);
 
-double Accelerometer_y( const Accelerometer *self);
+double Accelerometer_y(const Accelerometer *self);
 
-double Accelerometer_z( const Accelerometer *self);
+double Accelerometer_z(const Accelerometer *self);

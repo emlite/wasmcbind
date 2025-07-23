@@ -73,8 +73,8 @@ void MediaSource_set_onsourceclose(MediaSource* self, jb_Any * value) {
 }
 
 
-bool MediaSource_canConstructInDedicatedWorker() {
-    return em_Val_as(bool, em_Val_get(em_Val_global("mediasource", em_Val_from("canConstructInDedicatedWorker"))));
+bool MediaSource_canConstructInDedicatedWorker(const MediaSource *self) {
+    return em_Val_as(bool, em_Val_get(em_Val_global("mediasource"), em_Val_from("canConstructInDedicatedWorker")));
 }
 
 

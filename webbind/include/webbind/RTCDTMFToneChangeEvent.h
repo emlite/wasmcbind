@@ -12,4 +12,4 @@ RTCDTMFToneChangeEvent RTCDTMFToneChangeEvent_new0(jb_DOMString * type);
 
 RTCDTMFToneChangeEvent RTCDTMFToneChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_DOMString RTCDTMFToneChangeEvent_tone( const RTCDTMFToneChangeEvent *self);
+jb_DOMString RTCDTMFToneChangeEvent_tone(const RTCDTMFToneChangeEvent *self);

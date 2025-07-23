@@ -9,6 +9,6 @@ DECLARE_EMLITE_TYPE(ByteLengthQueuingStrategy, em_Val);
 
 ByteLengthQueuingStrategy ByteLengthQueuingStrategy_new(jb_Any * init);
 
-double ByteLengthQueuingStrategy_highWaterMark( const ByteLengthQueuingStrategy *self);
+double ByteLengthQueuingStrategy_highWaterMark(const ByteLengthQueuingStrategy *self);
 
-jb_Function ByteLengthQueuingStrategy_size( const ByteLengthQueuingStrategy *self);
+jb_Function ByteLengthQueuingStrategy_size(const ByteLengthQueuingStrategy *self);

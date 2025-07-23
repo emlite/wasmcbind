@@ -10,15 +10,15 @@ typedef struct StorageBucketOptions StorageBucketOptions;
 
 DECLARE_EMLITE_TYPE(StorageBucketOptions, em_Val);
 
-bool StorageBucketOptions_persisted( const StorageBucketOptions *self);
+bool StorageBucketOptions_persisted(const StorageBucketOptions *self);
 
 void StorageBucketOptions_set_persisted(StorageBucketOptions* self, bool value);
 
-long long StorageBucketOptions_quota( const StorageBucketOptions *self);
+long long StorageBucketOptions_quota(const StorageBucketOptions *self);
 
 void StorageBucketOptions_set_quota(StorageBucketOptions* self, long long value);
 
-jb_Any StorageBucketOptions_expires( const StorageBucketOptions *self);
+jb_Any StorageBucketOptions_expires(const StorageBucketOptions *self);
 
 void StorageBucketOptions_set_expires(StorageBucketOptions* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(StorageBucketManager, em_Val);

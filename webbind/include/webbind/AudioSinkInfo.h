@@ -7,4 +7,4 @@
 
 DECLARE_EMLITE_TYPE(AudioSinkInfo, em_Val);
 
-AudioSinkType AudioSinkInfo_type( const AudioSinkInfo *self);
+AudioSinkType AudioSinkInfo_type(const AudioSinkInfo *self);

@@ -10,11 +10,11 @@ typedef struct BackgroundFetchUIOptions BackgroundFetchUIOptions;
 
 DECLARE_EMLITE_TYPE(BackgroundFetchUIOptions, em_Val);
 
-jb_Sequence BackgroundFetchUIOptions_icons( const BackgroundFetchUIOptions *self);
+jb_Sequence BackgroundFetchUIOptions_icons(const BackgroundFetchUIOptions *self);
 
 void BackgroundFetchUIOptions_set_icons(BackgroundFetchUIOptions* self, jb_Sequence * value);
 
-jb_DOMString BackgroundFetchUIOptions_title( const BackgroundFetchUIOptions *self);
+jb_DOMString BackgroundFetchUIOptions_title(const BackgroundFetchUIOptions *self);
 
 void BackgroundFetchUIOptions_set_title(BackgroundFetchUIOptions* self, jb_DOMString * value);
 DECLARE_EMLITE_TYPE(BackgroundFetchUpdateUIEvent, BackgroundFetchEvent);

@@ -13,6 +13,6 @@ DECLARE_EMLITE_TYPE(XRReferenceSpaceEvent, Event);
 
 XRReferenceSpaceEvent XRReferenceSpaceEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-XRReferenceSpace XRReferenceSpaceEvent_referenceSpace( const XRReferenceSpaceEvent *self);
+XRReferenceSpace XRReferenceSpaceEvent_referenceSpace(const XRReferenceSpaceEvent *self);
 
-XRRigidTransform XRReferenceSpaceEvent_transform( const XRReferenceSpaceEvent *self);
+XRRigidTransform XRReferenceSpaceEvent_transform(const XRReferenceSpaceEvent *self);

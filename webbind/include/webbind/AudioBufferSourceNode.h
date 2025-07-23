@@ -15,23 +15,23 @@ AudioBufferSourceNode AudioBufferSourceNode_new0(BaseAudioContext * context);
 
 AudioBufferSourceNode AudioBufferSourceNode_new1(BaseAudioContext * context, jb_Any * options);
 
-AudioBuffer AudioBufferSourceNode_buffer( const AudioBufferSourceNode *self);
+AudioBuffer AudioBufferSourceNode_buffer(const AudioBufferSourceNode *self);
 
 void AudioBufferSourceNode_set_buffer(AudioBufferSourceNode* self, AudioBuffer * value);
 
-AudioParam AudioBufferSourceNode_playbackRate( const AudioBufferSourceNode *self);
+AudioParam AudioBufferSourceNode_playbackRate(const AudioBufferSourceNode *self);
 
-AudioParam AudioBufferSourceNode_detune( const AudioBufferSourceNode *self);
+AudioParam AudioBufferSourceNode_detune(const AudioBufferSourceNode *self);
 
-bool AudioBufferSourceNode_loop( const AudioBufferSourceNode *self);
+bool AudioBufferSourceNode_loop(const AudioBufferSourceNode *self);
 
 void AudioBufferSourceNode_set_loop(AudioBufferSourceNode* self, bool value);
 
-double AudioBufferSourceNode_loopStart( const AudioBufferSourceNode *self);
+double AudioBufferSourceNode_loopStart(const AudioBufferSourceNode *self);
 
 void AudioBufferSourceNode_set_loopStart(AudioBufferSourceNode* self, double value);
 
-double AudioBufferSourceNode_loopEnd( const AudioBufferSourceNode *self);
+double AudioBufferSourceNode_loopEnd(const AudioBufferSourceNode *self);
 
 void AudioBufferSourceNode_set_loopEnd(AudioBufferSourceNode* self, double value);
 

@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(PerformanceMeasure, PerformanceEntry);
 
-jb_Any PerformanceMeasure_detail( const PerformanceMeasure *self);
+jb_Any PerformanceMeasure_detail(const PerformanceMeasure *self);

@@ -14,12 +14,12 @@ typedef struct PublicKeyCredentialRequestOptions PublicKeyCredentialRequestOptio
 
 DECLARE_EMLITE_TYPE(CredentialRequestOptions, em_Val);
 
-PublicKeyCredentialRequestOptions CredentialRequestOptions_publicKey( const CredentialRequestOptions *self);
+PublicKeyCredentialRequestOptions CredentialRequestOptions_publicKey(const CredentialRequestOptions *self);
 
 void CredentialRequestOptions_set_publicKey(CredentialRequestOptions* self, PublicKeyCredentialRequestOptions * value);
 DECLARE_EMLITE_TYPE(CredentialCreationOptions, em_Val);
 
-PublicKeyCredentialCreationOptions CredentialCreationOptions_publicKey( const CredentialCreationOptions *self);
+PublicKeyCredentialCreationOptions CredentialCreationOptions_publicKey(const CredentialCreationOptions *self);
 
 void CredentialCreationOptions_set_publicKey(CredentialCreationOptions* self, PublicKeyCredentialCreationOptions * value);
 DECLARE_EMLITE_TYPE(CredentialsContainer, em_Val);

@@ -8,18 +8,18 @@
 
 DECLARE_EMLITE_TYPE(NetworkInformation, EventTarget);
 
-ConnectionType NetworkInformation_type( const NetworkInformation *self);
+ConnectionType NetworkInformation_type(const NetworkInformation *self);
 
-EffectiveConnectionType NetworkInformation_effectiveType( const NetworkInformation *self);
+EffectiveConnectionType NetworkInformation_effectiveType(const NetworkInformation *self);
 
-jb_Any NetworkInformation_downlinkMax( const NetworkInformation *self);
+jb_Any NetworkInformation_downlinkMax(const NetworkInformation *self);
 
-jb_Any NetworkInformation_downlink( const NetworkInformation *self);
+jb_Any NetworkInformation_downlink(const NetworkInformation *self);
 
-jb_Any NetworkInformation_rtt( const NetworkInformation *self);
+jb_Any NetworkInformation_rtt(const NetworkInformation *self);
 
-jb_Any NetworkInformation_onchange( const NetworkInformation *self);
+jb_Any NetworkInformation_onchange(const NetworkInformation *self);
 
 void NetworkInformation_set_onchange(NetworkInformation* self, jb_Any * value);
 
-bool NetworkInformation_saveData( const NetworkInformation *self);
+bool NetworkInformation_saveData(const NetworkInformation *self);

@@ -168,7 +168,8 @@ export const missingDictFallback = new Set([
   "TableDescriptor",
   "XRWebGLLayerInit",
   "TextFormatInit",
-  "IdentityCredentialErrorInit"
+  "IdentityCredentialErrorInit",
+  "AttributionLogicOptions"
 ]);
 
 export const cppKeywords = new Set([
@@ -271,3 +272,5 @@ export const cppKeywords = new Set([
   "atomic_commit",
   "atomic_noexcept",
 ]);
+
+export const IGNOREDFILES = new Set(["window.c", "window.h", ".clangd", "webbind.h", "CSS.h", "CSS.c", "WebAssembly.h", "WebAssembly.c"]);

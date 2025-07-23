@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(DocumentPictureInPictureEvent, Event);
 
 DocumentPictureInPictureEvent DocumentPictureInPictureEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-Window DocumentPictureInPictureEvent_window( const DocumentPictureInPictureEvent *self);
+Window DocumentPictureInPictureEvent_window(const DocumentPictureInPictureEvent *self);

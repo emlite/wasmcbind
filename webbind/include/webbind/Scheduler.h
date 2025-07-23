@@ -10,15 +10,15 @@ typedef struct AbortSignal AbortSignal;
 
 DECLARE_EMLITE_TYPE(SchedulerPostTaskOptions, em_Val);
 
-AbortSignal SchedulerPostTaskOptions_signal( const SchedulerPostTaskOptions *self);
+AbortSignal SchedulerPostTaskOptions_signal(const SchedulerPostTaskOptions *self);
 
 void SchedulerPostTaskOptions_set_signal(SchedulerPostTaskOptions* self, AbortSignal * value);
 
-TaskPriority SchedulerPostTaskOptions_priority( const SchedulerPostTaskOptions *self);
+TaskPriority SchedulerPostTaskOptions_priority(const SchedulerPostTaskOptions *self);
 
 void SchedulerPostTaskOptions_set_priority(SchedulerPostTaskOptions* self, TaskPriority * value);
 
-long long SchedulerPostTaskOptions_delay( const SchedulerPostTaskOptions *self);
+long long SchedulerPostTaskOptions_delay(const SchedulerPostTaskOptions *self);
 
 void SchedulerPostTaskOptions_set_delay(SchedulerPostTaskOptions* self, long long value);
 DECLARE_EMLITE_TYPE(Scheduler, em_Val);

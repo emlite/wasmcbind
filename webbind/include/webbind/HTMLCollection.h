@@ -9,7 +9,7 @@ typedef struct Element Element;
 
 DECLARE_EMLITE_TYPE(HTMLCollection, em_Val);
 
-unsigned long HTMLCollection_length( const HTMLCollection *self);
+unsigned long HTMLCollection_length(const HTMLCollection *self);
 
 Element HTMLCollection_item(HTMLCollection* self , unsigned long index);
 

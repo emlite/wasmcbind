@@ -13,23 +13,23 @@ typedef struct PaymentMethodData PaymentMethodData;
 
 DECLARE_EMLITE_TYPE(PaymentDetailsUpdate, em_Val);
 
-jb_DOMString PaymentDetailsUpdate_error( const PaymentDetailsUpdate *self);
+jb_DOMString PaymentDetailsUpdate_error(const PaymentDetailsUpdate *self);
 
 void PaymentDetailsUpdate_set_error(PaymentDetailsUpdate* self, jb_DOMString * value);
 
-jb_Any PaymentDetailsUpdate_total( const PaymentDetailsUpdate *self);
+jb_Any PaymentDetailsUpdate_total(const PaymentDetailsUpdate *self);
 
 void PaymentDetailsUpdate_set_total(PaymentDetailsUpdate* self, jb_Any * value);
 
-jb_Any PaymentDetailsUpdate_shippingAddressErrors( const PaymentDetailsUpdate *self);
+jb_Any PaymentDetailsUpdate_shippingAddressErrors(const PaymentDetailsUpdate *self);
 
 void PaymentDetailsUpdate_set_shippingAddressErrors(PaymentDetailsUpdate* self, jb_Any * value);
 
-jb_Any PaymentDetailsUpdate_payerErrors( const PaymentDetailsUpdate *self);
+jb_Any PaymentDetailsUpdate_payerErrors(const PaymentDetailsUpdate *self);
 
 void PaymentDetailsUpdate_set_payerErrors(PaymentDetailsUpdate* self, jb_Any * value);
 
-jb_Object PaymentDetailsUpdate_paymentMethodErrors( const PaymentDetailsUpdate *self);
+jb_Object PaymentDetailsUpdate_paymentMethodErrors(const PaymentDetailsUpdate *self);
 
 void PaymentDetailsUpdate_set_paymentMethodErrors(PaymentDetailsUpdate* self, jb_Object * value);
 DECLARE_EMLITE_TYPE(PaymentRequest, EventTarget);
@@ -46,23 +46,23 @@ jb_Promise PaymentRequest_abort(PaymentRequest* self );
 
 jb_Promise PaymentRequest_canMakePayment(PaymentRequest* self );
 
-jb_DOMString PaymentRequest_id( const PaymentRequest *self);
+jb_DOMString PaymentRequest_id(const PaymentRequest *self);
 
-ContactAddress PaymentRequest_shippingAddress( const PaymentRequest *self);
+ContactAddress PaymentRequest_shippingAddress(const PaymentRequest *self);
 
-jb_DOMString PaymentRequest_shippingOption( const PaymentRequest *self);
+jb_DOMString PaymentRequest_shippingOption(const PaymentRequest *self);
 
-PaymentShippingType PaymentRequest_shippingType( const PaymentRequest *self);
+PaymentShippingType PaymentRequest_shippingType(const PaymentRequest *self);
 
-jb_Any PaymentRequest_onshippingaddresschange( const PaymentRequest *self);
+jb_Any PaymentRequest_onshippingaddresschange(const PaymentRequest *self);
 
 void PaymentRequest_set_onshippingaddresschange(PaymentRequest* self, jb_Any * value);
 
-jb_Any PaymentRequest_onshippingoptionchange( const PaymentRequest *self);
+jb_Any PaymentRequest_onshippingoptionchange(const PaymentRequest *self);
 
 void PaymentRequest_set_onshippingoptionchange(PaymentRequest* self, jb_Any * value);
 
-jb_Any PaymentRequest_onpaymentmethodchange( const PaymentRequest *self);
+jb_Any PaymentRequest_onpaymentmethodchange(const PaymentRequest *self);
 
 void PaymentRequest_set_onpaymentmethodchange(PaymentRequest* self, jb_Any * value);
 

@@ -14,6 +14,6 @@ SnapEvent SnapEvent_new0(jb_DOMString * type);
 
 SnapEvent SnapEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-Node SnapEvent_snapTargetBlock( const SnapEvent *self);
+Node SnapEvent_snapTargetBlock(const SnapEvent *self);
 
-Node SnapEvent_snapTargetInline( const SnapEvent *self);
+Node SnapEvent_snapTargetInline(const SnapEvent *self);

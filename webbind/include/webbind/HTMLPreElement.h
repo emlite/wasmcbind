@@ -10,6 +10,6 @@ DECLARE_EMLITE_TYPE(HTMLPreElement, HTMLElement);
 
 HTMLPreElement HTMLPreElement_new();
 
-long HTMLPreElement_width( const HTMLPreElement *self);
+long HTMLPreElement_width(const HTMLPreElement *self);
 
 void HTMLPreElement_set_width(HTMLPreElement* self, long value);

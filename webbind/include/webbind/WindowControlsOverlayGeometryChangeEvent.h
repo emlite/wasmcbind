@@ -12,6 +12,6 @@ DECLARE_EMLITE_TYPE(WindowControlsOverlayGeometryChangeEvent, Event);
 
 WindowControlsOverlayGeometryChangeEvent WindowControlsOverlayGeometryChangeEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-DOMRect WindowControlsOverlayGeometryChangeEvent_titlebarAreaRect( const WindowControlsOverlayGeometryChangeEvent *self);
+DOMRect WindowControlsOverlayGeometryChangeEvent_titlebarAreaRect(const WindowControlsOverlayGeometryChangeEvent *self);
 
-bool WindowControlsOverlayGeometryChangeEvent_visible( const WindowControlsOverlayGeometryChangeEvent *self);
+bool WindowControlsOverlayGeometryChangeEvent_visible(const WindowControlsOverlayGeometryChangeEvent *self);

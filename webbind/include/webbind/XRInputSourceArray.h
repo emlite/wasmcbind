@@ -9,4 +9,4 @@ typedef struct XRInputSource XRInputSource;
 
 DECLARE_EMLITE_TYPE(XRInputSourceArray, em_Val);
 
-unsigned long XRInputSourceArray_length( const XRInputSourceArray *self);
+unsigned long XRInputSourceArray_length(const XRInputSourceArray *self);

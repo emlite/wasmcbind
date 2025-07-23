@@ -14,6 +14,6 @@ WebTransportError WebTransportError_new1(jb_DOMString * message);
 
 WebTransportError WebTransportError_new2(jb_DOMString * message, jb_Any * options);
 
-WebTransportErrorSource WebTransportError_source( const WebTransportError *self);
+WebTransportErrorSource WebTransportError_source(const WebTransportError *self);
 
-unsigned long WebTransportError_streamErrorCode( const WebTransportError *self);
+unsigned long WebTransportError_streamErrorCode(const WebTransportError *self);

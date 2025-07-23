@@ -13,26 +13,26 @@ typedef struct IDBIndexParameters IDBIndexParameters;
 
 DECLARE_EMLITE_TYPE(IDBIndexParameters, em_Val);
 
-bool IDBIndexParameters_unique( const IDBIndexParameters *self);
+bool IDBIndexParameters_unique(const IDBIndexParameters *self);
 
 void IDBIndexParameters_set_unique(IDBIndexParameters* self, bool value);
 
-bool IDBIndexParameters_multiEntry( const IDBIndexParameters *self);
+bool IDBIndexParameters_multiEntry(const IDBIndexParameters *self);
 
 void IDBIndexParameters_set_multiEntry(IDBIndexParameters* self, bool value);
 DECLARE_EMLITE_TYPE(IDBObjectStore, em_Val);
 
-jb_DOMString IDBObjectStore_name( const IDBObjectStore *self);
+jb_DOMString IDBObjectStore_name(const IDBObjectStore *self);
 
 void IDBObjectStore_set_name(IDBObjectStore* self, jb_DOMString * value);
 
-jb_Any IDBObjectStore_keyPath( const IDBObjectStore *self);
+jb_Any IDBObjectStore_keyPath(const IDBObjectStore *self);
 
-DOMStringList IDBObjectStore_indexNames( const IDBObjectStore *self);
+DOMStringList IDBObjectStore_indexNames(const IDBObjectStore *self);
 
-IDBTransaction IDBObjectStore_transaction( const IDBObjectStore *self);
+IDBTransaction IDBObjectStore_transaction(const IDBObjectStore *self);
 
-bool IDBObjectStore_autoIncrement( const IDBObjectStore *self);
+bool IDBObjectStore_autoIncrement(const IDBObjectStore *self);
 
 IDBRequest IDBObjectStore_put0(IDBObjectStore* self , jb_Any * value);
 

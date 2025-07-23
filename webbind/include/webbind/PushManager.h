@@ -10,16 +10,16 @@ typedef struct PushSubscriptionOptionsInit PushSubscriptionOptionsInit;
 
 DECLARE_EMLITE_TYPE(PushSubscriptionOptionsInit, em_Val);
 
-bool PushSubscriptionOptionsInit_userVisibleOnly( const PushSubscriptionOptionsInit *self);
+bool PushSubscriptionOptionsInit_userVisibleOnly(const PushSubscriptionOptionsInit *self);
 
 void PushSubscriptionOptionsInit_set_userVisibleOnly(PushSubscriptionOptionsInit* self, bool value);
 
-jb_Any PushSubscriptionOptionsInit_applicationServerKey( const PushSubscriptionOptionsInit *self);
+jb_Any PushSubscriptionOptionsInit_applicationServerKey(const PushSubscriptionOptionsInit *self);
 
 void PushSubscriptionOptionsInit_set_applicationServerKey(PushSubscriptionOptionsInit* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(PushManager, em_Val);
 
-jb_FrozenArray PushManager_supportedContentEncodings( PushManager *self);
+jb_FrozenArray PushManager_supportedContentEncodings(const PushManager *self);
 
 jb_Promise PushManager_subscribe0(PushManager* self );
 

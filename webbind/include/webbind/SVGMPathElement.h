@@ -10,4 +10,4 @@ typedef struct SVGAnimatedString SVGAnimatedString;
 
 DECLARE_EMLITE_TYPE(SVGMPathElement, SVGElement);
 
-SVGAnimatedString SVGMPathElement_href( const SVGMPathElement *self);
+SVGAnimatedString SVGMPathElement_href(const SVGMPathElement *self);

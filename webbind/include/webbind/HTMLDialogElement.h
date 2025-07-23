@@ -10,15 +10,15 @@ DECLARE_EMLITE_TYPE(HTMLDialogElement, HTMLElement);
 
 HTMLDialogElement HTMLDialogElement_new();
 
-bool HTMLDialogElement_open( const HTMLDialogElement *self);
+bool HTMLDialogElement_open(const HTMLDialogElement *self);
 
 void HTMLDialogElement_set_open(HTMLDialogElement* self, bool value);
 
-jb_DOMString HTMLDialogElement_returnValue( const HTMLDialogElement *self);
+jb_DOMString HTMLDialogElement_returnValue(const HTMLDialogElement *self);
 
 void HTMLDialogElement_set_returnValue(HTMLDialogElement* self, jb_DOMString * value);
 
-jb_DOMString HTMLDialogElement_closedBy( const HTMLDialogElement *self);
+jb_DOMString HTMLDialogElement_closedBy(const HTMLDialogElement *self);
 
 void HTMLDialogElement_set_closedBy(HTMLDialogElement* self, jb_DOMString * value);
 

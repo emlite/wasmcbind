@@ -10,7 +10,7 @@ typedef struct Window Window;
 
 DECLARE_EMLITE_TYPE(TextEvent, UIEvent);
 
-jb_DOMString TextEvent_data( const TextEvent *self);
+jb_DOMString TextEvent_data(const TextEvent *self);
 
 jb_Undefined TextEvent_initTextEvent0(TextEvent* self , jb_DOMString * type);
 

@@ -13,20 +13,20 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 DECLARE_EMLITE_TYPE(SVGFEMorphologyElement, SVGElement);
 
-SVGAnimatedString SVGFEMorphologyElement_in1( const SVGFEMorphologyElement *self);
+SVGAnimatedString SVGFEMorphologyElement_in1(const SVGFEMorphologyElement *self);
 
-SVGAnimatedEnumeration SVGFEMorphologyElement_operator_( const SVGFEMorphologyElement *self);
+SVGAnimatedEnumeration SVGFEMorphologyElement_operator_(const SVGFEMorphologyElement *self);
 
-SVGAnimatedNumber SVGFEMorphologyElement_radiusX( const SVGFEMorphologyElement *self);
+SVGAnimatedNumber SVGFEMorphologyElement_radiusX(const SVGFEMorphologyElement *self);
 
-SVGAnimatedNumber SVGFEMorphologyElement_radiusY( const SVGFEMorphologyElement *self);
+SVGAnimatedNumber SVGFEMorphologyElement_radiusY(const SVGFEMorphologyElement *self);
 
-SVGAnimatedLength SVGFEMorphologyElement_x( const SVGFEMorphologyElement *self);
+SVGAnimatedLength SVGFEMorphologyElement_x(const SVGFEMorphologyElement *self);
 
-SVGAnimatedLength SVGFEMorphologyElement_y( const SVGFEMorphologyElement *self);
+SVGAnimatedLength SVGFEMorphologyElement_y(const SVGFEMorphologyElement *self);
 
-SVGAnimatedLength SVGFEMorphologyElement_width( const SVGFEMorphologyElement *self);
+SVGAnimatedLength SVGFEMorphologyElement_width(const SVGFEMorphologyElement *self);
 
-SVGAnimatedLength SVGFEMorphologyElement_height( const SVGFEMorphologyElement *self);
+SVGAnimatedLength SVGFEMorphologyElement_height(const SVGFEMorphologyElement *self);
 
-SVGAnimatedString SVGFEMorphologyElement_result( const SVGFEMorphologyElement *self);
+SVGAnimatedString SVGFEMorphologyElement_result(const SVGFEMorphologyElement *self);

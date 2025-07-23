@@ -20,10 +20,10 @@ jb_Promise SFrameTransform_setEncryptionKey0(SFrameTransform* self , CryptoKey *
 
 jb_Promise SFrameTransform_setEncryptionKey1(SFrameTransform* self , CryptoKey * key, jb_Any * keyID);
 
-jb_Any SFrameTransform_onerror( const SFrameTransform *self);
+jb_Any SFrameTransform_onerror(const SFrameTransform *self);
 
 void SFrameTransform_set_onerror(SFrameTransform* self, jb_Any * value);
 
-ReadableStream SFrameTransform_readable( const SFrameTransform *self);
+ReadableStream SFrameTransform_readable(const SFrameTransform *self);
 
-WritableStream SFrameTransform_writable( const SFrameTransform *self);
+WritableStream SFrameTransform_writable(const SFrameTransform *self);

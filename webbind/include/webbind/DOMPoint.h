@@ -25,18 +25,18 @@ DOMPoint DOMPoint_fromPoint0(DOMPoint* self );
 
 DOMPoint DOMPoint_fromPoint1(DOMPoint* self , DOMPointInit * other);
 
-double DOMPoint_x( const DOMPoint *self);
+double DOMPoint_x(const DOMPoint *self);
 
 void DOMPoint_set_x(DOMPoint* self, double value);
 
-double DOMPoint_y( const DOMPoint *self);
+double DOMPoint_y(const DOMPoint *self);
 
 void DOMPoint_set_y(DOMPoint* self, double value);
 
-double DOMPoint_z( const DOMPoint *self);
+double DOMPoint_z(const DOMPoint *self);
 
 void DOMPoint_set_z(DOMPoint* self, double value);
 
-double DOMPoint_w( const DOMPoint *self);
+double DOMPoint_w(const DOMPoint *self);
 
 void DOMPoint_set_w(DOMPoint* self, double value);

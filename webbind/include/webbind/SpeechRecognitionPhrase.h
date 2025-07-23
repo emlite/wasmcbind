@@ -11,6 +11,6 @@ SpeechRecognitionPhrase SpeechRecognitionPhrase_new0(jb_DOMString * phrase);
 
 SpeechRecognitionPhrase SpeechRecognitionPhrase_new1(jb_DOMString * phrase, float boost);
 
-jb_DOMString SpeechRecognitionPhrase_phrase( const SpeechRecognitionPhrase *self);
+jb_DOMString SpeechRecognitionPhrase_phrase(const SpeechRecognitionPhrase *self);
 
-float SpeechRecognitionPhrase_boost( const SpeechRecognitionPhrase *self);
+float SpeechRecognitionPhrase_boost(const SpeechRecognitionPhrase *self);

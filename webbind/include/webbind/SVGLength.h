@@ -7,17 +7,17 @@
 
 DECLARE_EMLITE_TYPE(SVGLength, em_Val);
 
-unsigned short SVGLength_unitType( const SVGLength *self);
+unsigned short SVGLength_unitType(const SVGLength *self);
 
-float SVGLength_value( const SVGLength *self);
+float SVGLength_value(const SVGLength *self);
 
 void SVGLength_set_value(SVGLength* self, float value);
 
-float SVGLength_valueInSpecifiedUnits( const SVGLength *self);
+float SVGLength_valueInSpecifiedUnits(const SVGLength *self);
 
 void SVGLength_set_valueInSpecifiedUnits(SVGLength* self, float value);
 
-jb_DOMString SVGLength_valueAsString( const SVGLength *self);
+jb_DOMString SVGLength_valueAsString(const SVGLength *self);
 
 void SVGLength_set_valueAsString(SVGLength* self, jb_DOMString * value);
 

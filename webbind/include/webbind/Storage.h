@@ -7,7 +7,7 @@
 
 DECLARE_EMLITE_TYPE(Storage, em_Val);
 
-unsigned long Storage_length( const Storage *self);
+unsigned long Storage_length(const Storage *self);
 
 jb_DOMString Storage_key(Storage* self , unsigned long index);
 

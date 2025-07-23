@@ -14,43 +14,43 @@ typedef struct DOMPointReadOnly DOMPointReadOnly;
 
 DECLARE_EMLITE_TYPE(GamepadTouch, em_Val);
 
-unsigned long GamepadTouch_touchId( const GamepadTouch *self);
+unsigned long GamepadTouch_touchId(const GamepadTouch *self);
 
 void GamepadTouch_set_touchId(GamepadTouch* self, unsigned long value);
 
-unsigned char GamepadTouch_surfaceId( const GamepadTouch *self);
+unsigned char GamepadTouch_surfaceId(const GamepadTouch *self);
 
 void GamepadTouch_set_surfaceId(GamepadTouch* self, unsigned char value);
 
-DOMPointReadOnly GamepadTouch_position( const GamepadTouch *self);
+DOMPointReadOnly GamepadTouch_position(const GamepadTouch *self);
 
 void GamepadTouch_set_position(GamepadTouch* self, DOMPointReadOnly * value);
 
-DOMRectReadOnly GamepadTouch_surfaceDimensions( const GamepadTouch *self);
+DOMRectReadOnly GamepadTouch_surfaceDimensions(const GamepadTouch *self);
 
 void GamepadTouch_set_surfaceDimensions(GamepadTouch* self, DOMRectReadOnly * value);
 DECLARE_EMLITE_TYPE(Gamepad, em_Val);
 
-jb_DOMString Gamepad_id( const Gamepad *self);
+jb_DOMString Gamepad_id(const Gamepad *self);
 
-long Gamepad_index( const Gamepad *self);
+long Gamepad_index(const Gamepad *self);
 
-bool Gamepad_connected( const Gamepad *self);
+bool Gamepad_connected(const Gamepad *self);
 
-jb_Any Gamepad_timestamp( const Gamepad *self);
+jb_Any Gamepad_timestamp(const Gamepad *self);
 
-GamepadMappingType Gamepad_mapping( const Gamepad *self);
+GamepadMappingType Gamepad_mapping(const Gamepad *self);
 
-jb_FrozenArray Gamepad_axes( const Gamepad *self);
+jb_FrozenArray Gamepad_axes(const Gamepad *self);
 
-jb_FrozenArray Gamepad_buttons( const Gamepad *self);
+jb_FrozenArray Gamepad_buttons(const Gamepad *self);
 
-jb_FrozenArray Gamepad_touches( const Gamepad *self);
+jb_FrozenArray Gamepad_touches(const Gamepad *self);
 
-GamepadHapticActuator Gamepad_vibrationActuator( const Gamepad *self);
+GamepadHapticActuator Gamepad_vibrationActuator(const Gamepad *self);
 
-GamepadHand Gamepad_hand( const Gamepad *self);
+GamepadHand Gamepad_hand(const Gamepad *self);
 
-jb_FrozenArray Gamepad_hapticActuators( const Gamepad *self);
+jb_FrozenArray Gamepad_hapticActuators(const Gamepad *self);
 
-GamepadPose Gamepad_pose( const Gamepad *self);
+GamepadPose Gamepad_pose(const Gamepad *self);

@@ -14,4 +14,4 @@ MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode_new0(AudioContex
 
 MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode_new1(AudioContext * context, jb_Any * options);
 
-MediaStream MediaStreamAudioDestinationNode_stream( const MediaStreamAudioDestinationNode *self);
+MediaStream MediaStreamAudioDestinationNode_stream(const MediaStreamAudioDestinationNode *self);

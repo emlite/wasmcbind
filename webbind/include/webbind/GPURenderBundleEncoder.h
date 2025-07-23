@@ -18,7 +18,7 @@ GPURenderBundle GPURenderBundleEncoder_finish0(GPURenderBundleEncoder* self );
 
 GPURenderBundle GPURenderBundleEncoder_finish1(GPURenderBundleEncoder* self , GPURenderBundleDescriptor * descriptor);
 
-jb_USVString GPURenderBundleEncoder_label( const GPURenderBundleEncoder *self);
+jb_USVString GPURenderBundleEncoder_label(const GPURenderBundleEncoder *self);
 
 void GPURenderBundleEncoder_set_label(GPURenderBundleEncoder* self, jb_USVString * value);
 

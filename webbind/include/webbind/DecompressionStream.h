@@ -12,6 +12,6 @@ DECLARE_EMLITE_TYPE(DecompressionStream, em_Val);
 
 DecompressionStream DecompressionStream_new(CompressionFormat * format);
 
-ReadableStream DecompressionStream_readable( const DecompressionStream *self);
+ReadableStream DecompressionStream_readable(const DecompressionStream *self);
 
-WritableStream DecompressionStream_writable( const DecompressionStream *self);
+WritableStream DecompressionStream_writable(const DecompressionStream *self);

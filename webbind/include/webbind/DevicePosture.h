@@ -8,8 +8,8 @@
 
 DECLARE_EMLITE_TYPE(DevicePosture, EventTarget);
 
-DevicePostureType DevicePosture_type( const DevicePosture *self);
+DevicePostureType DevicePosture_type(const DevicePosture *self);
 
-jb_Any DevicePosture_onchange( const DevicePosture *self);
+jb_Any DevicePosture_onchange(const DevicePosture *self);
 
 void DevicePosture_set_onchange(DevicePosture* self, jb_Any * value);

@@ -11,7 +11,7 @@ typedef struct TrustedScriptURL TrustedScriptURL;
 
 DECLARE_EMLITE_TYPE(TrustedTypePolicy, em_Val);
 
-jb_DOMString TrustedTypePolicy_name( const TrustedTypePolicy *self);
+jb_DOMString TrustedTypePolicy_name(const TrustedTypePolicy *self);
 
 TrustedHTML TrustedTypePolicy_createHTML(TrustedTypePolicy* self , jb_DOMString * input, jb_Any * arguments);
 

@@ -9,4 +9,4 @@ typedef struct FontFacePalette FontFacePalette;
 
 DECLARE_EMLITE_TYPE(FontFacePalettes, em_Val);
 
-unsigned long FontFacePalettes_length( const FontFacePalettes *self);
+unsigned long FontFacePalettes_length(const FontFacePalettes *self);

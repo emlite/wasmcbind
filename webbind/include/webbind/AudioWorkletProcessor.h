@@ -11,4 +11,4 @@ DECLARE_EMLITE_TYPE(AudioWorkletProcessor, em_Val);
 
 AudioWorkletProcessor AudioWorkletProcessor_new();
 
-jb_Any AudioWorkletProcessor_port( const AudioWorkletProcessor *self);
+jb_Any AudioWorkletProcessor_port(const AudioWorkletProcessor *self);

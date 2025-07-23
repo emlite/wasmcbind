@@ -10,6 +10,6 @@ typedef struct CSSStyleDeclaration CSSStyleDeclaration;
 
 DECLARE_EMLITE_TYPE(CSSMarginRule, CSSRule);
 
-jb_CSSOMString CSSMarginRule_name( const CSSMarginRule *self);
+jb_CSSOMString CSSMarginRule_name(const CSSMarginRule *self);
 
-CSSStyleDeclaration CSSMarginRule_style( const CSSMarginRule *self);
+CSSStyleDeclaration CSSMarginRule_style(const CSSMarginRule *self);

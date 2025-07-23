@@ -13,47 +13,47 @@ typedef struct BluetoothLEScanOptions BluetoothLEScanOptions;
 
 DECLARE_EMLITE_TYPE(RequestDeviceOptions, em_Val);
 
-jb_Sequence RequestDeviceOptions_filters( const RequestDeviceOptions *self);
+jb_Sequence RequestDeviceOptions_filters(const RequestDeviceOptions *self);
 
 void RequestDeviceOptions_set_filters(RequestDeviceOptions* self, jb_Sequence * value);
 
-jb_Sequence RequestDeviceOptions_exclusionFilters( const RequestDeviceOptions *self);
+jb_Sequence RequestDeviceOptions_exclusionFilters(const RequestDeviceOptions *self);
 
 void RequestDeviceOptions_set_exclusionFilters(RequestDeviceOptions* self, jb_Sequence * value);
 
-jb_Sequence RequestDeviceOptions_optionalServices( const RequestDeviceOptions *self);
+jb_Sequence RequestDeviceOptions_optionalServices(const RequestDeviceOptions *self);
 
 void RequestDeviceOptions_set_optionalServices(RequestDeviceOptions* self, jb_Sequence * value);
 
-jb_Sequence RequestDeviceOptions_optionalManufacturerData( const RequestDeviceOptions *self);
+jb_Sequence RequestDeviceOptions_optionalManufacturerData(const RequestDeviceOptions *self);
 
 void RequestDeviceOptions_set_optionalManufacturerData(RequestDeviceOptions* self, jb_Sequence * value);
 
-bool RequestDeviceOptions_acceptAllDevices( const RequestDeviceOptions *self);
+bool RequestDeviceOptions_acceptAllDevices(const RequestDeviceOptions *self);
 
 void RequestDeviceOptions_set_acceptAllDevices(RequestDeviceOptions* self, bool value);
 DECLARE_EMLITE_TYPE(BluetoothLEScanOptions, em_Val);
 
-jb_Sequence BluetoothLEScanOptions_filters( const BluetoothLEScanOptions *self);
+jb_Sequence BluetoothLEScanOptions_filters(const BluetoothLEScanOptions *self);
 
 void BluetoothLEScanOptions_set_filters(BluetoothLEScanOptions* self, jb_Sequence * value);
 
-bool BluetoothLEScanOptions_keepRepeatedDevices( const BluetoothLEScanOptions *self);
+bool BluetoothLEScanOptions_keepRepeatedDevices(const BluetoothLEScanOptions *self);
 
 void BluetoothLEScanOptions_set_keepRepeatedDevices(BluetoothLEScanOptions* self, bool value);
 
-bool BluetoothLEScanOptions_acceptAllAdvertisements( const BluetoothLEScanOptions *self);
+bool BluetoothLEScanOptions_acceptAllAdvertisements(const BluetoothLEScanOptions *self);
 
 void BluetoothLEScanOptions_set_acceptAllAdvertisements(BluetoothLEScanOptions* self, bool value);
 DECLARE_EMLITE_TYPE(Bluetooth, EventTarget);
 
 jb_Promise Bluetooth_getAvailability(Bluetooth* self );
 
-jb_Any Bluetooth_onavailabilitychanged( const Bluetooth *self);
+jb_Any Bluetooth_onavailabilitychanged(const Bluetooth *self);
 
 void Bluetooth_set_onavailabilitychanged(Bluetooth* self, jb_Any * value);
 
-BluetoothDevice Bluetooth_referringDevice( const Bluetooth *self);
+BluetoothDevice Bluetooth_referringDevice(const Bluetooth *self);
 
 jb_Promise Bluetooth_getDevices(Bluetooth* self );
 
@@ -65,26 +65,26 @@ jb_Promise Bluetooth_requestLEScan0(Bluetooth* self );
 
 jb_Promise Bluetooth_requestLEScan1(Bluetooth* self , BluetoothLEScanOptions * options);
 
-jb_Any Bluetooth_onadvertisementreceived( const Bluetooth *self);
+jb_Any Bluetooth_onadvertisementreceived(const Bluetooth *self);
 
 void Bluetooth_set_onadvertisementreceived(Bluetooth* self, jb_Any * value);
 
-jb_Any Bluetooth_ongattserverdisconnected( const Bluetooth *self);
+jb_Any Bluetooth_ongattserverdisconnected(const Bluetooth *self);
 
 void Bluetooth_set_ongattserverdisconnected(Bluetooth* self, jb_Any * value);
 
-jb_Any Bluetooth_oncharacteristicvaluechanged( const Bluetooth *self);
+jb_Any Bluetooth_oncharacteristicvaluechanged(const Bluetooth *self);
 
 void Bluetooth_set_oncharacteristicvaluechanged(Bluetooth* self, jb_Any * value);
 
-jb_Any Bluetooth_onserviceadded( const Bluetooth *self);
+jb_Any Bluetooth_onserviceadded(const Bluetooth *self);
 
 void Bluetooth_set_onserviceadded(Bluetooth* self, jb_Any * value);
 
-jb_Any Bluetooth_onservicechanged( const Bluetooth *self);
+jb_Any Bluetooth_onservicechanged(const Bluetooth *self);
 
 void Bluetooth_set_onservicechanged(Bluetooth* self, jb_Any * value);
 
-jb_Any Bluetooth_onserviceremoved( const Bluetooth *self);
+jb_Any Bluetooth_onserviceremoved(const Bluetooth *self);
 
 void Bluetooth_set_onserviceremoved(Bluetooth* self, jb_Any * value);

@@ -9,16 +9,16 @@ typedef struct SourceBuffer SourceBuffer;
 
 DECLARE_EMLITE_TYPE(VideoTrack, em_Val);
 
-jb_DOMString VideoTrack_id( const VideoTrack *self);
+jb_DOMString VideoTrack_id(const VideoTrack *self);
 
-jb_DOMString VideoTrack_kind( const VideoTrack *self);
+jb_DOMString VideoTrack_kind(const VideoTrack *self);
 
-jb_DOMString VideoTrack_label( const VideoTrack *self);
+jb_DOMString VideoTrack_label(const VideoTrack *self);
 
-jb_DOMString VideoTrack_language( const VideoTrack *self);
+jb_DOMString VideoTrack_language(const VideoTrack *self);
 
-bool VideoTrack_selected( const VideoTrack *self);
+bool VideoTrack_selected(const VideoTrack *self);
 
 void VideoTrack_set_selected(VideoTrack* self, bool value);
 
-SourceBuffer VideoTrack_sourceBuffer( const VideoTrack *self);
+SourceBuffer VideoTrack_sourceBuffer(const VideoTrack *self);

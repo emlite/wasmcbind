@@ -9,6 +9,6 @@ typedef struct RTCIceCandidate RTCIceCandidate;
 
 DECLARE_EMLITE_TYPE(RTCIceCandidatePair, em_Val);
 
-RTCIceCandidate RTCIceCandidatePair_local( const RTCIceCandidatePair *self);
+RTCIceCandidate RTCIceCandidatePair_local(const RTCIceCandidatePair *self);
 
-RTCIceCandidate RTCIceCandidatePair_remote( const RTCIceCandidatePair *self);
+RTCIceCandidate RTCIceCandidatePair_remote(const RTCIceCandidatePair *self);

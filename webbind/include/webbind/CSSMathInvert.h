@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(CSSMathInvert, CSSMathValue);
 
 CSSMathInvert CSSMathInvert_new(jb_Any * arg);
 
-CSSNumericValue CSSMathInvert_value( const CSSMathInvert *self);
+CSSNumericValue CSSMathInvert_value(const CSSMathInvert *self);

@@ -9,4 +9,4 @@ typedef struct DOMRect DOMRect;
 
 DECLARE_EMLITE_TYPE(Viewport, em_Val);
 
-jb_FrozenArray Viewport_segments( const Viewport *self);
+jb_FrozenArray Viewport_segments(const Viewport *self);

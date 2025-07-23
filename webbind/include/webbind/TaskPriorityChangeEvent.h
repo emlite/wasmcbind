@@ -10,4 +10,4 @@ DECLARE_EMLITE_TYPE(TaskPriorityChangeEvent, Event);
 
 TaskPriorityChangeEvent TaskPriorityChangeEvent_new(jb_DOMString * type, jb_Any * priorityChangeEventInitDict);
 
-TaskPriority TaskPriorityChangeEvent_previousPriority( const TaskPriorityChangeEvent *self);
+TaskPriority TaskPriorityChangeEvent_previousPriority(const TaskPriorityChangeEvent *self);

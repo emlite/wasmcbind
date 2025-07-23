@@ -9,6 +9,6 @@ typedef struct FileSystemDirectoryEntry FileSystemDirectoryEntry;
 
 DECLARE_EMLITE_TYPE(FileSystem, em_Val);
 
-jb_USVString FileSystem_name( const FileSystem *self);
+jb_USVString FileSystem_name(const FileSystem *self);
 
-FileSystemDirectoryEntry FileSystem_root( const FileSystem *self);
+FileSystemDirectoryEntry FileSystem_root(const FileSystem *self);

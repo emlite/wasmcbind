@@ -7,7 +7,7 @@
 
 DECLARE_EMLITE_TYPE(ReadableStreamDefaultController, em_Val);
 
-double ReadableStreamDefaultController_desiredSize( const ReadableStreamDefaultController *self);
+double ReadableStreamDefaultController_desiredSize(const ReadableStreamDefaultController *self);
 
 jb_Undefined ReadableStreamDefaultController_close(ReadableStreamDefaultController* self );
 

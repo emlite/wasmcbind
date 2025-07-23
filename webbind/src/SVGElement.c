@@ -4,6 +4,7 @@
 #include <webbind/SVGUseElement.h>
 #include <webbind/DOMStringMap.h>
 #include <webbind/CSSStyleDeclaration.h>
+#include <webbind/CSSStyleProperties.h>
 
 
 DEFINE_EMLITE_TYPE(FocusOptions, em_Val);

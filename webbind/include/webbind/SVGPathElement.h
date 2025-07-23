@@ -13,12 +13,12 @@ typedef struct SVGPathDataSettings SVGPathDataSettings;
 
 DECLARE_EMLITE_TYPE(SVGPathDataSettings, em_Val);
 
-bool SVGPathDataSettings_normalize( const SVGPathDataSettings *self);
+bool SVGPathDataSettings_normalize(const SVGPathDataSettings *self);
 
 void SVGPathDataSettings_set_normalize(SVGPathDataSettings* self, bool value);
 DECLARE_EMLITE_TYPE(SVGPathElement, SVGGeometryElement);
 
-SVGAnimatedNumber SVGPathElement_pathLength( const SVGPathElement *self);
+SVGAnimatedNumber SVGPathElement_pathLength(const SVGPathElement *self);
 
 float SVGPathElement_getTotalLength(SVGPathElement* self );
 

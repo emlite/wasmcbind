@@ -8,10 +8,10 @@
 
 DECLARE_EMLITE_TYPE(VisibilityStateEntry, PerformanceEntry);
 
-jb_DOMString VisibilityStateEntry_name( const VisibilityStateEntry *self);
+jb_DOMString VisibilityStateEntry_name(const VisibilityStateEntry *self);
 
-jb_DOMString VisibilityStateEntry_entryType( const VisibilityStateEntry *self);
+jb_DOMString VisibilityStateEntry_entryType(const VisibilityStateEntry *self);
 
-jb_Any VisibilityStateEntry_startTime( const VisibilityStateEntry *self);
+jb_Any VisibilityStateEntry_startTime(const VisibilityStateEntry *self);
 
-unsigned long VisibilityStateEntry_duration( const VisibilityStateEntry *self);
+unsigned long VisibilityStateEntry_duration(const VisibilityStateEntry *self);

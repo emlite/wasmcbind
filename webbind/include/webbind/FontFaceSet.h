@@ -17,15 +17,15 @@ bool FontFaceSet_delete_(FontFaceSet* self , FontFace * font);
 
 jb_Undefined FontFaceSet_clear(FontFaceSet* self );
 
-jb_Any FontFaceSet_onloading( const FontFaceSet *self);
+jb_Any FontFaceSet_onloading(const FontFaceSet *self);
 
 void FontFaceSet_set_onloading(FontFaceSet* self, jb_Any * value);
 
-jb_Any FontFaceSet_onloadingdone( const FontFaceSet *self);
+jb_Any FontFaceSet_onloadingdone(const FontFaceSet *self);
 
 void FontFaceSet_set_onloadingdone(FontFaceSet* self, jb_Any * value);
 
-jb_Any FontFaceSet_onloadingerror( const FontFaceSet *self);
+jb_Any FontFaceSet_onloadingerror(const FontFaceSet *self);
 
 void FontFaceSet_set_onloadingerror(FontFaceSet* self, jb_Any * value);
 
@@ -37,6 +37,6 @@ bool FontFaceSet_check0(FontFaceSet* self , jb_CSSOMString * font);
 
 bool FontFaceSet_check1(FontFaceSet* self , jb_CSSOMString * font, jb_CSSOMString * text);
 
-jb_Promise FontFaceSet_ready( const FontFaceSet *self);
+jb_Promise FontFaceSet_ready(const FontFaceSet *self);
 
-FontFaceSetLoadStatus FontFaceSet_status( const FontFaceSet *self);
+FontFaceSetLoadStatus FontFaceSet_status(const FontFaceSet *self);

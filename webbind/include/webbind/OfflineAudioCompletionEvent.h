@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(OfflineAudioCompletionEvent, Event);
 
 OfflineAudioCompletionEvent OfflineAudioCompletionEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-AudioBuffer OfflineAudioCompletionEvent_renderedBuffer( const OfflineAudioCompletionEvent *self);
+AudioBuffer OfflineAudioCompletionEvent_renderedBuffer(const OfflineAudioCompletionEvent *self);

@@ -13,6 +13,6 @@ Global Global_new1(jb_Any * descriptor, jb_Any * v);
 
 jb_Any Global_valueOf(Global* self );
 
-jb_Any Global_value( const Global *self);
+jb_Any Global_value(const Global *self);
 
 void Global_set_value(Global* self, jb_Any * value);

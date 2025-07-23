@@ -14,17 +14,17 @@ typedef struct FileSystemRemoveOptions FileSystemRemoveOptions;
 
 DECLARE_EMLITE_TYPE(FileSystemGetFileOptions, em_Val);
 
-bool FileSystemGetFileOptions_create( const FileSystemGetFileOptions *self);
+bool FileSystemGetFileOptions_create(const FileSystemGetFileOptions *self);
 
 void FileSystemGetFileOptions_set_create(FileSystemGetFileOptions* self, bool value);
 DECLARE_EMLITE_TYPE(FileSystemGetDirectoryOptions, em_Val);
 
-bool FileSystemGetDirectoryOptions_create( const FileSystemGetDirectoryOptions *self);
+bool FileSystemGetDirectoryOptions_create(const FileSystemGetDirectoryOptions *self);
 
 void FileSystemGetDirectoryOptions_set_create(FileSystemGetDirectoryOptions* self, bool value);
 DECLARE_EMLITE_TYPE(FileSystemRemoveOptions, em_Val);
 
-bool FileSystemRemoveOptions_recursive( const FileSystemRemoveOptions *self);
+bool FileSystemRemoveOptions_recursive(const FileSystemRemoveOptions *self);
 
 void FileSystemRemoveOptions_set_recursive(FileSystemRemoveOptions* self, bool value);
 DECLARE_EMLITE_TYPE(FileSystemDirectoryHandle, FileSystemHandle);

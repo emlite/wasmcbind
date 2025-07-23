@@ -292,7 +292,7 @@ WebTransportSendGroup WebTransport_createSendGroup(WebTransport* self ) {
 }
 
 
-bool WebTransport_supportsReliableOnly() {
-    return em_Val_as(bool, em_Val_get(em_Val_global("webtransport", em_Val_from("supportsReliableOnly"))));
+bool WebTransport_supportsReliableOnly(const WebTransport *self) {
+    return em_Val_as(bool, em_Val_get(em_Val_global("webtransport"), em_Val_from("supportsReliableOnly")));
 }
 

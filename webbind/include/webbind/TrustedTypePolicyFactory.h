@@ -12,15 +12,15 @@ typedef struct TrustedScript TrustedScript;
 
 DECLARE_EMLITE_TYPE(TrustedTypePolicyOptions, em_Val);
 
-jb_Function TrustedTypePolicyOptions_createHTML( const TrustedTypePolicyOptions *self);
+jb_Function TrustedTypePolicyOptions_createHTML(const TrustedTypePolicyOptions *self);
 
 void TrustedTypePolicyOptions_set_createHTML(TrustedTypePolicyOptions* self, jb_Function * value);
 
-jb_Function TrustedTypePolicyOptions_createScript( const TrustedTypePolicyOptions *self);
+jb_Function TrustedTypePolicyOptions_createScript(const TrustedTypePolicyOptions *self);
 
 void TrustedTypePolicyOptions_set_createScript(TrustedTypePolicyOptions* self, jb_Function * value);
 
-jb_Function TrustedTypePolicyOptions_createScriptURL( const TrustedTypePolicyOptions *self);
+jb_Function TrustedTypePolicyOptions_createScriptURL(const TrustedTypePolicyOptions *self);
 
 void TrustedTypePolicyOptions_set_createScriptURL(TrustedTypePolicyOptions* self, jb_Function * value);
 DECLARE_EMLITE_TYPE(TrustedTypePolicyFactory, em_Val);
@@ -35,9 +35,9 @@ bool TrustedTypePolicyFactory_isScript(TrustedTypePolicyFactory* self , jb_Any *
 
 bool TrustedTypePolicyFactory_isScriptURL(TrustedTypePolicyFactory* self , jb_Any * value);
 
-TrustedHTML TrustedTypePolicyFactory_emptyHTML( const TrustedTypePolicyFactory *self);
+TrustedHTML TrustedTypePolicyFactory_emptyHTML(const TrustedTypePolicyFactory *self);
 
-TrustedScript TrustedTypePolicyFactory_emptyScript( const TrustedTypePolicyFactory *self);
+TrustedScript TrustedTypePolicyFactory_emptyScript(const TrustedTypePolicyFactory *self);
 
 jb_DOMString TrustedTypePolicyFactory_getAttributeType0(TrustedTypePolicyFactory* self , jb_DOMString * tagName, jb_DOMString * attribute);
 
@@ -49,4 +49,4 @@ jb_DOMString TrustedTypePolicyFactory_getPropertyType0(TrustedTypePolicyFactory*
 
 jb_DOMString TrustedTypePolicyFactory_getPropertyType1(TrustedTypePolicyFactory* self , jb_DOMString * tagName, jb_DOMString * property, jb_DOMString * elementNs);
 
-TrustedTypePolicy TrustedTypePolicyFactory_defaultPolicy( const TrustedTypePolicyFactory *self);
+TrustedTypePolicy TrustedTypePolicyFactory_defaultPolicy(const TrustedTypePolicyFactory *self);

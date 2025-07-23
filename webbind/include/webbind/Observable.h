@@ -11,7 +11,7 @@ typedef struct AbortSignal AbortSignal;
 
 DECLARE_EMLITE_TYPE(SubscribeOptions, em_Val);
 
-AbortSignal SubscribeOptions_signal( const SubscribeOptions *self);
+AbortSignal SubscribeOptions_signal(const SubscribeOptions *self);
 
 void SubscribeOptions_set_signal(SubscribeOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(Observable, em_Val);

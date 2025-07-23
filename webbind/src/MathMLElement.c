@@ -2,6 +2,7 @@
 #include <webbind/CSSStyleDeclaration.h>
 #include <webbind/DOMStringMap.h>
 #include <webbind/SVGElement.h>
+#include <webbind/CSSStyleProperties.h>
 
 
 DEFINE_EMLITE_TYPE(MathMLElement, Element);

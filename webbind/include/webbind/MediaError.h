@@ -7,6 +7,6 @@
 
 DECLARE_EMLITE_TYPE(MediaError, em_Val);
 
-unsigned short MediaError_code( const MediaError *self);
+unsigned short MediaError_code(const MediaError *self);
 
-jb_DOMString MediaError_message( const MediaError *self);
+jb_DOMString MediaError_message(const MediaError *self);

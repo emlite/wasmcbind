@@ -10,20 +10,20 @@ typedef struct PADebugModeOptions PADebugModeOptions;
 
 DECLARE_EMLITE_TYPE(PAHistogramContribution, em_Val);
 
-long long PAHistogramContribution_bucket( const PAHistogramContribution *self);
+long long PAHistogramContribution_bucket(const PAHistogramContribution *self);
 
 void PAHistogramContribution_set_bucket(PAHistogramContribution* self, long long value);
 
-long PAHistogramContribution_value( const PAHistogramContribution *self);
+long PAHistogramContribution_value(const PAHistogramContribution *self);
 
 void PAHistogramContribution_set_value(PAHistogramContribution* self, long value);
 
-long long PAHistogramContribution_filteringId( const PAHistogramContribution *self);
+long long PAHistogramContribution_filteringId(const PAHistogramContribution *self);
 
 void PAHistogramContribution_set_filteringId(PAHistogramContribution* self, long long value);
 DECLARE_EMLITE_TYPE(PADebugModeOptions, em_Val);
 
-long long PADebugModeOptions_debugKey( const PADebugModeOptions *self);
+long long PADebugModeOptions_debugKey(const PADebugModeOptions *self);
 
 void PADebugModeOptions_set_debugKey(PADebugModeOptions* self, long long value);
 DECLARE_EMLITE_TYPE(PrivateAggregation, em_Val);

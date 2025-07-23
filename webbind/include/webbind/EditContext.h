@@ -27,32 +27,32 @@ jb_Undefined EditContext_updateCharacterBounds(EditContext* self , unsigned long
 
 jb_Sequence EditContext_attachedElements(EditContext* self );
 
-jb_DOMString EditContext_text( const EditContext *self);
+jb_DOMString EditContext_text(const EditContext *self);
 
-unsigned long EditContext_selectionStart( const EditContext *self);
+unsigned long EditContext_selectionStart(const EditContext *self);
 
-unsigned long EditContext_selectionEnd( const EditContext *self);
+unsigned long EditContext_selectionEnd(const EditContext *self);
 
-unsigned long EditContext_characterBoundsRangeStart( const EditContext *self);
+unsigned long EditContext_characterBoundsRangeStart(const EditContext *self);
 
 jb_Sequence EditContext_characterBounds(EditContext* self );
 
-jb_Any EditContext_ontextupdate( const EditContext *self);
+jb_Any EditContext_ontextupdate(const EditContext *self);
 
 void EditContext_set_ontextupdate(EditContext* self, jb_Any * value);
 
-jb_Any EditContext_ontextformatupdate( const EditContext *self);
+jb_Any EditContext_ontextformatupdate(const EditContext *self);
 
 void EditContext_set_ontextformatupdate(EditContext* self, jb_Any * value);
 
-jb_Any EditContext_oncharacterboundsupdate( const EditContext *self);
+jb_Any EditContext_oncharacterboundsupdate(const EditContext *self);
 
 void EditContext_set_oncharacterboundsupdate(EditContext* self, jb_Any * value);
 
-jb_Any EditContext_oncompositionstart( const EditContext *self);
+jb_Any EditContext_oncompositionstart(const EditContext *self);
 
 void EditContext_set_oncompositionstart(EditContext* self, jb_Any * value);
 
-jb_Any EditContext_oncompositionend( const EditContext *self);
+jb_Any EditContext_oncompositionend(const EditContext *self);
 
 void EditContext_set_oncompositionend(EditContext* self, jb_Any * value);

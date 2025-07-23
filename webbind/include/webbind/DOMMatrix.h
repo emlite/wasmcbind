@@ -23,91 +23,91 @@ DOMMatrix DOMMatrix_fromFloat32Array(DOMMatrix* self , jb_Float32Array * array32
 
 DOMMatrix DOMMatrix_fromFloat64Array(DOMMatrix* self , jb_Float64Array * array64);
 
-double DOMMatrix_a( const DOMMatrix *self);
+double DOMMatrix_a(const DOMMatrix *self);
 
 void DOMMatrix_set_a(DOMMatrix* self, double value);
 
-double DOMMatrix_b( const DOMMatrix *self);
+double DOMMatrix_b(const DOMMatrix *self);
 
 void DOMMatrix_set_b(DOMMatrix* self, double value);
 
-double DOMMatrix_c( const DOMMatrix *self);
+double DOMMatrix_c(const DOMMatrix *self);
 
 void DOMMatrix_set_c(DOMMatrix* self, double value);
 
-double DOMMatrix_d( const DOMMatrix *self);
+double DOMMatrix_d(const DOMMatrix *self);
 
 void DOMMatrix_set_d(DOMMatrix* self, double value);
 
-double DOMMatrix_e( const DOMMatrix *self);
+double DOMMatrix_e(const DOMMatrix *self);
 
 void DOMMatrix_set_e(DOMMatrix* self, double value);
 
-double DOMMatrix_f( const DOMMatrix *self);
+double DOMMatrix_f(const DOMMatrix *self);
 
 void DOMMatrix_set_f(DOMMatrix* self, double value);
 
-double DOMMatrix_m11( const DOMMatrix *self);
+double DOMMatrix_m11(const DOMMatrix *self);
 
 void DOMMatrix_set_m11(DOMMatrix* self, double value);
 
-double DOMMatrix_m12( const DOMMatrix *self);
+double DOMMatrix_m12(const DOMMatrix *self);
 
 void DOMMatrix_set_m12(DOMMatrix* self, double value);
 
-double DOMMatrix_m13( const DOMMatrix *self);
+double DOMMatrix_m13(const DOMMatrix *self);
 
 void DOMMatrix_set_m13(DOMMatrix* self, double value);
 
-double DOMMatrix_m14( const DOMMatrix *self);
+double DOMMatrix_m14(const DOMMatrix *self);
 
 void DOMMatrix_set_m14(DOMMatrix* self, double value);
 
-double DOMMatrix_m21( const DOMMatrix *self);
+double DOMMatrix_m21(const DOMMatrix *self);
 
 void DOMMatrix_set_m21(DOMMatrix* self, double value);
 
-double DOMMatrix_m22( const DOMMatrix *self);
+double DOMMatrix_m22(const DOMMatrix *self);
 
 void DOMMatrix_set_m22(DOMMatrix* self, double value);
 
-double DOMMatrix_m23( const DOMMatrix *self);
+double DOMMatrix_m23(const DOMMatrix *self);
 
 void DOMMatrix_set_m23(DOMMatrix* self, double value);
 
-double DOMMatrix_m24( const DOMMatrix *self);
+double DOMMatrix_m24(const DOMMatrix *self);
 
 void DOMMatrix_set_m24(DOMMatrix* self, double value);
 
-double DOMMatrix_m31( const DOMMatrix *self);
+double DOMMatrix_m31(const DOMMatrix *self);
 
 void DOMMatrix_set_m31(DOMMatrix* self, double value);
 
-double DOMMatrix_m32( const DOMMatrix *self);
+double DOMMatrix_m32(const DOMMatrix *self);
 
 void DOMMatrix_set_m32(DOMMatrix* self, double value);
 
-double DOMMatrix_m33( const DOMMatrix *self);
+double DOMMatrix_m33(const DOMMatrix *self);
 
 void DOMMatrix_set_m33(DOMMatrix* self, double value);
 
-double DOMMatrix_m34( const DOMMatrix *self);
+double DOMMatrix_m34(const DOMMatrix *self);
 
 void DOMMatrix_set_m34(DOMMatrix* self, double value);
 
-double DOMMatrix_m41( const DOMMatrix *self);
+double DOMMatrix_m41(const DOMMatrix *self);
 
 void DOMMatrix_set_m41(DOMMatrix* self, double value);
 
-double DOMMatrix_m42( const DOMMatrix *self);
+double DOMMatrix_m42(const DOMMatrix *self);
 
 void DOMMatrix_set_m42(DOMMatrix* self, double value);
 
-double DOMMatrix_m43( const DOMMatrix *self);
+double DOMMatrix_m43(const DOMMatrix *self);
 
 void DOMMatrix_set_m43(DOMMatrix* self, double value);
 
-double DOMMatrix_m44( const DOMMatrix *self);
+double DOMMatrix_m44(const DOMMatrix *self);
 
 void DOMMatrix_set_m44(DOMMatrix* self, double value);
 

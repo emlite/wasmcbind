@@ -10,17 +10,17 @@ typedef struct IDBRequest IDBRequest;
 
 DECLARE_EMLITE_TYPE(IDBIndex, em_Val);
 
-jb_DOMString IDBIndex_name( const IDBIndex *self);
+jb_DOMString IDBIndex_name(const IDBIndex *self);
 
 void IDBIndex_set_name(IDBIndex* self, jb_DOMString * value);
 
-IDBObjectStore IDBIndex_objectStore( const IDBIndex *self);
+IDBObjectStore IDBIndex_objectStore(const IDBIndex *self);
 
-jb_Any IDBIndex_keyPath( const IDBIndex *self);
+jb_Any IDBIndex_keyPath(const IDBIndex *self);
 
-bool IDBIndex_multiEntry( const IDBIndex *self);
+bool IDBIndex_multiEntry(const IDBIndex *self);
 
-bool IDBIndex_unique( const IDBIndex *self);
+bool IDBIndex_unique(const IDBIndex *self);
 
 IDBRequest IDBIndex_get(IDBIndex* self , jb_Any * query);
 

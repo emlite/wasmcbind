@@ -7,6 +7,6 @@
 
 DECLARE_EMLITE_TYPE(GPUTextureView, em_Val);
 
-jb_USVString GPUTextureView_label( const GPUTextureView *self);
+jb_USVString GPUTextureView_label(const GPUTextureView *self);
 
 void GPUTextureView_set_label(GPUTextureView* self, jb_USVString * value);

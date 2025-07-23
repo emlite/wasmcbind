@@ -8,10 +8,10 @@
 
 DECLARE_EMLITE_TYPE(PictureInPictureWindow, EventTarget);
 
-long PictureInPictureWindow_width( const PictureInPictureWindow *self);
+long PictureInPictureWindow_width(const PictureInPictureWindow *self);
 
-long PictureInPictureWindow_height( const PictureInPictureWindow *self);
+long PictureInPictureWindow_height(const PictureInPictureWindow *self);
 
-jb_Any PictureInPictureWindow_onresize( const PictureInPictureWindow *self);
+jb_Any PictureInPictureWindow_onresize(const PictureInPictureWindow *self);
 
 void PictureInPictureWindow_set_onresize(PictureInPictureWindow* self, jb_Any * value);

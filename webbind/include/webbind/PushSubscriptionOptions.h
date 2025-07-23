@@ -7,6 +7,6 @@
 
 DECLARE_EMLITE_TYPE(PushSubscriptionOptions, em_Val);
 
-bool PushSubscriptionOptions_userVisibleOnly( const PushSubscriptionOptions *self);
+bool PushSubscriptionOptions_userVisibleOnly(const PushSubscriptionOptions *self);
 
-jb_ArrayBuffer PushSubscriptionOptions_applicationServerKey( const PushSubscriptionOptions *self);
+jb_ArrayBuffer PushSubscriptionOptions_applicationServerKey(const PushSubscriptionOptions *self);

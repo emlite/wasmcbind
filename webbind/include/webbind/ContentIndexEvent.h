@@ -10,4 +10,4 @@ DECLARE_EMLITE_TYPE(ContentIndexEvent, ExtendableEvent);
 
 ContentIndexEvent ContentIndexEvent_new(jb_DOMString * type, jb_Any * init);
 
-jb_DOMString ContentIndexEvent_id( const ContentIndexEvent *self);
+jb_DOMString ContentIndexEvent_id(const ContentIndexEvent *self);

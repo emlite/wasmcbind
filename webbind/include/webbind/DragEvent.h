@@ -14,4 +14,4 @@ DragEvent DragEvent_new0(jb_DOMString * type);
 
 DragEvent DragEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-DataTransfer DragEvent_dataTransfer( const DragEvent *self);
+DataTransfer DragEvent_dataTransfer(const DragEvent *self);

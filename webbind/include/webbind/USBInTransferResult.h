@@ -11,6 +11,6 @@ USBInTransferResult USBInTransferResult_new0(USBTransferStatus * status);
 
 USBInTransferResult USBInTransferResult_new1(USBTransferStatus * status, jb_DataView * data);
 
-jb_DataView USBInTransferResult_data( const USBInTransferResult *self);
+jb_DataView USBInTransferResult_data(const USBInTransferResult *self);
 
-USBTransferStatus USBInTransferResult_status( const USBInTransferResult *self);
+USBTransferStatus USBInTransferResult_status(const USBInTransferResult *self);

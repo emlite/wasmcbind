@@ -15,4 +15,4 @@ jb_Sequence StylePropertyMapReadOnly_getAll(StylePropertyMapReadOnly* self , jb_
 
 bool StylePropertyMapReadOnly_has(StylePropertyMapReadOnly* self , jb_USVString * property);
 
-unsigned long StylePropertyMapReadOnly_size( const StylePropertyMapReadOnly *self);
+unsigned long StylePropertyMapReadOnly_size(const StylePropertyMapReadOnly *self);

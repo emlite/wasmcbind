@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(PictureInPictureEvent, Event);
 
 PictureInPictureEvent PictureInPictureEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-PictureInPictureWindow PictureInPictureEvent_pictureInPictureWindow( const PictureInPictureEvent *self);
+PictureInPictureWindow PictureInPictureEvent_pictureInPictureWindow(const PictureInPictureEvent *self);

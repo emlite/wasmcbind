@@ -15,7 +15,7 @@ WritableStream WritableStream_new1(jb_Object * underlyingSink);
 
 WritableStream WritableStream_new2(jb_Object * underlyingSink, jb_Any * strategy);
 
-bool WritableStream_locked( const WritableStream *self);
+bool WritableStream_locked(const WritableStream *self);
 
 jb_Promise WritableStream_abort0(WritableStream* self );
 

@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(MediaStreamAudioSourceNode, AudioNode);
 
 MediaStreamAudioSourceNode MediaStreamAudioSourceNode_new(AudioContext * context, jb_Any * options);
 
-MediaStream MediaStreamAudioSourceNode_mediaStream( const MediaStreamAudioSourceNode *self);
+MediaStream MediaStreamAudioSourceNode_mediaStream(const MediaStreamAudioSourceNode *self);

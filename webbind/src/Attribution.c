@@ -161,12 +161,12 @@ void AttributionConversionOptions_set_logic(AttributionConversionOptions* self, 
 }
 
 
-AttributionLogicOptions AttributionConversionOptions_logicOptions(const AttributionConversionOptions *self) {
-    return em_Val_as(AttributionLogicOptions, em_Val_get(em_Val_as_val(self->inner), em_Val_from("logicOptions")));
+jb_Any AttributionConversionOptions_logicOptions(const AttributionConversionOptions *self) {
+    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("logicOptions")));
 }
 
 
-void AttributionConversionOptions_set_logicOptions(AttributionConversionOptions* self, AttributionLogicOptions * value) {
+void AttributionConversionOptions_set_logicOptions(AttributionConversionOptions* self, jb_Any * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("logicOptions"), em_Val_from(value));
 }
 

@@ -10,8 +10,8 @@ typedef struct Window Window;
 
 DECLARE_EMLITE_TYPE(TimeEvent, Event);
 
-jb_Any TimeEvent_view( const TimeEvent *self);
+jb_Any TimeEvent_view(const TimeEvent *self);
 
-long TimeEvent_detail( const TimeEvent *self);
+long TimeEvent_detail(const TimeEvent *self);
 
 jb_Undefined TimeEvent_initTimeEvent(TimeEvent* self , jb_DOMString * typeArg, Window * viewArg, long detailArg);

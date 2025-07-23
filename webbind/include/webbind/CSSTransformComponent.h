@@ -9,7 +9,7 @@ typedef struct DOMMatrix DOMMatrix;
 
 DECLARE_EMLITE_TYPE(CSSTransformComponent, em_Val);
 
-bool CSSTransformComponent_is2D( const CSSTransformComponent *self);
+bool CSSTransformComponent_is2D(const CSSTransformComponent *self);
 
 void CSSTransformComponent_set_is2D(CSSTransformComponent* self, bool value);
 

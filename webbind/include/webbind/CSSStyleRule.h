@@ -11,10 +11,10 @@ typedef struct StylePropertyMap StylePropertyMap;
 
 DECLARE_EMLITE_TYPE(CSSStyleRule, CSSGroupingRule);
 
-jb_CSSOMString CSSStyleRule_selectorText( const CSSStyleRule *self);
+jb_CSSOMString CSSStyleRule_selectorText(const CSSStyleRule *self);
 
 void CSSStyleRule_set_selectorText(CSSStyleRule* self, jb_CSSOMString * value);
 
-CSSStyleProperties CSSStyleRule_style( const CSSStyleRule *self);
+CSSStyleProperties CSSStyleRule_style(const CSSStyleRule *self);
 
-StylePropertyMap CSSStyleRule_styleMap( const CSSStyleRule *self);
+StylePropertyMap CSSStyleRule_styleMap(const CSSStyleRule *self);

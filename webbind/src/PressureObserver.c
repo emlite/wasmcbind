@@ -48,7 +48,7 @@ jb_Sequence PressureObserver_takeRecords(PressureObserver* self ) {
 }
 
 
-jb_FrozenArray PressureObserver_knownSources() {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_global("pressureobserver", em_Val_from("knownSources"))));
+jb_FrozenArray PressureObserver_knownSources(const PressureObserver *self) {
+    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_global("pressureobserver"), em_Val_from("knownSources")));
 }
 

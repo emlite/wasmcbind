@@ -11,14 +11,14 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 DECLARE_EMLITE_TYPE(SVGFEComponentTransferElement, SVGElement);
 
-SVGAnimatedString SVGFEComponentTransferElement_in1( const SVGFEComponentTransferElement *self);
+SVGAnimatedString SVGFEComponentTransferElement_in1(const SVGFEComponentTransferElement *self);
 
-SVGAnimatedLength SVGFEComponentTransferElement_x( const SVGFEComponentTransferElement *self);
+SVGAnimatedLength SVGFEComponentTransferElement_x(const SVGFEComponentTransferElement *self);
 
-SVGAnimatedLength SVGFEComponentTransferElement_y( const SVGFEComponentTransferElement *self);
+SVGAnimatedLength SVGFEComponentTransferElement_y(const SVGFEComponentTransferElement *self);
 
-SVGAnimatedLength SVGFEComponentTransferElement_width( const SVGFEComponentTransferElement *self);
+SVGAnimatedLength SVGFEComponentTransferElement_width(const SVGFEComponentTransferElement *self);
 
-SVGAnimatedLength SVGFEComponentTransferElement_height( const SVGFEComponentTransferElement *self);
+SVGAnimatedLength SVGFEComponentTransferElement_height(const SVGFEComponentTransferElement *self);
 
-SVGAnimatedString SVGFEComponentTransferElement_result( const SVGFEComponentTransferElement *self);
+SVGAnimatedString SVGFEComponentTransferElement_result(const SVGFEComponentTransferElement *self);

@@ -14,17 +14,17 @@ IntersectionObserver IntersectionObserver_new0(jb_Function * callback);
 
 IntersectionObserver IntersectionObserver_new1(jb_Function * callback, jb_Any * options);
 
-jb_Any IntersectionObserver_root( const IntersectionObserver *self);
+jb_Any IntersectionObserver_root(const IntersectionObserver *self);
 
-jb_DOMString IntersectionObserver_rootMargin( const IntersectionObserver *self);
+jb_DOMString IntersectionObserver_rootMargin(const IntersectionObserver *self);
 
-jb_DOMString IntersectionObserver_scrollMargin( const IntersectionObserver *self);
+jb_DOMString IntersectionObserver_scrollMargin(const IntersectionObserver *self);
 
-jb_FrozenArray IntersectionObserver_thresholds( const IntersectionObserver *self);
+jb_FrozenArray IntersectionObserver_thresholds(const IntersectionObserver *self);
 
-long IntersectionObserver_delay( const IntersectionObserver *self);
+long IntersectionObserver_delay(const IntersectionObserver *self);
 
-bool IntersectionObserver_trackVisibility( const IntersectionObserver *self);
+bool IntersectionObserver_trackVisibility(const IntersectionObserver *self);
 
 jb_Undefined IntersectionObserver_observe(IntersectionObserver* self , Element * target);
 

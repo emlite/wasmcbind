@@ -7,4 +7,4 @@
 
 DECLARE_EMLITE_TYPE(BarProp, em_Val);
 
-bool BarProp_visible( const BarProp *self);
+bool BarProp_visible(const BarProp *self);

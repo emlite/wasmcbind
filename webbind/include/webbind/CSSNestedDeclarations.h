@@ -10,4 +10,4 @@ typedef struct CSSStyleProperties CSSStyleProperties;
 
 DECLARE_EMLITE_TYPE(CSSNestedDeclarations, CSSRule);
 
-CSSStyleProperties CSSNestedDeclarations_style( const CSSNestedDeclarations *self);
+CSSStyleProperties CSSNestedDeclarations_style(const CSSNestedDeclarations *self);

@@ -10,7 +10,7 @@ DECLARE_EMLITE_TYPE(NavigatorManagedData, EventTarget);
 
 jb_Promise NavigatorManagedData_getManagedConfiguration(NavigatorManagedData* self , jb_Sequence * keys);
 
-jb_Any NavigatorManagedData_onmanagedconfigurationchange( const NavigatorManagedData *self);
+jb_Any NavigatorManagedData_onmanagedconfigurationchange(const NavigatorManagedData *self);
 
 void NavigatorManagedData_set_onmanagedconfigurationchange(NavigatorManagedData* self, jb_Any * value);
 

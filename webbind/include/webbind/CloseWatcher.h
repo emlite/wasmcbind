@@ -18,10 +18,10 @@ jb_Undefined CloseWatcher_close(CloseWatcher* self );
 
 jb_Undefined CloseWatcher_destroy(CloseWatcher* self );
 
-jb_Any CloseWatcher_oncancel( const CloseWatcher *self);
+jb_Any CloseWatcher_oncancel(const CloseWatcher *self);
 
 void CloseWatcher_set_oncancel(CloseWatcher* self, jb_Any * value);
 
-jb_Any CloseWatcher_onclose( const CloseWatcher *self);
+jb_Any CloseWatcher_onclose(const CloseWatcher *self);
 
 void CloseWatcher_set_onclose(CloseWatcher* self, jb_Any * value);

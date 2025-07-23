@@ -14,4 +14,4 @@ PerformanceMark PerformanceMark_new0(jb_DOMString * markName);
 
 PerformanceMark PerformanceMark_new1(jb_DOMString * markName, PerformanceMarkOptions * markOptions);
 
-jb_Any PerformanceMark_detail( const PerformanceMark *self);
+jb_Any PerformanceMark_detail(const PerformanceMark *self);

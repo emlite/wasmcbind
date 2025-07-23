@@ -18,6 +18,6 @@ jb_Undefined Keyboard_unlock(Keyboard* self );
 
 jb_Promise Keyboard_getLayoutMap(Keyboard* self );
 
-jb_Any Keyboard_onlayoutchange( const Keyboard *self);
+jb_Any Keyboard_onlayoutchange(const Keyboard *self);
 
 void Keyboard_set_onlayoutchange(Keyboard* self, jb_Any * value);

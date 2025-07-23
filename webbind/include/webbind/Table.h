@@ -21,4 +21,4 @@ jb_Undefined Table_set0(Table* self , unsigned long index);
 
 jb_Undefined Table_set1(Table* self , unsigned long index, jb_Any * value);
 
-unsigned long Table_length( const Table *self);
+unsigned long Table_length(const Table *self);

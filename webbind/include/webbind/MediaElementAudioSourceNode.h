@@ -13,4 +13,4 @@ DECLARE_EMLITE_TYPE(MediaElementAudioSourceNode, AudioNode);
 
 MediaElementAudioSourceNode MediaElementAudioSourceNode_new(AudioContext * context, jb_Any * options);
 
-HTMLMediaElement MediaElementAudioSourceNode_mediaElement( const MediaElementAudioSourceNode *self);
+HTMLMediaElement MediaElementAudioSourceNode_mediaElement(const MediaElementAudioSourceNode *self);

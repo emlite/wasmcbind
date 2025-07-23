@@ -5,5 +5,3 @@
 #include "enums.h"
 
 
-} // namespace GPUMapMode
-

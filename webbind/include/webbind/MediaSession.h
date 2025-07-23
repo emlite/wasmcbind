@@ -10,24 +10,24 @@ typedef struct MediaPositionState MediaPositionState;
 
 DECLARE_EMLITE_TYPE(MediaPositionState, em_Val);
 
-double MediaPositionState_duration( const MediaPositionState *self);
+double MediaPositionState_duration(const MediaPositionState *self);
 
 void MediaPositionState_set_duration(MediaPositionState* self, double value);
 
-double MediaPositionState_playbackRate( const MediaPositionState *self);
+double MediaPositionState_playbackRate(const MediaPositionState *self);
 
 void MediaPositionState_set_playbackRate(MediaPositionState* self, double value);
 
-double MediaPositionState_position( const MediaPositionState *self);
+double MediaPositionState_position(const MediaPositionState *self);
 
 void MediaPositionState_set_position(MediaPositionState* self, double value);
 DECLARE_EMLITE_TYPE(MediaSession, em_Val);
 
-MediaMetadata MediaSession_metadata( const MediaSession *self);
+MediaMetadata MediaSession_metadata(const MediaSession *self);
 
 void MediaSession_set_metadata(MediaSession* self, MediaMetadata * value);
 
-MediaSessionPlaybackState MediaSession_playbackState( const MediaSession *self);
+MediaSessionPlaybackState MediaSession_playbackState(const MediaSession *self);
 
 void MediaSession_set_playbackState(MediaSession* self, MediaSessionPlaybackState * value);
 

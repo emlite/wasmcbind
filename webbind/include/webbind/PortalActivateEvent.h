@@ -14,6 +14,6 @@ PortalActivateEvent PortalActivateEvent_new0(jb_DOMString * type);
 
 PortalActivateEvent PortalActivateEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_Any PortalActivateEvent_data( const PortalActivateEvent *self);
+jb_Any PortalActivateEvent_data(const PortalActivateEvent *self);
 
 HTMLPortalElement PortalActivateEvent_adoptPredecessor(PortalActivateEvent* self );

@@ -12,39 +12,39 @@ typedef struct AudioDecoderSupport AudioDecoderSupport;
 
 DECLARE_EMLITE_TYPE(AudioDecoderConfig, em_Val);
 
-jb_DOMString AudioDecoderConfig_codec( const AudioDecoderConfig *self);
+jb_DOMString AudioDecoderConfig_codec(const AudioDecoderConfig *self);
 
 void AudioDecoderConfig_set_codec(AudioDecoderConfig* self, jb_DOMString * value);
 
-unsigned long AudioDecoderConfig_sampleRate( const AudioDecoderConfig *self);
+unsigned long AudioDecoderConfig_sampleRate(const AudioDecoderConfig *self);
 
 void AudioDecoderConfig_set_sampleRate(AudioDecoderConfig* self, unsigned long value);
 
-unsigned long AudioDecoderConfig_numberOfChannels( const AudioDecoderConfig *self);
+unsigned long AudioDecoderConfig_numberOfChannels(const AudioDecoderConfig *self);
 
 void AudioDecoderConfig_set_numberOfChannels(AudioDecoderConfig* self, unsigned long value);
 
-jb_Any AudioDecoderConfig_description( const AudioDecoderConfig *self);
+jb_Any AudioDecoderConfig_description(const AudioDecoderConfig *self);
 
 void AudioDecoderConfig_set_description(AudioDecoderConfig* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(AudioDecoderSupport, em_Val);
 
-bool AudioDecoderSupport_supported( const AudioDecoderSupport *self);
+bool AudioDecoderSupport_supported(const AudioDecoderSupport *self);
 
 void AudioDecoderSupport_set_supported(AudioDecoderSupport* self, bool value);
 
-AudioDecoderConfig AudioDecoderSupport_config( const AudioDecoderSupport *self);
+AudioDecoderConfig AudioDecoderSupport_config(const AudioDecoderSupport *self);
 
 void AudioDecoderSupport_set_config(AudioDecoderSupport* self, AudioDecoderConfig * value);
 DECLARE_EMLITE_TYPE(AudioDecoder, EventTarget);
 
 AudioDecoder AudioDecoder_new(jb_Any * init);
 
-CodecState AudioDecoder_state( const AudioDecoder *self);
+CodecState AudioDecoder_state(const AudioDecoder *self);
 
-unsigned long AudioDecoder_decodeQueueSize( const AudioDecoder *self);
+unsigned long AudioDecoder_decodeQueueSize(const AudioDecoder *self);
 
-jb_Any AudioDecoder_ondequeue( const AudioDecoder *self);
+jb_Any AudioDecoder_ondequeue(const AudioDecoder *self);
 
 void AudioDecoder_set_ondequeue(AudioDecoder* self, jb_Any * value);
 

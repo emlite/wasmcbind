@@ -13,67 +13,67 @@ typedef struct VideoColorSpaceInit VideoColorSpaceInit;
 
 DECLARE_EMLITE_TYPE(VideoDecoderConfig, em_Val);
 
-jb_DOMString VideoDecoderConfig_codec( const VideoDecoderConfig *self);
+jb_DOMString VideoDecoderConfig_codec(const VideoDecoderConfig *self);
 
 void VideoDecoderConfig_set_codec(VideoDecoderConfig* self, jb_DOMString * value);
 
-jb_Any VideoDecoderConfig_description( const VideoDecoderConfig *self);
+jb_Any VideoDecoderConfig_description(const VideoDecoderConfig *self);
 
 void VideoDecoderConfig_set_description(VideoDecoderConfig* self, jb_Any * value);
 
-unsigned long VideoDecoderConfig_codedWidth( const VideoDecoderConfig *self);
+unsigned long VideoDecoderConfig_codedWidth(const VideoDecoderConfig *self);
 
 void VideoDecoderConfig_set_codedWidth(VideoDecoderConfig* self, unsigned long value);
 
-unsigned long VideoDecoderConfig_codedHeight( const VideoDecoderConfig *self);
+unsigned long VideoDecoderConfig_codedHeight(const VideoDecoderConfig *self);
 
 void VideoDecoderConfig_set_codedHeight(VideoDecoderConfig* self, unsigned long value);
 
-unsigned long VideoDecoderConfig_displayAspectWidth( const VideoDecoderConfig *self);
+unsigned long VideoDecoderConfig_displayAspectWidth(const VideoDecoderConfig *self);
 
 void VideoDecoderConfig_set_displayAspectWidth(VideoDecoderConfig* self, unsigned long value);
 
-unsigned long VideoDecoderConfig_displayAspectHeight( const VideoDecoderConfig *self);
+unsigned long VideoDecoderConfig_displayAspectHeight(const VideoDecoderConfig *self);
 
 void VideoDecoderConfig_set_displayAspectHeight(VideoDecoderConfig* self, unsigned long value);
 
-VideoColorSpaceInit VideoDecoderConfig_colorSpace( const VideoDecoderConfig *self);
+VideoColorSpaceInit VideoDecoderConfig_colorSpace(const VideoDecoderConfig *self);
 
 void VideoDecoderConfig_set_colorSpace(VideoDecoderConfig* self, VideoColorSpaceInit * value);
 
-HardwareAcceleration VideoDecoderConfig_hardwareAcceleration( const VideoDecoderConfig *self);
+HardwareAcceleration VideoDecoderConfig_hardwareAcceleration(const VideoDecoderConfig *self);
 
 void VideoDecoderConfig_set_hardwareAcceleration(VideoDecoderConfig* self, HardwareAcceleration * value);
 
-bool VideoDecoderConfig_optimizeForLatency( const VideoDecoderConfig *self);
+bool VideoDecoderConfig_optimizeForLatency(const VideoDecoderConfig *self);
 
 void VideoDecoderConfig_set_optimizeForLatency(VideoDecoderConfig* self, bool value);
 
-double VideoDecoderConfig_rotation( const VideoDecoderConfig *self);
+double VideoDecoderConfig_rotation(const VideoDecoderConfig *self);
 
 void VideoDecoderConfig_set_rotation(VideoDecoderConfig* self, double value);
 
-bool VideoDecoderConfig_flip( const VideoDecoderConfig *self);
+bool VideoDecoderConfig_flip(const VideoDecoderConfig *self);
 
 void VideoDecoderConfig_set_flip(VideoDecoderConfig* self, bool value);
 DECLARE_EMLITE_TYPE(VideoDecoderSupport, em_Val);
 
-bool VideoDecoderSupport_supported( const VideoDecoderSupport *self);
+bool VideoDecoderSupport_supported(const VideoDecoderSupport *self);
 
 void VideoDecoderSupport_set_supported(VideoDecoderSupport* self, bool value);
 
-VideoDecoderConfig VideoDecoderSupport_config( const VideoDecoderSupport *self);
+VideoDecoderConfig VideoDecoderSupport_config(const VideoDecoderSupport *self);
 
 void VideoDecoderSupport_set_config(VideoDecoderSupport* self, VideoDecoderConfig * value);
 DECLARE_EMLITE_TYPE(VideoDecoder, EventTarget);
 
 VideoDecoder VideoDecoder_new(jb_Any * init);
 
-CodecState VideoDecoder_state( const VideoDecoder *self);
+CodecState VideoDecoder_state(const VideoDecoder *self);
 
-unsigned long VideoDecoder_decodeQueueSize( const VideoDecoder *self);
+unsigned long VideoDecoder_decodeQueueSize(const VideoDecoder *self);
 
-jb_Any VideoDecoder_ondequeue( const VideoDecoder *self);
+jb_Any VideoDecoder_ondequeue(const VideoDecoder *self);
 
 void VideoDecoder_set_ondequeue(VideoDecoder* self, jb_Any * value);
 

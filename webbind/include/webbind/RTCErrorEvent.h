@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(RTCErrorEvent, Event);
 
 RTCErrorEvent RTCErrorEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-RTCError RTCErrorEvent_error( const RTCErrorEvent *self);
+RTCError RTCErrorEvent_error(const RTCErrorEvent *self);

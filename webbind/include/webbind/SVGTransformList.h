@@ -10,9 +10,9 @@ typedef struct SVGTransform SVGTransform;
 
 DECLARE_EMLITE_TYPE(SVGTransformList, em_Val);
 
-unsigned long SVGTransformList_length( const SVGTransformList *self);
+unsigned long SVGTransformList_length(const SVGTransformList *self);
 
-unsigned long SVGTransformList_numberOfItems( const SVGTransformList *self);
+unsigned long SVGTransformList_numberOfItems(const SVGTransformList *self);
 
 jb_Undefined SVGTransformList_clear(SVGTransformList* self );
 

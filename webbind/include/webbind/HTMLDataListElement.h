@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(HTMLDataListElement, HTMLElement);
 
 HTMLDataListElement HTMLDataListElement_new();
 
-HTMLCollection HTMLDataListElement_options( const HTMLDataListElement *self);
+HTMLCollection HTMLDataListElement_options(const HTMLDataListElement *self);

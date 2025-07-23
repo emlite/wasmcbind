@@ -9,27 +9,27 @@ typedef struct ContentDescription ContentDescription;
 
 DECLARE_EMLITE_TYPE(ContentDescription, em_Val);
 
-jb_DOMString ContentDescription_id( const ContentDescription *self);
+jb_DOMString ContentDescription_id(const ContentDescription *self);
 
 void ContentDescription_set_id(ContentDescription* self, jb_DOMString * value);
 
-jb_DOMString ContentDescription_title( const ContentDescription *self);
+jb_DOMString ContentDescription_title(const ContentDescription *self);
 
 void ContentDescription_set_title(ContentDescription* self, jb_DOMString * value);
 
-jb_DOMString ContentDescription_description( const ContentDescription *self);
+jb_DOMString ContentDescription_description(const ContentDescription *self);
 
 void ContentDescription_set_description(ContentDescription* self, jb_DOMString * value);
 
-ContentCategory ContentDescription_category( const ContentDescription *self);
+ContentCategory ContentDescription_category(const ContentDescription *self);
 
 void ContentDescription_set_category(ContentDescription* self, ContentCategory * value);
 
-jb_Sequence ContentDescription_icons( const ContentDescription *self);
+jb_Sequence ContentDescription_icons(const ContentDescription *self);
 
 void ContentDescription_set_icons(ContentDescription* self, jb_Sequence * value);
 
-jb_USVString ContentDescription_url( const ContentDescription *self);
+jb_USVString ContentDescription_url(const ContentDescription *self);
 
 void ContentDescription_set_url(ContentDescription* self, jb_USVString * value);
 DECLARE_EMLITE_TYPE(ContentIndex, em_Val);

@@ -11,13 +11,13 @@ typedef struct Node Node;
 
 DECLARE_EMLITE_TYPE(NamedFlow, EventTarget);
 
-jb_CSSOMString NamedFlow_name( const NamedFlow *self);
+jb_CSSOMString NamedFlow_name(const NamedFlow *self);
 
-bool NamedFlow_overset( const NamedFlow *self);
+bool NamedFlow_overset(const NamedFlow *self);
 
 jb_Sequence NamedFlow_getRegions(NamedFlow* self );
 
-short NamedFlow_firstEmptyRegionIndex( const NamedFlow *self);
+short NamedFlow_firstEmptyRegionIndex(const NamedFlow *self);
 
 jb_Sequence NamedFlow_getContent(NamedFlow* self );
 

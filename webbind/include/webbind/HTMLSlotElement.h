@@ -12,14 +12,14 @@ typedef struct Element Element;
 
 DECLARE_EMLITE_TYPE(AssignedNodesOptions, em_Val);
 
-bool AssignedNodesOptions_flatten( const AssignedNodesOptions *self);
+bool AssignedNodesOptions_flatten(const AssignedNodesOptions *self);
 
 void AssignedNodesOptions_set_flatten(AssignedNodesOptions* self, bool value);
 DECLARE_EMLITE_TYPE(HTMLSlotElement, HTMLElement);
 
 HTMLSlotElement HTMLSlotElement_new();
 
-jb_DOMString HTMLSlotElement_name( const HTMLSlotElement *self);
+jb_DOMString HTMLSlotElement_name(const HTMLSlotElement *self);
 
 void HTMLSlotElement_set_name(HTMLSlotElement* self, jb_DOMString * value);
 

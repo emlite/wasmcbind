@@ -14,4 +14,4 @@ SubmitEvent SubmitEvent_new0(jb_DOMString * type);
 
 SubmitEvent SubmitEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-HTMLElement SubmitEvent_submitter( const SubmitEvent *self);
+HTMLElement SubmitEvent_submitter(const SubmitEvent *self);

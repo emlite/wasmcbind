@@ -16,9 +16,9 @@ Blob Blob_new1(jb_Sequence * blobParts);
 
 Blob Blob_new2(jb_Sequence * blobParts, jb_Any * options);
 
-long long Blob_size( const Blob *self);
+long long Blob_size(const Blob *self);
 
-jb_DOMString Blob_type( const Blob *self);
+jb_DOMString Blob_type(const Blob *self);
 
 Blob Blob_slice0(Blob* self );
 

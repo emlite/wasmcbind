@@ -11,4 +11,4 @@ DECLARE_EMLITE_TYPE(CSSRuleList, em_Val);
 
 CSSRule CSSRuleList_item(CSSRuleList* self , unsigned long index);
 
-unsigned long CSSRuleList_length( const CSSRuleList *self);
+unsigned long CSSRuleList_length(const CSSRuleList *self);

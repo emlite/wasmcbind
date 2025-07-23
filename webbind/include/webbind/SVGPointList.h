@@ -9,9 +9,9 @@ typedef struct DOMPoint DOMPoint;
 
 DECLARE_EMLITE_TYPE(SVGPointList, em_Val);
 
-unsigned long SVGPointList_length( const SVGPointList *self);
+unsigned long SVGPointList_length(const SVGPointList *self);
 
-unsigned long SVGPointList_numberOfItems( const SVGPointList *self);
+unsigned long SVGPointList_numberOfItems(const SVGPointList *self);
 
 jb_Undefined SVGPointList_clear(SVGPointList* self );
 

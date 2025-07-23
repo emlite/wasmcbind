@@ -12,18 +12,18 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 DECLARE_EMLITE_TYPE(SVGFEImageElement, SVGElement);
 
-SVGAnimatedPreserveAspectRatio SVGFEImageElement_preserveAspectRatio( const SVGFEImageElement *self);
+SVGAnimatedPreserveAspectRatio SVGFEImageElement_preserveAspectRatio(const SVGFEImageElement *self);
 
-SVGAnimatedString SVGFEImageElement_crossOrigin( const SVGFEImageElement *self);
+SVGAnimatedString SVGFEImageElement_crossOrigin(const SVGFEImageElement *self);
 
-SVGAnimatedLength SVGFEImageElement_x( const SVGFEImageElement *self);
+SVGAnimatedLength SVGFEImageElement_x(const SVGFEImageElement *self);
 
-SVGAnimatedLength SVGFEImageElement_y( const SVGFEImageElement *self);
+SVGAnimatedLength SVGFEImageElement_y(const SVGFEImageElement *self);
 
-SVGAnimatedLength SVGFEImageElement_width( const SVGFEImageElement *self);
+SVGAnimatedLength SVGFEImageElement_width(const SVGFEImageElement *self);
 
-SVGAnimatedLength SVGFEImageElement_height( const SVGFEImageElement *self);
+SVGAnimatedLength SVGFEImageElement_height(const SVGFEImageElement *self);
 
-SVGAnimatedString SVGFEImageElement_result( const SVGFEImageElement *self);
+SVGAnimatedString SVGFEImageElement_result(const SVGFEImageElement *self);
 
-SVGAnimatedString SVGFEImageElement_href( const SVGFEImageElement *self);
+SVGAnimatedString SVGFEImageElement_href(const SVGFEImageElement *self);

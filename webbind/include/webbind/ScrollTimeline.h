@@ -14,6 +14,6 @@ ScrollTimeline ScrollTimeline_new0();
 
 ScrollTimeline ScrollTimeline_new1(jb_Any * options);
 
-Element ScrollTimeline_source( const ScrollTimeline *self);
+Element ScrollTimeline_source(const ScrollTimeline *self);
 
-ScrollAxis ScrollTimeline_axis( const ScrollTimeline *self);
+ScrollAxis ScrollTimeline_axis(const ScrollTimeline *self);

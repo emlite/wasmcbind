@@ -7,8 +7,8 @@
 
 DECLARE_EMLITE_TYPE(SVGAnimatedNumber, em_Val);
 
-float SVGAnimatedNumber_baseVal( const SVGAnimatedNumber *self);
+float SVGAnimatedNumber_baseVal(const SVGAnimatedNumber *self);
 
 void SVGAnimatedNumber_set_baseVal(SVGAnimatedNumber* self, float value);
 
-float SVGAnimatedNumber_animVal( const SVGAnimatedNumber *self);
+float SVGAnimatedNumber_animVal(const SVGAnimatedNumber *self);

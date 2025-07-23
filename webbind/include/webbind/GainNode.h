@@ -14,4 +14,4 @@ GainNode GainNode_new0(BaseAudioContext * context);
 
 GainNode GainNode_new1(BaseAudioContext * context, jb_Any * options);
 
-AudioParam GainNode_gain( const GainNode *self);
+AudioParam GainNode_gain(const GainNode *self);

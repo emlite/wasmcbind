@@ -8,10 +8,10 @@
 
 DECLARE_EMLITE_TYPE(IDBOpenDBRequest, IDBRequest);
 
-jb_Any IDBOpenDBRequest_onblocked( const IDBOpenDBRequest *self);
+jb_Any IDBOpenDBRequest_onblocked(const IDBOpenDBRequest *self);
 
 void IDBOpenDBRequest_set_onblocked(IDBOpenDBRequest* self, jb_Any * value);
 
-jb_Any IDBOpenDBRequest_onupgradeneeded( const IDBOpenDBRequest *self);
+jb_Any IDBOpenDBRequest_onupgradeneeded(const IDBOpenDBRequest *self);
 
 void IDBOpenDBRequest_set_onupgradeneeded(IDBOpenDBRequest* self, jb_Any * value);

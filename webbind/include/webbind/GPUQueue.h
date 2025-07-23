@@ -14,37 +14,37 @@ typedef struct GPUCopyExternalImageDestInfo GPUCopyExternalImageDestInfo;
 
 DECLARE_EMLITE_TYPE(GPUTexelCopyBufferLayout, em_Val);
 
-jb_Any GPUTexelCopyBufferLayout_offset( const GPUTexelCopyBufferLayout *self);
+jb_Any GPUTexelCopyBufferLayout_offset(const GPUTexelCopyBufferLayout *self);
 
 void GPUTexelCopyBufferLayout_set_offset(GPUTexelCopyBufferLayout* self, jb_Any * value);
 
-jb_Any GPUTexelCopyBufferLayout_bytesPerRow( const GPUTexelCopyBufferLayout *self);
+jb_Any GPUTexelCopyBufferLayout_bytesPerRow(const GPUTexelCopyBufferLayout *self);
 
 void GPUTexelCopyBufferLayout_set_bytesPerRow(GPUTexelCopyBufferLayout* self, jb_Any * value);
 
-jb_Any GPUTexelCopyBufferLayout_rowsPerImage( const GPUTexelCopyBufferLayout *self);
+jb_Any GPUTexelCopyBufferLayout_rowsPerImage(const GPUTexelCopyBufferLayout *self);
 
 void GPUTexelCopyBufferLayout_set_rowsPerImage(GPUTexelCopyBufferLayout* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(GPUCopyExternalImageSourceInfo, em_Val);
 
-jb_Any GPUCopyExternalImageSourceInfo_source( const GPUCopyExternalImageSourceInfo *self);
+jb_Any GPUCopyExternalImageSourceInfo_source(const GPUCopyExternalImageSourceInfo *self);
 
 void GPUCopyExternalImageSourceInfo_set_source(GPUCopyExternalImageSourceInfo* self, jb_Any * value);
 
-jb_Any GPUCopyExternalImageSourceInfo_origin( const GPUCopyExternalImageSourceInfo *self);
+jb_Any GPUCopyExternalImageSourceInfo_origin(const GPUCopyExternalImageSourceInfo *self);
 
 void GPUCopyExternalImageSourceInfo_set_origin(GPUCopyExternalImageSourceInfo* self, jb_Any * value);
 
-bool GPUCopyExternalImageSourceInfo_flipY( const GPUCopyExternalImageSourceInfo *self);
+bool GPUCopyExternalImageSourceInfo_flipY(const GPUCopyExternalImageSourceInfo *self);
 
 void GPUCopyExternalImageSourceInfo_set_flipY(GPUCopyExternalImageSourceInfo* self, bool value);
 DECLARE_EMLITE_TYPE(GPUCopyExternalImageDestInfo, em_Val);
 
-PredefinedColorSpace GPUCopyExternalImageDestInfo_colorSpace( const GPUCopyExternalImageDestInfo *self);
+PredefinedColorSpace GPUCopyExternalImageDestInfo_colorSpace(const GPUCopyExternalImageDestInfo *self);
 
 void GPUCopyExternalImageDestInfo_set_colorSpace(GPUCopyExternalImageDestInfo* self, PredefinedColorSpace * value);
 
-bool GPUCopyExternalImageDestInfo_premultipliedAlpha( const GPUCopyExternalImageDestInfo *self);
+bool GPUCopyExternalImageDestInfo_premultipliedAlpha(const GPUCopyExternalImageDestInfo *self);
 
 void GPUCopyExternalImageDestInfo_set_premultipliedAlpha(GPUCopyExternalImageDestInfo* self, bool value);
 DECLARE_EMLITE_TYPE(GPUQueue, em_Val);
@@ -63,6 +63,6 @@ jb_Undefined GPUQueue_writeTexture(GPUQueue* self , GPUTexelCopyTextureInfo * de
 
 jb_Undefined GPUQueue_copyExternalImageToTexture(GPUQueue* self , GPUCopyExternalImageSourceInfo * source, GPUCopyExternalImageDestInfo * destination, jb_Any * copySize);
 
-jb_USVString GPUQueue_label( const GPUQueue *self);
+jb_USVString GPUQueue_label(const GPUQueue *self);
 
 void GPUQueue_set_label(GPUQueue* self, jb_USVString * value);

@@ -9,7 +9,7 @@ typedef struct XRSpace XRSpace;
 
 DECLARE_EMLITE_TYPE(XRAnchor, em_Val);
 
-XRSpace XRAnchor_anchorSpace( const XRAnchor *self);
+XRSpace XRAnchor_anchorSpace(const XRAnchor *self);
 
 jb_Promise XRAnchor_requestPersistentHandle(XRAnchor* self );
 

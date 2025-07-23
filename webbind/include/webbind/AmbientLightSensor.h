@@ -12,4 +12,4 @@ AmbientLightSensor AmbientLightSensor_new0();
 
 AmbientLightSensor AmbientLightSensor_new1(jb_Any * sensorOptions);
 
-double AmbientLightSensor_illuminance( const AmbientLightSensor *self);
+double AmbientLightSensor_illuminance(const AmbientLightSensor *self);

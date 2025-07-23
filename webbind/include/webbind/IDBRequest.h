@@ -11,20 +11,20 @@ typedef struct IDBTransaction IDBTransaction;
 
 DECLARE_EMLITE_TYPE(IDBRequest, EventTarget);
 
-jb_Any IDBRequest_result( const IDBRequest *self);
+jb_Any IDBRequest_result(const IDBRequest *self);
 
-DOMException IDBRequest_error( const IDBRequest *self);
+DOMException IDBRequest_error(const IDBRequest *self);
 
-jb_Any IDBRequest_source( const IDBRequest *self);
+jb_Any IDBRequest_source(const IDBRequest *self);
 
-IDBTransaction IDBRequest_transaction( const IDBRequest *self);
+IDBTransaction IDBRequest_transaction(const IDBRequest *self);
 
-IDBRequestReadyState IDBRequest_readyState( const IDBRequest *self);
+IDBRequestReadyState IDBRequest_readyState(const IDBRequest *self);
 
-jb_Any IDBRequest_onsuccess( const IDBRequest *self);
+jb_Any IDBRequest_onsuccess(const IDBRequest *self);
 
 void IDBRequest_set_onsuccess(IDBRequest* self, jb_Any * value);
 
-jb_Any IDBRequest_onerror( const IDBRequest *self);
+jb_Any IDBRequest_onerror(const IDBRequest *self);
 
 void IDBRequest_set_onerror(IDBRequest* self, jb_Any * value);

@@ -11,4 +11,4 @@ DECLARE_EMLITE_TYPE(StyleSheetList, em_Val);
 
 CSSStyleSheet StyleSheetList_item(StyleSheetList* self , unsigned long index);
 
-unsigned long StyleSheetList_length( const StyleSheetList *self);
+unsigned long StyleSheetList_length(const StyleSheetList *self);

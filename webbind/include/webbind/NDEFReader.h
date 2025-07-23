@@ -13,32 +13,32 @@ typedef struct AbortSignal AbortSignal;
 
 DECLARE_EMLITE_TYPE(NDEFScanOptions, em_Val);
 
-AbortSignal NDEFScanOptions_signal( const NDEFScanOptions *self);
+AbortSignal NDEFScanOptions_signal(const NDEFScanOptions *self);
 
 void NDEFScanOptions_set_signal(NDEFScanOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(NDEFWriteOptions, em_Val);
 
-bool NDEFWriteOptions_overwrite( const NDEFWriteOptions *self);
+bool NDEFWriteOptions_overwrite(const NDEFWriteOptions *self);
 
 void NDEFWriteOptions_set_overwrite(NDEFWriteOptions* self, bool value);
 
-AbortSignal NDEFWriteOptions_signal( const NDEFWriteOptions *self);
+AbortSignal NDEFWriteOptions_signal(const NDEFWriteOptions *self);
 
 void NDEFWriteOptions_set_signal(NDEFWriteOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(NDEFMakeReadOnlyOptions, em_Val);
 
-AbortSignal NDEFMakeReadOnlyOptions_signal( const NDEFMakeReadOnlyOptions *self);
+AbortSignal NDEFMakeReadOnlyOptions_signal(const NDEFMakeReadOnlyOptions *self);
 
 void NDEFMakeReadOnlyOptions_set_signal(NDEFMakeReadOnlyOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(NDEFReader, EventTarget);
 
 NDEFReader NDEFReader_new();
 
-jb_Any NDEFReader_onreading( const NDEFReader *self);
+jb_Any NDEFReader_onreading(const NDEFReader *self);
 
 void NDEFReader_set_onreading(NDEFReader* self, jb_Any * value);
 
-jb_Any NDEFReader_onreadingerror( const NDEFReader *self);
+jb_Any NDEFReader_onreadingerror(const NDEFReader *self);
 
 void NDEFReader_set_onreadingerror(NDEFReader* self, jb_Any * value);
 

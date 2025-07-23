@@ -17,11 +17,11 @@ typedef struct MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode;
 
 DECLARE_EMLITE_TYPE(AudioTimestamp, em_Val);
 
-double AudioTimestamp_contextTime( const AudioTimestamp *self);
+double AudioTimestamp_contextTime(const AudioTimestamp *self);
 
 void AudioTimestamp_set_contextTime(AudioTimestamp* self, double value);
 
-jb_Any AudioTimestamp_performanceTime( const AudioTimestamp *self);
+jb_Any AudioTimestamp_performanceTime(const AudioTimestamp *self);
 
 void AudioTimestamp_set_performanceTime(AudioTimestamp* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(AudioContext, BaseAudioContext);
@@ -30,17 +30,17 @@ AudioContext AudioContext_new0();
 
 AudioContext AudioContext_new1(jb_Any * contextOptions);
 
-double AudioContext_baseLatency( const AudioContext *self);
+double AudioContext_baseLatency(const AudioContext *self);
 
-double AudioContext_outputLatency( const AudioContext *self);
+double AudioContext_outputLatency(const AudioContext *self);
 
-jb_Any AudioContext_sinkId( const AudioContext *self);
+jb_Any AudioContext_sinkId(const AudioContext *self);
 
-jb_Any AudioContext_onsinkchange( const AudioContext *self);
+jb_Any AudioContext_onsinkchange(const AudioContext *self);
 
 void AudioContext_set_onsinkchange(AudioContext* self, jb_Any * value);
 
-jb_Any AudioContext_onerror( const AudioContext *self);
+jb_Any AudioContext_onerror(const AudioContext *self);
 
 void AudioContext_set_onerror(AudioContext* self, jb_Any * value);
 

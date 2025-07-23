@@ -7,7 +7,7 @@
 
 DECLARE_EMLITE_TYPE(ReadableStreamBYOBRequest, em_Val);
 
-jb_Any ReadableStreamBYOBRequest_view( const ReadableStreamBYOBRequest *self);
+jb_Any ReadableStreamBYOBRequest_view(const ReadableStreamBYOBRequest *self);
 
 jb_Undefined ReadableStreamBYOBRequest_respond(ReadableStreamBYOBRequest* self , long long bytesWritten);
 

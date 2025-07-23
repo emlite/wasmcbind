@@ -11,14 +11,14 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 DECLARE_EMLITE_TYPE(SVGMaskElement, SVGElement);
 
-SVGAnimatedEnumeration SVGMaskElement_maskUnits( const SVGMaskElement *self);
+SVGAnimatedEnumeration SVGMaskElement_maskUnits(const SVGMaskElement *self);
 
-SVGAnimatedEnumeration SVGMaskElement_maskContentUnits( const SVGMaskElement *self);
+SVGAnimatedEnumeration SVGMaskElement_maskContentUnits(const SVGMaskElement *self);
 
-SVGAnimatedLength SVGMaskElement_x( const SVGMaskElement *self);
+SVGAnimatedLength SVGMaskElement_x(const SVGMaskElement *self);
 
-SVGAnimatedLength SVGMaskElement_y( const SVGMaskElement *self);
+SVGAnimatedLength SVGMaskElement_y(const SVGMaskElement *self);
 
-SVGAnimatedLength SVGMaskElement_width( const SVGMaskElement *self);
+SVGAnimatedLength SVGMaskElement_width(const SVGMaskElement *self);
 
-SVGAnimatedLength SVGMaskElement_height( const SVGMaskElement *self);
+SVGAnimatedLength SVGMaskElement_height(const SVGMaskElement *self);

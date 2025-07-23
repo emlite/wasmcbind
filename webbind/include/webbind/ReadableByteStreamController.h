@@ -9,9 +9,9 @@ typedef struct ReadableStreamBYOBRequest ReadableStreamBYOBRequest;
 
 DECLARE_EMLITE_TYPE(ReadableByteStreamController, em_Val);
 
-ReadableStreamBYOBRequest ReadableByteStreamController_byobRequest( const ReadableByteStreamController *self);
+ReadableStreamBYOBRequest ReadableByteStreamController_byobRequest(const ReadableByteStreamController *self);
 
-double ReadableByteStreamController_desiredSize( const ReadableByteStreamController *self);
+double ReadableByteStreamController_desiredSize(const ReadableByteStreamController *self);
 
 jb_Undefined ReadableByteStreamController_close(ReadableByteStreamController* self );
 

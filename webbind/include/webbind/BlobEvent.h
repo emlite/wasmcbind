@@ -12,6 +12,6 @@ DECLARE_EMLITE_TYPE(BlobEvent, Event);
 
 BlobEvent BlobEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-Blob BlobEvent_data( const BlobEvent *self);
+Blob BlobEvent_data(const BlobEvent *self);
 
-jb_Any BlobEvent_timecode( const BlobEvent *self);
+jb_Any BlobEvent_timecode(const BlobEvent *self);

@@ -7,6 +7,6 @@
 
 DECLARE_EMLITE_TYPE(ResizeObserverSize, em_Val);
 
-double ResizeObserverSize_inlineSize( const ResizeObserverSize *self);
+double ResizeObserverSize_inlineSize(const ResizeObserverSize *self);
 
-double ResizeObserverSize_blockSize( const ResizeObserverSize *self);
+double ResizeObserverSize_blockSize(const ResizeObserverSize *self);

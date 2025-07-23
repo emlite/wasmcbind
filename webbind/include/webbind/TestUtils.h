@@ -6,5 +6,3 @@
 
 
 jb_Promise TestUtils_gc();
-} // namespace TestUtils
-

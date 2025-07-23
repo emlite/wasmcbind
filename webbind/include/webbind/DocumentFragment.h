@@ -16,13 +16,13 @@ DocumentFragment DocumentFragment_new();
 
 Element DocumentFragment_getElementById(DocumentFragment* self , jb_DOMString * elementId);
 
-HTMLCollection DocumentFragment_children( const DocumentFragment *self);
+HTMLCollection DocumentFragment_children(const DocumentFragment *self);
 
-Element DocumentFragment_firstElementChild( const DocumentFragment *self);
+Element DocumentFragment_firstElementChild(const DocumentFragment *self);
 
-Element DocumentFragment_lastElementChild( const DocumentFragment *self);
+Element DocumentFragment_lastElementChild(const DocumentFragment *self);
 
-unsigned long DocumentFragment_childElementCount( const DocumentFragment *self);
+unsigned long DocumentFragment_childElementCount(const DocumentFragment *self);
 
 jb_Undefined DocumentFragment_prepend(DocumentFragment* self , jb_Any * nodes);
 

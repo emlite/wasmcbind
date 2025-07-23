@@ -12,10 +12,10 @@ DECLARE_EMLITE_TYPE(VideoTrackGenerator, em_Val);
 
 VideoTrackGenerator VideoTrackGenerator_new();
 
-WritableStream VideoTrackGenerator_writable( const VideoTrackGenerator *self);
+WritableStream VideoTrackGenerator_writable(const VideoTrackGenerator *self);
 
-bool VideoTrackGenerator_muted( const VideoTrackGenerator *self);
+bool VideoTrackGenerator_muted(const VideoTrackGenerator *self);
 
 void VideoTrackGenerator_set_muted(VideoTrackGenerator* self, bool value);
 
-MediaStreamTrack VideoTrackGenerator_track( const VideoTrackGenerator *self);
+MediaStreamTrack VideoTrackGenerator_track(const VideoTrackGenerator *self);

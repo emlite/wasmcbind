@@ -32,13 +32,13 @@ DOMQuad DOMQuad_fromQuad0(DOMQuad* self );
 
 DOMQuad DOMQuad_fromQuad1(DOMQuad* self , DOMQuadInit * other);
 
-DOMPoint DOMQuad_p1( const DOMQuad *self);
+DOMPoint DOMQuad_p1(const DOMQuad *self);
 
-DOMPoint DOMQuad_p2( const DOMQuad *self);
+DOMPoint DOMQuad_p2(const DOMQuad *self);
 
-DOMPoint DOMQuad_p3( const DOMQuad *self);
+DOMPoint DOMQuad_p3(const DOMQuad *self);
 
-DOMPoint DOMQuad_p4( const DOMQuad *self);
+DOMPoint DOMQuad_p4(const DOMQuad *self);
 
 DOMRect DOMQuad_getBounds(DOMQuad* self );
 

@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(XRJointSpace, XRSpace);
 
-XRHandJoint XRJointSpace_jointName( const XRJointSpace *self);
+XRHandJoint XRJointSpace_jointName(const XRJointSpace *self);

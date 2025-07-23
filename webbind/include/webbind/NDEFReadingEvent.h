@@ -12,6 +12,6 @@ DECLARE_EMLITE_TYPE(NDEFReadingEvent, Event);
 
 NDEFReadingEvent NDEFReadingEvent_new(jb_DOMString * type, jb_Any * readingEventInitDict);
 
-jb_DOMString NDEFReadingEvent_serialNumber( const NDEFReadingEvent *self);
+jb_DOMString NDEFReadingEvent_serialNumber(const NDEFReadingEvent *self);
 
-NDEFMessage NDEFReadingEvent_message( const NDEFReadingEvent *self);
+NDEFMessage NDEFReadingEvent_message(const NDEFReadingEvent *self);

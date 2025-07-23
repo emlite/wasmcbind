@@ -9,6 +9,6 @@ typedef struct AnimationEffect AnimationEffect;
 
 DECLARE_EMLITE_TYPE(AnimationNodeList, em_Val);
 
-unsigned long AnimationNodeList_length( const AnimationNodeList *self);
+unsigned long AnimationNodeList_length(const AnimationNodeList *self);
 
 AnimationEffect AnimationNodeList_item(AnimationNodeList* self , unsigned long index);

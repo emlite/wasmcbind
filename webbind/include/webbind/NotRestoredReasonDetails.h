@@ -7,6 +7,6 @@
 
 DECLARE_EMLITE_TYPE(NotRestoredReasonDetails, em_Val);
 
-jb_DOMString NotRestoredReasonDetails_reason( const NotRestoredReasonDetails *self);
+jb_DOMString NotRestoredReasonDetails_reason(const NotRestoredReasonDetails *self);
 
 jb_Object NotRestoredReasonDetails_toJSON(NotRestoredReasonDetails* self );

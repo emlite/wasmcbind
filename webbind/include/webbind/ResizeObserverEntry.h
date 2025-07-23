@@ -11,12 +11,12 @@ typedef struct ResizeObserverSize ResizeObserverSize;
 
 DECLARE_EMLITE_TYPE(ResizeObserverEntry, em_Val);
 
-Element ResizeObserverEntry_target( const ResizeObserverEntry *self);
+Element ResizeObserverEntry_target(const ResizeObserverEntry *self);
 
-DOMRectReadOnly ResizeObserverEntry_contentRect( const ResizeObserverEntry *self);
+DOMRectReadOnly ResizeObserverEntry_contentRect(const ResizeObserverEntry *self);
 
-jb_FrozenArray ResizeObserverEntry_borderBoxSize( const ResizeObserverEntry *self);
+jb_FrozenArray ResizeObserverEntry_borderBoxSize(const ResizeObserverEntry *self);
 
-jb_FrozenArray ResizeObserverEntry_contentBoxSize( const ResizeObserverEntry *self);
+jb_FrozenArray ResizeObserverEntry_contentBoxSize(const ResizeObserverEntry *self);
 
-jb_FrozenArray ResizeObserverEntry_devicePixelContentBoxSize( const ResizeObserverEntry *self);
+jb_FrozenArray ResizeObserverEntry_devicePixelContentBoxSize(const ResizeObserverEntry *self);

@@ -12,8 +12,8 @@ DECLARE_EMLITE_TYPE(USBConfiguration, em_Val);
 
 USBConfiguration USBConfiguration_new(USBDevice * device, unsigned char configurationValue);
 
-unsigned char USBConfiguration_configurationValue( const USBConfiguration *self);
+unsigned char USBConfiguration_configurationValue(const USBConfiguration *self);
 
-jb_DOMString USBConfiguration_configurationName( const USBConfiguration *self);
+jb_DOMString USBConfiguration_configurationName(const USBConfiguration *self);
 
-jb_FrozenArray USBConfiguration_interfaces( const USBConfiguration *self);
+jb_FrozenArray USBConfiguration_interfaces(const USBConfiguration *self);

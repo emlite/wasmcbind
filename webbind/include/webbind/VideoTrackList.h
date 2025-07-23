@@ -10,20 +10,20 @@ typedef struct VideoTrack VideoTrack;
 
 DECLARE_EMLITE_TYPE(VideoTrackList, EventTarget);
 
-unsigned long VideoTrackList_length( const VideoTrackList *self);
+unsigned long VideoTrackList_length(const VideoTrackList *self);
 
 VideoTrack VideoTrackList_getTrackById(VideoTrackList* self , jb_DOMString * id);
 
-long VideoTrackList_selectedIndex( const VideoTrackList *self);
+long VideoTrackList_selectedIndex(const VideoTrackList *self);
 
-jb_Any VideoTrackList_onchange( const VideoTrackList *self);
+jb_Any VideoTrackList_onchange(const VideoTrackList *self);
 
 void VideoTrackList_set_onchange(VideoTrackList* self, jb_Any * value);
 
-jb_Any VideoTrackList_onaddtrack( const VideoTrackList *self);
+jb_Any VideoTrackList_onaddtrack(const VideoTrackList *self);
 
 void VideoTrackList_set_onaddtrack(VideoTrackList* self, jb_Any * value);
 
-jb_Any VideoTrackList_onremovetrack( const VideoTrackList *self);
+jb_Any VideoTrackList_onremovetrack(const VideoTrackList *self);
 
 void VideoTrackList_set_onremovetrack(VideoTrackList* self, jb_Any * value);

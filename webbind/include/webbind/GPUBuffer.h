@@ -7,11 +7,11 @@
 
 DECLARE_EMLITE_TYPE(GPUBuffer, em_Val);
 
-jb_Any GPUBuffer_size( const GPUBuffer *self);
+jb_Any GPUBuffer_size(const GPUBuffer *self);
 
-jb_Any GPUBuffer_usage( const GPUBuffer *self);
+jb_Any GPUBuffer_usage(const GPUBuffer *self);
 
-GPUBufferMapState GPUBuffer_mapState( const GPUBuffer *self);
+GPUBufferMapState GPUBuffer_mapState(const GPUBuffer *self);
 
 jb_Promise GPUBuffer_mapAsync0(GPUBuffer* self , jb_Any * mode);
 
@@ -29,6 +29,6 @@ jb_Undefined GPUBuffer_unmap(GPUBuffer* self );
 
 jb_Undefined GPUBuffer_destroy(GPUBuffer* self );
 
-jb_USVString GPUBuffer_label( const GPUBuffer *self);
+jb_USVString GPUBuffer_label(const GPUBuffer *self);
 
 void GPUBuffer_set_label(GPUBuffer* self, jb_USVString * value);

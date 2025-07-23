@@ -10,7 +10,7 @@ typedef struct ResizeObserverOptions ResizeObserverOptions;
 
 DECLARE_EMLITE_TYPE(ResizeObserverOptions, em_Val);
 
-ResizeObserverBoxOptions ResizeObserverOptions_box( const ResizeObserverOptions *self);
+ResizeObserverBoxOptions ResizeObserverOptions_box(const ResizeObserverOptions *self);
 
 void ResizeObserverOptions_set_box(ResizeObserverOptions* self, ResizeObserverBoxOptions * value);
 DECLARE_EMLITE_TYPE(ResizeObserver, em_Val);

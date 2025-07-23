@@ -12,4 +12,4 @@ ValueEvent ValueEvent_new0(jb_DOMString * type);
 
 ValueEvent ValueEvent_new1(jb_DOMString * type, jb_Any * initDict);
 
-jb_Any ValueEvent_value( const ValueEvent *self);
+jb_Any ValueEvent_value(const ValueEvent *self);

@@ -12,10 +12,10 @@ DECLARE_EMLITE_TYPE(USBInterface, em_Val);
 
 USBInterface USBInterface_new(USBConfiguration * configuration, unsigned char interfaceNumber);
 
-unsigned char USBInterface_interfaceNumber( const USBInterface *self);
+unsigned char USBInterface_interfaceNumber(const USBInterface *self);
 
-USBAlternateInterface USBInterface_alternate( const USBInterface *self);
+USBAlternateInterface USBInterface_alternate(const USBInterface *self);
 
-jb_FrozenArray USBInterface_alternates( const USBInterface *self);
+jb_FrozenArray USBInterface_alternates(const USBInterface *self);
 
-bool USBInterface_claimed( const USBInterface *self);
+bool USBInterface_claimed(const USBInterface *self);

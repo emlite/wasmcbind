@@ -10,11 +10,11 @@ typedef struct HandwritingPrediction HandwritingPrediction;
 
 DECLARE_EMLITE_TYPE(HandwritingPrediction, em_Val);
 
-jb_DOMString HandwritingPrediction_text( const HandwritingPrediction *self);
+jb_DOMString HandwritingPrediction_text(const HandwritingPrediction *self);
 
 void HandwritingPrediction_set_text(HandwritingPrediction* self, jb_DOMString * value);
 
-jb_Sequence HandwritingPrediction_segmentationResult( const HandwritingPrediction *self);
+jb_Sequence HandwritingPrediction_segmentationResult(const HandwritingPrediction *self);
 
 void HandwritingPrediction_set_segmentationResult(HandwritingPrediction* self, jb_Sequence * value);
 DECLARE_EMLITE_TYPE(HandwritingDrawing, em_Val);

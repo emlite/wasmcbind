@@ -11,36 +11,36 @@ typedef struct CacheQueryOptions CacheQueryOptions;
 
 DECLARE_EMLITE_TYPE(CacheQueryOptions, em_Val);
 
-bool CacheQueryOptions_ignoreSearch( const CacheQueryOptions *self);
+bool CacheQueryOptions_ignoreSearch(const CacheQueryOptions *self);
 
 void CacheQueryOptions_set_ignoreSearch(CacheQueryOptions* self, bool value);
 
-bool CacheQueryOptions_ignoreMethod( const CacheQueryOptions *self);
+bool CacheQueryOptions_ignoreMethod(const CacheQueryOptions *self);
 
 void CacheQueryOptions_set_ignoreMethod(CacheQueryOptions* self, bool value);
 
-bool CacheQueryOptions_ignoreVary( const CacheQueryOptions *self);
+bool CacheQueryOptions_ignoreVary(const CacheQueryOptions *self);
 
 void CacheQueryOptions_set_ignoreVary(CacheQueryOptions* self, bool value);
 DECLARE_EMLITE_TYPE(BackgroundFetchRegistration, EventTarget);
 
-jb_DOMString BackgroundFetchRegistration_id( const BackgroundFetchRegistration *self);
+jb_DOMString BackgroundFetchRegistration_id(const BackgroundFetchRegistration *self);
 
-long long BackgroundFetchRegistration_uploadTotal( const BackgroundFetchRegistration *self);
+long long BackgroundFetchRegistration_uploadTotal(const BackgroundFetchRegistration *self);
 
-long long BackgroundFetchRegistration_uploaded( const BackgroundFetchRegistration *self);
+long long BackgroundFetchRegistration_uploaded(const BackgroundFetchRegistration *self);
 
-long long BackgroundFetchRegistration_downloadTotal( const BackgroundFetchRegistration *self);
+long long BackgroundFetchRegistration_downloadTotal(const BackgroundFetchRegistration *self);
 
-long long BackgroundFetchRegistration_downloaded( const BackgroundFetchRegistration *self);
+long long BackgroundFetchRegistration_downloaded(const BackgroundFetchRegistration *self);
 
-BackgroundFetchResult BackgroundFetchRegistration_result( const BackgroundFetchRegistration *self);
+BackgroundFetchResult BackgroundFetchRegistration_result(const BackgroundFetchRegistration *self);
 
-BackgroundFetchFailureReason BackgroundFetchRegistration_failureReason( const BackgroundFetchRegistration *self);
+BackgroundFetchFailureReason BackgroundFetchRegistration_failureReason(const BackgroundFetchRegistration *self);
 
-bool BackgroundFetchRegistration_recordsAvailable( const BackgroundFetchRegistration *self);
+bool BackgroundFetchRegistration_recordsAvailable(const BackgroundFetchRegistration *self);
 
-jb_Any BackgroundFetchRegistration_onprogress( const BackgroundFetchRegistration *self);
+jb_Any BackgroundFetchRegistration_onprogress(const BackgroundFetchRegistration *self);
 
 void BackgroundFetchRegistration_set_onprogress(BackgroundFetchRegistration* self, jb_Any * value);
 

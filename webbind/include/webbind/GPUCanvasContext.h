@@ -11,36 +11,36 @@ typedef struct GPUDevice GPUDevice;
 
 DECLARE_EMLITE_TYPE(GPUCanvasConfiguration, em_Val);
 
-GPUDevice GPUCanvasConfiguration_device( const GPUCanvasConfiguration *self);
+GPUDevice GPUCanvasConfiguration_device(const GPUCanvasConfiguration *self);
 
 void GPUCanvasConfiguration_set_device(GPUCanvasConfiguration* self, GPUDevice * value);
 
-GPUTextureFormat GPUCanvasConfiguration_format( const GPUCanvasConfiguration *self);
+GPUTextureFormat GPUCanvasConfiguration_format(const GPUCanvasConfiguration *self);
 
 void GPUCanvasConfiguration_set_format(GPUCanvasConfiguration* self, GPUTextureFormat * value);
 
-jb_Any GPUCanvasConfiguration_usage( const GPUCanvasConfiguration *self);
+jb_Any GPUCanvasConfiguration_usage(const GPUCanvasConfiguration *self);
 
 void GPUCanvasConfiguration_set_usage(GPUCanvasConfiguration* self, jb_Any * value);
 
-jb_Sequence GPUCanvasConfiguration_viewFormats( const GPUCanvasConfiguration *self);
+jb_Sequence GPUCanvasConfiguration_viewFormats(const GPUCanvasConfiguration *self);
 
 void GPUCanvasConfiguration_set_viewFormats(GPUCanvasConfiguration* self, jb_Sequence * value);
 
-PredefinedColorSpace GPUCanvasConfiguration_colorSpace( const GPUCanvasConfiguration *self);
+PredefinedColorSpace GPUCanvasConfiguration_colorSpace(const GPUCanvasConfiguration *self);
 
 void GPUCanvasConfiguration_set_colorSpace(GPUCanvasConfiguration* self, PredefinedColorSpace * value);
 
-jb_Any GPUCanvasConfiguration_toneMapping( const GPUCanvasConfiguration *self);
+jb_Any GPUCanvasConfiguration_toneMapping(const GPUCanvasConfiguration *self);
 
 void GPUCanvasConfiguration_set_toneMapping(GPUCanvasConfiguration* self, jb_Any * value);
 
-GPUCanvasAlphaMode GPUCanvasConfiguration_alphaMode( const GPUCanvasConfiguration *self);
+GPUCanvasAlphaMode GPUCanvasConfiguration_alphaMode(const GPUCanvasConfiguration *self);
 
 void GPUCanvasConfiguration_set_alphaMode(GPUCanvasConfiguration* self, GPUCanvasAlphaMode * value);
 DECLARE_EMLITE_TYPE(GPUCanvasContext, em_Val);
 
-jb_Any GPUCanvasContext_canvas( const GPUCanvasContext *self);
+jb_Any GPUCanvasContext_canvas(const GPUCanvasContext *self);
 
 jb_Undefined GPUCanvasContext_configure(GPUCanvasContext* self , GPUCanvasConfiguration * configuration);
 

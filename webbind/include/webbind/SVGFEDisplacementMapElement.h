@@ -13,22 +13,22 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 DECLARE_EMLITE_TYPE(SVGFEDisplacementMapElement, SVGElement);
 
-SVGAnimatedString SVGFEDisplacementMapElement_in1( const SVGFEDisplacementMapElement *self);
+SVGAnimatedString SVGFEDisplacementMapElement_in1(const SVGFEDisplacementMapElement *self);
 
-SVGAnimatedString SVGFEDisplacementMapElement_in2( const SVGFEDisplacementMapElement *self);
+SVGAnimatedString SVGFEDisplacementMapElement_in2(const SVGFEDisplacementMapElement *self);
 
-SVGAnimatedNumber SVGFEDisplacementMapElement_scale( const SVGFEDisplacementMapElement *self);
+SVGAnimatedNumber SVGFEDisplacementMapElement_scale(const SVGFEDisplacementMapElement *self);
 
-SVGAnimatedEnumeration SVGFEDisplacementMapElement_xChannelSelector( const SVGFEDisplacementMapElement *self);
+SVGAnimatedEnumeration SVGFEDisplacementMapElement_xChannelSelector(const SVGFEDisplacementMapElement *self);
 
-SVGAnimatedEnumeration SVGFEDisplacementMapElement_yChannelSelector( const SVGFEDisplacementMapElement *self);
+SVGAnimatedEnumeration SVGFEDisplacementMapElement_yChannelSelector(const SVGFEDisplacementMapElement *self);
 
-SVGAnimatedLength SVGFEDisplacementMapElement_x( const SVGFEDisplacementMapElement *self);
+SVGAnimatedLength SVGFEDisplacementMapElement_x(const SVGFEDisplacementMapElement *self);
 
-SVGAnimatedLength SVGFEDisplacementMapElement_y( const SVGFEDisplacementMapElement *self);
+SVGAnimatedLength SVGFEDisplacementMapElement_y(const SVGFEDisplacementMapElement *self);
 
-SVGAnimatedLength SVGFEDisplacementMapElement_width( const SVGFEDisplacementMapElement *self);
+SVGAnimatedLength SVGFEDisplacementMapElement_width(const SVGFEDisplacementMapElement *self);
 
-SVGAnimatedLength SVGFEDisplacementMapElement_height( const SVGFEDisplacementMapElement *self);
+SVGAnimatedLength SVGFEDisplacementMapElement_height(const SVGFEDisplacementMapElement *self);
 
-SVGAnimatedString SVGFEDisplacementMapElement_result( const SVGFEDisplacementMapElement *self);
+SVGAnimatedString SVGFEDisplacementMapElement_result(const SVGFEDisplacementMapElement *self);

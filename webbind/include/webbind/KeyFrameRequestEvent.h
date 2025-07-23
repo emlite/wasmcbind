@@ -12,4 +12,4 @@ KeyFrameRequestEvent KeyFrameRequestEvent_new0(jb_DOMString * type);
 
 KeyFrameRequestEvent KeyFrameRequestEvent_new1(jb_DOMString * type, jb_DOMString * rid);
 
-jb_DOMString KeyFrameRequestEvent_rid( const KeyFrameRequestEvent *self);
+jb_DOMString KeyFrameRequestEvent_rid(const KeyFrameRequestEvent *self);

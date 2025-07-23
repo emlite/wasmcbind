@@ -14,14 +14,14 @@ DynamicsCompressorNode DynamicsCompressorNode_new0(BaseAudioContext * context);
 
 DynamicsCompressorNode DynamicsCompressorNode_new1(BaseAudioContext * context, jb_Any * options);
 
-AudioParam DynamicsCompressorNode_threshold( const DynamicsCompressorNode *self);
+AudioParam DynamicsCompressorNode_threshold(const DynamicsCompressorNode *self);
 
-AudioParam DynamicsCompressorNode_knee( const DynamicsCompressorNode *self);
+AudioParam DynamicsCompressorNode_knee(const DynamicsCompressorNode *self);
 
-AudioParam DynamicsCompressorNode_ratio( const DynamicsCompressorNode *self);
+AudioParam DynamicsCompressorNode_ratio(const DynamicsCompressorNode *self);
 
-float DynamicsCompressorNode_reduction( const DynamicsCompressorNode *self);
+float DynamicsCompressorNode_reduction(const DynamicsCompressorNode *self);
 
-AudioParam DynamicsCompressorNode_attack( const DynamicsCompressorNode *self);
+AudioParam DynamicsCompressorNode_attack(const DynamicsCompressorNode *self);
 
-AudioParam DynamicsCompressorNode_release( const DynamicsCompressorNode *self);
+AudioParam DynamicsCompressorNode_release(const DynamicsCompressorNode *self);

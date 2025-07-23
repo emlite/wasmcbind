@@ -12,6 +12,6 @@ CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new0(jb_DOMString * type);
 
 CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new1(jb_DOMString * type, jb_Any * options);
 
-unsigned long CharacterBoundsUpdateEvent_rangeStart( const CharacterBoundsUpdateEvent *self);
+unsigned long CharacterBoundsUpdateEvent_rangeStart(const CharacterBoundsUpdateEvent *self);
 
-unsigned long CharacterBoundsUpdateEvent_rangeEnd( const CharacterBoundsUpdateEvent *self);
+unsigned long CharacterBoundsUpdateEvent_rangeEnd(const CharacterBoundsUpdateEvent *self);

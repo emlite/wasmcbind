@@ -10,11 +10,11 @@ typedef struct DOMMatrix DOMMatrix;
 
 DECLARE_EMLITE_TYPE(SVGTransform, em_Val);
 
-unsigned short SVGTransform_type( const SVGTransform *self);
+unsigned short SVGTransform_type(const SVGTransform *self);
 
-DOMMatrix SVGTransform_matrix( const SVGTransform *self);
+DOMMatrix SVGTransform_matrix(const SVGTransform *self);
 
-float SVGTransform_angle( const SVGTransform *self);
+float SVGTransform_angle(const SVGTransform *self);
 
 jb_Undefined SVGTransform_setMatrix0(SVGTransform* self );
 

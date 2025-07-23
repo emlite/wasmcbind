@@ -7,7 +7,7 @@
 
 DECLARE_EMLITE_TYPE(DOMTokenList, em_Val);
 
-unsigned long DOMTokenList_length( const DOMTokenList *self);
+unsigned long DOMTokenList_length(const DOMTokenList *self);
 
 jb_DOMString DOMTokenList_item(DOMTokenList* self , unsigned long index);
 
@@ -25,6 +25,6 @@ bool DOMTokenList_replace(DOMTokenList* self , jb_DOMString * token, jb_DOMStrin
 
 bool DOMTokenList_supports(DOMTokenList* self , jb_DOMString * token);
 
-jb_DOMString DOMTokenList_value( const DOMTokenList *self);
+jb_DOMString DOMTokenList_value(const DOMTokenList *self);
 
 void DOMTokenList_set_value(DOMTokenList* self, jb_DOMString * value);

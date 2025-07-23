@@ -10,4 +10,4 @@ typedef struct XRView XRView;
 
 DECLARE_EMLITE_TYPE(XRViewerPose, XRPose);
 
-jb_FrozenArray XRViewerPose_views( const XRViewerPose *self);
+jb_FrozenArray XRViewerPose_views(const XRViewerPose *self);

@@ -24,18 +24,18 @@ DOMRect DOMRect_fromRect0(DOMRect* self );
 
 DOMRect DOMRect_fromRect1(DOMRect* self , DOMRectInit * other);
 
-double DOMRect_x( const DOMRect *self);
+double DOMRect_x(const DOMRect *self);
 
 void DOMRect_set_x(DOMRect* self, double value);
 
-double DOMRect_y( const DOMRect *self);
+double DOMRect_y(const DOMRect *self);
 
 void DOMRect_set_y(DOMRect* self, double value);
 
-double DOMRect_width( const DOMRect *self);
+double DOMRect_width(const DOMRect *self);
 
 void DOMRect_set_width(DOMRect* self, double value);
 
-double DOMRect_height( const DOMRect *self);
+double DOMRect_height(const DOMRect *self);
 
 void DOMRect_set_height(DOMRect* self, double value);

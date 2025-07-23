@@ -12,7 +12,7 @@ CompositionEvent CompositionEvent_new0(jb_DOMString * type);
 
 CompositionEvent CompositionEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_USVString CompositionEvent_data( const CompositionEvent *self);
+jb_USVString CompositionEvent_data(const CompositionEvent *self);
 
 jb_Undefined CompositionEvent_initCompositionEvent0(CompositionEvent* self , jb_DOMString * typeArg);
 

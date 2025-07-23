@@ -10,7 +10,7 @@ typedef struct File File;
 
 DECLARE_EMLITE_TYPE(DataTransferItemList, em_Val);
 
-unsigned long DataTransferItemList_length( const DataTransferItemList *self);
+unsigned long DataTransferItemList_length(const DataTransferItemList *self);
 
 DataTransferItem DataTransferItemList_add(DataTransferItemList* self , File * data);
 

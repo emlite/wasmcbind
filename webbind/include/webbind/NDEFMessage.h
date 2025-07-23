@@ -11,4 +11,4 @@ DECLARE_EMLITE_TYPE(NDEFMessage, em_Val);
 
 NDEFMessage NDEFMessage_new(jb_Any * messageInit);
 
-jb_FrozenArray NDEFMessage_records( const NDEFMessage *self);
+jb_FrozenArray NDEFMessage_records(const NDEFMessage *self);

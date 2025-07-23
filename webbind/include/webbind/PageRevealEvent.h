@@ -14,4 +14,4 @@ PageRevealEvent PageRevealEvent_new0(jb_DOMString * type);
 
 PageRevealEvent PageRevealEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-ViewTransition PageRevealEvent_viewTransition( const PageRevealEvent *self);
+ViewTransition PageRevealEvent_viewTransition(const PageRevealEvent *self);

@@ -11,11 +11,11 @@ typedef struct WindowClient WindowClient;
 
 DECLARE_EMLITE_TYPE(ClientQueryOptions, em_Val);
 
-bool ClientQueryOptions_includeUncontrolled( const ClientQueryOptions *self);
+bool ClientQueryOptions_includeUncontrolled(const ClientQueryOptions *self);
 
 void ClientQueryOptions_set_includeUncontrolled(ClientQueryOptions* self, bool value);
 
-ClientType ClientQueryOptions_type( const ClientQueryOptions *self);
+ClientType ClientQueryOptions_type(const ClientQueryOptions *self);
 
 void ClientQueryOptions_set_type(ClientQueryOptions* self, ClientType * value);
 DECLARE_EMLITE_TYPE(Clients, em_Val);

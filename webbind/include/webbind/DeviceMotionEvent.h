@@ -15,12 +15,12 @@ DeviceMotionEvent DeviceMotionEvent_new0(jb_DOMString * type);
 
 DeviceMotionEvent DeviceMotionEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-DeviceMotionEventAcceleration DeviceMotionEvent_acceleration( const DeviceMotionEvent *self);
+DeviceMotionEventAcceleration DeviceMotionEvent_acceleration(const DeviceMotionEvent *self);
 
-DeviceMotionEventAcceleration DeviceMotionEvent_accelerationIncludingGravity( const DeviceMotionEvent *self);
+DeviceMotionEventAcceleration DeviceMotionEvent_accelerationIncludingGravity(const DeviceMotionEvent *self);
 
-DeviceMotionEventRotationRate DeviceMotionEvent_rotationRate( const DeviceMotionEvent *self);
+DeviceMotionEventRotationRate DeviceMotionEvent_rotationRate(const DeviceMotionEvent *self);
 
-double DeviceMotionEvent_interval( const DeviceMotionEvent *self);
+double DeviceMotionEvent_interval(const DeviceMotionEvent *self);
 
 jb_Promise DeviceMotionEvent_requestPermission(DeviceMotionEvent* self );

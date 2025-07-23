@@ -11,10 +11,10 @@ TextFormat TextFormat_new0();
 
 TextFormat TextFormat_new1(jb_Any * options);
 
-unsigned long TextFormat_rangeStart( const TextFormat *self);
+unsigned long TextFormat_rangeStart(const TextFormat *self);
 
-unsigned long TextFormat_rangeEnd( const TextFormat *self);
+unsigned long TextFormat_rangeEnd(const TextFormat *self);
 
-UnderlineStyle TextFormat_underlineStyle( const TextFormat *self);
+UnderlineStyle TextFormat_underlineStyle(const TextFormat *self);
 
-UnderlineThickness TextFormat_underlineThickness( const TextFormat *self);
+UnderlineThickness TextFormat_underlineThickness(const TextFormat *self);

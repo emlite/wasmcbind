@@ -9,13 +9,13 @@ typedef struct IDBKeyRange IDBKeyRange;
 
 DECLARE_EMLITE_TYPE(IDBKeyRange, em_Val);
 
-jb_Any IDBKeyRange_lower( const IDBKeyRange *self);
+jb_Any IDBKeyRange_lower(const IDBKeyRange *self);
 
-jb_Any IDBKeyRange_upper( const IDBKeyRange *self);
+jb_Any IDBKeyRange_upper(const IDBKeyRange *self);
 
-bool IDBKeyRange_lowerOpen( const IDBKeyRange *self);
+bool IDBKeyRange_lowerOpen(const IDBKeyRange *self);
 
-bool IDBKeyRange_upperOpen( const IDBKeyRange *self);
+bool IDBKeyRange_upperOpen(const IDBKeyRange *self);
 
 IDBKeyRange IDBKeyRange_only(IDBKeyRange* self , jb_Any * value);
 

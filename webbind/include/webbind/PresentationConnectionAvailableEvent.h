@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(PresentationConnectionAvailableEvent, Event);
 
 PresentationConnectionAvailableEvent PresentationConnectionAvailableEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
 
-PresentationConnection PresentationConnectionAvailableEvent_connection( const PresentationConnectionAvailableEvent *self);
+PresentationConnection PresentationConnectionAvailableEvent_connection(const PresentationConnectionAvailableEvent *self);

@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(CSSViewTransitionRule, CSSRule);
 
-jb_CSSOMString CSSViewTransitionRule_navigation( const CSSViewTransitionRule *self);
+jb_CSSOMString CSSViewTransitionRule_navigation(const CSSViewTransitionRule *self);
 
-jb_FrozenArray CSSViewTransitionRule_types( const CSSViewTransitionRule *self);
+jb_FrozenArray CSSViewTransitionRule_types(const CSSViewTransitionRule *self);

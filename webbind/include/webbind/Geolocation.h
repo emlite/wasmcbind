@@ -9,15 +9,15 @@ typedef struct PositionOptions PositionOptions;
 
 DECLARE_EMLITE_TYPE(PositionOptions, em_Val);
 
-bool PositionOptions_enableHighAccuracy( const PositionOptions *self);
+bool PositionOptions_enableHighAccuracy(const PositionOptions *self);
 
 void PositionOptions_set_enableHighAccuracy(PositionOptions* self, bool value);
 
-unsigned long PositionOptions_timeout( const PositionOptions *self);
+unsigned long PositionOptions_timeout(const PositionOptions *self);
 
 void PositionOptions_set_timeout(PositionOptions* self, unsigned long value);
 
-unsigned long PositionOptions_maximumAge( const PositionOptions *self);
+unsigned long PositionOptions_maximumAge(const PositionOptions *self);
 
 void PositionOptions_set_maximumAge(PositionOptions* self, unsigned long value);
 DECLARE_EMLITE_TYPE(Geolocation, em_Val);

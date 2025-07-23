@@ -7,7 +7,7 @@
 
 DECLARE_EMLITE_TYPE(TransformStreamDefaultController, em_Val);
 
-double TransformStreamDefaultController_desiredSize( const TransformStreamDefaultController *self);
+double TransformStreamDefaultController_desiredSize(const TransformStreamDefaultController *self);
 
 jb_Undefined TransformStreamDefaultController_enqueue0(TransformStreamDefaultController* self );
 

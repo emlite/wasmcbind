@@ -12,6 +12,6 @@ DECLARE_EMLITE_TYPE(CSSSkewX, CSSTransformComponent);
 
 CSSSkewX CSSSkewX_new(CSSNumericValue * ax);
 
-CSSNumericValue CSSSkewX_ax( const CSSSkewX *self);
+CSSNumericValue CSSSkewX_ax(const CSSSkewX *self);
 
 void CSSSkewX_set_ax(CSSSkewX* self, CSSNumericValue * value);

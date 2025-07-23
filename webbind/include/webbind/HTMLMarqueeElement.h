@@ -10,47 +10,47 @@ DECLARE_EMLITE_TYPE(HTMLMarqueeElement, HTMLElement);
 
 HTMLMarqueeElement HTMLMarqueeElement_new();
 
-jb_DOMString HTMLMarqueeElement_behavior( const HTMLMarqueeElement *self);
+jb_DOMString HTMLMarqueeElement_behavior(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_behavior(HTMLMarqueeElement* self, jb_DOMString * value);
 
-jb_DOMString HTMLMarqueeElement_bgColor( const HTMLMarqueeElement *self);
+jb_DOMString HTMLMarqueeElement_bgColor(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_bgColor(HTMLMarqueeElement* self, jb_DOMString * value);
 
-jb_DOMString HTMLMarqueeElement_direction( const HTMLMarqueeElement *self);
+jb_DOMString HTMLMarqueeElement_direction(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_direction(HTMLMarqueeElement* self, jb_DOMString * value);
 
-jb_DOMString HTMLMarqueeElement_height( const HTMLMarqueeElement *self);
+jb_DOMString HTMLMarqueeElement_height(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_height(HTMLMarqueeElement* self, jb_DOMString * value);
 
-unsigned long HTMLMarqueeElement_hspace( const HTMLMarqueeElement *self);
+unsigned long HTMLMarqueeElement_hspace(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_hspace(HTMLMarqueeElement* self, unsigned long value);
 
-long HTMLMarqueeElement_loop( const HTMLMarqueeElement *self);
+long HTMLMarqueeElement_loop(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_loop(HTMLMarqueeElement* self, long value);
 
-unsigned long HTMLMarqueeElement_scrollAmount( const HTMLMarqueeElement *self);
+unsigned long HTMLMarqueeElement_scrollAmount(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_scrollAmount(HTMLMarqueeElement* self, unsigned long value);
 
-unsigned long HTMLMarqueeElement_scrollDelay( const HTMLMarqueeElement *self);
+unsigned long HTMLMarqueeElement_scrollDelay(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_scrollDelay(HTMLMarqueeElement* self, unsigned long value);
 
-bool HTMLMarqueeElement_trueSpeed( const HTMLMarqueeElement *self);
+bool HTMLMarqueeElement_trueSpeed(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_trueSpeed(HTMLMarqueeElement* self, bool value);
 
-unsigned long HTMLMarqueeElement_vspace( const HTMLMarqueeElement *self);
+unsigned long HTMLMarqueeElement_vspace(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_vspace(HTMLMarqueeElement* self, unsigned long value);
 
-jb_DOMString HTMLMarqueeElement_width( const HTMLMarqueeElement *self);
+jb_DOMString HTMLMarqueeElement_width(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_width(HTMLMarqueeElement* self, jb_DOMString * value);
 

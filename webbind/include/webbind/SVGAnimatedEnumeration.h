@@ -7,8 +7,8 @@
 
 DECLARE_EMLITE_TYPE(SVGAnimatedEnumeration, em_Val);
 
-unsigned short SVGAnimatedEnumeration_baseVal( const SVGAnimatedEnumeration *self);
+unsigned short SVGAnimatedEnumeration_baseVal(const SVGAnimatedEnumeration *self);
 
 void SVGAnimatedEnumeration_set_baseVal(SVGAnimatedEnumeration* self, unsigned short value);
 
-unsigned short SVGAnimatedEnumeration_animVal( const SVGAnimatedEnumeration *self);
+unsigned short SVGAnimatedEnumeration_animVal(const SVGAnimatedEnumeration *self);

@@ -15,8 +15,8 @@ ViewTimeline ViewTimeline_new0();
 
 ViewTimeline ViewTimeline_new1(jb_Any * options);
 
-Element ViewTimeline_subject( const ViewTimeline *self);
+Element ViewTimeline_subject(const ViewTimeline *self);
 
-CSSNumericValue ViewTimeline_startOffset( const ViewTimeline *self);
+CSSNumericValue ViewTimeline_startOffset(const ViewTimeline *self);
 
-CSSNumericValue ViewTimeline_endOffset( const ViewTimeline *self);
+CSSNumericValue ViewTimeline_endOffset(const ViewTimeline *self);

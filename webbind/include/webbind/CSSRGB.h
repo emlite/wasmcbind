@@ -12,18 +12,18 @@ CSSRGB CSSRGB_new0(jb_Any * r, jb_Any * g, jb_Any * b);
 
 CSSRGB CSSRGB_new1(jb_Any * r, jb_Any * g, jb_Any * b, jb_Any * alpha);
 
-jb_Any CSSRGB_r( const CSSRGB *self);
+jb_Any CSSRGB_r(const CSSRGB *self);
 
 void CSSRGB_set_r(CSSRGB* self, jb_Any * value);
 
-jb_Any CSSRGB_g( const CSSRGB *self);
+jb_Any CSSRGB_g(const CSSRGB *self);
 
 void CSSRGB_set_g(CSSRGB* self, jb_Any * value);
 
-jb_Any CSSRGB_b( const CSSRGB *self);
+jb_Any CSSRGB_b(const CSSRGB *self);
 
 void CSSRGB_set_b(CSSRGB* self, jb_Any * value);
 
-jb_Any CSSRGB_alpha( const CSSRGB *self);
+jb_Any CSSRGB_alpha(const CSSRGB *self);
 
 void CSSRGB_set_alpha(CSSRGB* self, jb_Any * value);

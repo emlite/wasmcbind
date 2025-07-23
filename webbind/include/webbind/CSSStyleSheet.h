@@ -16,9 +16,9 @@ CSSStyleSheet CSSStyleSheet_new0();
 
 CSSStyleSheet CSSStyleSheet_new1(jb_Any * options);
 
-CSSRule CSSStyleSheet_ownerRule( const CSSStyleSheet *self);
+CSSRule CSSStyleSheet_ownerRule(const CSSStyleSheet *self);
 
-CSSRuleList CSSStyleSheet_cssRules( const CSSStyleSheet *self);
+CSSRuleList CSSStyleSheet_cssRules(const CSSStyleSheet *self);
 
 unsigned long CSSStyleSheet_insertRule0(CSSStyleSheet* self , jb_CSSOMString * rule);
 
@@ -30,7 +30,7 @@ jb_Promise CSSStyleSheet_replace(CSSStyleSheet* self , jb_USVString * text);
 
 jb_Undefined CSSStyleSheet_replaceSync(CSSStyleSheet* self , jb_USVString * text);
 
-CSSRuleList CSSStyleSheet_rules( const CSSStyleSheet *self);
+CSSRuleList CSSStyleSheet_rules(const CSSStyleSheet *self);
 
 long CSSStyleSheet_addRule0(CSSStyleSheet* self );
 

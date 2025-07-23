@@ -8,8 +8,8 @@
 
 DECLARE_EMLITE_TYPE(AuthenticatorAssertionResponse, AuthenticatorResponse);
 
-jb_ArrayBuffer AuthenticatorAssertionResponse_authenticatorData( const AuthenticatorAssertionResponse *self);
+jb_ArrayBuffer AuthenticatorAssertionResponse_authenticatorData(const AuthenticatorAssertionResponse *self);
 
-jb_ArrayBuffer AuthenticatorAssertionResponse_signature( const AuthenticatorAssertionResponse *self);
+jb_ArrayBuffer AuthenticatorAssertionResponse_signature(const AuthenticatorAssertionResponse *self);
 
-jb_ArrayBuffer AuthenticatorAssertionResponse_userHandle( const AuthenticatorAssertionResponse *self);
+jb_ArrayBuffer AuthenticatorAssertionResponse_userHandle(const AuthenticatorAssertionResponse *self);

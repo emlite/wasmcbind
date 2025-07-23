@@ -10,11 +10,11 @@ typedef struct IDBDatabaseInfo IDBDatabaseInfo;
 
 DECLARE_EMLITE_TYPE(IDBDatabaseInfo, em_Val);
 
-jb_DOMString IDBDatabaseInfo_name( const IDBDatabaseInfo *self);
+jb_DOMString IDBDatabaseInfo_name(const IDBDatabaseInfo *self);
 
 void IDBDatabaseInfo_set_name(IDBDatabaseInfo* self, jb_DOMString * value);
 
-long long IDBDatabaseInfo_version( const IDBDatabaseInfo *self);
+long long IDBDatabaseInfo_version(const IDBDatabaseInfo *self);
 
 void IDBDatabaseInfo_set_version(IDBDatabaseInfo* self, long long value);
 DECLARE_EMLITE_TYPE(IDBFactory, em_Val);

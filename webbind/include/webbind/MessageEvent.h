@@ -14,15 +14,15 @@ MessageEvent MessageEvent_new0(jb_DOMString * type);
 
 MessageEvent MessageEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
 
-jb_Any MessageEvent_data( const MessageEvent *self);
+jb_Any MessageEvent_data(const MessageEvent *self);
 
-jb_USVString MessageEvent_origin( const MessageEvent *self);
+jb_USVString MessageEvent_origin(const MessageEvent *self);
 
-jb_DOMString MessageEvent_lastEventId( const MessageEvent *self);
+jb_DOMString MessageEvent_lastEventId(const MessageEvent *self);
 
-jb_Any MessageEvent_source( const MessageEvent *self);
+jb_Any MessageEvent_source(const MessageEvent *self);
 
-jb_FrozenArray MessageEvent_ports( const MessageEvent *self);
+jb_FrozenArray MessageEvent_ports(const MessageEvent *self);
 
 jb_Undefined MessageEvent_initMessageEvent0(MessageEvent* self , jb_DOMString * type);
 

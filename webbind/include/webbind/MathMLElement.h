@@ -12,23 +12,23 @@ typedef struct DOMStringMap DOMStringMap;
 
 DECLARE_EMLITE_TYPE(MathMLElement, Element);
 
-CSSStyleProperties MathMLElement_style( const MathMLElement *self);
+CSSStyleProperties MathMLElement_style(const MathMLElement *self);
 
-jb_Any MathMLElement_onbeforexrselect( const MathMLElement *self);
+jb_Any MathMLElement_onbeforexrselect(const MathMLElement *self);
 
 void MathMLElement_set_onbeforexrselect(MathMLElement* self, jb_Any * value);
 
-DOMStringMap MathMLElement_dataset( const MathMLElement *self);
+DOMStringMap MathMLElement_dataset(const MathMLElement *self);
 
-jb_DOMString MathMLElement_nonce( const MathMLElement *self);
+jb_DOMString MathMLElement_nonce(const MathMLElement *self);
 
 void MathMLElement_set_nonce(MathMLElement* self, jb_DOMString * value);
 
-bool MathMLElement_autofocus( const MathMLElement *self);
+bool MathMLElement_autofocus(const MathMLElement *self);
 
 void MathMLElement_set_autofocus(MathMLElement* self, bool value);
 
-long MathMLElement_tabIndex( const MathMLElement *self);
+long MathMLElement_tabIndex(const MathMLElement *self);
 
 void MathMLElement_set_tabIndex(MathMLElement* self, long value);
 

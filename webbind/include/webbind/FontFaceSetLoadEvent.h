@@ -14,4 +14,4 @@ FontFaceSetLoadEvent FontFaceSetLoadEvent_new0(jb_CSSOMString * type);
 
 FontFaceSetLoadEvent FontFaceSetLoadEvent_new1(jb_CSSOMString * type, jb_Any * eventInitDict);
 
-jb_FrozenArray FontFaceSetLoadEvent_fontfaces( const FontFaceSetLoadEvent *self);
+jb_FrozenArray FontFaceSetLoadEvent_fontfaces(const FontFaceSetLoadEvent *self);
