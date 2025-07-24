@@ -67,3 +67,11 @@ DECLARE_EMLITE_TYPE(jb_CSSOMString, em_Val);
 DECLARE_EMLITE_TYPE(jb_USVString, em_Val);
 
 DECLARE_EMLITE_TYPE(jb_ByteString, em_Val);
+
+#define DOMSTR(x) ((jb_DOMString){.inner = em_Val_from(x)})
+
+#define CSStr(x) ((jb_CSSOMString){.inner = em_Val_from(x)})
+
+#define ANY(x) ((jb_Any){.inner = em_Val_from(x)})
+
+#define FUNC(x, data) ((jb_Function){.inner = em_Val_make_fn(x, data)})
