@@ -27,21 +27,22 @@ int main() {
         &DOMSTR("click"),
         &FUNC(button_cb, 0)
     );
-    CSSStyleProperties style =
+    CSSStyleProperties style_props =
         HTMLElement_style((HTMLElement *)&button);
+    CSSStyleDeclaration *style = (CSSStyleDeclaration *)&style_props;
     CSSStyleDeclaration_setProperty0(
-        (CSSStyleDeclaration *)&style,
-        &CSStr("color"),
-        &CSStr("red")
+        style,
+        &CSSStr("color"),
+        &CSSStr("red")
     );
     CSSStyleDeclaration_setProperty0(
-        (CSSStyleDeclaration *)&style,
-        &CSStr("background-color"),
-        &CSStr("#aaf")
+        style,
+        &CSSStr("background-color"),
+        &CSSStr("#aaf")
     );
     CSSStyleDeclaration_setProperty0(
-        (CSSStyleDeclaration *)&style,
-        &CSStr("border"),
-        &CSStr("2px solid red")
+        style,
+        &CSSStr("border"),
+        &CSSStr("2px solid red")
     );
 }

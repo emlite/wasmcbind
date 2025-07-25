@@ -1,6 +1,5 @@
 #pragma once
 
-
 #define DECLARE_EMLITE_TYPE(name, parent)                                      \
   typedef struct name {                                                        \
     parent inner;                                                              \
