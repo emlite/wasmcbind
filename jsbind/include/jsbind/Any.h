@@ -15,3 +15,4 @@ int jb_Any_as_bool(jb_Any a);
 jb_Any jb_Any_clone(jb_Any a);
 
 #define ANY(x) ((jb_Any){.inner = em_Val_from(x)})
+#define ANY_JB(x) ((jb_Any){.inner = x.inner})

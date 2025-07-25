@@ -1,11 +1,12 @@
 #include <jsbind/jsbind.h>
 #include <webbind/webbind.h>
 
-Handle button_cb(Handle args, Handle data) {
-    jb_Any val = jb_Any_from_handle(args);
-    console_log(&val);
+jb_Any button_cb(jb_Array args, jb_Any *data) {
+    jb_Any ev0 = jb_Array_get(args, 0);
+    PointerEvent ev = PointerEvent_from_val(&ev0);
+    console_log((jb_Any *)&ev);
     console_log(&ANY("Button clicked!"));
-    return em_Val_undefined().h;
+    return ANY_JB(jb_Undefined_value());
 }
 
 int main() {
@@ -22,27 +23,23 @@ int main() {
         (Node *)&button, &DOMSTR("Click me")
     );
     Node_appendChild((Node *)&body, (Node *)&button);
+
+    jb_Function btn_cb = jb_Function_from(button_cb, NULL);
+
     EventTarget_addEventListener0(
-        (EventTarget *)&button,
-        &DOMSTR("click"),
-        &FUNC(button_cb, 0)
+        (EventTarget *)&button, &DOMSTR("click"), &btn_cb
     );
     CSSStyleProperties style_props =
         HTMLElement_style((HTMLElement *)&button);
-    CSSStyleDeclaration *style = (CSSStyleDeclaration *)&style_props;
+    CSSStyleDeclaration *style =
+        (CSSStyleDeclaration *)&style_props;
     CSSStyleDeclaration_setProperty0(
-        style,
-        &CSSStr("color"),
-        &CSSStr("red")
+        style, &CSSStr("color"), &CSSStr("red")
     );
     CSSStyleDeclaration_setProperty0(
-        style,
-        &CSSStr("background-color"),
-        &CSSStr("#aaf")
+        style, &CSSStr("background-color"), &CSSStr("#aaf")
     );
     CSSStyleDeclaration_setProperty0(
-        style,
-        &CSSStr("border"),
-        &CSSStr("2px solid red")
+        style, &CSSStr("border"), &CSSStr("2px solid red")
     );
 }

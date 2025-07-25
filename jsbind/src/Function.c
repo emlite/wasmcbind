@@ -1,6 +1,5 @@
 #include <emlite/emlite.h>
 #include <jsbind/utils.h>
-#include <jsbind/Sequence.h>
 #include <jsbind/Any.h>
 #include <jsbind/Function.h>
 
@@ -26,17 +25,35 @@ jb_Function jb_Function_new(const char** args, size_t nargs, const char* body) {
     return (jb_Function){.inner = ret};
 }
 
-jb_Any jb_Function_apply(jb_Function fn, jb_Any this_arg, jb_Sequence args_array) {
+jb_Any jb_Function_apply(jb_Function fn, jb_Any this_arg, jb_Array args_array) {
     em_Val v = em_Val_call(fn.inner, "apply", this_arg.inner, args_array.inner);
     return (jb_Any){.inner = v};
 }
 
-jb_Function jb_Function_bind(jb_Function fn, jb_Any this_arg, jb_Sequence args_array) {
+jb_Function jb_Function_bind(jb_Function fn, jb_Any this_arg, jb_Array args_array) {
     em_Val v = em_Val_call(fn.inner, "bind", this_arg.inner, args_array.inner);
     return (jb_Function){.inner = v};
 }
 
-jb_Any jb_Function_call(jb_Function fn, jb_Any this_arg, jb_Sequence args_array) {
+jb_Any jb_Function_call(jb_Function fn, jb_Any this_arg, jb_Array args_array) {
     em_Val v = em_Val_call(fn.inner, "call", this_arg.inner, args_array.inner);
     return (jb_Any){.inner = v};
+}
+
+Handle trampoline(Handle args, Handle data) {
+    em_Val obj = em_Val_from_handle(data);
+    uintptr_t fn = em_Val_as(uintptr_t, em_Val_get(obj, em_Val_from("fn")));
+    jb_Any d = (jb_Any){.inner = em_Val_get(obj, em_Val_from("data"))};
+    jb_Callback func = (jb_Callback)fn;
+    jb_Array arr = jb_Array_from_handle(args);
+    jb_Any ret = (*func)(arr, &d);
+    return em_Val_as_handle(ret.inner);
+}
+
+jb_Function jb_Function_from(jb_Callback cb, jb_Any *data) {
+    em_Val obj = em_Val_object();
+    em_Val_set(obj, em_Val_from("fn"), em_Val_from((uintptr_t)cb));
+    em_Val_set(obj, em_Val_from("data"), data->inner);
+    em_Val val = em_Val_make_fn(trampoline, em_Val_as_handle(obj));
+    return (jb_Function){.inner = val};
 }
