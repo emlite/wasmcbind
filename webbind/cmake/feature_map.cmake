@@ -61,7 +61,7 @@ set(WEBBIND_FEATURE_MAP
     CSSStyleSheet "CSSStyleSheet.c;StyleSheet.c"
     CSSSupportsRule "CSSSupportsRule.c;CSSConditionRule.c;CSSGroupingRule.c;CSSRule.c"
     CSSTransition "CSSTransition.c;Animation.c;EventTarget.c"
-    CSSStyleDeclaration "CSSStyleDeclaration.c;CSSStyleProperties.c"
+    CSSStyleProperties "CSSStyleDeclaration.c;CSSStyleProperties.c"
     CustomEvent "CustomEvent.c;Event.c"
     DedicatedWorkerGlobalScope "DedicatedWorkerGlobalScope.c;EventTarget.c;WorkerGlobalScope.c"
     DelayNode "DelayNode.c;AudioNode.c;EventTarget.c"
