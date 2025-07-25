@@ -1,18 +1,25 @@
 #pragma once
 
-#include <emlite/emlite.h>
-#include "utils.h"
 #include "Any.h"
 #include "Function.h"
+#include "utils.h"
+#include <emlite/emlite.h>
 
 DECLARE_EMLITE_TYPE(jb_Promise, em_Val);
 
 // Promise.then, catch, finally
-jb_Promise jb_Promise_then(jb_Promise p, jb_Function on_fulfilled, jb_Function on_rejected);
-jb_Promise jb_Promise_catch(jb_Promise p, jb_Function on_rejected);
-jb_Promise jb_Promise_finally(jb_Promise p, jb_Function on_finally);
+jb_Promise jb_Promise_then(
+    const jb_Promise *p,
+    const jb_Function *on_fulfilled,
+    const jb_Function *on_rejected
+);
+jb_Promise jb_Promise_catch(
+    const jb_Promise *p, const jb_Function *on_rejected
+);
+jb_Promise jb_Promise_finally(
+    const jb_Promise *p, const jb_Function *on_finally
+);
 
 // Promise.resolve, reject (static)
-jb_Promise jb_Promise_resolve(jb_Any value);
-jb_Promise jb_Promise_reject(jb_Any reason);
-
+jb_Promise jb_Promise_resolve(const jb_Any *value);
+jb_Promise jb_Promise_reject(const jb_Any *reason);

@@ -28,10 +28,10 @@ DECLARE_EMLITE_TYPE(jb_DataView, em_Val);
 
 jb_Array jb_Array_new();
 
-size_t jb_Array_length(jb_Array a);
-jb_Any jb_Array_get(jb_Array a, size_t idx);
-void jb_Array_set(jb_Array a, size_t idx, jb_Any v);
-void jb_Array_push(jb_Array a, jb_Any v);
+size_t jb_Array_length(const jb_Array *a);
+jb_Any jb_Array_get(const jb_Array *a, size_t idx);
+void jb_Array_set(const jb_Array *a, size_t idx, const jb_Any *v);
+void jb_Array_push(const jb_Array *a, const jb_Any *v);
 jb_Array jb_Array_slice(
-    jb_Array a, size_t start, size_t end
+    const jb_Array *a, size_t start, size_t end
 );

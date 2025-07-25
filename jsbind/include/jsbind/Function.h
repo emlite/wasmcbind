@@ -17,25 +17,32 @@ jb_Function jb_Function_new(
 
 // Apply: call with this_arg and arguments array
 jb_Any jb_Function_apply(
-    jb_Function fn, jb_Any this_arg, jb_Array args_array
+    const jb_Function *fn,
+    const jb_Any *this_arg,
+    const jb_Array *args_array
 );
 
 // Bind: returns a new function with this_arg and optional
 // arguments
 jb_Function jb_Function_bind(
-    jb_Function fn, jb_Any this_arg, jb_Array args_array
+    const jb_Function *fn,
+    const jb_Any *this_arg,
+    const jb_Array *args_array
 );
 
 // Call: call with this_arg and arguments array, returns
 // result
 jb_Any jb_Function_call(
-    jb_Function fn, jb_Any this_arg, jb_Array args_array
+    const jb_Function *fn,
+    const jb_Any *this_arg,
+    const jb_Array *args_array
 );
 
-typedef jb_Any (*jb_Callback)(jb_Array, jb_Any *);
+typedef jb_Any (*jb_Callback)(const jb_Array *, const jb_Any *);
 
-jb_Function jb_Function_from(jb_Callback cb, jb_Any *data);
+jb_Function jb_Function_from(
+    jb_Callback cb, const jb_Any *data
+);
 
 #define FUNC(x, data)                                      \
     ((jb_Function){.inner = em_Val_make_fn(x, data)})
-

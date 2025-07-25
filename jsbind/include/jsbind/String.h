@@ -12,7 +12,8 @@
 
 #define USVStr(x) ((jb_USVString){.inner = em_Val_from(x)})
 
-#define ByteStr(x) ((jb_ByteString){.inner = em_Val_from(x)})
+#define ByteStr(x)                                         \
+    ((jb_ByteString){.inner = em_Val_from(x)})
 
 DECLARE_EMLITE_TYPE(jb_DOMString, em_Val);
 
@@ -23,37 +24,41 @@ DECLARE_EMLITE_TYPE(jb_USVString, em_Val);
 DECLARE_EMLITE_TYPE(jb_ByteString, em_Val);
 
 #define DECLARE_STRING_FUNCS(name)                         \
-    size_t jb_##name##_byte_len(jb_##name s);              \
-    bool jb_##name##_is_empty(jb_##name s);                \
-    jb_##name jb_##name##_char_at(jb_##name s, size_t i);  \
-    const char *jb_##name##_as_str(jb_##name s);           \
-    size_t jb_##name##_length(jb_##name s);                \
-    int jb_##name##_char_code_at(jb_##name s, size_t idx); \
-    void jb_##name##_set(                                  \
-        jb_##name s, size_t idx, char val                  \
+    size_t jb_##name##_byte_len(const jb_##name *s);       \
+    bool jb_##name##_is_empty(const jb_##name *s);         \
+    jb_##name jb_##name##_char_at(                         \
+        const jb_##name *s, size_t i                       \
     );                                                     \
-    jb_##name jb_##name##_at(jb_##name s, int idx);        \
+    const char *jb_##name##_as_str(const jb_##name *s);    \
+    size_t jb_##name##_length(const jb_##name *s);         \
+    int jb_##name##_char_code_at(                          \
+        const jb_##name *s, size_t idx                     \
+    );                                                     \
+    void jb_##name##_set(                                  \
+        jb_##name *s, size_t idx, char val                 \
+    );                                                     \
+    jb_##name jb_##name##_at(const jb_##name *s, int idx); \
     int jb_##name##_code_point_at(                         \
-        jb_##name s, size_t idx                            \
+        const jb_##name *s, size_t idx                     \
     );                                                     \
     jb_##name jb_##name##_concat(                          \
-        jb_##name a, jb_##name b                           \
+        const jb_##name *a, const jb_##name *b             \
     );                                                     \
     bool jb_##name##_ends_with(                            \
-        jb_##name s, const char *pat                       \
+        const jb_##name *s, const char *pat                \
     );                                                     \
     bool jb_##name##_includes(                             \
-        jb_##name s, const char *pat                       \
+        const jb_##name *s, const char *pat                \
     );                                                     \
     int jb_##name##_index_of(                              \
-        jb_##name s, const char *pat                       \
+        const jb_##name *s, const char *pat                \
     );                                                     \
-    bool jb_##name##_is_well_formed(jb_##name s);          \
+    bool jb_##name##_is_well_formed(const jb_##name *s);   \
     int jb_##name##_last_index_of(                         \
-        jb_##name s, const char *pat                       \
+        const jb_##name *s, const char *pat                \
     );                                                     \
     int jb_##name##_locale_compare(                        \
-        jb_##name s, const char *other                     \
+        const jb_##name *s, const char *other              \
     );
 
 DECLARE_STRING_FUNCS(DOMString);

@@ -11,10 +11,11 @@ foreach(item IN LISTS JSBIND_EXAMPLES)
   )
 endforeach()
 
-set(WEBBIND_EXAMPLES button)
+set(WEBBIND_EXAMPLES button audio)
 foreach(item IN LISTS WEBBIND_EXAMPLES)
   add_executable(${item} ${item}.c)
   target_link_libraries(${item} PRIVATE webbind::webbind)
+  target_compile_options(${item} PRIVATE -Wno-incompatible-pointer-types)
   set_target_properties(${item} PROPERTIES
     LINKER_LANGUAGE C
     SUFFIX ".wasm"
