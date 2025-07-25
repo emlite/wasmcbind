@@ -1,50 +1,54 @@
 add_library(jsbind)
 
 set(JSBIND_SOURCES
-    # src/Function.cpp 
-    # src/Any.cpp 
+    src/Function.c 
+    src/Any.c 
     src/lib.c
-    # src/Object.cpp 
-    # src/Undefined.cpp
-    # src/Array.cpp
-    # src/String.cpp
-    # src/Reflect.cpp
-    # src/Null.cpp
-    # src/Date.cpp
-    # src/JSON.cpp
-    # src/Error.cpp
-    # src/time.cpp
-    # src/Response.cpp
-    # src/url.cpp
-    # src/Math.cpp
-    # src/text.cpp
+    src/Object.c 
+    src/Undefined.c
+    src/Array.c
+    src/String.c
+    # src/Reflect.c
+    src/Null.c
+    # src/Date.c
+    # src/JSON.c
+    src/Error.c
+    # src/time.c
+    # src/Response.c
+    # src/url.c
+    # src/Math.c
+    # src/text.c
+    src/Promise.c
+    src/Array.c
+    src/Record.c
+    src/Sequence.c
 )
 
 set(JSBIND_HEADERS
-    # include/jsbind/Function.hpp 
-    # include/jsbind/Promise.hpp 
-    # include/jsbind/Any.hpp 
+    include/jsbind/Function.h 
+    include/jsbind/Promise.h 
+    include/jsbind/Any.h 
     include/jsbind/jsbind.h
-    # include/jsbind/Object.hpp 
-    # include/jsbind/Sequence.hpp 
-    # include/jsbind/Record.hpp 
-    # include/jsbind/Undefined.hpp
-    # include/jsbind/Array.hpp
-    # include/jsbind/String.hpp
-    # include/jsbind/Reflect.hpp
-    # include/jsbind/Null.hpp
-    # include/jsbind/Console.hpp
-    # include/jsbind/utils.hpp
-    # include/jsbind/Set.hpp
-    # include/jsbind/Map.hpp
-    # include/jsbind/Math.hpp
-    # include/jsbind/Date.hpp
-    # include/jsbind/JSON.hpp
-    # include/jsbind/Error.hpp
-    # include/jsbind/time.hpp
-    # include/jsbind/Response.hpp
-    # include/jsbind/url.hpp
-    # include/jsbind/text.hpp
+    include/jsbind/Object.h 
+    include/jsbind/Sequence.h 
+    include/jsbind/Record.h 
+    include/jsbind/Undefined.h
+    include/jsbind/Array.h
+    include/jsbind/String.h
+    # include/jsbind/Reflect.h
+    include/jsbind/Null.h
+    # include/jsbind/Console.h
+    include/jsbind/utils.h
+    # include/jsbind/Set.h
+    # include/jsbind/Map.h
+    # include/jsbind/Math.h
+    # include/jsbind/Date.h
+    # include/jsbind/JSON.h
+    include/jsbind/Error.h
+    # include/jsbind/time.h
+    # include/jsbind/Response.h
+    # include/jsbind/url.h
+    # include/jsbind/text.h
 )
 
 target_sources(jsbind 
