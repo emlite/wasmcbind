@@ -2,10 +2,15 @@
 #include <webbind/webbind.h>
 
 jb_Any button_cb(const jb_Array *args, const jb_Any *data) {
-    jb_Any ev0 = jb_Array_get(args, 0);
+    jb_Any ev0    = jb_Array_get(args, 0);
     MouseEvent ev = MouseEvent_from_val(&ev0);
-    Console con = Console_get();
-    Console_log(&con, 2, ANY("Button clicked at:"), ANY(MouseEvent_clientX(&ev)));
+    Console con   = Console_get();
+    Console_log(
+        &con,
+        2,
+        ANY("Button clicked at:"),
+        ANY(MouseEvent_clientX(&ev))
+    );
     return ANY_JB(jb_Undefined_value());
 }
 
@@ -19,9 +24,7 @@ int main() {
     Element button = Document_createElement0(
         &document, &DOMSTR("BUTTON")
     );
-    Node_set_textContent(
-        &button, &DOMSTR("Click me")
-    );
+    Node_set_textContent(&button, &DOMSTR("Click me"));
     Node_appendChild(&body, &button);
 
     jb_Function btn_cb = jb_Function_from(button_cb, NULL);
@@ -29,8 +32,7 @@ int main() {
     EventTarget_addEventListener0(
         &button, &DOMSTR("click"), &btn_cb
     );
-    CSSStyleProperties style =
-        HTMLElement_style(&button);
+    CSSStyleProperties style = HTMLElement_style(&button);
     CSSStyleDeclaration_setProperty0(
         &style, &CSSStr("color"), &CSSStr("red")
     );
