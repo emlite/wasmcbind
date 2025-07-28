@@ -1,6 +1,4 @@
 #include <jsbind/Error.h>
-#include <jsbind/String.h>
-#include <emlite/emlite.h>
 
 DEFINE_EMLITE_TYPE(jb_Error, em_Val);
 

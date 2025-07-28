@@ -8,8 +8,9 @@ set(JSBIND_SOURCES
     src/Undefined.c
     src/Array.c
     src/String.c
-    # src/Reflect.c
+    src/Reflect.c
     src/Null.c
+    src/Console.c
     # src/Date.c
     # src/JSON.c
     src/Error.c
@@ -35,9 +36,9 @@ set(JSBIND_HEADERS
     include/jsbind/Undefined.h
     include/jsbind/Array.h
     include/jsbind/String.h
-    # include/jsbind/Reflect.h
+    include/jsbind/Reflect.h
     include/jsbind/Null.h
-    # include/jsbind/Console.h
+    include/jsbind/Console.h
     include/jsbind/utils.h
     # include/jsbind/Set.h
     # include/jsbind/Map.h
