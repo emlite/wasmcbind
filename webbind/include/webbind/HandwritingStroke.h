@@ -26,6 +26,6 @@ HandwritingStroke HandwritingStroke_new();
 
 jb_Undefined HandwritingStroke_addPoint(HandwritingStroke* self , HandwritingPoint * point);
 
-jb_Sequence HandwritingStroke_getPoints(HandwritingStroke* self );
+jb_Array HandwritingStroke_getPoints(HandwritingStroke* self );
 
 jb_Undefined HandwritingStroke_clear(HandwritingStroke* self );

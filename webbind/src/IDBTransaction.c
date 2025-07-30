@@ -33,7 +33,7 @@ DOMException IDBTransaction_error(const IDBTransaction *self) {
 }
 
 
-IDBObjectStore IDBTransaction_objectStore(IDBTransaction* self , jb_DOMString * name) {
+IDBObjectStore IDBTransaction_objectStore(IDBTransaction* self , jb_String * name) {
     return em_Val_as(IDBObjectStore, em_Val_call(EventTarget_as_val(self->inner), "objectStore", em_Val_from(name)));
 }
 

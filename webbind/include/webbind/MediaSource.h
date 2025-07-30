@@ -40,7 +40,7 @@ void MediaSource_set_onsourceclose(MediaSource* self, jb_Any * value);
 
 bool MediaSource_canConstructInDedicatedWorker(const MediaSource *self);
 
-SourceBuffer MediaSource_addSourceBuffer(MediaSource* self , jb_DOMString * type);
+SourceBuffer MediaSource_addSourceBuffer(MediaSource* self , jb_String * type);
 
 jb_Undefined MediaSource_removeSourceBuffer(MediaSource* self , SourceBuffer * sourceBuffer);
 
@@ -52,4 +52,4 @@ jb_Undefined MediaSource_setLiveSeekableRange(MediaSource* self , double start, 
 
 jb_Undefined MediaSource_clearLiveSeekableRange(MediaSource* self );
 
-bool MediaSource_isTypeSupported(MediaSource* self , jb_DOMString * type);
+bool MediaSource_isTypeSupported(MediaSource* self , jb_String * type);

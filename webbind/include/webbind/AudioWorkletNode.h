@@ -12,9 +12,9 @@ typedef struct BaseAudioContext BaseAudioContext;
 
 DECLARE_EMLITE_TYPE(AudioWorkletNode, AudioNode);
 
-AudioWorkletNode AudioWorkletNode_new0(BaseAudioContext * context, jb_DOMString * name);
+AudioWorkletNode AudioWorkletNode_new0(BaseAudioContext * context, jb_String * name);
 
-AudioWorkletNode AudioWorkletNode_new1(BaseAudioContext * context, jb_DOMString * name, jb_Any * options);
+AudioWorkletNode AudioWorkletNode_new1(BaseAudioContext * context, jb_String * name, jb_Any * options);
 
 AudioParamMap AudioWorkletNode_parameters(const AudioWorkletNode *self);
 

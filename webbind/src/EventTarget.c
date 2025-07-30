@@ -34,22 +34,22 @@ EventTarget EventTarget_new() {
       }
 
 
-jb_Undefined EventTarget_addEventListener0(EventTarget* self , jb_DOMString * type, jb_Function * callback) {
+jb_Undefined EventTarget_addEventListener0(EventTarget* self , jb_String * type, jb_Function * callback) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "addEventListener", em_Val_from(type), em_Val_from(callback)));
 }
 
 
-jb_Undefined EventTarget_addEventListener1(EventTarget* self , jb_DOMString * type, jb_Function * callback, jb_Any * options) {
+jb_Undefined EventTarget_addEventListener1(EventTarget* self , jb_String * type, jb_Function * callback, jb_Any * options) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "addEventListener", em_Val_from(type), em_Val_from(callback), em_Val_from(options)));
 }
 
 
-jb_Undefined EventTarget_removeEventListener0(EventTarget* self , jb_DOMString * type, jb_Function * callback) {
+jb_Undefined EventTarget_removeEventListener0(EventTarget* self , jb_String * type, jb_Function * callback) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "removeEventListener", em_Val_from(type), em_Val_from(callback)));
 }
 
 
-jb_Undefined EventTarget_removeEventListener1(EventTarget* self , jb_DOMString * type, jb_Function * callback, jb_Any * options) {
+jb_Undefined EventTarget_removeEventListener1(EventTarget* self , jb_String * type, jb_Function * callback, jb_Any * options) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "removeEventListener", em_Val_from(type), em_Val_from(callback), em_Val_from(options)));
 }
 
@@ -59,12 +59,12 @@ bool EventTarget_dispatchEvent(EventTarget* self , Event * event) {
 }
 
 
-Observable EventTarget_when0(EventTarget* self , jb_DOMString * type) {
+Observable EventTarget_when0(EventTarget* self , jb_String * type) {
     return em_Val_as(Observable, em_Val_call(em_Val_as_val(self->inner), "when", em_Val_from(type)));
 }
 
 
-Observable EventTarget_when1(EventTarget* self , jb_DOMString * type, ObservableEventListenerOptions * options) {
+Observable EventTarget_when1(EventTarget* self , jb_String * type, ObservableEventListenerOptions * options) {
     return em_Val_as(Observable, em_Val_call(em_Val_as_val(self->inner), "when", em_Val_from(type), em_Val_from(options)));
 }
 

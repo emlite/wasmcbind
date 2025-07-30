@@ -10,7 +10,7 @@ typedef struct Blob Blob;
 
 DECLARE_EMLITE_TYPE(BlobEvent, Event);
 
-BlobEvent BlobEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+BlobEvent BlobEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 Blob BlobEvent_data(const BlobEvent *self);
 

@@ -22,14 +22,14 @@ int main() {
     Window win            = window();
     Document document     = Window_document(&win);
     HTMLCollection bodies = Document_getElementsByTagName(
-        &document, &DOMSTR("body")
+        &document, &JSSTR("body")
     );
     Element body   = HTMLCollection_item(&bodies, 0);
     Element button = Document_createElement0(
-        &document, &DOMSTR("BUTTON")
+        &document, &JSSTR("BUTTON")
     );
     Node_set_textContent(
-        &button, &DOMSTR("Play")
+        &button, &JSSTR("Play")
     );
     Node_appendChild(&body, &button);
 
@@ -40,7 +40,7 @@ int main() {
     jb_Function btn_cb = jb_Function_from(button_cb, &params);
 
     EventTarget_addEventListener0(
-        &button, &DOMSTR("click"), &btn_cb
+        &button, &JSSTR("click"), &btn_cb
     );
     return 0;
 }

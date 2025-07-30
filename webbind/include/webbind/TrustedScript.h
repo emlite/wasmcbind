@@ -7,4 +7,4 @@
 
 DECLARE_EMLITE_TYPE(TrustedScript, em_Val);
 
-jb_DOMString TrustedScript_toJSON(TrustedScript* self );
+jb_String TrustedScript_toJSON(TrustedScript* self );

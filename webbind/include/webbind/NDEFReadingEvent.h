@@ -10,8 +10,8 @@ typedef struct NDEFMessage NDEFMessage;
 
 DECLARE_EMLITE_TYPE(NDEFReadingEvent, Event);
 
-NDEFReadingEvent NDEFReadingEvent_new(jb_DOMString * type, jb_Any * readingEventInitDict);
+NDEFReadingEvent NDEFReadingEvent_new(jb_String * type, jb_Any * readingEventInitDict);
 
-jb_DOMString NDEFReadingEvent_serialNumber(const NDEFReadingEvent *self);
+jb_String NDEFReadingEvent_serialNumber(const NDEFReadingEvent *self);
 
 NDEFMessage NDEFReadingEvent_message(const NDEFReadingEvent *self);

@@ -27,29 +27,29 @@ NotificationDirection NotificationOptions_dir(const NotificationOptions *self);
 
 void NotificationOptions_set_dir(NotificationOptions* self, NotificationDirection * value);
 
-jb_DOMString NotificationOptions_lang(const NotificationOptions *self);
+jb_String NotificationOptions_lang(const NotificationOptions *self);
 
-void NotificationOptions_set_lang(NotificationOptions* self, jb_DOMString * value);
+void NotificationOptions_set_lang(NotificationOptions* self, jb_String * value);
 
-jb_DOMString NotificationOptions_body(const NotificationOptions *self);
+jb_String NotificationOptions_body(const NotificationOptions *self);
 
-void NotificationOptions_set_body(NotificationOptions* self, jb_DOMString * value);
+void NotificationOptions_set_body(NotificationOptions* self, jb_String * value);
 
-jb_DOMString NotificationOptions_tag(const NotificationOptions *self);
+jb_String NotificationOptions_tag(const NotificationOptions *self);
 
-void NotificationOptions_set_tag(NotificationOptions* self, jb_DOMString * value);
+void NotificationOptions_set_tag(NotificationOptions* self, jb_String * value);
 
-jb_USVString NotificationOptions_image(const NotificationOptions *self);
+jb_String NotificationOptions_image(const NotificationOptions *self);
 
-void NotificationOptions_set_image(NotificationOptions* self, jb_USVString * value);
+void NotificationOptions_set_image(NotificationOptions* self, jb_String * value);
 
-jb_USVString NotificationOptions_icon(const NotificationOptions *self);
+jb_String NotificationOptions_icon(const NotificationOptions *self);
 
-void NotificationOptions_set_icon(NotificationOptions* self, jb_USVString * value);
+void NotificationOptions_set_icon(NotificationOptions* self, jb_String * value);
 
-jb_USVString NotificationOptions_badge(const NotificationOptions *self);
+jb_String NotificationOptions_badge(const NotificationOptions *self);
 
-void NotificationOptions_set_badge(NotificationOptions* self, jb_USVString * value);
+void NotificationOptions_set_badge(NotificationOptions* self, jb_String * value);
 
 jb_Any NotificationOptions_vibrate(const NotificationOptions *self);
 
@@ -75,14 +75,14 @@ jb_Any NotificationOptions_data(const NotificationOptions *self);
 
 void NotificationOptions_set_data(NotificationOptions* self, jb_Any * value);
 
-jb_Sequence NotificationOptions_actions(const NotificationOptions *self);
+jb_Array NotificationOptions_actions(const NotificationOptions *self);
 
-void NotificationOptions_set_actions(NotificationOptions* self, jb_Sequence * value);
+void NotificationOptions_set_actions(NotificationOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(GetNotificationOptions, em_Val);
 
-jb_DOMString GetNotificationOptions_tag(const GetNotificationOptions *self);
+jb_String GetNotificationOptions_tag(const GetNotificationOptions *self);
 
-void GetNotificationOptions_set_tag(GetNotificationOptions* self, jb_DOMString * value);
+void GetNotificationOptions_set_tag(GetNotificationOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(ServiceWorkerRegistration, EventTarget);
 
 ServiceWorker ServiceWorkerRegistration_installing(const ServiceWorkerRegistration *self);
@@ -93,7 +93,7 @@ ServiceWorker ServiceWorkerRegistration_active(const ServiceWorkerRegistration *
 
 NavigationPreloadManager ServiceWorkerRegistration_navigationPreload(const ServiceWorkerRegistration *self);
 
-jb_USVString ServiceWorkerRegistration_scope(const ServiceWorkerRegistration *self);
+jb_String ServiceWorkerRegistration_scope(const ServiceWorkerRegistration *self);
 
 ServiceWorkerUpdateViaCache ServiceWorkerRegistration_updateViaCache(const ServiceWorkerRegistration *self);
 
@@ -113,9 +113,9 @@ ContentIndex ServiceWorkerRegistration_index(const ServiceWorkerRegistration *se
 
 CookieStoreManager ServiceWorkerRegistration_cookies(const ServiceWorkerRegistration *self);
 
-jb_Promise ServiceWorkerRegistration_showNotification0(ServiceWorkerRegistration* self , jb_DOMString * title);
+jb_Promise ServiceWorkerRegistration_showNotification0(ServiceWorkerRegistration* self , jb_String * title);
 
-jb_Promise ServiceWorkerRegistration_showNotification1(ServiceWorkerRegistration* self , jb_DOMString * title, NotificationOptions * options);
+jb_Promise ServiceWorkerRegistration_showNotification1(ServiceWorkerRegistration* self , jb_String * title, NotificationOptions * options);
 
 jb_Promise ServiceWorkerRegistration_getNotifications0(ServiceWorkerRegistration* self );
 

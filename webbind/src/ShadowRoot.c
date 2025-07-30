@@ -51,13 +51,13 @@ jb_Undefined ShadowRoot_setHTMLUnsafe(ShadowRoot* self , jb_Any * html) {
 }
 
 
-jb_DOMString ShadowRoot_getHTML0(ShadowRoot* self ) {
-    return em_Val_as(jb_DOMString, em_Val_call(DocumentFragment_as_val(self->inner), "getHTML"));
+jb_String ShadowRoot_getHTML0(ShadowRoot* self ) {
+    return em_Val_as(jb_String, em_Val_call(DocumentFragment_as_val(self->inner), "getHTML"));
 }
 
 
-jb_DOMString ShadowRoot_getHTML1(ShadowRoot* self , GetHTMLOptions * options) {
-    return em_Val_as(jb_DOMString, em_Val_call(DocumentFragment_as_val(self->inner), "getHTML", em_Val_from(options)));
+jb_String ShadowRoot_getHTML1(ShadowRoot* self , GetHTMLOptions * options) {
+    return em_Val_as(jb_String, em_Val_call(DocumentFragment_as_val(self->inner), "getHTML", em_Val_from(options)));
 }
 
 
@@ -71,7 +71,7 @@ void ShadowRoot_set_innerHTML(ShadowRoot* self, jb_Any * value) {
 }
 
 
-jb_Sequence ShadowRoot_getAnimations(ShadowRoot* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(DocumentFragment_as_val(self->inner), "getAnimations"));
+jb_Array ShadowRoot_getAnimations(ShadowRoot* self ) {
+    return em_Val_as(jb_Array, em_Val_call(DocumentFragment_as_val(self->inner), "getAnimations"));
 }
 

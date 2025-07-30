@@ -20,6 +20,6 @@ unsigned char USBAlternateInterface_interfaceSubclass(const USBAlternateInterfac
 
 unsigned char USBAlternateInterface_interfaceProtocol(const USBAlternateInterface *self);
 
-jb_DOMString USBAlternateInterface_interfaceName(const USBAlternateInterface *self);
+jb_String USBAlternateInterface_interfaceName(const USBAlternateInterface *self);
 
-jb_FrozenArray USBAlternateInterface_endpoints(const USBAlternateInterface *self);
+jb_Array USBAlternateInterface_endpoints(const USBAlternateInterface *self);

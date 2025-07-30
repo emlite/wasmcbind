@@ -9,13 +9,13 @@ typedef struct SourceBuffer SourceBuffer;
 
 DECLARE_EMLITE_TYPE(AudioTrack, em_Val);
 
-jb_DOMString AudioTrack_id(const AudioTrack *self);
+jb_String AudioTrack_id(const AudioTrack *self);
 
-jb_DOMString AudioTrack_kind(const AudioTrack *self);
+jb_String AudioTrack_kind(const AudioTrack *self);
 
-jb_DOMString AudioTrack_label(const AudioTrack *self);
+jb_String AudioTrack_label(const AudioTrack *self);
 
-jb_DOMString AudioTrack_language(const AudioTrack *self);
+jb_String AudioTrack_language(const AudioTrack *self);
 
 bool AudioTrack_enabled(const AudioTrack *self);
 

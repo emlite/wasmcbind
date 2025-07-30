@@ -50,7 +50,7 @@ jb_Any NavigationOptions_info(const NavigationOptions *self);
 void NavigationOptions_set_info(NavigationOptions* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(Navigation, EventTarget);
 
-jb_Sequence Navigation_entries(Navigation* self );
+jb_Array Navigation_entries(Navigation* self );
 
 NavigationHistoryEntry Navigation_currentEntry(const Navigation *self);
 
@@ -64,17 +64,17 @@ bool Navigation_canGoBack(const Navigation *self);
 
 bool Navigation_canGoForward(const Navigation *self);
 
-NavigationResult Navigation_navigate0(Navigation* self , jb_USVString * url);
+NavigationResult Navigation_navigate0(Navigation* self , jb_String * url);
 
-NavigationResult Navigation_navigate1(Navigation* self , jb_USVString * url, NavigationNavigateOptions * options);
+NavigationResult Navigation_navigate1(Navigation* self , jb_String * url, NavigationNavigateOptions * options);
 
 NavigationResult Navigation_reload0(Navigation* self );
 
 NavigationResult Navigation_reload1(Navigation* self , NavigationReloadOptions * options);
 
-NavigationResult Navigation_traverseTo0(Navigation* self , jb_DOMString * key);
+NavigationResult Navigation_traverseTo0(Navigation* self , jb_String * key);
 
-NavigationResult Navigation_traverseTo1(Navigation* self , jb_DOMString * key, NavigationOptions * options);
+NavigationResult Navigation_traverseTo1(Navigation* self , jb_String * key, NavigationOptions * options);
 
 NavigationResult Navigation_back0(Navigation* self );
 

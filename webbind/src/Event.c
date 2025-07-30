@@ -5,20 +5,20 @@
 DEFINE_EMLITE_TYPE(Event, em_Val);
 
 
-Event Event_new0(jb_DOMString * type) {
+Event Event_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("Event") , em_Val_from(type));
         return Event_from_val(&vv);
       }
 
 
-Event Event_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+Event Event_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("Event") , em_Val_from(type), em_Val_from(eventInitDict));
         return Event_from_val(&vv);
       }
 
 
-jb_DOMString Event_type(const Event *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
+jb_String Event_type(const Event *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
@@ -37,8 +37,8 @@ EventTarget Event_currentTarget(const Event *self) {
 }
 
 
-jb_Sequence Event_composedPath(Event* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "composedPath"));
+jb_Array Event_composedPath(Event* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "composedPath"));
 }
 
 
@@ -112,17 +112,17 @@ jb_Any Event_timeStamp(const Event *self) {
 }
 
 
-jb_Undefined Event_initEvent0(Event* self , jb_DOMString * type) {
+jb_Undefined Event_initEvent0(Event* self , jb_String * type) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "initEvent", em_Val_from(type)));
 }
 
 
-jb_Undefined Event_initEvent1(Event* self , jb_DOMString * type, bool bubbles) {
+jb_Undefined Event_initEvent1(Event* self , jb_String * type, bool bubbles) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "initEvent", em_Val_from(type), em_Val_from(bubbles)));
 }
 
 
-jb_Undefined Event_initEvent2(Event* self , jb_DOMString * type, bool bubbles, bool cancelable) {
+jb_Undefined Event_initEvent2(Event* self , jb_String * type, bool bubbles, bool cancelable) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "initEvent", em_Val_from(type), em_Val_from(bubbles), em_Val_from(cancelable)));
 }
 

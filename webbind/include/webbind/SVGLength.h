@@ -17,9 +17,9 @@ float SVGLength_valueInSpecifiedUnits(const SVGLength *self);
 
 void SVGLength_set_valueInSpecifiedUnits(SVGLength* self, float value);
 
-jb_DOMString SVGLength_valueAsString(const SVGLength *self);
+jb_String SVGLength_valueAsString(const SVGLength *self);
 
-void SVGLength_set_valueAsString(SVGLength* self, jb_DOMString * value);
+void SVGLength_set_valueAsString(SVGLength* self, jb_String * value);
 
 jb_Undefined SVGLength_newValueSpecifiedUnits(SVGLength* self , unsigned short unitType, float valueInSpecifiedUnits);
 

@@ -20,4 +20,4 @@ double XRRenderState_inlineVerticalFieldOfView(const XRRenderState *self);
 
 XRWebGLLayer XRRenderState_baseLayer(const XRRenderState *self);
 
-jb_FrozenArray XRRenderState_layers(const XRRenderState *self);
+jb_Array XRRenderState_layers(const XRRenderState *self);

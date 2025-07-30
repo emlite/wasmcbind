@@ -17,15 +17,15 @@ DECLARE_EMLITE_TYPE(Text, CharacterData);
 
 Text Text_new0();
 
-Text Text_new1(jb_DOMString * data);
+Text Text_new1(jb_String * data);
 
 Text Text_splitText(Text* self , unsigned long offset);
 
-jb_DOMString Text_wholeText(const Text *self);
+jb_String Text_wholeText(const Text *self);
 
-jb_Sequence Text_getBoxQuads0(Text* self );
+jb_Array Text_getBoxQuads0(Text* self );
 
-jb_Sequence Text_getBoxQuads1(Text* self , BoxQuadOptions * options);
+jb_Array Text_getBoxQuads1(Text* self , BoxQuadOptions * options);
 
 DOMQuad Text_convertQuadFromNode0(Text* self , DOMQuadInit * quad, jb_Any * from);
 

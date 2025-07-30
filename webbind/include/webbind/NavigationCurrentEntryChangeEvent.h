@@ -10,7 +10,7 @@ typedef struct NavigationHistoryEntry NavigationHistoryEntry;
 
 DECLARE_EMLITE_TYPE(NavigationCurrentEntryChangeEvent, Event);
 
-NavigationCurrentEntryChangeEvent NavigationCurrentEntryChangeEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+NavigationCurrentEntryChangeEvent NavigationCurrentEntryChangeEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 NavigationType NavigationCurrentEntryChangeEvent_navigationType(const NavigationCurrentEntryChangeEvent *self);
 

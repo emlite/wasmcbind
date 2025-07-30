@@ -8,9 +8,9 @@
 
 DECLARE_EMLITE_TYPE(WheelEvent, MouseEvent);
 
-WheelEvent WheelEvent_new0(jb_DOMString * type);
+WheelEvent WheelEvent_new0(jb_String * type);
 
-WheelEvent WheelEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+WheelEvent WheelEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
 double WheelEvent_deltaX(const WheelEvent *self);
 

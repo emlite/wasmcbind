@@ -7,4 +7,4 @@
 
 DECLARE_EMLITE_TYPE(WEBGL_compressed_texture_astc, em_Val);
 
-jb_Sequence WEBGL_compressed_texture_astc_getSupportedProfiles(WEBGL_compressed_texture_astc* self );
+jb_Array WEBGL_compressed_texture_astc_getSupportedProfiles(WEBGL_compressed_texture_astc* self );

@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(CSSStyleProperties, CSSStyleDeclaration);
 
-jb_CSSOMString CSSStyleProperties_cssFloat(const CSSStyleProperties *self);
+jb_String CSSStyleProperties_cssFloat(const CSSStyleProperties *self);
 
-void CSSStyleProperties_set_cssFloat(CSSStyleProperties* self, jb_CSSOMString * value);
+void CSSStyleProperties_set_cssFloat(CSSStyleProperties* self, jb_String * value);

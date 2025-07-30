@@ -40,9 +40,9 @@ PlaybackDirection OptionalEffectTiming_direction(const OptionalEffectTiming *sel
 
 void OptionalEffectTiming_set_direction(OptionalEffectTiming* self, PlaybackDirection * value);
 
-jb_DOMString OptionalEffectTiming_easing(const OptionalEffectTiming *self);
+jb_String OptionalEffectTiming_easing(const OptionalEffectTiming *self);
 
-void OptionalEffectTiming_set_easing(OptionalEffectTiming* self, jb_DOMString * value);
+void OptionalEffectTiming_set_easing(OptionalEffectTiming* self, jb_String * value);
 DECLARE_EMLITE_TYPE(AnimationEffect, em_Val);
 
 EffectTiming AnimationEffect_getTiming(AnimationEffect* self );

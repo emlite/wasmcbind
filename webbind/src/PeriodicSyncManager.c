@@ -16,12 +16,12 @@ void BackgroundSyncOptions_set_minInterval(BackgroundSyncOptions* self, long lon
 DEFINE_EMLITE_TYPE(PeriodicSyncManager, em_Val);
 
 
-jb_Promise PeriodicSyncManager_register_0(PeriodicSyncManager* self , jb_DOMString * tag) {
+jb_Promise PeriodicSyncManager_register_0(PeriodicSyncManager* self , jb_String * tag) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "register", em_Val_from(tag)));
 }
 
 
-jb_Promise PeriodicSyncManager_register_1(PeriodicSyncManager* self , jb_DOMString * tag, BackgroundSyncOptions * options) {
+jb_Promise PeriodicSyncManager_register_1(PeriodicSyncManager* self , jb_String * tag, BackgroundSyncOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "register", em_Val_from(tag), em_Val_from(options)));
 }
 
@@ -31,7 +31,7 @@ jb_Promise PeriodicSyncManager_getTags(PeriodicSyncManager* self ) {
 }
 
 
-jb_Promise PeriodicSyncManager_unregister(PeriodicSyncManager* self , jb_DOMString * tag) {
+jb_Promise PeriodicSyncManager_unregister(PeriodicSyncManager* self , jb_String * tag) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "unregister", em_Val_from(tag)));
 }
 

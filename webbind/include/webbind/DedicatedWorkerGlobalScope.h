@@ -9,7 +9,7 @@
 
 DECLARE_EMLITE_TYPE(DedicatedWorkerGlobalScope, WorkerGlobalScope);
 
-jb_DOMString DedicatedWorkerGlobalScope_name(const DedicatedWorkerGlobalScope *self);
+jb_String DedicatedWorkerGlobalScope_name(const DedicatedWorkerGlobalScope *self);
 
 jb_Undefined DedicatedWorkerGlobalScope_postMessage0(DedicatedWorkerGlobalScope* self , jb_Any * message);
 

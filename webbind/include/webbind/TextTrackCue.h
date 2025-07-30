@@ -12,9 +12,9 @@ DECLARE_EMLITE_TYPE(TextTrackCue, EventTarget);
 
 TextTrack TextTrackCue_track(const TextTrackCue *self);
 
-jb_DOMString TextTrackCue_id(const TextTrackCue *self);
+jb_String TextTrackCue_id(const TextTrackCue *self);
 
-void TextTrackCue_set_id(TextTrackCue* self, jb_DOMString * value);
+void TextTrackCue_set_id(TextTrackCue* self, jb_String * value);
 
 double TextTrackCue_startTime(const TextTrackCue *self);
 

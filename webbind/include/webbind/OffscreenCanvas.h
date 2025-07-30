@@ -12,9 +12,9 @@ typedef struct ImageEncodeOptions ImageEncodeOptions;
 
 DECLARE_EMLITE_TYPE(ImageEncodeOptions, em_Val);
 
-jb_DOMString ImageEncodeOptions_type(const ImageEncodeOptions *self);
+jb_String ImageEncodeOptions_type(const ImageEncodeOptions *self);
 
-void ImageEncodeOptions_set_type(ImageEncodeOptions* self, jb_DOMString * value);
+void ImageEncodeOptions_set_type(ImageEncodeOptions* self, jb_String * value);
 
 double ImageEncodeOptions_quality(const ImageEncodeOptions *self);
 

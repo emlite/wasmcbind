@@ -9,7 +9,7 @@ typedef struct BluetoothLEScanFilter BluetoothLEScanFilter;
 
 DECLARE_EMLITE_TYPE(BluetoothLEScan, em_Val);
 
-jb_FrozenArray BluetoothLEScan_filters(const BluetoothLEScan *self);
+jb_Array BluetoothLEScan_filters(const BluetoothLEScan *self);
 
 bool BluetoothLEScan_keepRepeatedDevices(const BluetoothLEScan *self);
 

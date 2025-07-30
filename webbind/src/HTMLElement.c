@@ -28,22 +28,22 @@ HTMLElement HTMLElement_new() {
       }
 
 
-jb_DOMString HTMLElement_title(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("title")));
+jb_String HTMLElement_title(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("title")));
 }
 
 
-void HTMLElement_set_title(HTMLElement* self, jb_DOMString * value) {
+void HTMLElement_set_title(HTMLElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("title"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLElement_lang(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("lang")));
+jb_String HTMLElement_lang(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("lang")));
 }
 
 
-void HTMLElement_set_lang(HTMLElement* self, jb_DOMString * value) {
+void HTMLElement_set_lang(HTMLElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("lang"), em_Val_from(value));
 }
 
@@ -58,12 +58,12 @@ void HTMLElement_set_translate(HTMLElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLElement_dir(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("dir")));
+jb_String HTMLElement_dir(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("dir")));
 }
 
 
-void HTMLElement_set_dir(HTMLElement* self, jb_DOMString * value) {
+void HTMLElement_set_dir(HTMLElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("dir"), em_Val_from(value));
 }
 
@@ -93,18 +93,18 @@ jb_Undefined HTMLElement_click(HTMLElement* self ) {
 }
 
 
-jb_DOMString HTMLElement_accessKey(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("accessKey")));
+jb_String HTMLElement_accessKey(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("accessKey")));
 }
 
 
-void HTMLElement_set_accessKey(HTMLElement* self, jb_DOMString * value) {
+void HTMLElement_set_accessKey(HTMLElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("accessKey"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLElement_accessKeyLabel(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("accessKeyLabel")));
+jb_String HTMLElement_accessKeyLabel(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("accessKeyLabel")));
 }
 
 
@@ -128,22 +128,22 @@ void HTMLElement_set_spellcheck(HTMLElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLElement_writingSuggestions(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("writingSuggestions")));
+jb_String HTMLElement_writingSuggestions(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("writingSuggestions")));
 }
 
 
-void HTMLElement_set_writingSuggestions(HTMLElement* self, jb_DOMString * value) {
+void HTMLElement_set_writingSuggestions(HTMLElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("writingSuggestions"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLElement_autocapitalize(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("autocapitalize")));
+jb_String HTMLElement_autocapitalize(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("autocapitalize")));
 }
 
 
-void HTMLElement_set_autocapitalize(HTMLElement* self, jb_DOMString * value) {
+void HTMLElement_set_autocapitalize(HTMLElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("autocapitalize"), em_Val_from(value));
 }
 
@@ -158,22 +158,22 @@ void HTMLElement_set_autocorrect(HTMLElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLElement_innerText(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("innerText")));
+jb_String HTMLElement_innerText(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("innerText")));
 }
 
 
-void HTMLElement_set_innerText(HTMLElement* self, jb_DOMString * value) {
+void HTMLElement_set_innerText(HTMLElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("innerText"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLElement_outerText(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("outerText")));
+jb_String HTMLElement_outerText(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("outerText")));
 }
 
 
-void HTMLElement_set_outerText(HTMLElement* self, jb_DOMString * value) {
+void HTMLElement_set_outerText(HTMLElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("outerText"), em_Val_from(value));
 }
 
@@ -208,12 +208,12 @@ bool HTMLElement_togglePopover1(HTMLElement* self , jb_Any * options) {
 }
 
 
-jb_DOMString HTMLElement_popover(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("popover")));
+jb_String HTMLElement_popover(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("popover")));
 }
 
 
-void HTMLElement_set_popover(HTMLElement* self, jb_DOMString * value) {
+void HTMLElement_set_popover(HTMLElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("popover"), em_Val_from(value));
 }
 
@@ -273,12 +273,12 @@ void HTMLElement_set_onbeforexrselect(HTMLElement* self, jb_Any * value) {
 }
 
 
-jb_DOMString HTMLElement_virtualKeyboardPolicy(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("virtualKeyboardPolicy")));
+jb_String HTMLElement_virtualKeyboardPolicy(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("virtualKeyboardPolicy")));
 }
 
 
-void HTMLElement_set_virtualKeyboardPolicy(HTMLElement* self, jb_DOMString * value) {
+void HTMLElement_set_virtualKeyboardPolicy(HTMLElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("virtualKeyboardPolicy"), em_Val_from(value));
 }
 
@@ -288,12 +288,12 @@ DOMStringMap HTMLElement_dataset(const HTMLElement *self) {
 }
 
 
-jb_DOMString HTMLElement_nonce(const HTMLElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("nonce")));
+jb_String HTMLElement_nonce(const HTMLElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("nonce")));
 }
 
 
-void HTMLElement_set_nonce(HTMLElement* self, jb_DOMString * value) {
+void HTMLElement_set_nonce(HTMLElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("nonce"), em_Val_from(value));
 }
 

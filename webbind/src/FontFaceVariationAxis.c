@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(FontFaceVariationAxis, em_Val);
 
 
-jb_DOMString FontFaceVariationAxis_name(const FontFaceVariationAxis *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String FontFaceVariationAxis_name(const FontFaceVariationAxis *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString FontFaceVariationAxis_axisTag(const FontFaceVariationAxis *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axisTag")));
+jb_String FontFaceVariationAxis_axisTag(const FontFaceVariationAxis *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axisTag")));
 }
 
 

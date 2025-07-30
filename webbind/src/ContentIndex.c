@@ -4,32 +4,32 @@
 DEFINE_EMLITE_TYPE(ContentDescription, em_Val);
 
 
-jb_DOMString ContentDescription_id(const ContentDescription *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
+jb_String ContentDescription_id(const ContentDescription *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
-void ContentDescription_set_id(ContentDescription* self, jb_DOMString * value) {
+void ContentDescription_set_id(ContentDescription* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("id"), em_Val_from(value));
 }
 
 
-jb_DOMString ContentDescription_title(const ContentDescription *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("title")));
+jb_String ContentDescription_title(const ContentDescription *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("title")));
 }
 
 
-void ContentDescription_set_title(ContentDescription* self, jb_DOMString * value) {
+void ContentDescription_set_title(ContentDescription* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("title"), em_Val_from(value));
 }
 
 
-jb_DOMString ContentDescription_description(const ContentDescription *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("description")));
+jb_String ContentDescription_description(const ContentDescription *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("description")));
 }
 
 
-void ContentDescription_set_description(ContentDescription* self, jb_DOMString * value) {
+void ContentDescription_set_description(ContentDescription* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("description"), em_Val_from(value));
 }
 
@@ -44,22 +44,22 @@ void ContentDescription_set_category(ContentDescription* self, ContentCategory *
 }
 
 
-jb_Sequence ContentDescription_icons(const ContentDescription *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("icons")));
+jb_Array ContentDescription_icons(const ContentDescription *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("icons")));
 }
 
 
-void ContentDescription_set_icons(ContentDescription* self, jb_Sequence * value) {
+void ContentDescription_set_icons(ContentDescription* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("icons"), em_Val_from(value));
 }
 
 
-jb_USVString ContentDescription_url(const ContentDescription *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
+jb_String ContentDescription_url(const ContentDescription *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 
-void ContentDescription_set_url(ContentDescription* self, jb_USVString * value) {
+void ContentDescription_set_url(ContentDescription* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("url"), em_Val_from(value));
 }
 
@@ -71,7 +71,7 @@ jb_Promise ContentIndex_add(ContentIndex* self , ContentDescription * descriptio
 }
 
 
-jb_Promise ContentIndex_delete_(ContentIndex* self , jb_DOMString * id) {
+jb_Promise ContentIndex_delete_(ContentIndex* self , jb_String * id) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "delete", em_Val_from(id)));
 }
 

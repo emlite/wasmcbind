@@ -38,7 +38,7 @@ jb_Undefined GPURenderPassEncoder_endOcclusionQuery(GPURenderPassEncoder* self )
 }
 
 
-jb_Undefined GPURenderPassEncoder_executeBundles(GPURenderPassEncoder* self , jb_Sequence * bundles) {
+jb_Undefined GPURenderPassEncoder_executeBundles(GPURenderPassEncoder* self , jb_Array * bundles) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "executeBundles", em_Val_from(bundles)));
 }
 
@@ -48,17 +48,17 @@ jb_Undefined GPURenderPassEncoder_end(GPURenderPassEncoder* self ) {
 }
 
 
-jb_USVString GPURenderPassEncoder_label(const GPURenderPassEncoder *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
+jb_String GPURenderPassEncoder_label(const GPURenderPassEncoder *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void GPURenderPassEncoder_set_label(GPURenderPassEncoder* self, jb_USVString * value) {
+void GPURenderPassEncoder_set_label(GPURenderPassEncoder* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 
 
-jb_Undefined GPURenderPassEncoder_pushDebugGroup(GPURenderPassEncoder* self , jb_USVString * groupLabel) {
+jb_Undefined GPURenderPassEncoder_pushDebugGroup(GPURenderPassEncoder* self , jb_String * groupLabel) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "pushDebugGroup", em_Val_from(groupLabel)));
 }
 
@@ -68,7 +68,7 @@ jb_Undefined GPURenderPassEncoder_popDebugGroup(GPURenderPassEncoder* self ) {
 }
 
 
-jb_Undefined GPURenderPassEncoder_insertDebugMarker(GPURenderPassEncoder* self , jb_USVString * markerLabel) {
+jb_Undefined GPURenderPassEncoder_insertDebugMarker(GPURenderPassEncoder* self , jb_String * markerLabel) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "insertDebugMarker", em_Val_from(markerLabel)));
 }
 

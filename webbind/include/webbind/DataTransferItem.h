@@ -11,9 +11,9 @@ typedef struct FileSystemHandle FileSystemHandle;
 
 DECLARE_EMLITE_TYPE(DataTransferItem, em_Val);
 
-jb_DOMString DataTransferItem_kind(const DataTransferItem *self);
+jb_String DataTransferItem_kind(const DataTransferItem *self);
 
-jb_DOMString DataTransferItem_type(const DataTransferItem *self);
+jb_String DataTransferItem_type(const DataTransferItem *self);
 
 jb_Undefined DataTransferItem_getAsString(DataTransferItem* self , jb_Any * callback);
 

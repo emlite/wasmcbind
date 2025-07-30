@@ -14,7 +14,7 @@ DECLARE_EMLITE_TYPE(DocumentFragment, Node);
 
 DocumentFragment DocumentFragment_new();
 
-Element DocumentFragment_getElementById(DocumentFragment* self , jb_DOMString * elementId);
+Element DocumentFragment_getElementById(DocumentFragment* self , jb_String * elementId);
 
 HTMLCollection DocumentFragment_children(const DocumentFragment *self);
 
@@ -32,6 +32,6 @@ jb_Undefined DocumentFragment_replaceChildren(DocumentFragment* self , jb_Any * 
 
 jb_Undefined DocumentFragment_moveBefore(DocumentFragment* self , Node * node, Node * child);
 
-Element DocumentFragment_querySelector(DocumentFragment* self , jb_DOMString * selectors);
+Element DocumentFragment_querySelector(DocumentFragment* self , jb_String * selectors);
 
-NodeList DocumentFragment_querySelectorAll(DocumentFragment* self , jb_DOMString * selectors);
+NodeList DocumentFragment_querySelectorAll(DocumentFragment* self , jb_String * selectors);

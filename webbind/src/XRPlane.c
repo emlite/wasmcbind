@@ -11,8 +11,8 @@ XRSpace XRPlane_planeSpace(const XRPlane *self) {
 }
 
 
-jb_FrozenArray XRPlane_polygon(const XRPlane *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("polygon")));
+jb_Array XRPlane_polygon(const XRPlane *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("polygon")));
 }
 
 
@@ -26,7 +26,7 @@ jb_Any XRPlane_lastChangedTime(const XRPlane *self) {
 }
 
 
-jb_DOMString XRPlane_semanticLabel(const XRPlane *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("semanticLabel")));
+jb_String XRPlane_semanticLabel(const XRPlane *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("semanticLabel")));
 }
 

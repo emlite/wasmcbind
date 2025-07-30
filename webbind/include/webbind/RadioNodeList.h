@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(RadioNodeList, NodeList);
 
-jb_DOMString RadioNodeList_value(const RadioNodeList *self);
+jb_String RadioNodeList_value(const RadioNodeList *self);
 
-void RadioNodeList_set_value(RadioNodeList* self, jb_DOMString * value);
+void RadioNodeList_set_value(RadioNodeList* self, jb_String * value);

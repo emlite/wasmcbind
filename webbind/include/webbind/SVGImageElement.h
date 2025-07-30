@@ -22,8 +22,8 @@ SVGAnimatedLength SVGImageElement_height(const SVGImageElement *self);
 
 SVGAnimatedPreserveAspectRatio SVGImageElement_preserveAspectRatio(const SVGImageElement *self);
 
-jb_DOMString SVGImageElement_crossOrigin(const SVGImageElement *self);
+jb_String SVGImageElement_crossOrigin(const SVGImageElement *self);
 
-void SVGImageElement_set_crossOrigin(SVGImageElement* self, jb_DOMString * value);
+void SVGImageElement_set_crossOrigin(SVGImageElement* self, jb_String * value);
 
 SVGAnimatedString SVGImageElement_href(const SVGImageElement *self);

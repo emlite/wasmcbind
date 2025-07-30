@@ -12,8 +12,8 @@ TextEncoderStream TextEncoderStream_new() {
       }
 
 
-jb_DOMString TextEncoderStream_encoding(const TextEncoderStream *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("encoding")));
+jb_String TextEncoderStream_encoding(const TextEncoderStream *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("encoding")));
 }
 
 

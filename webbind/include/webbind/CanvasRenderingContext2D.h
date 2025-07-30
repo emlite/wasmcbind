@@ -81,9 +81,9 @@ double CanvasRenderingContext2D_globalAlpha(const CanvasRenderingContext2D *self
 
 void CanvasRenderingContext2D_set_globalAlpha(CanvasRenderingContext2D* self, double value);
 
-jb_DOMString CanvasRenderingContext2D_globalCompositeOperation(const CanvasRenderingContext2D *self);
+jb_String CanvasRenderingContext2D_globalCompositeOperation(const CanvasRenderingContext2D *self);
 
-void CanvasRenderingContext2D_set_globalCompositeOperation(CanvasRenderingContext2D* self, jb_DOMString * value);
+void CanvasRenderingContext2D_set_globalCompositeOperation(CanvasRenderingContext2D* self, jb_String * value);
 
 bool CanvasRenderingContext2D_imageSmoothingEnabled(const CanvasRenderingContext2D *self);
 
@@ -107,7 +107,7 @@ CanvasGradient CanvasRenderingContext2D_createRadialGradient(CanvasRenderingCont
 
 CanvasGradient CanvasRenderingContext2D_createConicGradient(CanvasRenderingContext2D* self , double startAngle, double x, double y);
 
-CanvasPattern CanvasRenderingContext2D_createPattern(CanvasRenderingContext2D* self , jb_Any * image, jb_DOMString * repetition);
+CanvasPattern CanvasRenderingContext2D_createPattern(CanvasRenderingContext2D* self , jb_Any * image, jb_String * repetition);
 
 double CanvasRenderingContext2D_shadowOffsetX(const CanvasRenderingContext2D *self);
 
@@ -121,13 +121,13 @@ double CanvasRenderingContext2D_shadowBlur(const CanvasRenderingContext2D *self)
 
 void CanvasRenderingContext2D_set_shadowBlur(CanvasRenderingContext2D* self, double value);
 
-jb_DOMString CanvasRenderingContext2D_shadowColor(const CanvasRenderingContext2D *self);
+jb_String CanvasRenderingContext2D_shadowColor(const CanvasRenderingContext2D *self);
 
-void CanvasRenderingContext2D_set_shadowColor(CanvasRenderingContext2D* self, jb_DOMString * value);
+void CanvasRenderingContext2D_set_shadowColor(CanvasRenderingContext2D* self, jb_String * value);
 
-jb_DOMString CanvasRenderingContext2D_filter(const CanvasRenderingContext2D *self);
+jb_String CanvasRenderingContext2D_filter(const CanvasRenderingContext2D *self);
 
-void CanvasRenderingContext2D_set_filter(CanvasRenderingContext2D* self, jb_DOMString * value);
+void CanvasRenderingContext2D_set_filter(CanvasRenderingContext2D* self, jb_String * value);
 
 jb_Undefined CanvasRenderingContext2D_clearRect(CanvasRenderingContext2D* self , double x, double y, double w, double h);
 
@@ -155,15 +155,15 @@ bool CanvasRenderingContext2D_isPointInStroke(CanvasRenderingContext2D* self , P
 
 jb_Undefined CanvasRenderingContext2D_drawFocusIfNeeded(CanvasRenderingContext2D* self , Path2D * path, Element * element);
 
-jb_Undefined CanvasRenderingContext2D_fillText0(CanvasRenderingContext2D* self , jb_DOMString * text, double x, double y);
+jb_Undefined CanvasRenderingContext2D_fillText0(CanvasRenderingContext2D* self , jb_String * text, double x, double y);
 
-jb_Undefined CanvasRenderingContext2D_fillText1(CanvasRenderingContext2D* self , jb_DOMString * text, double x, double y, double maxWidth);
+jb_Undefined CanvasRenderingContext2D_fillText1(CanvasRenderingContext2D* self , jb_String * text, double x, double y, double maxWidth);
 
-jb_Undefined CanvasRenderingContext2D_strokeText0(CanvasRenderingContext2D* self , jb_DOMString * text, double x, double y);
+jb_Undefined CanvasRenderingContext2D_strokeText0(CanvasRenderingContext2D* self , jb_String * text, double x, double y);
 
-jb_Undefined CanvasRenderingContext2D_strokeText1(CanvasRenderingContext2D* self , jb_DOMString * text, double x, double y, double maxWidth);
+jb_Undefined CanvasRenderingContext2D_strokeText1(CanvasRenderingContext2D* self , jb_String * text, double x, double y, double maxWidth);
 
-TextMetrics CanvasRenderingContext2D_measureText(CanvasRenderingContext2D* self , jb_DOMString * text);
+TextMetrics CanvasRenderingContext2D_measureText(CanvasRenderingContext2D* self , jb_String * text);
 
 jb_Undefined CanvasRenderingContext2D_drawImage(CanvasRenderingContext2D* self , jb_Any * image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
 
@@ -191,21 +191,21 @@ double CanvasRenderingContext2D_miterLimit(const CanvasRenderingContext2D *self)
 
 void CanvasRenderingContext2D_set_miterLimit(CanvasRenderingContext2D* self, double value);
 
-jb_Undefined CanvasRenderingContext2D_setLineDash(CanvasRenderingContext2D* self , jb_Sequence * segments);
+jb_Undefined CanvasRenderingContext2D_setLineDash(CanvasRenderingContext2D* self , jb_Array * segments);
 
-jb_Sequence CanvasRenderingContext2D_getLineDash(CanvasRenderingContext2D* self );
+jb_Array CanvasRenderingContext2D_getLineDash(CanvasRenderingContext2D* self );
 
 double CanvasRenderingContext2D_lineDashOffset(const CanvasRenderingContext2D *self);
 
 void CanvasRenderingContext2D_set_lineDashOffset(CanvasRenderingContext2D* self, double value);
 
-jb_DOMString CanvasRenderingContext2D_lang(const CanvasRenderingContext2D *self);
+jb_String CanvasRenderingContext2D_lang(const CanvasRenderingContext2D *self);
 
-void CanvasRenderingContext2D_set_lang(CanvasRenderingContext2D* self, jb_DOMString * value);
+void CanvasRenderingContext2D_set_lang(CanvasRenderingContext2D* self, jb_String * value);
 
-jb_DOMString CanvasRenderingContext2D_font(const CanvasRenderingContext2D *self);
+jb_String CanvasRenderingContext2D_font(const CanvasRenderingContext2D *self);
 
-void CanvasRenderingContext2D_set_font(CanvasRenderingContext2D* self, jb_DOMString * value);
+void CanvasRenderingContext2D_set_font(CanvasRenderingContext2D* self, jb_String * value);
 
 CanvasTextAlign CanvasRenderingContext2D_textAlign(const CanvasRenderingContext2D *self);
 
@@ -219,9 +219,9 @@ CanvasDirection CanvasRenderingContext2D_direction(const CanvasRenderingContext2
 
 void CanvasRenderingContext2D_set_direction(CanvasRenderingContext2D* self, CanvasDirection * value);
 
-jb_DOMString CanvasRenderingContext2D_letterSpacing(const CanvasRenderingContext2D *self);
+jb_String CanvasRenderingContext2D_letterSpacing(const CanvasRenderingContext2D *self);
 
-void CanvasRenderingContext2D_set_letterSpacing(CanvasRenderingContext2D* self, jb_DOMString * value);
+void CanvasRenderingContext2D_set_letterSpacing(CanvasRenderingContext2D* self, jb_String * value);
 
 CanvasFontKerning CanvasRenderingContext2D_fontKerning(const CanvasRenderingContext2D *self);
 
@@ -239,9 +239,9 @@ CanvasTextRendering CanvasRenderingContext2D_textRendering(const CanvasRendering
 
 void CanvasRenderingContext2D_set_textRendering(CanvasRenderingContext2D* self, CanvasTextRendering * value);
 
-jb_DOMString CanvasRenderingContext2D_wordSpacing(const CanvasRenderingContext2D *self);
+jb_String CanvasRenderingContext2D_wordSpacing(const CanvasRenderingContext2D *self);
 
-void CanvasRenderingContext2D_set_wordSpacing(CanvasRenderingContext2D* self, jb_DOMString * value);
+void CanvasRenderingContext2D_set_wordSpacing(CanvasRenderingContext2D* self, jb_String * value);
 
 jb_Undefined CanvasRenderingContext2D_closePath(CanvasRenderingContext2D* self );
 

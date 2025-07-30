@@ -10,22 +10,22 @@ HTMLFrameSetElement HTMLFrameSetElement_new() {
       }
 
 
-jb_DOMString HTMLFrameSetElement_cols(const HTMLFrameSetElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("cols")));
+jb_String HTMLFrameSetElement_cols(const HTMLFrameSetElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("cols")));
 }
 
 
-void HTMLFrameSetElement_set_cols(HTMLFrameSetElement* self, jb_DOMString * value) {
+void HTMLFrameSetElement_set_cols(HTMLFrameSetElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("cols"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLFrameSetElement_rows(const HTMLFrameSetElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("rows")));
+jb_String HTMLFrameSetElement_rows(const HTMLFrameSetElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("rows")));
 }
 
 
-void HTMLFrameSetElement_set_rows(HTMLFrameSetElement* self, jb_DOMString * value) {
+void HTMLFrameSetElement_set_rows(HTMLFrameSetElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("rows"), em_Val_from(value));
 }
 

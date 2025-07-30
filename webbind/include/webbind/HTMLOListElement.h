@@ -18,9 +18,9 @@ long HTMLOListElement_start(const HTMLOListElement *self);
 
 void HTMLOListElement_set_start(HTMLOListElement* self, long value);
 
-jb_DOMString HTMLOListElement_type(const HTMLOListElement *self);
+jb_String HTMLOListElement_type(const HTMLOListElement *self);
 
-void HTMLOListElement_set_type(HTMLOListElement* self, jb_DOMString * value);
+void HTMLOListElement_set_type(HTMLOListElement* self, jb_String * value);
 
 bool HTMLOListElement_compact(const HTMLOListElement *self);
 

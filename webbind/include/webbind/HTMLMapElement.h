@@ -12,8 +12,8 @@ DECLARE_EMLITE_TYPE(HTMLMapElement, HTMLElement);
 
 HTMLMapElement HTMLMapElement_new();
 
-jb_DOMString HTMLMapElement_name(const HTMLMapElement *self);
+jb_String HTMLMapElement_name(const HTMLMapElement *self);
 
-void HTMLMapElement_set_name(HTMLMapElement* self, jb_DOMString * value);
+void HTMLMapElement_set_name(HTMLMapElement* self, jb_String * value);
 
 HTMLCollection HTMLMapElement_areas(const HTMLMapElement *self);

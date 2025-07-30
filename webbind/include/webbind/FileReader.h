@@ -19,7 +19,7 @@ jb_Undefined FileReader_readAsBinaryString(FileReader* self , Blob * blob);
 
 jb_Undefined FileReader_readAsText0(FileReader* self , Blob * blob);
 
-jb_Undefined FileReader_readAsText1(FileReader* self , Blob * blob, jb_DOMString * encoding);
+jb_Undefined FileReader_readAsText1(FileReader* self , Blob * blob, jb_String * encoding);
 
 jb_Undefined FileReader_readAsDataURL(FileReader* self , Blob * blob);
 

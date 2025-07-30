@@ -17,9 +17,9 @@ float SVGAngle_valueInSpecifiedUnits(const SVGAngle *self);
 
 void SVGAngle_set_valueInSpecifiedUnits(SVGAngle* self, float value);
 
-jb_DOMString SVGAngle_valueAsString(const SVGAngle *self);
+jb_String SVGAngle_valueAsString(const SVGAngle *self);
 
-void SVGAngle_set_valueAsString(SVGAngle* self, jb_DOMString * value);
+void SVGAngle_set_valueAsString(SVGAngle* self, jb_String * value);
 
 jb_Undefined SVGAngle_newValueSpecifiedUnits(SVGAngle* self , unsigned short unitType, float valueInSpecifiedUnits);
 

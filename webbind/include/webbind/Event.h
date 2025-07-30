@@ -9,11 +9,11 @@ typedef struct EventTarget EventTarget;
 
 DECLARE_EMLITE_TYPE(Event, em_Val);
 
-Event Event_new0(jb_DOMString * type);
+Event Event_new0(jb_String * type);
 
-Event Event_new1(jb_DOMString * type, jb_Any * eventInitDict);
+Event Event_new1(jb_String * type, jb_Any * eventInitDict);
 
-jb_DOMString Event_type(const Event *self);
+jb_String Event_type(const Event *self);
 
 EventTarget Event_target(const Event *self);
 
@@ -21,7 +21,7 @@ EventTarget Event_srcElement(const Event *self);
 
 EventTarget Event_currentTarget(const Event *self);
 
-jb_Sequence Event_composedPath(Event* self );
+jb_Array Event_composedPath(Event* self );
 
 unsigned short Event_eventPhase(const Event *self);
 
@@ -51,8 +51,8 @@ bool Event_isTrusted(const Event *self);
 
 jb_Any Event_timeStamp(const Event *self);
 
-jb_Undefined Event_initEvent0(Event* self , jb_DOMString * type);
+jb_Undefined Event_initEvent0(Event* self , jb_String * type);
 
-jb_Undefined Event_initEvent1(Event* self , jb_DOMString * type, bool bubbles);
+jb_Undefined Event_initEvent1(Event* self , jb_String * type, bool bubbles);
 
-jb_Undefined Event_initEvent2(Event* self , jb_DOMString * type, bool bubbles, bool cancelable);
+jb_Undefined Event_initEvent2(Event* self , jb_String * type, bool bubbles, bool cancelable);

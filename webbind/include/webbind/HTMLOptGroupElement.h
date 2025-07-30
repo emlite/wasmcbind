@@ -14,6 +14,6 @@ bool HTMLOptGroupElement_disabled(const HTMLOptGroupElement *self);
 
 void HTMLOptGroupElement_set_disabled(HTMLOptGroupElement* self, bool value);
 
-jb_DOMString HTMLOptGroupElement_label(const HTMLOptGroupElement *self);
+jb_String HTMLOptGroupElement_label(const HTMLOptGroupElement *self);
 
-void HTMLOptGroupElement_set_label(HTMLOptGroupElement* self, jb_DOMString * value);
+void HTMLOptGroupElement_set_label(HTMLOptGroupElement* self, jb_String * value);

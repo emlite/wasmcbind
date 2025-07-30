@@ -21,13 +21,13 @@ long long StorageInterestGroup_bidCount(const StorageInterestGroup *self);
 
 void StorageInterestGroup_set_bidCount(StorageInterestGroup* self, long long value);
 
-jb_Sequence StorageInterestGroup_prevWinsMs(const StorageInterestGroup *self);
+jb_Array StorageInterestGroup_prevWinsMs(const StorageInterestGroup *self);
 
-void StorageInterestGroup_set_prevWinsMs(StorageInterestGroup* self, jb_Sequence * value);
+void StorageInterestGroup_set_prevWinsMs(StorageInterestGroup* self, jb_Array * value);
 
-jb_USVString StorageInterestGroup_joiningOrigin(const StorageInterestGroup *self);
+jb_String StorageInterestGroup_joiningOrigin(const StorageInterestGroup *self);
 
-void StorageInterestGroup_set_joiningOrigin(StorageInterestGroup* self, jb_USVString * value);
+void StorageInterestGroup_set_joiningOrigin(StorageInterestGroup* self, jb_String * value);
 
 long long StorageInterestGroup_timeSinceGroupJoinedMs(const StorageInterestGroup *self);
 
@@ -50,7 +50,7 @@ long long StorageInterestGroup_estimatedSize(const StorageInterestGroup *self);
 void StorageInterestGroup_set_estimatedSize(StorageInterestGroup* self, long long value);
 DECLARE_EMLITE_TYPE(SharedStorageWorkletGlobalScope, WorkletGlobalScope);
 
-jb_Undefined SharedStorageWorkletGlobalScope_register_(SharedStorageWorkletGlobalScope* self , jb_DOMString * name, jb_Function * operationCtor);
+jb_Undefined SharedStorageWorkletGlobalScope_register_(SharedStorageWorkletGlobalScope* self , jb_String * name, jb_Function * operationCtor);
 
 SharedStorage SharedStorageWorkletGlobalScope_sharedStorage(const SharedStorageWorkletGlobalScope *self);
 

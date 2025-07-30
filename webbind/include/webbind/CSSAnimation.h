@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(CSSAnimation, Animation);
 
-jb_CSSOMString CSSAnimation_animationName(const CSSAnimation *self);
+jb_String CSSAnimation_animationName(const CSSAnimation *self);

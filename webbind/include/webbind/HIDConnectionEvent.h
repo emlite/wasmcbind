@@ -10,6 +10,6 @@ typedef struct HIDDevice HIDDevice;
 
 DECLARE_EMLITE_TYPE(HIDConnectionEvent, Event);
 
-HIDConnectionEvent HIDConnectionEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+HIDConnectionEvent HIDConnectionEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 HIDDevice HIDConnectionEvent_device(const HIDConnectionEvent *self);

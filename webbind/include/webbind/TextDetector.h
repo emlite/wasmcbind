@@ -14,13 +14,13 @@ DOMRectReadOnly DetectedText_boundingBox(const DetectedText *self);
 
 void DetectedText_set_boundingBox(DetectedText* self, DOMRectReadOnly * value);
 
-jb_DOMString DetectedText_rawValue(const DetectedText *self);
+jb_String DetectedText_rawValue(const DetectedText *self);
 
-void DetectedText_set_rawValue(DetectedText* self, jb_DOMString * value);
+void DetectedText_set_rawValue(DetectedText* self, jb_String * value);
 
-jb_Sequence DetectedText_cornerPoints(const DetectedText *self);
+jb_Array DetectedText_cornerPoints(const DetectedText *self);
 
-void DetectedText_set_cornerPoints(DetectedText* self, jb_Sequence * value);
+void DetectedText_set_cornerPoints(DetectedText* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(TextDetector, em_Val);
 
 TextDetector TextDetector_new();

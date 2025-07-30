@@ -41,9 +41,9 @@ double PaintRenderingContext2D_globalAlpha(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_globalAlpha(PaintRenderingContext2D* self, double value);
 
-jb_DOMString PaintRenderingContext2D_globalCompositeOperation(const PaintRenderingContext2D *self);
+jb_String PaintRenderingContext2D_globalCompositeOperation(const PaintRenderingContext2D *self);
 
-void PaintRenderingContext2D_set_globalCompositeOperation(PaintRenderingContext2D* self, jb_DOMString * value);
+void PaintRenderingContext2D_set_globalCompositeOperation(PaintRenderingContext2D* self, jb_String * value);
 
 bool PaintRenderingContext2D_imageSmoothingEnabled(const PaintRenderingContext2D *self);
 
@@ -67,7 +67,7 @@ CanvasGradient PaintRenderingContext2D_createRadialGradient(PaintRenderingContex
 
 CanvasGradient PaintRenderingContext2D_createConicGradient(PaintRenderingContext2D* self , double startAngle, double x, double y);
 
-CanvasPattern PaintRenderingContext2D_createPattern(PaintRenderingContext2D* self , jb_Any * image, jb_DOMString * repetition);
+CanvasPattern PaintRenderingContext2D_createPattern(PaintRenderingContext2D* self , jb_Any * image, jb_String * repetition);
 
 double PaintRenderingContext2D_shadowOffsetX(const PaintRenderingContext2D *self);
 
@@ -81,9 +81,9 @@ double PaintRenderingContext2D_shadowBlur(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_shadowBlur(PaintRenderingContext2D* self, double value);
 
-jb_DOMString PaintRenderingContext2D_shadowColor(const PaintRenderingContext2D *self);
+jb_String PaintRenderingContext2D_shadowColor(const PaintRenderingContext2D *self);
 
-void PaintRenderingContext2D_set_shadowColor(PaintRenderingContext2D* self, jb_DOMString * value);
+void PaintRenderingContext2D_set_shadowColor(PaintRenderingContext2D* self, jb_String * value);
 
 jb_Undefined PaintRenderingContext2D_clearRect(PaintRenderingContext2D* self , double x, double y, double w, double h);
 
@@ -127,9 +127,9 @@ double PaintRenderingContext2D_miterLimit(const PaintRenderingContext2D *self);
 
 void PaintRenderingContext2D_set_miterLimit(PaintRenderingContext2D* self, double value);
 
-jb_Undefined PaintRenderingContext2D_setLineDash(PaintRenderingContext2D* self , jb_Sequence * segments);
+jb_Undefined PaintRenderingContext2D_setLineDash(PaintRenderingContext2D* self , jb_Array * segments);
 
-jb_Sequence PaintRenderingContext2D_getLineDash(PaintRenderingContext2D* self );
+jb_Array PaintRenderingContext2D_getLineDash(PaintRenderingContext2D* self );
 
 double PaintRenderingContext2D_lineDashOffset(const PaintRenderingContext2D *self);
 

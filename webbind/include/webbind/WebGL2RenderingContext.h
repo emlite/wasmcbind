@@ -32,9 +32,9 @@ jb_Undefined WebGL2RenderingContext_blitFramebuffer(WebGL2RenderingContext* self
 
 jb_Undefined WebGL2RenderingContext_framebufferTextureLayer(WebGL2RenderingContext* self , jb_Any * target, jb_Any * attachment, WebGLTexture * texture, jb_Any * level, jb_Any * layer);
 
-jb_Undefined WebGL2RenderingContext_invalidateFramebuffer(WebGL2RenderingContext* self , jb_Any * target, jb_Sequence * attachments);
+jb_Undefined WebGL2RenderingContext_invalidateFramebuffer(WebGL2RenderingContext* self , jb_Any * target, jb_Array * attachments);
 
-jb_Undefined WebGL2RenderingContext_invalidateSubFramebuffer(WebGL2RenderingContext* self , jb_Any * target, jb_Sequence * attachments, jb_Any * x, jb_Any * y, jb_Any * width, jb_Any * height);
+jb_Undefined WebGL2RenderingContext_invalidateSubFramebuffer(WebGL2RenderingContext* self , jb_Any * target, jb_Array * attachments, jb_Any * x, jb_Any * y, jb_Any * width, jb_Any * height);
 
 jb_Undefined WebGL2RenderingContext_readBuffer(WebGL2RenderingContext* self , jb_Any * src);
 
@@ -66,7 +66,7 @@ jb_Undefined WebGL2RenderingContext_compressedTexSubImage3D1(WebGL2RenderingCont
 
 jb_Undefined WebGL2RenderingContext_compressedTexSubImage3D2(WebGL2RenderingContext* self , jb_Any * target, jb_Any * level, jb_Any * xoffset, jb_Any * yoffset, jb_Any * zoffset, jb_Any * width, jb_Any * height, jb_Any * depth, jb_Any * format, jb_Any * srcData, long long srcOffset, jb_Any * srcLengthOverride);
 
-jb_Any WebGL2RenderingContext_getFragDataLocation(WebGL2RenderingContext* self , WebGLProgram * program, jb_DOMString * name);
+jb_Any WebGL2RenderingContext_getFragDataLocation(WebGL2RenderingContext* self , WebGLProgram * program, jb_String * name);
 
 jb_Undefined WebGL2RenderingContext_uniform1ui(WebGL2RenderingContext* self , WebGLUniformLocation * location, jb_Any * v0);
 
@@ -154,7 +154,7 @@ jb_Undefined WebGL2RenderingContext_drawElementsInstanced(WebGL2RenderingContext
 
 jb_Undefined WebGL2RenderingContext_drawRangeElements(WebGL2RenderingContext* self , jb_Any * mode, jb_Any * start, jb_Any * end, jb_Any * count, jb_Any * type, jb_Any * offset);
 
-jb_Undefined WebGL2RenderingContext_drawBuffers(WebGL2RenderingContext* self , jb_Sequence * buffers);
+jb_Undefined WebGL2RenderingContext_drawBuffers(WebGL2RenderingContext* self , jb_Array * buffers);
 
 jb_Undefined WebGL2RenderingContext_clearBufferfv0(WebGL2RenderingContext* self , jb_Any * buffer, jb_Any * drawbuffer, jb_Any * values);
 
@@ -222,7 +222,7 @@ jb_Undefined WebGL2RenderingContext_beginTransformFeedback(WebGL2RenderingContex
 
 jb_Undefined WebGL2RenderingContext_endTransformFeedback(WebGL2RenderingContext* self );
 
-jb_Undefined WebGL2RenderingContext_transformFeedbackVaryings(WebGL2RenderingContext* self , WebGLProgram * program, jb_Sequence * varyings, jb_Any * bufferMode);
+jb_Undefined WebGL2RenderingContext_transformFeedbackVaryings(WebGL2RenderingContext* self , WebGLProgram * program, jb_Array * varyings, jb_Any * bufferMode);
 
 WebGLActiveInfo WebGL2RenderingContext_getTransformFeedbackVarying(WebGL2RenderingContext* self , WebGLProgram * program, jb_Any * index);
 
@@ -236,15 +236,15 @@ jb_Undefined WebGL2RenderingContext_bindBufferRange(WebGL2RenderingContext* self
 
 jb_Any WebGL2RenderingContext_getIndexedParameter(WebGL2RenderingContext* self , jb_Any * target, jb_Any * index);
 
-jb_Sequence WebGL2RenderingContext_getUniformIndices(WebGL2RenderingContext* self , WebGLProgram * program, jb_Sequence * uniformNames);
+jb_Array WebGL2RenderingContext_getUniformIndices(WebGL2RenderingContext* self , WebGLProgram * program, jb_Array * uniformNames);
 
-jb_Any WebGL2RenderingContext_getActiveUniforms(WebGL2RenderingContext* self , WebGLProgram * program, jb_Sequence * uniformIndices, jb_Any * pname);
+jb_Any WebGL2RenderingContext_getActiveUniforms(WebGL2RenderingContext* self , WebGLProgram * program, jb_Array * uniformIndices, jb_Any * pname);
 
-jb_Any WebGL2RenderingContext_getUniformBlockIndex(WebGL2RenderingContext* self , WebGLProgram * program, jb_DOMString * uniformBlockName);
+jb_Any WebGL2RenderingContext_getUniformBlockIndex(WebGL2RenderingContext* self , WebGLProgram * program, jb_String * uniformBlockName);
 
 jb_Any WebGL2RenderingContext_getActiveUniformBlockParameter(WebGL2RenderingContext* self , WebGLProgram * program, jb_Any * uniformBlockIndex, jb_Any * pname);
 
-jb_DOMString WebGL2RenderingContext_getActiveUniformBlockName(WebGL2RenderingContext* self , WebGLProgram * program, jb_Any * uniformBlockIndex);
+jb_String WebGL2RenderingContext_getActiveUniformBlockName(WebGL2RenderingContext* self , WebGLProgram * program, jb_Any * uniformBlockIndex);
 
 jb_Undefined WebGL2RenderingContext_uniformBlockBinding(WebGL2RenderingContext* self , WebGLProgram * program, jb_Any * uniformBlockIndex, jb_Any * uniformBlockBinding);
 

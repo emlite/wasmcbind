@@ -5,12 +5,12 @@
 DEFINE_EMLITE_TYPE(IDBDatabaseInfo, em_Val);
 
 
-jb_DOMString IDBDatabaseInfo_name(const IDBDatabaseInfo *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String IDBDatabaseInfo_name(const IDBDatabaseInfo *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void IDBDatabaseInfo_set_name(IDBDatabaseInfo* self, jb_DOMString * value) {
+void IDBDatabaseInfo_set_name(IDBDatabaseInfo* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
@@ -27,17 +27,17 @@ void IDBDatabaseInfo_set_version(IDBDatabaseInfo* self, long long value) {
 DEFINE_EMLITE_TYPE(IDBFactory, em_Val);
 
 
-IDBOpenDBRequest IDBFactory_open0(IDBFactory* self , jb_DOMString * name) {
+IDBOpenDBRequest IDBFactory_open0(IDBFactory* self , jb_String * name) {
     return em_Val_as(IDBOpenDBRequest, em_Val_call(em_Val_as_val(self->inner), "open", em_Val_from(name)));
 }
 
 
-IDBOpenDBRequest IDBFactory_open1(IDBFactory* self , jb_DOMString * name, long long version) {
+IDBOpenDBRequest IDBFactory_open1(IDBFactory* self , jb_String * name, long long version) {
     return em_Val_as(IDBOpenDBRequest, em_Val_call(em_Val_as_val(self->inner), "open", em_Val_from(name), em_Val_from(version)));
 }
 
 
-IDBOpenDBRequest IDBFactory_deleteDatabase(IDBFactory* self , jb_DOMString * name) {
+IDBOpenDBRequest IDBFactory_deleteDatabase(IDBFactory* self , jb_String * name) {
     return em_Val_as(IDBOpenDBRequest, em_Val_call(em_Val_as_val(self->inner), "deleteDatabase", em_Val_from(name)));
 }
 

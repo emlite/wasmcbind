@@ -15,8 +15,8 @@ Element ResizeObserverEntry_target(const ResizeObserverEntry *self);
 
 DOMRectReadOnly ResizeObserverEntry_contentRect(const ResizeObserverEntry *self);
 
-jb_FrozenArray ResizeObserverEntry_borderBoxSize(const ResizeObserverEntry *self);
+jb_Array ResizeObserverEntry_borderBoxSize(const ResizeObserverEntry *self);
 
-jb_FrozenArray ResizeObserverEntry_contentBoxSize(const ResizeObserverEntry *self);
+jb_Array ResizeObserverEntry_contentBoxSize(const ResizeObserverEntry *self);
 
-jb_FrozenArray ResizeObserverEntry_devicePixelContentBoxSize(const ResizeObserverEntry *self);
+jb_Array ResizeObserverEntry_devicePixelContentBoxSize(const ResizeObserverEntry *self);

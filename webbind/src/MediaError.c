@@ -9,7 +9,7 @@ unsigned short MediaError_code(const MediaError *self) {
 }
 
 
-jb_DOMString MediaError_message(const MediaError *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("message")));
+jb_String MediaError_message(const MediaError *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("message")));
 }
 

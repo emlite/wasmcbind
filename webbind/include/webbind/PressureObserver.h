@@ -25,6 +25,6 @@ jb_Undefined PressureObserver_unobserve(PressureObserver* self , PressureSource 
 
 jb_Undefined PressureObserver_disconnect(PressureObserver* self );
 
-jb_Sequence PressureObserver_takeRecords(PressureObserver* self );
+jb_Array PressureObserver_takeRecords(PressureObserver* self );
 
-jb_FrozenArray PressureObserver_knownSources(const PressureObserver *self);
+jb_Array PressureObserver_knownSources(const PressureObserver *self);

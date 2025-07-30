@@ -10,12 +10,12 @@ VTTRegion VTTRegion_new() {
       }
 
 
-jb_DOMString VTTRegion_id(const VTTRegion *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
+jb_String VTTRegion_id(const VTTRegion *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
-void VTTRegion_set_id(VTTRegion* self, jb_DOMString * value) {
+void VTTRegion_set_id(VTTRegion* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("id"), em_Val_from(value));
 }
 

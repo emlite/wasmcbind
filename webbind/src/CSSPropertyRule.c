@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(CSSPropertyRule, CSSRule);
 
 
-jb_CSSOMString CSSPropertyRule_name(const CSSPropertyRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("name")));
+jb_String CSSPropertyRule_name(const CSSPropertyRule *self) {
+    return em_Val_as(jb_String, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_CSSOMString CSSPropertyRule_syntax(const CSSPropertyRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("syntax")));
+jb_String CSSPropertyRule_syntax(const CSSPropertyRule *self) {
+    return em_Val_as(jb_String, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("syntax")));
 }
 
 
@@ -19,7 +19,7 @@ bool CSSPropertyRule_inherits(const CSSPropertyRule *self) {
 }
 
 
-jb_CSSOMString CSSPropertyRule_initialValue(const CSSPropertyRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("initialValue")));
+jb_String CSSPropertyRule_initialValue(const CSSPropertyRule *self) {
+    return em_Val_as(jb_String, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("initialValue")));
 }
 

@@ -11,42 +11,42 @@ HTMLEmbedElement HTMLEmbedElement_new() {
       }
 
 
-jb_USVString HTMLEmbedElement_src(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
+jb_String HTMLEmbedElement_src(const HTMLEmbedElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLEmbedElement_set_src(HTMLEmbedElement* self, jb_USVString * value) {
+void HTMLEmbedElement_set_src(HTMLEmbedElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLEmbedElement_type(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
+jb_String HTMLEmbedElement_type(const HTMLEmbedElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void HTMLEmbedElement_set_type(HTMLEmbedElement* self, jb_DOMString * value) {
+void HTMLEmbedElement_set_type(HTMLEmbedElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLEmbedElement_width(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
+jb_String HTMLEmbedElement_width(const HTMLEmbedElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
-void HTMLEmbedElement_set_width(HTMLEmbedElement* self, jb_DOMString * value) {
+void HTMLEmbedElement_set_width(HTMLEmbedElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLEmbedElement_height(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
+jb_String HTMLEmbedElement_height(const HTMLEmbedElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
-void HTMLEmbedElement_set_height(HTMLEmbedElement* self, jb_DOMString * value) {
+void HTMLEmbedElement_set_height(HTMLEmbedElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("height"), em_Val_from(value));
 }
 
@@ -56,22 +56,22 @@ Document HTMLEmbedElement_getSVGDocument(HTMLEmbedElement* self ) {
 }
 
 
-jb_DOMString HTMLEmbedElement_align(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
+jb_String HTMLEmbedElement_align(const HTMLEmbedElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLEmbedElement_set_align(HTMLEmbedElement* self, jb_DOMString * value) {
+void HTMLEmbedElement_set_align(HTMLEmbedElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLEmbedElement_name(const HTMLEmbedElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLEmbedElement_name(const HTMLEmbedElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLEmbedElement_set_name(HTMLEmbedElement* self, jb_DOMString * value) {
+void HTMLEmbedElement_set_name(HTMLEmbedElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 

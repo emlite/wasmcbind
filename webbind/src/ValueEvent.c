@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(ValueEvent, Event);
 
 
-ValueEvent ValueEvent_new0(jb_DOMString * type) {
+ValueEvent ValueEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("ValueEvent") , em_Val_from(type));
         return ValueEvent_from_val(&vv);
       }
 
 
-ValueEvent ValueEvent_new1(jb_DOMString * type, jb_Any * initDict) {
+ValueEvent ValueEvent_new1(jb_String * type, jb_Any * initDict) {
         em_Val vv = em_Val_new(em_Val_global("ValueEvent") , em_Val_from(type), em_Val_from(initDict));
         return ValueEvent_from_val(&vv);
       }

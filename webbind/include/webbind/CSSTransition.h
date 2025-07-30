@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(CSSTransition, Animation);
 
-jb_CSSOMString CSSTransition_transitionProperty(const CSSTransition *self);
+jb_String CSSTransition_transitionProperty(const CSSTransition *self);

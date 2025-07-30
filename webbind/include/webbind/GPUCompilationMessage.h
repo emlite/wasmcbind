@@ -7,7 +7,7 @@
 
 DECLARE_EMLITE_TYPE(GPUCompilationMessage, em_Val);
 
-jb_DOMString GPUCompilationMessage_message(const GPUCompilationMessage *self);
+jb_String GPUCompilationMessage_message(const GPUCompilationMessage *self);
 
 GPUCompilationMessageType GPUCompilationMessage_type(const GPUCompilationMessage *self);
 

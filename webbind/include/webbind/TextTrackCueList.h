@@ -11,4 +11,4 @@ DECLARE_EMLITE_TYPE(TextTrackCueList, em_Val);
 
 unsigned long TextTrackCueList_length(const TextTrackCueList *self);
 
-TextTrackCue TextTrackCueList_getCueById(TextTrackCueList* self , jb_DOMString * id);
+TextTrackCue TextTrackCueList_getCueById(TextTrackCueList* self , jb_String * id);

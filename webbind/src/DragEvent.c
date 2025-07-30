@@ -5,13 +5,13 @@
 DEFINE_EMLITE_TYPE(DragEvent, MouseEvent);
 
 
-DragEvent DragEvent_new0(jb_DOMString * type) {
+DragEvent DragEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("DragEvent") , em_Val_from(type));
         return DragEvent_from_val(&vv);
       }
 
 
-DragEvent DragEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+DragEvent DragEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("DragEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return DragEvent_from_val(&vv);
       }

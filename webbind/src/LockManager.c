@@ -47,29 +47,29 @@ void LockOptions_set_signal(LockOptions* self, AbortSignal * value) {
 DEFINE_EMLITE_TYPE(LockManagerSnapshot, em_Val);
 
 
-jb_Sequence LockManagerSnapshot_held(const LockManagerSnapshot *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("held")));
+jb_Array LockManagerSnapshot_held(const LockManagerSnapshot *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("held")));
 }
 
 
-void LockManagerSnapshot_set_held(LockManagerSnapshot* self, jb_Sequence * value) {
+void LockManagerSnapshot_set_held(LockManagerSnapshot* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("held"), em_Val_from(value));
 }
 
 
-jb_Sequence LockManagerSnapshot_pending(const LockManagerSnapshot *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pending")));
+jb_Array LockManagerSnapshot_pending(const LockManagerSnapshot *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pending")));
 }
 
 
-void LockManagerSnapshot_set_pending(LockManagerSnapshot* self, jb_Sequence * value) {
+void LockManagerSnapshot_set_pending(LockManagerSnapshot* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("pending"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(LockManager, em_Val);
 
 
-jb_Promise LockManager_request(LockManager* self , jb_DOMString * name, LockOptions * options, jb_Function * callback) {
+jb_Promise LockManager_request(LockManager* self , jb_String * name, LockOptions * options, jb_Function * callback) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "request", em_Val_from(name), em_Val_from(options), em_Val_from(callback)));
 }
 

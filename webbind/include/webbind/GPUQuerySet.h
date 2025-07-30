@@ -13,6 +13,6 @@ GPUQueryType GPUQuerySet_type(const GPUQuerySet *self);
 
 jb_Any GPUQuerySet_count(const GPUQuerySet *self);
 
-jb_USVString GPUQuerySet_label(const GPUQuerySet *self);
+jb_String GPUQuerySet_label(const GPUQuerySet *self);
 
-void GPUQuerySet_set_label(GPUQuerySet* self, jb_USVString * value);
+void GPUQuerySet_set_label(GPUQuerySet* self, jb_String * value);

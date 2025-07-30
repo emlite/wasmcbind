@@ -13,9 +13,9 @@ bool FileSystemEntry_isFile(const FileSystemEntry *self);
 
 bool FileSystemEntry_isDirectory(const FileSystemEntry *self);
 
-jb_USVString FileSystemEntry_name(const FileSystemEntry *self);
+jb_String FileSystemEntry_name(const FileSystemEntry *self);
 
-jb_USVString FileSystemEntry_fullPath(const FileSystemEntry *self);
+jb_String FileSystemEntry_fullPath(const FileSystemEntry *self);
 
 FileSystem FileSystemEntry_filesystem(const FileSystemEntry *self);
 

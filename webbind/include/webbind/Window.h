@@ -46,9 +46,9 @@ typedef struct CSSStyleProperties CSSStyleProperties;
 
 DECLARE_EMLITE_TYPE(WindowPostMessageOptions, em_Val);
 
-jb_USVString WindowPostMessageOptions_targetOrigin(const WindowPostMessageOptions *self);
+jb_String WindowPostMessageOptions_targetOrigin(const WindowPostMessageOptions *self);
 
-void WindowPostMessageOptions_set_targetOrigin(WindowPostMessageOptions* self, jb_USVString * value);
+void WindowPostMessageOptions_set_targetOrigin(WindowPostMessageOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(OpenFilePickerOptions, em_Val);
 
 bool OpenFilePickerOptions_multiple(const OpenFilePickerOptions *self);
@@ -56,14 +56,14 @@ bool OpenFilePickerOptions_multiple(const OpenFilePickerOptions *self);
 void OpenFilePickerOptions_set_multiple(OpenFilePickerOptions* self, bool value);
 DECLARE_EMLITE_TYPE(SaveFilePickerOptions, em_Val);
 
-jb_USVString SaveFilePickerOptions_suggestedName(const SaveFilePickerOptions *self);
+jb_String SaveFilePickerOptions_suggestedName(const SaveFilePickerOptions *self);
 
-void SaveFilePickerOptions_set_suggestedName(SaveFilePickerOptions* self, jb_USVString * value);
+void SaveFilePickerOptions_set_suggestedName(SaveFilePickerOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(DirectoryPickerOptions, em_Val);
 
-jb_DOMString DirectoryPickerOptions_id(const DirectoryPickerOptions *self);
+jb_String DirectoryPickerOptions_id(const DirectoryPickerOptions *self);
 
-void DirectoryPickerOptions_set_id(DirectoryPickerOptions* self, jb_DOMString * value);
+void DirectoryPickerOptions_set_id(DirectoryPickerOptions* self, jb_String * value);
 
 jb_Any DirectoryPickerOptions_startIn(const DirectoryPickerOptions *self);
 
@@ -74,9 +74,9 @@ FileSystemPermissionMode DirectoryPickerOptions_mode(const DirectoryPickerOption
 void DirectoryPickerOptions_set_mode(DirectoryPickerOptions* self, FileSystemPermissionMode * value);
 DECLARE_EMLITE_TYPE(QueryOptions, em_Val);
 
-jb_Sequence QueryOptions_postscriptNames(const QueryOptions *self);
+jb_Array QueryOptions_postscriptNames(const QueryOptions *self);
 
-void QueryOptions_set_postscriptNames(QueryOptions* self, jb_Sequence * value);
+void QueryOptions_set_postscriptNames(QueryOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(IdleRequestOptions, em_Val);
 
 unsigned long IdleRequestOptions_timeout(const IdleRequestOptions *self);
@@ -90,9 +90,9 @@ jb_Any Window_self(const Window *self);
 
 Document Window_document(const Window *self);
 
-jb_DOMString Window_name(const Window *self);
+jb_String Window_name(const Window *self);
 
-void Window_set_name(Window* self, jb_DOMString * value);
+void Window_set_name(Window* self, jb_String * value);
 
 jb_Any Window_location(const Window *self);
 
@@ -114,9 +114,9 @@ BarProp Window_statusbar(const Window *self);
 
 BarProp Window_toolbar(const Window *self);
 
-jb_DOMString Window_status(const Window *self);
+jb_String Window_status(const Window *self);
 
-void Window_set_status(Window* self, jb_DOMString * value);
+void Window_set_status(Window* self, jb_String * value);
 
 jb_Undefined Window_close(Window* self );
 
@@ -144,11 +144,11 @@ Element Window_frameElement(const Window *self);
 
 jb_Any Window_open0(Window* self );
 
-jb_Any Window_open1(Window* self , jb_USVString * url);
+jb_Any Window_open1(Window* self , jb_String * url);
 
-jb_Any Window_open2(Window* self , jb_USVString * url, jb_DOMString * target);
+jb_Any Window_open2(Window* self , jb_String * url, jb_String * target);
 
-jb_Any Window_open3(Window* self , jb_USVString * url, jb_DOMString * target, jb_DOMString * features);
+jb_Any Window_open3(Window* self , jb_String * url, jb_String * target, jb_String * features);
 
 Navigator Window_navigator(const Window *self);
 
@@ -156,17 +156,17 @@ Navigator Window_clientInformation(const Window *self);
 
 bool Window_originAgentCluster(const Window *self);
 
-jb_Undefined Window_alert(Window* self , jb_DOMString * message);
+jb_Undefined Window_alert(Window* self , jb_String * message);
 
 bool Window_confirm0(Window* self );
 
-bool Window_confirm1(Window* self , jb_DOMString * message);
+bool Window_confirm1(Window* self , jb_String * message);
 
-jb_DOMString Window_prompt0(Window* self );
+jb_String Window_prompt0(Window* self );
 
-jb_DOMString Window_prompt1(Window* self , jb_DOMString * message);
+jb_String Window_prompt1(Window* self , jb_String * message);
 
-jb_DOMString Window_prompt2(Window* self , jb_DOMString * message, jb_DOMString * default_);
+jb_String Window_prompt2(Window* self , jb_String * message, jb_String * default_);
 
 jb_Undefined Window_print(Window* self );
 
@@ -188,7 +188,7 @@ jb_Undefined Window_navigate(Window* self , SpatialNavigationDirection * dir);
 
 Viewport Window_viewport(const Window *self);
 
-MediaQueryList Window_matchMedia(Window* self , jb_CSSOMString * query);
+MediaQueryList Window_matchMedia(Window* self , jb_String * query);
 
 Screen Window_screen(const Window *self);
 
@@ -236,9 +236,9 @@ double Window_devicePixelRatio(const Window *self);
 
 CSSStyleProperties Window_getComputedStyle0(Window* self , Element * elt);
 
-CSSStyleProperties Window_getComputedStyle1(Window* self , Element * elt, jb_CSSOMString * pseudoElt);
+CSSStyleProperties Window_getComputedStyle1(Window* self , Element * elt, jb_String * pseudoElt);
 
-jb_Promise Window_getDigitalGoodsService(Window* self , jb_DOMString * serviceProvider);
+jb_Promise Window_getDigitalGoodsService(Window* self , jb_String * serviceProvider);
 
 DocumentPictureInPicture Window_documentPictureInPicture(const Window *self);
 

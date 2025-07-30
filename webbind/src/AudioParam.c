@@ -59,7 +59,7 @@ AudioParam AudioParam_setTargetAtTime(AudioParam* self , float target, double st
 }
 
 
-AudioParam AudioParam_setValueCurveAtTime(AudioParam* self , jb_Sequence * values, double startTime, double duration) {
+AudioParam AudioParam_setValueCurveAtTime(AudioParam* self , jb_Array * values, double startTime, double duration) {
     return em_Val_as(AudioParam, em_Val_call(em_Val_as_val(self->inner), "setValueCurveAtTime", em_Val_from(values), em_Val_from(startTime), em_Val_from(duration)));
 }
 

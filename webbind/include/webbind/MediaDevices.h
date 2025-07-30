@@ -17,22 +17,22 @@ typedef struct CaptureController CaptureController;
 
 DECLARE_EMLITE_TYPE(AudioOutputOptions, em_Val);
 
-jb_DOMString AudioOutputOptions_deviceId(const AudioOutputOptions *self);
+jb_String AudioOutputOptions_deviceId(const AudioOutputOptions *self);
 
-void AudioOutputOptions_set_deviceId(AudioOutputOptions* self, jb_DOMString * value);
+void AudioOutputOptions_set_deviceId(AudioOutputOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(CaptureHandleConfig, em_Val);
 
 bool CaptureHandleConfig_exposeOrigin(const CaptureHandleConfig *self);
 
 void CaptureHandleConfig_set_exposeOrigin(CaptureHandleConfig* self, bool value);
 
-jb_DOMString CaptureHandleConfig_handle(const CaptureHandleConfig *self);
+jb_String CaptureHandleConfig_handle(const CaptureHandleConfig *self);
 
-void CaptureHandleConfig_set_handle(CaptureHandleConfig* self, jb_DOMString * value);
+void CaptureHandleConfig_set_handle(CaptureHandleConfig* self, jb_String * value);
 
-jb_Sequence CaptureHandleConfig_permittedOrigins(const CaptureHandleConfig *self);
+jb_Array CaptureHandleConfig_permittedOrigins(const CaptureHandleConfig *self);
 
-void CaptureHandleConfig_set_permittedOrigins(CaptureHandleConfig* self, jb_Sequence * value);
+void CaptureHandleConfig_set_permittedOrigins(CaptureHandleConfig* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MediaTrackSupportedConstraints, em_Val);
 
 bool MediaTrackSupportedConstraints_displaySurface(const MediaTrackSupportedConstraints *self);
@@ -56,9 +56,9 @@ bool MediaTrackSupportedConstraints_suppressLocalAudioPlayback(const MediaTrackS
 void MediaTrackSupportedConstraints_set_suppressLocalAudioPlayback(MediaTrackSupportedConstraints* self, bool value);
 DECLARE_EMLITE_TYPE(MediaStreamConstraints, em_Val);
 
-jb_DOMString MediaStreamConstraints_peerIdentity(const MediaStreamConstraints *self);
+jb_String MediaStreamConstraints_peerIdentity(const MediaStreamConstraints *self);
 
-void MediaStreamConstraints_set_peerIdentity(MediaStreamConstraints* self, jb_DOMString * value);
+void MediaStreamConstraints_set_peerIdentity(MediaStreamConstraints* self, jb_String * value);
 DECLARE_EMLITE_TYPE(DisplayMediaStreamOptions, em_Val);
 
 jb_Any DisplayMediaStreamOptions_video(const DisplayMediaStreamOptions *self);
@@ -108,7 +108,7 @@ jb_Undefined MediaDevices_setCaptureHandleConfig0(MediaDevices* self );
 
 jb_Undefined MediaDevices_setCaptureHandleConfig1(MediaDevices* self , CaptureHandleConfig * config);
 
-jb_Undefined MediaDevices_setSupportedCaptureActions(MediaDevices* self , jb_Sequence * actions);
+jb_Undefined MediaDevices_setSupportedCaptureActions(MediaDevices* self , jb_Array * actions);
 
 jb_Any MediaDevices_oncaptureaction(const MediaDevices *self);
 

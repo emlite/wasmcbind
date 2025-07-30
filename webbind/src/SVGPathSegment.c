@@ -4,22 +4,22 @@
 DEFINE_EMLITE_TYPE(SVGPathSegment, em_Val);
 
 
-jb_DOMString SVGPathSegment_type(const SVGPathSegment *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
+jb_String SVGPathSegment_type(const SVGPathSegment *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void SVGPathSegment_set_type(SVGPathSegment* self, jb_DOMString * value) {
+void SVGPathSegment_set_type(SVGPathSegment* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
-jb_FrozenArray SVGPathSegment_values(const SVGPathSegment *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("values")));
+jb_Array SVGPathSegment_values(const SVGPathSegment *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("values")));
 }
 
 
-void SVGPathSegment_set_values(SVGPathSegment* self, jb_FrozenArray * value) {
+void SVGPathSegment_set_values(SVGPathSegment* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("values"), em_Val_from(value));
 }
 

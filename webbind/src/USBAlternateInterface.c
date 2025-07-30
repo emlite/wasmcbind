@@ -32,12 +32,12 @@ unsigned char USBAlternateInterface_interfaceProtocol(const USBAlternateInterfac
 }
 
 
-jb_DOMString USBAlternateInterface_interfaceName(const USBAlternateInterface *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("interfaceName")));
+jb_String USBAlternateInterface_interfaceName(const USBAlternateInterface *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("interfaceName")));
 }
 
 
-jb_FrozenArray USBAlternateInterface_endpoints(const USBAlternateInterface *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("endpoints")));
+jb_Array USBAlternateInterface_endpoints(const USBAlternateInterface *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("endpoints")));
 }
 

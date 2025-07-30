@@ -37,8 +37,8 @@ void CacheQueryOptions_set_ignoreVary(CacheQueryOptions* self, bool value) {
 DEFINE_EMLITE_TYPE(BackgroundFetchRegistration, EventTarget);
 
 
-jb_DOMString BackgroundFetchRegistration_id(const BackgroundFetchRegistration *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
+jb_String BackgroundFetchRegistration_id(const BackgroundFetchRegistration *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 

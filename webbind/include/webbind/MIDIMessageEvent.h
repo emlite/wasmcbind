@@ -8,8 +8,8 @@
 
 DECLARE_EMLITE_TYPE(MIDIMessageEvent, Event);
 
-MIDIMessageEvent MIDIMessageEvent_new0(jb_DOMString * type);
+MIDIMessageEvent MIDIMessageEvent_new0(jb_String * type);
 
-MIDIMessageEvent MIDIMessageEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+MIDIMessageEvent MIDIMessageEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
 jb_Uint8Array MIDIMessageEvent_data(const MIDIMessageEvent *self);

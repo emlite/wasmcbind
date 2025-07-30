@@ -10,12 +10,12 @@ HTMLHtmlElement HTMLHtmlElement_new() {
       }
 
 
-jb_DOMString HTMLHtmlElement_version(const HTMLHtmlElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("version")));
+jb_String HTMLHtmlElement_version(const HTMLHtmlElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("version")));
 }
 
 
-void HTMLHtmlElement_set_version(HTMLHtmlElement* self, jb_DOMString * value) {
+void HTMLHtmlElement_set_version(HTMLHtmlElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("version"), em_Val_from(value));
 }
 

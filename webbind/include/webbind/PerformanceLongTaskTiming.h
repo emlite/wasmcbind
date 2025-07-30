@@ -14,10 +14,10 @@ jb_Any PerformanceLongTaskTiming_startTime(const PerformanceLongTaskTiming *self
 
 jb_Any PerformanceLongTaskTiming_duration(const PerformanceLongTaskTiming *self);
 
-jb_DOMString PerformanceLongTaskTiming_name(const PerformanceLongTaskTiming *self);
+jb_String PerformanceLongTaskTiming_name(const PerformanceLongTaskTiming *self);
 
-jb_DOMString PerformanceLongTaskTiming_entryType(const PerformanceLongTaskTiming *self);
+jb_String PerformanceLongTaskTiming_entryType(const PerformanceLongTaskTiming *self);
 
-jb_FrozenArray PerformanceLongTaskTiming_attribution(const PerformanceLongTaskTiming *self);
+jb_Array PerformanceLongTaskTiming_attribution(const PerformanceLongTaskTiming *self);
 
 jb_Object PerformanceLongTaskTiming_toJSON(PerformanceLongTaskTiming* self );

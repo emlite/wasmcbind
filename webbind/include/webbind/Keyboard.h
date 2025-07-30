@@ -12,7 +12,7 @@ DECLARE_EMLITE_TYPE(Keyboard, EventTarget);
 
 jb_Promise Keyboard_lock0(Keyboard* self );
 
-jb_Promise Keyboard_lock1(Keyboard* self , jb_Sequence * keyCodes);
+jb_Promise Keyboard_lock1(Keyboard* self , jb_Array * keyCodes);
 
 jb_Undefined Keyboard_unlock(Keyboard* self );
 

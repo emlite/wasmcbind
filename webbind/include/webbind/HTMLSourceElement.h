@@ -10,25 +10,25 @@ DECLARE_EMLITE_TYPE(HTMLSourceElement, HTMLElement);
 
 HTMLSourceElement HTMLSourceElement_new();
 
-jb_USVString HTMLSourceElement_src(const HTMLSourceElement *self);
+jb_String HTMLSourceElement_src(const HTMLSourceElement *self);
 
-void HTMLSourceElement_set_src(HTMLSourceElement* self, jb_USVString * value);
+void HTMLSourceElement_set_src(HTMLSourceElement* self, jb_String * value);
 
-jb_DOMString HTMLSourceElement_type(const HTMLSourceElement *self);
+jb_String HTMLSourceElement_type(const HTMLSourceElement *self);
 
-void HTMLSourceElement_set_type(HTMLSourceElement* self, jb_DOMString * value);
+void HTMLSourceElement_set_type(HTMLSourceElement* self, jb_String * value);
 
-jb_USVString HTMLSourceElement_srcset(const HTMLSourceElement *self);
+jb_String HTMLSourceElement_srcset(const HTMLSourceElement *self);
 
-void HTMLSourceElement_set_srcset(HTMLSourceElement* self, jb_USVString * value);
+void HTMLSourceElement_set_srcset(HTMLSourceElement* self, jb_String * value);
 
-jb_DOMString HTMLSourceElement_sizes(const HTMLSourceElement *self);
+jb_String HTMLSourceElement_sizes(const HTMLSourceElement *self);
 
-void HTMLSourceElement_set_sizes(HTMLSourceElement* self, jb_DOMString * value);
+void HTMLSourceElement_set_sizes(HTMLSourceElement* self, jb_String * value);
 
-jb_DOMString HTMLSourceElement_media(const HTMLSourceElement *self);
+jb_String HTMLSourceElement_media(const HTMLSourceElement *self);
 
-void HTMLSourceElement_set_media(HTMLSourceElement* self, jb_DOMString * value);
+void HTMLSourceElement_set_media(HTMLSourceElement* self, jb_String * value);
 
 unsigned long HTMLSourceElement_width(const HTMLSourceElement *self);
 

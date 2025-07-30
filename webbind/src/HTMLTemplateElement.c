@@ -16,12 +16,12 @@ DocumentFragment HTMLTemplateElement_content(const HTMLTemplateElement *self) {
 }
 
 
-jb_DOMString HTMLTemplateElement_shadowRootMode(const HTMLTemplateElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("shadowRootMode")));
+jb_String HTMLTemplateElement_shadowRootMode(const HTMLTemplateElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("shadowRootMode")));
 }
 
 
-void HTMLTemplateElement_set_shadowRootMode(HTMLTemplateElement* self, jb_DOMString * value) {
+void HTMLTemplateElement_set_shadowRootMode(HTMLTemplateElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("shadowRootMode"), em_Val_from(value));
 }
 
@@ -56,12 +56,12 @@ void HTMLTemplateElement_set_shadowRootSerializable(HTMLTemplateElement* self, b
 }
 
 
-jb_DOMString HTMLTemplateElement_shadowRootCustomElementRegistry(const HTMLTemplateElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("shadowRootCustomElementRegistry")));
+jb_String HTMLTemplateElement_shadowRootCustomElementRegistry(const HTMLTemplateElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("shadowRootCustomElementRegistry")));
 }
 
 
-void HTMLTemplateElement_set_shadowRootCustomElementRegistry(HTMLTemplateElement* self, jb_DOMString * value) {
+void HTMLTemplateElement_set_shadowRootCustomElementRegistry(HTMLTemplateElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("shadowRootCustomElementRegistry"), em_Val_from(value));
 }
 

@@ -10,7 +10,7 @@ typedef struct PresentationConnection PresentationConnection;
 
 DECLARE_EMLITE_TYPE(PresentationConnectionList, EventTarget);
 
-jb_FrozenArray PresentationConnectionList_connections(const PresentationConnectionList *self);
+jb_Array PresentationConnectionList_connections(const PresentationConnectionList *self);
 
 jb_Any PresentationConnectionList_onconnectionavailable(const PresentationConnectionList *self);
 

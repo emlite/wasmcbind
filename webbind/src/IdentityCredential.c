@@ -4,12 +4,12 @@
 DEFINE_EMLITE_TYPE(IdentityCredentialDisconnectOptions, em_Val);
 
 
-jb_USVString IdentityCredentialDisconnectOptions_accountHint(const IdentityCredentialDisconnectOptions *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("accountHint")));
+jb_String IdentityCredentialDisconnectOptions_accountHint(const IdentityCredentialDisconnectOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("accountHint")));
 }
 
 
-void IdentityCredentialDisconnectOptions_set_accountHint(IdentityCredentialDisconnectOptions* self, jb_USVString * value) {
+void IdentityCredentialDisconnectOptions_set_accountHint(IdentityCredentialDisconnectOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("accountHint"), em_Val_from(value));
 }
 
@@ -21,8 +21,8 @@ jb_Promise IdentityCredential_disconnect(IdentityCredential* self , IdentityCred
 }
 
 
-jb_USVString IdentityCredential_token(const IdentityCredential *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Credential_as_val(self->inner), em_Val_from("token")));
+jb_String IdentityCredential_token(const IdentityCredential *self) {
+    return em_Val_as(jb_String, em_Val_get(Credential_as_val(self->inner), em_Val_from("token")));
 }
 
 
@@ -31,7 +31,7 @@ bool IdentityCredential_isAutoSelected(const IdentityCredential *self) {
 }
 
 
-jb_USVString IdentityCredential_configURL(const IdentityCredential *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Credential_as_val(self->inner), em_Val_from("configURL")));
+jb_String IdentityCredential_configURL(const IdentityCredential *self) {
+    return em_Val_as(jb_String, em_Val_get(Credential_as_val(self->inner), em_Val_from("configURL")));
 }
 

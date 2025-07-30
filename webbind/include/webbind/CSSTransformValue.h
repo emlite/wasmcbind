@@ -11,7 +11,7 @@ typedef struct DOMMatrix DOMMatrix;
 
 DECLARE_EMLITE_TYPE(CSSTransformValue, CSSStyleValue);
 
-CSSTransformValue CSSTransformValue_new(jb_Sequence * transforms);
+CSSTransformValue CSSTransformValue_new(jb_Array * transforms);
 
 unsigned long CSSTransformValue_length(const CSSTransformValue *self);
 

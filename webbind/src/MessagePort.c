@@ -4,12 +4,12 @@
 DEFINE_EMLITE_TYPE(StructuredSerializeOptions, em_Val);
 
 
-jb_Sequence StructuredSerializeOptions_transfer(const StructuredSerializeOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("transfer")));
+jb_Array StructuredSerializeOptions_transfer(const StructuredSerializeOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("transfer")));
 }
 
 
-void StructuredSerializeOptions_set_transfer(StructuredSerializeOptions* self, jb_Sequence * value) {
+void StructuredSerializeOptions_set_transfer(StructuredSerializeOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("transfer"), em_Val_from(value));
 }
 

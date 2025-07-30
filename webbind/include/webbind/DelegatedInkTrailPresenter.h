@@ -11,9 +11,9 @@ typedef struct InkTrailStyle InkTrailStyle;
 
 DECLARE_EMLITE_TYPE(InkTrailStyle, em_Val);
 
-jb_DOMString InkTrailStyle_color(const InkTrailStyle *self);
+jb_String InkTrailStyle_color(const InkTrailStyle *self);
 
-void InkTrailStyle_set_color(InkTrailStyle* self, jb_DOMString * value);
+void InkTrailStyle_set_color(InkTrailStyle* self, jb_String * value);
 
 double InkTrailStyle_diameter(const InkTrailStyle *self);
 

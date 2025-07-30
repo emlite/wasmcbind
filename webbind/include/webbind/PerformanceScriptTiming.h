@@ -14,19 +14,19 @@ jb_Any PerformanceScriptTiming_startTime(const PerformanceScriptTiming *self);
 
 jb_Any PerformanceScriptTiming_duration(const PerformanceScriptTiming *self);
 
-jb_DOMString PerformanceScriptTiming_name(const PerformanceScriptTiming *self);
+jb_String PerformanceScriptTiming_name(const PerformanceScriptTiming *self);
 
-jb_DOMString PerformanceScriptTiming_entryType(const PerformanceScriptTiming *self);
+jb_String PerformanceScriptTiming_entryType(const PerformanceScriptTiming *self);
 
 ScriptInvokerType PerformanceScriptTiming_invokerType(const PerformanceScriptTiming *self);
 
-jb_DOMString PerformanceScriptTiming_invoker(const PerformanceScriptTiming *self);
+jb_String PerformanceScriptTiming_invoker(const PerformanceScriptTiming *self);
 
 jb_Any PerformanceScriptTiming_executionStart(const PerformanceScriptTiming *self);
 
-jb_DOMString PerformanceScriptTiming_sourceURL(const PerformanceScriptTiming *self);
+jb_String PerformanceScriptTiming_sourceURL(const PerformanceScriptTiming *self);
 
-jb_DOMString PerformanceScriptTiming_sourceFunctionName(const PerformanceScriptTiming *self);
+jb_String PerformanceScriptTiming_sourceFunctionName(const PerformanceScriptTiming *self);
 
 long long PerformanceScriptTiming_sourceCharPosition(const PerformanceScriptTiming *self);
 

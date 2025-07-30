@@ -14,17 +14,17 @@ DOMRectReadOnly DetectedBarcode_boundingBox(const DetectedBarcode *self);
 
 void DetectedBarcode_set_boundingBox(DetectedBarcode* self, DOMRectReadOnly * value);
 
-jb_DOMString DetectedBarcode_rawValue(const DetectedBarcode *self);
+jb_String DetectedBarcode_rawValue(const DetectedBarcode *self);
 
-void DetectedBarcode_set_rawValue(DetectedBarcode* self, jb_DOMString * value);
+void DetectedBarcode_set_rawValue(DetectedBarcode* self, jb_String * value);
 
 BarcodeFormat DetectedBarcode_format(const DetectedBarcode *self);
 
 void DetectedBarcode_set_format(DetectedBarcode* self, BarcodeFormat * value);
 
-jb_Sequence DetectedBarcode_cornerPoints(const DetectedBarcode *self);
+jb_Array DetectedBarcode_cornerPoints(const DetectedBarcode *self);
 
-void DetectedBarcode_set_cornerPoints(DetectedBarcode* self, jb_Sequence * value);
+void DetectedBarcode_set_cornerPoints(DetectedBarcode* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(BarcodeDetector, em_Val);
 
 BarcodeDetector BarcodeDetector_new0();

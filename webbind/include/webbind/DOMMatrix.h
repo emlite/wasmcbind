@@ -185,4 +185,4 @@ DOMMatrix DOMMatrix_skewYSelf1(DOMMatrix* self , double sy);
 
 DOMMatrix DOMMatrix_invertSelf(DOMMatrix* self );
 
-DOMMatrix DOMMatrix_setMatrixValue(DOMMatrix* self , jb_DOMString * transformList);
+DOMMatrix DOMMatrix_setMatrixValue(DOMMatrix* self , jb_String * transformList);

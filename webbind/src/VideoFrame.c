@@ -18,12 +18,12 @@ void VideoFrameCopyToOptions_set_rect(VideoFrameCopyToOptions* self, DOMRectInit
 }
 
 
-jb_Sequence VideoFrameCopyToOptions_layout(const VideoFrameCopyToOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("layout")));
+jb_Array VideoFrameCopyToOptions_layout(const VideoFrameCopyToOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("layout")));
 }
 
 
-void VideoFrameCopyToOptions_set_layout(VideoFrameCopyToOptions* self, jb_Sequence * value) {
+void VideoFrameCopyToOptions_set_layout(VideoFrameCopyToOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("layout"), em_Val_from(value));
 }
 

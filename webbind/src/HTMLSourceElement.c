@@ -10,52 +10,52 @@ HTMLSourceElement HTMLSourceElement_new() {
       }
 
 
-jb_USVString HTMLSourceElement_src(const HTMLSourceElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
+jb_String HTMLSourceElement_src(const HTMLSourceElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLSourceElement_set_src(HTMLSourceElement* self, jb_USVString * value) {
+void HTMLSourceElement_set_src(HTMLSourceElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLSourceElement_type(const HTMLSourceElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
+jb_String HTMLSourceElement_type(const HTMLSourceElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void HTMLSourceElement_set_type(HTMLSourceElement* self, jb_DOMString * value) {
+void HTMLSourceElement_set_type(HTMLSourceElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
-jb_USVString HTMLSourceElement_srcset(const HTMLSourceElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("srcset")));
+jb_String HTMLSourceElement_srcset(const HTMLSourceElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("srcset")));
 }
 
 
-void HTMLSourceElement_set_srcset(HTMLSourceElement* self, jb_USVString * value) {
+void HTMLSourceElement_set_srcset(HTMLSourceElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("srcset"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLSourceElement_sizes(const HTMLSourceElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("sizes")));
+jb_String HTMLSourceElement_sizes(const HTMLSourceElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("sizes")));
 }
 
 
-void HTMLSourceElement_set_sizes(HTMLSourceElement* self, jb_DOMString * value) {
+void HTMLSourceElement_set_sizes(HTMLSourceElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("sizes"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLSourceElement_media(const HTMLSourceElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("media")));
+jb_String HTMLSourceElement_media(const HTMLSourceElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("media")));
 }
 
 
-void HTMLSourceElement_set_media(HTMLSourceElement* self, jb_DOMString * value) {
+void HTMLSourceElement_set_media(HTMLSourceElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("media"), em_Val_from(value));
 }
 

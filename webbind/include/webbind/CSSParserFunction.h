@@ -8,8 +8,8 @@
 
 DECLARE_EMLITE_TYPE(CSSParserFunction, CSSParserValue);
 
-CSSParserFunction CSSParserFunction_new(jb_DOMString * name, jb_Sequence * args);
+CSSParserFunction CSSParserFunction_new(jb_String * name, jb_Array * args);
 
-jb_DOMString CSSParserFunction_name(const CSSParserFunction *self);
+jb_String CSSParserFunction_name(const CSSParserFunction *self);
 
-jb_FrozenArray CSSParserFunction_args(const CSSParserFunction *self);
+jb_Array CSSParserFunction_args(const CSSParserFunction *self);

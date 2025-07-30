@@ -77,18 +77,18 @@ bool WorkerNavigator_taintEnabled(WorkerNavigator* self ) {
 }
 
 
-jb_DOMString WorkerNavigator_oscpu(const WorkerNavigator *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("oscpu")));
+jb_String WorkerNavigator_oscpu(const WorkerNavigator *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("oscpu")));
 }
 
 
-jb_DOMString WorkerNavigator_language(const WorkerNavigator *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("language")));
+jb_String WorkerNavigator_language(const WorkerNavigator *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("language")));
 }
 
 
-jb_FrozenArray WorkerNavigator_languages(const WorkerNavigator *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("languages")));
+jb_Array WorkerNavigator_languages(const WorkerNavigator *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("languages")));
 }
 
 

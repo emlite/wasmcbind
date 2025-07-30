@@ -26,9 +26,9 @@ PlaybackDirection EffectTiming_direction(const EffectTiming *self);
 
 void EffectTiming_set_direction(EffectTiming* self, PlaybackDirection * value);
 
-jb_DOMString EffectTiming_easing(const EffectTiming *self);
+jb_String EffectTiming_easing(const EffectTiming *self);
 
-void EffectTiming_set_easing(EffectTiming* self, jb_DOMString * value);
+void EffectTiming_set_easing(EffectTiming* self, jb_String * value);
 DECLARE_EMLITE_TYPE(ComputedEffectTiming, em_Val);
 
 double ComputedEffectTiming_progress(const ComputedEffectTiming *self);

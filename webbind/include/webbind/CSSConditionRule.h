@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(CSSConditionRule, CSSGroupingRule);
 
-jb_CSSOMString CSSConditionRule_conditionText(const CSSConditionRule *self);
+jb_String CSSConditionRule_conditionText(const CSSConditionRule *self);

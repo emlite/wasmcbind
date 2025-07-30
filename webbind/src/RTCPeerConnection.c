@@ -48,12 +48,12 @@ void RTCLocalSessionDescriptionInit_set_type(RTCLocalSessionDescriptionInit* sel
 }
 
 
-jb_DOMString RTCLocalSessionDescriptionInit_sdp(const RTCLocalSessionDescriptionInit *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sdp")));
+jb_String RTCLocalSessionDescriptionInit_sdp(const RTCLocalSessionDescriptionInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sdp")));
 }
 
 
-void RTCLocalSessionDescriptionInit_set_sdp(RTCLocalSessionDescriptionInit* self, jb_DOMString * value) {
+void RTCLocalSessionDescriptionInit_set_sdp(RTCLocalSessionDescriptionInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sdp"), em_Val_from(value));
 }
 
@@ -70,24 +70,24 @@ void RTCSessionDescriptionInit_set_type(RTCSessionDescriptionInit* self, RTCSdpT
 }
 
 
-jb_DOMString RTCSessionDescriptionInit_sdp(const RTCSessionDescriptionInit *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sdp")));
+jb_String RTCSessionDescriptionInit_sdp(const RTCSessionDescriptionInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sdp")));
 }
 
 
-void RTCSessionDescriptionInit_set_sdp(RTCSessionDescriptionInit* self, jb_DOMString * value) {
+void RTCSessionDescriptionInit_set_sdp(RTCSessionDescriptionInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sdp"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(RTCConfiguration, em_Val);
 
 
-jb_Sequence RTCConfiguration_iceServers(const RTCConfiguration *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("iceServers")));
+jb_Array RTCConfiguration_iceServers(const RTCConfiguration *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("iceServers")));
 }
 
 
-void RTCConfiguration_set_iceServers(RTCConfiguration* self, jb_Sequence * value) {
+void RTCConfiguration_set_iceServers(RTCConfiguration* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("iceServers"), em_Val_from(value));
 }
 
@@ -122,12 +122,12 @@ void RTCConfiguration_set_rtcpMuxPolicy(RTCConfiguration* self, RTCRtcpMuxPolicy
 }
 
 
-jb_Sequence RTCConfiguration_certificates(const RTCConfiguration *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("certificates")));
+jb_Array RTCConfiguration_certificates(const RTCConfiguration *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("certificates")));
 }
 
 
-void RTCConfiguration_set_certificates(RTCConfiguration* self, jb_Sequence * value) {
+void RTCConfiguration_set_certificates(RTCConfiguration* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("certificates"), em_Val_from(value));
 }
 
@@ -144,32 +144,32 @@ void RTCConfiguration_set_iceCandidatePoolSize(RTCConfiguration* self, unsigned 
 DEFINE_EMLITE_TYPE(RTCIdentityProviderOptions, em_Val);
 
 
-jb_DOMString RTCIdentityProviderOptions_protocol(const RTCIdentityProviderOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("protocol")));
+jb_String RTCIdentityProviderOptions_protocol(const RTCIdentityProviderOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("protocol")));
 }
 
 
-void RTCIdentityProviderOptions_set_protocol(RTCIdentityProviderOptions* self, jb_DOMString * value) {
+void RTCIdentityProviderOptions_set_protocol(RTCIdentityProviderOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("protocol"), em_Val_from(value));
 }
 
 
-jb_DOMString RTCIdentityProviderOptions_usernameHint(const RTCIdentityProviderOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("usernameHint")));
+jb_String RTCIdentityProviderOptions_usernameHint(const RTCIdentityProviderOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("usernameHint")));
 }
 
 
-void RTCIdentityProviderOptions_set_usernameHint(RTCIdentityProviderOptions* self, jb_DOMString * value) {
+void RTCIdentityProviderOptions_set_usernameHint(RTCIdentityProviderOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("usernameHint"), em_Val_from(value));
 }
 
 
-jb_DOMString RTCIdentityProviderOptions_peerIdentity(const RTCIdentityProviderOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("peerIdentity")));
+jb_String RTCIdentityProviderOptions_peerIdentity(const RTCIdentityProviderOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("peerIdentity")));
 }
 
 
-void RTCIdentityProviderOptions_set_peerIdentity(RTCIdentityProviderOptions* self, jb_DOMString * value) {
+void RTCIdentityProviderOptions_set_peerIdentity(RTCIdentityProviderOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("peerIdentity"), em_Val_from(value));
 }
 
@@ -186,22 +186,22 @@ void RTCRtpTransceiverInit_set_direction(RTCRtpTransceiverInit* self, RTCRtpTran
 }
 
 
-jb_Sequence RTCRtpTransceiverInit_streams(const RTCRtpTransceiverInit *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("streams")));
+jb_Array RTCRtpTransceiverInit_streams(const RTCRtpTransceiverInit *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("streams")));
 }
 
 
-void RTCRtpTransceiverInit_set_streams(RTCRtpTransceiverInit* self, jb_Sequence * value) {
+void RTCRtpTransceiverInit_set_streams(RTCRtpTransceiverInit* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("streams"), em_Val_from(value));
 }
 
 
-jb_Sequence RTCRtpTransceiverInit_sendEncodings(const RTCRtpTransceiverInit *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sendEncodings")));
+jb_Array RTCRtpTransceiverInit_sendEncodings(const RTCRtpTransceiverInit *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sendEncodings")));
 }
 
 
-void RTCRtpTransceiverInit_set_sendEncodings(RTCRtpTransceiverInit* self, jb_Sequence * value) {
+void RTCRtpTransceiverInit_set_sendEncodings(RTCRtpTransceiverInit* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sendEncodings"), em_Val_from(value));
 }
 
@@ -238,12 +238,12 @@ void RTCDataChannelInit_set_maxRetransmits(RTCDataChannelInit* self, unsigned sh
 }
 
 
-jb_USVString RTCDataChannelInit_protocol(const RTCDataChannelInit *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("protocol")));
+jb_String RTCDataChannelInit_protocol(const RTCDataChannelInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("protocol")));
 }
 
 
-void RTCDataChannelInit_set_protocol(RTCDataChannelInit* self, jb_USVString * value) {
+void RTCDataChannelInit_set_protocol(RTCDataChannelInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("protocol"), em_Val_from(value));
 }
 
@@ -462,12 +462,12 @@ void RTCPeerConnection_set_onconnectionstatechange(RTCPeerConnection* self, jb_A
 }
 
 
-jb_Undefined RTCPeerConnection_setIdentityProvider0(RTCPeerConnection* self , jb_DOMString * provider) {
+jb_Undefined RTCPeerConnection_setIdentityProvider0(RTCPeerConnection* self , jb_String * provider) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "setIdentityProvider", em_Val_from(provider)));
 }
 
 
-jb_Undefined RTCPeerConnection_setIdentityProvider1(RTCPeerConnection* self , jb_DOMString * provider, RTCIdentityProviderOptions * options) {
+jb_Undefined RTCPeerConnection_setIdentityProvider1(RTCPeerConnection* self , jb_String * provider, RTCIdentityProviderOptions * options) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "setIdentityProvider", em_Val_from(provider), em_Val_from(options)));
 }
 
@@ -482,13 +482,13 @@ jb_Promise RTCPeerConnection_peerIdentity(const RTCPeerConnection *self) {
 }
 
 
-jb_DOMString RTCPeerConnection_idpLoginUrl(const RTCPeerConnection *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("idpLoginUrl")));
+jb_String RTCPeerConnection_idpLoginUrl(const RTCPeerConnection *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("idpLoginUrl")));
 }
 
 
-jb_DOMString RTCPeerConnection_idpErrorInfo(const RTCPeerConnection *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("idpErrorInfo")));
+jb_String RTCPeerConnection_idpErrorInfo(const RTCPeerConnection *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("idpErrorInfo")));
 }
 
 
@@ -497,18 +497,18 @@ jb_Promise RTCPeerConnection_generateCertificate(RTCPeerConnection* self , jb_An
 }
 
 
-jb_Sequence RTCPeerConnection_getSenders(RTCPeerConnection* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getSenders"));
+jb_Array RTCPeerConnection_getSenders(RTCPeerConnection* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getSenders"));
 }
 
 
-jb_Sequence RTCPeerConnection_getReceivers(RTCPeerConnection* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getReceivers"));
+jb_Array RTCPeerConnection_getReceivers(RTCPeerConnection* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getReceivers"));
 }
 
 
-jb_Sequence RTCPeerConnection_getTransceivers(RTCPeerConnection* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getTransceivers"));
+jb_Array RTCPeerConnection_getTransceivers(RTCPeerConnection* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getTransceivers"));
 }
 
 
@@ -547,12 +547,12 @@ RTCSctpTransport RTCPeerConnection_sctp(const RTCPeerConnection *self) {
 }
 
 
-RTCDataChannel RTCPeerConnection_createDataChannel0(RTCPeerConnection* self , jb_USVString * label) {
+RTCDataChannel RTCPeerConnection_createDataChannel0(RTCPeerConnection* self , jb_String * label) {
     return em_Val_as(RTCDataChannel, em_Val_call(EventTarget_as_val(self->inner), "createDataChannel", em_Val_from(label)));
 }
 
 
-RTCDataChannel RTCPeerConnection_createDataChannel1(RTCPeerConnection* self , jb_USVString * label, RTCDataChannelInit * dataChannelDict) {
+RTCDataChannel RTCPeerConnection_createDataChannel1(RTCPeerConnection* self , jb_String * label, RTCDataChannelInit * dataChannelDict) {
     return em_Val_as(RTCDataChannel, em_Val_call(EventTarget_as_val(self->inner), "createDataChannel", em_Val_from(label), em_Val_from(dataChannelDict)));
 }
 

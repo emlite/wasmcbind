@@ -28,7 +28,7 @@ void ClientQueryOptions_set_type(ClientQueryOptions* self, ClientType * value) {
 DEFINE_EMLITE_TYPE(Clients, em_Val);
 
 
-jb_Promise Clients_get(Clients* self , jb_DOMString * id) {
+jb_Promise Clients_get(Clients* self , jb_String * id) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "get", em_Val_from(id)));
 }
 
@@ -43,7 +43,7 @@ jb_Promise Clients_matchAll1(Clients* self , ClientQueryOptions * options) {
 }
 
 
-jb_Promise Clients_openWindow(Clients* self , jb_USVString * url) {
+jb_Promise Clients_openWindow(Clients* self , jb_String * url) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "openWindow", em_Val_from(url)));
 }
 

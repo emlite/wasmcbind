@@ -167,12 +167,12 @@ void CanvasRenderingContext2D_set_globalAlpha(CanvasRenderingContext2D* self, do
 }
 
 
-jb_DOMString CanvasRenderingContext2D_globalCompositeOperation(const CanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("globalCompositeOperation")));
+jb_String CanvasRenderingContext2D_globalCompositeOperation(const CanvasRenderingContext2D *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("globalCompositeOperation")));
 }
 
 
-void CanvasRenderingContext2D_set_globalCompositeOperation(CanvasRenderingContext2D* self, jb_DOMString * value) {
+void CanvasRenderingContext2D_set_globalCompositeOperation(CanvasRenderingContext2D* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("globalCompositeOperation"), em_Val_from(value));
 }
 
@@ -232,7 +232,7 @@ CanvasGradient CanvasRenderingContext2D_createConicGradient(CanvasRenderingConte
 }
 
 
-CanvasPattern CanvasRenderingContext2D_createPattern(CanvasRenderingContext2D* self , jb_Any * image, jb_DOMString * repetition) {
+CanvasPattern CanvasRenderingContext2D_createPattern(CanvasRenderingContext2D* self , jb_Any * image, jb_String * repetition) {
     return em_Val_as(CanvasPattern, em_Val_call(em_Val_as_val(self->inner), "createPattern", em_Val_from(image), em_Val_from(repetition)));
 }
 
@@ -267,22 +267,22 @@ void CanvasRenderingContext2D_set_shadowBlur(CanvasRenderingContext2D* self, dou
 }
 
 
-jb_DOMString CanvasRenderingContext2D_shadowColor(const CanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowColor")));
+jb_String CanvasRenderingContext2D_shadowColor(const CanvasRenderingContext2D *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowColor")));
 }
 
 
-void CanvasRenderingContext2D_set_shadowColor(CanvasRenderingContext2D* self, jb_DOMString * value) {
+void CanvasRenderingContext2D_set_shadowColor(CanvasRenderingContext2D* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("shadowColor"), em_Val_from(value));
 }
 
 
-jb_DOMString CanvasRenderingContext2D_filter(const CanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filter")));
+jb_String CanvasRenderingContext2D_filter(const CanvasRenderingContext2D *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filter")));
 }
 
 
-void CanvasRenderingContext2D_set_filter(CanvasRenderingContext2D* self, jb_DOMString * value) {
+void CanvasRenderingContext2D_set_filter(CanvasRenderingContext2D* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("filter"), em_Val_from(value));
 }
 
@@ -352,27 +352,27 @@ jb_Undefined CanvasRenderingContext2D_drawFocusIfNeeded(CanvasRenderingContext2D
 }
 
 
-jb_Undefined CanvasRenderingContext2D_fillText0(CanvasRenderingContext2D* self , jb_DOMString * text, double x, double y) {
+jb_Undefined CanvasRenderingContext2D_fillText0(CanvasRenderingContext2D* self , jb_String * text, double x, double y) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "fillText", em_Val_from(text), em_Val_from(x), em_Val_from(y)));
 }
 
 
-jb_Undefined CanvasRenderingContext2D_fillText1(CanvasRenderingContext2D* self , jb_DOMString * text, double x, double y, double maxWidth) {
+jb_Undefined CanvasRenderingContext2D_fillText1(CanvasRenderingContext2D* self , jb_String * text, double x, double y, double maxWidth) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "fillText", em_Val_from(text), em_Val_from(x), em_Val_from(y), em_Val_from(maxWidth)));
 }
 
 
-jb_Undefined CanvasRenderingContext2D_strokeText0(CanvasRenderingContext2D* self , jb_DOMString * text, double x, double y) {
+jb_Undefined CanvasRenderingContext2D_strokeText0(CanvasRenderingContext2D* self , jb_String * text, double x, double y) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "strokeText", em_Val_from(text), em_Val_from(x), em_Val_from(y)));
 }
 
 
-jb_Undefined CanvasRenderingContext2D_strokeText1(CanvasRenderingContext2D* self , jb_DOMString * text, double x, double y, double maxWidth) {
+jb_Undefined CanvasRenderingContext2D_strokeText1(CanvasRenderingContext2D* self , jb_String * text, double x, double y, double maxWidth) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "strokeText", em_Val_from(text), em_Val_from(x), em_Val_from(y), em_Val_from(maxWidth)));
 }
 
 
-TextMetrics CanvasRenderingContext2D_measureText(CanvasRenderingContext2D* self , jb_DOMString * text) {
+TextMetrics CanvasRenderingContext2D_measureText(CanvasRenderingContext2D* self , jb_String * text) {
     return em_Val_as(TextMetrics, em_Val_call(em_Val_as_val(self->inner), "measureText", em_Val_from(text)));
 }
 
@@ -442,13 +442,13 @@ void CanvasRenderingContext2D_set_miterLimit(CanvasRenderingContext2D* self, dou
 }
 
 
-jb_Undefined CanvasRenderingContext2D_setLineDash(CanvasRenderingContext2D* self , jb_Sequence * segments) {
+jb_Undefined CanvasRenderingContext2D_setLineDash(CanvasRenderingContext2D* self , jb_Array * segments) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setLineDash", em_Val_from(segments)));
 }
 
 
-jb_Sequence CanvasRenderingContext2D_getLineDash(CanvasRenderingContext2D* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getLineDash"));
+jb_Array CanvasRenderingContext2D_getLineDash(CanvasRenderingContext2D* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getLineDash"));
 }
 
 
@@ -462,22 +462,22 @@ void CanvasRenderingContext2D_set_lineDashOffset(CanvasRenderingContext2D* self,
 }
 
 
-jb_DOMString CanvasRenderingContext2D_lang(const CanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lang")));
+jb_String CanvasRenderingContext2D_lang(const CanvasRenderingContext2D *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lang")));
 }
 
 
-void CanvasRenderingContext2D_set_lang(CanvasRenderingContext2D* self, jb_DOMString * value) {
+void CanvasRenderingContext2D_set_lang(CanvasRenderingContext2D* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("lang"), em_Val_from(value));
 }
 
 
-jb_DOMString CanvasRenderingContext2D_font(const CanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("font")));
+jb_String CanvasRenderingContext2D_font(const CanvasRenderingContext2D *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("font")));
 }
 
 
-void CanvasRenderingContext2D_set_font(CanvasRenderingContext2D* self, jb_DOMString * value) {
+void CanvasRenderingContext2D_set_font(CanvasRenderingContext2D* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("font"), em_Val_from(value));
 }
 
@@ -512,12 +512,12 @@ void CanvasRenderingContext2D_set_direction(CanvasRenderingContext2D* self, Canv
 }
 
 
-jb_DOMString CanvasRenderingContext2D_letterSpacing(const CanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("letterSpacing")));
+jb_String CanvasRenderingContext2D_letterSpacing(const CanvasRenderingContext2D *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("letterSpacing")));
 }
 
 
-void CanvasRenderingContext2D_set_letterSpacing(CanvasRenderingContext2D* self, jb_DOMString * value) {
+void CanvasRenderingContext2D_set_letterSpacing(CanvasRenderingContext2D* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("letterSpacing"), em_Val_from(value));
 }
 
@@ -562,12 +562,12 @@ void CanvasRenderingContext2D_set_textRendering(CanvasRenderingContext2D* self, 
 }
 
 
-jb_DOMString CanvasRenderingContext2D_wordSpacing(const CanvasRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("wordSpacing")));
+jb_String CanvasRenderingContext2D_wordSpacing(const CanvasRenderingContext2D *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("wordSpacing")));
 }
 
 
-void CanvasRenderingContext2D_set_wordSpacing(CanvasRenderingContext2D* self, jb_DOMString * value) {
+void CanvasRenderingContext2D_set_wordSpacing(CanvasRenderingContext2D* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("wordSpacing"), em_Val_from(value));
 }
 

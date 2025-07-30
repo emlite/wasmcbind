@@ -17,4 +17,4 @@ jb_Uint8Array PushMessageData_bytes(PushMessageData* self );
 
 jb_Any PushMessageData_json(PushMessageData* self );
 
-jb_USVString PushMessageData_text(PushMessageData* self );
+jb_String PushMessageData_text(PushMessageData* self );

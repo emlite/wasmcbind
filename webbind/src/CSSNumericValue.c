@@ -123,12 +123,12 @@ bool CSSNumericValue_equals(CSSNumericValue* self , jb_Any * value) {
 }
 
 
-CSSUnitValue CSSNumericValue_to(CSSNumericValue* self , jb_USVString * unit) {
+CSSUnitValue CSSNumericValue_to(CSSNumericValue* self , jb_String * unit) {
     return em_Val_as(CSSUnitValue, em_Val_call(CSSStyleValue_as_val(self->inner), "to", em_Val_from(unit)));
 }
 
 
-CSSMathSum CSSNumericValue_toSum(CSSNumericValue* self , jb_USVString * units) {
+CSSMathSum CSSNumericValue_toSum(CSSNumericValue* self , jb_String * units) {
     return em_Val_as(CSSMathSum, em_Val_call(CSSStyleValue_as_val(self->inner), "toSum", em_Val_from(units)));
 }
 
@@ -138,7 +138,7 @@ CSSNumericType CSSNumericValue_type(CSSNumericValue* self ) {
 }
 
 
-CSSNumericValue CSSNumericValue_parse(CSSNumericValue* self , jb_USVString * cssText) {
+CSSNumericValue CSSNumericValue_parse(CSSNumericValue* self , jb_String * cssText) {
     return em_Val_as(CSSNumericValue, em_Val_call(em_Val_global("cssnumericvalue"), "parse", em_Val_from(cssText)));
 }
 

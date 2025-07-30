@@ -24,19 +24,19 @@ jb_Undefined GPURenderPassEncoder_beginOcclusionQuery(GPURenderPassEncoder* self
 
 jb_Undefined GPURenderPassEncoder_endOcclusionQuery(GPURenderPassEncoder* self );
 
-jb_Undefined GPURenderPassEncoder_executeBundles(GPURenderPassEncoder* self , jb_Sequence * bundles);
+jb_Undefined GPURenderPassEncoder_executeBundles(GPURenderPassEncoder* self , jb_Array * bundles);
 
 jb_Undefined GPURenderPassEncoder_end(GPURenderPassEncoder* self );
 
-jb_USVString GPURenderPassEncoder_label(const GPURenderPassEncoder *self);
+jb_String GPURenderPassEncoder_label(const GPURenderPassEncoder *self);
 
-void GPURenderPassEncoder_set_label(GPURenderPassEncoder* self, jb_USVString * value);
+void GPURenderPassEncoder_set_label(GPURenderPassEncoder* self, jb_String * value);
 
-jb_Undefined GPURenderPassEncoder_pushDebugGroup(GPURenderPassEncoder* self , jb_USVString * groupLabel);
+jb_Undefined GPURenderPassEncoder_pushDebugGroup(GPURenderPassEncoder* self , jb_String * groupLabel);
 
 jb_Undefined GPURenderPassEncoder_popDebugGroup(GPURenderPassEncoder* self );
 
-jb_Undefined GPURenderPassEncoder_insertDebugMarker(GPURenderPassEncoder* self , jb_USVString * markerLabel);
+jb_Undefined GPURenderPassEncoder_insertDebugMarker(GPURenderPassEncoder* self , jb_String * markerLabel);
 
 jb_Undefined GPURenderPassEncoder_setBindGroup(GPURenderPassEncoder* self , jb_Any * index, GPUBindGroup * bindGroup, jb_Uint32Array * dynamicOffsetsData, jb_Any * dynamicOffsetsDataStart, jb_Any * dynamicOffsetsDataLength);
 

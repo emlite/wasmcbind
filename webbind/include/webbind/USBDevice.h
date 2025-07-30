@@ -57,15 +57,15 @@ unsigned char USBDevice_deviceVersionMinor(const USBDevice *self);
 
 unsigned char USBDevice_deviceVersionSubminor(const USBDevice *self);
 
-jb_DOMString USBDevice_manufacturerName(const USBDevice *self);
+jb_String USBDevice_manufacturerName(const USBDevice *self);
 
-jb_DOMString USBDevice_productName(const USBDevice *self);
+jb_String USBDevice_productName(const USBDevice *self);
 
-jb_DOMString USBDevice_serialNumber(const USBDevice *self);
+jb_String USBDevice_serialNumber(const USBDevice *self);
 
 USBConfiguration USBDevice_configuration(const USBDevice *self);
 
-jb_FrozenArray USBDevice_configurations(const USBDevice *self);
+jb_Array USBDevice_configurations(const USBDevice *self);
 
 bool USBDevice_opened(const USBDevice *self);
 
@@ -95,8 +95,8 @@ jb_Promise USBDevice_transferIn(USBDevice* self , unsigned char endpointNumber, 
 
 jb_Promise USBDevice_transferOut(USBDevice* self , unsigned char endpointNumber, jb_Any * data);
 
-jb_Promise USBDevice_isochronousTransferIn(USBDevice* self , unsigned char endpointNumber, jb_Sequence * packetLengths);
+jb_Promise USBDevice_isochronousTransferIn(USBDevice* self , unsigned char endpointNumber, jb_Array * packetLengths);
 
-jb_Promise USBDevice_isochronousTransferOut(USBDevice* self , unsigned char endpointNumber, jb_Any * data, jb_Sequence * packetLengths);
+jb_Promise USBDevice_isochronousTransferOut(USBDevice* self , unsigned char endpointNumber, jb_Any * data, jb_Array * packetLengths);
 
 jb_Promise USBDevice_reset(USBDevice* self );

@@ -29,13 +29,13 @@ jb_Any FontFaceSet_onloadingerror(const FontFaceSet *self);
 
 void FontFaceSet_set_onloadingerror(FontFaceSet* self, jb_Any * value);
 
-jb_Promise FontFaceSet_load0(FontFaceSet* self , jb_CSSOMString * font);
+jb_Promise FontFaceSet_load0(FontFaceSet* self , jb_String * font);
 
-jb_Promise FontFaceSet_load1(FontFaceSet* self , jb_CSSOMString * font, jb_CSSOMString * text);
+jb_Promise FontFaceSet_load1(FontFaceSet* self , jb_String * font, jb_String * text);
 
-bool FontFaceSet_check0(FontFaceSet* self , jb_CSSOMString * font);
+bool FontFaceSet_check0(FontFaceSet* self , jb_String * font);
 
-bool FontFaceSet_check1(FontFaceSet* self , jb_CSSOMString * font, jb_CSSOMString * text);
+bool FontFaceSet_check1(FontFaceSet* self , jb_String * font, jb_String * text);
 
 jb_Promise FontFaceSet_ready(const FontFaceSet *self);
 

@@ -5,12 +5,12 @@
 DEFINE_EMLITE_TYPE(AudioEncoderConfig, em_Val);
 
 
-jb_DOMString AudioEncoderConfig_codec(const AudioEncoderConfig *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("codec")));
+jb_String AudioEncoderConfig_codec(const AudioEncoderConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("codec")));
 }
 
 
-void AudioEncoderConfig_set_codec(AudioEncoderConfig* self, jb_DOMString * value) {
+void AudioEncoderConfig_set_codec(AudioEncoderConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("codec"), em_Val_from(value));
 }
 

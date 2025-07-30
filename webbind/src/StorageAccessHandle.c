@@ -47,27 +47,27 @@ jb_Promise StorageAccessHandle_estimate(StorageAccessHandle* self ) {
 }
 
 
-jb_DOMString StorageAccessHandle_createObjectURL(StorageAccessHandle* self , jb_Any * obj) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "createObjectURL", em_Val_from(obj)));
+jb_String StorageAccessHandle_createObjectURL(StorageAccessHandle* self , jb_Any * obj) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "createObjectURL", em_Val_from(obj)));
 }
 
 
-jb_Undefined StorageAccessHandle_revokeObjectURL(StorageAccessHandle* self , jb_DOMString * url) {
+jb_Undefined StorageAccessHandle_revokeObjectURL(StorageAccessHandle* self , jb_String * url) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "revokeObjectURL", em_Val_from(url)));
 }
 
 
-BroadcastChannel StorageAccessHandle_BroadcastChannel_(StorageAccessHandle* self , jb_DOMString * name) {
+BroadcastChannel StorageAccessHandle_BroadcastChannel_(StorageAccessHandle* self , jb_String * name) {
     return em_Val_as(BroadcastChannel, em_Val_call(em_Val_as_val(self->inner), "BroadcastChannel", em_Val_from(name)));
 }
 
 
-SharedWorker StorageAccessHandle_SharedWorker_0(StorageAccessHandle* self , jb_USVString * scriptURL) {
+SharedWorker StorageAccessHandle_SharedWorker_0(StorageAccessHandle* self , jb_String * scriptURL) {
     return em_Val_as(SharedWorker, em_Val_call(em_Val_as_val(self->inner), "SharedWorker", em_Val_from(scriptURL)));
 }
 
 
-SharedWorker StorageAccessHandle_SharedWorker_1(StorageAccessHandle* self , jb_USVString * scriptURL, jb_Any * options) {
+SharedWorker StorageAccessHandle_SharedWorker_1(StorageAccessHandle* self , jb_String * scriptURL, jb_Any * options) {
     return em_Val_as(SharedWorker, em_Val_call(em_Val_as_val(self->inner), "SharedWorker", em_Val_from(scriptURL), em_Val_from(options)));
 }
 

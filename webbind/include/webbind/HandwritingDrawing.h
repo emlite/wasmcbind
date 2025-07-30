@@ -10,13 +10,13 @@ typedef struct HandwritingPrediction HandwritingPrediction;
 
 DECLARE_EMLITE_TYPE(HandwritingPrediction, em_Val);
 
-jb_DOMString HandwritingPrediction_text(const HandwritingPrediction *self);
+jb_String HandwritingPrediction_text(const HandwritingPrediction *self);
 
-void HandwritingPrediction_set_text(HandwritingPrediction* self, jb_DOMString * value);
+void HandwritingPrediction_set_text(HandwritingPrediction* self, jb_String * value);
 
-jb_Sequence HandwritingPrediction_segmentationResult(const HandwritingPrediction *self);
+jb_Array HandwritingPrediction_segmentationResult(const HandwritingPrediction *self);
 
-void HandwritingPrediction_set_segmentationResult(HandwritingPrediction* self, jb_Sequence * value);
+void HandwritingPrediction_set_segmentationResult(HandwritingPrediction* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(HandwritingDrawing, em_Val);
 
 jb_Undefined HandwritingDrawing_addStroke(HandwritingDrawing* self , HandwritingStroke * stroke);
@@ -25,6 +25,6 @@ jb_Undefined HandwritingDrawing_removeStroke(HandwritingDrawing* self , Handwrit
 
 jb_Undefined HandwritingDrawing_clear(HandwritingDrawing* self );
 
-jb_Sequence HandwritingDrawing_getStrokes(HandwritingDrawing* self );
+jb_Array HandwritingDrawing_getStrokes(HandwritingDrawing* self );
 
 jb_Promise HandwritingDrawing_getPrediction(HandwritingDrawing* self );

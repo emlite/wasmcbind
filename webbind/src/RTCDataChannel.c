@@ -4,8 +4,8 @@
 DEFINE_EMLITE_TYPE(RTCDataChannel, EventTarget);
 
 
-jb_USVString RTCDataChannel_label(const RTCDataChannel *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("label")));
+jb_String RTCDataChannel_label(const RTCDataChannel *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("label")));
 }
 
 
@@ -24,8 +24,8 @@ unsigned short RTCDataChannel_maxRetransmits(const RTCDataChannel *self) {
 }
 
 
-jb_USVString RTCDataChannel_protocol(const RTCDataChannel *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("protocol")));
+jb_String RTCDataChannel_protocol(const RTCDataChannel *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("protocol")));
 }
 
 

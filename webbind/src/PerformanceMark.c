@@ -5,13 +5,13 @@
 DEFINE_EMLITE_TYPE(PerformanceMark, PerformanceEntry);
 
 
-PerformanceMark PerformanceMark_new0(jb_DOMString * markName) {
+PerformanceMark PerformanceMark_new0(jb_String * markName) {
         em_Val vv = em_Val_new(em_Val_global("PerformanceMark") , em_Val_from(markName));
         return PerformanceMark_from_val(&vv);
       }
 
 
-PerformanceMark PerformanceMark_new1(jb_DOMString * markName, PerformanceMarkOptions * markOptions) {
+PerformanceMark PerformanceMark_new1(jb_String * markName, PerformanceMarkOptions * markOptions) {
         em_Val vv = em_Val_new(em_Val_global("PerformanceMark") , em_Val_from(markName), em_Val_from(markOptions));
         return PerformanceMark_from_val(&vv);
       }

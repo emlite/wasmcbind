@@ -10,7 +10,7 @@ Comment Comment_new0() {
       }
 
 
-Comment Comment_new1(jb_DOMString * data) {
+Comment Comment_new1(jb_String * data) {
         em_Val vv = em_Val_new(em_Val_global("Comment") , em_Val_from(data));
         return Comment_from_val(&vv);
       }

@@ -21,22 +21,22 @@ SpeechGrammar SpeechGrammarList_item(SpeechGrammarList* self , unsigned long ind
 }
 
 
-jb_Undefined SpeechGrammarList_addFromURI0(SpeechGrammarList* self , jb_DOMString * src) {
+jb_Undefined SpeechGrammarList_addFromURI0(SpeechGrammarList* self , jb_String * src) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "addFromURI", em_Val_from(src)));
 }
 
 
-jb_Undefined SpeechGrammarList_addFromURI1(SpeechGrammarList* self , jb_DOMString * src, float weight) {
+jb_Undefined SpeechGrammarList_addFromURI1(SpeechGrammarList* self , jb_String * src, float weight) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "addFromURI", em_Val_from(src), em_Val_from(weight)));
 }
 
 
-jb_Undefined SpeechGrammarList_addFromString0(SpeechGrammarList* self , jb_DOMString * string) {
+jb_Undefined SpeechGrammarList_addFromString0(SpeechGrammarList* self , jb_String * string) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "addFromString", em_Val_from(string)));
 }
 
 
-jb_Undefined SpeechGrammarList_addFromString1(SpeechGrammarList* self , jb_DOMString * string, float weight) {
+jb_Undefined SpeechGrammarList_addFromString1(SpeechGrammarList* self , jb_String * string, float weight) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "addFromString", em_Val_from(string), em_Val_from(weight)));
 }
 

@@ -25,22 +25,22 @@ HTMLTableCellElement HTMLTableRowElement_insertCell1(HTMLTableRowElement* self ,
 
 jb_Undefined HTMLTableRowElement_deleteCell(HTMLTableRowElement* self , long index);
 
-jb_DOMString HTMLTableRowElement_align(const HTMLTableRowElement *self);
+jb_String HTMLTableRowElement_align(const HTMLTableRowElement *self);
 
-void HTMLTableRowElement_set_align(HTMLTableRowElement* self, jb_DOMString * value);
+void HTMLTableRowElement_set_align(HTMLTableRowElement* self, jb_String * value);
 
-jb_DOMString HTMLTableRowElement_ch(const HTMLTableRowElement *self);
+jb_String HTMLTableRowElement_ch(const HTMLTableRowElement *self);
 
-void HTMLTableRowElement_set_ch(HTMLTableRowElement* self, jb_DOMString * value);
+void HTMLTableRowElement_set_ch(HTMLTableRowElement* self, jb_String * value);
 
-jb_DOMString HTMLTableRowElement_chOff(const HTMLTableRowElement *self);
+jb_String HTMLTableRowElement_chOff(const HTMLTableRowElement *self);
 
-void HTMLTableRowElement_set_chOff(HTMLTableRowElement* self, jb_DOMString * value);
+void HTMLTableRowElement_set_chOff(HTMLTableRowElement* self, jb_String * value);
 
-jb_DOMString HTMLTableRowElement_vAlign(const HTMLTableRowElement *self);
+jb_String HTMLTableRowElement_vAlign(const HTMLTableRowElement *self);
 
-void HTMLTableRowElement_set_vAlign(HTMLTableRowElement* self, jb_DOMString * value);
+void HTMLTableRowElement_set_vAlign(HTMLTableRowElement* self, jb_String * value);
 
-jb_DOMString HTMLTableRowElement_bgColor(const HTMLTableRowElement *self);
+jb_String HTMLTableRowElement_bgColor(const HTMLTableRowElement *self);
 
-void HTMLTableRowElement_set_bgColor(HTMLTableRowElement* self, jb_DOMString * value);
+void HTMLTableRowElement_set_bgColor(HTMLTableRowElement* self, jb_String * value);

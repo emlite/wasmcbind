@@ -4,7 +4,7 @@
 DEFINE_EMLITE_TYPE(NavigatorManagedData, EventTarget);
 
 
-jb_Promise NavigatorManagedData_getManagedConfiguration(NavigatorManagedData* self , jb_Sequence * keys) {
+jb_Promise NavigatorManagedData_getManagedConfiguration(NavigatorManagedData* self , jb_Array * keys) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "getManagedConfiguration", em_Val_from(keys)));
 }
 

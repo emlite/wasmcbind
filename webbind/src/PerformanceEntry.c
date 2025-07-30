@@ -9,13 +9,13 @@ long long PerformanceEntry_id(const PerformanceEntry *self) {
 }
 
 
-jb_DOMString PerformanceEntry_name(const PerformanceEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String PerformanceEntry_name(const PerformanceEntry *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString PerformanceEntry_entryType(const PerformanceEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entryType")));
+jb_String PerformanceEntry_entryType(const PerformanceEntry *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entryType")));
 }
 
 

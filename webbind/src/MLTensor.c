@@ -9,8 +9,8 @@ MLOperandDataType MLTensor_dataType(const MLTensor *self) {
 }
 
 
-jb_FrozenArray MLTensor_shape(const MLTensor *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shape")));
+jb_Array MLTensor_shape(const MLTensor *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shape")));
 }
 
 

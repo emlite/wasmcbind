@@ -26,12 +26,12 @@ HTMLFormElement HTMLOptionElement_form(const HTMLOptionElement *self) {
 }
 
 
-jb_DOMString HTMLOptionElement_label(const HTMLOptionElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("label")));
+jb_String HTMLOptionElement_label(const HTMLOptionElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void HTMLOptionElement_set_label(HTMLOptionElement* self, jb_DOMString * value) {
+void HTMLOptionElement_set_label(HTMLOptionElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 
@@ -56,22 +56,22 @@ void HTMLOptionElement_set_selected(HTMLOptionElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLOptionElement_value(const HTMLOptionElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
+jb_String HTMLOptionElement_value(const HTMLOptionElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
 }
 
 
-void HTMLOptionElement_set_value(HTMLOptionElement* self, jb_DOMString * value) {
+void HTMLOptionElement_set_value(HTMLOptionElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLOptionElement_text(const HTMLOptionElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("text")));
+jb_String HTMLOptionElement_text(const HTMLOptionElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("text")));
 }
 
 
-void HTMLOptionElement_set_text(HTMLOptionElement* self, jb_DOMString * value) {
+void HTMLOptionElement_set_text(HTMLOptionElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("text"), em_Val_from(value));
 }
 

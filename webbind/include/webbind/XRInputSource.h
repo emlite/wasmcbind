@@ -19,7 +19,7 @@ XRSpace XRInputSource_targetRaySpace(const XRInputSource *self);
 
 XRSpace XRInputSource_gripSpace(const XRInputSource *self);
 
-jb_FrozenArray XRInputSource_profiles(const XRInputSource *self);
+jb_Array XRInputSource_profiles(const XRInputSource *self);
 
 bool XRInputSource_skipRendering(const XRInputSource *self);
 

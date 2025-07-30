@@ -26,12 +26,12 @@ void WriterCreateOptions_set_monitor(WriterCreateOptions* self, jb_Function * va
 }
 
 
-jb_DOMString WriterCreateOptions_sharedContext(const WriterCreateOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
+jb_String WriterCreateOptions_sharedContext(const WriterCreateOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
 }
 
 
-void WriterCreateOptions_set_sharedContext(WriterCreateOptions* self, jb_DOMString * value) {
+void WriterCreateOptions_set_sharedContext(WriterCreateOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sharedContext"), em_Val_from(value));
 }
 
@@ -68,44 +68,44 @@ void WriterCreateCoreOptions_set_length(WriterCreateCoreOptions* self, WriterLen
 }
 
 
-jb_Sequence WriterCreateCoreOptions_expectedInputLanguages(const WriterCreateCoreOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
+jb_Array WriterCreateCoreOptions_expectedInputLanguages(const WriterCreateCoreOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
 }
 
 
-void WriterCreateCoreOptions_set_expectedInputLanguages(WriterCreateCoreOptions* self, jb_Sequence * value) {
+void WriterCreateCoreOptions_set_expectedInputLanguages(WriterCreateCoreOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages"), em_Val_from(value));
 }
 
 
-jb_Sequence WriterCreateCoreOptions_expectedContextLanguages(const WriterCreateCoreOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
+jb_Array WriterCreateCoreOptions_expectedContextLanguages(const WriterCreateCoreOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
 }
 
 
-void WriterCreateCoreOptions_set_expectedContextLanguages(WriterCreateCoreOptions* self, jb_Sequence * value) {
+void WriterCreateCoreOptions_set_expectedContextLanguages(WriterCreateCoreOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages"), em_Val_from(value));
 }
 
 
-jb_DOMString WriterCreateCoreOptions_outputLanguage(const WriterCreateCoreOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
+jb_String WriterCreateCoreOptions_outputLanguage(const WriterCreateCoreOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
 }
 
 
-void WriterCreateCoreOptions_set_outputLanguage(WriterCreateCoreOptions* self, jb_DOMString * value) {
+void WriterCreateCoreOptions_set_outputLanguage(WriterCreateCoreOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("outputLanguage"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(WriterWriteOptions, em_Val);
 
 
-jb_DOMString WriterWriteOptions_context(const WriterWriteOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("context")));
+jb_String WriterWriteOptions_context(const WriterWriteOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("context")));
 }
 
 
-void WriterWriteOptions_set_context(WriterWriteOptions* self, jb_DOMString * value) {
+void WriterWriteOptions_set_context(WriterWriteOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("context"), em_Val_from(value));
 }
 
@@ -142,28 +142,28 @@ jb_Promise Writer_availability1(Writer* self , WriterCreateCoreOptions * options
 }
 
 
-jb_Promise Writer_write0(Writer* self , jb_DOMString * input) {
+jb_Promise Writer_write0(Writer* self , jb_String * input) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "write", em_Val_from(input)));
 }
 
 
-jb_Promise Writer_write1(Writer* self , jb_DOMString * input, WriterWriteOptions * options) {
+jb_Promise Writer_write1(Writer* self , jb_String * input, WriterWriteOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "write", em_Val_from(input), em_Val_from(options)));
 }
 
 
-ReadableStream Writer_writeStreaming0(Writer* self , jb_DOMString * input) {
+ReadableStream Writer_writeStreaming0(Writer* self , jb_String * input) {
     return em_Val_as(ReadableStream, em_Val_call(em_Val_as_val(self->inner), "writeStreaming", em_Val_from(input)));
 }
 
 
-ReadableStream Writer_writeStreaming1(Writer* self , jb_DOMString * input, WriterWriteOptions * options) {
+ReadableStream Writer_writeStreaming1(Writer* self , jb_String * input, WriterWriteOptions * options) {
     return em_Val_as(ReadableStream, em_Val_call(em_Val_as_val(self->inner), "writeStreaming", em_Val_from(input), em_Val_from(options)));
 }
 
 
-jb_DOMString Writer_sharedContext(const Writer *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
+jb_String Writer_sharedContext(const Writer *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
 }
 
 
@@ -182,27 +182,27 @@ WriterLength Writer_length(const Writer *self) {
 }
 
 
-jb_FrozenArray Writer_expectedInputLanguages(const Writer *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
+jb_Array Writer_expectedInputLanguages(const Writer *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
 }
 
 
-jb_FrozenArray Writer_expectedContextLanguages(const Writer *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
+jb_Array Writer_expectedContextLanguages(const Writer *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
 }
 
 
-jb_DOMString Writer_outputLanguage(const Writer *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
+jb_String Writer_outputLanguage(const Writer *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
 }
 
 
-jb_Promise Writer_measureInputUsage0(Writer* self , jb_DOMString * input) {
+jb_Promise Writer_measureInputUsage0(Writer* self , jb_String * input) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "measureInputUsage", em_Val_from(input)));
 }
 
 
-jb_Promise Writer_measureInputUsage1(Writer* self , jb_DOMString * input, WriterWriteOptions * options) {
+jb_Promise Writer_measureInputUsage1(Writer* self , jb_String * input, WriterWriteOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "measureInputUsage", em_Val_from(input), em_Val_from(options)));
 }
 

@@ -7,4 +7,4 @@
 
 DECLARE_EMLITE_TYPE(TrustedHTML, em_Val);
 
-jb_DOMString TrustedHTML_toJSON(TrustedHTML* self );
+jb_String TrustedHTML_toJSON(TrustedHTML* self );

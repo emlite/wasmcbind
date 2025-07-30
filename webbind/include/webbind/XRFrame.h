@@ -46,13 +46,13 @@ XRCPUDepthInformation XRFrame_getDepthInformation(XRFrame* self , XRView * view)
 
 XRJointPose XRFrame_getJointPose(XRFrame* self , XRJointSpace * joint, XRSpace * baseSpace);
 
-bool XRFrame_fillJointRadii(XRFrame* self , jb_Sequence * jointSpaces, jb_Float32Array * radii);
+bool XRFrame_fillJointRadii(XRFrame* self , jb_Array * jointSpaces, jb_Float32Array * radii);
 
-bool XRFrame_fillPoses(XRFrame* self , jb_Sequence * spaces, XRSpace * baseSpace, jb_Float32Array * transforms);
+bool XRFrame_fillPoses(XRFrame* self , jb_Array * spaces, XRSpace * baseSpace, jb_Float32Array * transforms);
 
-jb_Sequence XRFrame_getHitTestResults(XRFrame* self , XRHitTestSource * hitTestSource);
+jb_Array XRFrame_getHitTestResults(XRFrame* self , XRHitTestSource * hitTestSource);
 
-jb_Sequence XRFrame_getHitTestResultsForTransientInput(XRFrame* self , XRTransientInputHitTestSource * hitTestSource);
+jb_Array XRFrame_getHitTestResultsForTransientInput(XRFrame* self , XRTransientInputHitTestSource * hitTestSource);
 
 XRLightEstimate XRFrame_getLightEstimate(XRFrame* self , XRLightProbe * lightProbe);
 

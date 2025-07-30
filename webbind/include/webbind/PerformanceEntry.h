@@ -9,9 +9,9 @@ DECLARE_EMLITE_TYPE(PerformanceEntry, em_Val);
 
 long long PerformanceEntry_id(const PerformanceEntry *self);
 
-jb_DOMString PerformanceEntry_name(const PerformanceEntry *self);
+jb_String PerformanceEntry_name(const PerformanceEntry *self);
 
-jb_DOMString PerformanceEntry_entryType(const PerformanceEntry *self);
+jb_String PerformanceEntry_entryType(const PerformanceEntry *self);
 
 jb_Any PerformanceEntry_startTime(const PerformanceEntry *self);
 

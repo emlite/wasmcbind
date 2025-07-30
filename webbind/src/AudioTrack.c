@@ -5,23 +5,23 @@
 DEFINE_EMLITE_TYPE(AudioTrack, em_Val);
 
 
-jb_DOMString AudioTrack_id(const AudioTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
+jb_String AudioTrack_id(const AudioTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
-jb_DOMString AudioTrack_kind(const AudioTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("kind")));
+jb_String AudioTrack_kind(const AudioTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("kind")));
 }
 
 
-jb_DOMString AudioTrack_label(const AudioTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
+jb_String AudioTrack_label(const AudioTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-jb_DOMString AudioTrack_language(const AudioTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("language")));
+jb_String AudioTrack_language(const AudioTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("language")));
 }
 
 

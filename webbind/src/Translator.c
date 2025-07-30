@@ -28,22 +28,22 @@ void TranslatorCreateOptions_set_monitor(TranslatorCreateOptions* self, jb_Funct
 DEFINE_EMLITE_TYPE(TranslatorCreateCoreOptions, em_Val);
 
 
-jb_DOMString TranslatorCreateCoreOptions_sourceLanguage(const TranslatorCreateCoreOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sourceLanguage")));
+jb_String TranslatorCreateCoreOptions_sourceLanguage(const TranslatorCreateCoreOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sourceLanguage")));
 }
 
 
-void TranslatorCreateCoreOptions_set_sourceLanguage(TranslatorCreateCoreOptions* self, jb_DOMString * value) {
+void TranslatorCreateCoreOptions_set_sourceLanguage(TranslatorCreateCoreOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sourceLanguage"), em_Val_from(value));
 }
 
 
-jb_DOMString TranslatorCreateCoreOptions_targetLanguage(const TranslatorCreateCoreOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("targetLanguage")));
+jb_String TranslatorCreateCoreOptions_targetLanguage(const TranslatorCreateCoreOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("targetLanguage")));
 }
 
 
-void TranslatorCreateCoreOptions_set_targetLanguage(TranslatorCreateCoreOptions* self, jb_DOMString * value) {
+void TranslatorCreateCoreOptions_set_targetLanguage(TranslatorCreateCoreOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("targetLanguage"), em_Val_from(value));
 }
 
@@ -72,42 +72,42 @@ jb_Promise Translator_availability(Translator* self , TranslatorCreateCoreOption
 }
 
 
-jb_Promise Translator_translate0(Translator* self , jb_DOMString * input) {
+jb_Promise Translator_translate0(Translator* self , jb_String * input) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "translate", em_Val_from(input)));
 }
 
 
-jb_Promise Translator_translate1(Translator* self , jb_DOMString * input, TranslatorTranslateOptions * options) {
+jb_Promise Translator_translate1(Translator* self , jb_String * input, TranslatorTranslateOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "translate", em_Val_from(input), em_Val_from(options)));
 }
 
 
-ReadableStream Translator_translateStreaming0(Translator* self , jb_DOMString * input) {
+ReadableStream Translator_translateStreaming0(Translator* self , jb_String * input) {
     return em_Val_as(ReadableStream, em_Val_call(em_Val_as_val(self->inner), "translateStreaming", em_Val_from(input)));
 }
 
 
-ReadableStream Translator_translateStreaming1(Translator* self , jb_DOMString * input, TranslatorTranslateOptions * options) {
+ReadableStream Translator_translateStreaming1(Translator* self , jb_String * input, TranslatorTranslateOptions * options) {
     return em_Val_as(ReadableStream, em_Val_call(em_Val_as_val(self->inner), "translateStreaming", em_Val_from(input), em_Val_from(options)));
 }
 
 
-jb_DOMString Translator_sourceLanguage(const Translator *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sourceLanguage")));
+jb_String Translator_sourceLanguage(const Translator *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sourceLanguage")));
 }
 
 
-jb_DOMString Translator_targetLanguage(const Translator *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("targetLanguage")));
+jb_String Translator_targetLanguage(const Translator *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("targetLanguage")));
 }
 
 
-jb_Promise Translator_measureInputUsage0(Translator* self , jb_DOMString * input) {
+jb_Promise Translator_measureInputUsage0(Translator* self , jb_String * input) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "measureInputUsage", em_Val_from(input)));
 }
 
 
-jb_Promise Translator_measureInputUsage1(Translator* self , jb_DOMString * input, TranslatorTranslateOptions * options) {
+jb_Promise Translator_measureInputUsage1(Translator* self , jb_String * input, TranslatorTranslateOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "measureInputUsage", em_Val_from(input), em_Val_from(options)));
 }
 

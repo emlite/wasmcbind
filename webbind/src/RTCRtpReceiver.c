@@ -64,7 +64,7 @@ RTCDtlsTransport RTCRtpReceiver_transport(const RTCRtpReceiver *self) {
 }
 
 
-RTCRtpCapabilities RTCRtpReceiver_getCapabilities(RTCRtpReceiver* self , jb_DOMString * kind) {
+RTCRtpCapabilities RTCRtpReceiver_getCapabilities(RTCRtpReceiver* self , jb_String * kind) {
     return em_Val_as(RTCRtpCapabilities, em_Val_call(em_Val_global("rtcrtpreceiver"), "getCapabilities", em_Val_from(kind)));
 }
 
@@ -74,13 +74,13 @@ RTCRtpReceiveParameters RTCRtpReceiver_getParameters(RTCRtpReceiver* self ) {
 }
 
 
-jb_Sequence RTCRtpReceiver_getContributingSources(RTCRtpReceiver* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getContributingSources"));
+jb_Array RTCRtpReceiver_getContributingSources(RTCRtpReceiver* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getContributingSources"));
 }
 
 
-jb_Sequence RTCRtpReceiver_getSynchronizationSources(RTCRtpReceiver* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getSynchronizationSources"));
+jb_Array RTCRtpReceiver_getSynchronizationSources(RTCRtpReceiver* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getSynchronizationSources"));
 }
 
 

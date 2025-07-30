@@ -143,12 +143,12 @@ jb_Undefined ElementInternals_setValidity1(ElementInternals* self , ValidityStat
 }
 
 
-jb_Undefined ElementInternals_setValidity2(ElementInternals* self , ValidityStateFlags * flags, jb_DOMString * message) {
+jb_Undefined ElementInternals_setValidity2(ElementInternals* self , ValidityStateFlags * flags, jb_String * message) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setValidity", em_Val_from(flags), em_Val_from(message)));
 }
 
 
-jb_Undefined ElementInternals_setValidity3(ElementInternals* self , ValidityStateFlags * flags, jb_DOMString * message, HTMLElement * anchor) {
+jb_Undefined ElementInternals_setValidity3(ElementInternals* self , ValidityStateFlags * flags, jb_String * message, HTMLElement * anchor) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setValidity", em_Val_from(flags), em_Val_from(message), em_Val_from(anchor)));
 }
 
@@ -163,8 +163,8 @@ ValidityState ElementInternals_validity(const ElementInternals *self) {
 }
 
 
-jb_DOMString ElementInternals_validationMessage(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("validationMessage")));
+jb_String ElementInternals_validationMessage(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("validationMessage")));
 }
 
 
@@ -188,12 +188,12 @@ CustomStateSet ElementInternals_states(const ElementInternals *self) {
 }
 
 
-jb_DOMString ElementInternals_role(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("role")));
+jb_String ElementInternals_role(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("role")));
 }
 
 
-void ElementInternals_set_role(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_role(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("role"), em_Val_from(value));
 }
 
@@ -208,502 +208,502 @@ void ElementInternals_set_ariaActiveDescendantElement(ElementInternals* self, El
 }
 
 
-jb_DOMString ElementInternals_ariaAtomic(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaAtomic")));
+jb_String ElementInternals_ariaAtomic(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaAtomic")));
 }
 
 
-void ElementInternals_set_ariaAtomic(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaAtomic(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaAtomic"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaAutoComplete(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaAutoComplete")));
+jb_String ElementInternals_ariaAutoComplete(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaAutoComplete")));
 }
 
 
-void ElementInternals_set_ariaAutoComplete(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaAutoComplete(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaAutoComplete"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaBrailleLabel(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaBrailleLabel")));
+jb_String ElementInternals_ariaBrailleLabel(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaBrailleLabel")));
 }
 
 
-void ElementInternals_set_ariaBrailleLabel(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaBrailleLabel(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaBrailleLabel"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaBrailleRoleDescription(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaBrailleRoleDescription")));
+jb_String ElementInternals_ariaBrailleRoleDescription(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaBrailleRoleDescription")));
 }
 
 
-void ElementInternals_set_ariaBrailleRoleDescription(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaBrailleRoleDescription(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaBrailleRoleDescription"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaBusy(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaBusy")));
+jb_String ElementInternals_ariaBusy(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaBusy")));
 }
 
 
-void ElementInternals_set_ariaBusy(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaBusy(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaBusy"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaChecked(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaChecked")));
+jb_String ElementInternals_ariaChecked(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaChecked")));
 }
 
 
-void ElementInternals_set_ariaChecked(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaChecked(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaChecked"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaColCount(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaColCount")));
+jb_String ElementInternals_ariaColCount(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaColCount")));
 }
 
 
-void ElementInternals_set_ariaColCount(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaColCount(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaColCount"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaColIndex(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaColIndex")));
+jb_String ElementInternals_ariaColIndex(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaColIndex")));
 }
 
 
-void ElementInternals_set_ariaColIndex(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaColIndex(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaColIndex"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaColIndexText(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaColIndexText")));
+jb_String ElementInternals_ariaColIndexText(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaColIndexText")));
 }
 
 
-void ElementInternals_set_ariaColIndexText(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaColIndexText(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaColIndexText"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaColSpan(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaColSpan")));
+jb_String ElementInternals_ariaColSpan(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaColSpan")));
 }
 
 
-void ElementInternals_set_ariaColSpan(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaColSpan(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaColSpan"), em_Val_from(value));
 }
 
 
-jb_FrozenArray ElementInternals_ariaControlsElements(const ElementInternals *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaControlsElements")));
+jb_Array ElementInternals_ariaControlsElements(const ElementInternals *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaControlsElements")));
 }
 
 
-void ElementInternals_set_ariaControlsElements(ElementInternals* self, jb_FrozenArray * value) {
+void ElementInternals_set_ariaControlsElements(ElementInternals* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaControlsElements"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaCurrent(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaCurrent")));
+jb_String ElementInternals_ariaCurrent(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaCurrent")));
 }
 
 
-void ElementInternals_set_ariaCurrent(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaCurrent(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaCurrent"), em_Val_from(value));
 }
 
 
-jb_FrozenArray ElementInternals_ariaDescribedByElements(const ElementInternals *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaDescribedByElements")));
+jb_Array ElementInternals_ariaDescribedByElements(const ElementInternals *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaDescribedByElements")));
 }
 
 
-void ElementInternals_set_ariaDescribedByElements(ElementInternals* self, jb_FrozenArray * value) {
+void ElementInternals_set_ariaDescribedByElements(ElementInternals* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaDescribedByElements"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaDescription(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaDescription")));
+jb_String ElementInternals_ariaDescription(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaDescription")));
 }
 
 
-void ElementInternals_set_ariaDescription(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaDescription(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaDescription"), em_Val_from(value));
 }
 
 
-jb_FrozenArray ElementInternals_ariaDetailsElements(const ElementInternals *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaDetailsElements")));
+jb_Array ElementInternals_ariaDetailsElements(const ElementInternals *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaDetailsElements")));
 }
 
 
-void ElementInternals_set_ariaDetailsElements(ElementInternals* self, jb_FrozenArray * value) {
+void ElementInternals_set_ariaDetailsElements(ElementInternals* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaDetailsElements"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaDisabled(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaDisabled")));
+jb_String ElementInternals_ariaDisabled(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaDisabled")));
 }
 
 
-void ElementInternals_set_ariaDisabled(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaDisabled(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaDisabled"), em_Val_from(value));
 }
 
 
-jb_FrozenArray ElementInternals_ariaErrorMessageElements(const ElementInternals *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaErrorMessageElements")));
+jb_Array ElementInternals_ariaErrorMessageElements(const ElementInternals *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaErrorMessageElements")));
 }
 
 
-void ElementInternals_set_ariaErrorMessageElements(ElementInternals* self, jb_FrozenArray * value) {
+void ElementInternals_set_ariaErrorMessageElements(ElementInternals* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaErrorMessageElements"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaExpanded(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaExpanded")));
+jb_String ElementInternals_ariaExpanded(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaExpanded")));
 }
 
 
-void ElementInternals_set_ariaExpanded(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaExpanded(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaExpanded"), em_Val_from(value));
 }
 
 
-jb_FrozenArray ElementInternals_ariaFlowToElements(const ElementInternals *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaFlowToElements")));
+jb_Array ElementInternals_ariaFlowToElements(const ElementInternals *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaFlowToElements")));
 }
 
 
-void ElementInternals_set_ariaFlowToElements(ElementInternals* self, jb_FrozenArray * value) {
+void ElementInternals_set_ariaFlowToElements(ElementInternals* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaFlowToElements"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaHasPopup(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaHasPopup")));
+jb_String ElementInternals_ariaHasPopup(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaHasPopup")));
 }
 
 
-void ElementInternals_set_ariaHasPopup(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaHasPopup(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaHasPopup"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaHidden(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaHidden")));
+jb_String ElementInternals_ariaHidden(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaHidden")));
 }
 
 
-void ElementInternals_set_ariaHidden(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaHidden(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaHidden"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaInvalid(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaInvalid")));
+jb_String ElementInternals_ariaInvalid(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaInvalid")));
 }
 
 
-void ElementInternals_set_ariaInvalid(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaInvalid(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaInvalid"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaKeyShortcuts(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaKeyShortcuts")));
+jb_String ElementInternals_ariaKeyShortcuts(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaKeyShortcuts")));
 }
 
 
-void ElementInternals_set_ariaKeyShortcuts(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaKeyShortcuts(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaKeyShortcuts"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaLabel(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaLabel")));
+jb_String ElementInternals_ariaLabel(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaLabel")));
 }
 
 
-void ElementInternals_set_ariaLabel(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaLabel(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaLabel"), em_Val_from(value));
 }
 
 
-jb_FrozenArray ElementInternals_ariaLabelledByElements(const ElementInternals *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaLabelledByElements")));
+jb_Array ElementInternals_ariaLabelledByElements(const ElementInternals *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaLabelledByElements")));
 }
 
 
-void ElementInternals_set_ariaLabelledByElements(ElementInternals* self, jb_FrozenArray * value) {
+void ElementInternals_set_ariaLabelledByElements(ElementInternals* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaLabelledByElements"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaLevel(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaLevel")));
+jb_String ElementInternals_ariaLevel(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaLevel")));
 }
 
 
-void ElementInternals_set_ariaLevel(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaLevel(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaLevel"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaLive(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaLive")));
+jb_String ElementInternals_ariaLive(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaLive")));
 }
 
 
-void ElementInternals_set_ariaLive(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaLive(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaLive"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaModal(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaModal")));
+jb_String ElementInternals_ariaModal(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaModal")));
 }
 
 
-void ElementInternals_set_ariaModal(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaModal(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaModal"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaMultiLine(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaMultiLine")));
+jb_String ElementInternals_ariaMultiLine(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaMultiLine")));
 }
 
 
-void ElementInternals_set_ariaMultiLine(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaMultiLine(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaMultiLine"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaMultiSelectable(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaMultiSelectable")));
+jb_String ElementInternals_ariaMultiSelectable(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaMultiSelectable")));
 }
 
 
-void ElementInternals_set_ariaMultiSelectable(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaMultiSelectable(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaMultiSelectable"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaOrientation(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaOrientation")));
+jb_String ElementInternals_ariaOrientation(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaOrientation")));
 }
 
 
-void ElementInternals_set_ariaOrientation(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaOrientation(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaOrientation"), em_Val_from(value));
 }
 
 
-jb_FrozenArray ElementInternals_ariaOwnsElements(const ElementInternals *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaOwnsElements")));
+jb_Array ElementInternals_ariaOwnsElements(const ElementInternals *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaOwnsElements")));
 }
 
 
-void ElementInternals_set_ariaOwnsElements(ElementInternals* self, jb_FrozenArray * value) {
+void ElementInternals_set_ariaOwnsElements(ElementInternals* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaOwnsElements"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaPlaceholder(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaPlaceholder")));
+jb_String ElementInternals_ariaPlaceholder(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaPlaceholder")));
 }
 
 
-void ElementInternals_set_ariaPlaceholder(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaPlaceholder(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaPlaceholder"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaPosInSet(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaPosInSet")));
+jb_String ElementInternals_ariaPosInSet(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaPosInSet")));
 }
 
 
-void ElementInternals_set_ariaPosInSet(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaPosInSet(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaPosInSet"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaPressed(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaPressed")));
+jb_String ElementInternals_ariaPressed(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaPressed")));
 }
 
 
-void ElementInternals_set_ariaPressed(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaPressed(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaPressed"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaReadOnly(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaReadOnly")));
+jb_String ElementInternals_ariaReadOnly(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaReadOnly")));
 }
 
 
-void ElementInternals_set_ariaReadOnly(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaReadOnly(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaReadOnly"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaRelevant(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRelevant")));
+jb_String ElementInternals_ariaRelevant(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRelevant")));
 }
 
 
-void ElementInternals_set_ariaRelevant(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaRelevant(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaRelevant"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaRequired(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRequired")));
+jb_String ElementInternals_ariaRequired(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRequired")));
 }
 
 
-void ElementInternals_set_ariaRequired(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaRequired(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaRequired"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaRoleDescription(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRoleDescription")));
+jb_String ElementInternals_ariaRoleDescription(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRoleDescription")));
 }
 
 
-void ElementInternals_set_ariaRoleDescription(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaRoleDescription(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaRoleDescription"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaRowCount(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRowCount")));
+jb_String ElementInternals_ariaRowCount(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRowCount")));
 }
 
 
-void ElementInternals_set_ariaRowCount(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaRowCount(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaRowCount"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaRowIndex(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRowIndex")));
+jb_String ElementInternals_ariaRowIndex(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRowIndex")));
 }
 
 
-void ElementInternals_set_ariaRowIndex(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaRowIndex(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaRowIndex"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaRowIndexText(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRowIndexText")));
+jb_String ElementInternals_ariaRowIndexText(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRowIndexText")));
 }
 
 
-void ElementInternals_set_ariaRowIndexText(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaRowIndexText(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaRowIndexText"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaRowSpan(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRowSpan")));
+jb_String ElementInternals_ariaRowSpan(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaRowSpan")));
 }
 
 
-void ElementInternals_set_ariaRowSpan(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaRowSpan(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaRowSpan"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaSelected(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaSelected")));
+jb_String ElementInternals_ariaSelected(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaSelected")));
 }
 
 
-void ElementInternals_set_ariaSelected(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaSelected(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaSelected"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaSetSize(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaSetSize")));
+jb_String ElementInternals_ariaSetSize(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaSetSize")));
 }
 
 
-void ElementInternals_set_ariaSetSize(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaSetSize(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaSetSize"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaSort(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaSort")));
+jb_String ElementInternals_ariaSort(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaSort")));
 }
 
 
-void ElementInternals_set_ariaSort(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaSort(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaSort"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaValueMax(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaValueMax")));
+jb_String ElementInternals_ariaValueMax(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaValueMax")));
 }
 
 
-void ElementInternals_set_ariaValueMax(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaValueMax(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaValueMax"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaValueMin(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaValueMin")));
+jb_String ElementInternals_ariaValueMin(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaValueMin")));
 }
 
 
-void ElementInternals_set_ariaValueMin(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaValueMin(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaValueMin"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaValueNow(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaValueNow")));
+jb_String ElementInternals_ariaValueNow(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaValueNow")));
 }
 
 
-void ElementInternals_set_ariaValueNow(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaValueNow(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaValueNow"), em_Val_from(value));
 }
 
 
-jb_DOMString ElementInternals_ariaValueText(const ElementInternals *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaValueText")));
+jb_String ElementInternals_ariaValueText(const ElementInternals *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ariaValueText")));
 }
 
 
-void ElementInternals_set_ariaValueText(ElementInternals* self, jb_DOMString * value) {
+void ElementInternals_set_ariaValueText(ElementInternals* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("ariaValueText"), em_Val_from(value));
 }
 

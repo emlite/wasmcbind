@@ -5,7 +5,7 @@
 DEFINE_EMLITE_TYPE(AudioWorkletGlobalScope, WorkletGlobalScope);
 
 
-jb_Undefined AudioWorkletGlobalScope_registerProcessor(AudioWorkletGlobalScope* self , jb_DOMString * name, jb_Function * processorCtor) {
+jb_Undefined AudioWorkletGlobalScope_registerProcessor(AudioWorkletGlobalScope* self , jb_String * name, jb_Function * processorCtor) {
     return em_Val_as(jb_Undefined, em_Val_call(WorkletGlobalScope_as_val(self->inner), "registerProcessor", em_Val_from(name), em_Val_from(processorCtor)));
 }
 

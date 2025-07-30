@@ -10,6 +10,6 @@ typedef struct RTCError RTCError;
 
 DECLARE_EMLITE_TYPE(RTCErrorEvent, Event);
 
-RTCErrorEvent RTCErrorEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+RTCErrorEvent RTCErrorEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 RTCError RTCErrorEvent_error(const RTCErrorEvent *self);

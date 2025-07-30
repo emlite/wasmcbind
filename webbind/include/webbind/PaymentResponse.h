@@ -25,9 +25,9 @@ jb_Any PaymentValidationErrors_shippingAddress(const PaymentValidationErrors *se
 
 void PaymentValidationErrors_set_shippingAddress(PaymentValidationErrors* self, jb_Any * value);
 
-jb_DOMString PaymentValidationErrors_error(const PaymentValidationErrors *self);
+jb_String PaymentValidationErrors_error(const PaymentValidationErrors *self);
 
-void PaymentValidationErrors_set_error(PaymentValidationErrors* self, jb_DOMString * value);
+void PaymentValidationErrors_set_error(PaymentValidationErrors* self, jb_String * value);
 
 jb_Object PaymentValidationErrors_paymentMethod(const PaymentValidationErrors *self);
 
@@ -36,21 +36,21 @@ DECLARE_EMLITE_TYPE(PaymentResponse, EventTarget);
 
 jb_Object PaymentResponse_toJSON(PaymentResponse* self );
 
-jb_DOMString PaymentResponse_requestId(const PaymentResponse *self);
+jb_String PaymentResponse_requestId(const PaymentResponse *self);
 
-jb_DOMString PaymentResponse_methodName(const PaymentResponse *self);
+jb_String PaymentResponse_methodName(const PaymentResponse *self);
 
 jb_Object PaymentResponse_details(const PaymentResponse *self);
 
 ContactAddress PaymentResponse_shippingAddress(const PaymentResponse *self);
 
-jb_DOMString PaymentResponse_shippingOption(const PaymentResponse *self);
+jb_String PaymentResponse_shippingOption(const PaymentResponse *self);
 
-jb_DOMString PaymentResponse_payerName(const PaymentResponse *self);
+jb_String PaymentResponse_payerName(const PaymentResponse *self);
 
-jb_DOMString PaymentResponse_payerEmail(const PaymentResponse *self);
+jb_String PaymentResponse_payerEmail(const PaymentResponse *self);
 
-jb_DOMString PaymentResponse_payerPhone(const PaymentResponse *self);
+jb_String PaymentResponse_payerPhone(const PaymentResponse *self);
 
 jb_Promise PaymentResponse_complete0(PaymentResponse* self );
 

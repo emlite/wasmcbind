@@ -10,12 +10,12 @@ HTMLTableCaptionElement HTMLTableCaptionElement_new() {
       }
 
 
-jb_DOMString HTMLTableCaptionElement_align(const HTMLTableCaptionElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
+jb_String HTMLTableCaptionElement_align(const HTMLTableCaptionElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLTableCaptionElement_set_align(HTMLTableCaptionElement* self, jb_DOMString * value) {
+void HTMLTableCaptionElement_set_align(HTMLTableCaptionElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 

@@ -4,8 +4,8 @@
 DEFINE_EMLITE_TYPE(Font, em_Val);
 
 
-jb_DOMString Font_name(const Font *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String Font_name(const Font *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 

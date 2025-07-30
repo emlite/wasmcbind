@@ -13,32 +13,32 @@ HTMLObjectElement HTMLObjectElement_new() {
       }
 
 
-jb_USVString HTMLObjectElement_data(const HTMLObjectElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("data")));
+jb_String HTMLObjectElement_data(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("data")));
 }
 
 
-void HTMLObjectElement_set_data(HTMLObjectElement* self, jb_USVString * value) {
+void HTMLObjectElement_set_data(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("data"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLObjectElement_type(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
+jb_String HTMLObjectElement_type(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void HTMLObjectElement_set_type(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_type(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLObjectElement_name(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLObjectElement_name(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLObjectElement_set_name(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_name(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
@@ -48,22 +48,22 @@ HTMLFormElement HTMLObjectElement_form(const HTMLObjectElement *self) {
 }
 
 
-jb_DOMString HTMLObjectElement_width(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
+jb_String HTMLObjectElement_width(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
-void HTMLObjectElement_set_width(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_width(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLObjectElement_height(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
+jb_String HTMLObjectElement_height(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
-void HTMLObjectElement_set_height(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_height(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("height"), em_Val_from(value));
 }
 
@@ -93,8 +93,8 @@ ValidityState HTMLObjectElement_validity(const HTMLObjectElement *self) {
 }
 
 
-jb_DOMString HTMLObjectElement_validationMessage(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
+jb_String HTMLObjectElement_validationMessage(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
 }
 
 
@@ -108,37 +108,37 @@ bool HTMLObjectElement_reportValidity(HTMLObjectElement* self ) {
 }
 
 
-jb_Undefined HTMLObjectElement_setCustomValidity(HTMLObjectElement* self , jb_DOMString * error) {
+jb_Undefined HTMLObjectElement_setCustomValidity(HTMLObjectElement* self , jb_String * error) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setCustomValidity", em_Val_from(error)));
 }
 
 
-jb_DOMString HTMLObjectElement_align(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
+jb_String HTMLObjectElement_align(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLObjectElement_set_align(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_align(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLObjectElement_archive(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("archive")));
+jb_String HTMLObjectElement_archive(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("archive")));
 }
 
 
-void HTMLObjectElement_set_archive(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_archive(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("archive"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLObjectElement_code(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("code")));
+jb_String HTMLObjectElement_code(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("code")));
 }
 
 
-void HTMLObjectElement_set_code(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_code(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("code"), em_Val_from(value));
 }
 
@@ -163,12 +163,12 @@ void HTMLObjectElement_set_hspace(HTMLObjectElement* self, unsigned long value) 
 }
 
 
-jb_DOMString HTMLObjectElement_standby(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("standby")));
+jb_String HTMLObjectElement_standby(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("standby")));
 }
 
 
-void HTMLObjectElement_set_standby(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_standby(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("standby"), em_Val_from(value));
 }
 
@@ -183,42 +183,42 @@ void HTMLObjectElement_set_vspace(HTMLObjectElement* self, unsigned long value) 
 }
 
 
-jb_DOMString HTMLObjectElement_codeBase(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("codeBase")));
+jb_String HTMLObjectElement_codeBase(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("codeBase")));
 }
 
 
-void HTMLObjectElement_set_codeBase(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_codeBase(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("codeBase"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLObjectElement_codeType(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("codeType")));
+jb_String HTMLObjectElement_codeType(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("codeType")));
 }
 
 
-void HTMLObjectElement_set_codeType(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_codeType(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("codeType"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLObjectElement_useMap(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("useMap")));
+jb_String HTMLObjectElement_useMap(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("useMap")));
 }
 
 
-void HTMLObjectElement_set_useMap(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_useMap(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("useMap"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLObjectElement_border(const HTMLObjectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("border")));
+jb_String HTMLObjectElement_border(const HTMLObjectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("border")));
 }
 
 
-void HTMLObjectElement_set_border(HTMLObjectElement* self, jb_DOMString * value) {
+void HTMLObjectElement_set_border(HTMLObjectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("border"), em_Val_from(value));
 }
 

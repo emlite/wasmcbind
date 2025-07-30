@@ -31,7 +31,7 @@ XRWebGLLayer XRRenderState_baseLayer(const XRRenderState *self) {
 }
 
 
-jb_FrozenArray XRRenderState_layers(const XRRenderState *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("layers")));
+jb_Array XRRenderState_layers(const XRRenderState *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("layers")));
 }
 

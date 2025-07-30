@@ -10,17 +10,17 @@ typedef struct Element Element;
 
 DECLARE_EMLITE_TYPE(Attr, Node);
 
-jb_DOMString Attr_namespaceURI(const Attr *self);
+jb_String Attr_namespaceURI(const Attr *self);
 
-jb_DOMString Attr_prefix(const Attr *self);
+jb_String Attr_prefix(const Attr *self);
 
-jb_DOMString Attr_localName(const Attr *self);
+jb_String Attr_localName(const Attr *self);
 
-jb_DOMString Attr_name(const Attr *self);
+jb_String Attr_name(const Attr *self);
 
-jb_DOMString Attr_value(const Attr *self);
+jb_String Attr_value(const Attr *self);
 
-void Attr_set_value(Attr* self, jb_DOMString * value);
+void Attr_set_value(Attr* self, jb_String * value);
 
 Element Attr_ownerElement(const Attr *self);
 

@@ -82,15 +82,15 @@ DynamicsCompressorNode BaseAudioContext_createDynamicsCompressor(BaseAudioContex
 
 GainNode BaseAudioContext_createGain(BaseAudioContext* self );
 
-IIRFilterNode BaseAudioContext_createIIRFilter(BaseAudioContext* self , jb_Sequence * feedforward, jb_Sequence * feedback);
+IIRFilterNode BaseAudioContext_createIIRFilter(BaseAudioContext* self , jb_Array * feedforward, jb_Array * feedback);
 
 OscillatorNode BaseAudioContext_createOscillator(BaseAudioContext* self );
 
 PannerNode BaseAudioContext_createPanner(BaseAudioContext* self );
 
-PeriodicWave BaseAudioContext_createPeriodicWave0(BaseAudioContext* self , jb_Sequence * real, jb_Sequence * imag);
+PeriodicWave BaseAudioContext_createPeriodicWave0(BaseAudioContext* self , jb_Array * real, jb_Array * imag);
 
-PeriodicWave BaseAudioContext_createPeriodicWave1(BaseAudioContext* self , jb_Sequence * real, jb_Sequence * imag, PeriodicWaveConstraints * constraints);
+PeriodicWave BaseAudioContext_createPeriodicWave1(BaseAudioContext* self , jb_Array * real, jb_Array * imag, PeriodicWaveConstraints * constraints);
 
 ScriptProcessorNode BaseAudioContext_createScriptProcessor0(BaseAudioContext* self );
 

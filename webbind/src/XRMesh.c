@@ -10,8 +10,8 @@ XRSpace XRMesh_meshSpace(const XRMesh *self) {
 }
 
 
-jb_FrozenArray XRMesh_vertices(const XRMesh *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("vertices")));
+jb_Array XRMesh_vertices(const XRMesh *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("vertices")));
 }
 
 
@@ -25,7 +25,7 @@ jb_Any XRMesh_lastChangedTime(const XRMesh *self) {
 }
 
 
-jb_DOMString XRMesh_semanticLabel(const XRMesh *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("semanticLabel")));
+jb_String XRMesh_semanticLabel(const XRMesh *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("semanticLabel")));
 }
 

@@ -16,9 +16,9 @@ jb_Any TaskSignalAnyInit_priority(const TaskSignalAnyInit *self);
 void TaskSignalAnyInit_set_priority(TaskSignalAnyInit* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(TaskSignal, AbortSignal);
 
-TaskSignal TaskSignal_any0(TaskSignal* self , jb_Sequence * signals);
+TaskSignal TaskSignal_any0(TaskSignal* self , jb_Array * signals);
 
-TaskSignal TaskSignal_any1(TaskSignal* self , jb_Sequence * signals, TaskSignalAnyInit * init);
+TaskSignal TaskSignal_any1(TaskSignal* self , jb_Array * signals, TaskSignalAnyInit * init);
 
 TaskPriority TaskSignal_priority(const TaskSignal *self);
 

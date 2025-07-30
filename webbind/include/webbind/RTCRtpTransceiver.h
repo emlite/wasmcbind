@@ -11,9 +11,9 @@ typedef struct RTCRtpCodec RTCRtpCodec;
 
 DECLARE_EMLITE_TYPE(RTCRtpCodec, em_Val);
 
-jb_DOMString RTCRtpCodec_mimeType(const RTCRtpCodec *self);
+jb_String RTCRtpCodec_mimeType(const RTCRtpCodec *self);
 
-void RTCRtpCodec_set_mimeType(RTCRtpCodec* self, jb_DOMString * value);
+void RTCRtpCodec_set_mimeType(RTCRtpCodec* self, jb_String * value);
 
 unsigned long RTCRtpCodec_clockRate(const RTCRtpCodec *self);
 
@@ -23,12 +23,12 @@ unsigned short RTCRtpCodec_channels(const RTCRtpCodec *self);
 
 void RTCRtpCodec_set_channels(RTCRtpCodec* self, unsigned short value);
 
-jb_DOMString RTCRtpCodec_sdpFmtpLine(const RTCRtpCodec *self);
+jb_String RTCRtpCodec_sdpFmtpLine(const RTCRtpCodec *self);
 
-void RTCRtpCodec_set_sdpFmtpLine(RTCRtpCodec* self, jb_DOMString * value);
+void RTCRtpCodec_set_sdpFmtpLine(RTCRtpCodec* self, jb_String * value);
 DECLARE_EMLITE_TYPE(RTCRtpTransceiver, em_Val);
 
-jb_DOMString RTCRtpTransceiver_mid(const RTCRtpTransceiver *self);
+jb_String RTCRtpTransceiver_mid(const RTCRtpTransceiver *self);
 
 RTCRtpSender RTCRtpTransceiver_sender(const RTCRtpTransceiver *self);
 
@@ -42,4 +42,4 @@ RTCRtpTransceiverDirection RTCRtpTransceiver_currentDirection(const RTCRtpTransc
 
 jb_Undefined RTCRtpTransceiver_stop(RTCRtpTransceiver* self );
 
-jb_Undefined RTCRtpTransceiver_setCodecPreferences(RTCRtpTransceiver* self , jb_Sequence * codecs);
+jb_Undefined RTCRtpTransceiver_setCodecPreferences(RTCRtpTransceiver* self , jb_Array * codecs);

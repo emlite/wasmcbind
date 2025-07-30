@@ -11,8 +11,8 @@ typedef struct CSSParserRule CSSParserRule;
 
 
 
-bool CSS_supports0(jb_CSSOMString * property, jb_CSSOMString * value);
-bool CSS_supports1(jb_CSSOMString * conditionText);
+bool CSS_supports0(jb_String * property, jb_String * value);
+bool CSS_supports1(jb_String * conditionText);
 
 
 
@@ -31,11 +31,11 @@ jb_Promise CSS_parseRule0(jb_Any * css);
 jb_Promise CSS_parseRule1(jb_Any * css, jb_Any * options);
 jb_Promise CSS_parseDeclarationList0(jb_Any * css);
 jb_Promise CSS_parseDeclarationList1(jb_Any * css, jb_Any * options);
-CSSParserDeclaration CSS_parseDeclaration0(jb_DOMString * css);
-CSSParserDeclaration CSS_parseDeclaration1(jb_DOMString * css, jb_Any * options);
-jb_Any CSS_parseValue(jb_DOMString * css);
-jb_Sequence CSS_parseValueList(jb_DOMString * css);
-jb_Sequence CSS_parseCommaValueList(jb_DOMString * css);
+CSSParserDeclaration CSS_parseDeclaration0(jb_String * css);
+CSSParserDeclaration CSS_parseDeclaration1(jb_String * css, jb_Any * options);
+jb_Any CSS_parseValue(jb_String * css);
+jb_Array CSS_parseValueList(jb_String * css);
+jb_Array CSS_parseCommaValueList(jb_String * css);
 
 
 jb_Undefined CSS_registerProperty(jb_Any * definition);
@@ -106,4 +106,4 @@ CSSUnitValue CSS_dppx(double value);
 CSSUnitValue CSS_fr(double value);
 
 
-jb_CSSOMString CSS_escape(jb_CSSOMString * ident);
+jb_String CSS_escape(jb_String * ident);

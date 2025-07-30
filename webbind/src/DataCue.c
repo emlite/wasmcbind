@@ -10,7 +10,7 @@ DataCue DataCue_new0(double startTime, double endTime, jb_Any * value) {
       }
 
 
-DataCue DataCue_new1(double startTime, double endTime, jb_Any * value, jb_DOMString * type) {
+DataCue DataCue_new1(double startTime, double endTime, jb_Any * value, jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("DataCue") , em_Val_from(startTime), em_Val_from(endTime), em_Val_from(value), em_Val_from(type));
         return DataCue_from_val(&vv);
       }
@@ -26,7 +26,7 @@ void DataCue_set_value(DataCue* self, jb_Any * value) {
 }
 
 
-jb_DOMString DataCue_type(const DataCue *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(TextTrackCue_as_val(self->inner), em_Val_from("type")));
+jb_String DataCue_type(const DataCue *self) {
+    return em_Val_as(jb_String, em_Val_get(TextTrackCue_as_val(self->inner), em_Val_from("type")));
 }
 

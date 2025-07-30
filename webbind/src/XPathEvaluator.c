@@ -13,12 +13,12 @@ XPathEvaluator XPathEvaluator_new() {
       }
 
 
-XPathExpression XPathEvaluator_createExpression0(XPathEvaluator* self , jb_DOMString * expression) {
+XPathExpression XPathEvaluator_createExpression0(XPathEvaluator* self , jb_String * expression) {
     return em_Val_as(XPathExpression, em_Val_call(em_Val_as_val(self->inner), "createExpression", em_Val_from(expression)));
 }
 
 
-XPathExpression XPathEvaluator_createExpression1(XPathEvaluator* self , jb_DOMString * expression, jb_Function * resolver) {
+XPathExpression XPathEvaluator_createExpression1(XPathEvaluator* self , jb_String * expression, jb_Function * resolver) {
     return em_Val_as(XPathExpression, em_Val_call(em_Val_as_val(self->inner), "createExpression", em_Val_from(expression), em_Val_from(resolver)));
 }
 
@@ -28,22 +28,22 @@ Node XPathEvaluator_createNSResolver(XPathEvaluator* self , Node * nodeResolver)
 }
 
 
-XPathResult XPathEvaluator_evaluate0(XPathEvaluator* self , jb_DOMString * expression, Node * contextNode) {
+XPathResult XPathEvaluator_evaluate0(XPathEvaluator* self , jb_String * expression, Node * contextNode) {
     return em_Val_as(XPathResult, em_Val_call(em_Val_as_val(self->inner), "evaluate", em_Val_from(expression), em_Val_from(contextNode)));
 }
 
 
-XPathResult XPathEvaluator_evaluate1(XPathEvaluator* self , jb_DOMString * expression, Node * contextNode, jb_Function * resolver) {
+XPathResult XPathEvaluator_evaluate1(XPathEvaluator* self , jb_String * expression, Node * contextNode, jb_Function * resolver) {
     return em_Val_as(XPathResult, em_Val_call(em_Val_as_val(self->inner), "evaluate", em_Val_from(expression), em_Val_from(contextNode), em_Val_from(resolver)));
 }
 
 
-XPathResult XPathEvaluator_evaluate2(XPathEvaluator* self , jb_DOMString * expression, Node * contextNode, jb_Function * resolver, unsigned short type) {
+XPathResult XPathEvaluator_evaluate2(XPathEvaluator* self , jb_String * expression, Node * contextNode, jb_Function * resolver, unsigned short type) {
     return em_Val_as(XPathResult, em_Val_call(em_Val_as_val(self->inner), "evaluate", em_Val_from(expression), em_Val_from(contextNode), em_Val_from(resolver), em_Val_from(type)));
 }
 
 
-XPathResult XPathEvaluator_evaluate3(XPathEvaluator* self , jb_DOMString * expression, Node * contextNode, jb_Function * resolver, unsigned short type, XPathResult * result) {
+XPathResult XPathEvaluator_evaluate3(XPathEvaluator* self , jb_String * expression, Node * contextNode, jb_Function * resolver, unsigned short type, XPathResult * result) {
     return em_Val_as(XPathResult, em_Val_call(em_Val_as_val(self->inner), "evaluate", em_Val_from(expression), em_Val_from(contextNode), em_Val_from(resolver), em_Val_from(type), em_Val_from(result)));
 }
 

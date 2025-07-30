@@ -10,16 +10,16 @@ typedef struct NotRestoredReasons NotRestoredReasons;
 
 DECLARE_EMLITE_TYPE(NotRestoredReasons, em_Val);
 
-jb_USVString NotRestoredReasons_src(const NotRestoredReasons *self);
+jb_String NotRestoredReasons_src(const NotRestoredReasons *self);
 
-jb_DOMString NotRestoredReasons_id(const NotRestoredReasons *self);
+jb_String NotRestoredReasons_id(const NotRestoredReasons *self);
 
-jb_DOMString NotRestoredReasons_name(const NotRestoredReasons *self);
+jb_String NotRestoredReasons_name(const NotRestoredReasons *self);
 
-jb_USVString NotRestoredReasons_url(const NotRestoredReasons *self);
+jb_String NotRestoredReasons_url(const NotRestoredReasons *self);
 
-jb_FrozenArray NotRestoredReasons_reasons(const NotRestoredReasons *self);
+jb_Array NotRestoredReasons_reasons(const NotRestoredReasons *self);
 
-jb_FrozenArray NotRestoredReasons_children(const NotRestoredReasons *self);
+jb_Array NotRestoredReasons_children(const NotRestoredReasons *self);
 
 jb_Object NotRestoredReasons_toJSON(NotRestoredReasons* self );

@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(PresentationConnection, EventTarget);
 
 
-jb_USVString PresentationConnection_id(const PresentationConnection *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
+jb_String PresentationConnection_id(const PresentationConnection *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
-jb_USVString PresentationConnection_url(const PresentationConnection *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("url")));
+jb_String PresentationConnection_url(const PresentationConnection *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("url")));
 }
 
 

@@ -14,4 +14,4 @@ jb_Any TimeEvent_view(const TimeEvent *self);
 
 long TimeEvent_detail(const TimeEvent *self);
 
-jb_Undefined TimeEvent_initTimeEvent(TimeEvent* self , jb_DOMString * typeArg, Window * viewArg, long detailArg);
+jb_Undefined TimeEvent_initTimeEvent(TimeEvent* self , jb_String * typeArg, Window * viewArg, long detailArg);

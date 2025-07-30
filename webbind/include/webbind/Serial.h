@@ -11,13 +11,13 @@ typedef struct SerialPortRequestOptions SerialPortRequestOptions;
 
 DECLARE_EMLITE_TYPE(SerialPortRequestOptions, em_Val);
 
-jb_Sequence SerialPortRequestOptions_filters(const SerialPortRequestOptions *self);
+jb_Array SerialPortRequestOptions_filters(const SerialPortRequestOptions *self);
 
-void SerialPortRequestOptions_set_filters(SerialPortRequestOptions* self, jb_Sequence * value);
+void SerialPortRequestOptions_set_filters(SerialPortRequestOptions* self, jb_Array * value);
 
-jb_Sequence SerialPortRequestOptions_allowedBluetoothServiceClassIds(const SerialPortRequestOptions *self);
+jb_Array SerialPortRequestOptions_allowedBluetoothServiceClassIds(const SerialPortRequestOptions *self);
 
-void SerialPortRequestOptions_set_allowedBluetoothServiceClassIds(SerialPortRequestOptions* self, jb_Sequence * value);
+void SerialPortRequestOptions_set_allowedBluetoothServiceClassIds(SerialPortRequestOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(Serial, EventTarget);
 
 jb_Any Serial_onconnect(const Serial *self);

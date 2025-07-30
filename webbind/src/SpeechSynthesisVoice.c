@@ -4,18 +4,18 @@
 DEFINE_EMLITE_TYPE(SpeechSynthesisVoice, em_Val);
 
 
-jb_DOMString SpeechSynthesisVoice_voiceURI(const SpeechSynthesisVoice *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("voiceURI")));
+jb_String SpeechSynthesisVoice_voiceURI(const SpeechSynthesisVoice *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("voiceURI")));
 }
 
 
-jb_DOMString SpeechSynthesisVoice_name(const SpeechSynthesisVoice *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String SpeechSynthesisVoice_name(const SpeechSynthesisVoice *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString SpeechSynthesisVoice_lang(const SpeechSynthesisVoice *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lang")));
+jb_String SpeechSynthesisVoice_lang(const SpeechSynthesisVoice *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lang")));
 }
 
 

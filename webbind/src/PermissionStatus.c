@@ -9,8 +9,8 @@ PermissionState PermissionStatus_state(const PermissionStatus *self) {
 }
 
 
-jb_DOMString PermissionStatus_name(const PermissionStatus *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
+jb_String PermissionStatus_name(const PermissionStatus *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
 }
 
 

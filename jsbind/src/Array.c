@@ -18,10 +18,6 @@ DEFINE_EMLITE_TYPE(jb_ArrayBuffer, em_Val);
 
 DEFINE_EMLITE_TYPE(jb_DataView, em_Val);
 
-DEFINE_EMLITE_TYPE(jb_FrozenArray, em_Val);
-
-DEFINE_EMLITE_TYPE(jb_ObservableArray, em_Val);
-
 jb_Array jb_Array_new() {
     return (jb_Array){.inner = em_Val_array()};
 }

@@ -8,7 +8,7 @@
 
 DECLARE_EMLITE_TYPE(PromiseRejectionEvent, Event);
 
-PromiseRejectionEvent PromiseRejectionEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+PromiseRejectionEvent PromiseRejectionEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 jb_Object PromiseRejectionEvent_promise(const PromiseRejectionEvent *self);
 

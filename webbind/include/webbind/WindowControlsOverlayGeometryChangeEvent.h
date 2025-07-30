@@ -10,7 +10,7 @@ typedef struct DOMRect DOMRect;
 
 DECLARE_EMLITE_TYPE(WindowControlsOverlayGeometryChangeEvent, Event);
 
-WindowControlsOverlayGeometryChangeEvent WindowControlsOverlayGeometryChangeEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+WindowControlsOverlayGeometryChangeEvent WindowControlsOverlayGeometryChangeEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 DOMRect WindowControlsOverlayGeometryChangeEvent_titlebarAreaRect(const WindowControlsOverlayGeometryChangeEvent *self);
 

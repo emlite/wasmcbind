@@ -21,21 +21,21 @@ unsigned long HTMLCanvasElement_height(const HTMLCanvasElement *self);
 
 void HTMLCanvasElement_set_height(HTMLCanvasElement* self, unsigned long value);
 
-jb_Any HTMLCanvasElement_getContext0(HTMLCanvasElement* self , jb_DOMString * contextId);
+jb_Any HTMLCanvasElement_getContext0(HTMLCanvasElement* self , jb_String * contextId);
 
-jb_Any HTMLCanvasElement_getContext1(HTMLCanvasElement* self , jb_DOMString * contextId, jb_Any * options);
+jb_Any HTMLCanvasElement_getContext1(HTMLCanvasElement* self , jb_String * contextId, jb_Any * options);
 
-jb_USVString HTMLCanvasElement_toDataURL0(HTMLCanvasElement* self );
+jb_String HTMLCanvasElement_toDataURL0(HTMLCanvasElement* self );
 
-jb_USVString HTMLCanvasElement_toDataURL1(HTMLCanvasElement* self , jb_DOMString * type);
+jb_String HTMLCanvasElement_toDataURL1(HTMLCanvasElement* self , jb_String * type);
 
-jb_USVString HTMLCanvasElement_toDataURL2(HTMLCanvasElement* self , jb_DOMString * type, jb_Any * quality);
+jb_String HTMLCanvasElement_toDataURL2(HTMLCanvasElement* self , jb_String * type, jb_Any * quality);
 
 jb_Undefined HTMLCanvasElement_toBlob0(HTMLCanvasElement* self , jb_Function * callback);
 
-jb_Undefined HTMLCanvasElement_toBlob1(HTMLCanvasElement* self , jb_Function * callback, jb_DOMString * type);
+jb_Undefined HTMLCanvasElement_toBlob1(HTMLCanvasElement* self , jb_Function * callback, jb_String * type);
 
-jb_Undefined HTMLCanvasElement_toBlob2(HTMLCanvasElement* self , jb_Function * callback, jb_DOMString * type, jb_Any * quality);
+jb_Undefined HTMLCanvasElement_toBlob2(HTMLCanvasElement* self , jb_Function * callback, jb_String * type, jb_Any * quality);
 
 OffscreenCanvas HTMLCanvasElement_transferControlToOffscreen(HTMLCanvasElement* self );
 

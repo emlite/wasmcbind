@@ -31,12 +31,12 @@ Response Response_error(Response* self ) {
 }
 
 
-Response Response_redirect0(Response* self , jb_USVString * url) {
+Response Response_redirect0(Response* self , jb_String * url) {
     return em_Val_as(Response, em_Val_call(em_Val_global("response"), "redirect", em_Val_from(url)));
 }
 
 
-Response Response_redirect1(Response* self , jb_USVString * url, unsigned short status) {
+Response Response_redirect1(Response* self , jb_String * url, unsigned short status) {
     return em_Val_as(Response, em_Val_call(em_Val_global("response"), "redirect", em_Val_from(url), em_Val_from(status)));
 }
 
@@ -51,8 +51,8 @@ ResponseType Response_type(const Response *self) {
 }
 
 
-jb_USVString Response_url(const Response *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
+jb_String Response_url(const Response *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 
@@ -71,8 +71,8 @@ bool Response_ok(const Response *self) {
 }
 
 
-jb_ByteString Response_statusText(const Response *self) {
-    return em_Val_as(jb_ByteString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("statusText")));
+jb_String Response_statusText(const Response *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("statusText")));
 }
 
 

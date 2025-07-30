@@ -4,18 +4,18 @@
 DEFINE_EMLITE_TYPE(MIDIPort, EventTarget);
 
 
-jb_DOMString MIDIPort_id(const MIDIPort *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
+jb_String MIDIPort_id(const MIDIPort *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
-jb_DOMString MIDIPort_manufacturer(const MIDIPort *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("manufacturer")));
+jb_String MIDIPort_manufacturer(const MIDIPort *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("manufacturer")));
 }
 
 
-jb_DOMString MIDIPort_name(const MIDIPort *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
+jb_String MIDIPort_name(const MIDIPort *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
 }
 
 
@@ -24,8 +24,8 @@ MIDIPortType MIDIPort_type(const MIDIPort *self) {
 }
 
 
-jb_DOMString MIDIPort_version(const MIDIPort *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("version")));
+jb_String MIDIPort_version(const MIDIPort *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("version")));
 }
 
 

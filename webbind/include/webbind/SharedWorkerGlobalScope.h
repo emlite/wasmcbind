@@ -8,7 +8,7 @@
 
 DECLARE_EMLITE_TYPE(SharedWorkerGlobalScope, WorkerGlobalScope);
 
-jb_DOMString SharedWorkerGlobalScope_name(const SharedWorkerGlobalScope *self);
+jb_String SharedWorkerGlobalScope_name(const SharedWorkerGlobalScope *self);
 
 jb_Undefined SharedWorkerGlobalScope_close(SharedWorkerGlobalScope* self );
 

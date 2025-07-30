@@ -79,12 +79,12 @@ void PaintRenderingContext2D_set_globalAlpha(PaintRenderingContext2D* self, doub
 }
 
 
-jb_DOMString PaintRenderingContext2D_globalCompositeOperation(const PaintRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("globalCompositeOperation")));
+jb_String PaintRenderingContext2D_globalCompositeOperation(const PaintRenderingContext2D *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("globalCompositeOperation")));
 }
 
 
-void PaintRenderingContext2D_set_globalCompositeOperation(PaintRenderingContext2D* self, jb_DOMString * value) {
+void PaintRenderingContext2D_set_globalCompositeOperation(PaintRenderingContext2D* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("globalCompositeOperation"), em_Val_from(value));
 }
 
@@ -144,7 +144,7 @@ CanvasGradient PaintRenderingContext2D_createConicGradient(PaintRenderingContext
 }
 
 
-CanvasPattern PaintRenderingContext2D_createPattern(PaintRenderingContext2D* self , jb_Any * image, jb_DOMString * repetition) {
+CanvasPattern PaintRenderingContext2D_createPattern(PaintRenderingContext2D* self , jb_Any * image, jb_String * repetition) {
     return em_Val_as(CanvasPattern, em_Val_call(em_Val_as_val(self->inner), "createPattern", em_Val_from(image), em_Val_from(repetition)));
 }
 
@@ -179,12 +179,12 @@ void PaintRenderingContext2D_set_shadowBlur(PaintRenderingContext2D* self, doubl
 }
 
 
-jb_DOMString PaintRenderingContext2D_shadowColor(const PaintRenderingContext2D *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowColor")));
+jb_String PaintRenderingContext2D_shadowColor(const PaintRenderingContext2D *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowColor")));
 }
 
 
-void PaintRenderingContext2D_set_shadowColor(PaintRenderingContext2D* self, jb_DOMString * value) {
+void PaintRenderingContext2D_set_shadowColor(PaintRenderingContext2D* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("shadowColor"), em_Val_from(value));
 }
 
@@ -294,13 +294,13 @@ void PaintRenderingContext2D_set_miterLimit(PaintRenderingContext2D* self, doubl
 }
 
 
-jb_Undefined PaintRenderingContext2D_setLineDash(PaintRenderingContext2D* self , jb_Sequence * segments) {
+jb_Undefined PaintRenderingContext2D_setLineDash(PaintRenderingContext2D* self , jb_Array * segments) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setLineDash", em_Val_from(segments)));
 }
 
 
-jb_Sequence PaintRenderingContext2D_getLineDash(PaintRenderingContext2D* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getLineDash"));
+jb_Array PaintRenderingContext2D_getLineDash(PaintRenderingContext2D* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getLineDash"));
 }
 
 

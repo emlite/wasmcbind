@@ -10,9 +10,9 @@ typedef struct TimeRanges TimeRanges;
 
 DECLARE_EMLITE_TYPE(BufferedChangeEvent, Event);
 
-BufferedChangeEvent BufferedChangeEvent_new0(jb_DOMString * type);
+BufferedChangeEvent BufferedChangeEvent_new0(jb_String * type);
 
-BufferedChangeEvent BufferedChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+BufferedChangeEvent BufferedChangeEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
 TimeRanges BufferedChangeEvent_addedRanges(const BufferedChangeEvent *self);
 

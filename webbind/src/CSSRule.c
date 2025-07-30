@@ -5,12 +5,12 @@
 DEFINE_EMLITE_TYPE(CSSRule, em_Val);
 
 
-jb_CSSOMString CSSRule_cssText(const CSSRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cssText")));
+jb_String CSSRule_cssText(const CSSRule *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cssText")));
 }
 
 
-void CSSRule_set_cssText(CSSRule* self, jb_CSSOMString * value) {
+void CSSRule_set_cssText(CSSRule* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("cssText"), em_Val_from(value));
 }
 

@@ -8,7 +8,7 @@
 
 DECLARE_EMLITE_TYPE(MediaKeyMessageEvent, Event);
 
-MediaKeyMessageEvent MediaKeyMessageEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+MediaKeyMessageEvent MediaKeyMessageEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 MediaKeyMessageType MediaKeyMessageEvent_messageType(const MediaKeyMessageEvent *self);
 

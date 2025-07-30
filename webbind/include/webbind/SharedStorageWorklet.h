@@ -11,9 +11,9 @@ typedef struct SharedStorageRunOperationMethodOptions SharedStorageRunOperationM
 
 DECLARE_EMLITE_TYPE(SharedStorageUrlWithMetadata, em_Val);
 
-jb_USVString SharedStorageUrlWithMetadata_url(const SharedStorageUrlWithMetadata *self);
+jb_String SharedStorageUrlWithMetadata_url(const SharedStorageUrlWithMetadata *self);
 
-void SharedStorageUrlWithMetadata_set_url(SharedStorageUrlWithMetadata* self, jb_USVString * value);
+void SharedStorageUrlWithMetadata_set_url(SharedStorageUrlWithMetadata* self, jb_String * value);
 
 jb_Object SharedStorageUrlWithMetadata_reportingMetadata(const SharedStorageUrlWithMetadata *self);
 
@@ -36,15 +36,15 @@ jb_Any SharedStorageRunOperationMethodOptions_privateAggregationConfig(const Sha
 
 void SharedStorageRunOperationMethodOptions_set_privateAggregationConfig(SharedStorageRunOperationMethodOptions* self, jb_Any * value);
 
-jb_DOMString SharedStorageRunOperationMethodOptions_savedQuery(const SharedStorageRunOperationMethodOptions *self);
+jb_String SharedStorageRunOperationMethodOptions_savedQuery(const SharedStorageRunOperationMethodOptions *self);
 
-void SharedStorageRunOperationMethodOptions_set_savedQuery(SharedStorageRunOperationMethodOptions* self, jb_DOMString * value);
+void SharedStorageRunOperationMethodOptions_set_savedQuery(SharedStorageRunOperationMethodOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(SharedStorageWorklet, Worklet);
 
-jb_Promise SharedStorageWorklet_selectURL0(SharedStorageWorklet* self , jb_DOMString * name, jb_Sequence * urls);
+jb_Promise SharedStorageWorklet_selectURL0(SharedStorageWorklet* self , jb_String * name, jb_Array * urls);
 
-jb_Promise SharedStorageWorklet_selectURL1(SharedStorageWorklet* self , jb_DOMString * name, jb_Sequence * urls, SharedStorageRunOperationMethodOptions * options);
+jb_Promise SharedStorageWorklet_selectURL1(SharedStorageWorklet* self , jb_String * name, jb_Array * urls, SharedStorageRunOperationMethodOptions * options);
 
-jb_Promise SharedStorageWorklet_run0(SharedStorageWorklet* self , jb_DOMString * name);
+jb_Promise SharedStorageWorklet_run0(SharedStorageWorklet* self , jb_String * name);
 
-jb_Promise SharedStorageWorklet_run1(SharedStorageWorklet* self , jb_DOMString * name, SharedStorageRunOperationMethodOptions * options);
+jb_Promise SharedStorageWorklet_run1(SharedStorageWorklet* self , jb_String * name, SharedStorageRunOperationMethodOptions * options);

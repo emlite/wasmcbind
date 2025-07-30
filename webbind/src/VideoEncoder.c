@@ -5,12 +5,12 @@
 DEFINE_EMLITE_TYPE(VideoEncoderConfig, em_Val);
 
 
-jb_DOMString VideoEncoderConfig_codec(const VideoEncoderConfig *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("codec")));
+jb_String VideoEncoderConfig_codec(const VideoEncoderConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("codec")));
 }
 
 
-void VideoEncoderConfig_set_codec(VideoEncoderConfig* self, jb_DOMString * value) {
+void VideoEncoderConfig_set_codec(VideoEncoderConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("codec"), em_Val_from(value));
 }
 
@@ -95,12 +95,12 @@ void VideoEncoderConfig_set_alpha(VideoEncoderConfig* self, AlphaOption * value)
 }
 
 
-jb_DOMString VideoEncoderConfig_scalabilityMode(const VideoEncoderConfig *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("scalabilityMode")));
+jb_String VideoEncoderConfig_scalabilityMode(const VideoEncoderConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("scalabilityMode")));
 }
 
 
-void VideoEncoderConfig_set_scalabilityMode(VideoEncoderConfig* self, jb_DOMString * value) {
+void VideoEncoderConfig_set_scalabilityMode(VideoEncoderConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("scalabilityMode"), em_Val_from(value));
 }
 
@@ -125,12 +125,12 @@ void VideoEncoderConfig_set_latencyMode(VideoEncoderConfig* self, LatencyMode * 
 }
 
 
-jb_DOMString VideoEncoderConfig_contentHint(const VideoEncoderConfig *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("contentHint")));
+jb_String VideoEncoderConfig_contentHint(const VideoEncoderConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("contentHint")));
 }
 
 
-void VideoEncoderConfig_set_contentHint(VideoEncoderConfig* self, jb_DOMString * value) {
+void VideoEncoderConfig_set_contentHint(VideoEncoderConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("contentHint"), em_Val_from(value));
 }
 

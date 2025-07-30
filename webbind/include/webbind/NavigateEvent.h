@@ -27,7 +27,7 @@ NavigationScrollBehavior NavigationInterceptOptions_scroll(const NavigationInter
 void NavigationInterceptOptions_set_scroll(NavigationInterceptOptions* self, NavigationScrollBehavior * value);
 DECLARE_EMLITE_TYPE(NavigateEvent, Event);
 
-NavigateEvent NavigateEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+NavigateEvent NavigateEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 NavigationType NavigateEvent_navigationType(const NavigateEvent *self);
 
@@ -43,7 +43,7 @@ AbortSignal NavigateEvent_signal(const NavigateEvent *self);
 
 FormData NavigateEvent_formData(const NavigateEvent *self);
 
-jb_DOMString NavigateEvent_downloadRequest(const NavigateEvent *self);
+jb_String NavigateEvent_downloadRequest(const NavigateEvent *self);
 
 jb_Any NavigateEvent_info(const NavigateEvent *self);
 

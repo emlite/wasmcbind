@@ -18,15 +18,15 @@ Request Request_new0(jb_Any * input);
 
 Request Request_new1(jb_Any * input, jb_Any * init);
 
-jb_ByteString Request_method(const Request *self);
+jb_String Request_method(const Request *self);
 
-jb_USVString Request_url(const Request *self);
+jb_String Request_url(const Request *self);
 
 Headers Request_headers(const Request *self);
 
 RequestDestination Request_destination(const Request *self);
 
-jb_USVString Request_referrer(const Request *self);
+jb_String Request_referrer(const Request *self);
 
 ReferrerPolicy Request_referrerPolicy(const Request *self);
 
@@ -38,7 +38,7 @@ RequestCache Request_cache(const Request *self);
 
 RequestRedirect Request_redirect(const Request *self);
 
-jb_DOMString Request_integrity(const Request *self);
+jb_String Request_integrity(const Request *self);
 
 bool Request_keepalive(const Request *self);
 

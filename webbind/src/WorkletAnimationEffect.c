@@ -44,12 +44,12 @@ void EffectTiming_set_direction(EffectTiming* self, PlaybackDirection * value) {
 }
 
 
-jb_DOMString EffectTiming_easing(const EffectTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("easing")));
+jb_String EffectTiming_easing(const EffectTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("easing")));
 }
 
 
-void EffectTiming_set_easing(EffectTiming* self, jb_DOMString * value) {
+void EffectTiming_set_easing(EffectTiming* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("easing"), em_Val_from(value));
 }
 

@@ -12,9 +12,9 @@ typedef struct RegistrationOptions RegistrationOptions;
 
 DECLARE_EMLITE_TYPE(RegistrationOptions, em_Val);
 
-jb_USVString RegistrationOptions_scope(const RegistrationOptions *self);
+jb_String RegistrationOptions_scope(const RegistrationOptions *self);
 
-void RegistrationOptions_set_scope(RegistrationOptions* self, jb_USVString * value);
+void RegistrationOptions_set_scope(RegistrationOptions* self, jb_String * value);
 
 WorkerType RegistrationOptions_type(const RegistrationOptions *self);
 
@@ -35,7 +35,7 @@ jb_Promise ServiceWorkerContainer_register_1(ServiceWorkerContainer* self , jb_A
 
 jb_Promise ServiceWorkerContainer_getRegistration0(ServiceWorkerContainer* self );
 
-jb_Promise ServiceWorkerContainer_getRegistration1(ServiceWorkerContainer* self , jb_USVString * clientURL);
+jb_Promise ServiceWorkerContainer_getRegistration1(ServiceWorkerContainer* self , jb_String * clientURL);
 
 jb_Promise ServiceWorkerContainer_getRegistrations(ServiceWorkerContainer* self );
 

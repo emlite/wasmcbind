@@ -6,8 +6,8 @@
 DEFINE_EMLITE_TYPE(MediaKeySystemAccess, em_Val);
 
 
-jb_DOMString MediaKeySystemAccess_keySystem(const MediaKeySystemAccess *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("keySystem")));
+jb_String MediaKeySystemAccess_keySystem(const MediaKeySystemAccess *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("keySystem")));
 }
 
 

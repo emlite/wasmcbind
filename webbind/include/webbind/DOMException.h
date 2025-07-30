@@ -9,12 +9,12 @@ DECLARE_EMLITE_TYPE(DOMException, em_Val);
 
 DOMException DOMException_new0();
 
-DOMException DOMException_new1(jb_DOMString * message);
+DOMException DOMException_new1(jb_String * message);
 
-DOMException DOMException_new2(jb_DOMString * message, jb_DOMString * name);
+DOMException DOMException_new2(jb_String * message, jb_String * name);
 
-jb_DOMString DOMException_name(const DOMException *self);
+jb_String DOMException_name(const DOMException *self);
 
-jb_DOMString DOMException_message(const DOMException *self);
+jb_String DOMException_message(const DOMException *self);
 
 unsigned short DOMException_code(const DOMException *self);

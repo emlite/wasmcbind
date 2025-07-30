@@ -12,53 +12,53 @@ typedef struct FontFacePalettes FontFacePalettes;
 
 DECLARE_EMLITE_TYPE(FontFace, em_Val);
 
-FontFace FontFace_new0(jb_CSSOMString * family, jb_Any * source);
+FontFace FontFace_new0(jb_String * family, jb_Any * source);
 
-FontFace FontFace_new1(jb_CSSOMString * family, jb_Any * source, jb_Any * descriptors);
+FontFace FontFace_new1(jb_String * family, jb_Any * source, jb_Any * descriptors);
 
-jb_CSSOMString FontFace_family(const FontFace *self);
+jb_String FontFace_family(const FontFace *self);
 
-void FontFace_set_family(FontFace* self, jb_CSSOMString * value);
+void FontFace_set_family(FontFace* self, jb_String * value);
 
-jb_CSSOMString FontFace_style(const FontFace *self);
+jb_String FontFace_style(const FontFace *self);
 
-void FontFace_set_style(FontFace* self, jb_CSSOMString * value);
+void FontFace_set_style(FontFace* self, jb_String * value);
 
-jb_CSSOMString FontFace_weight(const FontFace *self);
+jb_String FontFace_weight(const FontFace *self);
 
-void FontFace_set_weight(FontFace* self, jb_CSSOMString * value);
+void FontFace_set_weight(FontFace* self, jb_String * value);
 
-jb_CSSOMString FontFace_stretch(const FontFace *self);
+jb_String FontFace_stretch(const FontFace *self);
 
-void FontFace_set_stretch(FontFace* self, jb_CSSOMString * value);
+void FontFace_set_stretch(FontFace* self, jb_String * value);
 
-jb_CSSOMString FontFace_unicodeRange(const FontFace *self);
+jb_String FontFace_unicodeRange(const FontFace *self);
 
-void FontFace_set_unicodeRange(FontFace* self, jb_CSSOMString * value);
+void FontFace_set_unicodeRange(FontFace* self, jb_String * value);
 
-jb_CSSOMString FontFace_featureSettings(const FontFace *self);
+jb_String FontFace_featureSettings(const FontFace *self);
 
-void FontFace_set_featureSettings(FontFace* self, jb_CSSOMString * value);
+void FontFace_set_featureSettings(FontFace* self, jb_String * value);
 
-jb_CSSOMString FontFace_variationSettings(const FontFace *self);
+jb_String FontFace_variationSettings(const FontFace *self);
 
-void FontFace_set_variationSettings(FontFace* self, jb_CSSOMString * value);
+void FontFace_set_variationSettings(FontFace* self, jb_String * value);
 
-jb_CSSOMString FontFace_display(const FontFace *self);
+jb_String FontFace_display(const FontFace *self);
 
-void FontFace_set_display(FontFace* self, jb_CSSOMString * value);
+void FontFace_set_display(FontFace* self, jb_String * value);
 
-jb_CSSOMString FontFace_ascentOverride(const FontFace *self);
+jb_String FontFace_ascentOverride(const FontFace *self);
 
-void FontFace_set_ascentOverride(FontFace* self, jb_CSSOMString * value);
+void FontFace_set_ascentOverride(FontFace* self, jb_String * value);
 
-jb_CSSOMString FontFace_descentOverride(const FontFace *self);
+jb_String FontFace_descentOverride(const FontFace *self);
 
-void FontFace_set_descentOverride(FontFace* self, jb_CSSOMString * value);
+void FontFace_set_descentOverride(FontFace* self, jb_String * value);
 
-jb_CSSOMString FontFace_lineGapOverride(const FontFace *self);
+jb_String FontFace_lineGapOverride(const FontFace *self);
 
-void FontFace_set_lineGapOverride(FontFace* self, jb_CSSOMString * value);
+void FontFace_set_lineGapOverride(FontFace* self, jb_String * value);
 
 FontFaceLoadStatus FontFace_status(const FontFace *self);
 

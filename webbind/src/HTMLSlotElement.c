@@ -24,33 +24,33 @@ HTMLSlotElement HTMLSlotElement_new() {
       }
 
 
-jb_DOMString HTMLSlotElement_name(const HTMLSlotElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLSlotElement_name(const HTMLSlotElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLSlotElement_set_name(HTMLSlotElement* self, jb_DOMString * value) {
+void HTMLSlotElement_set_name(HTMLSlotElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_Sequence HTMLSlotElement_assignedNodes0(HTMLSlotElement* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(HTMLElement_as_val(self->inner), "assignedNodes"));
+jb_Array HTMLSlotElement_assignedNodes0(HTMLSlotElement* self ) {
+    return em_Val_as(jb_Array, em_Val_call(HTMLElement_as_val(self->inner), "assignedNodes"));
 }
 
 
-jb_Sequence HTMLSlotElement_assignedNodes1(HTMLSlotElement* self , AssignedNodesOptions * options) {
-    return em_Val_as(jb_Sequence, em_Val_call(HTMLElement_as_val(self->inner), "assignedNodes", em_Val_from(options)));
+jb_Array HTMLSlotElement_assignedNodes1(HTMLSlotElement* self , AssignedNodesOptions * options) {
+    return em_Val_as(jb_Array, em_Val_call(HTMLElement_as_val(self->inner), "assignedNodes", em_Val_from(options)));
 }
 
 
-jb_Sequence HTMLSlotElement_assignedElements0(HTMLSlotElement* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(HTMLElement_as_val(self->inner), "assignedElements"));
+jb_Array HTMLSlotElement_assignedElements0(HTMLSlotElement* self ) {
+    return em_Val_as(jb_Array, em_Val_call(HTMLElement_as_val(self->inner), "assignedElements"));
 }
 
 
-jb_Sequence HTMLSlotElement_assignedElements1(HTMLSlotElement* self , AssignedNodesOptions * options) {
-    return em_Val_as(jb_Sequence, em_Val_call(HTMLElement_as_val(self->inner), "assignedElements", em_Val_from(options)));
+jb_Array HTMLSlotElement_assignedElements1(HTMLSlotElement* self , AssignedNodesOptions * options) {
+    return em_Val_as(jb_Array, em_Val_call(HTMLElement_as_val(self->inner), "assignedElements", em_Val_from(options)));
 }
 
 

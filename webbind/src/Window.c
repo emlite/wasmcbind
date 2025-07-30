@@ -34,12 +34,12 @@
 DEFINE_EMLITE_TYPE(WindowPostMessageOptions, em_Val);
 
 
-jb_USVString WindowPostMessageOptions_targetOrigin(const WindowPostMessageOptions *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("targetOrigin")));
+jb_String WindowPostMessageOptions_targetOrigin(const WindowPostMessageOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("targetOrigin")));
 }
 
 
-void WindowPostMessageOptions_set_targetOrigin(WindowPostMessageOptions* self, jb_USVString * value) {
+void WindowPostMessageOptions_set_targetOrigin(WindowPostMessageOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("targetOrigin"), em_Val_from(value));
 }
 
@@ -58,24 +58,24 @@ void OpenFilePickerOptions_set_multiple(OpenFilePickerOptions* self, bool value)
 DEFINE_EMLITE_TYPE(SaveFilePickerOptions, em_Val);
 
 
-jb_USVString SaveFilePickerOptions_suggestedName(const SaveFilePickerOptions *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("suggestedName")));
+jb_String SaveFilePickerOptions_suggestedName(const SaveFilePickerOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("suggestedName")));
 }
 
 
-void SaveFilePickerOptions_set_suggestedName(SaveFilePickerOptions* self, jb_USVString * value) {
+void SaveFilePickerOptions_set_suggestedName(SaveFilePickerOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("suggestedName"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(DirectoryPickerOptions, em_Val);
 
 
-jb_DOMString DirectoryPickerOptions_id(const DirectoryPickerOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
+jb_String DirectoryPickerOptions_id(const DirectoryPickerOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
-void DirectoryPickerOptions_set_id(DirectoryPickerOptions* self, jb_DOMString * value) {
+void DirectoryPickerOptions_set_id(DirectoryPickerOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("id"), em_Val_from(value));
 }
 
@@ -102,12 +102,12 @@ void DirectoryPickerOptions_set_mode(DirectoryPickerOptions* self, FileSystemPer
 DEFINE_EMLITE_TYPE(QueryOptions, em_Val);
 
 
-jb_Sequence QueryOptions_postscriptNames(const QueryOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("postscriptNames")));
+jb_Array QueryOptions_postscriptNames(const QueryOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("postscriptNames")));
 }
 
 
-void QueryOptions_set_postscriptNames(QueryOptions* self, jb_Sequence * value) {
+void QueryOptions_set_postscriptNames(QueryOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("postscriptNames"), em_Val_from(value));
 }
 
@@ -141,12 +141,12 @@ Document Window_document(const Window *self) {
 }
 
 
-jb_DOMString Window_name(const Window *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
+jb_String Window_name(const Window *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void Window_set_name(Window* self, jb_DOMString * value) {
+void Window_set_name(Window* self, jb_String * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
@@ -201,12 +201,12 @@ BarProp Window_toolbar(const Window *self) {
 }
 
 
-jb_DOMString Window_status(const Window *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("status")));
+jb_String Window_status(const Window *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("status")));
 }
 
 
-void Window_set_status(Window* self, jb_DOMString * value) {
+void Window_set_status(Window* self, jb_String * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("status"), em_Val_from(value));
 }
 
@@ -276,17 +276,17 @@ jb_Any Window_open0(Window* self ) {
 }
 
 
-jb_Any Window_open1(Window* self , jb_USVString * url) {
+jb_Any Window_open1(Window* self , jb_String * url) {
     return em_Val_as(jb_Any, em_Val_call(EventTarget_as_val(self->inner), "open", em_Val_from(url)));
 }
 
 
-jb_Any Window_open2(Window* self , jb_USVString * url, jb_DOMString * target) {
+jb_Any Window_open2(Window* self , jb_String * url, jb_String * target) {
     return em_Val_as(jb_Any, em_Val_call(EventTarget_as_val(self->inner), "open", em_Val_from(url), em_Val_from(target)));
 }
 
 
-jb_Any Window_open3(Window* self , jb_USVString * url, jb_DOMString * target, jb_DOMString * features) {
+jb_Any Window_open3(Window* self , jb_String * url, jb_String * target, jb_String * features) {
     return em_Val_as(jb_Any, em_Val_call(EventTarget_as_val(self->inner), "open", em_Val_from(url), em_Val_from(target), em_Val_from(features)));
 }
 
@@ -306,7 +306,7 @@ bool Window_originAgentCluster(const Window *self) {
 }
 
 
-jb_Undefined Window_alert(Window* self , jb_DOMString * message) {
+jb_Undefined Window_alert(Window* self , jb_String * message) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "alert", em_Val_from(message)));
 }
 
@@ -316,23 +316,23 @@ bool Window_confirm0(Window* self ) {
 }
 
 
-bool Window_confirm1(Window* self , jb_DOMString * message) {
+bool Window_confirm1(Window* self , jb_String * message) {
     return em_Val_as(bool, em_Val_call(EventTarget_as_val(self->inner), "confirm", em_Val_from(message)));
 }
 
 
-jb_DOMString Window_prompt0(Window* self ) {
-    return em_Val_as(jb_DOMString, em_Val_call(EventTarget_as_val(self->inner), "prompt"));
+jb_String Window_prompt0(Window* self ) {
+    return em_Val_as(jb_String, em_Val_call(EventTarget_as_val(self->inner), "prompt"));
 }
 
 
-jb_DOMString Window_prompt1(Window* self , jb_DOMString * message) {
-    return em_Val_as(jb_DOMString, em_Val_call(EventTarget_as_val(self->inner), "prompt", em_Val_from(message)));
+jb_String Window_prompt1(Window* self , jb_String * message) {
+    return em_Val_as(jb_String, em_Val_call(EventTarget_as_val(self->inner), "prompt", em_Val_from(message)));
 }
 
 
-jb_DOMString Window_prompt2(Window* self , jb_DOMString * message, jb_DOMString * default_) {
-    return em_Val_as(jb_DOMString, em_Val_call(EventTarget_as_val(self->inner), "prompt", em_Val_from(message), em_Val_from(default_)));
+jb_String Window_prompt2(Window* self , jb_String * message, jb_String * default_) {
+    return em_Val_as(jb_String, em_Val_call(EventTarget_as_val(self->inner), "prompt", em_Val_from(message), em_Val_from(default_)));
 }
 
 
@@ -386,7 +386,7 @@ Viewport Window_viewport(const Window *self) {
 }
 
 
-MediaQueryList Window_matchMedia(Window* self , jb_CSSOMString * query) {
+MediaQueryList Window_matchMedia(Window* self , jb_String * query) {
     return em_Val_as(MediaQueryList, em_Val_call(EventTarget_as_val(self->inner), "matchMedia", em_Val_from(query)));
 }
 
@@ -506,12 +506,12 @@ CSSStyleProperties Window_getComputedStyle0(Window* self , Element * elt) {
 }
 
 
-CSSStyleProperties Window_getComputedStyle1(Window* self , Element * elt, jb_CSSOMString * pseudoElt) {
+CSSStyleProperties Window_getComputedStyle1(Window* self , Element * elt, jb_String * pseudoElt) {
     return em_Val_as(CSSStyleProperties, em_Val_call(EventTarget_as_val(self->inner), "getComputedStyle", em_Val_from(elt), em_Val_from(pseudoElt)));
 }
 
 
-jb_Promise Window_getDigitalGoodsService(Window* self , jb_DOMString * serviceProvider) {
+jb_Promise Window_getDigitalGoodsService(Window* self , jb_String * serviceProvider) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "getDigitalGoodsService", em_Val_from(serviceProvider)));
 }
 

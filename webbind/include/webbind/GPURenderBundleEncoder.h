@@ -18,15 +18,15 @@ GPURenderBundle GPURenderBundleEncoder_finish0(GPURenderBundleEncoder* self );
 
 GPURenderBundle GPURenderBundleEncoder_finish1(GPURenderBundleEncoder* self , GPURenderBundleDescriptor * descriptor);
 
-jb_USVString GPURenderBundleEncoder_label(const GPURenderBundleEncoder *self);
+jb_String GPURenderBundleEncoder_label(const GPURenderBundleEncoder *self);
 
-void GPURenderBundleEncoder_set_label(GPURenderBundleEncoder* self, jb_USVString * value);
+void GPURenderBundleEncoder_set_label(GPURenderBundleEncoder* self, jb_String * value);
 
-jb_Undefined GPURenderBundleEncoder_pushDebugGroup(GPURenderBundleEncoder* self , jb_USVString * groupLabel);
+jb_Undefined GPURenderBundleEncoder_pushDebugGroup(GPURenderBundleEncoder* self , jb_String * groupLabel);
 
 jb_Undefined GPURenderBundleEncoder_popDebugGroup(GPURenderBundleEncoder* self );
 
-jb_Undefined GPURenderBundleEncoder_insertDebugMarker(GPURenderBundleEncoder* self , jb_USVString * markerLabel);
+jb_Undefined GPURenderBundleEncoder_insertDebugMarker(GPURenderBundleEncoder* self , jb_String * markerLabel);
 
 jb_Undefined GPURenderBundleEncoder_setBindGroup(GPURenderBundleEncoder* self , jb_Any * index, GPUBindGroup * bindGroup, jb_Uint32Array * dynamicOffsetsData, jb_Any * dynamicOffsetsDataStart, jb_Any * dynamicOffsetsDataLength);
 

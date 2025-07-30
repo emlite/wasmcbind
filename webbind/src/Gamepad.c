@@ -51,8 +51,8 @@ void GamepadTouch_set_surfaceDimensions(GamepadTouch* self, DOMRectReadOnly * va
 DEFINE_EMLITE_TYPE(Gamepad, em_Val);
 
 
-jb_DOMString Gamepad_id(const Gamepad *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
+jb_String Gamepad_id(const Gamepad *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
@@ -76,18 +76,18 @@ GamepadMappingType Gamepad_mapping(const Gamepad *self) {
 }
 
 
-jb_FrozenArray Gamepad_axes(const Gamepad *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axes")));
+jb_Array Gamepad_axes(const Gamepad *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axes")));
 }
 
 
-jb_FrozenArray Gamepad_buttons(const Gamepad *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("buttons")));
+jb_Array Gamepad_buttons(const Gamepad *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("buttons")));
 }
 
 
-jb_FrozenArray Gamepad_touches(const Gamepad *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("touches")));
+jb_Array Gamepad_touches(const Gamepad *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("touches")));
 }
 
 
@@ -101,8 +101,8 @@ GamepadHand Gamepad_hand(const Gamepad *self) {
 }
 
 
-jb_FrozenArray Gamepad_hapticActuators(const Gamepad *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hapticActuators")));
+jb_Array Gamepad_hapticActuators(const Gamepad *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hapticActuators")));
 }
 
 

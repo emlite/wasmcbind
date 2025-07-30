@@ -16,12 +16,12 @@ HTMLFormElement HTMLLabelElement_form(const HTMLLabelElement *self) {
 }
 
 
-jb_DOMString HTMLLabelElement_htmlFor(const HTMLLabelElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("htmlFor")));
+jb_String HTMLLabelElement_htmlFor(const HTMLLabelElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("htmlFor")));
 }
 
 
-void HTMLLabelElement_set_htmlFor(HTMLLabelElement* self, jb_DOMString * value) {
+void HTMLLabelElement_set_htmlFor(HTMLLabelElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("htmlFor"), em_Val_from(value));
 }
 

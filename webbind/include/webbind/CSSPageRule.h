@@ -10,8 +10,8 @@ typedef struct CSSPageDescriptors CSSPageDescriptors;
 
 DECLARE_EMLITE_TYPE(CSSPageRule, CSSGroupingRule);
 
-jb_CSSOMString CSSPageRule_selectorText(const CSSPageRule *self);
+jb_String CSSPageRule_selectorText(const CSSPageRule *self);
 
-void CSSPageRule_set_selectorText(CSSPageRule* self, jb_CSSOMString * value);
+void CSSPageRule_set_selectorText(CSSPageRule* self, jb_String * value);
 
 CSSPageDescriptors CSSPageRule_style(const CSSPageRule *self);

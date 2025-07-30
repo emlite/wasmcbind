@@ -10,6 +10,6 @@ typedef struct SharedStorageSetMethodOptions SharedStorageSetMethodOptions;
 
 DECLARE_EMLITE_TYPE(SharedStorageSetMethod, SharedStorageModifierMethod);
 
-SharedStorageSetMethod SharedStorageSetMethod_new0(jb_DOMString * key, jb_DOMString * value);
+SharedStorageSetMethod SharedStorageSetMethod_new0(jb_String * key, jb_String * value);
 
-SharedStorageSetMethod SharedStorageSetMethod_new1(jb_DOMString * key, jb_DOMString * value, SharedStorageSetMethodOptions * options);
+SharedStorageSetMethod SharedStorageSetMethod_new1(jb_String * key, jb_String * value, SharedStorageSetMethodOptions * options);

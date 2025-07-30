@@ -13,30 +13,30 @@ typedef struct BluetoothLEScanOptions BluetoothLEScanOptions;
 
 DECLARE_EMLITE_TYPE(RequestDeviceOptions, em_Val);
 
-jb_Sequence RequestDeviceOptions_filters(const RequestDeviceOptions *self);
+jb_Array RequestDeviceOptions_filters(const RequestDeviceOptions *self);
 
-void RequestDeviceOptions_set_filters(RequestDeviceOptions* self, jb_Sequence * value);
+void RequestDeviceOptions_set_filters(RequestDeviceOptions* self, jb_Array * value);
 
-jb_Sequence RequestDeviceOptions_exclusionFilters(const RequestDeviceOptions *self);
+jb_Array RequestDeviceOptions_exclusionFilters(const RequestDeviceOptions *self);
 
-void RequestDeviceOptions_set_exclusionFilters(RequestDeviceOptions* self, jb_Sequence * value);
+void RequestDeviceOptions_set_exclusionFilters(RequestDeviceOptions* self, jb_Array * value);
 
-jb_Sequence RequestDeviceOptions_optionalServices(const RequestDeviceOptions *self);
+jb_Array RequestDeviceOptions_optionalServices(const RequestDeviceOptions *self);
 
-void RequestDeviceOptions_set_optionalServices(RequestDeviceOptions* self, jb_Sequence * value);
+void RequestDeviceOptions_set_optionalServices(RequestDeviceOptions* self, jb_Array * value);
 
-jb_Sequence RequestDeviceOptions_optionalManufacturerData(const RequestDeviceOptions *self);
+jb_Array RequestDeviceOptions_optionalManufacturerData(const RequestDeviceOptions *self);
 
-void RequestDeviceOptions_set_optionalManufacturerData(RequestDeviceOptions* self, jb_Sequence * value);
+void RequestDeviceOptions_set_optionalManufacturerData(RequestDeviceOptions* self, jb_Array * value);
 
 bool RequestDeviceOptions_acceptAllDevices(const RequestDeviceOptions *self);
 
 void RequestDeviceOptions_set_acceptAllDevices(RequestDeviceOptions* self, bool value);
 DECLARE_EMLITE_TYPE(BluetoothLEScanOptions, em_Val);
 
-jb_Sequence BluetoothLEScanOptions_filters(const BluetoothLEScanOptions *self);
+jb_Array BluetoothLEScanOptions_filters(const BluetoothLEScanOptions *self);
 
-void BluetoothLEScanOptions_set_filters(BluetoothLEScanOptions* self, jb_Sequence * value);
+void BluetoothLEScanOptions_set_filters(BluetoothLEScanOptions* self, jb_Array * value);
 
 bool BluetoothLEScanOptions_keepRepeatedDevices(const BluetoothLEScanOptions *self);
 

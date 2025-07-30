@@ -10,16 +10,16 @@ typedef struct CSSStyleSheet CSSStyleSheet;
 
 DECLARE_EMLITE_TYPE(SVGStyleElement, SVGElement);
 
-jb_DOMString SVGStyleElement_type(const SVGStyleElement *self);
+jb_String SVGStyleElement_type(const SVGStyleElement *self);
 
-void SVGStyleElement_set_type(SVGStyleElement* self, jb_DOMString * value);
+void SVGStyleElement_set_type(SVGStyleElement* self, jb_String * value);
 
-jb_DOMString SVGStyleElement_media(const SVGStyleElement *self);
+jb_String SVGStyleElement_media(const SVGStyleElement *self);
 
-void SVGStyleElement_set_media(SVGStyleElement* self, jb_DOMString * value);
+void SVGStyleElement_set_media(SVGStyleElement* self, jb_String * value);
 
-jb_DOMString SVGStyleElement_title(const SVGStyleElement *self);
+jb_String SVGStyleElement_title(const SVGStyleElement *self);
 
-void SVGStyleElement_set_title(SVGStyleElement* self, jb_DOMString * value);
+void SVGStyleElement_set_title(SVGStyleElement* self, jb_String * value);
 
 CSSStyleSheet SVGStyleElement_sheet(const SVGStyleElement *self);

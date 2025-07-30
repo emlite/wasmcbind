@@ -10,12 +10,12 @@ HTMLTimeElement HTMLTimeElement_new() {
       }
 
 
-jb_DOMString HTMLTimeElement_dateTime(const HTMLTimeElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("dateTime")));
+jb_String HTMLTimeElement_dateTime(const HTMLTimeElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("dateTime")));
 }
 
 
-void HTMLTimeElement_set_dateTime(HTMLTimeElement* self, jb_DOMString * value) {
+void HTMLTimeElement_set_dateTime(HTMLTimeElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("dateTime"), em_Val_from(value));
 }
 

@@ -10,12 +10,12 @@ HTMLHeadingElement HTMLHeadingElement_new() {
       }
 
 
-jb_DOMString HTMLHeadingElement_align(const HTMLHeadingElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
+jb_String HTMLHeadingElement_align(const HTMLHeadingElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLHeadingElement_set_align(HTMLHeadingElement* self, jb_DOMString * value) {
+void HTMLHeadingElement_set_align(HTMLHeadingElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 

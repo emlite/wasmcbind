@@ -58,12 +58,12 @@ void PrivateToken_set_refreshPolicy(PrivateToken* self, RefreshPolicy * value) {
 }
 
 
-jb_Sequence PrivateToken_issuers(const PrivateToken *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("issuers")));
+jb_Array PrivateToken_issuers(const PrivateToken *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("issuers")));
 }
 
 
-void PrivateToken_set_issuers(PrivateToken* self, jb_Sequence * value) {
+void PrivateToken_set_issuers(PrivateToken* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("issuers"), em_Val_from(value));
 }
 
@@ -91,22 +91,22 @@ unsigned short XMLHttpRequest_readyState(const XMLHttpRequest *self) {
 }
 
 
-jb_Undefined XMLHttpRequest_open0(XMLHttpRequest* self , jb_ByteString * method, jb_USVString * url, bool async) {
+jb_Undefined XMLHttpRequest_open0(XMLHttpRequest* self , jb_String * method, jb_String * url, bool async) {
     return em_Val_as(jb_Undefined, em_Val_call(XMLHttpRequestEventTarget_as_val(self->inner), "open", em_Val_from(method), em_Val_from(url), em_Val_from(async)));
 }
 
 
-jb_Undefined XMLHttpRequest_open1(XMLHttpRequest* self , jb_ByteString * method, jb_USVString * url, bool async, jb_USVString * username) {
+jb_Undefined XMLHttpRequest_open1(XMLHttpRequest* self , jb_String * method, jb_String * url, bool async, jb_String * username) {
     return em_Val_as(jb_Undefined, em_Val_call(XMLHttpRequestEventTarget_as_val(self->inner), "open", em_Val_from(method), em_Val_from(url), em_Val_from(async), em_Val_from(username)));
 }
 
 
-jb_Undefined XMLHttpRequest_open2(XMLHttpRequest* self , jb_ByteString * method, jb_USVString * url, bool async, jb_USVString * username, jb_USVString * password) {
+jb_Undefined XMLHttpRequest_open2(XMLHttpRequest* self , jb_String * method, jb_String * url, bool async, jb_String * username, jb_String * password) {
     return em_Val_as(jb_Undefined, em_Val_call(XMLHttpRequestEventTarget_as_val(self->inner), "open", em_Val_from(method), em_Val_from(url), em_Val_from(async), em_Val_from(username), em_Val_from(password)));
 }
 
 
-jb_Undefined XMLHttpRequest_setRequestHeader(XMLHttpRequest* self , jb_ByteString * name, jb_ByteString * value) {
+jb_Undefined XMLHttpRequest_setRequestHeader(XMLHttpRequest* self , jb_String * name, jb_String * value) {
     return em_Val_as(jb_Undefined, em_Val_call(XMLHttpRequestEventTarget_as_val(self->inner), "setRequestHeader", em_Val_from(name), em_Val_from(value)));
 }
 
@@ -151,8 +151,8 @@ jb_Undefined XMLHttpRequest_abort(XMLHttpRequest* self ) {
 }
 
 
-jb_USVString XMLHttpRequest_responseURL(const XMLHttpRequest *self) {
-    return em_Val_as(jb_USVString, em_Val_get(XMLHttpRequestEventTarget_as_val(self->inner), em_Val_from("responseURL")));
+jb_String XMLHttpRequest_responseURL(const XMLHttpRequest *self) {
+    return em_Val_as(jb_String, em_Val_get(XMLHttpRequestEventTarget_as_val(self->inner), em_Val_from("responseURL")));
 }
 
 
@@ -161,22 +161,22 @@ unsigned short XMLHttpRequest_status(const XMLHttpRequest *self) {
 }
 
 
-jb_ByteString XMLHttpRequest_statusText(const XMLHttpRequest *self) {
-    return em_Val_as(jb_ByteString, em_Val_get(XMLHttpRequestEventTarget_as_val(self->inner), em_Val_from("statusText")));
+jb_String XMLHttpRequest_statusText(const XMLHttpRequest *self) {
+    return em_Val_as(jb_String, em_Val_get(XMLHttpRequestEventTarget_as_val(self->inner), em_Val_from("statusText")));
 }
 
 
-jb_ByteString XMLHttpRequest_getResponseHeader(XMLHttpRequest* self , jb_ByteString * name) {
-    return em_Val_as(jb_ByteString, em_Val_call(XMLHttpRequestEventTarget_as_val(self->inner), "getResponseHeader", em_Val_from(name)));
+jb_String XMLHttpRequest_getResponseHeader(XMLHttpRequest* self , jb_String * name) {
+    return em_Val_as(jb_String, em_Val_call(XMLHttpRequestEventTarget_as_val(self->inner), "getResponseHeader", em_Val_from(name)));
 }
 
 
-jb_ByteString XMLHttpRequest_getAllResponseHeaders(XMLHttpRequest* self ) {
-    return em_Val_as(jb_ByteString, em_Val_call(XMLHttpRequestEventTarget_as_val(self->inner), "getAllResponseHeaders"));
+jb_String XMLHttpRequest_getAllResponseHeaders(XMLHttpRequest* self ) {
+    return em_Val_as(jb_String, em_Val_call(XMLHttpRequestEventTarget_as_val(self->inner), "getAllResponseHeaders"));
 }
 
 
-jb_Undefined XMLHttpRequest_overrideMimeType(XMLHttpRequest* self , jb_DOMString * mime) {
+jb_Undefined XMLHttpRequest_overrideMimeType(XMLHttpRequest* self , jb_String * mime) {
     return em_Val_as(jb_Undefined, em_Val_call(XMLHttpRequestEventTarget_as_val(self->inner), "overrideMimeType", em_Val_from(mime)));
 }
 
@@ -196,8 +196,8 @@ jb_Any XMLHttpRequest_response(const XMLHttpRequest *self) {
 }
 
 
-jb_USVString XMLHttpRequest_responseText(const XMLHttpRequest *self) {
-    return em_Val_as(jb_USVString, em_Val_get(XMLHttpRequestEventTarget_as_val(self->inner), em_Val_from("responseText")));
+jb_String XMLHttpRequest_responseText(const XMLHttpRequest *self) {
+    return em_Val_as(jb_String, em_Val_get(XMLHttpRequestEventTarget_as_val(self->inner), em_Val_from("responseText")));
 }
 
 

@@ -4,42 +4,42 @@
 DEFINE_EMLITE_TYPE(CookieListItem, em_Val);
 
 
-jb_USVString CookieListItem_name(const CookieListItem *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String CookieListItem_name(const CookieListItem *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void CookieListItem_set_name(CookieListItem* self, jb_USVString * value) {
+void CookieListItem_set_name(CookieListItem* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_USVString CookieListItem_value(const CookieListItem *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("value")));
+jb_String CookieListItem_value(const CookieListItem *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("value")));
 }
 
 
-void CookieListItem_set_value(CookieListItem* self, jb_USVString * value) {
+void CookieListItem_set_value(CookieListItem* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
 }
 
 
-jb_USVString CookieListItem_domain(const CookieListItem *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("domain")));
+jb_String CookieListItem_domain(const CookieListItem *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("domain")));
 }
 
 
-void CookieListItem_set_domain(CookieListItem* self, jb_USVString * value) {
+void CookieListItem_set_domain(CookieListItem* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("domain"), em_Val_from(value));
 }
 
 
-jb_USVString CookieListItem_path(const CookieListItem *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("path")));
+jb_String CookieListItem_path(const CookieListItem *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("path")));
 }
 
 
-void CookieListItem_set_path(CookieListItem* self, jb_USVString * value) {
+void CookieListItem_set_path(CookieListItem* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("path"), em_Val_from(value));
 }
 
@@ -86,44 +86,44 @@ void CookieListItem_set_partitioned(CookieListItem* self, bool value) {
 DEFINE_EMLITE_TYPE(CookieStoreGetOptions, em_Val);
 
 
-jb_USVString CookieStoreGetOptions_name(const CookieStoreGetOptions *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String CookieStoreGetOptions_name(const CookieStoreGetOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void CookieStoreGetOptions_set_name(CookieStoreGetOptions* self, jb_USVString * value) {
+void CookieStoreGetOptions_set_name(CookieStoreGetOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_USVString CookieStoreGetOptions_url(const CookieStoreGetOptions *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
+jb_String CookieStoreGetOptions_url(const CookieStoreGetOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 
-void CookieStoreGetOptions_set_url(CookieStoreGetOptions* self, jb_USVString * value) {
+void CookieStoreGetOptions_set_url(CookieStoreGetOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("url"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(CookieInit, em_Val);
 
 
-jb_USVString CookieInit_name(const CookieInit *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String CookieInit_name(const CookieInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void CookieInit_set_name(CookieInit* self, jb_USVString * value) {
+void CookieInit_set_name(CookieInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_USVString CookieInit_value(const CookieInit *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("value")));
+jb_String CookieInit_value(const CookieInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("value")));
 }
 
 
-void CookieInit_set_value(CookieInit* self, jb_USVString * value) {
+void CookieInit_set_value(CookieInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
 }
 
@@ -138,22 +138,22 @@ void CookieInit_set_expires(CookieInit* self, jb_Any * value) {
 }
 
 
-jb_USVString CookieInit_domain(const CookieInit *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("domain")));
+jb_String CookieInit_domain(const CookieInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("domain")));
 }
 
 
-void CookieInit_set_domain(CookieInit* self, jb_USVString * value) {
+void CookieInit_set_domain(CookieInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("domain"), em_Val_from(value));
 }
 
 
-jb_USVString CookieInit_path(const CookieInit *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("path")));
+jb_String CookieInit_path(const CookieInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("path")));
 }
 
 
-void CookieInit_set_path(CookieInit* self, jb_USVString * value) {
+void CookieInit_set_path(CookieInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("path"), em_Val_from(value));
 }
 
@@ -180,32 +180,32 @@ void CookieInit_set_partitioned(CookieInit* self, bool value) {
 DEFINE_EMLITE_TYPE(CookieStoreDeleteOptions, em_Val);
 
 
-jb_USVString CookieStoreDeleteOptions_name(const CookieStoreDeleteOptions *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String CookieStoreDeleteOptions_name(const CookieStoreDeleteOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void CookieStoreDeleteOptions_set_name(CookieStoreDeleteOptions* self, jb_USVString * value) {
+void CookieStoreDeleteOptions_set_name(CookieStoreDeleteOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_USVString CookieStoreDeleteOptions_domain(const CookieStoreDeleteOptions *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("domain")));
+jb_String CookieStoreDeleteOptions_domain(const CookieStoreDeleteOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("domain")));
 }
 
 
-void CookieStoreDeleteOptions_set_domain(CookieStoreDeleteOptions* self, jb_USVString * value) {
+void CookieStoreDeleteOptions_set_domain(CookieStoreDeleteOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("domain"), em_Val_from(value));
 }
 
 
-jb_USVString CookieStoreDeleteOptions_path(const CookieStoreDeleteOptions *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("path")));
+jb_String CookieStoreDeleteOptions_path(const CookieStoreDeleteOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("path")));
 }
 
 
-void CookieStoreDeleteOptions_set_path(CookieStoreDeleteOptions* self, jb_USVString * value) {
+void CookieStoreDeleteOptions_set_path(CookieStoreDeleteOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("path"), em_Val_from(value));
 }
 

@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(CharacterBoundsUpdateEvent, Event);
 
 
-CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new0(jb_DOMString * type) {
+CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("CharacterBoundsUpdateEvent") , em_Val_from(type));
         return CharacterBoundsUpdateEvent_from_val(&vv);
       }
 
 
-CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new1(jb_DOMString * type, jb_Any * options) {
+CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new1(jb_String * type, jb_Any * options) {
         em_Val vv = em_Val_new(em_Val_global("CharacterBoundsUpdateEvent") , em_Val_from(type), em_Val_from(options));
         return CharacterBoundsUpdateEvent_from_val(&vv);
       }

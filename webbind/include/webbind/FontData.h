@@ -11,10 +11,10 @@ DECLARE_EMLITE_TYPE(FontData, em_Val);
 
 jb_Promise FontData_blob(FontData* self );
 
-jb_USVString FontData_postscriptName(const FontData *self);
+jb_String FontData_postscriptName(const FontData *self);
 
-jb_USVString FontData_fullName(const FontData *self);
+jb_String FontData_fullName(const FontData *self);
 
-jb_USVString FontData_family(const FontData *self);
+jb_String FontData_family(const FontData *self);
 
-jb_USVString FontData_style(const FontData *self);
+jb_String FontData_style(const FontData *self);

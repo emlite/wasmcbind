@@ -8,25 +8,25 @@
 
 DECLARE_EMLITE_TYPE(SecurityPolicyViolationEvent, Event);
 
-SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new0(jb_DOMString * type);
+SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new0(jb_String * type);
 
-SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
-jb_USVString SecurityPolicyViolationEvent_documentURI(const SecurityPolicyViolationEvent *self);
+jb_String SecurityPolicyViolationEvent_documentURI(const SecurityPolicyViolationEvent *self);
 
-jb_USVString SecurityPolicyViolationEvent_referrer(const SecurityPolicyViolationEvent *self);
+jb_String SecurityPolicyViolationEvent_referrer(const SecurityPolicyViolationEvent *self);
 
-jb_USVString SecurityPolicyViolationEvent_blockedURI(const SecurityPolicyViolationEvent *self);
+jb_String SecurityPolicyViolationEvent_blockedURI(const SecurityPolicyViolationEvent *self);
 
-jb_DOMString SecurityPolicyViolationEvent_effectiveDirective(const SecurityPolicyViolationEvent *self);
+jb_String SecurityPolicyViolationEvent_effectiveDirective(const SecurityPolicyViolationEvent *self);
 
-jb_DOMString SecurityPolicyViolationEvent_violatedDirective(const SecurityPolicyViolationEvent *self);
+jb_String SecurityPolicyViolationEvent_violatedDirective(const SecurityPolicyViolationEvent *self);
 
-jb_DOMString SecurityPolicyViolationEvent_originalPolicy(const SecurityPolicyViolationEvent *self);
+jb_String SecurityPolicyViolationEvent_originalPolicy(const SecurityPolicyViolationEvent *self);
 
-jb_USVString SecurityPolicyViolationEvent_sourceFile(const SecurityPolicyViolationEvent *self);
+jb_String SecurityPolicyViolationEvent_sourceFile(const SecurityPolicyViolationEvent *self);
 
-jb_DOMString SecurityPolicyViolationEvent_sample(const SecurityPolicyViolationEvent *self);
+jb_String SecurityPolicyViolationEvent_sample(const SecurityPolicyViolationEvent *self);
 
 SecurityPolicyViolationEventDisposition SecurityPolicyViolationEvent_disposition(const SecurityPolicyViolationEvent *self);
 

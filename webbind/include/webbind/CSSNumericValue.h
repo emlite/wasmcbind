@@ -60,10 +60,10 @@ CSSNumericValue CSSNumericValue_max(CSSNumericValue* self , jb_Any * values);
 
 bool CSSNumericValue_equals(CSSNumericValue* self , jb_Any * value);
 
-CSSUnitValue CSSNumericValue_to(CSSNumericValue* self , jb_USVString * unit);
+CSSUnitValue CSSNumericValue_to(CSSNumericValue* self , jb_String * unit);
 
-CSSMathSum CSSNumericValue_toSum(CSSNumericValue* self , jb_USVString * units);
+CSSMathSum CSSNumericValue_toSum(CSSNumericValue* self , jb_String * units);
 
 CSSNumericType CSSNumericValue_type(CSSNumericValue* self );
 
-CSSNumericValue CSSNumericValue_parse(CSSNumericValue* self , jb_USVString * cssText);
+CSSNumericValue CSSNumericValue_parse(CSSNumericValue* self , jb_String * cssText);

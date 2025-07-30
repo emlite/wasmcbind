@@ -16,7 +16,7 @@ Text Text_new0() {
       }
 
 
-Text Text_new1(jb_DOMString * data) {
+Text Text_new1(jb_String * data) {
         em_Val vv = em_Val_new(em_Val_global("Text") , em_Val_from(data));
         return Text_from_val(&vv);
       }
@@ -27,18 +27,18 @@ Text Text_splitText(Text* self , unsigned long offset) {
 }
 
 
-jb_DOMString Text_wholeText(const Text *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(CharacterData_as_val(self->inner), em_Val_from("wholeText")));
+jb_String Text_wholeText(const Text *self) {
+    return em_Val_as(jb_String, em_Val_get(CharacterData_as_val(self->inner), em_Val_from("wholeText")));
 }
 
 
-jb_Sequence Text_getBoxQuads0(Text* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(CharacterData_as_val(self->inner), "getBoxQuads"));
+jb_Array Text_getBoxQuads0(Text* self ) {
+    return em_Val_as(jb_Array, em_Val_call(CharacterData_as_val(self->inner), "getBoxQuads"));
 }
 
 
-jb_Sequence Text_getBoxQuads1(Text* self , BoxQuadOptions * options) {
-    return em_Val_as(jb_Sequence, em_Val_call(CharacterData_as_val(self->inner), "getBoxQuads", em_Val_from(options)));
+jb_Array Text_getBoxQuads1(Text* self , BoxQuadOptions * options) {
+    return em_Val_as(jb_Array, em_Val_call(CharacterData_as_val(self->inner), "getBoxQuads", em_Val_from(options)));
 }
 
 

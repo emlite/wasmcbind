@@ -15,13 +15,13 @@ unsigned long LargestContentfulPaint_size(const LargestContentfulPaint *self) {
 }
 
 
-jb_DOMString LargestContentfulPaint_id(const LargestContentfulPaint *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("id")));
+jb_String LargestContentfulPaint_id(const LargestContentfulPaint *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("id")));
 }
 
 
-jb_DOMString LargestContentfulPaint_url(const LargestContentfulPaint *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("url")));
+jb_String LargestContentfulPaint_url(const LargestContentfulPaint *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("url")));
 }
 
 

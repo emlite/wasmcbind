@@ -17,7 +17,7 @@ DECLARE_EMLITE_TYPE(FileSystemHandle, em_Val);
 
 FileSystemHandleKind FileSystemHandle_kind(const FileSystemHandle *self);
 
-jb_USVString FileSystemHandle_name(const FileSystemHandle *self);
+jb_String FileSystemHandle_name(const FileSystemHandle *self);
 
 jb_Promise FileSystemHandle_isSameEntry(FileSystemHandle* self , FileSystemHandle * other);
 

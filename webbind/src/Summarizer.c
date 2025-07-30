@@ -26,12 +26,12 @@ void SummarizerCreateOptions_set_monitor(SummarizerCreateOptions* self, jb_Funct
 }
 
 
-jb_DOMString SummarizerCreateOptions_sharedContext(const SummarizerCreateOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
+jb_String SummarizerCreateOptions_sharedContext(const SummarizerCreateOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
 }
 
 
-void SummarizerCreateOptions_set_sharedContext(SummarizerCreateOptions* self, jb_DOMString * value) {
+void SummarizerCreateOptions_set_sharedContext(SummarizerCreateOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sharedContext"), em_Val_from(value));
 }
 
@@ -68,32 +68,32 @@ void SummarizerCreateCoreOptions_set_length(SummarizerCreateCoreOptions* self, S
 }
 
 
-jb_Sequence SummarizerCreateCoreOptions_expectedInputLanguages(const SummarizerCreateCoreOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
+jb_Array SummarizerCreateCoreOptions_expectedInputLanguages(const SummarizerCreateCoreOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
 }
 
 
-void SummarizerCreateCoreOptions_set_expectedInputLanguages(SummarizerCreateCoreOptions* self, jb_Sequence * value) {
+void SummarizerCreateCoreOptions_set_expectedInputLanguages(SummarizerCreateCoreOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages"), em_Val_from(value));
 }
 
 
-jb_Sequence SummarizerCreateCoreOptions_expectedContextLanguages(const SummarizerCreateCoreOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
+jb_Array SummarizerCreateCoreOptions_expectedContextLanguages(const SummarizerCreateCoreOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
 }
 
 
-void SummarizerCreateCoreOptions_set_expectedContextLanguages(SummarizerCreateCoreOptions* self, jb_Sequence * value) {
+void SummarizerCreateCoreOptions_set_expectedContextLanguages(SummarizerCreateCoreOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages"), em_Val_from(value));
 }
 
 
-jb_DOMString SummarizerCreateCoreOptions_outputLanguage(const SummarizerCreateCoreOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
+jb_String SummarizerCreateCoreOptions_outputLanguage(const SummarizerCreateCoreOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
 }
 
 
-void SummarizerCreateCoreOptions_set_outputLanguage(SummarizerCreateCoreOptions* self, jb_DOMString * value) {
+void SummarizerCreateCoreOptions_set_outputLanguage(SummarizerCreateCoreOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("outputLanguage"), em_Val_from(value));
 }
 
@@ -110,12 +110,12 @@ void SummarizerSummarizeOptions_set_signal(SummarizerSummarizeOptions* self, Abo
 }
 
 
-jb_DOMString SummarizerSummarizeOptions_context(const SummarizerSummarizeOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("context")));
+jb_String SummarizerSummarizeOptions_context(const SummarizerSummarizeOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("context")));
 }
 
 
-void SummarizerSummarizeOptions_set_context(SummarizerSummarizeOptions* self, jb_DOMString * value) {
+void SummarizerSummarizeOptions_set_context(SummarizerSummarizeOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("context"), em_Val_from(value));
 }
 
@@ -142,28 +142,28 @@ jb_Promise Summarizer_availability1(Summarizer* self , SummarizerCreateCoreOptio
 }
 
 
-jb_Promise Summarizer_summarize0(Summarizer* self , jb_DOMString * input) {
+jb_Promise Summarizer_summarize0(Summarizer* self , jb_String * input) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "summarize", em_Val_from(input)));
 }
 
 
-jb_Promise Summarizer_summarize1(Summarizer* self , jb_DOMString * input, SummarizerSummarizeOptions * options) {
+jb_Promise Summarizer_summarize1(Summarizer* self , jb_String * input, SummarizerSummarizeOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "summarize", em_Val_from(input), em_Val_from(options)));
 }
 
 
-ReadableStream Summarizer_summarizeStreaming0(Summarizer* self , jb_DOMString * input) {
+ReadableStream Summarizer_summarizeStreaming0(Summarizer* self , jb_String * input) {
     return em_Val_as(ReadableStream, em_Val_call(em_Val_as_val(self->inner), "summarizeStreaming", em_Val_from(input)));
 }
 
 
-ReadableStream Summarizer_summarizeStreaming1(Summarizer* self , jb_DOMString * input, SummarizerSummarizeOptions * options) {
+ReadableStream Summarizer_summarizeStreaming1(Summarizer* self , jb_String * input, SummarizerSummarizeOptions * options) {
     return em_Val_as(ReadableStream, em_Val_call(em_Val_as_val(self->inner), "summarizeStreaming", em_Val_from(input), em_Val_from(options)));
 }
 
 
-jb_DOMString Summarizer_sharedContext(const Summarizer *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
+jb_String Summarizer_sharedContext(const Summarizer *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
 }
 
 
@@ -182,27 +182,27 @@ SummarizerLength Summarizer_length(const Summarizer *self) {
 }
 
 
-jb_FrozenArray Summarizer_expectedInputLanguages(const Summarizer *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
+jb_Array Summarizer_expectedInputLanguages(const Summarizer *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
 }
 
 
-jb_FrozenArray Summarizer_expectedContextLanguages(const Summarizer *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
+jb_Array Summarizer_expectedContextLanguages(const Summarizer *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
 }
 
 
-jb_DOMString Summarizer_outputLanguage(const Summarizer *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
+jb_String Summarizer_outputLanguage(const Summarizer *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
 }
 
 
-jb_Promise Summarizer_measureInputUsage0(Summarizer* self , jb_DOMString * input) {
+jb_Promise Summarizer_measureInputUsage0(Summarizer* self , jb_String * input) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "measureInputUsage", em_Val_from(input)));
 }
 
 
-jb_Promise Summarizer_measureInputUsage1(Summarizer* self , jb_DOMString * input, SummarizerSummarizeOptions * options) {
+jb_Promise Summarizer_measureInputUsage1(Summarizer* self , jb_String * input, SummarizerSummarizeOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "measureInputUsage", em_Val_from(input), em_Val_from(options)));
 }
 

@@ -23,10 +23,10 @@ jb_Any StorageBucketOptions_expires(const StorageBucketOptions *self);
 void StorageBucketOptions_set_expires(StorageBucketOptions* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(StorageBucketManager, em_Val);
 
-jb_Promise StorageBucketManager_open0(StorageBucketManager* self , jb_DOMString * name);
+jb_Promise StorageBucketManager_open0(StorageBucketManager* self , jb_String * name);
 
-jb_Promise StorageBucketManager_open1(StorageBucketManager* self , jb_DOMString * name, StorageBucketOptions * options);
+jb_Promise StorageBucketManager_open1(StorageBucketManager* self , jb_String * name, StorageBucketOptions * options);
 
 jb_Promise StorageBucketManager_keys(StorageBucketManager* self );
 
-jb_Promise StorageBucketManager_delete_(StorageBucketManager* self , jb_DOMString * name);
+jb_Promise StorageBucketManager_delete_(StorageBucketManager* self , jb_String * name);

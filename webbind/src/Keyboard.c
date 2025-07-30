@@ -10,7 +10,7 @@ jb_Promise Keyboard_lock0(Keyboard* self ) {
 }
 
 
-jb_Promise Keyboard_lock1(Keyboard* self , jb_Sequence * keyCodes) {
+jb_Promise Keyboard_lock1(Keyboard* self , jb_Array * keyCodes) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "lock", em_Val_from(keyCodes)));
 }
 

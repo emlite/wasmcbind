@@ -49,12 +49,12 @@ jb_Undefined WebGL2RenderingContext_framebufferTextureLayer(WebGL2RenderingConte
 }
 
 
-jb_Undefined WebGL2RenderingContext_invalidateFramebuffer(WebGL2RenderingContext* self , jb_Any * target, jb_Sequence * attachments) {
+jb_Undefined WebGL2RenderingContext_invalidateFramebuffer(WebGL2RenderingContext* self , jb_Any * target, jb_Array * attachments) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "invalidateFramebuffer", em_Val_from(target), em_Val_from(attachments)));
 }
 
 
-jb_Undefined WebGL2RenderingContext_invalidateSubFramebuffer(WebGL2RenderingContext* self , jb_Any * target, jb_Sequence * attachments, jb_Any * x, jb_Any * y, jb_Any * width, jb_Any * height) {
+jb_Undefined WebGL2RenderingContext_invalidateSubFramebuffer(WebGL2RenderingContext* self , jb_Any * target, jb_Array * attachments, jb_Any * x, jb_Any * y, jb_Any * width, jb_Any * height) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "invalidateSubFramebuffer", em_Val_from(target), em_Val_from(attachments), em_Val_from(x), em_Val_from(y), em_Val_from(width), em_Val_from(height)));
 }
 
@@ -134,7 +134,7 @@ jb_Undefined WebGL2RenderingContext_compressedTexSubImage3D2(WebGL2RenderingCont
 }
 
 
-jb_Any WebGL2RenderingContext_getFragDataLocation(WebGL2RenderingContext* self , WebGLProgram * program, jb_DOMString * name) {
+jb_Any WebGL2RenderingContext_getFragDataLocation(WebGL2RenderingContext* self , WebGLProgram * program, jb_String * name) {
     return em_Val_as(jb_Any, em_Val_call(em_Val_as_val(self->inner), "getFragDataLocation", em_Val_from(program), em_Val_from(name)));
 }
 
@@ -354,7 +354,7 @@ jb_Undefined WebGL2RenderingContext_drawRangeElements(WebGL2RenderingContext* se
 }
 
 
-jb_Undefined WebGL2RenderingContext_drawBuffers(WebGL2RenderingContext* self , jb_Sequence * buffers) {
+jb_Undefined WebGL2RenderingContext_drawBuffers(WebGL2RenderingContext* self , jb_Array * buffers) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "drawBuffers", em_Val_from(buffers)));
 }
 
@@ -524,7 +524,7 @@ jb_Undefined WebGL2RenderingContext_endTransformFeedback(WebGL2RenderingContext*
 }
 
 
-jb_Undefined WebGL2RenderingContext_transformFeedbackVaryings(WebGL2RenderingContext* self , WebGLProgram * program, jb_Sequence * varyings, jb_Any * bufferMode) {
+jb_Undefined WebGL2RenderingContext_transformFeedbackVaryings(WebGL2RenderingContext* self , WebGLProgram * program, jb_Array * varyings, jb_Any * bufferMode) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "transformFeedbackVaryings", em_Val_from(program), em_Val_from(varyings), em_Val_from(bufferMode)));
 }
 
@@ -559,17 +559,17 @@ jb_Any WebGL2RenderingContext_getIndexedParameter(WebGL2RenderingContext* self ,
 }
 
 
-jb_Sequence WebGL2RenderingContext_getUniformIndices(WebGL2RenderingContext* self , WebGLProgram * program, jb_Sequence * uniformNames) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getUniformIndices", em_Val_from(program), em_Val_from(uniformNames)));
+jb_Array WebGL2RenderingContext_getUniformIndices(WebGL2RenderingContext* self , WebGLProgram * program, jb_Array * uniformNames) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getUniformIndices", em_Val_from(program), em_Val_from(uniformNames)));
 }
 
 
-jb_Any WebGL2RenderingContext_getActiveUniforms(WebGL2RenderingContext* self , WebGLProgram * program, jb_Sequence * uniformIndices, jb_Any * pname) {
+jb_Any WebGL2RenderingContext_getActiveUniforms(WebGL2RenderingContext* self , WebGLProgram * program, jb_Array * uniformIndices, jb_Any * pname) {
     return em_Val_as(jb_Any, em_Val_call(em_Val_as_val(self->inner), "getActiveUniforms", em_Val_from(program), em_Val_from(uniformIndices), em_Val_from(pname)));
 }
 
 
-jb_Any WebGL2RenderingContext_getUniformBlockIndex(WebGL2RenderingContext* self , WebGLProgram * program, jb_DOMString * uniformBlockName) {
+jb_Any WebGL2RenderingContext_getUniformBlockIndex(WebGL2RenderingContext* self , WebGLProgram * program, jb_String * uniformBlockName) {
     return em_Val_as(jb_Any, em_Val_call(em_Val_as_val(self->inner), "getUniformBlockIndex", em_Val_from(program), em_Val_from(uniformBlockName)));
 }
 
@@ -579,8 +579,8 @@ jb_Any WebGL2RenderingContext_getActiveUniformBlockParameter(WebGL2RenderingCont
 }
 
 
-jb_DOMString WebGL2RenderingContext_getActiveUniformBlockName(WebGL2RenderingContext* self , WebGLProgram * program, jb_Any * uniformBlockIndex) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "getActiveUniformBlockName", em_Val_from(program), em_Val_from(uniformBlockIndex)));
+jb_String WebGL2RenderingContext_getActiveUniformBlockName(WebGL2RenderingContext* self , WebGLProgram * program, jb_Any * uniformBlockIndex) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "getActiveUniformBlockName", em_Val_from(program), em_Val_from(uniformBlockIndex)));
 }
 
 

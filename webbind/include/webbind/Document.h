@@ -53,9 +53,9 @@ typedef struct DOMQuadInit DOMQuadInit;
 
 DECLARE_EMLITE_TYPE(CaretPositionFromPointOptions, em_Val);
 
-jb_Sequence CaretPositionFromPointOptions_shadowRoots(const CaretPositionFromPointOptions *self);
+jb_Array CaretPositionFromPointOptions_shadowRoots(const CaretPositionFromPointOptions *self);
 
-void CaretPositionFromPointOptions_set_shadowRoots(CaretPositionFromPointOptions* self, jb_Sequence * value);
+void CaretPositionFromPointOptions_set_shadowRoots(CaretPositionFromPointOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(BoxQuadOptions, em_Val);
 
 CSSBoxType BoxQuadOptions_box(const BoxQuadOptions *self);
@@ -97,47 +97,47 @@ Document Document_new();
 
 DOMImplementation Document_implementation(const Document *self);
 
-jb_USVString Document_URL(const Document *self);
+jb_String Document_URL(const Document *self);
 
-jb_USVString Document_documentURI(const Document *self);
+jb_String Document_documentURI(const Document *self);
 
-jb_DOMString Document_compatMode(const Document *self);
+jb_String Document_compatMode(const Document *self);
 
-jb_DOMString Document_characterSet(const Document *self);
+jb_String Document_characterSet(const Document *self);
 
-jb_DOMString Document_charset(const Document *self);
+jb_String Document_charset(const Document *self);
 
-jb_DOMString Document_inputEncoding(const Document *self);
+jb_String Document_inputEncoding(const Document *self);
 
-jb_DOMString Document_contentType(const Document *self);
+jb_String Document_contentType(const Document *self);
 
 DocumentType Document_doctype(const Document *self);
 
 Element Document_documentElement(const Document *self);
 
-HTMLCollection Document_getElementsByTagName(Document* self , jb_DOMString * qualifiedName);
+HTMLCollection Document_getElementsByTagName(Document* self , jb_String * qualifiedName);
 
-HTMLCollection Document_getElementsByTagNameNS(Document* self , jb_DOMString * namespace_, jb_DOMString * localName);
+HTMLCollection Document_getElementsByTagNameNS(Document* self , jb_String * namespace_, jb_String * localName);
 
-HTMLCollection Document_getElementsByClassName(Document* self , jb_DOMString * classNames);
+HTMLCollection Document_getElementsByClassName(Document* self , jb_String * classNames);
 
-Element Document_createElement0(Document* self , jb_DOMString * localName);
+Element Document_createElement0(Document* self , jb_String * localName);
 
-Element Document_createElement1(Document* self , jb_DOMString * localName, jb_Any * options);
+Element Document_createElement1(Document* self , jb_String * localName, jb_Any * options);
 
-Element Document_createElementNS0(Document* self , jb_DOMString * namespace_, jb_DOMString * qualifiedName);
+Element Document_createElementNS0(Document* self , jb_String * namespace_, jb_String * qualifiedName);
 
-Element Document_createElementNS1(Document* self , jb_DOMString * namespace_, jb_DOMString * qualifiedName, jb_Any * options);
+Element Document_createElementNS1(Document* self , jb_String * namespace_, jb_String * qualifiedName, jb_Any * options);
 
 DocumentFragment Document_createDocumentFragment(Document* self );
 
-Text Document_createTextNode(Document* self , jb_DOMString * data);
+Text Document_createTextNode(Document* self , jb_String * data);
 
-CDATASection Document_createCDATASection(Document* self , jb_DOMString * data);
+CDATASection Document_createCDATASection(Document* self , jb_String * data);
 
-Comment Document_createComment(Document* self , jb_DOMString * data);
+Comment Document_createComment(Document* self , jb_String * data);
 
-ProcessingInstruction Document_createProcessingInstruction(Document* self , jb_DOMString * target, jb_DOMString * data);
+ProcessingInstruction Document_createProcessingInstruction(Document* self , jb_String * target, jb_String * data);
 
 Node Document_importNode0(Document* self , Node * node);
 
@@ -145,11 +145,11 @@ Node Document_importNode1(Document* self , Node * node, jb_Any * options);
 
 Node Document_adoptNode(Document* self , Node * node);
 
-Attr Document_createAttribute(Document* self , jb_DOMString * localName);
+Attr Document_createAttribute(Document* self , jb_String * localName);
 
-Attr Document_createAttributeNS(Document* self , jb_DOMString * namespace_, jb_DOMString * qualifiedName);
+Attr Document_createAttributeNS(Document* self , jb_String * namespace_, jb_String * qualifiedName);
 
-Event Document_createEvent(Document* self , jb_DOMString * interface);
+Event Document_createEvent(Document* self , jb_String * interface);
 
 Range Document_createRange(Document* self );
 
@@ -175,7 +175,7 @@ ViewTransition Document_startViewTransition1(Document* self , jb_Any * callbackO
 
 Element Document_elementFromPoint(Document* self , double x, double y);
 
-jb_Sequence Document_elementsFromPoint(Document* self , double x, double y);
+jb_Array Document_elementsFromPoint(Document* self , double x, double y);
 
 CaretPosition Document_caretPositionFromPoint0(Document* self , double x, double y);
 
@@ -185,7 +185,7 @@ Element Document_scrollingElement(const Document *self);
 
 FontMetrics Document_measureElement(Document* self , Element * element);
 
-FontMetrics Document_measureText(Document* self , jb_DOMString * text, StylePropertyMapReadOnly * styleMap);
+FontMetrics Document_measureText(Document* self , jb_String * text, StylePropertyMapReadOnly * styleMap);
 
 bool Document_fullscreenEnabled(const Document *self);
 
@@ -205,27 +205,27 @@ Document Document_parseHTMLUnsafe(Document* self , jb_Any * html);
 
 jb_Any Document_location(const Document *self);
 
-jb_USVString Document_domain(const Document *self);
+jb_String Document_domain(const Document *self);
 
-void Document_set_domain(Document* self, jb_USVString * value);
+void Document_set_domain(Document* self, jb_String * value);
 
-jb_USVString Document_referrer(const Document *self);
+jb_String Document_referrer(const Document *self);
 
-jb_USVString Document_cookie(const Document *self);
+jb_String Document_cookie(const Document *self);
 
-void Document_set_cookie(Document* self, jb_USVString * value);
+void Document_set_cookie(Document* self, jb_String * value);
 
-jb_DOMString Document_lastModified(const Document *self);
+jb_String Document_lastModified(const Document *self);
 
 DocumentReadyState Document_readyState(const Document *self);
 
-jb_DOMString Document_title(const Document *self);
+jb_String Document_title(const Document *self);
 
-void Document_set_title(Document* self, jb_DOMString * value);
+void Document_set_title(Document* self, jb_String * value);
 
-jb_DOMString Document_dir(const Document *self);
+jb_String Document_dir(const Document *self);
 
-void Document_set_dir(Document* self, jb_DOMString * value);
+void Document_set_dir(Document* self, jb_String * value);
 
 HTMLElement Document_body(const Document *self);
 
@@ -245,11 +245,11 @@ HTMLCollection Document_forms(const Document *self);
 
 HTMLCollection Document_scripts(const Document *self);
 
-NodeList Document_getElementsByName(Document* self , jb_DOMString * elementName);
+NodeList Document_getElementsByName(Document* self , jb_String * elementName);
 
 jb_Any Document_currentScript(const Document *self);
 
-jb_Any Document_open(Document* self , jb_USVString * url, jb_DOMString * name, jb_DOMString * features);
+jb_Any Document_open(Document* self , jb_String * url, jb_String * name, jb_String * features);
 
 jb_Undefined Document_close(Document* self );
 
@@ -261,25 +261,25 @@ jb_Any Document_defaultView(const Document *self);
 
 bool Document_hasFocus(Document* self );
 
-jb_DOMString Document_designMode(const Document *self);
+jb_String Document_designMode(const Document *self);
 
-void Document_set_designMode(Document* self, jb_DOMString * value);
+void Document_set_designMode(Document* self, jb_String * value);
 
-bool Document_execCommand0(Document* self , jb_DOMString * commandId);
+bool Document_execCommand0(Document* self , jb_String * commandId);
 
-bool Document_execCommand1(Document* self , jb_DOMString * commandId, bool showUI);
+bool Document_execCommand1(Document* self , jb_String * commandId, bool showUI);
 
-bool Document_execCommand2(Document* self , jb_DOMString * commandId, bool showUI, jb_DOMString * value);
+bool Document_execCommand2(Document* self , jb_String * commandId, bool showUI, jb_String * value);
 
-bool Document_queryCommandEnabled(Document* self , jb_DOMString * commandId);
+bool Document_queryCommandEnabled(Document* self , jb_String * commandId);
 
-bool Document_queryCommandIndeterm(Document* self , jb_DOMString * commandId);
+bool Document_queryCommandIndeterm(Document* self , jb_String * commandId);
 
-bool Document_queryCommandState(Document* self , jb_DOMString * commandId);
+bool Document_queryCommandState(Document* self , jb_String * commandId);
 
-bool Document_queryCommandSupported(Document* self , jb_DOMString * commandId);
+bool Document_queryCommandSupported(Document* self , jb_String * commandId);
 
-jb_DOMString Document_queryCommandValue(Document* self , jb_DOMString * commandId);
+jb_String Document_queryCommandValue(Document* self , jb_String * commandId);
 
 bool Document_hidden(const Document *self);
 
@@ -293,25 +293,25 @@ jb_Any Document_onvisibilitychange(const Document *self);
 
 void Document_set_onvisibilitychange(Document* self, jb_Any * value);
 
-jb_DOMString Document_fgColor(const Document *self);
+jb_String Document_fgColor(const Document *self);
 
-void Document_set_fgColor(Document* self, jb_DOMString * value);
+void Document_set_fgColor(Document* self, jb_String * value);
 
-jb_DOMString Document_linkColor(const Document *self);
+jb_String Document_linkColor(const Document *self);
 
-void Document_set_linkColor(Document* self, jb_DOMString * value);
+void Document_set_linkColor(Document* self, jb_String * value);
 
-jb_DOMString Document_vlinkColor(const Document *self);
+jb_String Document_vlinkColor(const Document *self);
 
-void Document_set_vlinkColor(Document* self, jb_DOMString * value);
+void Document_set_vlinkColor(Document* self, jb_String * value);
 
-jb_DOMString Document_alinkColor(const Document *self);
+jb_String Document_alinkColor(const Document *self);
 
-void Document_set_alinkColor(Document* self, jb_DOMString * value);
+void Document_set_alinkColor(Document* self, jb_String * value);
 
-jb_DOMString Document_bgColor(const Document *self);
+jb_String Document_bgColor(const Document *self);
 
-void Document_set_bgColor(Document* self, jb_DOMString * value);
+void Document_set_bgColor(Document* self, jb_String * value);
 
 HTMLCollection Document_anchors(const Document *self);
 
@@ -357,7 +357,7 @@ jb_Any Document_onprerenderingchange(const Document *self);
 
 void Document_set_onprerenderingchange(Document* self, jb_Any * value);
 
-jb_Promise Document_requestStorageAccessFor(Document* self , jb_USVString * requestedOrigin);
+jb_Promise Document_requestStorageAccessFor(Document* self , jb_String * requestedOrigin);
 
 jb_Promise Document_hasUnpartitionedCookieAccess(Document* self );
 
@@ -369,17 +369,17 @@ jb_Promise Document_hasStorageAccess(Document* self );
 
 jb_Promise Document_requestStorageAccess(Document* self );
 
-jb_Promise Document_hasPrivateToken(Document* self , jb_USVString * issuer);
+jb_Promise Document_hasPrivateToken(Document* self , jb_String * issuer);
 
-jb_Promise Document_hasRedemptionRecord(Document* self , jb_USVString * issuer);
+jb_Promise Document_hasRedemptionRecord(Document* self , jb_String * issuer);
 
 DocumentTimeline Document_timeline(const Document *self);
 
 FontFaceSet Document_fonts(const Document *self);
 
-jb_Sequence Document_getBoxQuads0(Document* self );
+jb_Array Document_getBoxQuads0(Document* self );
 
-jb_Sequence Document_getBoxQuads1(Document* self , BoxQuadOptions * options);
+jb_Array Document_getBoxQuads1(Document* self , BoxQuadOptions * options);
 
 DOMQuad Document_convertQuadFromNode0(Document* self , DOMQuadInit * quad, jb_Any * from);
 
@@ -393,9 +393,9 @@ DOMPoint Document_convertPointFromNode0(Document* self , DOMPointInit * point, j
 
 DOMPoint Document_convertPointFromNode1(Document* self , DOMPointInit * point, jb_Any * from, ConvertCoordinateOptions * options);
 
-Element Document_getElementById(Document* self , jb_DOMString * elementId);
+Element Document_getElementById(Document* self , jb_String * elementId);
 
-jb_Sequence Document_getAnimations(Document* self );
+jb_Array Document_getAnimations(Document* self );
 
 HTMLCollection Document_children(const Document *self);
 
@@ -413,23 +413,23 @@ jb_Undefined Document_replaceChildren(Document* self , jb_Any * nodes);
 
 jb_Undefined Document_moveBefore(Document* self , Node * node, Node * child);
 
-Element Document_querySelector(Document* self , jb_DOMString * selectors);
+Element Document_querySelector(Document* self , jb_String * selectors);
 
-NodeList Document_querySelectorAll(Document* self , jb_DOMString * selectors);
+NodeList Document_querySelectorAll(Document* self , jb_String * selectors);
 
-XPathExpression Document_createExpression0(Document* self , jb_DOMString * expression);
+XPathExpression Document_createExpression0(Document* self , jb_String * expression);
 
-XPathExpression Document_createExpression1(Document* self , jb_DOMString * expression, jb_Function * resolver);
+XPathExpression Document_createExpression1(Document* self , jb_String * expression, jb_Function * resolver);
 
 Node Document_createNSResolver(Document* self , Node * nodeResolver);
 
-XPathResult Document_evaluate0(Document* self , jb_DOMString * expression, Node * contextNode);
+XPathResult Document_evaluate0(Document* self , jb_String * expression, Node * contextNode);
 
-XPathResult Document_evaluate1(Document* self , jb_DOMString * expression, Node * contextNode, jb_Function * resolver);
+XPathResult Document_evaluate1(Document* self , jb_String * expression, Node * contextNode, jb_Function * resolver);
 
-XPathResult Document_evaluate2(Document* self , jb_DOMString * expression, Node * contextNode, jb_Function * resolver, unsigned short type);
+XPathResult Document_evaluate2(Document* self , jb_String * expression, Node * contextNode, jb_Function * resolver, unsigned short type);
 
-XPathResult Document_evaluate3(Document* self , jb_DOMString * expression, Node * contextNode, jb_Function * resolver, unsigned short type, XPathResult * result);
+XPathResult Document_evaluate3(Document* self , jb_String * expression, Node * contextNode, jb_Function * resolver, unsigned short type, XPathResult * result);
 
 jb_Any Document_onbeforexrselect(const Document *self);
 

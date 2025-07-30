@@ -9,4 +9,4 @@ typedef struct GPUCompilationMessage GPUCompilationMessage;
 
 DECLARE_EMLITE_TYPE(GPUCompilationInfo, em_Val);
 
-jb_FrozenArray GPUCompilationInfo_messages(const GPUCompilationInfo *self);
+jb_Array GPUCompilationInfo_messages(const GPUCompilationInfo *self);

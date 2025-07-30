@@ -19,12 +19,12 @@ jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPriority(InterestGro
 }
 
 
-jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPrioritySignalsOverride0(InterestGroupBiddingScriptRunnerGlobalScope* self , jb_DOMString * key) {
+jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPrioritySignalsOverride0(InterestGroupBiddingScriptRunnerGlobalScope* self , jb_String * key) {
     return em_Val_as(jb_Undefined, em_Val_call(InterestGroupBiddingAndScoringScriptRunnerGlobalScope_as_val(self->inner), "setPrioritySignalsOverride", em_Val_from(key)));
 }
 
 
-jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPrioritySignalsOverride1(InterestGroupBiddingScriptRunnerGlobalScope* self , jb_DOMString * key, double priority) {
+jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPrioritySignalsOverride1(InterestGroupBiddingScriptRunnerGlobalScope* self , jb_String * key, double priority) {
     return em_Val_as(jb_Undefined, em_Val_call(InterestGroupBiddingAndScoringScriptRunnerGlobalScope_as_val(self->inner), "setPrioritySignalsOverride", em_Val_from(key), em_Val_from(priority)));
 }
 

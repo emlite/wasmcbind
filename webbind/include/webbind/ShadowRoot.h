@@ -30,12 +30,12 @@ void ShadowRoot_set_onslotchange(ShadowRoot* self, jb_Any * value);
 
 jb_Undefined ShadowRoot_setHTMLUnsafe(ShadowRoot* self , jb_Any * html);
 
-jb_DOMString ShadowRoot_getHTML0(ShadowRoot* self );
+jb_String ShadowRoot_getHTML0(ShadowRoot* self );
 
-jb_DOMString ShadowRoot_getHTML1(ShadowRoot* self , GetHTMLOptions * options);
+jb_String ShadowRoot_getHTML1(ShadowRoot* self , GetHTMLOptions * options);
 
 jb_Any ShadowRoot_innerHTML(const ShadowRoot *self);
 
 void ShadowRoot_set_innerHTML(ShadowRoot* self, jb_Any * value);
 
-jb_Sequence ShadowRoot_getAnimations(ShadowRoot* self );
+jb_Array ShadowRoot_getAnimations(ShadowRoot* self );

@@ -6,13 +6,13 @@
 DEFINE_EMLITE_TYPE(GroupEffect, em_Val);
 
 
-GroupEffect GroupEffect_new0(jb_Sequence * children) {
+GroupEffect GroupEffect_new0(jb_Array * children) {
         em_Val vv = em_Val_new(em_Val_global("GroupEffect") , em_Val_from(children));
         return GroupEffect_from_val(&vv);
       }
 
 
-GroupEffect GroupEffect_new1(jb_Sequence * children, jb_Any * timing) {
+GroupEffect GroupEffect_new1(jb_Array * children, jb_Any * timing) {
         em_Val vv = em_Val_new(em_Val_global("GroupEffect") , em_Val_from(children), em_Val_from(timing));
         return GroupEffect_from_val(&vv);
       }

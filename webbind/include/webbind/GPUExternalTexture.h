@@ -7,6 +7,6 @@
 
 DECLARE_EMLITE_TYPE(GPUExternalTexture, em_Val);
 
-jb_USVString GPUExternalTexture_label(const GPUExternalTexture *self);
+jb_String GPUExternalTexture_label(const GPUExternalTexture *self);
 
-void GPUExternalTexture_set_label(GPUExternalTexture* self, jb_USVString * value);
+void GPUExternalTexture_set_label(GPUExternalTexture* self, jb_String * value);

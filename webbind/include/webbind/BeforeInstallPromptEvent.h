@@ -15,8 +15,8 @@ AppBannerPromptOutcome PromptResponseObject_userChoice(const PromptResponseObjec
 void PromptResponseObject_set_userChoice(PromptResponseObject* self, AppBannerPromptOutcome * value);
 DECLARE_EMLITE_TYPE(BeforeInstallPromptEvent, Event);
 
-BeforeInstallPromptEvent BeforeInstallPromptEvent_new0(jb_DOMString * type);
+BeforeInstallPromptEvent BeforeInstallPromptEvent_new0(jb_String * type);
 
-BeforeInstallPromptEvent BeforeInstallPromptEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+BeforeInstallPromptEvent BeforeInstallPromptEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
 jb_Promise BeforeInstallPromptEvent_prompt(BeforeInstallPromptEvent* self );

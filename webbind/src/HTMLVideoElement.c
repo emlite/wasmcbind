@@ -42,12 +42,12 @@ unsigned long HTMLVideoElement_videoHeight(const HTMLVideoElement *self) {
 }
 
 
-jb_USVString HTMLVideoElement_poster(const HTMLVideoElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLMediaElement_as_val(self->inner), em_Val_from("poster")));
+jb_String HTMLVideoElement_poster(const HTMLVideoElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLMediaElement_as_val(self->inner), em_Val_from("poster")));
 }
 
 
-void HTMLVideoElement_set_poster(HTMLVideoElement* self, jb_USVString * value) {
+void HTMLVideoElement_set_poster(HTMLVideoElement* self, jb_String * value) {
     em_Val_set(HTMLMediaElement_as_val(self->inner), em_Val_from("poster"), em_Val_from(value));
 }
 

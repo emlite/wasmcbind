@@ -32,12 +32,12 @@ SVGAnimatedPreserveAspectRatio SVGImageElement_preserveAspectRatio(const SVGImag
 }
 
 
-jb_DOMString SVGImageElement_crossOrigin(const SVGImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("crossOrigin")));
+jb_String SVGImageElement_crossOrigin(const SVGImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(SVGGraphicsElement_as_val(self->inner), em_Val_from("crossOrigin")));
 }
 
 
-void SVGImageElement_set_crossOrigin(SVGImageElement* self, jb_DOMString * value) {
+void SVGImageElement_set_crossOrigin(SVGImageElement* self, jb_String * value) {
     em_Val_set(SVGGraphicsElement_as_val(self->inner), em_Val_from("crossOrigin"), em_Val_from(value));
 }
 

@@ -34,7 +34,7 @@ double GamepadEffectParameters_rightTrigger(const GamepadEffectParameters *self)
 void GamepadEffectParameters_set_rightTrigger(GamepadEffectParameters* self, double value);
 DECLARE_EMLITE_TYPE(GamepadHapticActuator, em_Val);
 
-jb_FrozenArray GamepadHapticActuator_effects(const GamepadHapticActuator *self);
+jb_Array GamepadHapticActuator_effects(const GamepadHapticActuator *self);
 
 jb_Promise GamepadHapticActuator_playEffect0(GamepadHapticActuator* self , GamepadHapticEffectType * type);
 

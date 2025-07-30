@@ -11,13 +11,13 @@ Blob Blob_new0() {
       }
 
 
-Blob Blob_new1(jb_Sequence * blobParts) {
+Blob Blob_new1(jb_Array * blobParts) {
         em_Val vv = em_Val_new(em_Val_global("Blob") , em_Val_from(blobParts));
         return Blob_from_val(&vv);
       }
 
 
-Blob Blob_new2(jb_Sequence * blobParts, jb_Any * options) {
+Blob Blob_new2(jb_Array * blobParts, jb_Any * options) {
         em_Val vv = em_Val_new(em_Val_global("Blob") , em_Val_from(blobParts), em_Val_from(options));
         return Blob_from_val(&vv);
       }
@@ -28,8 +28,8 @@ long long Blob_size(const Blob *self) {
 }
 
 
-jb_DOMString Blob_type(const Blob *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
+jb_String Blob_type(const Blob *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
@@ -48,7 +48,7 @@ Blob Blob_slice2(Blob* self , long long start, long long end) {
 }
 
 
-Blob Blob_slice3(Blob* self , long long start, long long end, jb_DOMString * contentType) {
+Blob Blob_slice3(Blob* self , long long start, long long end, jb_String * contentType) {
     return em_Val_as(Blob, em_Val_call(em_Val_as_val(self->inner), "slice", em_Val_from(start), em_Val_from(end), em_Val_from(contentType)));
 }
 

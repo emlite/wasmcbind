@@ -8,12 +8,12 @@
 DEFINE_EMLITE_TYPE(GetComposedRangesOptions, em_Val);
 
 
-jb_Sequence GetComposedRangesOptions_shadowRoots(const GetComposedRangesOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowRoots")));
+jb_Array GetComposedRangesOptions_shadowRoots(const GetComposedRangesOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowRoots")));
 }
 
 
-void GetComposedRangesOptions_set_shadowRoots(GetComposedRangesOptions* self, jb_Sequence * value) {
+void GetComposedRangesOptions_set_shadowRoots(GetComposedRangesOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("shadowRoots"), em_Val_from(value));
 }
 
@@ -50,13 +50,13 @@ unsigned long Selection_rangeCount(const Selection *self) {
 }
 
 
-jb_DOMString Selection_type(const Selection *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
+jb_String Selection_type(const Selection *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
-jb_DOMString Selection_direction(const Selection *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("direction")));
+jb_String Selection_direction(const Selection *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("direction")));
 }
 
 
@@ -85,13 +85,13 @@ jb_Undefined Selection_empty(Selection* self ) {
 }
 
 
-jb_Sequence Selection_getComposedRanges0(Selection* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getComposedRanges"));
+jb_Array Selection_getComposedRanges0(Selection* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getComposedRanges"));
 }
 
 
-jb_Sequence Selection_getComposedRanges1(Selection* self , GetComposedRangesOptions * options) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getComposedRanges", em_Val_from(options)));
+jb_Array Selection_getComposedRanges1(Selection* self , GetComposedRangesOptions * options) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getComposedRanges", em_Val_from(options)));
 }
 
 
@@ -150,17 +150,17 @@ jb_Undefined Selection_modify0(Selection* self ) {
 }
 
 
-jb_Undefined Selection_modify1(Selection* self , jb_DOMString * alter) {
+jb_Undefined Selection_modify1(Selection* self , jb_String * alter) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "modify", em_Val_from(alter)));
 }
 
 
-jb_Undefined Selection_modify2(Selection* self , jb_DOMString * alter, jb_DOMString * direction) {
+jb_Undefined Selection_modify2(Selection* self , jb_String * alter, jb_String * direction) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "modify", em_Val_from(alter), em_Val_from(direction)));
 }
 
 
-jb_Undefined Selection_modify3(Selection* self , jb_DOMString * alter, jb_DOMString * direction, jb_DOMString * granularity) {
+jb_Undefined Selection_modify3(Selection* self , jb_String * alter, jb_String * direction, jb_String * granularity) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "modify", em_Val_from(alter), em_Val_from(direction), em_Val_from(granularity)));
 }
 

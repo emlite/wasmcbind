@@ -14,9 +14,9 @@ DOMRectReadOnly DetectedFace_boundingBox(const DetectedFace *self);
 
 void DetectedFace_set_boundingBox(DetectedFace* self, DOMRectReadOnly * value);
 
-jb_Sequence DetectedFace_landmarks(const DetectedFace *self);
+jb_Array DetectedFace_landmarks(const DetectedFace *self);
 
-void DetectedFace_set_landmarks(DetectedFace* self, jb_Sequence * value);
+void DetectedFace_set_landmarks(DetectedFace* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(FaceDetector, em_Val);
 
 FaceDetector FaceDetector_new0();

@@ -51,38 +51,38 @@ HTMLTableRowElement HTMLTableElement_insertRow1(HTMLTableElement* self , long in
 
 jb_Undefined HTMLTableElement_deleteRow(HTMLTableElement* self , long index);
 
-jb_DOMString HTMLTableElement_align(const HTMLTableElement *self);
+jb_String HTMLTableElement_align(const HTMLTableElement *self);
 
-void HTMLTableElement_set_align(HTMLTableElement* self, jb_DOMString * value);
+void HTMLTableElement_set_align(HTMLTableElement* self, jb_String * value);
 
-jb_DOMString HTMLTableElement_border(const HTMLTableElement *self);
+jb_String HTMLTableElement_border(const HTMLTableElement *self);
 
-void HTMLTableElement_set_border(HTMLTableElement* self, jb_DOMString * value);
+void HTMLTableElement_set_border(HTMLTableElement* self, jb_String * value);
 
-jb_DOMString HTMLTableElement_frame(const HTMLTableElement *self);
+jb_String HTMLTableElement_frame(const HTMLTableElement *self);
 
-void HTMLTableElement_set_frame(HTMLTableElement* self, jb_DOMString * value);
+void HTMLTableElement_set_frame(HTMLTableElement* self, jb_String * value);
 
-jb_DOMString HTMLTableElement_rules(const HTMLTableElement *self);
+jb_String HTMLTableElement_rules(const HTMLTableElement *self);
 
-void HTMLTableElement_set_rules(HTMLTableElement* self, jb_DOMString * value);
+void HTMLTableElement_set_rules(HTMLTableElement* self, jb_String * value);
 
-jb_DOMString HTMLTableElement_summary(const HTMLTableElement *self);
+jb_String HTMLTableElement_summary(const HTMLTableElement *self);
 
-void HTMLTableElement_set_summary(HTMLTableElement* self, jb_DOMString * value);
+void HTMLTableElement_set_summary(HTMLTableElement* self, jb_String * value);
 
-jb_DOMString HTMLTableElement_width(const HTMLTableElement *self);
+jb_String HTMLTableElement_width(const HTMLTableElement *self);
 
-void HTMLTableElement_set_width(HTMLTableElement* self, jb_DOMString * value);
+void HTMLTableElement_set_width(HTMLTableElement* self, jb_String * value);
 
-jb_DOMString HTMLTableElement_bgColor(const HTMLTableElement *self);
+jb_String HTMLTableElement_bgColor(const HTMLTableElement *self);
 
-void HTMLTableElement_set_bgColor(HTMLTableElement* self, jb_DOMString * value);
+void HTMLTableElement_set_bgColor(HTMLTableElement* self, jb_String * value);
 
-jb_DOMString HTMLTableElement_cellPadding(const HTMLTableElement *self);
+jb_String HTMLTableElement_cellPadding(const HTMLTableElement *self);
 
-void HTMLTableElement_set_cellPadding(HTMLTableElement* self, jb_DOMString * value);
+void HTMLTableElement_set_cellPadding(HTMLTableElement* self, jb_String * value);
 
-jb_DOMString HTMLTableElement_cellSpacing(const HTMLTableElement *self);
+jb_String HTMLTableElement_cellSpacing(const HTMLTableElement *self);
 
-void HTMLTableElement_set_cellSpacing(HTMLTableElement* self, jb_DOMString * value);
+void HTMLTableElement_set_cellSpacing(HTMLTableElement* self, jb_String * value);

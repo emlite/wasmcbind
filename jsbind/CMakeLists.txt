@@ -21,8 +21,6 @@ set(JSBIND_SOURCES
     # src/text.c
     src/Promise.c
     src/Array.c
-    src/Record.c
-    src/Sequence.c
 )
 
 set(JSBIND_HEADERS
@@ -31,8 +29,6 @@ set(JSBIND_HEADERS
     include/jsbind/Any.h 
     include/jsbind/jsbind.h
     include/jsbind/Object.h 
-    include/jsbind/Sequence.h 
-    include/jsbind/Record.h 
     include/jsbind/Undefined.h
     include/jsbind/Array.h
     include/jsbind/String.h

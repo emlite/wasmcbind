@@ -18,12 +18,12 @@ MediaError HTMLMediaElement_error(const HTMLMediaElement *self) {
 }
 
 
-jb_USVString HTMLMediaElement_src(const HTMLMediaElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
+jb_String HTMLMediaElement_src(const HTMLMediaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLMediaElement_set_src(HTMLMediaElement* self, jb_USVString * value) {
+void HTMLMediaElement_set_src(HTMLMediaElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
@@ -38,17 +38,17 @@ void HTMLMediaElement_set_srcObject(HTMLMediaElement* self, jb_Any * value) {
 }
 
 
-jb_USVString HTMLMediaElement_currentSrc(const HTMLMediaElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("currentSrc")));
+jb_String HTMLMediaElement_currentSrc(const HTMLMediaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("currentSrc")));
 }
 
 
-jb_DOMString HTMLMediaElement_crossOrigin(const HTMLMediaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("crossOrigin")));
+jb_String HTMLMediaElement_crossOrigin(const HTMLMediaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("crossOrigin")));
 }
 
 
-void HTMLMediaElement_set_crossOrigin(HTMLMediaElement* self, jb_DOMString * value) {
+void HTMLMediaElement_set_crossOrigin(HTMLMediaElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("crossOrigin"), em_Val_from(value));
 }
 
@@ -58,12 +58,12 @@ unsigned short HTMLMediaElement_networkState(const HTMLMediaElement *self) {
 }
 
 
-jb_DOMString HTMLMediaElement_preload(const HTMLMediaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("preload")));
+jb_String HTMLMediaElement_preload(const HTMLMediaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("preload")));
 }
 
 
-void HTMLMediaElement_set_preload(HTMLMediaElement* self, jb_DOMString * value) {
+void HTMLMediaElement_set_preload(HTMLMediaElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("preload"), em_Val_from(value));
 }
 
@@ -78,7 +78,7 @@ jb_Undefined HTMLMediaElement_load(HTMLMediaElement* self ) {
 }
 
 
-CanPlayTypeResult HTMLMediaElement_canPlayType(HTMLMediaElement* self , jb_DOMString * type) {
+CanPlayTypeResult HTMLMediaElement_canPlayType(HTMLMediaElement* self , jb_String * type) {
     return em_Val_as(CanPlayTypeResult, em_Val_call(HTMLElement_as_val(self->inner), "canPlayType", em_Val_from(type)));
 }
 
@@ -258,22 +258,22 @@ TextTrack HTMLMediaElement_addTextTrack0(HTMLMediaElement* self , TextTrackKind 
 }
 
 
-TextTrack HTMLMediaElement_addTextTrack1(HTMLMediaElement* self , TextTrackKind * kind, jb_DOMString * label) {
+TextTrack HTMLMediaElement_addTextTrack1(HTMLMediaElement* self , TextTrackKind * kind, jb_String * label) {
     return em_Val_as(TextTrack, em_Val_call(HTMLElement_as_val(self->inner), "addTextTrack", em_Val_from(kind), em_Val_from(label)));
 }
 
 
-TextTrack HTMLMediaElement_addTextTrack2(HTMLMediaElement* self , TextTrackKind * kind, jb_DOMString * label, jb_DOMString * language) {
+TextTrack HTMLMediaElement_addTextTrack2(HTMLMediaElement* self , TextTrackKind * kind, jb_String * label, jb_String * language) {
     return em_Val_as(TextTrack, em_Val_call(HTMLElement_as_val(self->inner), "addTextTrack", em_Val_from(kind), em_Val_from(label), em_Val_from(language)));
 }
 
 
-jb_DOMString HTMLMediaElement_sinkId(const HTMLMediaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("sinkId")));
+jb_String HTMLMediaElement_sinkId(const HTMLMediaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("sinkId")));
 }
 
 
-jb_Promise HTMLMediaElement_setSinkId(HTMLMediaElement* self , jb_DOMString * sinkId) {
+jb_Promise HTMLMediaElement_setSinkId(HTMLMediaElement* self , jb_String * sinkId) {
     return em_Val_as(jb_Promise, em_Val_call(HTMLElement_as_val(self->inner), "setSinkId", em_Val_from(sinkId)));
 }
 

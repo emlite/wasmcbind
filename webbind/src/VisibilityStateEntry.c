@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(VisibilityStateEntry, PerformanceEntry);
 
 
-jb_DOMString VisibilityStateEntry_name(const VisibilityStateEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
+jb_String VisibilityStateEntry_name(const VisibilityStateEntry *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString VisibilityStateEntry_entryType(const VisibilityStateEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
+jb_String VisibilityStateEntry_entryType(const VisibilityStateEntry *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
 }
 
 

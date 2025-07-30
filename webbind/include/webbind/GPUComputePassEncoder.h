@@ -23,14 +23,14 @@ jb_Undefined GPUComputePassEncoder_dispatchWorkgroupsIndirect(GPUComputePassEnco
 
 jb_Undefined GPUComputePassEncoder_end(GPUComputePassEncoder* self );
 
-jb_USVString GPUComputePassEncoder_label(const GPUComputePassEncoder *self);
+jb_String GPUComputePassEncoder_label(const GPUComputePassEncoder *self);
 
-void GPUComputePassEncoder_set_label(GPUComputePassEncoder* self, jb_USVString * value);
+void GPUComputePassEncoder_set_label(GPUComputePassEncoder* self, jb_String * value);
 
-jb_Undefined GPUComputePassEncoder_pushDebugGroup(GPUComputePassEncoder* self , jb_USVString * groupLabel);
+jb_Undefined GPUComputePassEncoder_pushDebugGroup(GPUComputePassEncoder* self , jb_String * groupLabel);
 
 jb_Undefined GPUComputePassEncoder_popDebugGroup(GPUComputePassEncoder* self );
 
-jb_Undefined GPUComputePassEncoder_insertDebugMarker(GPUComputePassEncoder* self , jb_USVString * markerLabel);
+jb_Undefined GPUComputePassEncoder_insertDebugMarker(GPUComputePassEncoder* self , jb_String * markerLabel);
 
 jb_Undefined GPUComputePassEncoder_setBindGroup(GPUComputePassEncoder* self , jb_Any * index, GPUBindGroup * bindGroup, jb_Uint32Array * dynamicOffsetsData, jb_Any * dynamicOffsetsDataStart, jb_Any * dynamicOffsetsDataLength);

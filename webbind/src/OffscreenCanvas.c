@@ -6,12 +6,12 @@
 DEFINE_EMLITE_TYPE(ImageEncodeOptions, em_Val);
 
 
-jb_DOMString ImageEncodeOptions_type(const ImageEncodeOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
+jb_String ImageEncodeOptions_type(const ImageEncodeOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void ImageEncodeOptions_set_type(ImageEncodeOptions* self, jb_DOMString * value) {
+void ImageEncodeOptions_set_type(ImageEncodeOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 

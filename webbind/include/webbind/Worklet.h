@@ -14,6 +14,6 @@ RequestCredentials WorkletOptions_credentials(const WorkletOptions *self);
 void WorkletOptions_set_credentials(WorkletOptions* self, RequestCredentials * value);
 DECLARE_EMLITE_TYPE(Worklet, em_Val);
 
-jb_Promise Worklet_addModule0(Worklet* self , jb_USVString * moduleURL);
+jb_Promise Worklet_addModule0(Worklet* self , jb_String * moduleURL);
 
-jb_Promise Worklet_addModule1(Worklet* self , jb_USVString * moduleURL, WorkletOptions * options);
+jb_Promise Worklet_addModule1(Worklet* self , jb_String * moduleURL, WorkletOptions * options);

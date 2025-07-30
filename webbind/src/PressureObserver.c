@@ -43,12 +43,12 @@ jb_Undefined PressureObserver_disconnect(PressureObserver* self ) {
 }
 
 
-jb_Sequence PressureObserver_takeRecords(PressureObserver* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "takeRecords"));
+jb_Array PressureObserver_takeRecords(PressureObserver* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "takeRecords"));
 }
 
 
-jb_FrozenArray PressureObserver_knownSources(const PressureObserver *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_global("pressureobserver"), em_Val_from("knownSources")));
+jb_Array PressureObserver_knownSources(const PressureObserver *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_global("pressureobserver"), em_Val_from("knownSources")));
 }
 

@@ -5,22 +5,22 @@
 DEFINE_EMLITE_TYPE(XRSessionInit, em_Val);
 
 
-jb_Sequence XRSessionInit_requiredFeatures(const XRSessionInit *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requiredFeatures")));
+jb_Array XRSessionInit_requiredFeatures(const XRSessionInit *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requiredFeatures")));
 }
 
 
-void XRSessionInit_set_requiredFeatures(XRSessionInit* self, jb_Sequence * value) {
+void XRSessionInit_set_requiredFeatures(XRSessionInit* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("requiredFeatures"), em_Val_from(value));
 }
 
 
-jb_Sequence XRSessionInit_optionalFeatures(const XRSessionInit *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("optionalFeatures")));
+jb_Array XRSessionInit_optionalFeatures(const XRSessionInit *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("optionalFeatures")));
 }
 
 
-void XRSessionInit_set_optionalFeatures(XRSessionInit* self, jb_Sequence * value) {
+void XRSessionInit_set_optionalFeatures(XRSessionInit* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("optionalFeatures"), em_Val_from(value));
 }
 

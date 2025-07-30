@@ -23,22 +23,22 @@ HTMLPortalElement HTMLPortalElement_new() {
       }
 
 
-jb_USVString HTMLPortalElement_src(const HTMLPortalElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
+jb_String HTMLPortalElement_src(const HTMLPortalElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLPortalElement_set_src(HTMLPortalElement* self, jb_USVString * value) {
+void HTMLPortalElement_set_src(HTMLPortalElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLPortalElement_referrerPolicy(const HTMLPortalElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("referrerPolicy")));
+jb_String HTMLPortalElement_referrerPolicy(const HTMLPortalElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("referrerPolicy")));
 }
 
 
-void HTMLPortalElement_set_referrerPolicy(HTMLPortalElement* self, jb_DOMString * value) {
+void HTMLPortalElement_set_referrerPolicy(HTMLPortalElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("referrerPolicy"), em_Val_from(value));
 }
 

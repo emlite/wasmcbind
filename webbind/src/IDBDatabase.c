@@ -41,8 +41,8 @@ void IDBObjectStoreParameters_set_autoIncrement(IDBObjectStoreParameters* self, 
 DEFINE_EMLITE_TYPE(IDBDatabase, EventTarget);
 
 
-jb_DOMString IDBDatabase_name(const IDBDatabase *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
+jb_String IDBDatabase_name(const IDBDatabase *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
 }
 
 
@@ -76,17 +76,17 @@ jb_Undefined IDBDatabase_close(IDBDatabase* self ) {
 }
 
 
-IDBObjectStore IDBDatabase_createObjectStore0(IDBDatabase* self , jb_DOMString * name) {
+IDBObjectStore IDBDatabase_createObjectStore0(IDBDatabase* self , jb_String * name) {
     return em_Val_as(IDBObjectStore, em_Val_call(EventTarget_as_val(self->inner), "createObjectStore", em_Val_from(name)));
 }
 
 
-IDBObjectStore IDBDatabase_createObjectStore1(IDBDatabase* self , jb_DOMString * name, IDBObjectStoreParameters * options) {
+IDBObjectStore IDBDatabase_createObjectStore1(IDBDatabase* self , jb_String * name, IDBObjectStoreParameters * options) {
     return em_Val_as(IDBObjectStore, em_Val_call(EventTarget_as_val(self->inner), "createObjectStore", em_Val_from(name), em_Val_from(options)));
 }
 
 
-jb_Undefined IDBDatabase_deleteObjectStore(IDBDatabase* self , jb_DOMString * name) {
+jb_Undefined IDBDatabase_deleteObjectStore(IDBDatabase* self , jb_String * name) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "deleteObjectStore", em_Val_from(name)));
 }
 

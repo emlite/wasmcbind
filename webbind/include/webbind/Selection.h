@@ -13,9 +13,9 @@ typedef struct ShadowRoot ShadowRoot;
 
 DECLARE_EMLITE_TYPE(GetComposedRangesOptions, em_Val);
 
-jb_Sequence GetComposedRangesOptions_shadowRoots(const GetComposedRangesOptions *self);
+jb_Array GetComposedRangesOptions_shadowRoots(const GetComposedRangesOptions *self);
 
-void GetComposedRangesOptions_set_shadowRoots(GetComposedRangesOptions* self, jb_Sequence * value);
+void GetComposedRangesOptions_set_shadowRoots(GetComposedRangesOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(Selection, em_Val);
 
 Node Selection_anchorNode(const Selection *self);
@@ -30,9 +30,9 @@ bool Selection_isCollapsed(const Selection *self);
 
 unsigned long Selection_rangeCount(const Selection *self);
 
-jb_DOMString Selection_type(const Selection *self);
+jb_String Selection_type(const Selection *self);
 
-jb_DOMString Selection_direction(const Selection *self);
+jb_String Selection_direction(const Selection *self);
 
 Range Selection_getRangeAt(Selection* self , unsigned long index);
 
@@ -44,9 +44,9 @@ jb_Undefined Selection_removeAllRanges(Selection* self );
 
 jb_Undefined Selection_empty(Selection* self );
 
-jb_Sequence Selection_getComposedRanges0(Selection* self );
+jb_Array Selection_getComposedRanges0(Selection* self );
 
-jb_Sequence Selection_getComposedRanges1(Selection* self , GetComposedRangesOptions * options);
+jb_Array Selection_getComposedRanges1(Selection* self , GetComposedRangesOptions * options);
 
 jb_Undefined Selection_collapse0(Selection* self , Node * node);
 
@@ -70,11 +70,11 @@ jb_Undefined Selection_selectAllChildren(Selection* self , Node * node);
 
 jb_Undefined Selection_modify0(Selection* self );
 
-jb_Undefined Selection_modify1(Selection* self , jb_DOMString * alter);
+jb_Undefined Selection_modify1(Selection* self , jb_String * alter);
 
-jb_Undefined Selection_modify2(Selection* self , jb_DOMString * alter, jb_DOMString * direction);
+jb_Undefined Selection_modify2(Selection* self , jb_String * alter, jb_String * direction);
 
-jb_Undefined Selection_modify3(Selection* self , jb_DOMString * alter, jb_DOMString * direction, jb_DOMString * granularity);
+jb_Undefined Selection_modify3(Selection* self , jb_String * alter, jb_String * direction, jb_String * granularity);
 
 jb_Undefined Selection_deleteFromDocument(Selection* self );
 

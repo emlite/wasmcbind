@@ -14,13 +14,13 @@ bool HTMLDialogElement_open(const HTMLDialogElement *self);
 
 void HTMLDialogElement_set_open(HTMLDialogElement* self, bool value);
 
-jb_DOMString HTMLDialogElement_returnValue(const HTMLDialogElement *self);
+jb_String HTMLDialogElement_returnValue(const HTMLDialogElement *self);
 
-void HTMLDialogElement_set_returnValue(HTMLDialogElement* self, jb_DOMString * value);
+void HTMLDialogElement_set_returnValue(HTMLDialogElement* self, jb_String * value);
 
-jb_DOMString HTMLDialogElement_closedBy(const HTMLDialogElement *self);
+jb_String HTMLDialogElement_closedBy(const HTMLDialogElement *self);
 
-void HTMLDialogElement_set_closedBy(HTMLDialogElement* self, jb_DOMString * value);
+void HTMLDialogElement_set_closedBy(HTMLDialogElement* self, jb_String * value);
 
 jb_Undefined HTMLDialogElement_show(HTMLDialogElement* self );
 
@@ -28,8 +28,8 @@ jb_Undefined HTMLDialogElement_showModal(HTMLDialogElement* self );
 
 jb_Undefined HTMLDialogElement_close0(HTMLDialogElement* self );
 
-jb_Undefined HTMLDialogElement_close1(HTMLDialogElement* self , jb_DOMString * returnValue);
+jb_Undefined HTMLDialogElement_close1(HTMLDialogElement* self , jb_String * returnValue);
 
 jb_Undefined HTMLDialogElement_requestClose0(HTMLDialogElement* self );
 
-jb_Undefined HTMLDialogElement_requestClose1(HTMLDialogElement* self , jb_DOMString * returnValue);
+jb_Undefined HTMLDialogElement_requestClose1(HTMLDialogElement* self , jb_String * returnValue);

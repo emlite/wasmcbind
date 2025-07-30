@@ -22,21 +22,21 @@ unsigned char HIDCollectionInfo_type(const HIDCollectionInfo *self);
 
 void HIDCollectionInfo_set_type(HIDCollectionInfo* self, unsigned char value);
 
-jb_Sequence HIDCollectionInfo_children(const HIDCollectionInfo *self);
+jb_Array HIDCollectionInfo_children(const HIDCollectionInfo *self);
 
-void HIDCollectionInfo_set_children(HIDCollectionInfo* self, jb_Sequence * value);
+void HIDCollectionInfo_set_children(HIDCollectionInfo* self, jb_Array * value);
 
-jb_Sequence HIDCollectionInfo_inputReports(const HIDCollectionInfo *self);
+jb_Array HIDCollectionInfo_inputReports(const HIDCollectionInfo *self);
 
-void HIDCollectionInfo_set_inputReports(HIDCollectionInfo* self, jb_Sequence * value);
+void HIDCollectionInfo_set_inputReports(HIDCollectionInfo* self, jb_Array * value);
 
-jb_Sequence HIDCollectionInfo_outputReports(const HIDCollectionInfo *self);
+jb_Array HIDCollectionInfo_outputReports(const HIDCollectionInfo *self);
 
-void HIDCollectionInfo_set_outputReports(HIDCollectionInfo* self, jb_Sequence * value);
+void HIDCollectionInfo_set_outputReports(HIDCollectionInfo* self, jb_Array * value);
 
-jb_Sequence HIDCollectionInfo_featureReports(const HIDCollectionInfo *self);
+jb_Array HIDCollectionInfo_featureReports(const HIDCollectionInfo *self);
 
-void HIDCollectionInfo_set_featureReports(HIDCollectionInfo* self, jb_Sequence * value);
+void HIDCollectionInfo_set_featureReports(HIDCollectionInfo* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(HIDDevice, EventTarget);
 
 jb_Any HIDDevice_oninputreport(const HIDDevice *self);
@@ -49,9 +49,9 @@ unsigned short HIDDevice_vendorId(const HIDDevice *self);
 
 unsigned short HIDDevice_productId(const HIDDevice *self);
 
-jb_DOMString HIDDevice_productName(const HIDDevice *self);
+jb_String HIDDevice_productName(const HIDDevice *self);
 
-jb_FrozenArray HIDDevice_collections(const HIDDevice *self);
+jb_Array HIDDevice_collections(const HIDDevice *self);
 
 jb_Promise HIDDevice_open(HIDDevice* self );
 

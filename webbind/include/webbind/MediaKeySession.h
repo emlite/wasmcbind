@@ -10,7 +10,7 @@ typedef struct MediaKeyStatusMap MediaKeyStatusMap;
 
 DECLARE_EMLITE_TYPE(MediaKeySession, EventTarget);
 
-jb_DOMString MediaKeySession_sessionId(const MediaKeySession *self);
+jb_String MediaKeySession_sessionId(const MediaKeySession *self);
 
 double MediaKeySession_expiration(const MediaKeySession *self);
 
@@ -26,9 +26,9 @@ jb_Any MediaKeySession_onmessage(const MediaKeySession *self);
 
 void MediaKeySession_set_onmessage(MediaKeySession* self, jb_Any * value);
 
-jb_Promise MediaKeySession_generateRequest(MediaKeySession* self , jb_DOMString * initDataType, jb_Any * initData);
+jb_Promise MediaKeySession_generateRequest(MediaKeySession* self , jb_String * initDataType, jb_Any * initData);
 
-jb_Promise MediaKeySession_load(MediaKeySession* self , jb_DOMString * sessionId);
+jb_Promise MediaKeySession_load(MediaKeySession* self , jb_String * sessionId);
 
 jb_Promise MediaKeySession_update(MediaKeySession* self , jb_Any * response);
 

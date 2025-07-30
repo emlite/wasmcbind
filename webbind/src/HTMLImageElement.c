@@ -10,62 +10,62 @@ HTMLImageElement HTMLImageElement_new() {
       }
 
 
-jb_DOMString HTMLImageElement_alt(const HTMLImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("alt")));
+jb_String HTMLImageElement_alt(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("alt")));
 }
 
 
-void HTMLImageElement_set_alt(HTMLImageElement* self, jb_DOMString * value) {
+void HTMLImageElement_set_alt(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("alt"), em_Val_from(value));
 }
 
 
-jb_USVString HTMLImageElement_src(const HTMLImageElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
+jb_String HTMLImageElement_src(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLImageElement_set_src(HTMLImageElement* self, jb_USVString * value) {
+void HTMLImageElement_set_src(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
 
-jb_USVString HTMLImageElement_srcset(const HTMLImageElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("srcset")));
+jb_String HTMLImageElement_srcset(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("srcset")));
 }
 
 
-void HTMLImageElement_set_srcset(HTMLImageElement* self, jb_USVString * value) {
+void HTMLImageElement_set_srcset(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("srcset"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLImageElement_sizes(const HTMLImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("sizes")));
+jb_String HTMLImageElement_sizes(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("sizes")));
 }
 
 
-void HTMLImageElement_set_sizes(HTMLImageElement* self, jb_DOMString * value) {
+void HTMLImageElement_set_sizes(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("sizes"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLImageElement_crossOrigin(const HTMLImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("crossOrigin")));
+jb_String HTMLImageElement_crossOrigin(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("crossOrigin")));
 }
 
 
-void HTMLImageElement_set_crossOrigin(HTMLImageElement* self, jb_DOMString * value) {
+void HTMLImageElement_set_crossOrigin(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("crossOrigin"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLImageElement_useMap(const HTMLImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("useMap")));
+jb_String HTMLImageElement_useMap(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("useMap")));
 }
 
 
-void HTMLImageElement_set_useMap(HTMLImageElement* self, jb_DOMString * value) {
+void HTMLImageElement_set_useMap(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("useMap"), em_Val_from(value));
 }
 
@@ -115,47 +115,47 @@ bool HTMLImageElement_complete(const HTMLImageElement *self) {
 }
 
 
-jb_USVString HTMLImageElement_currentSrc(const HTMLImageElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("currentSrc")));
+jb_String HTMLImageElement_currentSrc(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("currentSrc")));
 }
 
 
-jb_DOMString HTMLImageElement_referrerPolicy(const HTMLImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("referrerPolicy")));
+jb_String HTMLImageElement_referrerPolicy(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("referrerPolicy")));
 }
 
 
-void HTMLImageElement_set_referrerPolicy(HTMLImageElement* self, jb_DOMString * value) {
+void HTMLImageElement_set_referrerPolicy(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("referrerPolicy"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLImageElement_decoding(const HTMLImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("decoding")));
+jb_String HTMLImageElement_decoding(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("decoding")));
 }
 
 
-void HTMLImageElement_set_decoding(HTMLImageElement* self, jb_DOMString * value) {
+void HTMLImageElement_set_decoding(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("decoding"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLImageElement_loading(const HTMLImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("loading")));
+jb_String HTMLImageElement_loading(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("loading")));
 }
 
 
-void HTMLImageElement_set_loading(HTMLImageElement* self, jb_DOMString * value) {
+void HTMLImageElement_set_loading(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("loading"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLImageElement_fetchPriority(const HTMLImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("fetchPriority")));
+jb_String HTMLImageElement_fetchPriority(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("fetchPriority")));
 }
 
 
-void HTMLImageElement_set_fetchPriority(HTMLImageElement* self, jb_DOMString * value) {
+void HTMLImageElement_set_fetchPriority(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("fetchPriority"), em_Val_from(value));
 }
 
@@ -175,32 +175,32 @@ long HTMLImageElement_y(const HTMLImageElement *self) {
 }
 
 
-jb_DOMString HTMLImageElement_name(const HTMLImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLImageElement_name(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLImageElement_set_name(HTMLImageElement* self, jb_DOMString * value) {
+void HTMLImageElement_set_name(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_USVString HTMLImageElement_lowsrc(const HTMLImageElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("lowsrc")));
+jb_String HTMLImageElement_lowsrc(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("lowsrc")));
 }
 
 
-void HTMLImageElement_set_lowsrc(HTMLImageElement* self, jb_USVString * value) {
+void HTMLImageElement_set_lowsrc(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("lowsrc"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLImageElement_align(const HTMLImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
+jb_String HTMLImageElement_align(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLImageElement_set_align(HTMLImageElement* self, jb_DOMString * value) {
+void HTMLImageElement_set_align(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 
@@ -225,32 +225,32 @@ void HTMLImageElement_set_vspace(HTMLImageElement* self, unsigned long value) {
 }
 
 
-jb_USVString HTMLImageElement_longDesc(const HTMLImageElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("longDesc")));
+jb_String HTMLImageElement_longDesc(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("longDesc")));
 }
 
 
-void HTMLImageElement_set_longDesc(HTMLImageElement* self, jb_USVString * value) {
+void HTMLImageElement_set_longDesc(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("longDesc"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLImageElement_border(const HTMLImageElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("border")));
+jb_String HTMLImageElement_border(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("border")));
 }
 
 
-void HTMLImageElement_set_border(HTMLImageElement* self, jb_DOMString * value) {
+void HTMLImageElement_set_border(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("border"), em_Val_from(value));
 }
 
 
-jb_USVString HTMLImageElement_attributionSrc(const HTMLImageElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("attributionSrc")));
+jb_String HTMLImageElement_attributionSrc(const HTMLImageElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("attributionSrc")));
 }
 
 
-void HTMLImageElement_set_attributionSrc(HTMLImageElement* self, jb_USVString * value) {
+void HTMLImageElement_set_attributionSrc(HTMLImageElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("attributionSrc"), em_Val_from(value));
 }
 

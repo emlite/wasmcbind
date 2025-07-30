@@ -30,12 +30,12 @@ jb_Promise SubtleCrypto_digest(SubtleCrypto* self , jb_Any * algorithm, jb_Any *
 }
 
 
-jb_Promise SubtleCrypto_generateKey(SubtleCrypto* self , jb_Any * algorithm, bool extractable, jb_Sequence * keyUsages) {
+jb_Promise SubtleCrypto_generateKey(SubtleCrypto* self , jb_Any * algorithm, bool extractable, jb_Array * keyUsages) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "generateKey", em_Val_from(algorithm), em_Val_from(extractable), em_Val_from(keyUsages)));
 }
 
 
-jb_Promise SubtleCrypto_deriveKey(SubtleCrypto* self , jb_Any * algorithm, CryptoKey * baseKey, jb_Any * derivedKeyType, bool extractable, jb_Sequence * keyUsages) {
+jb_Promise SubtleCrypto_deriveKey(SubtleCrypto* self , jb_Any * algorithm, CryptoKey * baseKey, jb_Any * derivedKeyType, bool extractable, jb_Array * keyUsages) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "deriveKey", em_Val_from(algorithm), em_Val_from(baseKey), em_Val_from(derivedKeyType), em_Val_from(extractable), em_Val_from(keyUsages)));
 }
 
@@ -50,7 +50,7 @@ jb_Promise SubtleCrypto_deriveBits1(SubtleCrypto* self , jb_Any * algorithm, Cry
 }
 
 
-jb_Promise SubtleCrypto_importKey(SubtleCrypto* self , KeyFormat * format, jb_Any * keyData, jb_Any * algorithm, bool extractable, jb_Sequence * keyUsages) {
+jb_Promise SubtleCrypto_importKey(SubtleCrypto* self , KeyFormat * format, jb_Any * keyData, jb_Any * algorithm, bool extractable, jb_Array * keyUsages) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "importKey", em_Val_from(format), em_Val_from(keyData), em_Val_from(algorithm), em_Val_from(extractable), em_Val_from(keyUsages)));
 }
 
@@ -65,7 +65,7 @@ jb_Promise SubtleCrypto_wrapKey(SubtleCrypto* self , KeyFormat * format, CryptoK
 }
 
 
-jb_Promise SubtleCrypto_unwrapKey(SubtleCrypto* self , KeyFormat * format, jb_Any * wrappedKey, CryptoKey * unwrappingKey, jb_Any * unwrapAlgorithm, jb_Any * unwrappedKeyAlgorithm, bool extractable, jb_Sequence * keyUsages) {
+jb_Promise SubtleCrypto_unwrapKey(SubtleCrypto* self , KeyFormat * format, jb_Any * wrappedKey, CryptoKey * unwrappingKey, jb_Any * unwrapAlgorithm, jb_Any * unwrappedKeyAlgorithm, bool extractable, jb_Array * keyUsages) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "unwrapKey", em_Val_from(format), em_Val_from(wrappedKey), em_Val_from(unwrappingKey), em_Val_from(unwrapAlgorithm), em_Val_from(unwrappedKeyAlgorithm), em_Val_from(extractable), em_Val_from(keyUsages)));
 }
 

@@ -20,22 +20,22 @@ void HTMLDialogElement_set_open(HTMLDialogElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLDialogElement_returnValue(const HTMLDialogElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("returnValue")));
+jb_String HTMLDialogElement_returnValue(const HTMLDialogElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("returnValue")));
 }
 
 
-void HTMLDialogElement_set_returnValue(HTMLDialogElement* self, jb_DOMString * value) {
+void HTMLDialogElement_set_returnValue(HTMLDialogElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("returnValue"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLDialogElement_closedBy(const HTMLDialogElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("closedBy")));
+jb_String HTMLDialogElement_closedBy(const HTMLDialogElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("closedBy")));
 }
 
 
-void HTMLDialogElement_set_closedBy(HTMLDialogElement* self, jb_DOMString * value) {
+void HTMLDialogElement_set_closedBy(HTMLDialogElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("closedBy"), em_Val_from(value));
 }
 
@@ -55,7 +55,7 @@ jb_Undefined HTMLDialogElement_close0(HTMLDialogElement* self ) {
 }
 
 
-jb_Undefined HTMLDialogElement_close1(HTMLDialogElement* self , jb_DOMString * returnValue) {
+jb_Undefined HTMLDialogElement_close1(HTMLDialogElement* self , jb_String * returnValue) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "close", em_Val_from(returnValue)));
 }
 
@@ -65,7 +65,7 @@ jb_Undefined HTMLDialogElement_requestClose0(HTMLDialogElement* self ) {
 }
 
 
-jb_Undefined HTMLDialogElement_requestClose1(HTMLDialogElement* self , jb_DOMString * returnValue) {
+jb_Undefined HTMLDialogElement_requestClose1(HTMLDialogElement* self , jb_String * returnValue) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "requestClose", em_Val_from(returnValue)));
 }
 

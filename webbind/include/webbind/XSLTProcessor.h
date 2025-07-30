@@ -19,11 +19,11 @@ DocumentFragment XSLTProcessor_transformToFragment(XSLTProcessor* self , Node * 
 
 Document XSLTProcessor_transformToDocument(XSLTProcessor* self , Node * source);
 
-jb_Undefined XSLTProcessor_setParameter(XSLTProcessor* self , jb_DOMString * namespaceURI, jb_DOMString * localName, jb_Any * value);
+jb_Undefined XSLTProcessor_setParameter(XSLTProcessor* self , jb_String * namespaceURI, jb_String * localName, jb_Any * value);
 
-jb_Any XSLTProcessor_getParameter(XSLTProcessor* self , jb_DOMString * namespaceURI, jb_DOMString * localName);
+jb_Any XSLTProcessor_getParameter(XSLTProcessor* self , jb_String * namespaceURI, jb_String * localName);
 
-jb_Undefined XSLTProcessor_removeParameter(XSLTProcessor* self , jb_DOMString * namespaceURI, jb_DOMString * localName);
+jb_Undefined XSLTProcessor_removeParameter(XSLTProcessor* self , jb_String * namespaceURI, jb_String * localName);
 
 jb_Undefined XSLTProcessor_clearParameters(XSLTProcessor* self );
 

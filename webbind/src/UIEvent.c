@@ -6,13 +6,13 @@
 DEFINE_EMLITE_TYPE(UIEvent, Event);
 
 
-UIEvent UIEvent_new0(jb_DOMString * type) {
+UIEvent UIEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("UIEvent") , em_Val_from(type));
         return UIEvent_from_val(&vv);
       }
 
 
-UIEvent UIEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+UIEvent UIEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("UIEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return UIEvent_from_val(&vv);
       }
@@ -33,27 +33,27 @@ InputDeviceCapabilities UIEvent_sourceCapabilities(const UIEvent *self) {
 }
 
 
-jb_Undefined UIEvent_initUIEvent0(UIEvent* self , jb_DOMString * typeArg) {
+jb_Undefined UIEvent_initUIEvent0(UIEvent* self , jb_String * typeArg) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initUIEvent", em_Val_from(typeArg)));
 }
 
 
-jb_Undefined UIEvent_initUIEvent1(UIEvent* self , jb_DOMString * typeArg, bool bubblesArg) {
+jb_Undefined UIEvent_initUIEvent1(UIEvent* self , jb_String * typeArg, bool bubblesArg) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initUIEvent", em_Val_from(typeArg), em_Val_from(bubblesArg)));
 }
 
 
-jb_Undefined UIEvent_initUIEvent2(UIEvent* self , jb_DOMString * typeArg, bool bubblesArg, bool cancelableArg) {
+jb_Undefined UIEvent_initUIEvent2(UIEvent* self , jb_String * typeArg, bool bubblesArg, bool cancelableArg) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initUIEvent", em_Val_from(typeArg), em_Val_from(bubblesArg), em_Val_from(cancelableArg)));
 }
 
 
-jb_Undefined UIEvent_initUIEvent3(UIEvent* self , jb_DOMString * typeArg, bool bubblesArg, bool cancelableArg, Window * viewArg) {
+jb_Undefined UIEvent_initUIEvent3(UIEvent* self , jb_String * typeArg, bool bubblesArg, bool cancelableArg, Window * viewArg) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initUIEvent", em_Val_from(typeArg), em_Val_from(bubblesArg), em_Val_from(cancelableArg), em_Val_from(viewArg)));
 }
 
 
-jb_Undefined UIEvent_initUIEvent4(UIEvent* self , jb_DOMString * typeArg, bool bubblesArg, bool cancelableArg, Window * viewArg, long detailArg) {
+jb_Undefined UIEvent_initUIEvent4(UIEvent* self , jb_String * typeArg, bool bubblesArg, bool cancelableArg, Window * viewArg, long detailArg) {
     return em_Val_as(jb_Undefined, em_Val_call(Event_as_val(self->inner), "initUIEvent", em_Val_from(typeArg), em_Val_from(bubblesArg), em_Val_from(cancelableArg), em_Val_from(viewArg), em_Val_from(detailArg)));
 }
 

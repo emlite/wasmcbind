@@ -10,6 +10,6 @@ DECLARE_EMLITE_TYPE(HTMLDataElement, HTMLElement);
 
 HTMLDataElement HTMLDataElement_new();
 
-jb_DOMString HTMLDataElement_value(const HTMLDataElement *self);
+jb_String HTMLDataElement_value(const HTMLDataElement *self);
 
-void HTMLDataElement_set_value(HTMLDataElement* self, jb_DOMString * value);
+void HTMLDataElement_set_value(HTMLDataElement* self, jb_String * value);

@@ -20,62 +20,62 @@ void HTMLBodyElement_set_onorientationchange(HTMLBodyElement* self, jb_Any * val
 }
 
 
-jb_DOMString HTMLBodyElement_text(const HTMLBodyElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("text")));
+jb_String HTMLBodyElement_text(const HTMLBodyElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("text")));
 }
 
 
-void HTMLBodyElement_set_text(HTMLBodyElement* self, jb_DOMString * value) {
+void HTMLBodyElement_set_text(HTMLBodyElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("text"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLBodyElement_link(const HTMLBodyElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("link")));
+jb_String HTMLBodyElement_link(const HTMLBodyElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("link")));
 }
 
 
-void HTMLBodyElement_set_link(HTMLBodyElement* self, jb_DOMString * value) {
+void HTMLBodyElement_set_link(HTMLBodyElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("link"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLBodyElement_vLink(const HTMLBodyElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("vLink")));
+jb_String HTMLBodyElement_vLink(const HTMLBodyElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("vLink")));
 }
 
 
-void HTMLBodyElement_set_vLink(HTMLBodyElement* self, jb_DOMString * value) {
+void HTMLBodyElement_set_vLink(HTMLBodyElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("vLink"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLBodyElement_aLink(const HTMLBodyElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("aLink")));
+jb_String HTMLBodyElement_aLink(const HTMLBodyElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("aLink")));
 }
 
 
-void HTMLBodyElement_set_aLink(HTMLBodyElement* self, jb_DOMString * value) {
+void HTMLBodyElement_set_aLink(HTMLBodyElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("aLink"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLBodyElement_bgColor(const HTMLBodyElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("bgColor")));
+jb_String HTMLBodyElement_bgColor(const HTMLBodyElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("bgColor")));
 }
 
 
-void HTMLBodyElement_set_bgColor(HTMLBodyElement* self, jb_DOMString * value) {
+void HTMLBodyElement_set_bgColor(HTMLBodyElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("bgColor"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLBodyElement_background(const HTMLBodyElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("background")));
+jb_String HTMLBodyElement_background(const HTMLBodyElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("background")));
 }
 
 
-void HTMLBodyElement_set_background(HTMLBodyElement* self, jb_DOMString * value) {
+void HTMLBodyElement_set_background(HTMLBodyElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("background"), em_Val_from(value));
 }
 

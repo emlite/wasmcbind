@@ -22,9 +22,9 @@ bool IDBIndexParameters_multiEntry(const IDBIndexParameters *self);
 void IDBIndexParameters_set_multiEntry(IDBIndexParameters* self, bool value);
 DECLARE_EMLITE_TYPE(IDBObjectStore, em_Val);
 
-jb_DOMString IDBObjectStore_name(const IDBObjectStore *self);
+jb_String IDBObjectStore_name(const IDBObjectStore *self);
 
-void IDBObjectStore_set_name(IDBObjectStore* self, jb_DOMString * value);
+void IDBObjectStore_set_name(IDBObjectStore* self, jb_String * value);
 
 jb_Any IDBObjectStore_keyPath(const IDBObjectStore *self);
 
@@ -78,10 +78,10 @@ IDBRequest IDBObjectStore_openKeyCursor1(IDBObjectStore* self , jb_Any * query);
 
 IDBRequest IDBObjectStore_openKeyCursor2(IDBObjectStore* self , jb_Any * query, IDBCursorDirection * direction);
 
-IDBIndex IDBObjectStore_index(IDBObjectStore* self , jb_DOMString * name);
+IDBIndex IDBObjectStore_index(IDBObjectStore* self , jb_String * name);
 
-IDBIndex IDBObjectStore_createIndex0(IDBObjectStore* self , jb_DOMString * name, jb_Any * keyPath);
+IDBIndex IDBObjectStore_createIndex0(IDBObjectStore* self , jb_String * name, jb_Any * keyPath);
 
-IDBIndex IDBObjectStore_createIndex1(IDBObjectStore* self , jb_DOMString * name, jb_Any * keyPath, IDBIndexParameters * options);
+IDBIndex IDBObjectStore_createIndex1(IDBObjectStore* self , jb_String * name, jb_Any * keyPath, IDBIndexParameters * options);
 
-jb_Undefined IDBObjectStore_deleteIndex(IDBObjectStore* self , jb_DOMString * name);
+jb_Undefined IDBObjectStore_deleteIndex(IDBObjectStore* self , jb_String * name);

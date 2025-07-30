@@ -26,8 +26,8 @@ DOMPoint SVGPathElement_getPointAtLength(SVGPathElement* self , float distance);
 
 SVGPathSegment SVGPathElement_getPathSegmentAtLength(SVGPathElement* self , float distance);
 
-jb_Sequence SVGPathElement_getPathData0(SVGPathElement* self );
+jb_Array SVGPathElement_getPathData0(SVGPathElement* self );
 
-jb_Sequence SVGPathElement_getPathData1(SVGPathElement* self , SVGPathDataSettings * settings);
+jb_Array SVGPathElement_getPathData1(SVGPathElement* self , SVGPathDataSettings * settings);
 
-jb_Undefined SVGPathElement_setPathData(SVGPathElement* self , jb_Sequence * pathData);
+jb_Undefined SVGPathElement_setPathData(SVGPathElement* self , jb_Array * pathData);

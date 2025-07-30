@@ -8,11 +8,11 @@
 
 DECLARE_EMLITE_TYPE(NavigationHistoryEntry, EventTarget);
 
-jb_USVString NavigationHistoryEntry_url(const NavigationHistoryEntry *self);
+jb_String NavigationHistoryEntry_url(const NavigationHistoryEntry *self);
 
-jb_DOMString NavigationHistoryEntry_key(const NavigationHistoryEntry *self);
+jb_String NavigationHistoryEntry_key(const NavigationHistoryEntry *self);
 
-jb_DOMString NavigationHistoryEntry_id(const NavigationHistoryEntry *self);
+jb_String NavigationHistoryEntry_id(const NavigationHistoryEntry *self);
 
 long long NavigationHistoryEntry_index(const NavigationHistoryEntry *self);
 

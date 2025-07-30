@@ -20,8 +20,8 @@ jb_Any LayoutShift_lastInputTime(const LayoutShift *self) {
 }
 
 
-jb_FrozenArray LayoutShift_sources(const LayoutShift *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("sources")));
+jb_Array LayoutShift_sources(const LayoutShift *self) {
+    return em_Val_as(jb_Array, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("sources")));
 }
 
 

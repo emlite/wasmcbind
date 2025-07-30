@@ -29,4 +29,4 @@ jb_Undefined SpeechSynthesis_pause(SpeechSynthesis* self );
 
 jb_Undefined SpeechSynthesis_resume(SpeechSynthesis* self );
 
-jb_Sequence SpeechSynthesis_getVoices(SpeechSynthesis* self );
+jb_Array SpeechSynthesis_getVoices(SpeechSynthesis* self );

@@ -15,8 +15,8 @@ RTCDtlsTransportState RTCDtlsTransport_state(const RTCDtlsTransport *self) {
 }
 
 
-jb_Sequence RTCDtlsTransport_getRemoteCertificates(RTCDtlsTransport* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getRemoteCertificates"));
+jb_Array RTCDtlsTransport_getRemoteCertificates(RTCDtlsTransport* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getRemoteCertificates"));
 }
 
 

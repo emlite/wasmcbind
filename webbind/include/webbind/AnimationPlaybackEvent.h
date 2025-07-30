@@ -8,9 +8,9 @@
 
 DECLARE_EMLITE_TYPE(AnimationPlaybackEvent, Event);
 
-AnimationPlaybackEvent AnimationPlaybackEvent_new0(jb_DOMString * type);
+AnimationPlaybackEvent AnimationPlaybackEvent_new0(jb_String * type);
 
-AnimationPlaybackEvent AnimationPlaybackEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+AnimationPlaybackEvent AnimationPlaybackEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
 jb_Any AnimationPlaybackEvent_currentTime(const AnimationPlaybackEvent *self);
 

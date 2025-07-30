@@ -78,9 +78,9 @@ jb_Any GPUTextureDescriptor_usage(const GPUTextureDescriptor *self);
 
 void GPUTextureDescriptor_set_usage(GPUTextureDescriptor* self, jb_Any * value);
 
-jb_Sequence GPUTextureDescriptor_viewFormats(const GPUTextureDescriptor *self);
+jb_Array GPUTextureDescriptor_viewFormats(const GPUTextureDescriptor *self);
 
-void GPUTextureDescriptor_set_viewFormats(GPUTextureDescriptor* self, jb_Sequence * value);
+void GPUTextureDescriptor_set_viewFormats(GPUTextureDescriptor* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(GPUSamplerDescriptor, em_Val);
 
 GPUAddressMode GPUSamplerDescriptor_addressModeU(const GPUSamplerDescriptor *self);
@@ -133,32 +133,32 @@ PredefinedColorSpace GPUExternalTextureDescriptor_colorSpace(const GPUExternalTe
 void GPUExternalTextureDescriptor_set_colorSpace(GPUExternalTextureDescriptor* self, PredefinedColorSpace * value);
 DECLARE_EMLITE_TYPE(GPUBindGroupLayoutDescriptor, em_Val);
 
-jb_Sequence GPUBindGroupLayoutDescriptor_entries(const GPUBindGroupLayoutDescriptor *self);
+jb_Array GPUBindGroupLayoutDescriptor_entries(const GPUBindGroupLayoutDescriptor *self);
 
-void GPUBindGroupLayoutDescriptor_set_entries(GPUBindGroupLayoutDescriptor* self, jb_Sequence * value);
+void GPUBindGroupLayoutDescriptor_set_entries(GPUBindGroupLayoutDescriptor* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(GPUPipelineLayoutDescriptor, em_Val);
 
-jb_Sequence GPUPipelineLayoutDescriptor_bindGroupLayouts(const GPUPipelineLayoutDescriptor *self);
+jb_Array GPUPipelineLayoutDescriptor_bindGroupLayouts(const GPUPipelineLayoutDescriptor *self);
 
-void GPUPipelineLayoutDescriptor_set_bindGroupLayouts(GPUPipelineLayoutDescriptor* self, jb_Sequence * value);
+void GPUPipelineLayoutDescriptor_set_bindGroupLayouts(GPUPipelineLayoutDescriptor* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(GPUBindGroupDescriptor, em_Val);
 
 GPUBindGroupLayout GPUBindGroupDescriptor_layout(const GPUBindGroupDescriptor *self);
 
 void GPUBindGroupDescriptor_set_layout(GPUBindGroupDescriptor* self, GPUBindGroupLayout * value);
 
-jb_Sequence GPUBindGroupDescriptor_entries(const GPUBindGroupDescriptor *self);
+jb_Array GPUBindGroupDescriptor_entries(const GPUBindGroupDescriptor *self);
 
-void GPUBindGroupDescriptor_set_entries(GPUBindGroupDescriptor* self, jb_Sequence * value);
+void GPUBindGroupDescriptor_set_entries(GPUBindGroupDescriptor* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(GPUShaderModuleDescriptor, em_Val);
 
-jb_USVString GPUShaderModuleDescriptor_code(const GPUShaderModuleDescriptor *self);
+jb_String GPUShaderModuleDescriptor_code(const GPUShaderModuleDescriptor *self);
 
-void GPUShaderModuleDescriptor_set_code(GPUShaderModuleDescriptor* self, jb_USVString * value);
+void GPUShaderModuleDescriptor_set_code(GPUShaderModuleDescriptor* self, jb_String * value);
 
-jb_Sequence GPUShaderModuleDescriptor_compilationHints(const GPUShaderModuleDescriptor *self);
+jb_Array GPUShaderModuleDescriptor_compilationHints(const GPUShaderModuleDescriptor *self);
 
-void GPUShaderModuleDescriptor_set_compilationHints(GPUShaderModuleDescriptor* self, jb_Sequence * value);
+void GPUShaderModuleDescriptor_set_compilationHints(GPUShaderModuleDescriptor* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(GPUComputePipelineDescriptor, em_Val);
 
 jb_Any GPUComputePipelineDescriptor_compute(const GPUComputePipelineDescriptor *self);
@@ -260,6 +260,6 @@ jb_Any GPUDevice_onuncapturederror(const GPUDevice *self);
 
 void GPUDevice_set_onuncapturederror(GPUDevice* self, jb_Any * value);
 
-jb_USVString GPUDevice_label(const GPUDevice *self);
+jb_String GPUDevice_label(const GPUDevice *self);
 
-void GPUDevice_set_label(GPUDevice* self, jb_USVString * value);
+void GPUDevice_set_label(GPUDevice* self, jb_String * value);

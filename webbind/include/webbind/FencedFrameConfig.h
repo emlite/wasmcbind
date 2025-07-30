@@ -7,6 +7,6 @@
 
 DECLARE_EMLITE_TYPE(FencedFrameConfig, em_Val);
 
-FencedFrameConfig FencedFrameConfig_new(jb_USVString * url);
+FencedFrameConfig FencedFrameConfig_new(jb_String * url);
 
-jb_Undefined FencedFrameConfig_setSharedStorageContext(FencedFrameConfig* self , jb_DOMString * contextString);
+jb_Undefined FencedFrameConfig_setSharedStorageContext(FencedFrameConfig* self , jb_String * contextString);

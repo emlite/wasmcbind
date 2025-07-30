@@ -4,84 +4,84 @@
 DEFINE_EMLITE_TYPE(NavigatorUABrandVersion, em_Val);
 
 
-jb_DOMString NavigatorUABrandVersion_brand(const NavigatorUABrandVersion *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("brand")));
+jb_String NavigatorUABrandVersion_brand(const NavigatorUABrandVersion *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("brand")));
 }
 
 
-void NavigatorUABrandVersion_set_brand(NavigatorUABrandVersion* self, jb_DOMString * value) {
+void NavigatorUABrandVersion_set_brand(NavigatorUABrandVersion* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("brand"), em_Val_from(value));
 }
 
 
-jb_DOMString NavigatorUABrandVersion_version(const NavigatorUABrandVersion *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("version")));
+jb_String NavigatorUABrandVersion_version(const NavigatorUABrandVersion *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("version")));
 }
 
 
-void NavigatorUABrandVersion_set_version(NavigatorUABrandVersion* self, jb_DOMString * value) {
+void NavigatorUABrandVersion_set_version(NavigatorUABrandVersion* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("version"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(UADataValues, em_Val);
 
 
-jb_DOMString UADataValues_architecture(const UADataValues *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("architecture")));
+jb_String UADataValues_architecture(const UADataValues *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("architecture")));
 }
 
 
-void UADataValues_set_architecture(UADataValues* self, jb_DOMString * value) {
+void UADataValues_set_architecture(UADataValues* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("architecture"), em_Val_from(value));
 }
 
 
-jb_DOMString UADataValues_bitness(const UADataValues *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("bitness")));
+jb_String UADataValues_bitness(const UADataValues *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("bitness")));
 }
 
 
-void UADataValues_set_bitness(UADataValues* self, jb_DOMString * value) {
+void UADataValues_set_bitness(UADataValues* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("bitness"), em_Val_from(value));
 }
 
 
-jb_Sequence UADataValues_brands(const UADataValues *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("brands")));
+jb_Array UADataValues_brands(const UADataValues *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("brands")));
 }
 
 
-void UADataValues_set_brands(UADataValues* self, jb_Sequence * value) {
+void UADataValues_set_brands(UADataValues* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("brands"), em_Val_from(value));
 }
 
 
-jb_Sequence UADataValues_formFactors(const UADataValues *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("formFactors")));
+jb_Array UADataValues_formFactors(const UADataValues *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("formFactors")));
 }
 
 
-void UADataValues_set_formFactors(UADataValues* self, jb_Sequence * value) {
+void UADataValues_set_formFactors(UADataValues* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("formFactors"), em_Val_from(value));
 }
 
 
-jb_Sequence UADataValues_fullVersionList(const UADataValues *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fullVersionList")));
+jb_Array UADataValues_fullVersionList(const UADataValues *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fullVersionList")));
 }
 
 
-void UADataValues_set_fullVersionList(UADataValues* self, jb_Sequence * value) {
+void UADataValues_set_fullVersionList(UADataValues* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("fullVersionList"), em_Val_from(value));
 }
 
 
-jb_DOMString UADataValues_model(const UADataValues *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("model")));
+jb_String UADataValues_model(const UADataValues *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("model")));
 }
 
 
-void UADataValues_set_model(UADataValues* self, jb_DOMString * value) {
+void UADataValues_set_model(UADataValues* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("model"), em_Val_from(value));
 }
 
@@ -96,32 +96,32 @@ void UADataValues_set_mobile(UADataValues* self, bool value) {
 }
 
 
-jb_DOMString UADataValues_platform(const UADataValues *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("platform")));
+jb_String UADataValues_platform(const UADataValues *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("platform")));
 }
 
 
-void UADataValues_set_platform(UADataValues* self, jb_DOMString * value) {
+void UADataValues_set_platform(UADataValues* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("platform"), em_Val_from(value));
 }
 
 
-jb_DOMString UADataValues_platformVersion(const UADataValues *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("platformVersion")));
+jb_String UADataValues_platformVersion(const UADataValues *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("platformVersion")));
 }
 
 
-void UADataValues_set_platformVersion(UADataValues* self, jb_DOMString * value) {
+void UADataValues_set_platformVersion(UADataValues* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("platformVersion"), em_Val_from(value));
 }
 
 
-jb_DOMString UADataValues_uaFullVersion(const UADataValues *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("uaFullVersion")));
+jb_String UADataValues_uaFullVersion(const UADataValues *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("uaFullVersion")));
 }
 
 
-void UADataValues_set_uaFullVersion(UADataValues* self, jb_DOMString * value) {
+void UADataValues_set_uaFullVersion(UADataValues* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("uaFullVersion"), em_Val_from(value));
 }
 
@@ -138,12 +138,12 @@ void UADataValues_set_wow64(UADataValues* self, bool value) {
 DEFINE_EMLITE_TYPE(UALowEntropyJSON, em_Val);
 
 
-jb_Sequence UALowEntropyJSON_brands(const UALowEntropyJSON *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("brands")));
+jb_Array UALowEntropyJSON_brands(const UALowEntropyJSON *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("brands")));
 }
 
 
-void UALowEntropyJSON_set_brands(UALowEntropyJSON* self, jb_Sequence * value) {
+void UALowEntropyJSON_set_brands(UALowEntropyJSON* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("brands"), em_Val_from(value));
 }
 
@@ -158,20 +158,20 @@ void UALowEntropyJSON_set_mobile(UALowEntropyJSON* self, bool value) {
 }
 
 
-jb_DOMString UALowEntropyJSON_platform(const UALowEntropyJSON *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("platform")));
+jb_String UALowEntropyJSON_platform(const UALowEntropyJSON *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("platform")));
 }
 
 
-void UALowEntropyJSON_set_platform(UALowEntropyJSON* self, jb_DOMString * value) {
+void UALowEntropyJSON_set_platform(UALowEntropyJSON* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("platform"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(NavigatorUAData, em_Val);
 
 
-jb_FrozenArray NavigatorUAData_brands(const NavigatorUAData *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("brands")));
+jb_Array NavigatorUAData_brands(const NavigatorUAData *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("brands")));
 }
 
 
@@ -180,12 +180,12 @@ bool NavigatorUAData_mobile(const NavigatorUAData *self) {
 }
 
 
-jb_DOMString NavigatorUAData_platform(const NavigatorUAData *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("platform")));
+jb_String NavigatorUAData_platform(const NavigatorUAData *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("platform")));
 }
 
 
-jb_Promise NavigatorUAData_getHighEntropyValues(NavigatorUAData* self , jb_Sequence * hints) {
+jb_Promise NavigatorUAData_getHighEntropyValues(NavigatorUAData* self , jb_Array * hints) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "getHighEntropyValues", em_Val_from(hints)));
 }
 

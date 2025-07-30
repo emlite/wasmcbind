@@ -4,7 +4,7 @@
 DEFINE_EMLITE_TYPE(TaskPriorityChangeEvent, Event);
 
 
-TaskPriorityChangeEvent TaskPriorityChangeEvent_new(jb_DOMString * type, jb_Any * priorityChangeEventInitDict) {
+TaskPriorityChangeEvent TaskPriorityChangeEvent_new(jb_String * type, jb_Any * priorityChangeEventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("TaskPriorityChangeEvent") , em_Val_from(type), em_Val_from(priorityChangeEventInitDict));
         return TaskPriorityChangeEvent_from_val(&vv);
       }

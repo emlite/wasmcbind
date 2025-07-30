@@ -22,4 +22,4 @@ bool ScreenDetailed_isInternal(const ScreenDetailed *self);
 
 float ScreenDetailed_devicePixelRatio(const ScreenDetailed *self);
 
-jb_DOMString ScreenDetailed_label(const ScreenDetailed *self);
+jb_String ScreenDetailed_label(const ScreenDetailed *self);

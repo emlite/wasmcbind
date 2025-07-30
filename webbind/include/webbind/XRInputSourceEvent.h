@@ -11,7 +11,7 @@ typedef struct XRInputSource XRInputSource;
 
 DECLARE_EMLITE_TYPE(XRInputSourceEvent, Event);
 
-XRInputSourceEvent XRInputSourceEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+XRInputSourceEvent XRInputSourceEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 XRFrame XRInputSourceEvent_frame(const XRInputSourceEvent *self);
 

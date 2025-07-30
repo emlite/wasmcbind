@@ -11,17 +11,17 @@ typedef struct MediaStream MediaStream;
 
 DECLARE_EMLITE_TYPE(MediaStream, EventTarget);
 
-MediaStream MediaStream_new(jb_Sequence * tracks);
+MediaStream MediaStream_new(jb_Array * tracks);
 
-jb_DOMString MediaStream_id(const MediaStream *self);
+jb_String MediaStream_id(const MediaStream *self);
 
-jb_Sequence MediaStream_getAudioTracks(MediaStream* self );
+jb_Array MediaStream_getAudioTracks(MediaStream* self );
 
-jb_Sequence MediaStream_getVideoTracks(MediaStream* self );
+jb_Array MediaStream_getVideoTracks(MediaStream* self );
 
-jb_Sequence MediaStream_getTracks(MediaStream* self );
+jb_Array MediaStream_getTracks(MediaStream* self );
 
-MediaStreamTrack MediaStream_getTrackById(MediaStream* self , jb_DOMString * trackId);
+MediaStreamTrack MediaStream_getTrackById(MediaStream* self , jb_String * trackId);
 
 jb_Undefined MediaStream_addTrack(MediaStream* self , MediaStreamTrack * track);
 

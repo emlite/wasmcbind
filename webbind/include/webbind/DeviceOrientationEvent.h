@@ -8,9 +8,9 @@
 
 DECLARE_EMLITE_TYPE(DeviceOrientationEvent, Event);
 
-DeviceOrientationEvent DeviceOrientationEvent_new0(jb_DOMString * type);
+DeviceOrientationEvent DeviceOrientationEvent_new0(jb_String * type);
 
-DeviceOrientationEvent DeviceOrientationEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+DeviceOrientationEvent DeviceOrientationEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
 double DeviceOrientationEvent_alpha(const DeviceOrientationEvent *self);
 

@@ -116,18 +116,18 @@ unsigned char USBDevice_deviceVersionSubminor(const USBDevice *self) {
 }
 
 
-jb_DOMString USBDevice_manufacturerName(const USBDevice *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("manufacturerName")));
+jb_String USBDevice_manufacturerName(const USBDevice *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("manufacturerName")));
 }
 
 
-jb_DOMString USBDevice_productName(const USBDevice *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("productName")));
+jb_String USBDevice_productName(const USBDevice *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("productName")));
 }
 
 
-jb_DOMString USBDevice_serialNumber(const USBDevice *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("serialNumber")));
+jb_String USBDevice_serialNumber(const USBDevice *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("serialNumber")));
 }
 
 
@@ -136,8 +136,8 @@ USBConfiguration USBDevice_configuration(const USBDevice *self) {
 }
 
 
-jb_FrozenArray USBDevice_configurations(const USBDevice *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("configurations")));
+jb_Array USBDevice_configurations(const USBDevice *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("configurations")));
 }
 
 
@@ -211,12 +211,12 @@ jb_Promise USBDevice_transferOut(USBDevice* self , unsigned char endpointNumber,
 }
 
 
-jb_Promise USBDevice_isochronousTransferIn(USBDevice* self , unsigned char endpointNumber, jb_Sequence * packetLengths) {
+jb_Promise USBDevice_isochronousTransferIn(USBDevice* self , unsigned char endpointNumber, jb_Array * packetLengths) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "isochronousTransferIn", em_Val_from(endpointNumber), em_Val_from(packetLengths)));
 }
 
 
-jb_Promise USBDevice_isochronousTransferOut(USBDevice* self , unsigned char endpointNumber, jb_Any * data, jb_Sequence * packetLengths) {
+jb_Promise USBDevice_isochronousTransferOut(USBDevice* self , unsigned char endpointNumber, jb_Any * data, jb_Array * packetLengths) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "isochronousTransferOut", em_Val_from(endpointNumber), em_Val_from(data), em_Val_from(packetLengths)));
 }
 

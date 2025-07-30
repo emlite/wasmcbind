@@ -19,7 +19,7 @@ AbortSignal AbortSignal_timeout(AbortSignal* self , long long milliseconds) {
 }
 
 
-AbortSignal AbortSignal_any(AbortSignal* self , jb_Sequence * signals) {
+AbortSignal AbortSignal_any(AbortSignal* self , jb_Array * signals) {
     return em_Val_as(AbortSignal, em_Val_call(em_Val_global("abortsignal"), "any", em_Val_from(signals)));
 }
 

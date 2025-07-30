@@ -27,22 +27,22 @@ void AttributionImpressionOptions_set_matchValue(AttributionImpressionOptions* s
 }
 
 
-jb_Sequence AttributionImpressionOptions_conversionSites(const AttributionImpressionOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("conversionSites")));
+jb_Array AttributionImpressionOptions_conversionSites(const AttributionImpressionOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("conversionSites")));
 }
 
 
-void AttributionImpressionOptions_set_conversionSites(AttributionImpressionOptions* self, jb_Sequence * value) {
+void AttributionImpressionOptions_set_conversionSites(AttributionImpressionOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("conversionSites"), em_Val_from(value));
 }
 
 
-jb_Sequence AttributionImpressionOptions_conversionCallers(const AttributionImpressionOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("conversionCallers")));
+jb_Array AttributionImpressionOptions_conversionCallers(const AttributionImpressionOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("conversionCallers")));
 }
 
 
-void AttributionImpressionOptions_set_conversionCallers(AttributionImpressionOptions* self, jb_Sequence * value) {
+void AttributionImpressionOptions_set_conversionCallers(AttributionImpressionOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("conversionCallers"), em_Val_from(value));
 }
 
@@ -81,12 +81,12 @@ void AttributionConversionResult_set_report(AttributionConversionResult* self, j
 DEFINE_EMLITE_TYPE(AttributionConversionOptions, em_Val);
 
 
-jb_USVString AttributionConversionOptions_aggregationService(const AttributionConversionOptions *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("aggregationService")));
+jb_String AttributionConversionOptions_aggregationService(const AttributionConversionOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("aggregationService")));
 }
 
 
-void AttributionConversionOptions_set_aggregationService(AttributionConversionOptions* self, jb_USVString * value) {
+void AttributionConversionOptions_set_aggregationService(AttributionConversionOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("aggregationService"), em_Val_from(value));
 }
 
@@ -121,32 +121,32 @@ void AttributionConversionOptions_set_lookbackDays(AttributionConversionOptions*
 }
 
 
-jb_Sequence AttributionConversionOptions_matchValues(const AttributionConversionOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("matchValues")));
+jb_Array AttributionConversionOptions_matchValues(const AttributionConversionOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("matchValues")));
 }
 
 
-void AttributionConversionOptions_set_matchValues(AttributionConversionOptions* self, jb_Sequence * value) {
+void AttributionConversionOptions_set_matchValues(AttributionConversionOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("matchValues"), em_Val_from(value));
 }
 
 
-jb_Sequence AttributionConversionOptions_impressionSites(const AttributionConversionOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("impressionSites")));
+jb_Array AttributionConversionOptions_impressionSites(const AttributionConversionOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("impressionSites")));
 }
 
 
-void AttributionConversionOptions_set_impressionSites(AttributionConversionOptions* self, jb_Sequence * value) {
+void AttributionConversionOptions_set_impressionSites(AttributionConversionOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("impressionSites"), em_Val_from(value));
 }
 
 
-jb_Sequence AttributionConversionOptions_impressionCallers(const AttributionConversionOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("impressionCallers")));
+jb_Array AttributionConversionOptions_impressionCallers(const AttributionConversionOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("impressionCallers")));
 }
 
 
-void AttributionConversionOptions_set_impressionCallers(AttributionConversionOptions* self, jb_Sequence * value) {
+void AttributionConversionOptions_set_impressionCallers(AttributionConversionOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("impressionCallers"), em_Val_from(value));
 }
 

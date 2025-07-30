@@ -4,18 +4,18 @@
 DEFINE_EMLITE_TYPE(DocumentType, Node);
 
 
-jb_DOMString DocumentType_name(const DocumentType *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("name")));
+jb_String DocumentType_name(const DocumentType *self) {
+    return em_Val_as(jb_String, em_Val_get(Node_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString DocumentType_publicId(const DocumentType *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("publicId")));
+jb_String DocumentType_publicId(const DocumentType *self) {
+    return em_Val_as(jb_String, em_Val_get(Node_as_val(self->inner), em_Val_from("publicId")));
 }
 
 
-jb_DOMString DocumentType_systemId(const DocumentType *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("systemId")));
+jb_String DocumentType_systemId(const DocumentType *self) {
+    return em_Val_as(jb_String, em_Val_get(Node_as_val(self->inner), em_Val_from("systemId")));
 }
 
 

@@ -14,35 +14,35 @@ typedef struct CaptureHandle CaptureHandle;
 
 DECLARE_EMLITE_TYPE(MediaTrackCapabilities, em_Val);
 
-jb_DOMString MediaTrackCapabilities_displaySurface(const MediaTrackCapabilities *self);
+jb_String MediaTrackCapabilities_displaySurface(const MediaTrackCapabilities *self);
 
-void MediaTrackCapabilities_set_displaySurface(MediaTrackCapabilities* self, jb_DOMString * value);
+void MediaTrackCapabilities_set_displaySurface(MediaTrackCapabilities* self, jb_String * value);
 
 bool MediaTrackCapabilities_logicalSurface(const MediaTrackCapabilities *self);
 
 void MediaTrackCapabilities_set_logicalSurface(MediaTrackCapabilities* self, bool value);
 
-jb_Sequence MediaTrackCapabilities_cursor(const MediaTrackCapabilities *self);
+jb_Array MediaTrackCapabilities_cursor(const MediaTrackCapabilities *self);
 
-void MediaTrackCapabilities_set_cursor(MediaTrackCapabilities* self, jb_Sequence * value);
+void MediaTrackCapabilities_set_cursor(MediaTrackCapabilities* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MediaTrackConstraints, em_Val);
 
-jb_Sequence MediaTrackConstraints_advanced(const MediaTrackConstraints *self);
+jb_Array MediaTrackConstraints_advanced(const MediaTrackConstraints *self);
 
-void MediaTrackConstraints_set_advanced(MediaTrackConstraints* self, jb_Sequence * value);
+void MediaTrackConstraints_set_advanced(MediaTrackConstraints* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MediaTrackSettings, em_Val);
 
-jb_DOMString MediaTrackSettings_displaySurface(const MediaTrackSettings *self);
+jb_String MediaTrackSettings_displaySurface(const MediaTrackSettings *self);
 
-void MediaTrackSettings_set_displaySurface(MediaTrackSettings* self, jb_DOMString * value);
+void MediaTrackSettings_set_displaySurface(MediaTrackSettings* self, jb_String * value);
 
 bool MediaTrackSettings_logicalSurface(const MediaTrackSettings *self);
 
 void MediaTrackSettings_set_logicalSurface(MediaTrackSettings* self, bool value);
 
-jb_DOMString MediaTrackSettings_cursor(const MediaTrackSettings *self);
+jb_String MediaTrackSettings_cursor(const MediaTrackSettings *self);
 
-void MediaTrackSettings_set_cursor(MediaTrackSettings* self, jb_DOMString * value);
+void MediaTrackSettings_set_cursor(MediaTrackSettings* self, jb_String * value);
 
 bool MediaTrackSettings_restrictOwnAudio(const MediaTrackSettings *self);
 
@@ -57,20 +57,20 @@ double MediaTrackSettings_screenPixelRatio(const MediaTrackSettings *self);
 void MediaTrackSettings_set_screenPixelRatio(MediaTrackSettings* self, double value);
 DECLARE_EMLITE_TYPE(CaptureHandle, em_Val);
 
-jb_DOMString CaptureHandle_origin(const CaptureHandle *self);
+jb_String CaptureHandle_origin(const CaptureHandle *self);
 
-void CaptureHandle_set_origin(CaptureHandle* self, jb_DOMString * value);
+void CaptureHandle_set_origin(CaptureHandle* self, jb_String * value);
 
-jb_DOMString CaptureHandle_handle(const CaptureHandle *self);
+jb_String CaptureHandle_handle(const CaptureHandle *self);
 
-void CaptureHandle_set_handle(CaptureHandle* self, jb_DOMString * value);
+void CaptureHandle_set_handle(CaptureHandle* self, jb_String * value);
 DECLARE_EMLITE_TYPE(MediaStreamTrack, EventTarget);
 
-jb_DOMString MediaStreamTrack_kind(const MediaStreamTrack *self);
+jb_String MediaStreamTrack_kind(const MediaStreamTrack *self);
 
-jb_DOMString MediaStreamTrack_id(const MediaStreamTrack *self);
+jb_String MediaStreamTrack_id(const MediaStreamTrack *self);
 
-jb_DOMString MediaStreamTrack_label(const MediaStreamTrack *self);
+jb_String MediaStreamTrack_label(const MediaStreamTrack *self);
 
 bool MediaStreamTrack_enabled(const MediaStreamTrack *self);
 
@@ -112,13 +112,13 @@ jb_Any MediaStreamTrack_oncapturehandlechange(const MediaStreamTrack *self);
 
 void MediaStreamTrack_set_oncapturehandlechange(MediaStreamTrack* self, jb_Any * value);
 
-jb_Sequence MediaStreamTrack_getSupportedCaptureActions(MediaStreamTrack* self );
+jb_Array MediaStreamTrack_getSupportedCaptureActions(MediaStreamTrack* self );
 
 jb_Promise MediaStreamTrack_sendCaptureAction(MediaStreamTrack* self , CaptureAction * action);
 
-jb_DOMString MediaStreamTrack_contentHint(const MediaStreamTrack *self);
+jb_String MediaStreamTrack_contentHint(const MediaStreamTrack *self);
 
-void MediaStreamTrack_set_contentHint(MediaStreamTrack* self, jb_DOMString * value);
+void MediaStreamTrack_set_contentHint(MediaStreamTrack* self, jb_String * value);
 
 bool MediaStreamTrack_isolated(const MediaStreamTrack *self);
 

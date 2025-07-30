@@ -37,17 +37,17 @@ jb_Undefined GPUComputePassEncoder_end(GPUComputePassEncoder* self ) {
 }
 
 
-jb_USVString GPUComputePassEncoder_label(const GPUComputePassEncoder *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
+jb_String GPUComputePassEncoder_label(const GPUComputePassEncoder *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void GPUComputePassEncoder_set_label(GPUComputePassEncoder* self, jb_USVString * value) {
+void GPUComputePassEncoder_set_label(GPUComputePassEncoder* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 
 
-jb_Undefined GPUComputePassEncoder_pushDebugGroup(GPUComputePassEncoder* self , jb_USVString * groupLabel) {
+jb_Undefined GPUComputePassEncoder_pushDebugGroup(GPUComputePassEncoder* self , jb_String * groupLabel) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "pushDebugGroup", em_Val_from(groupLabel)));
 }
 
@@ -57,7 +57,7 @@ jb_Undefined GPUComputePassEncoder_popDebugGroup(GPUComputePassEncoder* self ) {
 }
 
 
-jb_Undefined GPUComputePassEncoder_insertDebugMarker(GPUComputePassEncoder* self , jb_USVString * markerLabel) {
+jb_Undefined GPUComputePassEncoder_insertDebugMarker(GPUComputePassEncoder* self , jb_String * markerLabel) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "insertDebugMarker", em_Val_from(markerLabel)));
 }
 

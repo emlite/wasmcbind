@@ -10,9 +10,9 @@ typedef struct CSSFontFeatureValuesMap CSSFontFeatureValuesMap;
 
 DECLARE_EMLITE_TYPE(CSSFontFeatureValuesRule, CSSRule);
 
-jb_CSSOMString CSSFontFeatureValuesRule_fontFamily(const CSSFontFeatureValuesRule *self);
+jb_String CSSFontFeatureValuesRule_fontFamily(const CSSFontFeatureValuesRule *self);
 
-void CSSFontFeatureValuesRule_set_fontFamily(CSSFontFeatureValuesRule* self, jb_CSSOMString * value);
+void CSSFontFeatureValuesRule_set_fontFamily(CSSFontFeatureValuesRule* self, jb_String * value);
 
 CSSFontFeatureValuesMap CSSFontFeatureValuesRule_annotation(const CSSFontFeatureValuesRule *self);
 

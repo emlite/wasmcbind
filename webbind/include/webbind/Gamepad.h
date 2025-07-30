@@ -31,7 +31,7 @@ DOMRectReadOnly GamepadTouch_surfaceDimensions(const GamepadTouch *self);
 void GamepadTouch_set_surfaceDimensions(GamepadTouch* self, DOMRectReadOnly * value);
 DECLARE_EMLITE_TYPE(Gamepad, em_Val);
 
-jb_DOMString Gamepad_id(const Gamepad *self);
+jb_String Gamepad_id(const Gamepad *self);
 
 long Gamepad_index(const Gamepad *self);
 
@@ -41,16 +41,16 @@ jb_Any Gamepad_timestamp(const Gamepad *self);
 
 GamepadMappingType Gamepad_mapping(const Gamepad *self);
 
-jb_FrozenArray Gamepad_axes(const Gamepad *self);
+jb_Array Gamepad_axes(const Gamepad *self);
 
-jb_FrozenArray Gamepad_buttons(const Gamepad *self);
+jb_Array Gamepad_buttons(const Gamepad *self);
 
-jb_FrozenArray Gamepad_touches(const Gamepad *self);
+jb_Array Gamepad_touches(const Gamepad *self);
 
 GamepadHapticActuator Gamepad_vibrationActuator(const Gamepad *self);
 
 GamepadHand Gamepad_hand(const Gamepad *self);
 
-jb_FrozenArray Gamepad_hapticActuators(const Gamepad *self);
+jb_Array Gamepad_hapticActuators(const Gamepad *self);
 
 GamepadPose Gamepad_pose(const Gamepad *self);

@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(TextUpdateEvent, Event);
 
 
-TextUpdateEvent TextUpdateEvent_new0(jb_DOMString * type) {
+TextUpdateEvent TextUpdateEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("TextUpdateEvent") , em_Val_from(type));
         return TextUpdateEvent_from_val(&vv);
       }
 
 
-TextUpdateEvent TextUpdateEvent_new1(jb_DOMString * type, jb_Any * options) {
+TextUpdateEvent TextUpdateEvent_new1(jb_String * type, jb_Any * options) {
         em_Val vv = em_Val_new(em_Val_global("TextUpdateEvent") , em_Val_from(type), em_Val_from(options));
         return TextUpdateEvent_from_val(&vv);
       }
@@ -26,8 +26,8 @@ unsigned long TextUpdateEvent_updateRangeEnd(const TextUpdateEvent *self) {
 }
 
 
-jb_DOMString TextUpdateEvent_text(const TextUpdateEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("text")));
+jb_String TextUpdateEvent_text(const TextUpdateEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("text")));
 }
 
 

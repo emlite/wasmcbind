@@ -8,7 +8,7 @@
 
 DECLARE_EMLITE_TYPE(RTCDataChannel, EventTarget);
 
-jb_USVString RTCDataChannel_label(const RTCDataChannel *self);
+jb_String RTCDataChannel_label(const RTCDataChannel *self);
 
 bool RTCDataChannel_ordered(const RTCDataChannel *self);
 
@@ -16,7 +16,7 @@ unsigned short RTCDataChannel_maxPacketLifeTime(const RTCDataChannel *self);
 
 unsigned short RTCDataChannel_maxRetransmits(const RTCDataChannel *self);
 
-jb_USVString RTCDataChannel_protocol(const RTCDataChannel *self);
+jb_String RTCDataChannel_protocol(const RTCDataChannel *self);
 
 bool RTCDataChannel_negotiated(const RTCDataChannel *self);
 

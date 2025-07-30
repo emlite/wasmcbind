@@ -51,7 +51,7 @@ jb_Undefined SpeechSynthesis_resume(SpeechSynthesis* self ) {
 }
 
 
-jb_Sequence SpeechSynthesis_getVoices(SpeechSynthesis* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getVoices"));
+jb_Array SpeechSynthesis_getVoices(SpeechSynthesis* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getVoices"));
 }
 

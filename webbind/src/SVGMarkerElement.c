@@ -45,12 +45,12 @@ SVGAnimatedAngle SVGMarkerElement_orientAngle(const SVGMarkerElement *self) {
 }
 
 
-jb_DOMString SVGMarkerElement_orient(const SVGMarkerElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("orient")));
+jb_String SVGMarkerElement_orient(const SVGMarkerElement *self) {
+    return em_Val_as(jb_String, em_Val_get(SVGElement_as_val(self->inner), em_Val_from("orient")));
 }
 
 
-void SVGMarkerElement_set_orient(SVGMarkerElement* self, jb_DOMString * value) {
+void SVGMarkerElement_set_orient(SVGMarkerElement* self, jb_String * value) {
     em_Val_set(SVGElement_as_val(self->inner), em_Val_from("orient"), em_Val_from(value));
 }
 

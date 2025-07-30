@@ -21,8 +21,8 @@ FileSystemHandleKind FileSystemHandle_kind(const FileSystemHandle *self) {
 }
 
 
-jb_USVString FileSystemHandle_name(const FileSystemHandle *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String FileSystemHandle_name(const FileSystemHandle *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 

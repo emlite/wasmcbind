@@ -13,7 +13,7 @@ DocumentFragment DocumentFragment_new() {
       }
 
 
-Element DocumentFragment_getElementById(DocumentFragment* self , jb_DOMString * elementId) {
+Element DocumentFragment_getElementById(DocumentFragment* self , jb_String * elementId) {
     return em_Val_as(Element, em_Val_call(Node_as_val(self->inner), "getElementById", em_Val_from(elementId)));
 }
 
@@ -58,12 +58,12 @@ jb_Undefined DocumentFragment_moveBefore(DocumentFragment* self , Node * node, N
 }
 
 
-Element DocumentFragment_querySelector(DocumentFragment* self , jb_DOMString * selectors) {
+Element DocumentFragment_querySelector(DocumentFragment* self , jb_String * selectors) {
     return em_Val_as(Element, em_Val_call(Node_as_val(self->inner), "querySelector", em_Val_from(selectors)));
 }
 
 
-NodeList DocumentFragment_querySelectorAll(DocumentFragment* self , jb_DOMString * selectors) {
+NodeList DocumentFragment_querySelectorAll(DocumentFragment* self , jb_String * selectors) {
     return em_Val_as(NodeList, em_Val_call(Node_as_val(self->inner), "querySelectorAll", em_Val_from(selectors)));
 }
 

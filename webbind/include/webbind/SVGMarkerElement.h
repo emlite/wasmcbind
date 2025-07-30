@@ -29,9 +29,9 @@ SVGAnimatedEnumeration SVGMarkerElement_orientType(const SVGMarkerElement *self)
 
 SVGAnimatedAngle SVGMarkerElement_orientAngle(const SVGMarkerElement *self);
 
-jb_DOMString SVGMarkerElement_orient(const SVGMarkerElement *self);
+jb_String SVGMarkerElement_orient(const SVGMarkerElement *self);
 
-void SVGMarkerElement_set_orient(SVGMarkerElement* self, jb_DOMString * value);
+void SVGMarkerElement_set_orient(SVGMarkerElement* self, jb_String * value);
 
 jb_Undefined SVGMarkerElement_setOrientToAuto(SVGMarkerElement* self );
 

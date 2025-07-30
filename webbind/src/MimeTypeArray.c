@@ -15,7 +15,7 @@ MimeType MimeTypeArray_item(MimeTypeArray* self , unsigned long index) {
 }
 
 
-MimeType MimeTypeArray_namedItem(MimeTypeArray* self , jb_DOMString * name) {
+MimeType MimeTypeArray_namedItem(MimeTypeArray* self , jb_String * name) {
     return em_Val_as(MimeType, em_Val_call(em_Val_as_val(self->inner), "namedItem", em_Val_from(name)));
 }
 

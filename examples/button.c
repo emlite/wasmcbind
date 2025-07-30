@@ -18,28 +18,28 @@ int main() {
     Window win            = window();
     Document document     = Window_document(&win);
     HTMLCollection bodies = Document_getElementsByTagName(
-        &document, &DOMSTR("body")
+        &document, &JSSTR("body")
     );
     Element body   = HTMLCollection_item(&bodies, 0);
     Element button = Document_createElement0(
-        &document, &DOMSTR("BUTTON")
+        &document, &JSSTR("BUTTON")
     );
-    Node_set_textContent(&button, &DOMSTR("Click me"));
+    Node_set_textContent(&button, &JSSTR("Click me"));
     Node_appendChild(&body, &button);
 
     jb_Function btn_cb = jb_Function_from(button_cb, NULL);
 
     EventTarget_addEventListener0(
-        &button, &DOMSTR("click"), &btn_cb
+        &button, &JSSTR("click"), &btn_cb
     );
     CSSStyleProperties style = HTMLElement_style(&button);
     CSSStyleDeclaration_setProperty0(
-        &style, &CSSStr("color"), &CSSStr("red")
+        &style, &JSSTR("color"), &JSSTR("red")
     );
     CSSStyleDeclaration_setProperty0(
-        &style, &CSSStr("background-color"), &CSSStr("#aaf")
+        &style, &JSSTR("background-color"), &JSSTR("#aaf")
     );
     CSSStyleDeclaration_setProperty0(
-        &style, &CSSStr("border"), &CSSStr("2px solid red")
+        &style, &JSSTR("border"), &JSSTR("2px solid red")
     );
 }

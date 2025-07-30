@@ -71,10 +71,10 @@ export function cpp(idlType) {
   const { n, unsigned } = flat(idlType);
   const jsbindMap = {
     undefined: "jb_Undefined",
-    DOMString: "jb_DOMString",
-    USVString: "jb_USVString",
-    ByteString: "jb_ByteString",
-    CSSOMString: "jb_CSSOMString",
+    DOMString: "jb_String",
+    USVString: "jb_String",
+    ByteString: "jb_String",
+    CSSOMString: "jb_String",
     object: "jb_Object",
     any: "jb_Any",
     Uint8Array: "jb_Uint8Array",
@@ -99,7 +99,7 @@ export function cpp(idlType) {
     const elem = Array.isArray(inner) ? inner[0] : inner;
 
     if (idlType.generic === "sequence") {
-      return `jb_Sequence`;
+      return `jb_Array`;
     }
 
     if (idlType.generic === "Promise") {
@@ -107,16 +107,16 @@ export function cpp(idlType) {
     }
 
     if (idlType.generic === "FrozenArray") {
-      return `jb_FrozenArray`;
+      return `jb_Array`;
     }
 
     if (idlType.generic === "ObservableArray") {
-      return `jb_ObservableArray`;
+      return `jb_Array`;
     }
 
     if (idlType.generic === "record") {
       const [k, v] = inner;
-      return `jb_Record`;
+      return `jb_Object`;
     }
   }
   if (["__union", "__unk"].includes(n)) return "jb_Any";

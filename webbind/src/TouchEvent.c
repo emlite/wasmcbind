@@ -5,13 +5,13 @@
 DEFINE_EMLITE_TYPE(TouchEvent, UIEvent);
 
 
-TouchEvent TouchEvent_new0(jb_DOMString * type) {
+TouchEvent TouchEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("TouchEvent") , em_Val_from(type));
         return TouchEvent_from_val(&vv);
       }
 
 
-TouchEvent TouchEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+TouchEvent TouchEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("TouchEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return TouchEvent_from_val(&vv);
       }
@@ -52,7 +52,7 @@ bool TouchEvent_shiftKey(const TouchEvent *self) {
 }
 
 
-bool TouchEvent_getModifierState(TouchEvent* self , jb_DOMString * keyArg) {
+bool TouchEvent_getModifierState(TouchEvent* self , jb_String * keyArg) {
     return em_Val_as(bool, em_Val_call(UIEvent_as_val(self->inner), "getModifierState", em_Val_from(keyArg)));
 }
 

@@ -9,13 +9,13 @@ typedef struct PerformanceObserverInit PerformanceObserverInit;
 
 DECLARE_EMLITE_TYPE(PerformanceObserverInit, em_Val);
 
-jb_Sequence PerformanceObserverInit_entryTypes(const PerformanceObserverInit *self);
+jb_Array PerformanceObserverInit_entryTypes(const PerformanceObserverInit *self);
 
-void PerformanceObserverInit_set_entryTypes(PerformanceObserverInit* self, jb_Sequence * value);
+void PerformanceObserverInit_set_entryTypes(PerformanceObserverInit* self, jb_Array * value);
 
-jb_DOMString PerformanceObserverInit_type(const PerformanceObserverInit *self);
+jb_String PerformanceObserverInit_type(const PerformanceObserverInit *self);
 
-void PerformanceObserverInit_set_type(PerformanceObserverInit* self, jb_DOMString * value);
+void PerformanceObserverInit_set_type(PerformanceObserverInit* self, jb_String * value);
 
 bool PerformanceObserverInit_buffered(const PerformanceObserverInit *self);
 
@@ -32,4 +32,4 @@ jb_Undefined PerformanceObserver_disconnect(PerformanceObserver* self );
 
 jb_Any PerformanceObserver_takeRecords(PerformanceObserver* self );
 
-jb_FrozenArray PerformanceObserver_supportedEntryTypes(const PerformanceObserver *self);
+jb_Array PerformanceObserver_supportedEntryTypes(const PerformanceObserver *self);

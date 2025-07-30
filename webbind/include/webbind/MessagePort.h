@@ -10,9 +10,9 @@ typedef struct StructuredSerializeOptions StructuredSerializeOptions;
 
 DECLARE_EMLITE_TYPE(StructuredSerializeOptions, em_Val);
 
-jb_Sequence StructuredSerializeOptions_transfer(const StructuredSerializeOptions *self);
+jb_Array StructuredSerializeOptions_transfer(const StructuredSerializeOptions *self);
 
-void StructuredSerializeOptions_set_transfer(StructuredSerializeOptions* self, jb_Sequence * value);
+void StructuredSerializeOptions_set_transfer(StructuredSerializeOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MessagePort, EventTarget);
 
 jb_Undefined MessagePort_postMessage0(MessagePort* self , jb_Any * message);

@@ -4,8 +4,8 @@
 DEFINE_EMLITE_TYPE(MediaQueryList, EventTarget);
 
 
-jb_CSSOMString MediaQueryList_media(const MediaQueryList *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("media")));
+jb_String MediaQueryList_media(const MediaQueryList *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("media")));
 }
 
 

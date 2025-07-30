@@ -16,6 +16,6 @@ unsigned char USBInterface_interfaceNumber(const USBInterface *self);
 
 USBAlternateInterface USBInterface_alternate(const USBInterface *self);
 
-jb_FrozenArray USBInterface_alternates(const USBInterface *self);
+jb_Array USBInterface_alternates(const USBInterface *self);
 
 bool USBInterface_claimed(const USBInterface *self);

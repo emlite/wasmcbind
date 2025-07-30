@@ -30,12 +30,12 @@ jb_Promise StorageAccessHandle_getDirectory(StorageAccessHandle* self );
 
 jb_Promise StorageAccessHandle_estimate(StorageAccessHandle* self );
 
-jb_DOMString StorageAccessHandle_createObjectURL(StorageAccessHandle* self , jb_Any * obj);
+jb_String StorageAccessHandle_createObjectURL(StorageAccessHandle* self , jb_Any * obj);
 
-jb_Undefined StorageAccessHandle_revokeObjectURL(StorageAccessHandle* self , jb_DOMString * url);
+jb_Undefined StorageAccessHandle_revokeObjectURL(StorageAccessHandle* self , jb_String * url);
 
-BroadcastChannel StorageAccessHandle_BroadcastChannel_(StorageAccessHandle* self , jb_DOMString * name);
+BroadcastChannel StorageAccessHandle_BroadcastChannel_(StorageAccessHandle* self , jb_String * name);
 
-SharedWorker StorageAccessHandle_SharedWorker_0(StorageAccessHandle* self , jb_USVString * scriptURL);
+SharedWorker StorageAccessHandle_SharedWorker_0(StorageAccessHandle* self , jb_String * scriptURL);
 
-SharedWorker StorageAccessHandle_SharedWorker_1(StorageAccessHandle* self , jb_USVString * scriptURL, jb_Any * options);
+SharedWorker StorageAccessHandle_SharedWorker_1(StorageAccessHandle* self , jb_String * scriptURL, jb_Any * options);

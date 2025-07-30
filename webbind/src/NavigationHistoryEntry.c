@@ -4,18 +4,18 @@
 DEFINE_EMLITE_TYPE(NavigationHistoryEntry, EventTarget);
 
 
-jb_USVString NavigationHistoryEntry_url(const NavigationHistoryEntry *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("url")));
+jb_String NavigationHistoryEntry_url(const NavigationHistoryEntry *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("url")));
 }
 
 
-jb_DOMString NavigationHistoryEntry_key(const NavigationHistoryEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("key")));
+jb_String NavigationHistoryEntry_key(const NavigationHistoryEntry *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("key")));
 }
 
 
-jb_DOMString NavigationHistoryEntry_id(const NavigationHistoryEntry *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
+jb_String NavigationHistoryEntry_id(const NavigationHistoryEntry *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 

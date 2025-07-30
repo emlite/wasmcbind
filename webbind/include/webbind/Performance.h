@@ -20,9 +20,9 @@ long long MemoryMeasurement_bytes(const MemoryMeasurement *self);
 
 void MemoryMeasurement_set_bytes(MemoryMeasurement* self, long long value);
 
-jb_Sequence MemoryMeasurement_breakdown(const MemoryMeasurement *self);
+jb_Array MemoryMeasurement_breakdown(const MemoryMeasurement *self);
 
-void MemoryMeasurement_set_breakdown(MemoryMeasurement* self, jb_Sequence * value);
+void MemoryMeasurement_set_breakdown(MemoryMeasurement* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(PerformanceMarkOptions, em_Val);
 
 jb_Any PerformanceMarkOptions_detail(const PerformanceMarkOptions *self);
@@ -52,11 +52,11 @@ jb_Promise Performance_measureUserAgentSpecificMemory(Performance* self );
 
 jb_Any Performance_getEntries(Performance* self );
 
-jb_Any Performance_getEntriesByType(Performance* self , jb_DOMString * type);
+jb_Any Performance_getEntriesByType(Performance* self , jb_String * type);
 
-jb_Any Performance_getEntriesByName0(Performance* self , jb_DOMString * name);
+jb_Any Performance_getEntriesByName0(Performance* self , jb_String * name);
 
-jb_Any Performance_getEntriesByName1(Performance* self , jb_DOMString * name, jb_DOMString * type);
+jb_Any Performance_getEntriesByName1(Performance* self , jb_String * name, jb_String * type);
 
 jb_Undefined Performance_clearResourceTimings(Performance* self );
 
@@ -66,20 +66,20 @@ jb_Any Performance_onresourcetimingbufferfull(const Performance *self);
 
 void Performance_set_onresourcetimingbufferfull(Performance* self, jb_Any * value);
 
-PerformanceMark Performance_mark0(Performance* self , jb_DOMString * markName);
+PerformanceMark Performance_mark0(Performance* self , jb_String * markName);
 
-PerformanceMark Performance_mark1(Performance* self , jb_DOMString * markName, PerformanceMarkOptions * markOptions);
+PerformanceMark Performance_mark1(Performance* self , jb_String * markName, PerformanceMarkOptions * markOptions);
 
 jb_Undefined Performance_clearMarks0(Performance* self );
 
-jb_Undefined Performance_clearMarks1(Performance* self , jb_DOMString * markName);
+jb_Undefined Performance_clearMarks1(Performance* self , jb_String * markName);
 
-PerformanceMeasure Performance_measure0(Performance* self , jb_DOMString * measureName);
+PerformanceMeasure Performance_measure0(Performance* self , jb_String * measureName);
 
-PerformanceMeasure Performance_measure1(Performance* self , jb_DOMString * measureName, jb_Any * startOrMeasureOptions);
+PerformanceMeasure Performance_measure1(Performance* self , jb_String * measureName, jb_Any * startOrMeasureOptions);
 
-PerformanceMeasure Performance_measure2(Performance* self , jb_DOMString * measureName, jb_Any * startOrMeasureOptions, jb_DOMString * endMark);
+PerformanceMeasure Performance_measure2(Performance* self , jb_String * measureName, jb_Any * startOrMeasureOptions, jb_String * endMark);
 
 jb_Undefined Performance_clearMeasures0(Performance* self );
 
-jb_Undefined Performance_clearMeasures1(Performance* self , jb_DOMString * measureName);
+jb_Undefined Performance_clearMeasures1(Performance* self , jb_String * measureName);

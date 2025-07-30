@@ -23,14 +23,14 @@ jb_Function LanguageDetectorCreateOptions_monitor(const LanguageDetectorCreateOp
 void LanguageDetectorCreateOptions_set_monitor(LanguageDetectorCreateOptions* self, jb_Function * value);
 DECLARE_EMLITE_TYPE(LanguageDetectorCreateCoreOptions, em_Val);
 
-jb_Sequence LanguageDetectorCreateCoreOptions_expectedInputLanguages(const LanguageDetectorCreateCoreOptions *self);
+jb_Array LanguageDetectorCreateCoreOptions_expectedInputLanguages(const LanguageDetectorCreateCoreOptions *self);
 
-void LanguageDetectorCreateCoreOptions_set_expectedInputLanguages(LanguageDetectorCreateCoreOptions* self, jb_Sequence * value);
+void LanguageDetectorCreateCoreOptions_set_expectedInputLanguages(LanguageDetectorCreateCoreOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(LanguageDetectionResult, em_Val);
 
-jb_DOMString LanguageDetectionResult_detectedLanguage(const LanguageDetectionResult *self);
+jb_String LanguageDetectionResult_detectedLanguage(const LanguageDetectionResult *self);
 
-void LanguageDetectionResult_set_detectedLanguage(LanguageDetectionResult* self, jb_DOMString * value);
+void LanguageDetectionResult_set_detectedLanguage(LanguageDetectionResult* self, jb_String * value);
 
 double LanguageDetectionResult_confidence(const LanguageDetectionResult *self);
 
@@ -50,15 +50,15 @@ jb_Promise LanguageDetector_availability0(LanguageDetector* self );
 
 jb_Promise LanguageDetector_availability1(LanguageDetector* self , LanguageDetectorCreateCoreOptions * options);
 
-jb_Promise LanguageDetector_detect0(LanguageDetector* self , jb_DOMString * input);
+jb_Promise LanguageDetector_detect0(LanguageDetector* self , jb_String * input);
 
-jb_Promise LanguageDetector_detect1(LanguageDetector* self , jb_DOMString * input, LanguageDetectorDetectOptions * options);
+jb_Promise LanguageDetector_detect1(LanguageDetector* self , jb_String * input, LanguageDetectorDetectOptions * options);
 
-jb_FrozenArray LanguageDetector_expectedInputLanguages(const LanguageDetector *self);
+jb_Array LanguageDetector_expectedInputLanguages(const LanguageDetector *self);
 
-jb_Promise LanguageDetector_measureInputUsage0(LanguageDetector* self , jb_DOMString * input);
+jb_Promise LanguageDetector_measureInputUsage0(LanguageDetector* self , jb_String * input);
 
-jb_Promise LanguageDetector_measureInputUsage1(LanguageDetector* self , jb_DOMString * input, LanguageDetectorDetectOptions * options);
+jb_Promise LanguageDetector_measureInputUsage1(LanguageDetector* self , jb_String * input, LanguageDetectorDetectOptions * options);
 
 double LanguageDetector_inputQuota(const LanguageDetector *self);
 

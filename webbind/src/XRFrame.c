@@ -69,23 +69,23 @@ XRJointPose XRFrame_getJointPose(XRFrame* self , XRJointSpace * joint, XRSpace *
 }
 
 
-bool XRFrame_fillJointRadii(XRFrame* self , jb_Sequence * jointSpaces, jb_Float32Array * radii) {
+bool XRFrame_fillJointRadii(XRFrame* self , jb_Array * jointSpaces, jb_Float32Array * radii) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "fillJointRadii", em_Val_from(jointSpaces), em_Val_from(radii)));
 }
 
 
-bool XRFrame_fillPoses(XRFrame* self , jb_Sequence * spaces, XRSpace * baseSpace, jb_Float32Array * transforms) {
+bool XRFrame_fillPoses(XRFrame* self , jb_Array * spaces, XRSpace * baseSpace, jb_Float32Array * transforms) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "fillPoses", em_Val_from(spaces), em_Val_from(baseSpace), em_Val_from(transforms)));
 }
 
 
-jb_Sequence XRFrame_getHitTestResults(XRFrame* self , XRHitTestSource * hitTestSource) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getHitTestResults", em_Val_from(hitTestSource)));
+jb_Array XRFrame_getHitTestResults(XRFrame* self , XRHitTestSource * hitTestSource) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getHitTestResults", em_Val_from(hitTestSource)));
 }
 
 
-jb_Sequence XRFrame_getHitTestResultsForTransientInput(XRFrame* self , XRTransientInputHitTestSource * hitTestSource) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getHitTestResultsForTransientInput", em_Val_from(hitTestSource)));
+jb_Array XRFrame_getHitTestResultsForTransientInput(XRFrame* self , XRTransientInputHitTestSource * hitTestSource) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getHitTestResultsForTransientInput", em_Val_from(hitTestSource)));
 }
 
 

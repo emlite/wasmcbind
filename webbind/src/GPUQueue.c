@@ -93,7 +93,7 @@ void GPUCopyExternalImageDestInfo_set_premultipliedAlpha(GPUCopyExternalImageDes
 DEFINE_EMLITE_TYPE(GPUQueue, em_Val);
 
 
-jb_Undefined GPUQueue_submit(GPUQueue* self , jb_Sequence * commandBuffers) {
+jb_Undefined GPUQueue_submit(GPUQueue* self , jb_Array * commandBuffers) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "submit", em_Val_from(commandBuffers)));
 }
 
@@ -128,12 +128,12 @@ jb_Undefined GPUQueue_copyExternalImageToTexture(GPUQueue* self , GPUCopyExterna
 }
 
 
-jb_USVString GPUQueue_label(const GPUQueue *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
+jb_String GPUQueue_label(const GPUQueue *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void GPUQueue_set_label(GPUQueue* self, jb_USVString * value) {
+void GPUQueue_set_label(GPUQueue* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 

@@ -87,8 +87,8 @@ void NavigationOptions_set_info(NavigationOptions* self, jb_Any * value) {
 DEFINE_EMLITE_TYPE(Navigation, EventTarget);
 
 
-jb_Sequence Navigation_entries(Navigation* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "entries"));
+jb_Array Navigation_entries(Navigation* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "entries"));
 }
 
 
@@ -122,12 +122,12 @@ bool Navigation_canGoForward(const Navigation *self) {
 }
 
 
-NavigationResult Navigation_navigate0(Navigation* self , jb_USVString * url) {
+NavigationResult Navigation_navigate0(Navigation* self , jb_String * url) {
     return em_Val_as(NavigationResult, em_Val_call(EventTarget_as_val(self->inner), "navigate", em_Val_from(url)));
 }
 
 
-NavigationResult Navigation_navigate1(Navigation* self , jb_USVString * url, NavigationNavigateOptions * options) {
+NavigationResult Navigation_navigate1(Navigation* self , jb_String * url, NavigationNavigateOptions * options) {
     return em_Val_as(NavigationResult, em_Val_call(EventTarget_as_val(self->inner), "navigate", em_Val_from(url), em_Val_from(options)));
 }
 
@@ -142,12 +142,12 @@ NavigationResult Navigation_reload1(Navigation* self , NavigationReloadOptions *
 }
 
 
-NavigationResult Navigation_traverseTo0(Navigation* self , jb_DOMString * key) {
+NavigationResult Navigation_traverseTo0(Navigation* self , jb_String * key) {
     return em_Val_as(NavigationResult, em_Val_call(EventTarget_as_val(self->inner), "traverseTo", em_Val_from(key)));
 }
 
 
-NavigationResult Navigation_traverseTo1(Navigation* self , jb_DOMString * key, NavigationOptions * options) {
+NavigationResult Navigation_traverseTo1(Navigation* self , jb_String * key, NavigationOptions * options) {
     return em_Val_as(NavigationResult, em_Val_call(EventTarget_as_val(self->inner), "traverseTo", em_Val_from(key), em_Val_from(options)));
 }
 

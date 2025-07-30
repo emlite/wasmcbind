@@ -10,6 +10,6 @@ typedef struct USBDevice USBDevice;
 
 DECLARE_EMLITE_TYPE(USBConnectionEvent, Event);
 
-USBConnectionEvent USBConnectionEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+USBConnectionEvent USBConnectionEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 USBDevice USBConnectionEvent_device(const USBConnectionEvent *self);

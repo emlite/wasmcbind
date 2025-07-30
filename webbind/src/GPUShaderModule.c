@@ -10,12 +10,12 @@ jb_Promise GPUShaderModule_getCompilationInfo(GPUShaderModule* self ) {
 }
 
 
-jb_USVString GPUShaderModule_label(const GPUShaderModule *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
+jb_String GPUShaderModule_label(const GPUShaderModule *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void GPUShaderModule_set_label(GPUShaderModule* self, jb_USVString * value) {
+void GPUShaderModule_set_label(GPUShaderModule* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 

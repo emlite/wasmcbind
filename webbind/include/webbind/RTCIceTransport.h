@@ -14,39 +14,39 @@ typedef struct RTCIceCandidateInit RTCIceCandidateInit;
 
 DECLARE_EMLITE_TYPE(RTCIceParameters, em_Val);
 
-jb_DOMString RTCIceParameters_usernameFragment(const RTCIceParameters *self);
+jb_String RTCIceParameters_usernameFragment(const RTCIceParameters *self);
 
-void RTCIceParameters_set_usernameFragment(RTCIceParameters* self, jb_DOMString * value);
+void RTCIceParameters_set_usernameFragment(RTCIceParameters* self, jb_String * value);
 
-jb_DOMString RTCIceParameters_password(const RTCIceParameters *self);
+jb_String RTCIceParameters_password(const RTCIceParameters *self);
 
-void RTCIceParameters_set_password(RTCIceParameters* self, jb_DOMString * value);
+void RTCIceParameters_set_password(RTCIceParameters* self, jb_String * value);
 DECLARE_EMLITE_TYPE(RTCIceGatherOptions, em_Val);
 
 RTCIceTransportPolicy RTCIceGatherOptions_gatherPolicy(const RTCIceGatherOptions *self);
 
 void RTCIceGatherOptions_set_gatherPolicy(RTCIceGatherOptions* self, RTCIceTransportPolicy * value);
 
-jb_Sequence RTCIceGatherOptions_iceServers(const RTCIceGatherOptions *self);
+jb_Array RTCIceGatherOptions_iceServers(const RTCIceGatherOptions *self);
 
-void RTCIceGatherOptions_set_iceServers(RTCIceGatherOptions* self, jb_Sequence * value);
+void RTCIceGatherOptions_set_iceServers(RTCIceGatherOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(RTCIceCandidateInit, em_Val);
 
-jb_DOMString RTCIceCandidateInit_candidate(const RTCIceCandidateInit *self);
+jb_String RTCIceCandidateInit_candidate(const RTCIceCandidateInit *self);
 
-void RTCIceCandidateInit_set_candidate(RTCIceCandidateInit* self, jb_DOMString * value);
+void RTCIceCandidateInit_set_candidate(RTCIceCandidateInit* self, jb_String * value);
 
-jb_DOMString RTCIceCandidateInit_sdpMid(const RTCIceCandidateInit *self);
+jb_String RTCIceCandidateInit_sdpMid(const RTCIceCandidateInit *self);
 
-void RTCIceCandidateInit_set_sdpMid(RTCIceCandidateInit* self, jb_DOMString * value);
+void RTCIceCandidateInit_set_sdpMid(RTCIceCandidateInit* self, jb_String * value);
 
 unsigned short RTCIceCandidateInit_sdpMLineIndex(const RTCIceCandidateInit *self);
 
 void RTCIceCandidateInit_set_sdpMLineIndex(RTCIceCandidateInit* self, unsigned short value);
 
-jb_DOMString RTCIceCandidateInit_usernameFragment(const RTCIceCandidateInit *self);
+jb_String RTCIceCandidateInit_usernameFragment(const RTCIceCandidateInit *self);
 
-void RTCIceCandidateInit_set_usernameFragment(RTCIceCandidateInit* self, jb_DOMString * value);
+void RTCIceCandidateInit_set_usernameFragment(RTCIceCandidateInit* self, jb_String * value);
 DECLARE_EMLITE_TYPE(RTCIceTransport, EventTarget);
 
 RTCIceRole RTCIceTransport_role(const RTCIceTransport *self);
@@ -57,9 +57,9 @@ RTCIceTransportState RTCIceTransport_state(const RTCIceTransport *self);
 
 RTCIceGathererState RTCIceTransport_gatheringState(const RTCIceTransport *self);
 
-jb_Sequence RTCIceTransport_getLocalCandidates(RTCIceTransport* self );
+jb_Array RTCIceTransport_getLocalCandidates(RTCIceTransport* self );
 
-jb_Sequence RTCIceTransport_getRemoteCandidates(RTCIceTransport* self );
+jb_Array RTCIceTransport_getRemoteCandidates(RTCIceTransport* self );
 
 RTCIceCandidatePair RTCIceTransport_getSelectedCandidatePair(RTCIceTransport* self );
 

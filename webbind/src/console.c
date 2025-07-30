@@ -41,7 +41,7 @@ jb_Undefined console_table1(jb_Any * tabularData) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "table", em_Val_from(tabularData)));
 }
 
-jb_Undefined console_table2(jb_Any * tabularData, jb_Sequence * properties) {
+jb_Undefined console_table2(jb_Any * tabularData, jb_Array * properties) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "table", em_Val_from(tabularData), em_Val_from(properties)));
 }
 
@@ -73,7 +73,7 @@ jb_Undefined console_count0() {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "count"));
 }
 
-jb_Undefined console_count1(jb_DOMString * label) {
+jb_Undefined console_count1(jb_String * label) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "count", em_Val_from(label)));
 }
 
@@ -81,7 +81,7 @@ jb_Undefined console_countReset0() {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "countReset"));
 }
 
-jb_Undefined console_countReset1(jb_DOMString * label) {
+jb_Undefined console_countReset1(jb_String * label) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "countReset", em_Val_from(label)));
 }
 
@@ -101,7 +101,7 @@ jb_Undefined console_time0() {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "time"));
 }
 
-jb_Undefined console_time1(jb_DOMString * label) {
+jb_Undefined console_time1(jb_String * label) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "time", em_Val_from(label)));
 }
 
@@ -109,11 +109,11 @@ jb_Undefined console_timeLog0() {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "timeLog"));
 }
 
-jb_Undefined console_timeLog1(jb_DOMString * label) {
+jb_Undefined console_timeLog1(jb_String * label) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "timeLog", em_Val_from(label)));
 }
 
-jb_Undefined console_timeLog2(jb_DOMString * label, jb_Any * data) {
+jb_Undefined console_timeLog2(jb_String * label, jb_Any * data) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "timeLog", em_Val_from(label), em_Val_from(data)));
 }
 
@@ -121,7 +121,7 @@ jb_Undefined console_timeEnd0() {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "timeEnd"));
 }
 
-jb_Undefined console_timeEnd1(jb_DOMString * label) {
+jb_Undefined console_timeEnd1(jb_String * label) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "timeEnd", em_Val_from(label)));
 }
 

@@ -50,22 +50,22 @@ void FontFaceSet_set_onloadingerror(FontFaceSet* self, jb_Any * value) {
 }
 
 
-jb_Promise FontFaceSet_load0(FontFaceSet* self , jb_CSSOMString * font) {
+jb_Promise FontFaceSet_load0(FontFaceSet* self , jb_String * font) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "load", em_Val_from(font)));
 }
 
 
-jb_Promise FontFaceSet_load1(FontFaceSet* self , jb_CSSOMString * font, jb_CSSOMString * text) {
+jb_Promise FontFaceSet_load1(FontFaceSet* self , jb_String * font, jb_String * text) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "load", em_Val_from(font), em_Val_from(text)));
 }
 
 
-bool FontFaceSet_check0(FontFaceSet* self , jb_CSSOMString * font) {
+bool FontFaceSet_check0(FontFaceSet* self , jb_String * font) {
     return em_Val_as(bool, em_Val_call(EventTarget_as_val(self->inner), "check", em_Val_from(font)));
 }
 
 
-bool FontFaceSet_check1(FontFaceSet* self , jb_CSSOMString * font, jb_CSSOMString * text) {
+bool FontFaceSet_check1(FontFaceSet* self , jb_String * font, jb_String * text) {
     return em_Val_as(bool, em_Val_call(EventTarget_as_val(self->inner), "check", em_Val_from(font), em_Val_from(text)));
 }
 

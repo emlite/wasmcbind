@@ -9,10 +9,10 @@ typedef struct USBIsochronousInTransferPacket USBIsochronousInTransferPacket;
 
 DECLARE_EMLITE_TYPE(USBIsochronousInTransferResult, em_Val);
 
-USBIsochronousInTransferResult USBIsochronousInTransferResult_new0(jb_Sequence * packets);
+USBIsochronousInTransferResult USBIsochronousInTransferResult_new0(jb_Array * packets);
 
-USBIsochronousInTransferResult USBIsochronousInTransferResult_new1(jb_Sequence * packets, jb_DataView * data);
+USBIsochronousInTransferResult USBIsochronousInTransferResult_new1(jb_Array * packets, jb_DataView * data);
 
 jb_DataView USBIsochronousInTransferResult_data(const USBIsochronousInTransferResult *self);
 
-jb_FrozenArray USBIsochronousInTransferResult_packets(const USBIsochronousInTransferResult *self);
+jb_Array USBIsochronousInTransferResult_packets(const USBIsochronousInTransferResult *self);

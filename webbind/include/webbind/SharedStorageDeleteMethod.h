@@ -10,6 +10,6 @@ typedef struct SharedStorageModifierMethodOptions SharedStorageModifierMethodOpt
 
 DECLARE_EMLITE_TYPE(SharedStorageDeleteMethod, SharedStorageModifierMethod);
 
-SharedStorageDeleteMethod SharedStorageDeleteMethod_new0(jb_DOMString * key);
+SharedStorageDeleteMethod SharedStorageDeleteMethod_new0(jb_String * key);
 
-SharedStorageDeleteMethod SharedStorageDeleteMethod_new1(jb_DOMString * key, SharedStorageModifierMethodOptions * options);
+SharedStorageDeleteMethod SharedStorageDeleteMethod_new1(jb_String * key, SharedStorageModifierMethodOptions * options);

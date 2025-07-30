@@ -10,7 +10,7 @@ unsigned long TextTrackList_length(const TextTrackList *self) {
 }
 
 
-TextTrack TextTrackList_getTrackById(TextTrackList* self , jb_DOMString * id) {
+TextTrack TextTrackList_getTrackById(TextTrackList* self , jb_String * id) {
     return em_Val_as(TextTrack, em_Val_call(EventTarget_as_val(self->inner), "getTrackById", em_Val_from(id)));
 }
 

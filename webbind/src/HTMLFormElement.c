@@ -12,72 +12,72 @@ HTMLFormElement HTMLFormElement_new() {
       }
 
 
-jb_DOMString HTMLFormElement_acceptCharset(const HTMLFormElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("acceptCharset")));
+jb_String HTMLFormElement_acceptCharset(const HTMLFormElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("acceptCharset")));
 }
 
 
-void HTMLFormElement_set_acceptCharset(HTMLFormElement* self, jb_DOMString * value) {
+void HTMLFormElement_set_acceptCharset(HTMLFormElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("acceptCharset"), em_Val_from(value));
 }
 
 
-jb_USVString HTMLFormElement_action(const HTMLFormElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("action")));
+jb_String HTMLFormElement_action(const HTMLFormElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("action")));
 }
 
 
-void HTMLFormElement_set_action(HTMLFormElement* self, jb_USVString * value) {
+void HTMLFormElement_set_action(HTMLFormElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("action"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLFormElement_autocomplete(const HTMLFormElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("autocomplete")));
+jb_String HTMLFormElement_autocomplete(const HTMLFormElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("autocomplete")));
 }
 
 
-void HTMLFormElement_set_autocomplete(HTMLFormElement* self, jb_DOMString * value) {
+void HTMLFormElement_set_autocomplete(HTMLFormElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("autocomplete"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLFormElement_enctype(const HTMLFormElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("enctype")));
+jb_String HTMLFormElement_enctype(const HTMLFormElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("enctype")));
 }
 
 
-void HTMLFormElement_set_enctype(HTMLFormElement* self, jb_DOMString * value) {
+void HTMLFormElement_set_enctype(HTMLFormElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("enctype"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLFormElement_encoding(const HTMLFormElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("encoding")));
+jb_String HTMLFormElement_encoding(const HTMLFormElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("encoding")));
 }
 
 
-void HTMLFormElement_set_encoding(HTMLFormElement* self, jb_DOMString * value) {
+void HTMLFormElement_set_encoding(HTMLFormElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("encoding"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLFormElement_method(const HTMLFormElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("method")));
+jb_String HTMLFormElement_method(const HTMLFormElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("method")));
 }
 
 
-void HTMLFormElement_set_method(HTMLFormElement* self, jb_DOMString * value) {
+void HTMLFormElement_set_method(HTMLFormElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("method"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLFormElement_name(const HTMLFormElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLFormElement_name(const HTMLFormElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLFormElement_set_name(HTMLFormElement* self, jb_DOMString * value) {
+void HTMLFormElement_set_name(HTMLFormElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
@@ -92,22 +92,22 @@ void HTMLFormElement_set_noValidate(HTMLFormElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLFormElement_target(const HTMLFormElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("target")));
+jb_String HTMLFormElement_target(const HTMLFormElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("target")));
 }
 
 
-void HTMLFormElement_set_target(HTMLFormElement* self, jb_DOMString * value) {
+void HTMLFormElement_set_target(HTMLFormElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("target"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLFormElement_rel(const HTMLFormElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("rel")));
+jb_String HTMLFormElement_rel(const HTMLFormElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("rel")));
 }
 
 
-void HTMLFormElement_set_rel(HTMLFormElement* self, jb_DOMString * value) {
+void HTMLFormElement_set_rel(HTMLFormElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("rel"), em_Val_from(value));
 }
 

@@ -6,7 +6,7 @@
 DEFINE_EMLITE_TYPE(XRReferenceSpaceEvent, Event);
 
 
-XRReferenceSpaceEvent XRReferenceSpaceEvent_new(jb_DOMString * type, jb_Any * eventInitDict) {
+XRReferenceSpaceEvent XRReferenceSpaceEvent_new(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("XRReferenceSpaceEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return XRReferenceSpaceEvent_from_val(&vv);
       }

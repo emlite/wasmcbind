@@ -10,13 +10,13 @@ GPUPipelineError GPUPipelineError_new0() {
       }
 
 
-GPUPipelineError GPUPipelineError_new1(jb_DOMString * message) {
+GPUPipelineError GPUPipelineError_new1(jb_String * message) {
         em_Val vv = em_Val_new(em_Val_global("GPUPipelineError") , em_Val_from(message));
         return GPUPipelineError_from_val(&vv);
       }
 
 
-GPUPipelineError GPUPipelineError_new2(jb_DOMString * message, jb_Any * options) {
+GPUPipelineError GPUPipelineError_new2(jb_String * message, jb_Any * options) {
         em_Val vv = em_Val_new(em_Val_global("GPUPipelineError") , em_Val_from(message), em_Val_from(options));
         return GPUPipelineError_from_val(&vv);
       }

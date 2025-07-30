@@ -442,7 +442,7 @@ DOMMatrix DOMMatrix_invertSelf(DOMMatrix* self ) {
 }
 
 
-DOMMatrix DOMMatrix_setMatrixValue(DOMMatrix* self , jb_DOMString * transformList) {
+DOMMatrix DOMMatrix_setMatrixValue(DOMMatrix* self , jb_String * transformList) {
     return em_Val_as(DOMMatrix, em_Val_call(DOMMatrixReadOnly_as_val(self->inner), "setMatrixValue", em_Val_from(transformList)));
 }
 

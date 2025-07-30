@@ -4,20 +4,20 @@
 DEFINE_EMLITE_TYPE(AnimationEvent, Event);
 
 
-AnimationEvent AnimationEvent_new0(jb_CSSOMString * type) {
+AnimationEvent AnimationEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("AnimationEvent") , em_Val_from(type));
         return AnimationEvent_from_val(&vv);
       }
 
 
-AnimationEvent AnimationEvent_new1(jb_CSSOMString * type, jb_Any * animationEventInitDict) {
+AnimationEvent AnimationEvent_new1(jb_String * type, jb_Any * animationEventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("AnimationEvent") , em_Val_from(type), em_Val_from(animationEventInitDict));
         return AnimationEvent_from_val(&vv);
       }
 
 
-jb_CSSOMString AnimationEvent_animationName(const AnimationEvent *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("animationName")));
+jb_String AnimationEvent_animationName(const AnimationEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("animationName")));
 }
 
 
@@ -26,7 +26,7 @@ double AnimationEvent_elapsedTime(const AnimationEvent *self) {
 }
 
 
-jb_CSSOMString AnimationEvent_pseudoElement(const AnimationEvent *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("pseudoElement")));
+jb_String AnimationEvent_pseudoElement(const AnimationEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("pseudoElement")));
 }
 

@@ -69,9 +69,9 @@ unsigned long WebTransportCloseInfo_closeCode(const WebTransportCloseInfo *self)
 
 void WebTransportCloseInfo_set_closeCode(WebTransportCloseInfo* self, unsigned long value);
 
-jb_USVString WebTransportCloseInfo_reason(const WebTransportCloseInfo *self);
+jb_String WebTransportCloseInfo_reason(const WebTransportCloseInfo *self);
 
-void WebTransportCloseInfo_set_reason(WebTransportCloseInfo* self, jb_USVString * value);
+void WebTransportCloseInfo_set_reason(WebTransportCloseInfo* self, jb_String * value);
 DECLARE_EMLITE_TYPE(WebTransportSendStreamOptions, em_Val);
 
 bool WebTransportSendStreamOptions_waitUntilAvailable(const WebTransportSendStreamOptions *self);
@@ -79,9 +79,9 @@ bool WebTransportSendStreamOptions_waitUntilAvailable(const WebTransportSendStre
 void WebTransportSendStreamOptions_set_waitUntilAvailable(WebTransportSendStreamOptions* self, bool value);
 DECLARE_EMLITE_TYPE(WebTransport, em_Val);
 
-WebTransport WebTransport_new0(jb_USVString * url);
+WebTransport WebTransport_new0(jb_String * url);
 
-WebTransport WebTransport_new1(jb_USVString * url, jb_Any * options);
+WebTransport WebTransport_new1(jb_String * url, jb_Any * options);
 
 jb_Promise WebTransport_getStats(WebTransport* self );
 
@@ -103,7 +103,7 @@ unsigned short WebTransport_anticipatedConcurrentIncomingBidirectionalStreams(co
 
 void WebTransport_set_anticipatedConcurrentIncomingBidirectionalStreams(WebTransport* self, unsigned short value);
 
-jb_DOMString WebTransport_protocol(const WebTransport *self);
+jb_String WebTransport_protocol(const WebTransport *self);
 
 jb_Promise WebTransport_closed(const WebTransport *self);
 

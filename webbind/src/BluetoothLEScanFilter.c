@@ -18,18 +18,18 @@ BluetoothLEScanFilter BluetoothLEScanFilter_new1(jb_Any * init) {
       }
 
 
-jb_DOMString BluetoothLEScanFilter_name(const BluetoothLEScanFilter *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String BluetoothLEScanFilter_name(const BluetoothLEScanFilter *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString BluetoothLEScanFilter_namePrefix(const BluetoothLEScanFilter *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("namePrefix")));
+jb_String BluetoothLEScanFilter_namePrefix(const BluetoothLEScanFilter *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("namePrefix")));
 }
 
 
-jb_FrozenArray BluetoothLEScanFilter_services(const BluetoothLEScanFilter *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("services")));
+jb_Array BluetoothLEScanFilter_services(const BluetoothLEScanFilter *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("services")));
 }
 
 

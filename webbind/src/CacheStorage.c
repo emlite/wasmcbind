@@ -5,12 +5,12 @@
 DEFINE_EMLITE_TYPE(MultiCacheQueryOptions, em_Val);
 
 
-jb_DOMString MultiCacheQueryOptions_cacheName(const MultiCacheQueryOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cacheName")));
+jb_String MultiCacheQueryOptions_cacheName(const MultiCacheQueryOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cacheName")));
 }
 
 
-void MultiCacheQueryOptions_set_cacheName(MultiCacheQueryOptions* self, jb_DOMString * value) {
+void MultiCacheQueryOptions_set_cacheName(MultiCacheQueryOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("cacheName"), em_Val_from(value));
 }
 
@@ -27,17 +27,17 @@ jb_Promise CacheStorage_match1(CacheStorage* self , jb_Any * request, MultiCache
 }
 
 
-jb_Promise CacheStorage_has(CacheStorage* self , jb_DOMString * cacheName) {
+jb_Promise CacheStorage_has(CacheStorage* self , jb_String * cacheName) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "has", em_Val_from(cacheName)));
 }
 
 
-jb_Promise CacheStorage_open(CacheStorage* self , jb_DOMString * cacheName) {
+jb_Promise CacheStorage_open(CacheStorage* self , jb_String * cacheName) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "open", em_Val_from(cacheName)));
 }
 
 
-jb_Promise CacheStorage_delete_(CacheStorage* self , jb_DOMString * cacheName) {
+jb_Promise CacheStorage_delete_(CacheStorage* self , jb_String * cacheName) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "delete", em_Val_from(cacheName)));
 }
 

@@ -31,7 +31,7 @@ AudioParam AudioParam_exponentialRampToValueAtTime(AudioParam* self , float valu
 
 AudioParam AudioParam_setTargetAtTime(AudioParam* self , float target, double startTime, float timeConstant);
 
-AudioParam AudioParam_setValueCurveAtTime(AudioParam* self , jb_Sequence * values, double startTime, double duration);
+AudioParam AudioParam_setValueCurveAtTime(AudioParam* self , jb_Array * values, double startTime, double duration);
 
 AudioParam AudioParam_cancelScheduledValues(AudioParam* self , double cancelTime);
 

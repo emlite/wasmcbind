@@ -5,8 +5,8 @@
 DEFINE_EMLITE_TYPE(ServiceWorker, EventTarget);
 
 
-jb_USVString ServiceWorker_scriptURL(const ServiceWorker *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("scriptURL")));
+jb_String ServiceWorker_scriptURL(const ServiceWorker *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("scriptURL")));
 }
 
 

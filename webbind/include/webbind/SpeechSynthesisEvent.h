@@ -10,7 +10,7 @@ typedef struct SpeechSynthesisUtterance SpeechSynthesisUtterance;
 
 DECLARE_EMLITE_TYPE(SpeechSynthesisEvent, Event);
 
-SpeechSynthesisEvent SpeechSynthesisEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+SpeechSynthesisEvent SpeechSynthesisEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 SpeechSynthesisUtterance SpeechSynthesisEvent_utterance(const SpeechSynthesisEvent *self);
 
@@ -20,4 +20,4 @@ unsigned long SpeechSynthesisEvent_charLength(const SpeechSynthesisEvent *self);
 
 float SpeechSynthesisEvent_elapsedTime(const SpeechSynthesisEvent *self);
 
-jb_DOMString SpeechSynthesisEvent_name(const SpeechSynthesisEvent *self);
+jb_String SpeechSynthesisEvent_name(const SpeechSynthesisEvent *self);

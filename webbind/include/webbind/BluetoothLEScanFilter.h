@@ -14,11 +14,11 @@ BluetoothLEScanFilter BluetoothLEScanFilter_new0();
 
 BluetoothLEScanFilter BluetoothLEScanFilter_new1(jb_Any * init);
 
-jb_DOMString BluetoothLEScanFilter_name(const BluetoothLEScanFilter *self);
+jb_String BluetoothLEScanFilter_name(const BluetoothLEScanFilter *self);
 
-jb_DOMString BluetoothLEScanFilter_namePrefix(const BluetoothLEScanFilter *self);
+jb_String BluetoothLEScanFilter_namePrefix(const BluetoothLEScanFilter *self);
 
-jb_FrozenArray BluetoothLEScanFilter_services(const BluetoothLEScanFilter *self);
+jb_Array BluetoothLEScanFilter_services(const BluetoothLEScanFilter *self);
 
 BluetoothManufacturerDataFilter BluetoothLEScanFilter_manufacturerData(const BluetoothLEScanFilter *self);
 

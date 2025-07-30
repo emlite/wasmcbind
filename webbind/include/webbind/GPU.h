@@ -11,9 +11,9 @@ typedef struct WGSLLanguageFeatures WGSLLanguageFeatures;
 
 DECLARE_EMLITE_TYPE(GPURequestAdapterOptions, em_Val);
 
-jb_DOMString GPURequestAdapterOptions_featureLevel(const GPURequestAdapterOptions *self);
+jb_String GPURequestAdapterOptions_featureLevel(const GPURequestAdapterOptions *self);
 
-void GPURequestAdapterOptions_set_featureLevel(GPURequestAdapterOptions* self, jb_DOMString * value);
+void GPURequestAdapterOptions_set_featureLevel(GPURequestAdapterOptions* self, jb_String * value);
 
 GPUPowerPreference GPURequestAdapterOptions_powerPreference(const GPURequestAdapterOptions *self);
 

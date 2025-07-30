@@ -16,6 +16,6 @@ bool LayoutShift_hadRecentInput(const LayoutShift *self);
 
 jb_Any LayoutShift_lastInputTime(const LayoutShift *self);
 
-jb_FrozenArray LayoutShift_sources(const LayoutShift *self);
+jb_Array LayoutShift_sources(const LayoutShift *self);
 
 jb_Object LayoutShift_toJSON(LayoutShift* self );

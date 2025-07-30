@@ -37,7 +37,7 @@ jb_Promise Cache_add(Cache* self , jb_Any * request) {
 }
 
 
-jb_Promise Cache_addAll(Cache* self , jb_Sequence * requests) {
+jb_Promise Cache_addAll(Cache* self , jb_Array * requests) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "addAll", em_Val_from(requests)));
 }
 

@@ -6,8 +6,8 @@
 DEFINE_EMLITE_TYPE(CSSImportRule, CSSRule);
 
 
-jb_USVString CSSImportRule_href(const CSSImportRule *self) {
-    return em_Val_as(jb_USVString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("href")));
+jb_String CSSImportRule_href(const CSSImportRule *self) {
+    return em_Val_as(jb_String, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("href")));
 }
 
 
@@ -21,12 +21,12 @@ CSSStyleSheet CSSImportRule_styleSheet(const CSSImportRule *self) {
 }
 
 
-jb_CSSOMString CSSImportRule_layerName(const CSSImportRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("layerName")));
+jb_String CSSImportRule_layerName(const CSSImportRule *self) {
+    return em_Val_as(jb_String, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("layerName")));
 }
 
 
-jb_CSSOMString CSSImportRule_supportsText(const CSSImportRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("supportsText")));
+jb_String CSSImportRule_supportsText(const CSSImportRule *self) {
+    return em_Val_as(jb_String, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("supportsText")));
 }
 

@@ -14,6 +14,6 @@ long HTMLLIElement_value(const HTMLLIElement *self);
 
 void HTMLLIElement_set_value(HTMLLIElement* self, long value);
 
-jb_DOMString HTMLLIElement_type(const HTMLLIElement *self);
+jb_String HTMLLIElement_type(const HTMLLIElement *self);
 
-void HTMLLIElement_set_type(HTMLLIElement* self, jb_DOMString * value);
+void HTMLLIElement_set_type(HTMLLIElement* self, jb_String * value);

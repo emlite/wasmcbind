@@ -22,8 +22,8 @@ MediaStream MediaRecorder_stream(const MediaRecorder *self) {
 }
 
 
-jb_DOMString MediaRecorder_mimeType(const MediaRecorder *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("mimeType")));
+jb_String MediaRecorder_mimeType(const MediaRecorder *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("mimeType")));
 }
 
 
@@ -137,7 +137,7 @@ jb_Undefined MediaRecorder_requestData(MediaRecorder* self ) {
 }
 
 
-bool MediaRecorder_isTypeSupported(MediaRecorder* self , jb_DOMString * type) {
+bool MediaRecorder_isTypeSupported(MediaRecorder* self , jb_String * type) {
     return em_Val_as(bool, em_Val_call(em_Val_global("mediarecorder"), "isTypeSupported", em_Val_from(type)));
 }
 

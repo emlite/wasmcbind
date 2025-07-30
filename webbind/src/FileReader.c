@@ -27,7 +27,7 @@ jb_Undefined FileReader_readAsText0(FileReader* self , Blob * blob) {
 }
 
 
-jb_Undefined FileReader_readAsText1(FileReader* self , Blob * blob, jb_DOMString * encoding) {
+jb_Undefined FileReader_readAsText1(FileReader* self , Blob * blob, jb_String * encoding) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "readAsText", em_Val_from(blob), em_Val_from(encoding)));
 }
 

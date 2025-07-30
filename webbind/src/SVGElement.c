@@ -72,12 +72,12 @@ DOMStringMap SVGElement_dataset(const SVGElement *self) {
 }
 
 
-jb_DOMString SVGElement_nonce(const SVGElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Element_as_val(self->inner), em_Val_from("nonce")));
+jb_String SVGElement_nonce(const SVGElement *self) {
+    return em_Val_as(jb_String, em_Val_get(Element_as_val(self->inner), em_Val_from("nonce")));
 }
 
 
-void SVGElement_set_nonce(SVGElement* self, jb_DOMString * value) {
+void SVGElement_set_nonce(SVGElement* self, jb_String * value) {
     em_Val_set(Element_as_val(self->inner), em_Val_from("nonce"), em_Val_from(value));
 }
 

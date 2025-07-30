@@ -18,7 +18,7 @@ EditContext EditContext_new1(jb_Any * options) {
       }
 
 
-jb_Undefined EditContext_updateText(EditContext* self , unsigned long rangeStart, unsigned long rangeEnd, jb_DOMString * text) {
+jb_Undefined EditContext_updateText(EditContext* self , unsigned long rangeStart, unsigned long rangeEnd, jb_String * text) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "updateText", em_Val_from(rangeStart), em_Val_from(rangeEnd), em_Val_from(text)));
 }
 
@@ -38,18 +38,18 @@ jb_Undefined EditContext_updateSelectionBounds(EditContext* self , DOMRect * sel
 }
 
 
-jb_Undefined EditContext_updateCharacterBounds(EditContext* self , unsigned long rangeStart, jb_Sequence * characterBounds) {
+jb_Undefined EditContext_updateCharacterBounds(EditContext* self , unsigned long rangeStart, jb_Array * characterBounds) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "updateCharacterBounds", em_Val_from(rangeStart), em_Val_from(characterBounds)));
 }
 
 
-jb_Sequence EditContext_attachedElements(EditContext* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "attachedElements"));
+jb_Array EditContext_attachedElements(EditContext* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "attachedElements"));
 }
 
 
-jb_DOMString EditContext_text(const EditContext *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("text")));
+jb_String EditContext_text(const EditContext *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("text")));
 }
 
 
@@ -68,8 +68,8 @@ unsigned long EditContext_characterBoundsRangeStart(const EditContext *self) {
 }
 
 
-jb_Sequence EditContext_characterBounds(EditContext* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "characterBounds"));
+jb_Array EditContext_characterBounds(EditContext* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "characterBounds"));
 }
 
 

@@ -10,12 +10,12 @@ typedef struct CSSParserValue CSSParserValue;
 
 DECLARE_EMLITE_TYPE(CSSParserAtRule, CSSParserRule);
 
-CSSParserAtRule CSSParserAtRule_new0(jb_DOMString * name, jb_Sequence * prelude);
+CSSParserAtRule CSSParserAtRule_new0(jb_String * name, jb_Array * prelude);
 
-CSSParserAtRule CSSParserAtRule_new1(jb_DOMString * name, jb_Sequence * prelude, jb_Sequence * body);
+CSSParserAtRule CSSParserAtRule_new1(jb_String * name, jb_Array * prelude, jb_Array * body);
 
-jb_DOMString CSSParserAtRule_name(const CSSParserAtRule *self);
+jb_String CSSParserAtRule_name(const CSSParserAtRule *self);
 
-jb_FrozenArray CSSParserAtRule_prelude(const CSSParserAtRule *self);
+jb_Array CSSParserAtRule_prelude(const CSSParserAtRule *self);
 
-jb_FrozenArray CSSParserAtRule_body(const CSSParserAtRule *self);
+jb_Array CSSParserAtRule_body(const CSSParserAtRule *self);

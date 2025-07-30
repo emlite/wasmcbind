@@ -40,7 +40,7 @@ void NavigationInterceptOptions_set_scroll(NavigationInterceptOptions* self, Nav
 DEFINE_EMLITE_TYPE(NavigateEvent, Event);
 
 
-NavigateEvent NavigateEvent_new(jb_DOMString * type, jb_Any * eventInitDict) {
+NavigateEvent NavigateEvent_new(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("NavigateEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return NavigateEvent_from_val(&vv);
       }
@@ -81,8 +81,8 @@ FormData NavigateEvent_formData(const NavigateEvent *self) {
 }
 
 
-jb_DOMString NavigateEvent_downloadRequest(const NavigateEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("downloadRequest")));
+jb_String NavigateEvent_downloadRequest(const NavigateEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("downloadRequest")));
 }
 
 

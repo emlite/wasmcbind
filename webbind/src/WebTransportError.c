@@ -10,13 +10,13 @@ WebTransportError WebTransportError_new0() {
       }
 
 
-WebTransportError WebTransportError_new1(jb_DOMString * message) {
+WebTransportError WebTransportError_new1(jb_String * message) {
         em_Val vv = em_Val_new(em_Val_global("WebTransportError") , em_Val_from(message));
         return WebTransportError_from_val(&vv);
       }
 
 
-WebTransportError WebTransportError_new2(jb_DOMString * message, jb_Any * options) {
+WebTransportError WebTransportError_new2(jb_String * message, jb_Any * options) {
         em_Val vv = em_Val_new(em_Val_global("WebTransportError") , em_Val_from(message), em_Val_from(options));
         return WebTransportError_from_val(&vv);
       }

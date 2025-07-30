@@ -5,7 +5,7 @@
 DEFINE_EMLITE_TYPE(RTCDataChannelEvent, Event);
 
 
-RTCDataChannelEvent RTCDataChannelEvent_new(jb_DOMString * type, jb_Any * eventInitDict) {
+RTCDataChannelEvent RTCDataChannelEvent_new(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("RTCDataChannelEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return RTCDataChannelEvent_from_val(&vv);
       }

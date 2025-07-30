@@ -29,12 +29,12 @@ void SVGAngle_set_valueInSpecifiedUnits(SVGAngle* self, float value) {
 }
 
 
-jb_DOMString SVGAngle_valueAsString(const SVGAngle *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("valueAsString")));
+jb_String SVGAngle_valueAsString(const SVGAngle *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("valueAsString")));
 }
 
 
-void SVGAngle_set_valueAsString(SVGAngle* self, jb_DOMString * value) {
+void SVGAngle_set_valueAsString(SVGAngle* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("valueAsString"), em_Val_from(value));
 }
 

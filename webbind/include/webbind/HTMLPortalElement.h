@@ -18,13 +18,13 @@ DECLARE_EMLITE_TYPE(HTMLPortalElement, HTMLElement);
 
 HTMLPortalElement HTMLPortalElement_new();
 
-jb_USVString HTMLPortalElement_src(const HTMLPortalElement *self);
+jb_String HTMLPortalElement_src(const HTMLPortalElement *self);
 
-void HTMLPortalElement_set_src(HTMLPortalElement* self, jb_USVString * value);
+void HTMLPortalElement_set_src(HTMLPortalElement* self, jb_String * value);
 
-jb_DOMString HTMLPortalElement_referrerPolicy(const HTMLPortalElement *self);
+jb_String HTMLPortalElement_referrerPolicy(const HTMLPortalElement *self);
 
-void HTMLPortalElement_set_referrerPolicy(HTMLPortalElement* self, jb_DOMString * value);
+void HTMLPortalElement_set_referrerPolicy(HTMLPortalElement* self, jb_String * value);
 
 jb_Promise HTMLPortalElement_activate0(HTMLPortalElement* self );
 

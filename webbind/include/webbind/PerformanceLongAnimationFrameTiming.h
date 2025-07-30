@@ -14,9 +14,9 @@ jb_Any PerformanceLongAnimationFrameTiming_startTime(const PerformanceLongAnimat
 
 jb_Any PerformanceLongAnimationFrameTiming_duration(const PerformanceLongAnimationFrameTiming *self);
 
-jb_DOMString PerformanceLongAnimationFrameTiming_name(const PerformanceLongAnimationFrameTiming *self);
+jb_String PerformanceLongAnimationFrameTiming_name(const PerformanceLongAnimationFrameTiming *self);
 
-jb_DOMString PerformanceLongAnimationFrameTiming_entryType(const PerformanceLongAnimationFrameTiming *self);
+jb_String PerformanceLongAnimationFrameTiming_entryType(const PerformanceLongAnimationFrameTiming *self);
 
 jb_Any PerformanceLongAnimationFrameTiming_renderStart(const PerformanceLongAnimationFrameTiming *self);
 
@@ -26,7 +26,7 @@ jb_Any PerformanceLongAnimationFrameTiming_blockingDuration(const PerformanceLon
 
 jb_Any PerformanceLongAnimationFrameTiming_firstUIEventTimestamp(const PerformanceLongAnimationFrameTiming *self);
 
-jb_FrozenArray PerformanceLongAnimationFrameTiming_scripts(const PerformanceLongAnimationFrameTiming *self);
+jb_Array PerformanceLongAnimationFrameTiming_scripts(const PerformanceLongAnimationFrameTiming *self);
 
 jb_Object PerformanceLongAnimationFrameTiming_toJSON(PerformanceLongAnimationFrameTiming* self );
 

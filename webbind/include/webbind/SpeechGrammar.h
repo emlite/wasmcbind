@@ -7,9 +7,9 @@
 
 DECLARE_EMLITE_TYPE(SpeechGrammar, em_Val);
 
-jb_DOMString SpeechGrammar_src(const SpeechGrammar *self);
+jb_String SpeechGrammar_src(const SpeechGrammar *self);
 
-void SpeechGrammar_set_src(SpeechGrammar* self, jb_DOMString * value);
+void SpeechGrammar_set_src(SpeechGrammar* self, jb_String * value);
 
 float SpeechGrammar_weight(const SpeechGrammar *self);
 

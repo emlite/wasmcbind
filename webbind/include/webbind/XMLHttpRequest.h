@@ -34,9 +34,9 @@ RefreshPolicy PrivateToken_refreshPolicy(const PrivateToken *self);
 
 void PrivateToken_set_refreshPolicy(PrivateToken* self, RefreshPolicy * value);
 
-jb_Sequence PrivateToken_issuers(const PrivateToken *self);
+jb_Array PrivateToken_issuers(const PrivateToken *self);
 
-void PrivateToken_set_issuers(PrivateToken* self, jb_Sequence * value);
+void PrivateToken_set_issuers(PrivateToken* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(XMLHttpRequest, XMLHttpRequestEventTarget);
 
 XMLHttpRequest XMLHttpRequest_new();
@@ -47,13 +47,13 @@ void XMLHttpRequest_set_onreadystatechange(XMLHttpRequest* self, jb_Any * value)
 
 unsigned short XMLHttpRequest_readyState(const XMLHttpRequest *self);
 
-jb_Undefined XMLHttpRequest_open0(XMLHttpRequest* self , jb_ByteString * method, jb_USVString * url, bool async);
+jb_Undefined XMLHttpRequest_open0(XMLHttpRequest* self , jb_String * method, jb_String * url, bool async);
 
-jb_Undefined XMLHttpRequest_open1(XMLHttpRequest* self , jb_ByteString * method, jb_USVString * url, bool async, jb_USVString * username);
+jb_Undefined XMLHttpRequest_open1(XMLHttpRequest* self , jb_String * method, jb_String * url, bool async, jb_String * username);
 
-jb_Undefined XMLHttpRequest_open2(XMLHttpRequest* self , jb_ByteString * method, jb_USVString * url, bool async, jb_USVString * username, jb_USVString * password);
+jb_Undefined XMLHttpRequest_open2(XMLHttpRequest* self , jb_String * method, jb_String * url, bool async, jb_String * username, jb_String * password);
 
-jb_Undefined XMLHttpRequest_setRequestHeader(XMLHttpRequest* self , jb_ByteString * name, jb_ByteString * value);
+jb_Undefined XMLHttpRequest_setRequestHeader(XMLHttpRequest* self , jb_String * name, jb_String * value);
 
 unsigned long XMLHttpRequest_timeout(const XMLHttpRequest *self);
 
@@ -71,17 +71,17 @@ jb_Undefined XMLHttpRequest_send1(XMLHttpRequest* self , jb_Any * body);
 
 jb_Undefined XMLHttpRequest_abort(XMLHttpRequest* self );
 
-jb_USVString XMLHttpRequest_responseURL(const XMLHttpRequest *self);
+jb_String XMLHttpRequest_responseURL(const XMLHttpRequest *self);
 
 unsigned short XMLHttpRequest_status(const XMLHttpRequest *self);
 
-jb_ByteString XMLHttpRequest_statusText(const XMLHttpRequest *self);
+jb_String XMLHttpRequest_statusText(const XMLHttpRequest *self);
 
-jb_ByteString XMLHttpRequest_getResponseHeader(XMLHttpRequest* self , jb_ByteString * name);
+jb_String XMLHttpRequest_getResponseHeader(XMLHttpRequest* self , jb_String * name);
 
-jb_ByteString XMLHttpRequest_getAllResponseHeaders(XMLHttpRequest* self );
+jb_String XMLHttpRequest_getAllResponseHeaders(XMLHttpRequest* self );
 
-jb_Undefined XMLHttpRequest_overrideMimeType(XMLHttpRequest* self , jb_DOMString * mime);
+jb_Undefined XMLHttpRequest_overrideMimeType(XMLHttpRequest* self , jb_String * mime);
 
 XMLHttpRequestResponseType XMLHttpRequest_responseType(const XMLHttpRequest *self);
 
@@ -89,7 +89,7 @@ void XMLHttpRequest_set_responseType(XMLHttpRequest* self, XMLHttpRequestRespons
 
 jb_Any XMLHttpRequest_response(const XMLHttpRequest *self);
 
-jb_USVString XMLHttpRequest_responseText(const XMLHttpRequest *self);
+jb_String XMLHttpRequest_responseText(const XMLHttpRequest *self);
 
 Document XMLHttpRequest_responseXML(const XMLHttpRequest *self);
 

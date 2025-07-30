@@ -11,8 +11,8 @@ double FontMetrics_width(const FontMetrics *self) {
 }
 
 
-jb_FrozenArray FontMetrics_advances(const FontMetrics *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("advances")));
+jb_Array FontMetrics_advances(const FontMetrics *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("advances")));
 }
 
 
@@ -66,12 +66,12 @@ Baseline FontMetrics_dominantBaseline(const FontMetrics *self) {
 }
 
 
-jb_FrozenArray FontMetrics_baselines(const FontMetrics *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("baselines")));
+jb_Array FontMetrics_baselines(const FontMetrics *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("baselines")));
 }
 
 
-jb_FrozenArray FontMetrics_fonts(const FontMetrics *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fonts")));
+jb_Array FontMetrics_fonts(const FontMetrics *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fonts")));
 }
 

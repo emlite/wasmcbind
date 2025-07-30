@@ -36,12 +36,12 @@ void GPUCanvasConfiguration_set_usage(GPUCanvasConfiguration* self, jb_Any * val
 }
 
 
-jb_Sequence GPUCanvasConfiguration_viewFormats(const GPUCanvasConfiguration *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("viewFormats")));
+jb_Array GPUCanvasConfiguration_viewFormats(const GPUCanvasConfiguration *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("viewFormats")));
 }
 
 
-void GPUCanvasConfiguration_set_viewFormats(GPUCanvasConfiguration* self, jb_Sequence * value) {
+void GPUCanvasConfiguration_set_viewFormats(GPUCanvasConfiguration* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("viewFormats"), em_Val_from(value));
 }
 

@@ -4,20 +4,20 @@
 DEFINE_EMLITE_TYPE(WebSocket, EventTarget);
 
 
-WebSocket WebSocket_new0(jb_USVString * url) {
+WebSocket WebSocket_new0(jb_String * url) {
         em_Val vv = em_Val_new(em_Val_global("WebSocket") , em_Val_from(url));
         return WebSocket_from_val(&vv);
       }
 
 
-WebSocket WebSocket_new1(jb_USVString * url, jb_Any * protocols) {
+WebSocket WebSocket_new1(jb_String * url, jb_Any * protocols) {
         em_Val vv = em_Val_new(em_Val_global("WebSocket") , em_Val_from(url), em_Val_from(protocols));
         return WebSocket_from_val(&vv);
       }
 
 
-jb_USVString WebSocket_url(const WebSocket *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("url")));
+jb_String WebSocket_url(const WebSocket *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("url")));
 }
 
 
@@ -61,13 +61,13 @@ void WebSocket_set_onclose(WebSocket* self, jb_Any * value) {
 }
 
 
-jb_DOMString WebSocket_extensions(const WebSocket *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("extensions")));
+jb_String WebSocket_extensions(const WebSocket *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("extensions")));
 }
 
 
-jb_DOMString WebSocket_protocol(const WebSocket *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("protocol")));
+jb_String WebSocket_protocol(const WebSocket *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("protocol")));
 }
 
 
@@ -81,7 +81,7 @@ jb_Undefined WebSocket_close1(WebSocket* self , unsigned short code) {
 }
 
 
-jb_Undefined WebSocket_close2(WebSocket* self , unsigned short code, jb_USVString * reason) {
+jb_Undefined WebSocket_close2(WebSocket* self , unsigned short code, jb_String * reason) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "close", em_Val_from(code), em_Val_from(reason)));
 }
 

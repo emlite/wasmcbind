@@ -10,21 +10,21 @@ DECLARE_EMLITE_TYPE(HTMLMarqueeElement, HTMLElement);
 
 HTMLMarqueeElement HTMLMarqueeElement_new();
 
-jb_DOMString HTMLMarqueeElement_behavior(const HTMLMarqueeElement *self);
+jb_String HTMLMarqueeElement_behavior(const HTMLMarqueeElement *self);
 
-void HTMLMarqueeElement_set_behavior(HTMLMarqueeElement* self, jb_DOMString * value);
+void HTMLMarqueeElement_set_behavior(HTMLMarqueeElement* self, jb_String * value);
 
-jb_DOMString HTMLMarqueeElement_bgColor(const HTMLMarqueeElement *self);
+jb_String HTMLMarqueeElement_bgColor(const HTMLMarqueeElement *self);
 
-void HTMLMarqueeElement_set_bgColor(HTMLMarqueeElement* self, jb_DOMString * value);
+void HTMLMarqueeElement_set_bgColor(HTMLMarqueeElement* self, jb_String * value);
 
-jb_DOMString HTMLMarqueeElement_direction(const HTMLMarqueeElement *self);
+jb_String HTMLMarqueeElement_direction(const HTMLMarqueeElement *self);
 
-void HTMLMarqueeElement_set_direction(HTMLMarqueeElement* self, jb_DOMString * value);
+void HTMLMarqueeElement_set_direction(HTMLMarqueeElement* self, jb_String * value);
 
-jb_DOMString HTMLMarqueeElement_height(const HTMLMarqueeElement *self);
+jb_String HTMLMarqueeElement_height(const HTMLMarqueeElement *self);
 
-void HTMLMarqueeElement_set_height(HTMLMarqueeElement* self, jb_DOMString * value);
+void HTMLMarqueeElement_set_height(HTMLMarqueeElement* self, jb_String * value);
 
 unsigned long HTMLMarqueeElement_hspace(const HTMLMarqueeElement *self);
 
@@ -50,9 +50,9 @@ unsigned long HTMLMarqueeElement_vspace(const HTMLMarqueeElement *self);
 
 void HTMLMarqueeElement_set_vspace(HTMLMarqueeElement* self, unsigned long value);
 
-jb_DOMString HTMLMarqueeElement_width(const HTMLMarqueeElement *self);
+jb_String HTMLMarqueeElement_width(const HTMLMarqueeElement *self);
 
-void HTMLMarqueeElement_set_width(HTMLMarqueeElement* self, jb_DOMString * value);
+void HTMLMarqueeElement_set_width(HTMLMarqueeElement* self, jb_String * value);
 
 jb_Undefined HTMLMarqueeElement_start(HTMLMarqueeElement* self );
 

@@ -6,12 +6,12 @@
 DEFINE_EMLITE_TYPE(RegistrationOptions, em_Val);
 
 
-jb_USVString RegistrationOptions_scope(const RegistrationOptions *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("scope")));
+jb_String RegistrationOptions_scope(const RegistrationOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("scope")));
 }
 
 
-void RegistrationOptions_set_scope(RegistrationOptions* self, jb_USVString * value) {
+void RegistrationOptions_set_scope(RegistrationOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("scope"), em_Val_from(value));
 }
 
@@ -63,7 +63,7 @@ jb_Promise ServiceWorkerContainer_getRegistration0(ServiceWorkerContainer* self 
 }
 
 
-jb_Promise ServiceWorkerContainer_getRegistration1(ServiceWorkerContainer* self , jb_USVString * clientURL) {
+jb_Promise ServiceWorkerContainer_getRegistration1(ServiceWorkerContainer* self , jb_String * clientURL) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "getRegistration", em_Val_from(clientURL)));
 }
 

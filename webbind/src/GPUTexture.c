@@ -142,12 +142,12 @@ jb_Any GPUTexture_usage(const GPUTexture *self) {
 }
 
 
-jb_USVString GPUTexture_label(const GPUTexture *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
+jb_String GPUTexture_label(const GPUTexture *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void GPUTexture_set_label(GPUTexture* self, jb_USVString * value) {
+void GPUTexture_set_label(GPUTexture* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 

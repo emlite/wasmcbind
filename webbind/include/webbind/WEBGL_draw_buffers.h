@@ -7,4 +7,4 @@
 
 DECLARE_EMLITE_TYPE(WEBGL_draw_buffers, em_Val);
 
-jb_Undefined WEBGL_draw_buffers_drawBuffersWEBGL(WEBGL_draw_buffers* self , jb_Sequence * buffers);
+jb_Undefined WEBGL_draw_buffers_drawBuffersWEBGL(WEBGL_draw_buffers* self , jb_Array * buffers);

@@ -4,7 +4,7 @@
 DEFINE_EMLITE_TYPE(CanMakePaymentEvent, ExtendableEvent);
 
 
-CanMakePaymentEvent CanMakePaymentEvent_new(jb_DOMString * type) {
+CanMakePaymentEvent CanMakePaymentEvent_new(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("CanMakePaymentEvent") , em_Val_from(type));
         return CanMakePaymentEvent_from_val(&vv);
       }

@@ -8,11 +8,11 @@
 
 DECLARE_EMLITE_TYPE(Client, em_Val);
 
-jb_USVString Client_url(const Client *self);
+jb_String Client_url(const Client *self);
 
 FrameType Client_frameType(const Client *self);
 
-jb_DOMString Client_id(const Client *self);
+jb_String Client_id(const Client *self);
 
 ClientType Client_type(const Client *self);
 

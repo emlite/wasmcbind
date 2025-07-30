@@ -10,9 +10,9 @@ typedef struct IDBRequest IDBRequest;
 
 DECLARE_EMLITE_TYPE(IDBIndex, em_Val);
 
-jb_DOMString IDBIndex_name(const IDBIndex *self);
+jb_String IDBIndex_name(const IDBIndex *self);
 
-void IDBIndex_set_name(IDBIndex* self, jb_DOMString * value);
+void IDBIndex_set_name(IDBIndex* self, jb_String * value);
 
 IDBObjectStore IDBIndex_objectStore(const IDBIndex *self);
 

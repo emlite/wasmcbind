@@ -49,7 +49,7 @@ bool GPUCopyExternalImageDestInfo_premultipliedAlpha(const GPUCopyExternalImageD
 void GPUCopyExternalImageDestInfo_set_premultipliedAlpha(GPUCopyExternalImageDestInfo* self, bool value);
 DECLARE_EMLITE_TYPE(GPUQueue, em_Val);
 
-jb_Undefined GPUQueue_submit(GPUQueue* self , jb_Sequence * commandBuffers);
+jb_Undefined GPUQueue_submit(GPUQueue* self , jb_Array * commandBuffers);
 
 jb_Promise GPUQueue_onSubmittedWorkDone(GPUQueue* self );
 
@@ -63,6 +63,6 @@ jb_Undefined GPUQueue_writeTexture(GPUQueue* self , GPUTexelCopyTextureInfo * de
 
 jb_Undefined GPUQueue_copyExternalImageToTexture(GPUQueue* self , GPUCopyExternalImageSourceInfo * source, GPUCopyExternalImageDestInfo * destination, jb_Any * copySize);
 
-jb_USVString GPUQueue_label(const GPUQueue *self);
+jb_String GPUQueue_label(const GPUQueue *self);
 
-void GPUQueue_set_label(GPUQueue* self, jb_USVString * value);
+void GPUQueue_set_label(GPUQueue* self, jb_String * value);

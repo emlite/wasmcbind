@@ -10,7 +10,7 @@ RTCError RTCError_new0(jb_Any * init) {
       }
 
 
-RTCError RTCError_new1(jb_Any * init, jb_DOMString * message) {
+RTCError RTCError_new1(jb_Any * init, jb_String * message) {
         em_Val vv = em_Val_new(em_Val_global("RTCError") , em_Val_from(init), em_Val_from(message));
         return RTCError_from_val(&vv);
       }

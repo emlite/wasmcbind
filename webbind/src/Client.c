@@ -5,8 +5,8 @@
 DEFINE_EMLITE_TYPE(Client, em_Val);
 
 
-jb_USVString Client_url(const Client *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
+jb_String Client_url(const Client *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 
@@ -15,8 +15,8 @@ FrameType Client_frameType(const Client *self) {
 }
 
 
-jb_DOMString Client_id(const Client *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
+jb_String Client_id(const Client *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 

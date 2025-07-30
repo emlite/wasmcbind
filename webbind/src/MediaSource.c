@@ -78,7 +78,7 @@ bool MediaSource_canConstructInDedicatedWorker(const MediaSource *self) {
 }
 
 
-SourceBuffer MediaSource_addSourceBuffer(MediaSource* self , jb_DOMString * type) {
+SourceBuffer MediaSource_addSourceBuffer(MediaSource* self , jb_String * type) {
     return em_Val_as(SourceBuffer, em_Val_call(EventTarget_as_val(self->inner), "addSourceBuffer", em_Val_from(type)));
 }
 
@@ -108,7 +108,7 @@ jb_Undefined MediaSource_clearLiveSeekableRange(MediaSource* self ) {
 }
 
 
-bool MediaSource_isTypeSupported(MediaSource* self , jb_DOMString * type) {
+bool MediaSource_isTypeSupported(MediaSource* self , jb_String * type) {
     return em_Val_as(bool, em_Val_call(em_Val_global("mediasource"), "isTypeSupported", em_Val_from(type)));
 }
 

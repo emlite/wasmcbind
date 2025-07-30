@@ -11,13 +11,13 @@ typedef struct HIDDeviceRequestOptions HIDDeviceRequestOptions;
 
 DECLARE_EMLITE_TYPE(HIDDeviceRequestOptions, em_Val);
 
-jb_Sequence HIDDeviceRequestOptions_filters(const HIDDeviceRequestOptions *self);
+jb_Array HIDDeviceRequestOptions_filters(const HIDDeviceRequestOptions *self);
 
-void HIDDeviceRequestOptions_set_filters(HIDDeviceRequestOptions* self, jb_Sequence * value);
+void HIDDeviceRequestOptions_set_filters(HIDDeviceRequestOptions* self, jb_Array * value);
 
-jb_Sequence HIDDeviceRequestOptions_exclusionFilters(const HIDDeviceRequestOptions *self);
+jb_Array HIDDeviceRequestOptions_exclusionFilters(const HIDDeviceRequestOptions *self);
 
-void HIDDeviceRequestOptions_set_exclusionFilters(HIDDeviceRequestOptions* self, jb_Sequence * value);
+void HIDDeviceRequestOptions_set_exclusionFilters(HIDDeviceRequestOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(HID, EventTarget);
 
 jb_Any HID_onconnect(const HID *self);

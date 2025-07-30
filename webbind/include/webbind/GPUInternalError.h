@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(GPUInternalError, GPUError);
 
-GPUInternalError GPUInternalError_new(jb_DOMString * message);
+GPUInternalError GPUInternalError_new(jb_String * message);

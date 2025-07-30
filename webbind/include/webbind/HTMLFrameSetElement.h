@@ -10,13 +10,13 @@ DECLARE_EMLITE_TYPE(HTMLFrameSetElement, HTMLElement);
 
 HTMLFrameSetElement HTMLFrameSetElement_new();
 
-jb_DOMString HTMLFrameSetElement_cols(const HTMLFrameSetElement *self);
+jb_String HTMLFrameSetElement_cols(const HTMLFrameSetElement *self);
 
-void HTMLFrameSetElement_set_cols(HTMLFrameSetElement* self, jb_DOMString * value);
+void HTMLFrameSetElement_set_cols(HTMLFrameSetElement* self, jb_String * value);
 
-jb_DOMString HTMLFrameSetElement_rows(const HTMLFrameSetElement *self);
+jb_String HTMLFrameSetElement_rows(const HTMLFrameSetElement *self);
 
-void HTMLFrameSetElement_set_rows(HTMLFrameSetElement* self, jb_DOMString * value);
+void HTMLFrameSetElement_set_rows(HTMLFrameSetElement* self, jb_String * value);
 
 jb_Any HTMLFrameSetElement_onportalactivate(const HTMLFrameSetElement *self);
 

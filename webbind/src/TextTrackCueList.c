@@ -10,7 +10,7 @@ unsigned long TextTrackCueList_length(const TextTrackCueList *self) {
 }
 
 
-TextTrackCue TextTrackCueList_getCueById(TextTrackCueList* self , jb_DOMString * id) {
+TextTrackCue TextTrackCueList_getCueById(TextTrackCueList* self , jb_String * id) {
     return em_Val_as(TextTrackCue, em_Val_call(em_Val_as_val(self->inner), "getCueById", em_Val_from(id)));
 }
 

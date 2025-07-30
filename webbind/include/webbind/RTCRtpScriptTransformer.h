@@ -15,7 +15,7 @@ ReadableStream RTCRtpScriptTransformer_readable(const RTCRtpScriptTransformer *s
 
 jb_Promise RTCRtpScriptTransformer_generateKeyFrame0(RTCRtpScriptTransformer* self );
 
-jb_Promise RTCRtpScriptTransformer_generateKeyFrame1(RTCRtpScriptTransformer* self , jb_DOMString * rid);
+jb_Promise RTCRtpScriptTransformer_generateKeyFrame1(RTCRtpScriptTransformer* self , jb_String * rid);
 
 jb_Promise RTCRtpScriptTransformer_sendKeyFrameRequest(RTCRtpScriptTransformer* self );
 

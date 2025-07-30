@@ -30,12 +30,12 @@ void HTMLOListElement_set_start(HTMLOListElement* self, long value) {
 }
 
 
-jb_DOMString HTMLOListElement_type(const HTMLOListElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
+jb_String HTMLOListElement_type(const HTMLOListElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void HTMLOListElement_set_type(HTMLOListElement* self, jb_DOMString * value) {
+void HTMLOListElement_set_type(HTMLOListElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 

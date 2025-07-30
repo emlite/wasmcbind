@@ -9,8 +9,8 @@ jb_ArrayBuffer AuthenticatorAttestationResponse_attestationObject(const Authenti
 }
 
 
-jb_Sequence AuthenticatorAttestationResponse_getTransports(AuthenticatorAttestationResponse* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(AuthenticatorResponse_as_val(self->inner), "getTransports"));
+jb_Array AuthenticatorAttestationResponse_getTransports(AuthenticatorAttestationResponse* self ) {
+    return em_Val_as(jb_Array, em_Val_call(AuthenticatorResponse_as_val(self->inner), "getTransports"));
 }
 
 

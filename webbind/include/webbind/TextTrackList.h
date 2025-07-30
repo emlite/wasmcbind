@@ -12,7 +12,7 @@ DECLARE_EMLITE_TYPE(TextTrackList, EventTarget);
 
 unsigned long TextTrackList_length(const TextTrackList *self);
 
-TextTrack TextTrackList_getTrackById(TextTrackList* self , jb_DOMString * id);
+TextTrack TextTrackList_getTrackById(TextTrackList* self , jb_String * id);
 
 jb_Any TextTrackList_onchange(const TextTrackList *self);
 

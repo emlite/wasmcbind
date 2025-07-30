@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(IDBVersionChangeEvent, Event);
 
 
-IDBVersionChangeEvent IDBVersionChangeEvent_new0(jb_DOMString * type) {
+IDBVersionChangeEvent IDBVersionChangeEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("IDBVersionChangeEvent") , em_Val_from(type));
         return IDBVersionChangeEvent_from_val(&vv);
       }
 
 
-IDBVersionChangeEvent IDBVersionChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+IDBVersionChangeEvent IDBVersionChangeEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("IDBVersionChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return IDBVersionChangeEvent_from_val(&vv);
       }

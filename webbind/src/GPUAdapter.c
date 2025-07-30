@@ -8,22 +8,22 @@
 DEFINE_EMLITE_TYPE(GPUDeviceDescriptor, em_Val);
 
 
-jb_Sequence GPUDeviceDescriptor_requiredFeatures(const GPUDeviceDescriptor *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requiredFeatures")));
+jb_Array GPUDeviceDescriptor_requiredFeatures(const GPUDeviceDescriptor *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requiredFeatures")));
 }
 
 
-void GPUDeviceDescriptor_set_requiredFeatures(GPUDeviceDescriptor* self, jb_Sequence * value) {
+void GPUDeviceDescriptor_set_requiredFeatures(GPUDeviceDescriptor* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("requiredFeatures"), em_Val_from(value));
 }
 
 
-jb_Record GPUDeviceDescriptor_requiredLimits(const GPUDeviceDescriptor *self) {
-    return em_Val_as(jb_Record, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requiredLimits")));
+jb_Object GPUDeviceDescriptor_requiredLimits(const GPUDeviceDescriptor *self) {
+    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requiredLimits")));
 }
 
 
-void GPUDeviceDescriptor_set_requiredLimits(GPUDeviceDescriptor* self, jb_Record * value) {
+void GPUDeviceDescriptor_set_requiredLimits(GPUDeviceDescriptor* self, jb_Object * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("requiredLimits"), em_Val_from(value));
 }
 

@@ -29,16 +29,16 @@ bool FileSystemRemoveOptions_recursive(const FileSystemRemoveOptions *self);
 void FileSystemRemoveOptions_set_recursive(FileSystemRemoveOptions* self, bool value);
 DECLARE_EMLITE_TYPE(FileSystemDirectoryHandle, FileSystemHandle);
 
-jb_Promise FileSystemDirectoryHandle_getFileHandle0(FileSystemDirectoryHandle* self , jb_USVString * name);
+jb_Promise FileSystemDirectoryHandle_getFileHandle0(FileSystemDirectoryHandle* self , jb_String * name);
 
-jb_Promise FileSystemDirectoryHandle_getFileHandle1(FileSystemDirectoryHandle* self , jb_USVString * name, FileSystemGetFileOptions * options);
+jb_Promise FileSystemDirectoryHandle_getFileHandle1(FileSystemDirectoryHandle* self , jb_String * name, FileSystemGetFileOptions * options);
 
-jb_Promise FileSystemDirectoryHandle_getDirectoryHandle0(FileSystemDirectoryHandle* self , jb_USVString * name);
+jb_Promise FileSystemDirectoryHandle_getDirectoryHandle0(FileSystemDirectoryHandle* self , jb_String * name);
 
-jb_Promise FileSystemDirectoryHandle_getDirectoryHandle1(FileSystemDirectoryHandle* self , jb_USVString * name, FileSystemGetDirectoryOptions * options);
+jb_Promise FileSystemDirectoryHandle_getDirectoryHandle1(FileSystemDirectoryHandle* self , jb_String * name, FileSystemGetDirectoryOptions * options);
 
-jb_Promise FileSystemDirectoryHandle_removeEntry0(FileSystemDirectoryHandle* self , jb_USVString * name);
+jb_Promise FileSystemDirectoryHandle_removeEntry0(FileSystemDirectoryHandle* self , jb_String * name);
 
-jb_Promise FileSystemDirectoryHandle_removeEntry1(FileSystemDirectoryHandle* self , jb_USVString * name, FileSystemRemoveOptions * options);
+jb_Promise FileSystemDirectoryHandle_removeEntry1(FileSystemDirectoryHandle* self , jb_String * name, FileSystemRemoveOptions * options);
 
 jb_Promise FileSystemDirectoryHandle_resolve(FileSystemDirectoryHandle* self , FileSystemHandle * possibleDescendant);

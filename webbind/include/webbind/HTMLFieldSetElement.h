@@ -20,11 +20,11 @@ void HTMLFieldSetElement_set_disabled(HTMLFieldSetElement* self, bool value);
 
 HTMLFormElement HTMLFieldSetElement_form(const HTMLFieldSetElement *self);
 
-jb_DOMString HTMLFieldSetElement_name(const HTMLFieldSetElement *self);
+jb_String HTMLFieldSetElement_name(const HTMLFieldSetElement *self);
 
-void HTMLFieldSetElement_set_name(HTMLFieldSetElement* self, jb_DOMString * value);
+void HTMLFieldSetElement_set_name(HTMLFieldSetElement* self, jb_String * value);
 
-jb_DOMString HTMLFieldSetElement_type(const HTMLFieldSetElement *self);
+jb_String HTMLFieldSetElement_type(const HTMLFieldSetElement *self);
 
 HTMLCollection HTMLFieldSetElement_elements(const HTMLFieldSetElement *self);
 
@@ -32,10 +32,10 @@ bool HTMLFieldSetElement_willValidate(const HTMLFieldSetElement *self);
 
 ValidityState HTMLFieldSetElement_validity(const HTMLFieldSetElement *self);
 
-jb_DOMString HTMLFieldSetElement_validationMessage(const HTMLFieldSetElement *self);
+jb_String HTMLFieldSetElement_validationMessage(const HTMLFieldSetElement *self);
 
 bool HTMLFieldSetElement_checkValidity(HTMLFieldSetElement* self );
 
 bool HTMLFieldSetElement_reportValidity(HTMLFieldSetElement* self );
 
-jb_Undefined HTMLFieldSetElement_setCustomValidity(HTMLFieldSetElement* self , jb_DOMString * error);
+jb_Undefined HTMLFieldSetElement_setCustomValidity(HTMLFieldSetElement* self , jb_String * error);

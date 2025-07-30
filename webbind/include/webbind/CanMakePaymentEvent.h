@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(CanMakePaymentEvent, ExtendableEvent);
 
-CanMakePaymentEvent CanMakePaymentEvent_new(jb_DOMString * type);
+CanMakePaymentEvent CanMakePaymentEvent_new(jb_String * type);
 
 jb_Undefined CanMakePaymentEvent_respondWith(CanMakePaymentEvent* self , jb_Promise * canMakePaymentResponse);

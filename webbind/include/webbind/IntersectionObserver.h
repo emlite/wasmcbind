@@ -16,11 +16,11 @@ IntersectionObserver IntersectionObserver_new1(jb_Function * callback, jb_Any * 
 
 jb_Any IntersectionObserver_root(const IntersectionObserver *self);
 
-jb_DOMString IntersectionObserver_rootMargin(const IntersectionObserver *self);
+jb_String IntersectionObserver_rootMargin(const IntersectionObserver *self);
 
-jb_DOMString IntersectionObserver_scrollMargin(const IntersectionObserver *self);
+jb_String IntersectionObserver_scrollMargin(const IntersectionObserver *self);
 
-jb_FrozenArray IntersectionObserver_thresholds(const IntersectionObserver *self);
+jb_Array IntersectionObserver_thresholds(const IntersectionObserver *self);
 
 long IntersectionObserver_delay(const IntersectionObserver *self);
 
@@ -32,4 +32,4 @@ jb_Undefined IntersectionObserver_unobserve(IntersectionObserver* self , Element
 
 jb_Undefined IntersectionObserver_disconnect(IntersectionObserver* self );
 
-jb_Sequence IntersectionObserver_takeRecords(IntersectionObserver* self );
+jb_Array IntersectionObserver_takeRecords(IntersectionObserver* self );

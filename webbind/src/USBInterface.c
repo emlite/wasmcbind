@@ -22,8 +22,8 @@ USBAlternateInterface USBInterface_alternate(const USBInterface *self) {
 }
 
 
-jb_FrozenArray USBInterface_alternates(const USBInterface *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("alternates")));
+jb_Array USBInterface_alternates(const USBInterface *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("alternates")));
 }
 
 

@@ -13,4 +13,4 @@ unsigned long MimeTypeArray_length(const MimeTypeArray *self);
 
 MimeType MimeTypeArray_item(MimeTypeArray* self , unsigned long index);
 
-MimeType MimeTypeArray_namedItem(MimeTypeArray* self , jb_DOMString * name);
+MimeType MimeTypeArray_namedItem(MimeTypeArray* self , jb_String * name);

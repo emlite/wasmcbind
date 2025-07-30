@@ -5,32 +5,32 @@
 DEFINE_EMLITE_TYPE(Attr, Node);
 
 
-jb_DOMString Attr_namespaceURI(const Attr *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("namespaceURI")));
+jb_String Attr_namespaceURI(const Attr *self) {
+    return em_Val_as(jb_String, em_Val_get(Node_as_val(self->inner), em_Val_from("namespaceURI")));
 }
 
 
-jb_DOMString Attr_prefix(const Attr *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("prefix")));
+jb_String Attr_prefix(const Attr *self) {
+    return em_Val_as(jb_String, em_Val_get(Node_as_val(self->inner), em_Val_from("prefix")));
 }
 
 
-jb_DOMString Attr_localName(const Attr *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("localName")));
+jb_String Attr_localName(const Attr *self) {
+    return em_Val_as(jb_String, em_Val_get(Node_as_val(self->inner), em_Val_from("localName")));
 }
 
 
-jb_DOMString Attr_name(const Attr *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("name")));
+jb_String Attr_name(const Attr *self) {
+    return em_Val_as(jb_String, em_Val_get(Node_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString Attr_value(const Attr *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("value")));
+jb_String Attr_value(const Attr *self) {
+    return em_Val_as(jb_String, em_Val_get(Node_as_val(self->inner), em_Val_from("value")));
 }
 
 
-void Attr_set_value(Attr* self, jb_DOMString * value) {
+void Attr_set_value(Attr* self, jb_String * value) {
     em_Val_set(Node_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
 }
 

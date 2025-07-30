@@ -14,7 +14,7 @@ jb_Any WebGLActiveInfo_type(const WebGLActiveInfo *self) {
 }
 
 
-jb_DOMString WebGLActiveInfo_name(const WebGLActiveInfo *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String WebGLActiveInfo_name(const WebGLActiveInfo *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 

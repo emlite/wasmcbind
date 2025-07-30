@@ -27,24 +27,24 @@ void LanguageDetectorCreateOptions_set_monitor(LanguageDetectorCreateOptions* se
 DEFINE_EMLITE_TYPE(LanguageDetectorCreateCoreOptions, em_Val);
 
 
-jb_Sequence LanguageDetectorCreateCoreOptions_expectedInputLanguages(const LanguageDetectorCreateCoreOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
+jb_Array LanguageDetectorCreateCoreOptions_expectedInputLanguages(const LanguageDetectorCreateCoreOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
 }
 
 
-void LanguageDetectorCreateCoreOptions_set_expectedInputLanguages(LanguageDetectorCreateCoreOptions* self, jb_Sequence * value) {
+void LanguageDetectorCreateCoreOptions_set_expectedInputLanguages(LanguageDetectorCreateCoreOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(LanguageDetectionResult, em_Val);
 
 
-jb_DOMString LanguageDetectionResult_detectedLanguage(const LanguageDetectionResult *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("detectedLanguage")));
+jb_String LanguageDetectionResult_detectedLanguage(const LanguageDetectionResult *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("detectedLanguage")));
 }
 
 
-void LanguageDetectionResult_set_detectedLanguage(LanguageDetectionResult* self, jb_DOMString * value) {
+void LanguageDetectionResult_set_detectedLanguage(LanguageDetectionResult* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("detectedLanguage"), em_Val_from(value));
 }
 
@@ -93,27 +93,27 @@ jb_Promise LanguageDetector_availability1(LanguageDetector* self , LanguageDetec
 }
 
 
-jb_Promise LanguageDetector_detect0(LanguageDetector* self , jb_DOMString * input) {
+jb_Promise LanguageDetector_detect0(LanguageDetector* self , jb_String * input) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "detect", em_Val_from(input)));
 }
 
 
-jb_Promise LanguageDetector_detect1(LanguageDetector* self , jb_DOMString * input, LanguageDetectorDetectOptions * options) {
+jb_Promise LanguageDetector_detect1(LanguageDetector* self , jb_String * input, LanguageDetectorDetectOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "detect", em_Val_from(input), em_Val_from(options)));
 }
 
 
-jb_FrozenArray LanguageDetector_expectedInputLanguages(const LanguageDetector *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
+jb_Array LanguageDetector_expectedInputLanguages(const LanguageDetector *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
 }
 
 
-jb_Promise LanguageDetector_measureInputUsage0(LanguageDetector* self , jb_DOMString * input) {
+jb_Promise LanguageDetector_measureInputUsage0(LanguageDetector* self , jb_String * input) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "measureInputUsage", em_Val_from(input)));
 }
 
 
-jb_Promise LanguageDetector_measureInputUsage1(LanguageDetector* self , jb_DOMString * input, LanguageDetectorDetectOptions * options) {
+jb_Promise LanguageDetector_measureInputUsage1(LanguageDetector* self , jb_String * input, LanguageDetectorDetectOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "measureInputUsage", em_Val_from(input), em_Val_from(options)));
 }
 

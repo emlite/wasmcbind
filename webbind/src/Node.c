@@ -24,13 +24,13 @@ unsigned short Node_nodeType(const Node *self) {
 }
 
 
-jb_DOMString Node_nodeName(const Node *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("nodeName")));
+jb_String Node_nodeName(const Node *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("nodeName")));
 }
 
 
-jb_USVString Node_baseURI(const Node *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("baseURI")));
+jb_String Node_baseURI(const Node *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("baseURI")));
 }
 
 
@@ -94,22 +94,22 @@ Node Node_nextSibling(const Node *self) {
 }
 
 
-jb_DOMString Node_nodeValue(const Node *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("nodeValue")));
+jb_String Node_nodeValue(const Node *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("nodeValue")));
 }
 
 
-void Node_set_nodeValue(Node* self, jb_DOMString * value) {
+void Node_set_nodeValue(Node* self, jb_String * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("nodeValue"), em_Val_from(value));
 }
 
 
-jb_DOMString Node_textContent(const Node *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("textContent")));
+jb_String Node_textContent(const Node *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("textContent")));
 }
 
 
-void Node_set_textContent(Node* self, jb_DOMString * value) {
+void Node_set_textContent(Node* self, jb_String * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("textContent"), em_Val_from(value));
 }
 
@@ -149,17 +149,17 @@ bool Node_contains(Node* self , Node * other) {
 }
 
 
-jb_DOMString Node_lookupPrefix(Node* self , jb_DOMString * namespace_) {
-    return em_Val_as(jb_DOMString, em_Val_call(EventTarget_as_val(self->inner), "lookupPrefix", em_Val_from(namespace_)));
+jb_String Node_lookupPrefix(Node* self , jb_String * namespace_) {
+    return em_Val_as(jb_String, em_Val_call(EventTarget_as_val(self->inner), "lookupPrefix", em_Val_from(namespace_)));
 }
 
 
-jb_DOMString Node_lookupNamespaceURI(Node* self , jb_DOMString * prefix) {
-    return em_Val_as(jb_DOMString, em_Val_call(EventTarget_as_val(self->inner), "lookupNamespaceURI", em_Val_from(prefix)));
+jb_String Node_lookupNamespaceURI(Node* self , jb_String * prefix) {
+    return em_Val_as(jb_String, em_Val_call(EventTarget_as_val(self->inner), "lookupNamespaceURI", em_Val_from(prefix)));
 }
 
 
-bool Node_isDefaultNamespace(Node* self , jb_DOMString * namespace_) {
+bool Node_isDefaultNamespace(Node* self , jb_String * namespace_) {
     return em_Val_as(bool, em_Val_call(EventTarget_as_val(self->inner), "isDefaultNamespace", em_Val_from(namespace_)));
 }
 

@@ -12,11 +12,11 @@ DECLARE_EMLITE_TYPE(TextDecoderStream, em_Val);
 
 TextDecoderStream TextDecoderStream_new0();
 
-TextDecoderStream TextDecoderStream_new1(jb_DOMString * label);
+TextDecoderStream TextDecoderStream_new1(jb_String * label);
 
-TextDecoderStream TextDecoderStream_new2(jb_DOMString * label, jb_Any * options);
+TextDecoderStream TextDecoderStream_new2(jb_String * label, jb_Any * options);
 
-jb_DOMString TextDecoderStream_encoding(const TextDecoderStream *self);
+jb_String TextDecoderStream_encoding(const TextDecoderStream *self);
 
 bool TextDecoderStream_fatal(const TextDecoderStream *self);
 

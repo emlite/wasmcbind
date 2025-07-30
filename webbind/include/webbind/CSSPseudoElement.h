@@ -15,17 +15,17 @@ typedef struct DOMPoint DOMPoint;
 
 DECLARE_EMLITE_TYPE(CSSPseudoElement, EventTarget);
 
-jb_CSSOMString CSSPseudoElement_type(const CSSPseudoElement *self);
+jb_String CSSPseudoElement_type(const CSSPseudoElement *self);
 
 Element CSSPseudoElement_element(const CSSPseudoElement *self);
 
 jb_Any CSSPseudoElement_parent(const CSSPseudoElement *self);
 
-CSSPseudoElement CSSPseudoElement_pseudo(CSSPseudoElement* self , jb_CSSOMString * type);
+CSSPseudoElement CSSPseudoElement_pseudo(CSSPseudoElement* self , jb_String * type);
 
-jb_Sequence CSSPseudoElement_getBoxQuads0(CSSPseudoElement* self );
+jb_Array CSSPseudoElement_getBoxQuads0(CSSPseudoElement* self );
 
-jb_Sequence CSSPseudoElement_getBoxQuads1(CSSPseudoElement* self , BoxQuadOptions * options);
+jb_Array CSSPseudoElement_getBoxQuads1(CSSPseudoElement* self , BoxQuadOptions * options);
 
 DOMQuad CSSPseudoElement_convertQuadFromNode0(CSSPseudoElement* self , DOMQuadInit * quad, jb_Any * from);
 

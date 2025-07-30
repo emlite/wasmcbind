@@ -28,18 +28,18 @@ HTMLFormElement HTMLFieldSetElement_form(const HTMLFieldSetElement *self) {
 }
 
 
-jb_DOMString HTMLFieldSetElement_name(const HTMLFieldSetElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLFieldSetElement_name(const HTMLFieldSetElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLFieldSetElement_set_name(HTMLFieldSetElement* self, jb_DOMString * value) {
+void HTMLFieldSetElement_set_name(HTMLFieldSetElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLFieldSetElement_type(const HTMLFieldSetElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
+jb_String HTMLFieldSetElement_type(const HTMLFieldSetElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
@@ -58,8 +58,8 @@ ValidityState HTMLFieldSetElement_validity(const HTMLFieldSetElement *self) {
 }
 
 
-jb_DOMString HTMLFieldSetElement_validationMessage(const HTMLFieldSetElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
+jb_String HTMLFieldSetElement_validationMessage(const HTMLFieldSetElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
 }
 
 
@@ -73,7 +73,7 @@ bool HTMLFieldSetElement_reportValidity(HTMLFieldSetElement* self ) {
 }
 
 
-jb_Undefined HTMLFieldSetElement_setCustomValidity(HTMLFieldSetElement* self , jb_DOMString * error) {
+jb_Undefined HTMLFieldSetElement_setCustomValidity(HTMLFieldSetElement* self , jb_String * error) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setCustomValidity", em_Val_from(error)));
 }
 

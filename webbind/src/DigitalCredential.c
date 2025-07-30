@@ -9,8 +9,8 @@ jb_Object DigitalCredential_toJSON(DigitalCredential* self ) {
 }
 
 
-jb_DOMString DigitalCredential_protocol(const DigitalCredential *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Credential_as_val(self->inner), em_Val_from("protocol")));
+jb_String DigitalCredential_protocol(const DigitalCredential *self) {
+    return em_Val_as(jb_String, em_Val_get(Credential_as_val(self->inner), em_Val_from("protocol")));
 }
 
 
@@ -19,7 +19,7 @@ jb_Object DigitalCredential_data(const DigitalCredential *self) {
 }
 
 
-bool DigitalCredential_userAgentAllowsProtocol(DigitalCredential* self , jb_DOMString * protocol) {
+bool DigitalCredential_userAgentAllowsProtocol(DigitalCredential* self , jb_String * protocol) {
     return em_Val_as(bool, em_Val_call(em_Val_global("digitalcredential"), "userAgentAllowsProtocol", em_Val_from(protocol)));
 }
 

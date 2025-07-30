@@ -13,22 +13,22 @@ DataTransfer DataTransfer_new() {
       }
 
 
-jb_DOMString DataTransfer_dropEffect(const DataTransfer *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dropEffect")));
+jb_String DataTransfer_dropEffect(const DataTransfer *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dropEffect")));
 }
 
 
-void DataTransfer_set_dropEffect(DataTransfer* self, jb_DOMString * value) {
+void DataTransfer_set_dropEffect(DataTransfer* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("dropEffect"), em_Val_from(value));
 }
 
 
-jb_DOMString DataTransfer_effectAllowed(const DataTransfer *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("effectAllowed")));
+jb_String DataTransfer_effectAllowed(const DataTransfer *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("effectAllowed")));
 }
 
 
-void DataTransfer_set_effectAllowed(DataTransfer* self, jb_DOMString * value) {
+void DataTransfer_set_effectAllowed(DataTransfer* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("effectAllowed"), em_Val_from(value));
 }
 
@@ -43,17 +43,17 @@ jb_Undefined DataTransfer_setDragImage(DataTransfer* self , Element * image, lon
 }
 
 
-jb_FrozenArray DataTransfer_types(const DataTransfer *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("types")));
+jb_Array DataTransfer_types(const DataTransfer *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("types")));
 }
 
 
-jb_DOMString DataTransfer_getData(DataTransfer* self , jb_DOMString * format) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "getData", em_Val_from(format)));
+jb_String DataTransfer_getData(DataTransfer* self , jb_String * format) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "getData", em_Val_from(format)));
 }
 
 
-jb_Undefined DataTransfer_setData(DataTransfer* self , jb_DOMString * format, jb_DOMString * data) {
+jb_Undefined DataTransfer_setData(DataTransfer* self , jb_String * format, jb_String * data) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setData", em_Val_from(format), em_Val_from(data)));
 }
 
@@ -63,7 +63,7 @@ jb_Undefined DataTransfer_clearData0(DataTransfer* self ) {
 }
 
 
-jb_Undefined DataTransfer_clearData1(DataTransfer* self , jb_DOMString * format) {
+jb_Undefined DataTransfer_clearData1(DataTransfer* self , jb_String * format) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "clearData", em_Val_from(format)));
 }
 

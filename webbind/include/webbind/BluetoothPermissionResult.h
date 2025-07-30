@@ -10,6 +10,6 @@ typedef struct BluetoothDevice BluetoothDevice;
 
 DECLARE_EMLITE_TYPE(BluetoothPermissionResult, PermissionStatus);
 
-jb_FrozenArray BluetoothPermissionResult_devices(const BluetoothPermissionResult *self);
+jb_Array BluetoothPermissionResult_devices(const BluetoothPermissionResult *self);
 
-void BluetoothPermissionResult_set_devices(BluetoothPermissionResult* self, jb_FrozenArray * value);
+void BluetoothPermissionResult_set_devices(BluetoothPermissionResult* self, jb_Array * value);

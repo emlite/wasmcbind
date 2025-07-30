@@ -42,9 +42,9 @@ jb_Any PhotoCapabilities_imageWidth(const PhotoCapabilities *self);
 
 void PhotoCapabilities_set_imageWidth(PhotoCapabilities* self, jb_Any * value);
 
-jb_Sequence PhotoCapabilities_fillLightMode(const PhotoCapabilities *self);
+jb_Array PhotoCapabilities_fillLightMode(const PhotoCapabilities *self);
 
-void PhotoCapabilities_set_fillLightMode(PhotoCapabilities* self, jb_Sequence * value);
+void PhotoCapabilities_set_fillLightMode(PhotoCapabilities* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(ImageCapture, em_Val);
 
 ImageCapture ImageCapture_new(MediaStreamTrack * videoTrack);

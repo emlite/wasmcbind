@@ -8,9 +8,9 @@
 
 DECLARE_EMLITE_TYPE(BroadcastChannel, EventTarget);
 
-BroadcastChannel BroadcastChannel_new(jb_DOMString * name);
+BroadcastChannel BroadcastChannel_new(jb_String * name);
 
-jb_DOMString BroadcastChannel_name(const BroadcastChannel *self);
+jb_String BroadcastChannel_name(const BroadcastChannel *self);
 
 jb_Undefined BroadcastChannel_postMessage(BroadcastChannel* self , jb_Any * message);
 

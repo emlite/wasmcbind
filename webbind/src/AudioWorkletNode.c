@@ -7,13 +7,13 @@
 DEFINE_EMLITE_TYPE(AudioWorkletNode, AudioNode);
 
 
-AudioWorkletNode AudioWorkletNode_new0(BaseAudioContext * context, jb_DOMString * name) {
+AudioWorkletNode AudioWorkletNode_new0(BaseAudioContext * context, jb_String * name) {
         em_Val vv = em_Val_new(em_Val_global("AudioWorkletNode") , em_Val_from(context), em_Val_from(name));
         return AudioWorkletNode_from_val(&vv);
       }
 
 
-AudioWorkletNode AudioWorkletNode_new1(BaseAudioContext * context, jb_DOMString * name, jb_Any * options) {
+AudioWorkletNode AudioWorkletNode_new1(BaseAudioContext * context, jb_String * name, jb_Any * options) {
         em_Val vv = em_Val_new(em_Val_global("AudioWorkletNode") , em_Val_from(context), em_Val_from(name), em_Val_from(options));
         return AudioWorkletNode_from_val(&vv);
       }

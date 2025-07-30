@@ -28,17 +28,17 @@ Document XSLTProcessor_transformToDocument(XSLTProcessor* self , Node * source) 
 }
 
 
-jb_Undefined XSLTProcessor_setParameter(XSLTProcessor* self , jb_DOMString * namespaceURI, jb_DOMString * localName, jb_Any * value) {
+jb_Undefined XSLTProcessor_setParameter(XSLTProcessor* self , jb_String * namespaceURI, jb_String * localName, jb_Any * value) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setParameter", em_Val_from(namespaceURI), em_Val_from(localName), em_Val_from(value)));
 }
 
 
-jb_Any XSLTProcessor_getParameter(XSLTProcessor* self , jb_DOMString * namespaceURI, jb_DOMString * localName) {
+jb_Any XSLTProcessor_getParameter(XSLTProcessor* self , jb_String * namespaceURI, jb_String * localName) {
     return em_Val_as(jb_Any, em_Val_call(em_Val_as_val(self->inner), "getParameter", em_Val_from(namespaceURI), em_Val_from(localName)));
 }
 
 
-jb_Undefined XSLTProcessor_removeParameter(XSLTProcessor* self , jb_DOMString * namespaceURI, jb_DOMString * localName) {
+jb_Undefined XSLTProcessor_removeParameter(XSLTProcessor* self , jb_String * namespaceURI, jb_String * localName) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "removeParameter", em_Val_from(namespaceURI), em_Val_from(localName)));
 }
 

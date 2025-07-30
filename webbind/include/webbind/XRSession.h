@@ -45,9 +45,9 @@ XRWebGLLayer XRRenderStateInit_baseLayer(const XRRenderStateInit *self);
 
 void XRRenderStateInit_set_baseLayer(XRRenderStateInit* self, XRWebGLLayer * value);
 
-jb_Sequence XRRenderStateInit_layers(const XRRenderStateInit *self);
+jb_Array XRRenderStateInit_layers(const XRRenderStateInit *self);
 
-void XRRenderStateInit_set_layers(XRRenderStateInit* self, jb_Sequence * value);
+void XRRenderStateInit_set_layers(XRRenderStateInit* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(XRDOMOverlayState, em_Val);
 
 XRDOMOverlayType XRDOMOverlayState_type(const XRDOMOverlayState *self);
@@ -59,22 +59,22 @@ XRSpace XRHitTestOptionsInit_space(const XRHitTestOptionsInit *self);
 
 void XRHitTestOptionsInit_set_space(XRHitTestOptionsInit* self, XRSpace * value);
 
-jb_Sequence XRHitTestOptionsInit_entityTypes(const XRHitTestOptionsInit *self);
+jb_Array XRHitTestOptionsInit_entityTypes(const XRHitTestOptionsInit *self);
 
-void XRHitTestOptionsInit_set_entityTypes(XRHitTestOptionsInit* self, jb_Sequence * value);
+void XRHitTestOptionsInit_set_entityTypes(XRHitTestOptionsInit* self, jb_Array * value);
 
 XRRay XRHitTestOptionsInit_offsetRay(const XRHitTestOptionsInit *self);
 
 void XRHitTestOptionsInit_set_offsetRay(XRHitTestOptionsInit* self, XRRay * value);
 DECLARE_EMLITE_TYPE(XRTransientInputHitTestOptionsInit, em_Val);
 
-jb_DOMString XRTransientInputHitTestOptionsInit_profile(const XRTransientInputHitTestOptionsInit *self);
+jb_String XRTransientInputHitTestOptionsInit_profile(const XRTransientInputHitTestOptionsInit *self);
 
-void XRTransientInputHitTestOptionsInit_set_profile(XRTransientInputHitTestOptionsInit* self, jb_DOMString * value);
+void XRTransientInputHitTestOptionsInit_set_profile(XRTransientInputHitTestOptionsInit* self, jb_String * value);
 
-jb_Sequence XRTransientInputHitTestOptionsInit_entityTypes(const XRTransientInputHitTestOptionsInit *self);
+jb_Array XRTransientInputHitTestOptionsInit_entityTypes(const XRTransientInputHitTestOptionsInit *self);
 
-void XRTransientInputHitTestOptionsInit_set_entityTypes(XRTransientInputHitTestOptionsInit* self, jb_Sequence * value);
+void XRTransientInputHitTestOptionsInit_set_entityTypes(XRTransientInputHitTestOptionsInit* self, jb_Array * value);
 
 XRRay XRTransientInputHitTestOptionsInit_offsetRay(const XRTransientInputHitTestOptionsInit *self);
 
@@ -98,7 +98,7 @@ XRInputSourceArray XRSession_inputSources(const XRSession *self);
 
 XRInputSourceArray XRSession_trackedSources(const XRSession *self);
 
-jb_FrozenArray XRSession_enabledFeatures(const XRSession *self);
+jb_Array XRSession_enabledFeatures(const XRSession *self);
 
 bool XRSession_isSystemKeyboardSupported(const XRSession *self);
 
@@ -156,11 +156,11 @@ jb_Any XRSession_onframeratechange(const XRSession *self);
 
 void XRSession_set_onframeratechange(XRSession* self, jb_Any * value);
 
-jb_FrozenArray XRSession_persistentAnchors(const XRSession *self);
+jb_Array XRSession_persistentAnchors(const XRSession *self);
 
-jb_Promise XRSession_restorePersistentAnchor(XRSession* self , jb_DOMString * uuid);
+jb_Promise XRSession_restorePersistentAnchor(XRSession* self , jb_String * uuid);
 
-jb_Promise XRSession_deletePersistentAnchor(XRSession* self , jb_DOMString * uuid);
+jb_Promise XRSession_deletePersistentAnchor(XRSession* self , jb_String * uuid);
 
 XREnvironmentBlendMode XRSession_environmentBlendMode(const XRSession *self);
 

@@ -15,10 +15,10 @@ long long BackgroundFetchOptions_downloadTotal(const BackgroundFetchOptions *sel
 void BackgroundFetchOptions_set_downloadTotal(BackgroundFetchOptions* self, long long value);
 DECLARE_EMLITE_TYPE(BackgroundFetchManager, em_Val);
 
-jb_Promise BackgroundFetchManager_fetch0(BackgroundFetchManager* self , jb_DOMString * id, jb_Any * requests);
+jb_Promise BackgroundFetchManager_fetch0(BackgroundFetchManager* self , jb_String * id, jb_Any * requests);
 
-jb_Promise BackgroundFetchManager_fetch1(BackgroundFetchManager* self , jb_DOMString * id, jb_Any * requests, BackgroundFetchOptions * options);
+jb_Promise BackgroundFetchManager_fetch1(BackgroundFetchManager* self , jb_String * id, jb_Any * requests, BackgroundFetchOptions * options);
 
-jb_Promise BackgroundFetchManager_get(BackgroundFetchManager* self , jb_DOMString * id);
+jb_Promise BackgroundFetchManager_get(BackgroundFetchManager* self , jb_String * id);
 
 jb_Promise BackgroundFetchManager_getIds(BackgroundFetchManager* self );

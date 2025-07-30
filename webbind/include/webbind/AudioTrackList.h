@@ -12,7 +12,7 @@ DECLARE_EMLITE_TYPE(AudioTrackList, EventTarget);
 
 unsigned long AudioTrackList_length(const AudioTrackList *self);
 
-AudioTrack AudioTrackList_getTrackById(AudioTrackList* self , jb_DOMString * id);
+AudioTrack AudioTrackList_getTrackById(AudioTrackList* self , jb_String * id);
 
 jb_Any AudioTrackList_onchange(const AudioTrackList *self);
 

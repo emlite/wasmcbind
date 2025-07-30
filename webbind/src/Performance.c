@@ -19,12 +19,12 @@ void MemoryMeasurement_set_bytes(MemoryMeasurement* self, long long value) {
 }
 
 
-jb_Sequence MemoryMeasurement_breakdown(const MemoryMeasurement *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("breakdown")));
+jb_Array MemoryMeasurement_breakdown(const MemoryMeasurement *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("breakdown")));
 }
 
 
-void MemoryMeasurement_set_breakdown(MemoryMeasurement* self, jb_Sequence * value) {
+void MemoryMeasurement_set_breakdown(MemoryMeasurement* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("breakdown"), em_Val_from(value));
 }
 
@@ -98,17 +98,17 @@ jb_Any Performance_getEntries(Performance* self ) {
 }
 
 
-jb_Any Performance_getEntriesByType(Performance* self , jb_DOMString * type) {
+jb_Any Performance_getEntriesByType(Performance* self , jb_String * type) {
     return em_Val_as(jb_Any, em_Val_call(EventTarget_as_val(self->inner), "getEntriesByType", em_Val_from(type)));
 }
 
 
-jb_Any Performance_getEntriesByName0(Performance* self , jb_DOMString * name) {
+jb_Any Performance_getEntriesByName0(Performance* self , jb_String * name) {
     return em_Val_as(jb_Any, em_Val_call(EventTarget_as_val(self->inner), "getEntriesByName", em_Val_from(name)));
 }
 
 
-jb_Any Performance_getEntriesByName1(Performance* self , jb_DOMString * name, jb_DOMString * type) {
+jb_Any Performance_getEntriesByName1(Performance* self , jb_String * name, jb_String * type) {
     return em_Val_as(jb_Any, em_Val_call(EventTarget_as_val(self->inner), "getEntriesByName", em_Val_from(name), em_Val_from(type)));
 }
 
@@ -133,12 +133,12 @@ void Performance_set_onresourcetimingbufferfull(Performance* self, jb_Any * valu
 }
 
 
-PerformanceMark Performance_mark0(Performance* self , jb_DOMString * markName) {
+PerformanceMark Performance_mark0(Performance* self , jb_String * markName) {
     return em_Val_as(PerformanceMark, em_Val_call(EventTarget_as_val(self->inner), "mark", em_Val_from(markName)));
 }
 
 
-PerformanceMark Performance_mark1(Performance* self , jb_DOMString * markName, PerformanceMarkOptions * markOptions) {
+PerformanceMark Performance_mark1(Performance* self , jb_String * markName, PerformanceMarkOptions * markOptions) {
     return em_Val_as(PerformanceMark, em_Val_call(EventTarget_as_val(self->inner), "mark", em_Val_from(markName), em_Val_from(markOptions)));
 }
 
@@ -148,22 +148,22 @@ jb_Undefined Performance_clearMarks0(Performance* self ) {
 }
 
 
-jb_Undefined Performance_clearMarks1(Performance* self , jb_DOMString * markName) {
+jb_Undefined Performance_clearMarks1(Performance* self , jb_String * markName) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "clearMarks", em_Val_from(markName)));
 }
 
 
-PerformanceMeasure Performance_measure0(Performance* self , jb_DOMString * measureName) {
+PerformanceMeasure Performance_measure0(Performance* self , jb_String * measureName) {
     return em_Val_as(PerformanceMeasure, em_Val_call(EventTarget_as_val(self->inner), "measure", em_Val_from(measureName)));
 }
 
 
-PerformanceMeasure Performance_measure1(Performance* self , jb_DOMString * measureName, jb_Any * startOrMeasureOptions) {
+PerformanceMeasure Performance_measure1(Performance* self , jb_String * measureName, jb_Any * startOrMeasureOptions) {
     return em_Val_as(PerformanceMeasure, em_Val_call(EventTarget_as_val(self->inner), "measure", em_Val_from(measureName), em_Val_from(startOrMeasureOptions)));
 }
 
 
-PerformanceMeasure Performance_measure2(Performance* self , jb_DOMString * measureName, jb_Any * startOrMeasureOptions, jb_DOMString * endMark) {
+PerformanceMeasure Performance_measure2(Performance* self , jb_String * measureName, jb_Any * startOrMeasureOptions, jb_String * endMark) {
     return em_Val_as(PerformanceMeasure, em_Val_call(EventTarget_as_val(self->inner), "measure", em_Val_from(measureName), em_Val_from(startOrMeasureOptions), em_Val_from(endMark)));
 }
 
@@ -173,7 +173,7 @@ jb_Undefined Performance_clearMeasures0(Performance* self ) {
 }
 
 
-jb_Undefined Performance_clearMeasures1(Performance* self , jb_DOMString * measureName) {
+jb_Undefined Performance_clearMeasures1(Performance* self , jb_String * measureName) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "clearMeasures", em_Val_from(measureName)));
 }
 

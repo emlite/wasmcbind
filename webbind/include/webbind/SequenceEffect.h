@@ -10,8 +10,8 @@ typedef struct SequenceEffect SequenceEffect;
 
 DECLARE_EMLITE_TYPE(SequenceEffect, GroupEffect);
 
-SequenceEffect SequenceEffect_new0(jb_Sequence * children);
+SequenceEffect SequenceEffect_new0(jb_Array * children);
 
-SequenceEffect SequenceEffect_new1(jb_Sequence * children, jb_Any * timing);
+SequenceEffect SequenceEffect_new1(jb_Array * children, jb_Any * timing);
 
 SequenceEffect SequenceEffect_clone(SequenceEffect* self );

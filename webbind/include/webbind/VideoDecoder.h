@@ -13,9 +13,9 @@ typedef struct VideoColorSpaceInit VideoColorSpaceInit;
 
 DECLARE_EMLITE_TYPE(VideoDecoderConfig, em_Val);
 
-jb_DOMString VideoDecoderConfig_codec(const VideoDecoderConfig *self);
+jb_String VideoDecoderConfig_codec(const VideoDecoderConfig *self);
 
-void VideoDecoderConfig_set_codec(VideoDecoderConfig* self, jb_DOMString * value);
+void VideoDecoderConfig_set_codec(VideoDecoderConfig* self, jb_String * value);
 
 jb_Any VideoDecoderConfig_description(const VideoDecoderConfig *self);
 

@@ -20,17 +20,17 @@ GPURenderBundle GPURenderBundleEncoder_finish1(GPURenderBundleEncoder* self , GP
 }
 
 
-jb_USVString GPURenderBundleEncoder_label(const GPURenderBundleEncoder *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
+jb_String GPURenderBundleEncoder_label(const GPURenderBundleEncoder *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void GPURenderBundleEncoder_set_label(GPURenderBundleEncoder* self, jb_USVString * value) {
+void GPURenderBundleEncoder_set_label(GPURenderBundleEncoder* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 
 
-jb_Undefined GPURenderBundleEncoder_pushDebugGroup(GPURenderBundleEncoder* self , jb_USVString * groupLabel) {
+jb_Undefined GPURenderBundleEncoder_pushDebugGroup(GPURenderBundleEncoder* self , jb_String * groupLabel) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "pushDebugGroup", em_Val_from(groupLabel)));
 }
 
@@ -40,7 +40,7 @@ jb_Undefined GPURenderBundleEncoder_popDebugGroup(GPURenderBundleEncoder* self )
 }
 
 
-jb_Undefined GPURenderBundleEncoder_insertDebugMarker(GPURenderBundleEncoder* self , jb_USVString * markerLabel) {
+jb_Undefined GPURenderBundleEncoder_insertDebugMarker(GPURenderBundleEncoder* self , jb_String * markerLabel) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "insertDebugMarker", em_Val_from(markerLabel)));
 }
 

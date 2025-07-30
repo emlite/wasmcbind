@@ -17,13 +17,13 @@ RTCIceCandidate RTCIceCandidate_new1(jb_Any * candidateInitDict) {
       }
 
 
-jb_DOMString RTCIceCandidate_candidate(const RTCIceCandidate *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("candidate")));
+jb_String RTCIceCandidate_candidate(const RTCIceCandidate *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("candidate")));
 }
 
 
-jb_DOMString RTCIceCandidate_sdpMid(const RTCIceCandidate *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sdpMid")));
+jb_String RTCIceCandidate_sdpMid(const RTCIceCandidate *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sdpMid")));
 }
 
 
@@ -32,8 +32,8 @@ unsigned short RTCIceCandidate_sdpMLineIndex(const RTCIceCandidate *self) {
 }
 
 
-jb_DOMString RTCIceCandidate_foundation(const RTCIceCandidate *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("foundation")));
+jb_String RTCIceCandidate_foundation(const RTCIceCandidate *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("foundation")));
 }
 
 
@@ -47,8 +47,8 @@ unsigned long RTCIceCandidate_priority(const RTCIceCandidate *self) {
 }
 
 
-jb_DOMString RTCIceCandidate_address(const RTCIceCandidate *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("address")));
+jb_String RTCIceCandidate_address(const RTCIceCandidate *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("address")));
 }
 
 
@@ -72,8 +72,8 @@ RTCIceTcpCandidateType RTCIceCandidate_tcpType(const RTCIceCandidate *self) {
 }
 
 
-jb_DOMString RTCIceCandidate_relatedAddress(const RTCIceCandidate *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("relatedAddress")));
+jb_String RTCIceCandidate_relatedAddress(const RTCIceCandidate *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("relatedAddress")));
 }
 
 
@@ -82,8 +82,8 @@ unsigned short RTCIceCandidate_relatedPort(const RTCIceCandidate *self) {
 }
 
 
-jb_DOMString RTCIceCandidate_usernameFragment(const RTCIceCandidate *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("usernameFragment")));
+jb_String RTCIceCandidate_usernameFragment(const RTCIceCandidate *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("usernameFragment")));
 }
 
 
@@ -92,8 +92,8 @@ RTCIceServerTransportProtocol RTCIceCandidate_relayProtocol(const RTCIceCandidat
 }
 
 
-jb_USVString RTCIceCandidate_url(const RTCIceCandidate *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
+jb_String RTCIceCandidate_url(const RTCIceCandidate *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 

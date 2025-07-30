@@ -16,12 +16,12 @@ void TaskSignalAnyInit_set_priority(TaskSignalAnyInit* self, jb_Any * value) {
 DEFINE_EMLITE_TYPE(TaskSignal, AbortSignal);
 
 
-TaskSignal TaskSignal_any0(TaskSignal* self , jb_Sequence * signals) {
+TaskSignal TaskSignal_any0(TaskSignal* self , jb_Array * signals) {
     return em_Val_as(TaskSignal, em_Val_call(em_Val_global("tasksignal"), "any", em_Val_from(signals)));
 }
 
 
-TaskSignal TaskSignal_any1(TaskSignal* self , jb_Sequence * signals, TaskSignalAnyInit * init) {
+TaskSignal TaskSignal_any1(TaskSignal* self , jb_Array * signals, TaskSignalAnyInit * init) {
     return em_Val_as(TaskSignal, em_Val_call(em_Val_global("tasksignal"), "any", em_Val_from(signals), em_Val_from(init)));
 }
 

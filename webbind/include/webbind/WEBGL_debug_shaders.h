@@ -9,4 +9,4 @@ typedef struct WebGLShader WebGLShader;
 
 DECLARE_EMLITE_TYPE(WEBGL_debug_shaders, em_Val);
 
-jb_DOMString WEBGL_debug_shaders_getTranslatedShaderSource(WEBGL_debug_shaders* self , WebGLShader * shader);
+jb_String WEBGL_debug_shaders_getTranslatedShaderSource(WEBGL_debug_shaders* self , WebGLShader * shader);

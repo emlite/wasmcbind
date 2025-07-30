@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(PointerEvent, MouseEvent);
 
 
-PointerEvent PointerEvent_new0(jb_DOMString * type) {
+PointerEvent PointerEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("PointerEvent") , em_Val_from(type));
         return PointerEvent_from_val(&vv);
       }
 
 
-PointerEvent PointerEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+PointerEvent PointerEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("PointerEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return PointerEvent_from_val(&vv);
       }
@@ -66,8 +66,8 @@ double PointerEvent_azimuthAngle(const PointerEvent *self) {
 }
 
 
-jb_DOMString PointerEvent_pointerType(const PointerEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(MouseEvent_as_val(self->inner), em_Val_from("pointerType")));
+jb_String PointerEvent_pointerType(const PointerEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(MouseEvent_as_val(self->inner), em_Val_from("pointerType")));
 }
 
 
@@ -81,12 +81,12 @@ long PointerEvent_persistentDeviceId(const PointerEvent *self) {
 }
 
 
-jb_Sequence PointerEvent_getCoalescedEvents(PointerEvent* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(MouseEvent_as_val(self->inner), "getCoalescedEvents"));
+jb_Array PointerEvent_getCoalescedEvents(PointerEvent* self ) {
+    return em_Val_as(jb_Array, em_Val_call(MouseEvent_as_val(self->inner), "getCoalescedEvents"));
 }
 
 
-jb_Sequence PointerEvent_getPredictedEvents(PointerEvent* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(MouseEvent_as_val(self->inner), "getPredictedEvents"));
+jb_Array PointerEvent_getPredictedEvents(PointerEvent* self ) {
+    return em_Val_as(jb_Array, em_Val_call(MouseEvent_as_val(self->inner), "getPredictedEvents"));
 }
 

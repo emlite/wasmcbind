@@ -7,12 +7,12 @@
 
 DECLARE_EMLITE_TYPE(PermissionsPolicy, em_Val);
 
-bool PermissionsPolicy_allowsFeature0(PermissionsPolicy* self , jb_DOMString * feature);
+bool PermissionsPolicy_allowsFeature0(PermissionsPolicy* self , jb_String * feature);
 
-bool PermissionsPolicy_allowsFeature1(PermissionsPolicy* self , jb_DOMString * feature, jb_DOMString * origin);
+bool PermissionsPolicy_allowsFeature1(PermissionsPolicy* self , jb_String * feature, jb_String * origin);
 
-jb_Sequence PermissionsPolicy_features(PermissionsPolicy* self );
+jb_Array PermissionsPolicy_features(PermissionsPolicy* self );
 
-jb_Sequence PermissionsPolicy_allowedFeatures(PermissionsPolicy* self );
+jb_Array PermissionsPolicy_allowedFeatures(PermissionsPolicy* self );
 
-jb_Sequence PermissionsPolicy_getAllowlistForFeature(PermissionsPolicy* self , jb_DOMString * feature);
+jb_Array PermissionsPolicy_getAllowlistForFeature(PermissionsPolicy* self , jb_String * feature);

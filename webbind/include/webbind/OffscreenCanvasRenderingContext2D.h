@@ -49,9 +49,9 @@ double OffscreenCanvasRenderingContext2D_globalAlpha(const OffscreenCanvasRender
 
 void OffscreenCanvasRenderingContext2D_set_globalAlpha(OffscreenCanvasRenderingContext2D* self, double value);
 
-jb_DOMString OffscreenCanvasRenderingContext2D_globalCompositeOperation(const OffscreenCanvasRenderingContext2D *self);
+jb_String OffscreenCanvasRenderingContext2D_globalCompositeOperation(const OffscreenCanvasRenderingContext2D *self);
 
-void OffscreenCanvasRenderingContext2D_set_globalCompositeOperation(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value);
+void OffscreenCanvasRenderingContext2D_set_globalCompositeOperation(OffscreenCanvasRenderingContext2D* self, jb_String * value);
 
 bool OffscreenCanvasRenderingContext2D_imageSmoothingEnabled(const OffscreenCanvasRenderingContext2D *self);
 
@@ -75,7 +75,7 @@ CanvasGradient OffscreenCanvasRenderingContext2D_createRadialGradient(OffscreenC
 
 CanvasGradient OffscreenCanvasRenderingContext2D_createConicGradient(OffscreenCanvasRenderingContext2D* self , double startAngle, double x, double y);
 
-CanvasPattern OffscreenCanvasRenderingContext2D_createPattern(OffscreenCanvasRenderingContext2D* self , jb_Any * image, jb_DOMString * repetition);
+CanvasPattern OffscreenCanvasRenderingContext2D_createPattern(OffscreenCanvasRenderingContext2D* self , jb_Any * image, jb_String * repetition);
 
 double OffscreenCanvasRenderingContext2D_shadowOffsetX(const OffscreenCanvasRenderingContext2D *self);
 
@@ -89,13 +89,13 @@ double OffscreenCanvasRenderingContext2D_shadowBlur(const OffscreenCanvasRenderi
 
 void OffscreenCanvasRenderingContext2D_set_shadowBlur(OffscreenCanvasRenderingContext2D* self, double value);
 
-jb_DOMString OffscreenCanvasRenderingContext2D_shadowColor(const OffscreenCanvasRenderingContext2D *self);
+jb_String OffscreenCanvasRenderingContext2D_shadowColor(const OffscreenCanvasRenderingContext2D *self);
 
-void OffscreenCanvasRenderingContext2D_set_shadowColor(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value);
+void OffscreenCanvasRenderingContext2D_set_shadowColor(OffscreenCanvasRenderingContext2D* self, jb_String * value);
 
-jb_DOMString OffscreenCanvasRenderingContext2D_filter(const OffscreenCanvasRenderingContext2D *self);
+jb_String OffscreenCanvasRenderingContext2D_filter(const OffscreenCanvasRenderingContext2D *self);
 
-void OffscreenCanvasRenderingContext2D_set_filter(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value);
+void OffscreenCanvasRenderingContext2D_set_filter(OffscreenCanvasRenderingContext2D* self, jb_String * value);
 
 jb_Undefined OffscreenCanvasRenderingContext2D_clearRect(OffscreenCanvasRenderingContext2D* self , double x, double y, double w, double h);
 
@@ -121,15 +121,15 @@ bool OffscreenCanvasRenderingContext2D_isPointInPath1(OffscreenCanvasRenderingCo
 
 bool OffscreenCanvasRenderingContext2D_isPointInStroke(OffscreenCanvasRenderingContext2D* self , Path2D * path, double x, double y);
 
-jb_Undefined OffscreenCanvasRenderingContext2D_fillText0(OffscreenCanvasRenderingContext2D* self , jb_DOMString * text, double x, double y);
+jb_Undefined OffscreenCanvasRenderingContext2D_fillText0(OffscreenCanvasRenderingContext2D* self , jb_String * text, double x, double y);
 
-jb_Undefined OffscreenCanvasRenderingContext2D_fillText1(OffscreenCanvasRenderingContext2D* self , jb_DOMString * text, double x, double y, double maxWidth);
+jb_Undefined OffscreenCanvasRenderingContext2D_fillText1(OffscreenCanvasRenderingContext2D* self , jb_String * text, double x, double y, double maxWidth);
 
-jb_Undefined OffscreenCanvasRenderingContext2D_strokeText0(OffscreenCanvasRenderingContext2D* self , jb_DOMString * text, double x, double y);
+jb_Undefined OffscreenCanvasRenderingContext2D_strokeText0(OffscreenCanvasRenderingContext2D* self , jb_String * text, double x, double y);
 
-jb_Undefined OffscreenCanvasRenderingContext2D_strokeText1(OffscreenCanvasRenderingContext2D* self , jb_DOMString * text, double x, double y, double maxWidth);
+jb_Undefined OffscreenCanvasRenderingContext2D_strokeText1(OffscreenCanvasRenderingContext2D* self , jb_String * text, double x, double y, double maxWidth);
 
-TextMetrics OffscreenCanvasRenderingContext2D_measureText(OffscreenCanvasRenderingContext2D* self , jb_DOMString * text);
+TextMetrics OffscreenCanvasRenderingContext2D_measureText(OffscreenCanvasRenderingContext2D* self , jb_String * text);
 
 jb_Undefined OffscreenCanvasRenderingContext2D_drawImage(OffscreenCanvasRenderingContext2D* self , jb_Any * image, double sx, double sy, double sw, double sh, double dx, double dy, double dw, double dh);
 
@@ -157,21 +157,21 @@ double OffscreenCanvasRenderingContext2D_miterLimit(const OffscreenCanvasRenderi
 
 void OffscreenCanvasRenderingContext2D_set_miterLimit(OffscreenCanvasRenderingContext2D* self, double value);
 
-jb_Undefined OffscreenCanvasRenderingContext2D_setLineDash(OffscreenCanvasRenderingContext2D* self , jb_Sequence * segments);
+jb_Undefined OffscreenCanvasRenderingContext2D_setLineDash(OffscreenCanvasRenderingContext2D* self , jb_Array * segments);
 
-jb_Sequence OffscreenCanvasRenderingContext2D_getLineDash(OffscreenCanvasRenderingContext2D* self );
+jb_Array OffscreenCanvasRenderingContext2D_getLineDash(OffscreenCanvasRenderingContext2D* self );
 
 double OffscreenCanvasRenderingContext2D_lineDashOffset(const OffscreenCanvasRenderingContext2D *self);
 
 void OffscreenCanvasRenderingContext2D_set_lineDashOffset(OffscreenCanvasRenderingContext2D* self, double value);
 
-jb_DOMString OffscreenCanvasRenderingContext2D_lang(const OffscreenCanvasRenderingContext2D *self);
+jb_String OffscreenCanvasRenderingContext2D_lang(const OffscreenCanvasRenderingContext2D *self);
 
-void OffscreenCanvasRenderingContext2D_set_lang(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value);
+void OffscreenCanvasRenderingContext2D_set_lang(OffscreenCanvasRenderingContext2D* self, jb_String * value);
 
-jb_DOMString OffscreenCanvasRenderingContext2D_font(const OffscreenCanvasRenderingContext2D *self);
+jb_String OffscreenCanvasRenderingContext2D_font(const OffscreenCanvasRenderingContext2D *self);
 
-void OffscreenCanvasRenderingContext2D_set_font(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value);
+void OffscreenCanvasRenderingContext2D_set_font(OffscreenCanvasRenderingContext2D* self, jb_String * value);
 
 CanvasTextAlign OffscreenCanvasRenderingContext2D_textAlign(const OffscreenCanvasRenderingContext2D *self);
 
@@ -185,9 +185,9 @@ CanvasDirection OffscreenCanvasRenderingContext2D_direction(const OffscreenCanva
 
 void OffscreenCanvasRenderingContext2D_set_direction(OffscreenCanvasRenderingContext2D* self, CanvasDirection * value);
 
-jb_DOMString OffscreenCanvasRenderingContext2D_letterSpacing(const OffscreenCanvasRenderingContext2D *self);
+jb_String OffscreenCanvasRenderingContext2D_letterSpacing(const OffscreenCanvasRenderingContext2D *self);
 
-void OffscreenCanvasRenderingContext2D_set_letterSpacing(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value);
+void OffscreenCanvasRenderingContext2D_set_letterSpacing(OffscreenCanvasRenderingContext2D* self, jb_String * value);
 
 CanvasFontKerning OffscreenCanvasRenderingContext2D_fontKerning(const OffscreenCanvasRenderingContext2D *self);
 
@@ -205,9 +205,9 @@ CanvasTextRendering OffscreenCanvasRenderingContext2D_textRendering(const Offscr
 
 void OffscreenCanvasRenderingContext2D_set_textRendering(OffscreenCanvasRenderingContext2D* self, CanvasTextRendering * value);
 
-jb_DOMString OffscreenCanvasRenderingContext2D_wordSpacing(const OffscreenCanvasRenderingContext2D *self);
+jb_String OffscreenCanvasRenderingContext2D_wordSpacing(const OffscreenCanvasRenderingContext2D *self);
 
-void OffscreenCanvasRenderingContext2D_set_wordSpacing(OffscreenCanvasRenderingContext2D* self, jb_DOMString * value);
+void OffscreenCanvasRenderingContext2D_set_wordSpacing(OffscreenCanvasRenderingContext2D* self, jb_String * value);
 
 jb_Undefined OffscreenCanvasRenderingContext2D_closePath(OffscreenCanvasRenderingContext2D* self );
 

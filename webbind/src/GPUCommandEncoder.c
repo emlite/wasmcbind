@@ -10,12 +10,12 @@
 DEFINE_EMLITE_TYPE(GPURenderPassDescriptor, em_Val);
 
 
-jb_Sequence GPURenderPassDescriptor_colorAttachments(const GPURenderPassDescriptor *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("colorAttachments")));
+jb_Array GPURenderPassDescriptor_colorAttachments(const GPURenderPassDescriptor *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("colorAttachments")));
 }
 
 
-void GPURenderPassDescriptor_set_colorAttachments(GPURenderPassDescriptor* self, jb_Sequence * value) {
+void GPURenderPassDescriptor_set_colorAttachments(GPURenderPassDescriptor* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("colorAttachments"), em_Val_from(value));
 }
 
@@ -200,17 +200,17 @@ GPUCommandBuffer GPUCommandEncoder_finish1(GPUCommandEncoder* self , GPUCommandB
 }
 
 
-jb_USVString GPUCommandEncoder_label(const GPUCommandEncoder *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
+jb_String GPUCommandEncoder_label(const GPUCommandEncoder *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void GPUCommandEncoder_set_label(GPUCommandEncoder* self, jb_USVString * value) {
+void GPUCommandEncoder_set_label(GPUCommandEncoder* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 
 
-jb_Undefined GPUCommandEncoder_pushDebugGroup(GPUCommandEncoder* self , jb_USVString * groupLabel) {
+jb_Undefined GPUCommandEncoder_pushDebugGroup(GPUCommandEncoder* self , jb_String * groupLabel) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "pushDebugGroup", em_Val_from(groupLabel)));
 }
 
@@ -220,7 +220,7 @@ jb_Undefined GPUCommandEncoder_popDebugGroup(GPUCommandEncoder* self ) {
 }
 
 
-jb_Undefined GPUCommandEncoder_insertDebugMarker(GPUCommandEncoder* self , jb_USVString * markerLabel) {
+jb_Undefined GPUCommandEncoder_insertDebugMarker(GPUCommandEncoder* self , jb_String * markerLabel) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "insertDebugMarker", em_Val_from(markerLabel)));
 }
 

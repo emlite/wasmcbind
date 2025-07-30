@@ -11,7 +11,7 @@ XRInputSource XRTransientInputHitTestResult_inputSource(const XRTransientInputHi
 }
 
 
-jb_FrozenArray XRTransientInputHitTestResult_results(const XRTransientInputHitTestResult *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("results")));
+jb_Array XRTransientInputHitTestResult_results(const XRTransientInputHitTestResult *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("results")));
 }
 

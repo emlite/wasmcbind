@@ -11,9 +11,9 @@ typedef struct GroupEffect GroupEffect;
 
 DECLARE_EMLITE_TYPE(GroupEffect, em_Val);
 
-GroupEffect GroupEffect_new0(jb_Sequence * children);
+GroupEffect GroupEffect_new0(jb_Array * children);
 
-GroupEffect GroupEffect_new1(jb_Sequence * children, jb_Any * timing);
+GroupEffect GroupEffect_new1(jb_Array * children, jb_Any * timing);
 
 AnimationNodeList GroupEffect_children(const GroupEffect *self);
 

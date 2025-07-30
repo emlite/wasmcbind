@@ -66,12 +66,12 @@ void MutationObserverInit_set_characterDataOldValue(MutationObserverInit* self, 
 }
 
 
-jb_Sequence MutationObserverInit_attributeFilter(const MutationObserverInit *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attributeFilter")));
+jb_Array MutationObserverInit_attributeFilter(const MutationObserverInit *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attributeFilter")));
 }
 
 
-void MutationObserverInit_set_attributeFilter(MutationObserverInit* self, jb_Sequence * value) {
+void MutationObserverInit_set_attributeFilter(MutationObserverInit* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("attributeFilter"), em_Val_from(value));
 }
 
@@ -99,7 +99,7 @@ jb_Undefined MutationObserver_disconnect(MutationObserver* self ) {
 }
 
 
-jb_Sequence MutationObserver_takeRecords(MutationObserver* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "takeRecords"));
+jb_Array MutationObserver_takeRecords(MutationObserver* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "takeRecords"));
 }
 

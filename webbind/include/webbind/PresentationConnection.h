@@ -8,9 +8,9 @@
 
 DECLARE_EMLITE_TYPE(PresentationConnection, EventTarget);
 
-jb_USVString PresentationConnection_id(const PresentationConnection *self);
+jb_String PresentationConnection_id(const PresentationConnection *self);
 
-jb_USVString PresentationConnection_url(const PresentationConnection *self);
+jb_String PresentationConnection_url(const PresentationConnection *self);
 
 PresentationConnectionState PresentationConnection_state(const PresentationConnection *self);
 

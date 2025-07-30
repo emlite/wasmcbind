@@ -10,6 +10,6 @@ typedef struct AudioBuffer AudioBuffer;
 
 DECLARE_EMLITE_TYPE(OfflineAudioCompletionEvent, Event);
 
-OfflineAudioCompletionEvent OfflineAudioCompletionEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+OfflineAudioCompletionEvent OfflineAudioCompletionEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 AudioBuffer OfflineAudioCompletionEvent_renderedBuffer(const OfflineAudioCompletionEvent *self);

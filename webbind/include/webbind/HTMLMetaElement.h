@@ -10,22 +10,22 @@ DECLARE_EMLITE_TYPE(HTMLMetaElement, HTMLElement);
 
 HTMLMetaElement HTMLMetaElement_new();
 
-jb_DOMString HTMLMetaElement_name(const HTMLMetaElement *self);
+jb_String HTMLMetaElement_name(const HTMLMetaElement *self);
 
-void HTMLMetaElement_set_name(HTMLMetaElement* self, jb_DOMString * value);
+void HTMLMetaElement_set_name(HTMLMetaElement* self, jb_String * value);
 
-jb_DOMString HTMLMetaElement_httpEquiv(const HTMLMetaElement *self);
+jb_String HTMLMetaElement_httpEquiv(const HTMLMetaElement *self);
 
-void HTMLMetaElement_set_httpEquiv(HTMLMetaElement* self, jb_DOMString * value);
+void HTMLMetaElement_set_httpEquiv(HTMLMetaElement* self, jb_String * value);
 
-jb_DOMString HTMLMetaElement_content(const HTMLMetaElement *self);
+jb_String HTMLMetaElement_content(const HTMLMetaElement *self);
 
-void HTMLMetaElement_set_content(HTMLMetaElement* self, jb_DOMString * value);
+void HTMLMetaElement_set_content(HTMLMetaElement* self, jb_String * value);
 
-jb_DOMString HTMLMetaElement_media(const HTMLMetaElement *self);
+jb_String HTMLMetaElement_media(const HTMLMetaElement *self);
 
-void HTMLMetaElement_set_media(HTMLMetaElement* self, jb_DOMString * value);
+void HTMLMetaElement_set_media(HTMLMetaElement* self, jb_String * value);
 
-jb_DOMString HTMLMetaElement_scheme(const HTMLMetaElement *self);
+jb_String HTMLMetaElement_scheme(const HTMLMetaElement *self);
 
-void HTMLMetaElement_set_scheme(HTMLMetaElement* self, jb_DOMString * value);
+void HTMLMetaElement_set_scheme(HTMLMetaElement* self, jb_String * value);

@@ -6,7 +6,7 @@
 DEFINE_EMLITE_TYPE(VTTCue, TextTrackCue);
 
 
-VTTCue VTTCue_new(double startTime, double endTime, jb_DOMString * text) {
+VTTCue VTTCue_new(double startTime, double endTime, jb_String * text) {
         em_Val vv = em_Val_new(em_Val_global("VTTCue") , em_Val_from(startTime), em_Val_from(endTime), em_Val_from(text));
         return VTTCue_from_val(&vv);
       }
@@ -102,12 +102,12 @@ void VTTCue_set_align(VTTCue* self, AlignSetting * value) {
 }
 
 
-jb_DOMString VTTCue_text(const VTTCue *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(TextTrackCue_as_val(self->inner), em_Val_from("text")));
+jb_String VTTCue_text(const VTTCue *self) {
+    return em_Val_as(jb_String, em_Val_get(TextTrackCue_as_val(self->inner), em_Val_from("text")));
 }
 
 
-void VTTCue_set_text(VTTCue* self, jb_DOMString * value) {
+void VTTCue_set_text(VTTCue* self, jb_String * value) {
     em_Val_set(TextTrackCue_as_val(self->inner), em_Val_from("text"), em_Val_from(value));
 }
 

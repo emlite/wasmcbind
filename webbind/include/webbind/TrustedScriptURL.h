@@ -7,4 +7,4 @@
 
 DECLARE_EMLITE_TYPE(TrustedScriptURL, em_Val);
 
-jb_USVString TrustedScriptURL_toJSON(TrustedScriptURL* self );
+jb_String TrustedScriptURL_toJSON(TrustedScriptURL* self );

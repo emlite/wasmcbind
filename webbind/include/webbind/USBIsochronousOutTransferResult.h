@@ -9,6 +9,6 @@ typedef struct USBIsochronousOutTransferPacket USBIsochronousOutTransferPacket;
 
 DECLARE_EMLITE_TYPE(USBIsochronousOutTransferResult, em_Val);
 
-USBIsochronousOutTransferResult USBIsochronousOutTransferResult_new(jb_Sequence * packets);
+USBIsochronousOutTransferResult USBIsochronousOutTransferResult_new(jb_Array * packets);
 
-jb_FrozenArray USBIsochronousOutTransferResult_packets(const USBIsochronousOutTransferResult *self);
+jb_Array USBIsochronousOutTransferResult_packets(const USBIsochronousOutTransferResult *self);

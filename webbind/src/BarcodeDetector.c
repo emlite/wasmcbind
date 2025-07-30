@@ -15,12 +15,12 @@ void DetectedBarcode_set_boundingBox(DetectedBarcode* self, DOMRectReadOnly * va
 }
 
 
-jb_DOMString DetectedBarcode_rawValue(const DetectedBarcode *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rawValue")));
+jb_String DetectedBarcode_rawValue(const DetectedBarcode *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rawValue")));
 }
 
 
-void DetectedBarcode_set_rawValue(DetectedBarcode* self, jb_DOMString * value) {
+void DetectedBarcode_set_rawValue(DetectedBarcode* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("rawValue"), em_Val_from(value));
 }
 
@@ -35,12 +35,12 @@ void DetectedBarcode_set_format(DetectedBarcode* self, BarcodeFormat * value) {
 }
 
 
-jb_Sequence DetectedBarcode_cornerPoints(const DetectedBarcode *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cornerPoints")));
+jb_Array DetectedBarcode_cornerPoints(const DetectedBarcode *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cornerPoints")));
 }
 
 
-void DetectedBarcode_set_cornerPoints(DetectedBarcode* self, jb_Sequence * value) {
+void DetectedBarcode_set_cornerPoints(DetectedBarcode* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("cornerPoints"), em_Val_from(value));
 }
 

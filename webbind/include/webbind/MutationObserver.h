@@ -35,9 +35,9 @@ bool MutationObserverInit_characterDataOldValue(const MutationObserverInit *self
 
 void MutationObserverInit_set_characterDataOldValue(MutationObserverInit* self, bool value);
 
-jb_Sequence MutationObserverInit_attributeFilter(const MutationObserverInit *self);
+jb_Array MutationObserverInit_attributeFilter(const MutationObserverInit *self);
 
-void MutationObserverInit_set_attributeFilter(MutationObserverInit* self, jb_Sequence * value);
+void MutationObserverInit_set_attributeFilter(MutationObserverInit* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MutationObserver, em_Val);
 
 MutationObserver MutationObserver_new(jb_Function * callback);
@@ -48,4 +48,4 @@ jb_Undefined MutationObserver_observe1(MutationObserver* self , Node * target, M
 
 jb_Undefined MutationObserver_disconnect(MutationObserver* self );
 
-jb_Sequence MutationObserver_takeRecords(MutationObserver* self );
+jb_Array MutationObserver_takeRecords(MutationObserver* self );

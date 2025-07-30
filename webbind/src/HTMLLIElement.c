@@ -20,12 +20,12 @@ void HTMLLIElement_set_value(HTMLLIElement* self, long value) {
 }
 
 
-jb_DOMString HTMLLIElement_type(const HTMLLIElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
+jb_String HTMLLIElement_type(const HTMLLIElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void HTMLLIElement_set_type(HTMLLIElement* self, jb_DOMString * value) {
+void HTMLLIElement_set_type(HTMLLIElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 

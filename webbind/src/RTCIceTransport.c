@@ -6,22 +6,22 @@
 DEFINE_EMLITE_TYPE(RTCIceParameters, em_Val);
 
 
-jb_DOMString RTCIceParameters_usernameFragment(const RTCIceParameters *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("usernameFragment")));
+jb_String RTCIceParameters_usernameFragment(const RTCIceParameters *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("usernameFragment")));
 }
 
 
-void RTCIceParameters_set_usernameFragment(RTCIceParameters* self, jb_DOMString * value) {
+void RTCIceParameters_set_usernameFragment(RTCIceParameters* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("usernameFragment"), em_Val_from(value));
 }
 
 
-jb_DOMString RTCIceParameters_password(const RTCIceParameters *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("password")));
+jb_String RTCIceParameters_password(const RTCIceParameters *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("password")));
 }
 
 
-void RTCIceParameters_set_password(RTCIceParameters* self, jb_DOMString * value) {
+void RTCIceParameters_set_password(RTCIceParameters* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("password"), em_Val_from(value));
 }
 
@@ -38,34 +38,34 @@ void RTCIceGatherOptions_set_gatherPolicy(RTCIceGatherOptions* self, RTCIceTrans
 }
 
 
-jb_Sequence RTCIceGatherOptions_iceServers(const RTCIceGatherOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("iceServers")));
+jb_Array RTCIceGatherOptions_iceServers(const RTCIceGatherOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("iceServers")));
 }
 
 
-void RTCIceGatherOptions_set_iceServers(RTCIceGatherOptions* self, jb_Sequence * value) {
+void RTCIceGatherOptions_set_iceServers(RTCIceGatherOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("iceServers"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(RTCIceCandidateInit, em_Val);
 
 
-jb_DOMString RTCIceCandidateInit_candidate(const RTCIceCandidateInit *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("candidate")));
+jb_String RTCIceCandidateInit_candidate(const RTCIceCandidateInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("candidate")));
 }
 
 
-void RTCIceCandidateInit_set_candidate(RTCIceCandidateInit* self, jb_DOMString * value) {
+void RTCIceCandidateInit_set_candidate(RTCIceCandidateInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("candidate"), em_Val_from(value));
 }
 
 
-jb_DOMString RTCIceCandidateInit_sdpMid(const RTCIceCandidateInit *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sdpMid")));
+jb_String RTCIceCandidateInit_sdpMid(const RTCIceCandidateInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sdpMid")));
 }
 
 
-void RTCIceCandidateInit_set_sdpMid(RTCIceCandidateInit* self, jb_DOMString * value) {
+void RTCIceCandidateInit_set_sdpMid(RTCIceCandidateInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sdpMid"), em_Val_from(value));
 }
 
@@ -80,12 +80,12 @@ void RTCIceCandidateInit_set_sdpMLineIndex(RTCIceCandidateInit* self, unsigned s
 }
 
 
-jb_DOMString RTCIceCandidateInit_usernameFragment(const RTCIceCandidateInit *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("usernameFragment")));
+jb_String RTCIceCandidateInit_usernameFragment(const RTCIceCandidateInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("usernameFragment")));
 }
 
 
-void RTCIceCandidateInit_set_usernameFragment(RTCIceCandidateInit* self, jb_DOMString * value) {
+void RTCIceCandidateInit_set_usernameFragment(RTCIceCandidateInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("usernameFragment"), em_Val_from(value));
 }
 
@@ -112,13 +112,13 @@ RTCIceGathererState RTCIceTransport_gatheringState(const RTCIceTransport *self) 
 }
 
 
-jb_Sequence RTCIceTransport_getLocalCandidates(RTCIceTransport* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getLocalCandidates"));
+jb_Array RTCIceTransport_getLocalCandidates(RTCIceTransport* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getLocalCandidates"));
 }
 
 
-jb_Sequence RTCIceTransport_getRemoteCandidates(RTCIceTransport* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getRemoteCandidates"));
+jb_Array RTCIceTransport_getRemoteCandidates(RTCIceTransport* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getRemoteCandidates"));
 }
 
 

@@ -18,52 +18,52 @@ unsigned long HTMLTableCellElement_rowSpan(const HTMLTableCellElement *self);
 
 void HTMLTableCellElement_set_rowSpan(HTMLTableCellElement* self, unsigned long value);
 
-jb_DOMString HTMLTableCellElement_headers(const HTMLTableCellElement *self);
+jb_String HTMLTableCellElement_headers(const HTMLTableCellElement *self);
 
-void HTMLTableCellElement_set_headers(HTMLTableCellElement* self, jb_DOMString * value);
+void HTMLTableCellElement_set_headers(HTMLTableCellElement* self, jb_String * value);
 
 long HTMLTableCellElement_cellIndex(const HTMLTableCellElement *self);
 
-jb_DOMString HTMLTableCellElement_scope(const HTMLTableCellElement *self);
+jb_String HTMLTableCellElement_scope(const HTMLTableCellElement *self);
 
-void HTMLTableCellElement_set_scope(HTMLTableCellElement* self, jb_DOMString * value);
+void HTMLTableCellElement_set_scope(HTMLTableCellElement* self, jb_String * value);
 
-jb_DOMString HTMLTableCellElement_abbr(const HTMLTableCellElement *self);
+jb_String HTMLTableCellElement_abbr(const HTMLTableCellElement *self);
 
-void HTMLTableCellElement_set_abbr(HTMLTableCellElement* self, jb_DOMString * value);
+void HTMLTableCellElement_set_abbr(HTMLTableCellElement* self, jb_String * value);
 
-jb_DOMString HTMLTableCellElement_align(const HTMLTableCellElement *self);
+jb_String HTMLTableCellElement_align(const HTMLTableCellElement *self);
 
-void HTMLTableCellElement_set_align(HTMLTableCellElement* self, jb_DOMString * value);
+void HTMLTableCellElement_set_align(HTMLTableCellElement* self, jb_String * value);
 
-jb_DOMString HTMLTableCellElement_axis(const HTMLTableCellElement *self);
+jb_String HTMLTableCellElement_axis(const HTMLTableCellElement *self);
 
-void HTMLTableCellElement_set_axis(HTMLTableCellElement* self, jb_DOMString * value);
+void HTMLTableCellElement_set_axis(HTMLTableCellElement* self, jb_String * value);
 
-jb_DOMString HTMLTableCellElement_height(const HTMLTableCellElement *self);
+jb_String HTMLTableCellElement_height(const HTMLTableCellElement *self);
 
-void HTMLTableCellElement_set_height(HTMLTableCellElement* self, jb_DOMString * value);
+void HTMLTableCellElement_set_height(HTMLTableCellElement* self, jb_String * value);
 
-jb_DOMString HTMLTableCellElement_width(const HTMLTableCellElement *self);
+jb_String HTMLTableCellElement_width(const HTMLTableCellElement *self);
 
-void HTMLTableCellElement_set_width(HTMLTableCellElement* self, jb_DOMString * value);
+void HTMLTableCellElement_set_width(HTMLTableCellElement* self, jb_String * value);
 
-jb_DOMString HTMLTableCellElement_ch(const HTMLTableCellElement *self);
+jb_String HTMLTableCellElement_ch(const HTMLTableCellElement *self);
 
-void HTMLTableCellElement_set_ch(HTMLTableCellElement* self, jb_DOMString * value);
+void HTMLTableCellElement_set_ch(HTMLTableCellElement* self, jb_String * value);
 
-jb_DOMString HTMLTableCellElement_chOff(const HTMLTableCellElement *self);
+jb_String HTMLTableCellElement_chOff(const HTMLTableCellElement *self);
 
-void HTMLTableCellElement_set_chOff(HTMLTableCellElement* self, jb_DOMString * value);
+void HTMLTableCellElement_set_chOff(HTMLTableCellElement* self, jb_String * value);
 
 bool HTMLTableCellElement_noWrap(const HTMLTableCellElement *self);
 
 void HTMLTableCellElement_set_noWrap(HTMLTableCellElement* self, bool value);
 
-jb_DOMString HTMLTableCellElement_vAlign(const HTMLTableCellElement *self);
+jb_String HTMLTableCellElement_vAlign(const HTMLTableCellElement *self);
 
-void HTMLTableCellElement_set_vAlign(HTMLTableCellElement* self, jb_DOMString * value);
+void HTMLTableCellElement_set_vAlign(HTMLTableCellElement* self, jb_String * value);
 
-jb_DOMString HTMLTableCellElement_bgColor(const HTMLTableCellElement *self);
+jb_String HTMLTableCellElement_bgColor(const HTMLTableCellElement *self);
 
-void HTMLTableCellElement_set_bgColor(HTMLTableCellElement* self, jb_DOMString * value);
+void HTMLTableCellElement_set_bgColor(HTMLTableCellElement* self, jb_String * value);

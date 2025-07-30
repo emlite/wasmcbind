@@ -9,4 +9,4 @@ typedef struct WorkletAnimationEffect WorkletAnimationEffect;
 
 DECLARE_EMLITE_TYPE(WorkletGroupEffect, em_Val);
 
-jb_Sequence WorkletGroupEffect_getChildren(WorkletGroupEffect* self );
+jb_Array WorkletGroupEffect_getChildren(WorkletGroupEffect* self );

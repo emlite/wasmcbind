@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(PeriodicSyncEvent, ExtendableEvent);
 
-PeriodicSyncEvent PeriodicSyncEvent_new(jb_DOMString * type, jb_Any * init);
+PeriodicSyncEvent PeriodicSyncEvent_new(jb_String * type, jb_Any * init);
 
-jb_DOMString PeriodicSyncEvent_tag(const PeriodicSyncEvent *self);
+jb_String PeriodicSyncEvent_tag(const PeriodicSyncEvent *self);

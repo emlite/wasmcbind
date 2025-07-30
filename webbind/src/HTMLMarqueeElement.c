@@ -10,42 +10,42 @@ HTMLMarqueeElement HTMLMarqueeElement_new() {
       }
 
 
-jb_DOMString HTMLMarqueeElement_behavior(const HTMLMarqueeElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("behavior")));
+jb_String HTMLMarqueeElement_behavior(const HTMLMarqueeElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("behavior")));
 }
 
 
-void HTMLMarqueeElement_set_behavior(HTMLMarqueeElement* self, jb_DOMString * value) {
+void HTMLMarqueeElement_set_behavior(HTMLMarqueeElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("behavior"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLMarqueeElement_bgColor(const HTMLMarqueeElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("bgColor")));
+jb_String HTMLMarqueeElement_bgColor(const HTMLMarqueeElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("bgColor")));
 }
 
 
-void HTMLMarqueeElement_set_bgColor(HTMLMarqueeElement* self, jb_DOMString * value) {
+void HTMLMarqueeElement_set_bgColor(HTMLMarqueeElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("bgColor"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLMarqueeElement_direction(const HTMLMarqueeElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("direction")));
+jb_String HTMLMarqueeElement_direction(const HTMLMarqueeElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("direction")));
 }
 
 
-void HTMLMarqueeElement_set_direction(HTMLMarqueeElement* self, jb_DOMString * value) {
+void HTMLMarqueeElement_set_direction(HTMLMarqueeElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("direction"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLMarqueeElement_height(const HTMLMarqueeElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
+jb_String HTMLMarqueeElement_height(const HTMLMarqueeElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
-void HTMLMarqueeElement_set_height(HTMLMarqueeElement* self, jb_DOMString * value) {
+void HTMLMarqueeElement_set_height(HTMLMarqueeElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("height"), em_Val_from(value));
 }
 
@@ -110,12 +110,12 @@ void HTMLMarqueeElement_set_vspace(HTMLMarqueeElement* self, unsigned long value
 }
 
 
-jb_DOMString HTMLMarqueeElement_width(const HTMLMarqueeElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
+jb_String HTMLMarqueeElement_width(const HTMLMarqueeElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
-void HTMLMarqueeElement_set_width(HTMLMarqueeElement* self, jb_DOMString * value) {
+void HTMLMarqueeElement_set_width(HTMLMarqueeElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 

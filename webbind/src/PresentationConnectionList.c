@@ -5,8 +5,8 @@
 DEFINE_EMLITE_TYPE(PresentationConnectionList, EventTarget);
 
 
-jb_FrozenArray PresentationConnectionList_connections(const PresentationConnectionList *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("connections")));
+jb_Array PresentationConnectionList_connections(const PresentationConnectionList *self) {
+    return em_Val_as(jb_Array, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("connections")));
 }
 
 

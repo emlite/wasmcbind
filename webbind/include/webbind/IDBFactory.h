@@ -10,20 +10,20 @@ typedef struct IDBDatabaseInfo IDBDatabaseInfo;
 
 DECLARE_EMLITE_TYPE(IDBDatabaseInfo, em_Val);
 
-jb_DOMString IDBDatabaseInfo_name(const IDBDatabaseInfo *self);
+jb_String IDBDatabaseInfo_name(const IDBDatabaseInfo *self);
 
-void IDBDatabaseInfo_set_name(IDBDatabaseInfo* self, jb_DOMString * value);
+void IDBDatabaseInfo_set_name(IDBDatabaseInfo* self, jb_String * value);
 
 long long IDBDatabaseInfo_version(const IDBDatabaseInfo *self);
 
 void IDBDatabaseInfo_set_version(IDBDatabaseInfo* self, long long value);
 DECLARE_EMLITE_TYPE(IDBFactory, em_Val);
 
-IDBOpenDBRequest IDBFactory_open0(IDBFactory* self , jb_DOMString * name);
+IDBOpenDBRequest IDBFactory_open0(IDBFactory* self , jb_String * name);
 
-IDBOpenDBRequest IDBFactory_open1(IDBFactory* self , jb_DOMString * name, long long version);
+IDBOpenDBRequest IDBFactory_open1(IDBFactory* self , jb_String * name, long long version);
 
-IDBOpenDBRequest IDBFactory_deleteDatabase(IDBFactory* self , jb_DOMString * name);
+IDBOpenDBRequest IDBFactory_deleteDatabase(IDBFactory* self , jb_String * name);
 
 jb_Promise IDBFactory_databases(IDBFactory* self );
 

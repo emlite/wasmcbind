@@ -5,13 +5,13 @@
 DEFINE_EMLITE_TYPE(BufferedChangeEvent, Event);
 
 
-BufferedChangeEvent BufferedChangeEvent_new0(jb_DOMString * type) {
+BufferedChangeEvent BufferedChangeEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("BufferedChangeEvent") , em_Val_from(type));
         return BufferedChangeEvent_from_val(&vv);
       }
 
 
-BufferedChangeEvent BufferedChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+BufferedChangeEvent BufferedChangeEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("BufferedChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return BufferedChangeEvent_from_val(&vv);
       }

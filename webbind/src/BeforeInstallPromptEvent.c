@@ -16,13 +16,13 @@ void PromptResponseObject_set_userChoice(PromptResponseObject* self, AppBannerPr
 DEFINE_EMLITE_TYPE(BeforeInstallPromptEvent, Event);
 
 
-BeforeInstallPromptEvent BeforeInstallPromptEvent_new0(jb_DOMString * type) {
+BeforeInstallPromptEvent BeforeInstallPromptEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("BeforeInstallPromptEvent") , em_Val_from(type));
         return BeforeInstallPromptEvent_from_val(&vv);
       }
 
 
-BeforeInstallPromptEvent BeforeInstallPromptEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+BeforeInstallPromptEvent BeforeInstallPromptEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("BeforeInstallPromptEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return BeforeInstallPromptEvent_from_val(&vv);
       }

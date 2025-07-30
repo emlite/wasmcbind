@@ -79,12 +79,12 @@ void PhotoCapabilities_set_imageWidth(PhotoCapabilities* self, jb_Any * value) {
 }
 
 
-jb_Sequence PhotoCapabilities_fillLightMode(const PhotoCapabilities *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fillLightMode")));
+jb_Array PhotoCapabilities_fillLightMode(const PhotoCapabilities *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fillLightMode")));
 }
 
 
-void PhotoCapabilities_set_fillLightMode(PhotoCapabilities* self, jb_Sequence * value) {
+void PhotoCapabilities_set_fillLightMode(PhotoCapabilities* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("fillLightMode"), em_Val_from(value));
 }
 

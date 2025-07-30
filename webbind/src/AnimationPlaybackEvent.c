@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(AnimationPlaybackEvent, Event);
 
 
-AnimationPlaybackEvent AnimationPlaybackEvent_new0(jb_DOMString * type) {
+AnimationPlaybackEvent AnimationPlaybackEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("AnimationPlaybackEvent") , em_Val_from(type));
         return AnimationPlaybackEvent_from_val(&vv);
       }
 
 
-AnimationPlaybackEvent AnimationPlaybackEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+AnimationPlaybackEvent AnimationPlaybackEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("AnimationPlaybackEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return AnimationPlaybackEvent_from_val(&vv);
       }

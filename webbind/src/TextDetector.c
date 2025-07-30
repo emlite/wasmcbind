@@ -15,22 +15,22 @@ void DetectedText_set_boundingBox(DetectedText* self, DOMRectReadOnly * value) {
 }
 
 
-jb_DOMString DetectedText_rawValue(const DetectedText *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rawValue")));
+jb_String DetectedText_rawValue(const DetectedText *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rawValue")));
 }
 
 
-void DetectedText_set_rawValue(DetectedText* self, jb_DOMString * value) {
+void DetectedText_set_rawValue(DetectedText* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("rawValue"), em_Val_from(value));
 }
 
 
-jb_Sequence DetectedText_cornerPoints(const DetectedText *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cornerPoints")));
+jb_Array DetectedText_cornerPoints(const DetectedText *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cornerPoints")));
 }
 
 
-void DetectedText_set_cornerPoints(DetectedText* self, jb_Sequence * value) {
+void DetectedText_set_cornerPoints(DetectedText* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("cornerPoints"), em_Val_from(value));
 }
 

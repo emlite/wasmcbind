@@ -39,17 +39,17 @@ SVGPathSegment SVGPathElement_getPathSegmentAtLength(SVGPathElement* self , floa
 }
 
 
-jb_Sequence SVGPathElement_getPathData0(SVGPathElement* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(SVGGeometryElement_as_val(self->inner), "getPathData"));
+jb_Array SVGPathElement_getPathData0(SVGPathElement* self ) {
+    return em_Val_as(jb_Array, em_Val_call(SVGGeometryElement_as_val(self->inner), "getPathData"));
 }
 
 
-jb_Sequence SVGPathElement_getPathData1(SVGPathElement* self , SVGPathDataSettings * settings) {
-    return em_Val_as(jb_Sequence, em_Val_call(SVGGeometryElement_as_val(self->inner), "getPathData", em_Val_from(settings)));
+jb_Array SVGPathElement_getPathData1(SVGPathElement* self , SVGPathDataSettings * settings) {
+    return em_Val_as(jb_Array, em_Val_call(SVGGeometryElement_as_val(self->inner), "getPathData", em_Val_from(settings)));
 }
 
 
-jb_Undefined SVGPathElement_setPathData(SVGPathElement* self , jb_Sequence * pathData) {
+jb_Undefined SVGPathElement_setPathData(SVGPathElement* self , jb_Array * pathData) {
     return em_Val_as(jb_Undefined, em_Val_call(SVGGeometryElement_as_val(self->inner), "setPathData", em_Val_from(pathData)));
 }
 

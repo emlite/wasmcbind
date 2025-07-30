@@ -10,12 +10,12 @@ HTMLQuoteElement HTMLQuoteElement_new() {
       }
 
 
-jb_USVString HTMLQuoteElement_cite(const HTMLQuoteElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("cite")));
+jb_String HTMLQuoteElement_cite(const HTMLQuoteElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("cite")));
 }
 
 
-void HTMLQuoteElement_set_cite(HTMLQuoteElement* self, jb_USVString * value) {
+void HTMLQuoteElement_set_cite(HTMLQuoteElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("cite"), em_Val_from(value));
 }
 

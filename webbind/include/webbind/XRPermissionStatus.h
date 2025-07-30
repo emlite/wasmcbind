@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(XRPermissionStatus, PermissionStatus);
 
-jb_FrozenArray XRPermissionStatus_granted(const XRPermissionStatus *self);
+jb_Array XRPermissionStatus_granted(const XRPermissionStatus *self);
 
-void XRPermissionStatus_set_granted(XRPermissionStatus* self, jb_FrozenArray * value);
+void XRPermissionStatus_set_granted(XRPermissionStatus* self, jb_Array * value);

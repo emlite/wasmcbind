@@ -26,8 +26,8 @@ void CaptureController_set_oncapturedmousechange(CaptureController* self, jb_Any
 }
 
 
-jb_Sequence CaptureController_getSupportedZoomLevels(CaptureController* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getSupportedZoomLevels"));
+jb_Array CaptureController_getSupportedZoomLevels(CaptureController* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getSupportedZoomLevels"));
 }
 
 

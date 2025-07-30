@@ -16,12 +16,12 @@ HTMLSelectElement HTMLSelectElement_new() {
       }
 
 
-jb_DOMString HTMLSelectElement_autocomplete(const HTMLSelectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("autocomplete")));
+jb_String HTMLSelectElement_autocomplete(const HTMLSelectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("autocomplete")));
 }
 
 
-void HTMLSelectElement_set_autocomplete(HTMLSelectElement* self, jb_DOMString * value) {
+void HTMLSelectElement_set_autocomplete(HTMLSelectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("autocomplete"), em_Val_from(value));
 }
 
@@ -51,12 +51,12 @@ void HTMLSelectElement_set_multiple(HTMLSelectElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLSelectElement_name(const HTMLSelectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLSelectElement_name(const HTMLSelectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLSelectElement_set_name(HTMLSelectElement* self, jb_DOMString * value) {
+void HTMLSelectElement_set_name(HTMLSelectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
@@ -81,8 +81,8 @@ void HTMLSelectElement_set_size(HTMLSelectElement* self, unsigned long value) {
 }
 
 
-jb_DOMString HTMLSelectElement_type(const HTMLSelectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
+jb_String HTMLSelectElement_type(const HTMLSelectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
@@ -106,7 +106,7 @@ HTMLOptionElement HTMLSelectElement_item(HTMLSelectElement* self , unsigned long
 }
 
 
-HTMLOptionElement HTMLSelectElement_namedItem(HTMLSelectElement* self , jb_DOMString * name) {
+HTMLOptionElement HTMLSelectElement_namedItem(HTMLSelectElement* self , jb_String * name) {
     return em_Val_as(HTMLOptionElement, em_Val_call(HTMLElement_as_val(self->inner), "namedItem", em_Val_from(name)));
 }
 
@@ -141,12 +141,12 @@ void HTMLSelectElement_set_selectedIndex(HTMLSelectElement* self, long value) {
 }
 
 
-jb_DOMString HTMLSelectElement_value(const HTMLSelectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
+jb_String HTMLSelectElement_value(const HTMLSelectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
 }
 
 
-void HTMLSelectElement_set_value(HTMLSelectElement* self, jb_DOMString * value) {
+void HTMLSelectElement_set_value(HTMLSelectElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
 }
 
@@ -161,8 +161,8 @@ ValidityState HTMLSelectElement_validity(const HTMLSelectElement *self) {
 }
 
 
-jb_DOMString HTMLSelectElement_validationMessage(const HTMLSelectElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
+jb_String HTMLSelectElement_validationMessage(const HTMLSelectElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
 }
 
 
@@ -176,7 +176,7 @@ bool HTMLSelectElement_reportValidity(HTMLSelectElement* self ) {
 }
 
 
-jb_Undefined HTMLSelectElement_setCustomValidity(HTMLSelectElement* self , jb_DOMString * error) {
+jb_Undefined HTMLSelectElement_setCustomValidity(HTMLSelectElement* self , jb_String * error) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setCustomValidity", em_Val_from(error)));
 }
 

@@ -10,11 +10,11 @@ DECLARE_EMLITE_TYPE(jb_Error, em_Val);
 // Create a new Error with a message
 jb_Error jb_Error_new(const char* msg);
 // Get the message property
-jb_DOMString jb_Error_message(const jb_Error *err);
+jb_String jb_Error_message(const jb_Error *err);
 // Get the name property
-jb_DOMString jb_Error_name(const jb_Error *err);
+jb_String jb_Error_name(const jb_Error *err);
 // Get the stack property (may be empty)
-jb_DOMString jb_Error_stack(const jb_Error *err);
+jb_String jb_Error_stack(const jb_Error *err);
 
 // Standard JS error types
 DECLARE_EMLITE_TYPE(jb_EvalError, em_Val);

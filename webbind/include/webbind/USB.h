@@ -11,13 +11,13 @@ typedef struct USBDeviceRequestOptions USBDeviceRequestOptions;
 
 DECLARE_EMLITE_TYPE(USBDeviceRequestOptions, em_Val);
 
-jb_Sequence USBDeviceRequestOptions_filters(const USBDeviceRequestOptions *self);
+jb_Array USBDeviceRequestOptions_filters(const USBDeviceRequestOptions *self);
 
-void USBDeviceRequestOptions_set_filters(USBDeviceRequestOptions* self, jb_Sequence * value);
+void USBDeviceRequestOptions_set_filters(USBDeviceRequestOptions* self, jb_Array * value);
 
-jb_Sequence USBDeviceRequestOptions_exclusionFilters(const USBDeviceRequestOptions *self);
+jb_Array USBDeviceRequestOptions_exclusionFilters(const USBDeviceRequestOptions *self);
 
-void USBDeviceRequestOptions_set_exclusionFilters(USBDeviceRequestOptions* self, jb_Sequence * value);
+void USBDeviceRequestOptions_set_exclusionFilters(USBDeviceRequestOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(USB, EventTarget);
 
 jb_Any USB_onconnect(const USB *self);

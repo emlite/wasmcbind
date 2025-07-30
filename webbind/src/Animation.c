@@ -25,12 +25,12 @@ Animation Animation_new2(AnimationEffect * effect, AnimationTimeline * timeline)
       }
 
 
-jb_DOMString Animation_id(const Animation *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
+jb_String Animation_id(const Animation *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
-void Animation_set_id(Animation* self, jb_DOMString * value) {
+void Animation_set_id(Animation* self, jb_String * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("id"), em_Val_from(value));
 }
 

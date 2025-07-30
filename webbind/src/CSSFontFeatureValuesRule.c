@@ -5,12 +5,12 @@
 DEFINE_EMLITE_TYPE(CSSFontFeatureValuesRule, CSSRule);
 
 
-jb_CSSOMString CSSFontFeatureValuesRule_fontFamily(const CSSFontFeatureValuesRule *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("fontFamily")));
+jb_String CSSFontFeatureValuesRule_fontFamily(const CSSFontFeatureValuesRule *self) {
+    return em_Val_as(jb_String, em_Val_get(CSSRule_as_val(self->inner), em_Val_from("fontFamily")));
 }
 
 
-void CSSFontFeatureValuesRule_set_fontFamily(CSSFontFeatureValuesRule* self, jb_CSSOMString * value) {
+void CSSFontFeatureValuesRule_set_fontFamily(CSSFontFeatureValuesRule* self, jb_String * value) {
     em_Val_set(CSSRule_as_val(self->inner), em_Val_from("fontFamily"), em_Val_from(value));
 }
 

@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Any.h"
-#include "Sequence.h"
 #include "Function.h"
 #include "utils.h"
 #include <emlite/emlite.h>
@@ -9,12 +8,12 @@
 jb_Any Reflect_apply(
     const jb_Function *target,
     const jb_Any *thisArg,
-    const jb_Sequence *argumentsList
+    const jb_Array *argumentsList
 );
 
 jb_Any Reflect_construct(
     const jb_Function *target,
-    const jb_Sequence *args,
+    const jb_Array *args,
     const jb_Any *newTarget
 );
 
@@ -42,7 +41,7 @@ bool Reflect_has(const jb_Any *target, const jb_Any *key);
 
 bool Reflect_isExtensible(const jb_Any *target);
 
-jb_Sequence ownKeys(const jb_Any *target);
+jb_Array ownKeys(const jb_Any *target);
 
 bool Reflect_preventExtensions(const jb_Any *target);
 

@@ -23,7 +23,7 @@ jb_Promise Cache_matchAll2(Cache* self , jb_Any * request, CacheQueryOptions * o
 
 jb_Promise Cache_add(Cache* self , jb_Any * request);
 
-jb_Promise Cache_addAll(Cache* self , jb_Sequence * requests);
+jb_Promise Cache_addAll(Cache* self , jb_Array * requests);
 
 jb_Promise Cache_put(Cache* self , jb_Any * request, Response * response);
 

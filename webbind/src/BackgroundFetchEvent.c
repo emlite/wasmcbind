@@ -5,7 +5,7 @@
 DEFINE_EMLITE_TYPE(BackgroundFetchEvent, ExtendableEvent);
 
 
-BackgroundFetchEvent BackgroundFetchEvent_new(jb_DOMString * type, jb_Any * init) {
+BackgroundFetchEvent BackgroundFetchEvent_new(jb_String * type, jb_Any * init) {
         em_Val vv = em_Val_new(em_Val_global("BackgroundFetchEvent") , em_Val_from(type), em_Val_from(init));
         return BackgroundFetchEvent_from_val(&vv);
       }

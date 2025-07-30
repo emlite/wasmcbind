@@ -18,9 +18,9 @@ void HTMLOptionElement_set_disabled(HTMLOptionElement* self, bool value);
 
 HTMLFormElement HTMLOptionElement_form(const HTMLOptionElement *self);
 
-jb_DOMString HTMLOptionElement_label(const HTMLOptionElement *self);
+jb_String HTMLOptionElement_label(const HTMLOptionElement *self);
 
-void HTMLOptionElement_set_label(HTMLOptionElement* self, jb_DOMString * value);
+void HTMLOptionElement_set_label(HTMLOptionElement* self, jb_String * value);
 
 bool HTMLOptionElement_defaultSelected(const HTMLOptionElement *self);
 
@@ -30,12 +30,12 @@ bool HTMLOptionElement_selected(const HTMLOptionElement *self);
 
 void HTMLOptionElement_set_selected(HTMLOptionElement* self, bool value);
 
-jb_DOMString HTMLOptionElement_value(const HTMLOptionElement *self);
+jb_String HTMLOptionElement_value(const HTMLOptionElement *self);
 
-void HTMLOptionElement_set_value(HTMLOptionElement* self, jb_DOMString * value);
+void HTMLOptionElement_set_value(HTMLOptionElement* self, jb_String * value);
 
-jb_DOMString HTMLOptionElement_text(const HTMLOptionElement *self);
+jb_String HTMLOptionElement_text(const HTMLOptionElement *self);
 
-void HTMLOptionElement_set_text(HTMLOptionElement* self, jb_DOMString * value);
+void HTMLOptionElement_set_text(HTMLOptionElement* self, jb_String * value);
 
 long HTMLOptionElement_index(const HTMLOptionElement *self);

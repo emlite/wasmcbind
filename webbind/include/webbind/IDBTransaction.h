@@ -23,7 +23,7 @@ IDBDatabase IDBTransaction_db(const IDBTransaction *self);
 
 DOMException IDBTransaction_error(const IDBTransaction *self);
 
-IDBObjectStore IDBTransaction_objectStore(IDBTransaction* self , jb_DOMString * name);
+IDBObjectStore IDBTransaction_objectStore(IDBTransaction* self , jb_String * name);
 
 jb_Undefined IDBTransaction_commit(IDBTransaction* self );
 

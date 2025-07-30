@@ -4,22 +4,22 @@
 DEFINE_EMLITE_TYPE(PerformanceObserverInit, em_Val);
 
 
-jb_Sequence PerformanceObserverInit_entryTypes(const PerformanceObserverInit *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entryTypes")));
+jb_Array PerformanceObserverInit_entryTypes(const PerformanceObserverInit *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entryTypes")));
 }
 
 
-void PerformanceObserverInit_set_entryTypes(PerformanceObserverInit* self, jb_Sequence * value) {
+void PerformanceObserverInit_set_entryTypes(PerformanceObserverInit* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("entryTypes"), em_Val_from(value));
 }
 
 
-jb_DOMString PerformanceObserverInit_type(const PerformanceObserverInit *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
+jb_String PerformanceObserverInit_type(const PerformanceObserverInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void PerformanceObserverInit_set_type(PerformanceObserverInit* self, jb_DOMString * value) {
+void PerformanceObserverInit_set_type(PerformanceObserverInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
@@ -62,7 +62,7 @@ jb_Any PerformanceObserver_takeRecords(PerformanceObserver* self ) {
 }
 
 
-jb_FrozenArray PerformanceObserver_supportedEntryTypes(const PerformanceObserver *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_global("performanceobserver"), em_Val_from("supportedEntryTypes")));
+jb_Array PerformanceObserver_supportedEntryTypes(const PerformanceObserver *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_global("performanceobserver"), em_Val_from("supportedEntryTypes")));
 }
 

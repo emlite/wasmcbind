@@ -8,4 +8,4 @@
 
 DECLARE_EMLITE_TYPE(LayoutWorkletGlobalScope, WorkletGlobalScope);
 
-jb_Undefined LayoutWorkletGlobalScope_registerLayout(LayoutWorkletGlobalScope* self , jb_DOMString * name, jb_Any * layoutCtor);
+jb_Undefined LayoutWorkletGlobalScope_registerLayout(LayoutWorkletGlobalScope* self , jb_String * name, jb_Any * layoutCtor);

@@ -8,9 +8,9 @@
 
 DECLARE_EMLITE_TYPE(ProgressEvent, Event);
 
-ProgressEvent ProgressEvent_new0(jb_DOMString * type);
+ProgressEvent ProgressEvent_new0(jb_String * type);
 
-ProgressEvent ProgressEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+ProgressEvent ProgressEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
 bool ProgressEvent_lengthComputable(const ProgressEvent *self);
 

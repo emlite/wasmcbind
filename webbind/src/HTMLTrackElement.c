@@ -11,42 +11,42 @@ HTMLTrackElement HTMLTrackElement_new() {
       }
 
 
-jb_DOMString HTMLTrackElement_kind(const HTMLTrackElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("kind")));
+jb_String HTMLTrackElement_kind(const HTMLTrackElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("kind")));
 }
 
 
-void HTMLTrackElement_set_kind(HTMLTrackElement* self, jb_DOMString * value) {
+void HTMLTrackElement_set_kind(HTMLTrackElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("kind"), em_Val_from(value));
 }
 
 
-jb_USVString HTMLTrackElement_src(const HTMLTrackElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
+jb_String HTMLTrackElement_src(const HTMLTrackElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLTrackElement_set_src(HTMLTrackElement* self, jb_USVString * value) {
+void HTMLTrackElement_set_src(HTMLTrackElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTrackElement_srclang(const HTMLTrackElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("srclang")));
+jb_String HTMLTrackElement_srclang(const HTMLTrackElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("srclang")));
 }
 
 
-void HTMLTrackElement_set_srclang(HTMLTrackElement* self, jb_DOMString * value) {
+void HTMLTrackElement_set_srclang(HTMLTrackElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("srclang"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTrackElement_label(const HTMLTrackElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("label")));
+jb_String HTMLTrackElement_label(const HTMLTrackElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void HTMLTrackElement_set_label(HTMLTrackElement* self, jb_DOMString * value) {
+void HTMLTrackElement_set_label(HTMLTrackElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 

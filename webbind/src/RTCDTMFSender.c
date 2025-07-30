@@ -4,17 +4,17 @@
 DEFINE_EMLITE_TYPE(RTCDTMFSender, EventTarget);
 
 
-jb_Undefined RTCDTMFSender_insertDTMF0(RTCDTMFSender* self , jb_DOMString * tones) {
+jb_Undefined RTCDTMFSender_insertDTMF0(RTCDTMFSender* self , jb_String * tones) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "insertDTMF", em_Val_from(tones)));
 }
 
 
-jb_Undefined RTCDTMFSender_insertDTMF1(RTCDTMFSender* self , jb_DOMString * tones, unsigned long duration) {
+jb_Undefined RTCDTMFSender_insertDTMF1(RTCDTMFSender* self , jb_String * tones, unsigned long duration) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "insertDTMF", em_Val_from(tones), em_Val_from(duration)));
 }
 
 
-jb_Undefined RTCDTMFSender_insertDTMF2(RTCDTMFSender* self , jb_DOMString * tones, unsigned long duration, unsigned long interToneGap) {
+jb_Undefined RTCDTMFSender_insertDTMF2(RTCDTMFSender* self , jb_String * tones, unsigned long duration, unsigned long interToneGap) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "insertDTMF", em_Val_from(tones), em_Val_from(duration), em_Val_from(interToneGap)));
 }
 
@@ -34,7 +34,7 @@ bool RTCDTMFSender_canInsertDTMF(const RTCDTMFSender *self) {
 }
 
 
-jb_DOMString RTCDTMFSender_toneBuffer(const RTCDTMFSender *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("toneBuffer")));
+jb_String RTCDTMFSender_toneBuffer(const RTCDTMFSender *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("toneBuffer")));
 }
 

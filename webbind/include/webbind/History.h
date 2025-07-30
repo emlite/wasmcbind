@@ -23,10 +23,10 @@ jb_Undefined History_back(History* self );
 
 jb_Undefined History_forward(History* self );
 
-jb_Undefined History_pushState0(History* self , jb_Any * data, jb_DOMString * unused);
+jb_Undefined History_pushState0(History* self , jb_Any * data, jb_String * unused);
 
-jb_Undefined History_pushState1(History* self , jb_Any * data, jb_DOMString * unused, jb_USVString * url);
+jb_Undefined History_pushState1(History* self , jb_Any * data, jb_String * unused, jb_String * url);
 
-jb_Undefined History_replaceState0(History* self , jb_Any * data, jb_DOMString * unused);
+jb_Undefined History_replaceState0(History* self , jb_Any * data, jb_String * unused);
 
-jb_Undefined History_replaceState1(History* self , jb_Any * data, jb_DOMString * unused, jb_USVString * url);
+jb_Undefined History_replaceState1(History* self , jb_Any * data, jb_String * unused, jb_String * url);

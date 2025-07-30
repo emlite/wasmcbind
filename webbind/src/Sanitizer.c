@@ -4,52 +4,52 @@
 DEFINE_EMLITE_TYPE(SanitizerConfig, em_Val);
 
 
-jb_Sequence SanitizerConfig_elements(const SanitizerConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("elements")));
+jb_Array SanitizerConfig_elements(const SanitizerConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("elements")));
 }
 
 
-void SanitizerConfig_set_elements(SanitizerConfig* self, jb_Sequence * value) {
+void SanitizerConfig_set_elements(SanitizerConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("elements"), em_Val_from(value));
 }
 
 
-jb_Sequence SanitizerConfig_removeElements(const SanitizerConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("removeElements")));
+jb_Array SanitizerConfig_removeElements(const SanitizerConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("removeElements")));
 }
 
 
-void SanitizerConfig_set_removeElements(SanitizerConfig* self, jb_Sequence * value) {
+void SanitizerConfig_set_removeElements(SanitizerConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("removeElements"), em_Val_from(value));
 }
 
 
-jb_Sequence SanitizerConfig_replaceWithChildrenElements(const SanitizerConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("replaceWithChildrenElements")));
+jb_Array SanitizerConfig_replaceWithChildrenElements(const SanitizerConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("replaceWithChildrenElements")));
 }
 
 
-void SanitizerConfig_set_replaceWithChildrenElements(SanitizerConfig* self, jb_Sequence * value) {
+void SanitizerConfig_set_replaceWithChildrenElements(SanitizerConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("replaceWithChildrenElements"), em_Val_from(value));
 }
 
 
-jb_Sequence SanitizerConfig_attributes(const SanitizerConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attributes")));
+jb_Array SanitizerConfig_attributes(const SanitizerConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attributes")));
 }
 
 
-void SanitizerConfig_set_attributes(SanitizerConfig* self, jb_Sequence * value) {
+void SanitizerConfig_set_attributes(SanitizerConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("attributes"), em_Val_from(value));
 }
 
 
-jb_Sequence SanitizerConfig_removeAttributes(const SanitizerConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("removeAttributes")));
+jb_Array SanitizerConfig_removeAttributes(const SanitizerConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("removeAttributes")));
 }
 
 
-void SanitizerConfig_set_removeAttributes(SanitizerConfig* self, jb_Sequence * value) {
+void SanitizerConfig_set_removeAttributes(SanitizerConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("removeAttributes"), em_Val_from(value));
 }
 

@@ -11,28 +11,28 @@ SpeechSynthesisUtterance SpeechSynthesisUtterance_new0() {
       }
 
 
-SpeechSynthesisUtterance SpeechSynthesisUtterance_new1(jb_DOMString * text) {
+SpeechSynthesisUtterance SpeechSynthesisUtterance_new1(jb_String * text) {
         em_Val vv = em_Val_new(em_Val_global("SpeechSynthesisUtterance") , em_Val_from(text));
         return SpeechSynthesisUtterance_from_val(&vv);
       }
 
 
-jb_DOMString SpeechSynthesisUtterance_text(const SpeechSynthesisUtterance *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("text")));
+jb_String SpeechSynthesisUtterance_text(const SpeechSynthesisUtterance *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("text")));
 }
 
 
-void SpeechSynthesisUtterance_set_text(SpeechSynthesisUtterance* self, jb_DOMString * value) {
+void SpeechSynthesisUtterance_set_text(SpeechSynthesisUtterance* self, jb_String * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("text"), em_Val_from(value));
 }
 
 
-jb_DOMString SpeechSynthesisUtterance_lang(const SpeechSynthesisUtterance *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("lang")));
+jb_String SpeechSynthesisUtterance_lang(const SpeechSynthesisUtterance *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("lang")));
 }
 
 
-void SpeechSynthesisUtterance_set_lang(SpeechSynthesisUtterance* self, jb_DOMString * value) {
+void SpeechSynthesisUtterance_set_lang(SpeechSynthesisUtterance* self, jb_String * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("lang"), em_Val_from(value));
 }
 

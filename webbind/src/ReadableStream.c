@@ -150,7 +150,7 @@ jb_Promise ReadableStream_pipeTo1(ReadableStream* self , WritableStream * destin
 }
 
 
-jb_Sequence ReadableStream_tee(ReadableStream* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "tee"));
+jb_Array ReadableStream_tee(ReadableStream* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "tee"));
 }
 

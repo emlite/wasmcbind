@@ -10,4 +10,4 @@ DECLARE_EMLITE_TYPE(Comment, CharacterData);
 
 Comment Comment_new0();
 
-Comment Comment_new1(jb_DOMString * data);
+Comment Comment_new1(jb_String * data);

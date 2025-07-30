@@ -10,6 +10,6 @@ typedef struct CSSPositionTryDescriptors CSSPositionTryDescriptors;
 
 DECLARE_EMLITE_TYPE(CSSPositionTryRule, CSSRule);
 
-jb_CSSOMString CSSPositionTryRule_name(const CSSPositionTryRule *self);
+jb_String CSSPositionTryRule_name(const CSSPositionTryRule *self);
 
 CSSPositionTryDescriptors CSSPositionTryRule_style(const CSSPositionTryRule *self);

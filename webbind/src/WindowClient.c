@@ -14,8 +14,8 @@ bool WindowClient_focused(const WindowClient *self) {
 }
 
 
-jb_FrozenArray WindowClient_ancestorOrigins(const WindowClient *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(Client_as_val(self->inner), em_Val_from("ancestorOrigins")));
+jb_Array WindowClient_ancestorOrigins(const WindowClient *self) {
+    return em_Val_as(jb_Array, em_Val_get(Client_as_val(self->inner), em_Val_from("ancestorOrigins")));
 }
 
 
@@ -24,7 +24,7 @@ jb_Promise WindowClient_focus(WindowClient* self ) {
 }
 
 
-jb_Promise WindowClient_navigate(WindowClient* self , jb_USVString * url) {
+jb_Promise WindowClient_navigate(WindowClient* self , jb_String * url) {
     return em_Val_as(jb_Promise, em_Val_call(Client_as_val(self->inner), "navigate", em_Val_from(url)));
 }
 

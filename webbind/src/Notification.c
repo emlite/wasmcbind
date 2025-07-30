@@ -5,45 +5,45 @@
 DEFINE_EMLITE_TYPE(NotificationAction, em_Val);
 
 
-jb_DOMString NotificationAction_action(const NotificationAction *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("action")));
+jb_String NotificationAction_action(const NotificationAction *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("action")));
 }
 
 
-void NotificationAction_set_action(NotificationAction* self, jb_DOMString * value) {
+void NotificationAction_set_action(NotificationAction* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("action"), em_Val_from(value));
 }
 
 
-jb_DOMString NotificationAction_title(const NotificationAction *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("title")));
+jb_String NotificationAction_title(const NotificationAction *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("title")));
 }
 
 
-void NotificationAction_set_title(NotificationAction* self, jb_DOMString * value) {
+void NotificationAction_set_title(NotificationAction* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("title"), em_Val_from(value));
 }
 
 
-jb_USVString NotificationAction_icon(const NotificationAction *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("icon")));
+jb_String NotificationAction_icon(const NotificationAction *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("icon")));
 }
 
 
-void NotificationAction_set_icon(NotificationAction* self, jb_USVString * value) {
+void NotificationAction_set_icon(NotificationAction* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("icon"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(Notification, EventTarget);
 
 
-Notification Notification_new0(jb_DOMString * title) {
+Notification Notification_new0(jb_String * title) {
         em_Val vv = em_Val_new(em_Val_global("Notification") , em_Val_from(title));
         return Notification_from_val(&vv);
       }
 
 
-Notification Notification_new1(jb_DOMString * title, NotificationOptions * options) {
+Notification Notification_new1(jb_String * title, NotificationOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("Notification") , em_Val_from(title), em_Val_from(options));
         return Notification_from_val(&vv);
       }
@@ -109,8 +109,8 @@ void Notification_set_onclose(Notification* self, jb_Any * value) {
 }
 
 
-jb_DOMString Notification_title(const Notification *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("title")));
+jb_String Notification_title(const Notification *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("title")));
 }
 
 
@@ -119,38 +119,38 @@ NotificationDirection Notification_dir(const Notification *self) {
 }
 
 
-jb_DOMString Notification_lang(const Notification *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("lang")));
+jb_String Notification_lang(const Notification *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("lang")));
 }
 
 
-jb_DOMString Notification_body(const Notification *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("body")));
+jb_String Notification_body(const Notification *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("body")));
 }
 
 
-jb_DOMString Notification_tag(const Notification *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("tag")));
+jb_String Notification_tag(const Notification *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("tag")));
 }
 
 
-jb_USVString Notification_image(const Notification *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("image")));
+jb_String Notification_image(const Notification *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("image")));
 }
 
 
-jb_USVString Notification_icon(const Notification *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("icon")));
+jb_String Notification_icon(const Notification *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("icon")));
 }
 
 
-jb_USVString Notification_badge(const Notification *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("badge")));
+jb_String Notification_badge(const Notification *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("badge")));
 }
 
 
-jb_FrozenArray Notification_vibrate(const Notification *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("vibrate")));
+jb_Array Notification_vibrate(const Notification *self) {
+    return em_Val_as(jb_Array, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("vibrate")));
 }
 
 
@@ -179,8 +179,8 @@ jb_Any Notification_data(const Notification *self) {
 }
 
 
-jb_FrozenArray Notification_actions(const Notification *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("actions")));
+jb_Array Notification_actions(const Notification *self) {
+    return em_Val_as(jb_Array, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("actions")));
 }
 
 

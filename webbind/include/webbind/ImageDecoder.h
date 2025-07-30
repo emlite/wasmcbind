@@ -32,7 +32,7 @@ DECLARE_EMLITE_TYPE(ImageDecoder, em_Val);
 
 ImageDecoder ImageDecoder_new(jb_Any * init);
 
-jb_DOMString ImageDecoder_type(const ImageDecoder *self);
+jb_String ImageDecoder_type(const ImageDecoder *self);
 
 bool ImageDecoder_complete(const ImageDecoder *self);
 
@@ -48,4 +48,4 @@ jb_Undefined ImageDecoder_reset(ImageDecoder* self );
 
 jb_Undefined ImageDecoder_close(ImageDecoder* self );
 
-jb_Promise ImageDecoder_isTypeSupported(ImageDecoder* self , jb_DOMString * type);
+jb_Promise ImageDecoder_isTypeSupported(ImageDecoder* self , jb_String * type);

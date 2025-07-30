@@ -12,23 +12,23 @@ TextTrackKind TextTrack_kind(const TextTrack *self) {
 }
 
 
-jb_DOMString TextTrack_label(const TextTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("label")));
+jb_String TextTrack_label(const TextTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("label")));
 }
 
 
-jb_DOMString TextTrack_language(const TextTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("language")));
+jb_String TextTrack_language(const TextTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("language")));
 }
 
 
-jb_DOMString TextTrack_id(const TextTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
+jb_String TextTrack_id(const TextTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
-jb_DOMString TextTrack_inBandMetadataTrackDispatchType(const TextTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("inBandMetadataTrackDispatchType")));
+jb_String TextTrack_inBandMetadataTrackDispatchType(const TextTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("inBandMetadataTrackDispatchType")));
 }
 
 

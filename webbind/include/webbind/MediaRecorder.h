@@ -16,7 +16,7 @@ MediaRecorder MediaRecorder_new1(MediaStream * stream, jb_Any * options);
 
 MediaStream MediaRecorder_stream(const MediaRecorder *self);
 
-jb_DOMString MediaRecorder_mimeType(const MediaRecorder *self);
+jb_String MediaRecorder_mimeType(const MediaRecorder *self);
 
 RecordingState MediaRecorder_state(const MediaRecorder *self);
 
@@ -62,4 +62,4 @@ jb_Undefined MediaRecorder_resume(MediaRecorder* self );
 
 jb_Undefined MediaRecorder_requestData(MediaRecorder* self );
 
-bool MediaRecorder_isTypeSupported(MediaRecorder* self , jb_DOMString * type);
+bool MediaRecorder_isTypeSupported(MediaRecorder* self , jb_String * type);

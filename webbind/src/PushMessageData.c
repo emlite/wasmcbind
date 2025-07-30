@@ -25,7 +25,7 @@ jb_Any PushMessageData_json(PushMessageData* self ) {
 }
 
 
-jb_USVString PushMessageData_text(PushMessageData* self ) {
-    return em_Val_as(jb_USVString, em_Val_call(em_Val_as_val(self->inner), "text"));
+jb_String PushMessageData_text(PushMessageData* self ) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "text"));
 }
 

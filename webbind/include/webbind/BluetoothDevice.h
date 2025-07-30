@@ -17,9 +17,9 @@ AbortSignal WatchAdvertisementsOptions_signal(const WatchAdvertisementsOptions *
 void WatchAdvertisementsOptions_set_signal(WatchAdvertisementsOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(BluetoothDevice, EventTarget);
 
-jb_DOMString BluetoothDevice_id(const BluetoothDevice *self);
+jb_String BluetoothDevice_id(const BluetoothDevice *self);
 
-jb_DOMString BluetoothDevice_name(const BluetoothDevice *self);
+jb_String BluetoothDevice_name(const BluetoothDevice *self);
 
 BluetoothRemoteGATTServer BluetoothDevice_gatt(const BluetoothDevice *self);
 

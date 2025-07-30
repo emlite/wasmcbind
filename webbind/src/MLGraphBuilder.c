@@ -72,12 +72,12 @@ void MLBatchNormalizationOptions_set_epsilon(MLBatchNormalizationOptions* self, 
 DEFINE_EMLITE_TYPE(MLOperatorOptions, em_Val);
 
 
-jb_USVString MLOperatorOptions_label(const MLOperatorOptions *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
+jb_String MLOperatorOptions_label(const MLOperatorOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void MLOperatorOptions_set_label(MLOperatorOptions* self, jb_USVString * value) {
+void MLOperatorOptions_set_label(MLOperatorOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 
@@ -106,32 +106,32 @@ void MLClampOptions_set_maxValue(MLClampOptions* self, jb_Any * value) {
 DEFINE_EMLITE_TYPE(MLConv2dOptions, em_Val);
 
 
-jb_Sequence MLConv2dOptions_padding(const MLConv2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("padding")));
+jb_Array MLConv2dOptions_padding(const MLConv2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("padding")));
 }
 
 
-void MLConv2dOptions_set_padding(MLConv2dOptions* self, jb_Sequence * value) {
+void MLConv2dOptions_set_padding(MLConv2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("padding"), em_Val_from(value));
 }
 
 
-jb_Sequence MLConv2dOptions_strides(const MLConv2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("strides")));
+jb_Array MLConv2dOptions_strides(const MLConv2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("strides")));
 }
 
 
-void MLConv2dOptions_set_strides(MLConv2dOptions* self, jb_Sequence * value) {
+void MLConv2dOptions_set_strides(MLConv2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("strides"), em_Val_from(value));
 }
 
 
-jb_Sequence MLConv2dOptions_dilations(const MLConv2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dilations")));
+jb_Array MLConv2dOptions_dilations(const MLConv2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dilations")));
 }
 
 
-void MLConv2dOptions_set_dilations(MLConv2dOptions* self, jb_Sequence * value) {
+void MLConv2dOptions_set_dilations(MLConv2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("dilations"), em_Val_from(value));
 }
 
@@ -178,52 +178,52 @@ void MLConv2dOptions_set_bias(MLConv2dOptions* self, MLOperand * value) {
 DEFINE_EMLITE_TYPE(MLConvTranspose2dOptions, em_Val);
 
 
-jb_Sequence MLConvTranspose2dOptions_padding(const MLConvTranspose2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("padding")));
+jb_Array MLConvTranspose2dOptions_padding(const MLConvTranspose2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("padding")));
 }
 
 
-void MLConvTranspose2dOptions_set_padding(MLConvTranspose2dOptions* self, jb_Sequence * value) {
+void MLConvTranspose2dOptions_set_padding(MLConvTranspose2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("padding"), em_Val_from(value));
 }
 
 
-jb_Sequence MLConvTranspose2dOptions_strides(const MLConvTranspose2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("strides")));
+jb_Array MLConvTranspose2dOptions_strides(const MLConvTranspose2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("strides")));
 }
 
 
-void MLConvTranspose2dOptions_set_strides(MLConvTranspose2dOptions* self, jb_Sequence * value) {
+void MLConvTranspose2dOptions_set_strides(MLConvTranspose2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("strides"), em_Val_from(value));
 }
 
 
-jb_Sequence MLConvTranspose2dOptions_dilations(const MLConvTranspose2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dilations")));
+jb_Array MLConvTranspose2dOptions_dilations(const MLConvTranspose2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dilations")));
 }
 
 
-void MLConvTranspose2dOptions_set_dilations(MLConvTranspose2dOptions* self, jb_Sequence * value) {
+void MLConvTranspose2dOptions_set_dilations(MLConvTranspose2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("dilations"), em_Val_from(value));
 }
 
 
-jb_Sequence MLConvTranspose2dOptions_outputPadding(const MLConvTranspose2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputPadding")));
+jb_Array MLConvTranspose2dOptions_outputPadding(const MLConvTranspose2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputPadding")));
 }
 
 
-void MLConvTranspose2dOptions_set_outputPadding(MLConvTranspose2dOptions* self, jb_Sequence * value) {
+void MLConvTranspose2dOptions_set_outputPadding(MLConvTranspose2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("outputPadding"), em_Val_from(value));
 }
 
 
-jb_Sequence MLConvTranspose2dOptions_outputSizes(const MLConvTranspose2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputSizes")));
+jb_Array MLConvTranspose2dOptions_outputSizes(const MLConvTranspose2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputSizes")));
 }
 
 
-void MLConvTranspose2dOptions_set_outputSizes(MLConvTranspose2dOptions* self, jb_Sequence * value) {
+void MLConvTranspose2dOptions_set_outputSizes(MLConvTranspose2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("outputSizes"), em_Val_from(value));
 }
 
@@ -438,12 +438,12 @@ void MLGruOptions_set_layout(MLGruOptions* self, MLGruWeightLayout * value) {
 }
 
 
-jb_Sequence MLGruOptions_activations(const MLGruOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("activations")));
+jb_Array MLGruOptions_activations(const MLGruOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("activations")));
 }
 
 
-void MLGruOptions_set_activations(MLGruOptions* self, jb_Sequence * value) {
+void MLGruOptions_set_activations(MLGruOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("activations"), em_Val_from(value));
 }
 
@@ -490,12 +490,12 @@ void MLGruCellOptions_set_layout(MLGruCellOptions* self, MLGruWeightLayout * val
 }
 
 
-jb_Sequence MLGruCellOptions_activations(const MLGruCellOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("activations")));
+jb_Array MLGruCellOptions_activations(const MLGruCellOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("activations")));
 }
 
 
-void MLGruCellOptions_set_activations(MLGruCellOptions* self, jb_Sequence * value) {
+void MLGruCellOptions_set_activations(MLGruCellOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("activations"), em_Val_from(value));
 }
 
@@ -586,12 +586,12 @@ void MLLayerNormalizationOptions_set_bias(MLLayerNormalizationOptions* self, MLO
 }
 
 
-jb_Sequence MLLayerNormalizationOptions_axes(const MLLayerNormalizationOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axes")));
+jb_Array MLLayerNormalizationOptions_axes(const MLLayerNormalizationOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axes")));
 }
 
 
-void MLLayerNormalizationOptions_set_axes(MLLayerNormalizationOptions* self, jb_Sequence * value) {
+void MLLayerNormalizationOptions_set_axes(MLLayerNormalizationOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("axes"), em_Val_from(value));
 }
 
@@ -722,12 +722,12 @@ void MLLstmOptions_set_layout(MLLstmOptions* self, MLLstmWeightLayout * value) {
 }
 
 
-jb_Sequence MLLstmOptions_activations(const MLLstmOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("activations")));
+jb_Array MLLstmOptions_activations(const MLLstmOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("activations")));
 }
 
 
-void MLLstmOptions_set_activations(MLLstmOptions* self, jb_Sequence * value) {
+void MLLstmOptions_set_activations(MLLstmOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("activations"), em_Val_from(value));
 }
 
@@ -774,12 +774,12 @@ void MLLstmCellOptions_set_layout(MLLstmCellOptions* self, MLLstmWeightLayout * 
 }
 
 
-jb_Sequence MLLstmCellOptions_activations(const MLLstmCellOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("activations")));
+jb_Array MLLstmCellOptions_activations(const MLLstmCellOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("activations")));
 }
 
 
-void MLLstmCellOptions_set_activations(MLLstmCellOptions* self, jb_Sequence * value) {
+void MLLstmCellOptions_set_activations(MLLstmCellOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("activations"), em_Val_from(value));
 }
 
@@ -808,42 +808,42 @@ void MLPadOptions_set_value(MLPadOptions* self, jb_Any * value) {
 DEFINE_EMLITE_TYPE(MLPool2dOptions, em_Val);
 
 
-jb_Sequence MLPool2dOptions_windowDimensions(const MLPool2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("windowDimensions")));
+jb_Array MLPool2dOptions_windowDimensions(const MLPool2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("windowDimensions")));
 }
 
 
-void MLPool2dOptions_set_windowDimensions(MLPool2dOptions* self, jb_Sequence * value) {
+void MLPool2dOptions_set_windowDimensions(MLPool2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("windowDimensions"), em_Val_from(value));
 }
 
 
-jb_Sequence MLPool2dOptions_padding(const MLPool2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("padding")));
+jb_Array MLPool2dOptions_padding(const MLPool2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("padding")));
 }
 
 
-void MLPool2dOptions_set_padding(MLPool2dOptions* self, jb_Sequence * value) {
+void MLPool2dOptions_set_padding(MLPool2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("padding"), em_Val_from(value));
 }
 
 
-jb_Sequence MLPool2dOptions_strides(const MLPool2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("strides")));
+jb_Array MLPool2dOptions_strides(const MLPool2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("strides")));
 }
 
 
-void MLPool2dOptions_set_strides(MLPool2dOptions* self, jb_Sequence * value) {
+void MLPool2dOptions_set_strides(MLPool2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("strides"), em_Val_from(value));
 }
 
 
-jb_Sequence MLPool2dOptions_dilations(const MLPool2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dilations")));
+jb_Array MLPool2dOptions_dilations(const MLPool2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dilations")));
 }
 
 
-void MLPool2dOptions_set_dilations(MLPool2dOptions* self, jb_Sequence * value) {
+void MLPool2dOptions_set_dilations(MLPool2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("dilations"), em_Val_from(value));
 }
 
@@ -868,24 +868,24 @@ void MLPool2dOptions_set_roundingType(MLPool2dOptions* self, MLRoundingType * va
 }
 
 
-jb_Sequence MLPool2dOptions_outputSizes(const MLPool2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputSizes")));
+jb_Array MLPool2dOptions_outputSizes(const MLPool2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputSizes")));
 }
 
 
-void MLPool2dOptions_set_outputSizes(MLPool2dOptions* self, jb_Sequence * value) {
+void MLPool2dOptions_set_outputSizes(MLPool2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("outputSizes"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(MLReduceOptions, em_Val);
 
 
-jb_Sequence MLReduceOptions_axes(const MLReduceOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axes")));
+jb_Array MLReduceOptions_axes(const MLReduceOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axes")));
 }
 
 
-void MLReduceOptions_set_axes(MLReduceOptions* self, jb_Sequence * value) {
+void MLReduceOptions_set_axes(MLReduceOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("axes"), em_Val_from(value));
 }
 
@@ -912,44 +912,44 @@ void MLResample2dOptions_set_mode(MLResample2dOptions* self, MLInterpolationMode
 }
 
 
-jb_Sequence MLResample2dOptions_scales(const MLResample2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("scales")));
+jb_Array MLResample2dOptions_scales(const MLResample2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("scales")));
 }
 
 
-void MLResample2dOptions_set_scales(MLResample2dOptions* self, jb_Sequence * value) {
+void MLResample2dOptions_set_scales(MLResample2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("scales"), em_Val_from(value));
 }
 
 
-jb_Sequence MLResample2dOptions_sizes(const MLResample2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sizes")));
+jb_Array MLResample2dOptions_sizes(const MLResample2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sizes")));
 }
 
 
-void MLResample2dOptions_set_sizes(MLResample2dOptions* self, jb_Sequence * value) {
+void MLResample2dOptions_set_sizes(MLResample2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sizes"), em_Val_from(value));
 }
 
 
-jb_Sequence MLResample2dOptions_axes(const MLResample2dOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axes")));
+jb_Array MLResample2dOptions_axes(const MLResample2dOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axes")));
 }
 
 
-void MLResample2dOptions_set_axes(MLResample2dOptions* self, jb_Sequence * value) {
+void MLResample2dOptions_set_axes(MLResample2dOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("axes"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(MLReverseOptions, em_Val);
 
 
-jb_Sequence MLReverseOptions_axes(const MLReverseOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axes")));
+jb_Array MLReverseOptions_axes(const MLReverseOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("axes")));
 }
 
 
-void MLReverseOptions_set_axes(MLReverseOptions* self, jb_Sequence * value) {
+void MLReverseOptions_set_axes(MLReverseOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("axes"), em_Val_from(value));
 }
 
@@ -968,12 +968,12 @@ void MLScatterOptions_set_axis(MLScatterOptions* self, unsigned long value) {
 DEFINE_EMLITE_TYPE(MLSliceOptions, em_Val);
 
 
-jb_Sequence MLSliceOptions_strides(const MLSliceOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("strides")));
+jb_Array MLSliceOptions_strides(const MLSliceOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("strides")));
 }
 
 
-void MLSliceOptions_set_strides(MLSliceOptions* self, jb_Sequence * value) {
+void MLSliceOptions_set_strides(MLSliceOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("strides"), em_Val_from(value));
 }
 
@@ -992,12 +992,12 @@ void MLSplitOptions_set_axis(MLSplitOptions* self, unsigned long value) {
 DEFINE_EMLITE_TYPE(MLTransposeOptions, em_Val);
 
 
-jb_Sequence MLTransposeOptions_permutation(const MLTransposeOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("permutation")));
+jb_Array MLTransposeOptions_permutation(const MLTransposeOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("permutation")));
 }
 
 
-void MLTransposeOptions_set_permutation(MLTransposeOptions* self, jb_Sequence * value) {
+void MLTransposeOptions_set_permutation(MLTransposeOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("permutation"), em_Val_from(value));
 }
 
@@ -1032,7 +1032,7 @@ MLGraphBuilder MLGraphBuilder_new(MLContext * context) {
       }
 
 
-MLOperand MLGraphBuilder_input(MLGraphBuilder* self , jb_USVString * name, MLOperandDescriptor * descriptor) {
+MLOperand MLGraphBuilder_input(MLGraphBuilder* self , jb_String * name, MLOperandDescriptor * descriptor) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "input", em_Val_from(name), em_Val_from(descriptor)));
 }
 
@@ -1097,12 +1097,12 @@ MLOperand MLGraphBuilder_clamp1(MLGraphBuilder* self , MLOperand * input, MLClam
 }
 
 
-MLOperand MLGraphBuilder_concat0(MLGraphBuilder* self , jb_Sequence * inputs, unsigned long axis) {
+MLOperand MLGraphBuilder_concat0(MLGraphBuilder* self , jb_Array * inputs, unsigned long axis) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "concat", em_Val_from(inputs), em_Val_from(axis)));
 }
 
 
-MLOperand MLGraphBuilder_concat1(MLGraphBuilder* self , jb_Sequence * inputs, unsigned long axis, MLOperatorOptions * options) {
+MLOperand MLGraphBuilder_concat1(MLGraphBuilder* self , jb_Array * inputs, unsigned long axis, MLOperatorOptions * options) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "concat", em_Val_from(inputs), em_Val_from(axis), em_Val_from(options)));
 }
 
@@ -1477,12 +1477,12 @@ MLOperand MLGraphBuilder_elu1(MLGraphBuilder* self , MLOperand * input, MLEluOpt
 }
 
 
-MLOperand MLGraphBuilder_expand0(MLGraphBuilder* self , MLOperand * input, jb_Sequence * newShape) {
+MLOperand MLGraphBuilder_expand0(MLGraphBuilder* self , MLOperand * input, jb_Array * newShape) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "expand", em_Val_from(input), em_Val_from(newShape)));
 }
 
 
-MLOperand MLGraphBuilder_expand1(MLGraphBuilder* self , MLOperand * input, jb_Sequence * newShape, MLOperatorOptions * options) {
+MLOperand MLGraphBuilder_expand1(MLGraphBuilder* self , MLOperand * input, jb_Array * newShape, MLOperatorOptions * options) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "expand", em_Val_from(input), em_Val_from(newShape), em_Val_from(options)));
 }
 
@@ -1537,13 +1537,13 @@ MLOperand MLGraphBuilder_gemm1(MLGraphBuilder* self , MLOperand * a, MLOperand *
 }
 
 
-jb_Sequence MLGraphBuilder_gru0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "gru", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(steps), em_Val_from(hiddenSize)));
+jb_Array MLGraphBuilder_gru0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "gru", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(steps), em_Val_from(hiddenSize)));
 }
 
 
-jb_Sequence MLGraphBuilder_gru1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize, MLGruOptions * options) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "gru", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(steps), em_Val_from(hiddenSize), em_Val_from(options)));
+jb_Array MLGraphBuilder_gru1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize, MLGruOptions * options) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "gru", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(steps), em_Val_from(hiddenSize), em_Val_from(options)));
 }
 
 
@@ -1617,23 +1617,23 @@ MLOperand MLGraphBuilder_linear1(MLGraphBuilder* self , MLOperand * input, MLLin
 }
 
 
-jb_Sequence MLGraphBuilder_lstm0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "lstm", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(steps), em_Val_from(hiddenSize)));
+jb_Array MLGraphBuilder_lstm0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "lstm", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(steps), em_Val_from(hiddenSize)));
 }
 
 
-jb_Sequence MLGraphBuilder_lstm1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize, MLLstmOptions * options) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "lstm", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(steps), em_Val_from(hiddenSize), em_Val_from(options)));
+jb_Array MLGraphBuilder_lstm1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize, MLLstmOptions * options) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "lstm", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(steps), em_Val_from(hiddenSize), em_Val_from(options)));
 }
 
 
-jb_Sequence MLGraphBuilder_lstmCell0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, MLOperand * hiddenState, MLOperand * cellState, unsigned long hiddenSize) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "lstmCell", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(hiddenState), em_Val_from(cellState), em_Val_from(hiddenSize)));
+jb_Array MLGraphBuilder_lstmCell0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, MLOperand * hiddenState, MLOperand * cellState, unsigned long hiddenSize) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "lstmCell", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(hiddenState), em_Val_from(cellState), em_Val_from(hiddenSize)));
 }
 
 
-jb_Sequence MLGraphBuilder_lstmCell1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, MLOperand * hiddenState, MLOperand * cellState, unsigned long hiddenSize, MLLstmCellOptions * options) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "lstmCell", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(hiddenState), em_Val_from(cellState), em_Val_from(hiddenSize), em_Val_from(options)));
+jb_Array MLGraphBuilder_lstmCell1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, MLOperand * hiddenState, MLOperand * cellState, unsigned long hiddenSize, MLLstmCellOptions * options) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "lstmCell", em_Val_from(input), em_Val_from(weight), em_Val_from(recurrentWeight), em_Val_from(hiddenState), em_Val_from(cellState), em_Val_from(hiddenSize), em_Val_from(options)));
 }
 
 
@@ -1647,12 +1647,12 @@ MLOperand MLGraphBuilder_matmul1(MLGraphBuilder* self , MLOperand * a, MLOperand
 }
 
 
-MLOperand MLGraphBuilder_pad0(MLGraphBuilder* self , MLOperand * input, jb_Sequence * beginningPadding, jb_Sequence * endingPadding) {
+MLOperand MLGraphBuilder_pad0(MLGraphBuilder* self , MLOperand * input, jb_Array * beginningPadding, jb_Array * endingPadding) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "pad", em_Val_from(input), em_Val_from(beginningPadding), em_Val_from(endingPadding)));
 }
 
 
-MLOperand MLGraphBuilder_pad1(MLGraphBuilder* self , MLOperand * input, jb_Sequence * beginningPadding, jb_Sequence * endingPadding, MLPadOptions * options) {
+MLOperand MLGraphBuilder_pad1(MLGraphBuilder* self , MLOperand * input, jb_Array * beginningPadding, jb_Array * endingPadding, MLPadOptions * options) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "pad", em_Val_from(input), em_Val_from(beginningPadding), em_Val_from(endingPadding), em_Val_from(options)));
 }
 
@@ -1817,12 +1817,12 @@ MLOperand MLGraphBuilder_resample2d1(MLGraphBuilder* self , MLOperand * input, M
 }
 
 
-MLOperand MLGraphBuilder_reshape0(MLGraphBuilder* self , MLOperand * input, jb_Sequence * newShape) {
+MLOperand MLGraphBuilder_reshape0(MLGraphBuilder* self , MLOperand * input, jb_Array * newShape) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "reshape", em_Val_from(input), em_Val_from(newShape)));
 }
 
 
-MLOperand MLGraphBuilder_reshape1(MLGraphBuilder* self , MLOperand * input, jb_Sequence * newShape, MLOperatorOptions * options) {
+MLOperand MLGraphBuilder_reshape1(MLGraphBuilder* self , MLOperand * input, jb_Array * newShape, MLOperatorOptions * options) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "reshape", em_Val_from(input), em_Val_from(newShape), em_Val_from(options)));
 }
 
@@ -1867,12 +1867,12 @@ MLOperand MLGraphBuilder_sigmoid1(MLGraphBuilder* self , MLOperand * input, MLOp
 }
 
 
-MLOperand MLGraphBuilder_slice0(MLGraphBuilder* self , MLOperand * input, jb_Sequence * starts, jb_Sequence * sizes) {
+MLOperand MLGraphBuilder_slice0(MLGraphBuilder* self , MLOperand * input, jb_Array * starts, jb_Array * sizes) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "slice", em_Val_from(input), em_Val_from(starts), em_Val_from(sizes)));
 }
 
 
-MLOperand MLGraphBuilder_slice1(MLGraphBuilder* self , MLOperand * input, jb_Sequence * starts, jb_Sequence * sizes, MLSliceOptions * options) {
+MLOperand MLGraphBuilder_slice1(MLGraphBuilder* self , MLOperand * input, jb_Array * starts, jb_Array * sizes, MLSliceOptions * options) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "slice", em_Val_from(input), em_Val_from(starts), em_Val_from(sizes), em_Val_from(options)));
 }
 
@@ -1907,13 +1907,13 @@ MLOperand MLGraphBuilder_softsign1(MLGraphBuilder* self , MLOperand * input, MLO
 }
 
 
-jb_Sequence MLGraphBuilder_split0(MLGraphBuilder* self , MLOperand * input, jb_Any * splits) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "split", em_Val_from(input), em_Val_from(splits)));
+jb_Array MLGraphBuilder_split0(MLGraphBuilder* self , MLOperand * input, jb_Any * splits) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "split", em_Val_from(input), em_Val_from(splits)));
 }
 
 
-jb_Sequence MLGraphBuilder_split1(MLGraphBuilder* self , MLOperand * input, jb_Any * splits, MLSplitOptions * options) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "split", em_Val_from(input), em_Val_from(splits), em_Val_from(options)));
+jb_Array MLGraphBuilder_split1(MLGraphBuilder* self , MLOperand * input, jb_Any * splits, MLSplitOptions * options) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "split", em_Val_from(input), em_Val_from(splits), em_Val_from(options)));
 }
 
 
@@ -1927,12 +1927,12 @@ MLOperand MLGraphBuilder_tanh1(MLGraphBuilder* self , MLOperand * input, MLOpera
 }
 
 
-MLOperand MLGraphBuilder_tile0(MLGraphBuilder* self , MLOperand * input, jb_Sequence * repetitions) {
+MLOperand MLGraphBuilder_tile0(MLGraphBuilder* self , MLOperand * input, jb_Array * repetitions) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "tile", em_Val_from(input), em_Val_from(repetitions)));
 }
 
 
-MLOperand MLGraphBuilder_tile1(MLGraphBuilder* self , MLOperand * input, jb_Sequence * repetitions, MLOperatorOptions * options) {
+MLOperand MLGraphBuilder_tile1(MLGraphBuilder* self , MLOperand * input, jb_Array * repetitions, MLOperatorOptions * options) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "tile", em_Val_from(input), em_Val_from(repetitions), em_Val_from(options)));
 }
 

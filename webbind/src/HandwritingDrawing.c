@@ -5,22 +5,22 @@
 DEFINE_EMLITE_TYPE(HandwritingPrediction, em_Val);
 
 
-jb_DOMString HandwritingPrediction_text(const HandwritingPrediction *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("text")));
+jb_String HandwritingPrediction_text(const HandwritingPrediction *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("text")));
 }
 
 
-void HandwritingPrediction_set_text(HandwritingPrediction* self, jb_DOMString * value) {
+void HandwritingPrediction_set_text(HandwritingPrediction* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("text"), em_Val_from(value));
 }
 
 
-jb_Sequence HandwritingPrediction_segmentationResult(const HandwritingPrediction *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("segmentationResult")));
+jb_Array HandwritingPrediction_segmentationResult(const HandwritingPrediction *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("segmentationResult")));
 }
 
 
-void HandwritingPrediction_set_segmentationResult(HandwritingPrediction* self, jb_Sequence * value) {
+void HandwritingPrediction_set_segmentationResult(HandwritingPrediction* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("segmentationResult"), em_Val_from(value));
 }
 
@@ -42,8 +42,8 @@ jb_Undefined HandwritingDrawing_clear(HandwritingDrawing* self ) {
 }
 
 
-jb_Sequence HandwritingDrawing_getStrokes(HandwritingDrawing* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getStrokes"));
+jb_Array HandwritingDrawing_getStrokes(HandwritingDrawing* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getStrokes"));
 }
 
 

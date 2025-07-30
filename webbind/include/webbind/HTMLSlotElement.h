@@ -19,16 +19,16 @@ DECLARE_EMLITE_TYPE(HTMLSlotElement, HTMLElement);
 
 HTMLSlotElement HTMLSlotElement_new();
 
-jb_DOMString HTMLSlotElement_name(const HTMLSlotElement *self);
+jb_String HTMLSlotElement_name(const HTMLSlotElement *self);
 
-void HTMLSlotElement_set_name(HTMLSlotElement* self, jb_DOMString * value);
+void HTMLSlotElement_set_name(HTMLSlotElement* self, jb_String * value);
 
-jb_Sequence HTMLSlotElement_assignedNodes0(HTMLSlotElement* self );
+jb_Array HTMLSlotElement_assignedNodes0(HTMLSlotElement* self );
 
-jb_Sequence HTMLSlotElement_assignedNodes1(HTMLSlotElement* self , AssignedNodesOptions * options);
+jb_Array HTMLSlotElement_assignedNodes1(HTMLSlotElement* self , AssignedNodesOptions * options);
 
-jb_Sequence HTMLSlotElement_assignedElements0(HTMLSlotElement* self );
+jb_Array HTMLSlotElement_assignedElements0(HTMLSlotElement* self );
 
-jb_Sequence HTMLSlotElement_assignedElements1(HTMLSlotElement* self , AssignedNodesOptions * options);
+jb_Array HTMLSlotElement_assignedElements1(HTMLSlotElement* self , AssignedNodesOptions * options);
 
 jb_Undefined HTMLSlotElement_assign(HTMLSlotElement* self , jb_Any * nodes);

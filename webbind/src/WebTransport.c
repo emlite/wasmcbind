@@ -141,12 +141,12 @@ void WebTransportCloseInfo_set_closeCode(WebTransportCloseInfo* self, unsigned l
 }
 
 
-jb_USVString WebTransportCloseInfo_reason(const WebTransportCloseInfo *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("reason")));
+jb_String WebTransportCloseInfo_reason(const WebTransportCloseInfo *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("reason")));
 }
 
 
-void WebTransportCloseInfo_set_reason(WebTransportCloseInfo* self, jb_USVString * value) {
+void WebTransportCloseInfo_set_reason(WebTransportCloseInfo* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("reason"), em_Val_from(value));
 }
 
@@ -165,13 +165,13 @@ void WebTransportSendStreamOptions_set_waitUntilAvailable(WebTransportSendStream
 DEFINE_EMLITE_TYPE(WebTransport, em_Val);
 
 
-WebTransport WebTransport_new0(jb_USVString * url) {
+WebTransport WebTransport_new0(jb_String * url) {
         em_Val vv = em_Val_new(em_Val_global("WebTransport") , em_Val_from(url));
         return WebTransport_from_val(&vv);
       }
 
 
-WebTransport WebTransport_new1(jb_USVString * url, jb_Any * options) {
+WebTransport WebTransport_new1(jb_String * url, jb_Any * options) {
         em_Val vv = em_Val_new(em_Val_global("WebTransport") , em_Val_from(url), em_Val_from(options));
         return WebTransport_from_val(&vv);
       }
@@ -227,8 +227,8 @@ void WebTransport_set_anticipatedConcurrentIncomingBidirectionalStreams(WebTrans
 }
 
 
-jb_DOMString WebTransport_protocol(const WebTransport *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("protocol")));
+jb_String WebTransport_protocol(const WebTransport *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("protocol")));
 }
 
 

@@ -7,12 +7,12 @@
 DEFINE_EMLITE_TYPE(SpeechRecognitionOptions, em_Val);
 
 
-jb_Sequence SpeechRecognitionOptions_langs(const SpeechRecognitionOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("langs")));
+jb_Array SpeechRecognitionOptions_langs(const SpeechRecognitionOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("langs")));
 }
 
 
-void SpeechRecognitionOptions_set_langs(SpeechRecognitionOptions* self, jb_Sequence * value) {
+void SpeechRecognitionOptions_set_langs(SpeechRecognitionOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("langs"), em_Val_from(value));
 }
 
@@ -45,12 +45,12 @@ void SpeechRecognition_set_grammars(SpeechRecognition* self, SpeechGrammarList *
 }
 
 
-jb_DOMString SpeechRecognition_lang(const SpeechRecognition *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("lang")));
+jb_String SpeechRecognition_lang(const SpeechRecognition *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("lang")));
 }
 
 
-void SpeechRecognition_set_lang(SpeechRecognition* self, jb_DOMString * value) {
+void SpeechRecognition_set_lang(SpeechRecognition* self, jb_String * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("lang"), em_Val_from(value));
 }
 
@@ -95,12 +95,12 @@ void SpeechRecognition_set_processLocally(SpeechRecognition* self, bool value) {
 }
 
 
-jb_ObservableArray SpeechRecognition_phrases(const SpeechRecognition *self) {
-    return em_Val_as(jb_ObservableArray, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("phrases")));
+jb_Array SpeechRecognition_phrases(const SpeechRecognition *self) {
+    return em_Val_as(jb_Array, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("phrases")));
 }
 
 
-void SpeechRecognition_set_phrases(SpeechRecognition* self, jb_ObservableArray * value) {
+void SpeechRecognition_set_phrases(SpeechRecognition* self, jb_Array * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("phrases"), em_Val_from(value));
 }
 

@@ -19,7 +19,7 @@ jb_Any PushSubscriptionOptionsInit_applicationServerKey(const PushSubscriptionOp
 void PushSubscriptionOptionsInit_set_applicationServerKey(PushSubscriptionOptionsInit* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(PushManager, em_Val);
 
-jb_FrozenArray PushManager_supportedContentEncodings(const PushManager *self);
+jb_Array PushManager_supportedContentEncodings(const PushManager *self);
 
 jb_Promise PushManager_subscribe0(PushManager* self );
 

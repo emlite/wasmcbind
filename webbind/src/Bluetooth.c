@@ -6,42 +6,42 @@
 DEFINE_EMLITE_TYPE(RequestDeviceOptions, em_Val);
 
 
-jb_Sequence RequestDeviceOptions_filters(const RequestDeviceOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filters")));
+jb_Array RequestDeviceOptions_filters(const RequestDeviceOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filters")));
 }
 
 
-void RequestDeviceOptions_set_filters(RequestDeviceOptions* self, jb_Sequence * value) {
+void RequestDeviceOptions_set_filters(RequestDeviceOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("filters"), em_Val_from(value));
 }
 
 
-jb_Sequence RequestDeviceOptions_exclusionFilters(const RequestDeviceOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("exclusionFilters")));
+jb_Array RequestDeviceOptions_exclusionFilters(const RequestDeviceOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("exclusionFilters")));
 }
 
 
-void RequestDeviceOptions_set_exclusionFilters(RequestDeviceOptions* self, jb_Sequence * value) {
+void RequestDeviceOptions_set_exclusionFilters(RequestDeviceOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("exclusionFilters"), em_Val_from(value));
 }
 
 
-jb_Sequence RequestDeviceOptions_optionalServices(const RequestDeviceOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("optionalServices")));
+jb_Array RequestDeviceOptions_optionalServices(const RequestDeviceOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("optionalServices")));
 }
 
 
-void RequestDeviceOptions_set_optionalServices(RequestDeviceOptions* self, jb_Sequence * value) {
+void RequestDeviceOptions_set_optionalServices(RequestDeviceOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("optionalServices"), em_Val_from(value));
 }
 
 
-jb_Sequence RequestDeviceOptions_optionalManufacturerData(const RequestDeviceOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("optionalManufacturerData")));
+jb_Array RequestDeviceOptions_optionalManufacturerData(const RequestDeviceOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("optionalManufacturerData")));
 }
 
 
-void RequestDeviceOptions_set_optionalManufacturerData(RequestDeviceOptions* self, jb_Sequence * value) {
+void RequestDeviceOptions_set_optionalManufacturerData(RequestDeviceOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("optionalManufacturerData"), em_Val_from(value));
 }
 
@@ -58,12 +58,12 @@ void RequestDeviceOptions_set_acceptAllDevices(RequestDeviceOptions* self, bool 
 DEFINE_EMLITE_TYPE(BluetoothLEScanOptions, em_Val);
 
 
-jb_Sequence BluetoothLEScanOptions_filters(const BluetoothLEScanOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filters")));
+jb_Array BluetoothLEScanOptions_filters(const BluetoothLEScanOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filters")));
 }
 
 
-void BluetoothLEScanOptions_set_filters(BluetoothLEScanOptions* self, jb_Sequence * value) {
+void BluetoothLEScanOptions_set_filters(BluetoothLEScanOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("filters"), em_Val_from(value));
 }
 

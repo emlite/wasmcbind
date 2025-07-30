@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(WheelEvent, MouseEvent);
 
 
-WheelEvent WheelEvent_new0(jb_DOMString * type) {
+WheelEvent WheelEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("WheelEvent") , em_Val_from(type));
         return WheelEvent_from_val(&vv);
       }
 
 
-WheelEvent WheelEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+WheelEvent WheelEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("WheelEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return WheelEvent_from_val(&vv);
       }

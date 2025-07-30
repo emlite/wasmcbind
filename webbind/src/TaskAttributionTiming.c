@@ -14,33 +14,33 @@ jb_Any TaskAttributionTiming_duration(const TaskAttributionTiming *self) {
 }
 
 
-jb_DOMString TaskAttributionTiming_name(const TaskAttributionTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
+jb_String TaskAttributionTiming_name(const TaskAttributionTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString TaskAttributionTiming_entryType(const TaskAttributionTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
+jb_String TaskAttributionTiming_entryType(const TaskAttributionTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
 }
 
 
-jb_DOMString TaskAttributionTiming_containerType(const TaskAttributionTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("containerType")));
+jb_String TaskAttributionTiming_containerType(const TaskAttributionTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("containerType")));
 }
 
 
-jb_DOMString TaskAttributionTiming_containerSrc(const TaskAttributionTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("containerSrc")));
+jb_String TaskAttributionTiming_containerSrc(const TaskAttributionTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("containerSrc")));
 }
 
 
-jb_DOMString TaskAttributionTiming_containerId(const TaskAttributionTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("containerId")));
+jb_String TaskAttributionTiming_containerId(const TaskAttributionTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("containerId")));
 }
 
 
-jb_DOMString TaskAttributionTiming_containerName(const TaskAttributionTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("containerName")));
+jb_String TaskAttributionTiming_containerName(const TaskAttributionTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("containerName")));
 }
 
 

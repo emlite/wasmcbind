@@ -18,7 +18,7 @@ jb_Any CaptureController_oncapturedmousechange(const CaptureController *self);
 
 void CaptureController_set_oncapturedmousechange(CaptureController* self, jb_Any * value);
 
-jb_Sequence CaptureController_getSupportedZoomLevels(CaptureController* self );
+jb_Array CaptureController_getSupportedZoomLevels(CaptureController* self );
 
 long CaptureController_zoomLevel(const CaptureController *self);
 

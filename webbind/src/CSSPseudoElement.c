@@ -10,8 +10,8 @@
 DEFINE_EMLITE_TYPE(CSSPseudoElement, EventTarget);
 
 
-jb_CSSOMString CSSPseudoElement_type(const CSSPseudoElement *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("type")));
+jb_String CSSPseudoElement_type(const CSSPseudoElement *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("type")));
 }
 
 
@@ -25,18 +25,18 @@ jb_Any CSSPseudoElement_parent(const CSSPseudoElement *self) {
 }
 
 
-CSSPseudoElement CSSPseudoElement_pseudo(CSSPseudoElement* self , jb_CSSOMString * type) {
+CSSPseudoElement CSSPseudoElement_pseudo(CSSPseudoElement* self , jb_String * type) {
     return em_Val_as(CSSPseudoElement, em_Val_call(EventTarget_as_val(self->inner), "pseudo", em_Val_from(type)));
 }
 
 
-jb_Sequence CSSPseudoElement_getBoxQuads0(CSSPseudoElement* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getBoxQuads"));
+jb_Array CSSPseudoElement_getBoxQuads0(CSSPseudoElement* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getBoxQuads"));
 }
 
 
-jb_Sequence CSSPseudoElement_getBoxQuads1(CSSPseudoElement* self , BoxQuadOptions * options) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getBoxQuads", em_Val_from(options)));
+jb_Array CSSPseudoElement_getBoxQuads1(CSSPseudoElement* self , BoxQuadOptions * options) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getBoxQuads", em_Val_from(options)));
 }
 
 

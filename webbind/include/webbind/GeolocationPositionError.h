@@ -9,4 +9,4 @@ DECLARE_EMLITE_TYPE(GeolocationPositionError, em_Val);
 
 unsigned short GeolocationPositionError_code(const GeolocationPositionError *self);
 
-jb_DOMString GeolocationPositionError_message(const GeolocationPositionError *self);
+jb_String GeolocationPositionError_message(const GeolocationPositionError *self);

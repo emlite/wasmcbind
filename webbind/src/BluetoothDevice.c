@@ -18,13 +18,13 @@ void WatchAdvertisementsOptions_set_signal(WatchAdvertisementsOptions* self, Abo
 DEFINE_EMLITE_TYPE(BluetoothDevice, EventTarget);
 
 
-jb_DOMString BluetoothDevice_id(const BluetoothDevice *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
+jb_String BluetoothDevice_id(const BluetoothDevice *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
-jb_DOMString BluetoothDevice_name(const BluetoothDevice *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
+jb_String BluetoothDevice_name(const BluetoothDevice *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
 }
 
 

@@ -12,10 +12,10 @@ DECLARE_EMLITE_TYPE(XRPlane, em_Val);
 
 XRSpace XRPlane_planeSpace(const XRPlane *self);
 
-jb_FrozenArray XRPlane_polygon(const XRPlane *self);
+jb_Array XRPlane_polygon(const XRPlane *self);
 
 XRPlaneOrientation XRPlane_orientation(const XRPlane *self);
 
 jb_Any XRPlane_lastChangedTime(const XRPlane *self);
 
-jb_DOMString XRPlane_semanticLabel(const XRPlane *self);
+jb_String XRPlane_semanticLabel(const XRPlane *self);

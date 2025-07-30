@@ -13,9 +13,9 @@ long long RTCEncodedVideoFrameMetadata_frameId(const RTCEncodedVideoFrameMetadat
 
 void RTCEncodedVideoFrameMetadata_set_frameId(RTCEncodedVideoFrameMetadata* self, long long value);
 
-jb_Sequence RTCEncodedVideoFrameMetadata_dependencies(const RTCEncodedVideoFrameMetadata *self);
+jb_Array RTCEncodedVideoFrameMetadata_dependencies(const RTCEncodedVideoFrameMetadata *self);
 
-void RTCEncodedVideoFrameMetadata_set_dependencies(RTCEncodedVideoFrameMetadata* self, jb_Sequence * value);
+void RTCEncodedVideoFrameMetadata_set_dependencies(RTCEncodedVideoFrameMetadata* self, jb_Array * value);
 
 unsigned short RTCEncodedVideoFrameMetadata_width(const RTCEncodedVideoFrameMetadata *self);
 

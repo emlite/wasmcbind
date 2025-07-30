@@ -4,12 +4,12 @@
 DEFINE_EMLITE_TYPE(URLPatternResult, em_Val);
 
 
-jb_Sequence URLPatternResult_inputs(const URLPatternResult *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("inputs")));
+jb_Array URLPatternResult_inputs(const URLPatternResult *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("inputs")));
 }
 
 
-void URLPatternResult_set_inputs(URLPatternResult* self, jb_Sequence * value) {
+void URLPatternResult_set_inputs(URLPatternResult* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("inputs"), em_Val_from(value));
 }
 
@@ -124,7 +124,7 @@ bool URLPattern_test1(URLPattern* self , jb_Any * input) {
 }
 
 
-bool URLPattern_test2(URLPattern* self , jb_Any * input, jb_USVString * baseURL) {
+bool URLPattern_test2(URLPattern* self , jb_Any * input, jb_String * baseURL) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "test", em_Val_from(input), em_Val_from(baseURL)));
 }
 
@@ -139,48 +139,48 @@ URLPatternResult URLPattern_exec1(URLPattern* self , jb_Any * input) {
 }
 
 
-URLPatternResult URLPattern_exec2(URLPattern* self , jb_Any * input, jb_USVString * baseURL) {
+URLPatternResult URLPattern_exec2(URLPattern* self , jb_Any * input, jb_String * baseURL) {
     return em_Val_as(URLPatternResult, em_Val_call(em_Val_as_val(self->inner), "exec", em_Val_from(input), em_Val_from(baseURL)));
 }
 
 
-jb_USVString URLPattern_protocol(const URLPattern *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("protocol")));
+jb_String URLPattern_protocol(const URLPattern *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("protocol")));
 }
 
 
-jb_USVString URLPattern_username(const URLPattern *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("username")));
+jb_String URLPattern_username(const URLPattern *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("username")));
 }
 
 
-jb_USVString URLPattern_password(const URLPattern *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("password")));
+jb_String URLPattern_password(const URLPattern *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("password")));
 }
 
 
-jb_USVString URLPattern_hostname(const URLPattern *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hostname")));
+jb_String URLPattern_hostname(const URLPattern *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hostname")));
 }
 
 
-jb_USVString URLPattern_port(const URLPattern *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("port")));
+jb_String URLPattern_port(const URLPattern *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("port")));
 }
 
 
-jb_USVString URLPattern_pathname(const URLPattern *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pathname")));
+jb_String URLPattern_pathname(const URLPattern *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pathname")));
 }
 
 
-jb_USVString URLPattern_search(const URLPattern *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("search")));
+jb_String URLPattern_search(const URLPattern *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("search")));
 }
 
 
-jb_USVString URLPattern_hash(const URLPattern *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hash")));
+jb_String URLPattern_hash(const URLPattern *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hash")));
 }
 
 

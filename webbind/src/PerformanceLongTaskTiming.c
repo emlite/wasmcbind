@@ -15,18 +15,18 @@ jb_Any PerformanceLongTaskTiming_duration(const PerformanceLongTaskTiming *self)
 }
 
 
-jb_DOMString PerformanceLongTaskTiming_name(const PerformanceLongTaskTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
+jb_String PerformanceLongTaskTiming_name(const PerformanceLongTaskTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString PerformanceLongTaskTiming_entryType(const PerformanceLongTaskTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
+jb_String PerformanceLongTaskTiming_entryType(const PerformanceLongTaskTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
 }
 
 
-jb_FrozenArray PerformanceLongTaskTiming_attribution(const PerformanceLongTaskTiming *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("attribution")));
+jb_Array PerformanceLongTaskTiming_attribution(const PerformanceLongTaskTiming *self) {
+    return em_Val_as(jb_Array, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("attribution")));
 }
 
 

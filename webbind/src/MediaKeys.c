@@ -5,12 +5,12 @@
 DEFINE_EMLITE_TYPE(MediaKeysPolicy, em_Val);
 
 
-jb_DOMString MediaKeysPolicy_minHdcpVersion(const MediaKeysPolicy *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("minHdcpVersion")));
+jb_String MediaKeysPolicy_minHdcpVersion(const MediaKeysPolicy *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("minHdcpVersion")));
 }
 
 
-void MediaKeysPolicy_set_minHdcpVersion(MediaKeysPolicy* self, jb_DOMString * value) {
+void MediaKeysPolicy_set_minHdcpVersion(MediaKeysPolicy* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("minHdcpVersion"), em_Val_from(value));
 }
 

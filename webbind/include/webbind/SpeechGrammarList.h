@@ -15,10 +15,10 @@ unsigned long SpeechGrammarList_length(const SpeechGrammarList *self);
 
 SpeechGrammar SpeechGrammarList_item(SpeechGrammarList* self , unsigned long index);
 
-jb_Undefined SpeechGrammarList_addFromURI0(SpeechGrammarList* self , jb_DOMString * src);
+jb_Undefined SpeechGrammarList_addFromURI0(SpeechGrammarList* self , jb_String * src);
 
-jb_Undefined SpeechGrammarList_addFromURI1(SpeechGrammarList* self , jb_DOMString * src, float weight);
+jb_Undefined SpeechGrammarList_addFromURI1(SpeechGrammarList* self , jb_String * src, float weight);
 
-jb_Undefined SpeechGrammarList_addFromString0(SpeechGrammarList* self , jb_DOMString * string);
+jb_Undefined SpeechGrammarList_addFromString0(SpeechGrammarList* self , jb_String * string);
 
-jb_Undefined SpeechGrammarList_addFromString1(SpeechGrammarList* self , jb_DOMString * string, float weight);
+jb_Undefined SpeechGrammarList_addFromString1(SpeechGrammarList* self , jb_String * string, float weight);

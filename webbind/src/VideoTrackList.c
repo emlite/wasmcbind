@@ -10,7 +10,7 @@ unsigned long VideoTrackList_length(const VideoTrackList *self) {
 }
 
 
-VideoTrack VideoTrackList_getTrackById(VideoTrackList* self , jb_DOMString * id) {
+VideoTrack VideoTrackList_getTrackById(VideoTrackList* self , jb_String * id) {
     return em_Val_as(VideoTrack, em_Val_call(EventTarget_as_val(self->inner), "getTrackById", em_Val_from(id)));
 }
 

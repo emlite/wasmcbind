@@ -15,13 +15,13 @@ jb_Any PerformanceScriptTiming_duration(const PerformanceScriptTiming *self) {
 }
 
 
-jb_DOMString PerformanceScriptTiming_name(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
+jb_String PerformanceScriptTiming_name(const PerformanceScriptTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString PerformanceScriptTiming_entryType(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
+jb_String PerformanceScriptTiming_entryType(const PerformanceScriptTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
 }
 
 
@@ -30,8 +30,8 @@ ScriptInvokerType PerformanceScriptTiming_invokerType(const PerformanceScriptTim
 }
 
 
-jb_DOMString PerformanceScriptTiming_invoker(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("invoker")));
+jb_String PerformanceScriptTiming_invoker(const PerformanceScriptTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("invoker")));
 }
 
 
@@ -40,13 +40,13 @@ jb_Any PerformanceScriptTiming_executionStart(const PerformanceScriptTiming *sel
 }
 
 
-jb_DOMString PerformanceScriptTiming_sourceURL(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("sourceURL")));
+jb_String PerformanceScriptTiming_sourceURL(const PerformanceScriptTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("sourceURL")));
 }
 
 
-jb_DOMString PerformanceScriptTiming_sourceFunctionName(const PerformanceScriptTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("sourceFunctionName")));
+jb_String PerformanceScriptTiming_sourceFunctionName(const PerformanceScriptTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("sourceFunctionName")));
 }
 
 

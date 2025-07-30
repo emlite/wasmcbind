@@ -19,9 +19,9 @@ Animation Animation_new1(AnimationEffect * effect);
 
 Animation Animation_new2(AnimationEffect * effect, AnimationTimeline * timeline);
 
-jb_DOMString Animation_id(const Animation *self);
+jb_String Animation_id(const Animation *self);
 
-void Animation_set_id(Animation* self, jb_DOMString * value);
+void Animation_set_id(Animation* self, jb_String * value);
 
 AnimationEffect Animation_effect(const Animation *self);
 

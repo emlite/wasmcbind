@@ -72,9 +72,9 @@ FocusableAreaSearchMode FocusableAreasOption_mode(const FocusableAreasOption *se
 void FocusableAreasOption_set_mode(FocusableAreasOption* self, FocusableAreaSearchMode * value);
 DECLARE_EMLITE_TYPE(SpatialNavigationSearchOptions, em_Val);
 
-jb_Sequence SpatialNavigationSearchOptions_candidates(const SpatialNavigationSearchOptions *self);
+jb_Array SpatialNavigationSearchOptions_candidates(const SpatialNavigationSearchOptions *self);
 
-void SpatialNavigationSearchOptions_set_candidates(SpatialNavigationSearchOptions* self, jb_Sequence * value);
+void SpatialNavigationSearchOptions_set_candidates(SpatialNavigationSearchOptions* self, jb_Array * value);
 
 Node SpatialNavigationSearchOptions_container(const SpatialNavigationSearchOptions *self);
 
@@ -111,9 +111,9 @@ bool GetHTMLOptions_serializableShadowRoots(const GetHTMLOptions *self);
 
 void GetHTMLOptions_set_serializableShadowRoots(GetHTMLOptions* self, bool value);
 
-jb_Sequence GetHTMLOptions_shadowRoots(const GetHTMLOptions *self);
+jb_Array GetHTMLOptions_shadowRoots(const GetHTMLOptions *self);
 
-void GetHTMLOptions_set_shadowRoots(GetHTMLOptions* self, jb_Sequence * value);
+void GetHTMLOptions_set_shadowRoots(GetHTMLOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(PointerLockOptions, em_Val);
 
 bool PointerLockOptions_unadjustedMovement(const PointerLockOptions *self);
@@ -125,62 +125,62 @@ bool GetAnimationsOptions_subtree(const GetAnimationsOptions *self);
 
 void GetAnimationsOptions_set_subtree(GetAnimationsOptions* self, bool value);
 
-jb_CSSOMString GetAnimationsOptions_pseudoElement(const GetAnimationsOptions *self);
+jb_String GetAnimationsOptions_pseudoElement(const GetAnimationsOptions *self);
 
-void GetAnimationsOptions_set_pseudoElement(GetAnimationsOptions* self, jb_CSSOMString * value);
+void GetAnimationsOptions_set_pseudoElement(GetAnimationsOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(Element, Node);
 
-jb_DOMString Element_namespaceURI(const Element *self);
+jb_String Element_namespaceURI(const Element *self);
 
-jb_DOMString Element_prefix(const Element *self);
+jb_String Element_prefix(const Element *self);
 
-jb_DOMString Element_localName(const Element *self);
+jb_String Element_localName(const Element *self);
 
-jb_DOMString Element_tagName(const Element *self);
+jb_String Element_tagName(const Element *self);
 
-jb_DOMString Element_id(const Element *self);
+jb_String Element_id(const Element *self);
 
-void Element_set_id(Element* self, jb_DOMString * value);
+void Element_set_id(Element* self, jb_String * value);
 
-jb_DOMString Element_className(const Element *self);
+jb_String Element_className(const Element *self);
 
-void Element_set_className(Element* self, jb_DOMString * value);
+void Element_set_className(Element* self, jb_String * value);
 
 DOMTokenList Element_classList(const Element *self);
 
-jb_DOMString Element_slot(const Element *self);
+jb_String Element_slot(const Element *self);
 
-void Element_set_slot(Element* self, jb_DOMString * value);
+void Element_set_slot(Element* self, jb_String * value);
 
 bool Element_hasAttributes(Element* self );
 
 NamedNodeMap Element_attributes(const Element *self);
 
-jb_Sequence Element_getAttributeNames(Element* self );
+jb_Array Element_getAttributeNames(Element* self );
 
-jb_DOMString Element_getAttribute(Element* self , jb_DOMString * qualifiedName);
+jb_String Element_getAttribute(Element* self , jb_String * qualifiedName);
 
-jb_DOMString Element_getAttributeNS(Element* self , jb_DOMString * namespace_, jb_DOMString * localName);
+jb_String Element_getAttributeNS(Element* self , jb_String * namespace_, jb_String * localName);
 
-jb_Undefined Element_setAttribute(Element* self , jb_DOMString * qualifiedName, jb_DOMString * value);
+jb_Undefined Element_setAttribute(Element* self , jb_String * qualifiedName, jb_String * value);
 
-jb_Undefined Element_setAttributeNS(Element* self , jb_DOMString * namespace_, jb_DOMString * qualifiedName, jb_DOMString * value);
+jb_Undefined Element_setAttributeNS(Element* self , jb_String * namespace_, jb_String * qualifiedName, jb_String * value);
 
-jb_Undefined Element_removeAttribute(Element* self , jb_DOMString * qualifiedName);
+jb_Undefined Element_removeAttribute(Element* self , jb_String * qualifiedName);
 
-jb_Undefined Element_removeAttributeNS(Element* self , jb_DOMString * namespace_, jb_DOMString * localName);
+jb_Undefined Element_removeAttributeNS(Element* self , jb_String * namespace_, jb_String * localName);
 
-bool Element_toggleAttribute0(Element* self , jb_DOMString * qualifiedName);
+bool Element_toggleAttribute0(Element* self , jb_String * qualifiedName);
 
-bool Element_toggleAttribute1(Element* self , jb_DOMString * qualifiedName, bool force);
+bool Element_toggleAttribute1(Element* self , jb_String * qualifiedName, bool force);
 
-bool Element_hasAttribute(Element* self , jb_DOMString * qualifiedName);
+bool Element_hasAttribute(Element* self , jb_String * qualifiedName);
 
-bool Element_hasAttributeNS(Element* self , jb_DOMString * namespace_, jb_DOMString * localName);
+bool Element_hasAttributeNS(Element* self , jb_String * namespace_, jb_String * localName);
 
-Attr Element_getAttributeNode(Element* self , jb_DOMString * qualifiedName);
+Attr Element_getAttributeNode(Element* self , jb_String * qualifiedName);
 
-Attr Element_getAttributeNodeNS(Element* self , jb_DOMString * namespace_, jb_DOMString * localName);
+Attr Element_getAttributeNodeNS(Element* self , jb_String * namespace_, jb_String * localName);
 
 Attr Element_setAttributeNode(Element* self , Attr * attr);
 
@@ -194,33 +194,33 @@ ShadowRoot Element_shadowRoot(const Element *self);
 
 CustomElementRegistry Element_customElementRegistry(const Element *self);
 
-Element Element_closest(Element* self , jb_DOMString * selectors);
+Element Element_closest(Element* self , jb_String * selectors);
 
-bool Element_matches(Element* self , jb_DOMString * selectors);
+bool Element_matches(Element* self , jb_String * selectors);
 
-bool Element_webkitMatchesSelector(Element* self , jb_DOMString * selectors);
+bool Element_webkitMatchesSelector(Element* self , jb_String * selectors);
 
-HTMLCollection Element_getElementsByTagName(Element* self , jb_DOMString * qualifiedName);
+HTMLCollection Element_getElementsByTagName(Element* self , jb_String * qualifiedName);
 
-HTMLCollection Element_getElementsByTagNameNS(Element* self , jb_DOMString * namespace_, jb_DOMString * localName);
+HTMLCollection Element_getElementsByTagNameNS(Element* self , jb_String * namespace_, jb_String * localName);
 
-HTMLCollection Element_getElementsByClassName(Element* self , jb_DOMString * classNames);
+HTMLCollection Element_getElementsByClassName(Element* self , jb_String * classNames);
 
-Element Element_insertAdjacentElement(Element* self , jb_DOMString * where, Element * element);
+Element Element_insertAdjacentElement(Element* self , jb_String * where, Element * element);
 
-jb_Undefined Element_insertAdjacentText(Element* self , jb_DOMString * where, jb_DOMString * data);
+jb_Undefined Element_insertAdjacentText(Element* self , jb_String * where, jb_String * data);
 
 Node Element_getSpatialNavigationContainer(Element* self );
 
-jb_Sequence Element_focusableAreas0(Element* self );
+jb_Array Element_focusableAreas0(Element* self );
 
-jb_Sequence Element_focusableAreas1(Element* self , FocusableAreasOption * option);
+jb_Array Element_focusableAreas1(Element* self , FocusableAreasOption * option);
 
 Node Element_spatialNavigationSearch0(Element* self , SpatialNavigationDirection * dir);
 
 Node Element_spatialNavigationSearch1(Element* self , SpatialNavigationDirection * dir, SpatialNavigationSearchOptions * options);
 
-CSSPseudoElement Element_pseudo(Element* self , jb_CSSOMString * type);
+CSSPseudoElement Element_pseudo(Element* self , jb_String * type);
 
 DOMTokenList Element_part(const Element *self);
 
@@ -266,9 +266,9 @@ long Element_clientHeight(const Element *self);
 
 double Element_currentCSSZoom(const Element *self);
 
-jb_DOMString Element_elementTiming(const Element *self);
+jb_String Element_elementTiming(const Element *self);
 
-void Element_set_elementTiming(Element* self, jb_DOMString * value);
+void Element_set_elementTiming(Element* self, jb_String * value);
 
 jb_Promise Element_requestFullscreen0(Element* self );
 
@@ -284,9 +284,9 @@ void Element_set_onfullscreenerror(Element* self, jb_Any * value);
 
 jb_Undefined Element_setHTMLUnsafe(Element* self , jb_Any * html);
 
-jb_DOMString Element_getHTML0(Element* self );
+jb_String Element_getHTML0(Element* self );
 
-jb_DOMString Element_getHTML1(Element* self , GetHTMLOptions * options);
+jb_String Element_getHTML1(Element* self , GetHTMLOptions * options);
 
 jb_Any Element_innerHTML(const Element *self);
 
@@ -296,7 +296,7 @@ jb_Any Element_outerHTML(const Element *self);
 
 void Element_set_outerHTML(Element* self, jb_Any * value);
 
-jb_Undefined Element_insertAdjacentHTML(Element* self , jb_DOMString * position, jb_Any * string);
+jb_Undefined Element_insertAdjacentHTML(Element* self , jb_String * position, jb_Any * string);
 
 jb_Undefined Element_setPointerCapture(Element* self , long pointerId);
 
@@ -308,13 +308,13 @@ jb_Promise Element_requestPointerLock0(Element* self );
 
 jb_Promise Element_requestPointerLock1(Element* self , PointerLockOptions * options);
 
-jb_CSSOMString Element_regionOverset(const Element *self);
+jb_String Element_regionOverset(const Element *self);
 
-jb_Sequence Element_getRegionFlowRanges(Element* self );
+jb_Array Element_getRegionFlowRanges(Element* self );
 
-jb_Sequence Element_getBoxQuads0(Element* self );
+jb_Array Element_getBoxQuads0(Element* self );
 
-jb_Sequence Element_getBoxQuads1(Element* self , BoxQuadOptions * options);
+jb_Array Element_getBoxQuads1(Element* self , BoxQuadOptions * options);
 
 DOMQuad Element_convertQuadFromNode0(Element* self , DOMQuadInit * quad, jb_Any * from);
 
@@ -344,9 +344,9 @@ jb_Undefined Element_replaceChildren(Element* self , jb_Any * nodes);
 
 jb_Undefined Element_moveBefore(Element* self , Node * node, Node * child);
 
-Element Element_querySelector(Element* self , jb_DOMString * selectors);
+Element Element_querySelector(Element* self , jb_String * selectors);
 
-NodeList Element_querySelectorAll(Element* self , jb_DOMString * selectors);
+NodeList Element_querySelectorAll(Element* self , jb_String * selectors);
 
 Element Element_previousElementSibling(const Element *self);
 
@@ -362,218 +362,218 @@ jb_Undefined Element_remove(Element* self );
 
 HTMLSlotElement Element_assignedSlot(const Element *self);
 
-jb_DOMString Element_role(const Element *self);
+jb_String Element_role(const Element *self);
 
-void Element_set_role(Element* self, jb_DOMString * value);
+void Element_set_role(Element* self, jb_String * value);
 
 Element Element_ariaActiveDescendantElement(const Element *self);
 
 void Element_set_ariaActiveDescendantElement(Element* self, Element * value);
 
-jb_DOMString Element_ariaAtomic(const Element *self);
+jb_String Element_ariaAtomic(const Element *self);
 
-void Element_set_ariaAtomic(Element* self, jb_DOMString * value);
+void Element_set_ariaAtomic(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaAutoComplete(const Element *self);
+jb_String Element_ariaAutoComplete(const Element *self);
 
-void Element_set_ariaAutoComplete(Element* self, jb_DOMString * value);
+void Element_set_ariaAutoComplete(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaBrailleLabel(const Element *self);
+jb_String Element_ariaBrailleLabel(const Element *self);
 
-void Element_set_ariaBrailleLabel(Element* self, jb_DOMString * value);
+void Element_set_ariaBrailleLabel(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaBrailleRoleDescription(const Element *self);
+jb_String Element_ariaBrailleRoleDescription(const Element *self);
 
-void Element_set_ariaBrailleRoleDescription(Element* self, jb_DOMString * value);
+void Element_set_ariaBrailleRoleDescription(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaBusy(const Element *self);
+jb_String Element_ariaBusy(const Element *self);
 
-void Element_set_ariaBusy(Element* self, jb_DOMString * value);
+void Element_set_ariaBusy(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaChecked(const Element *self);
+jb_String Element_ariaChecked(const Element *self);
 
-void Element_set_ariaChecked(Element* self, jb_DOMString * value);
+void Element_set_ariaChecked(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaColCount(const Element *self);
+jb_String Element_ariaColCount(const Element *self);
 
-void Element_set_ariaColCount(Element* self, jb_DOMString * value);
+void Element_set_ariaColCount(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaColIndex(const Element *self);
+jb_String Element_ariaColIndex(const Element *self);
 
-void Element_set_ariaColIndex(Element* self, jb_DOMString * value);
+void Element_set_ariaColIndex(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaColIndexText(const Element *self);
+jb_String Element_ariaColIndexText(const Element *self);
 
-void Element_set_ariaColIndexText(Element* self, jb_DOMString * value);
+void Element_set_ariaColIndexText(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaColSpan(const Element *self);
+jb_String Element_ariaColSpan(const Element *self);
 
-void Element_set_ariaColSpan(Element* self, jb_DOMString * value);
+void Element_set_ariaColSpan(Element* self, jb_String * value);
 
-jb_FrozenArray Element_ariaControlsElements(const Element *self);
+jb_Array Element_ariaControlsElements(const Element *self);
 
-void Element_set_ariaControlsElements(Element* self, jb_FrozenArray * value);
+void Element_set_ariaControlsElements(Element* self, jb_Array * value);
 
-jb_DOMString Element_ariaCurrent(const Element *self);
+jb_String Element_ariaCurrent(const Element *self);
 
-void Element_set_ariaCurrent(Element* self, jb_DOMString * value);
+void Element_set_ariaCurrent(Element* self, jb_String * value);
 
-jb_FrozenArray Element_ariaDescribedByElements(const Element *self);
+jb_Array Element_ariaDescribedByElements(const Element *self);
 
-void Element_set_ariaDescribedByElements(Element* self, jb_FrozenArray * value);
+void Element_set_ariaDescribedByElements(Element* self, jb_Array * value);
 
-jb_DOMString Element_ariaDescription(const Element *self);
+jb_String Element_ariaDescription(const Element *self);
 
-void Element_set_ariaDescription(Element* self, jb_DOMString * value);
+void Element_set_ariaDescription(Element* self, jb_String * value);
 
-jb_FrozenArray Element_ariaDetailsElements(const Element *self);
+jb_Array Element_ariaDetailsElements(const Element *self);
 
-void Element_set_ariaDetailsElements(Element* self, jb_FrozenArray * value);
+void Element_set_ariaDetailsElements(Element* self, jb_Array * value);
 
-jb_DOMString Element_ariaDisabled(const Element *self);
+jb_String Element_ariaDisabled(const Element *self);
 
-void Element_set_ariaDisabled(Element* self, jb_DOMString * value);
+void Element_set_ariaDisabled(Element* self, jb_String * value);
 
-jb_FrozenArray Element_ariaErrorMessageElements(const Element *self);
+jb_Array Element_ariaErrorMessageElements(const Element *self);
 
-void Element_set_ariaErrorMessageElements(Element* self, jb_FrozenArray * value);
+void Element_set_ariaErrorMessageElements(Element* self, jb_Array * value);
 
-jb_DOMString Element_ariaExpanded(const Element *self);
+jb_String Element_ariaExpanded(const Element *self);
 
-void Element_set_ariaExpanded(Element* self, jb_DOMString * value);
+void Element_set_ariaExpanded(Element* self, jb_String * value);
 
-jb_FrozenArray Element_ariaFlowToElements(const Element *self);
+jb_Array Element_ariaFlowToElements(const Element *self);
 
-void Element_set_ariaFlowToElements(Element* self, jb_FrozenArray * value);
+void Element_set_ariaFlowToElements(Element* self, jb_Array * value);
 
-jb_DOMString Element_ariaHasPopup(const Element *self);
+jb_String Element_ariaHasPopup(const Element *self);
 
-void Element_set_ariaHasPopup(Element* self, jb_DOMString * value);
+void Element_set_ariaHasPopup(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaHidden(const Element *self);
+jb_String Element_ariaHidden(const Element *self);
 
-void Element_set_ariaHidden(Element* self, jb_DOMString * value);
+void Element_set_ariaHidden(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaInvalid(const Element *self);
+jb_String Element_ariaInvalid(const Element *self);
 
-void Element_set_ariaInvalid(Element* self, jb_DOMString * value);
+void Element_set_ariaInvalid(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaKeyShortcuts(const Element *self);
+jb_String Element_ariaKeyShortcuts(const Element *self);
 
-void Element_set_ariaKeyShortcuts(Element* self, jb_DOMString * value);
+void Element_set_ariaKeyShortcuts(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaLabel(const Element *self);
+jb_String Element_ariaLabel(const Element *self);
 
-void Element_set_ariaLabel(Element* self, jb_DOMString * value);
+void Element_set_ariaLabel(Element* self, jb_String * value);
 
-jb_FrozenArray Element_ariaLabelledByElements(const Element *self);
+jb_Array Element_ariaLabelledByElements(const Element *self);
 
-void Element_set_ariaLabelledByElements(Element* self, jb_FrozenArray * value);
+void Element_set_ariaLabelledByElements(Element* self, jb_Array * value);
 
-jb_DOMString Element_ariaLevel(const Element *self);
+jb_String Element_ariaLevel(const Element *self);
 
-void Element_set_ariaLevel(Element* self, jb_DOMString * value);
+void Element_set_ariaLevel(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaLive(const Element *self);
+jb_String Element_ariaLive(const Element *self);
 
-void Element_set_ariaLive(Element* self, jb_DOMString * value);
+void Element_set_ariaLive(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaModal(const Element *self);
+jb_String Element_ariaModal(const Element *self);
 
-void Element_set_ariaModal(Element* self, jb_DOMString * value);
+void Element_set_ariaModal(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaMultiLine(const Element *self);
+jb_String Element_ariaMultiLine(const Element *self);
 
-void Element_set_ariaMultiLine(Element* self, jb_DOMString * value);
+void Element_set_ariaMultiLine(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaMultiSelectable(const Element *self);
+jb_String Element_ariaMultiSelectable(const Element *self);
 
-void Element_set_ariaMultiSelectable(Element* self, jb_DOMString * value);
+void Element_set_ariaMultiSelectable(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaOrientation(const Element *self);
+jb_String Element_ariaOrientation(const Element *self);
 
-void Element_set_ariaOrientation(Element* self, jb_DOMString * value);
+void Element_set_ariaOrientation(Element* self, jb_String * value);
 
-jb_FrozenArray Element_ariaOwnsElements(const Element *self);
+jb_Array Element_ariaOwnsElements(const Element *self);
 
-void Element_set_ariaOwnsElements(Element* self, jb_FrozenArray * value);
+void Element_set_ariaOwnsElements(Element* self, jb_Array * value);
 
-jb_DOMString Element_ariaPlaceholder(const Element *self);
+jb_String Element_ariaPlaceholder(const Element *self);
 
-void Element_set_ariaPlaceholder(Element* self, jb_DOMString * value);
+void Element_set_ariaPlaceholder(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaPosInSet(const Element *self);
+jb_String Element_ariaPosInSet(const Element *self);
 
-void Element_set_ariaPosInSet(Element* self, jb_DOMString * value);
+void Element_set_ariaPosInSet(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaPressed(const Element *self);
+jb_String Element_ariaPressed(const Element *self);
 
-void Element_set_ariaPressed(Element* self, jb_DOMString * value);
+void Element_set_ariaPressed(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaReadOnly(const Element *self);
+jb_String Element_ariaReadOnly(const Element *self);
 
-void Element_set_ariaReadOnly(Element* self, jb_DOMString * value);
+void Element_set_ariaReadOnly(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaRelevant(const Element *self);
+jb_String Element_ariaRelevant(const Element *self);
 
-void Element_set_ariaRelevant(Element* self, jb_DOMString * value);
+void Element_set_ariaRelevant(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaRequired(const Element *self);
+jb_String Element_ariaRequired(const Element *self);
 
-void Element_set_ariaRequired(Element* self, jb_DOMString * value);
+void Element_set_ariaRequired(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaRoleDescription(const Element *self);
+jb_String Element_ariaRoleDescription(const Element *self);
 
-void Element_set_ariaRoleDescription(Element* self, jb_DOMString * value);
+void Element_set_ariaRoleDescription(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaRowCount(const Element *self);
+jb_String Element_ariaRowCount(const Element *self);
 
-void Element_set_ariaRowCount(Element* self, jb_DOMString * value);
+void Element_set_ariaRowCount(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaRowIndex(const Element *self);
+jb_String Element_ariaRowIndex(const Element *self);
 
-void Element_set_ariaRowIndex(Element* self, jb_DOMString * value);
+void Element_set_ariaRowIndex(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaRowIndexText(const Element *self);
+jb_String Element_ariaRowIndexText(const Element *self);
 
-void Element_set_ariaRowIndexText(Element* self, jb_DOMString * value);
+void Element_set_ariaRowIndexText(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaRowSpan(const Element *self);
+jb_String Element_ariaRowSpan(const Element *self);
 
-void Element_set_ariaRowSpan(Element* self, jb_DOMString * value);
+void Element_set_ariaRowSpan(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaSelected(const Element *self);
+jb_String Element_ariaSelected(const Element *self);
 
-void Element_set_ariaSelected(Element* self, jb_DOMString * value);
+void Element_set_ariaSelected(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaSetSize(const Element *self);
+jb_String Element_ariaSetSize(const Element *self);
 
-void Element_set_ariaSetSize(Element* self, jb_DOMString * value);
+void Element_set_ariaSetSize(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaSort(const Element *self);
+jb_String Element_ariaSort(const Element *self);
 
-void Element_set_ariaSort(Element* self, jb_DOMString * value);
+void Element_set_ariaSort(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaValueMax(const Element *self);
+jb_String Element_ariaValueMax(const Element *self);
 
-void Element_set_ariaValueMax(Element* self, jb_DOMString * value);
+void Element_set_ariaValueMax(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaValueMin(const Element *self);
+jb_String Element_ariaValueMin(const Element *self);
 
-void Element_set_ariaValueMin(Element* self, jb_DOMString * value);
+void Element_set_ariaValueMin(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaValueNow(const Element *self);
+jb_String Element_ariaValueNow(const Element *self);
 
-void Element_set_ariaValueNow(Element* self, jb_DOMString * value);
+void Element_set_ariaValueNow(Element* self, jb_String * value);
 
-jb_DOMString Element_ariaValueText(const Element *self);
+jb_String Element_ariaValueText(const Element *self);
 
-void Element_set_ariaValueText(Element* self, jb_DOMString * value);
+void Element_set_ariaValueText(Element* self, jb_String * value);
 
 Animation Element_animate0(Element* self , jb_Object * keyframes);
 
 Animation Element_animate1(Element* self , jb_Object * keyframes, jb_Any * options);
 
-jb_Sequence Element_getAnimations0(Element* self );
+jb_Array Element_getAnimations0(Element* self );
 
-jb_Sequence Element_getAnimations1(Element* self , GetAnimationsOptions * options);
+jb_Array Element_getAnimations1(Element* self , GetAnimationsOptions * options);

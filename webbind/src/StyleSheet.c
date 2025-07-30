@@ -6,13 +6,13 @@
 DEFINE_EMLITE_TYPE(StyleSheet, em_Val);
 
 
-jb_CSSOMString StyleSheet_type(const StyleSheet *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
+jb_String StyleSheet_type(const StyleSheet *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
-jb_USVString StyleSheet_href(const StyleSheet *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("href")));
+jb_String StyleSheet_href(const StyleSheet *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("href")));
 }
 
 
@@ -26,8 +26,8 @@ CSSStyleSheet StyleSheet_parentStyleSheet(const StyleSheet *self) {
 }
 
 
-jb_DOMString StyleSheet_title(const StyleSheet *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("title")));
+jb_String StyleSheet_title(const StyleSheet *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("title")));
 }
 
 

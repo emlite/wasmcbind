@@ -8,7 +8,7 @@
 
 DECLARE_EMLITE_TYPE(MediaQueryList, EventTarget);
 
-jb_CSSOMString MediaQueryList_media(const MediaQueryList *self);
+jb_String MediaQueryList_media(const MediaQueryList *self);
 
 bool MediaQueryList_matches(const MediaQueryList *self);
 

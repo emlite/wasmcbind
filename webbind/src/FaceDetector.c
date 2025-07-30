@@ -15,12 +15,12 @@ void DetectedFace_set_boundingBox(DetectedFace* self, DOMRectReadOnly * value) {
 }
 
 
-jb_Sequence DetectedFace_landmarks(const DetectedFace *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("landmarks")));
+jb_Array DetectedFace_landmarks(const DetectedFace *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("landmarks")));
 }
 
 
-void DetectedFace_set_landmarks(DetectedFace* self, jb_Sequence * value) {
+void DetectedFace_set_landmarks(DetectedFace* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("landmarks"), em_Val_from(value));
 }
 

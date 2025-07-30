@@ -29,12 +29,12 @@ void SVGLength_set_valueInSpecifiedUnits(SVGLength* self, float value) {
 }
 
 
-jb_DOMString SVGLength_valueAsString(const SVGLength *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("valueAsString")));
+jb_String SVGLength_valueAsString(const SVGLength *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("valueAsString")));
 }
 
 
-void SVGLength_set_valueAsString(SVGLength* self, jb_DOMString * value) {
+void SVGLength_set_valueAsString(SVGLength* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("valueAsString"), em_Val_from(value));
 }
 

@@ -63,6 +63,6 @@ jb_Undefined SourceBuffer_appendBuffer(SourceBuffer* self , jb_Any * data);
 
 jb_Undefined SourceBuffer_abort(SourceBuffer* self );
 
-jb_Undefined SourceBuffer_changeType(SourceBuffer* self , jb_DOMString * type);
+jb_Undefined SourceBuffer_changeType(SourceBuffer* self , jb_String * type);
 
 jb_Undefined SourceBuffer_remove(SourceBuffer* self , double start, double end);

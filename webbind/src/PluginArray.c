@@ -20,7 +20,7 @@ Plugin PluginArray_item(PluginArray* self , unsigned long index) {
 }
 
 
-Plugin PluginArray_namedItem(PluginArray* self , jb_DOMString * name) {
+Plugin PluginArray_namedItem(PluginArray* self , jb_String * name) {
     return em_Val_as(Plugin, em_Val_call(em_Val_as_val(self->inner), "namedItem", em_Val_from(name)));
 }
 

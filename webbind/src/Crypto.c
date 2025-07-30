@@ -15,7 +15,7 @@ jb_Any Crypto_getRandomValues(Crypto* self , jb_Any * array) {
 }
 
 
-jb_DOMString Crypto_randomUUID(Crypto* self ) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "randomUUID"));
+jb_String Crypto_randomUUID(Crypto* self ) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "randomUUID"));
 }
 

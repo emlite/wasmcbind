@@ -4,12 +4,12 @@
 DEFINE_EMLITE_TYPE(ModuleExportDescriptor, em_Val);
 
 
-jb_USVString ModuleExportDescriptor_name(const ModuleExportDescriptor *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String ModuleExportDescriptor_name(const ModuleExportDescriptor *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void ModuleExportDescriptor_set_name(ModuleExportDescriptor* self, jb_USVString * value) {
+void ModuleExportDescriptor_set_name(ModuleExportDescriptor* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
@@ -26,22 +26,22 @@ void ModuleExportDescriptor_set_kind(ModuleExportDescriptor* self, ImportExportK
 DEFINE_EMLITE_TYPE(ModuleImportDescriptor, em_Val);
 
 
-jb_USVString ModuleImportDescriptor_module_(const ModuleImportDescriptor *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("module")));
+jb_String ModuleImportDescriptor_module_(const ModuleImportDescriptor *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("module")));
 }
 
 
-void ModuleImportDescriptor_set_module_(ModuleImportDescriptor* self, jb_USVString * value) {
+void ModuleImportDescriptor_set_module_(ModuleImportDescriptor* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("module"), em_Val_from(value));
 }
 
 
-jb_USVString ModuleImportDescriptor_name(const ModuleImportDescriptor *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String ModuleImportDescriptor_name(const ModuleImportDescriptor *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void ModuleImportDescriptor_set_name(ModuleImportDescriptor* self, jb_USVString * value) {
+void ModuleImportDescriptor_set_name(ModuleImportDescriptor* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
@@ -64,17 +64,17 @@ Module Module_new(jb_Any * bytes) {
       }
 
 
-jb_Sequence Module_exports(Module* self , Module * moduleObject) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_global("module"), "exports", em_Val_from(moduleObject)));
+jb_Array Module_exports(Module* self , Module * moduleObject) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_global("module"), "exports", em_Val_from(moduleObject)));
 }
 
 
-jb_Sequence Module_imports(Module* self , Module * moduleObject) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_global("module"), "imports", em_Val_from(moduleObject)));
+jb_Array Module_imports(Module* self , Module * moduleObject) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_global("module"), "imports", em_Val_from(moduleObject)));
 }
 
 
-jb_Sequence Module_customSections(Module* self , Module * moduleObject, jb_DOMString * sectionName) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_global("module"), "customSections", em_Val_from(moduleObject), em_Val_from(sectionName)));
+jb_Array Module_customSections(Module* self , Module * moduleObject, jb_String * sectionName) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_global("module"), "customSections", em_Val_from(moduleObject), em_Val_from(sectionName)));
 }
 

@@ -5,13 +5,13 @@
 DEFINE_EMLITE_TYPE(FocusEvent, UIEvent);
 
 
-FocusEvent FocusEvent_new0(jb_DOMString * type) {
+FocusEvent FocusEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("FocusEvent") , em_Val_from(type));
         return FocusEvent_from_val(&vv);
       }
 
 
-FocusEvent FocusEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+FocusEvent FocusEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("FocusEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return FocusEvent_from_val(&vv);
       }

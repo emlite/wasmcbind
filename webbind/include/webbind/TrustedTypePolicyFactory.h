@@ -25,9 +25,9 @@ jb_Function TrustedTypePolicyOptions_createScriptURL(const TrustedTypePolicyOpti
 void TrustedTypePolicyOptions_set_createScriptURL(TrustedTypePolicyOptions* self, jb_Function * value);
 DECLARE_EMLITE_TYPE(TrustedTypePolicyFactory, em_Val);
 
-TrustedTypePolicy TrustedTypePolicyFactory_createPolicy0(TrustedTypePolicyFactory* self , jb_DOMString * policyName);
+TrustedTypePolicy TrustedTypePolicyFactory_createPolicy0(TrustedTypePolicyFactory* self , jb_String * policyName);
 
-TrustedTypePolicy TrustedTypePolicyFactory_createPolicy1(TrustedTypePolicyFactory* self , jb_DOMString * policyName, TrustedTypePolicyOptions * policyOptions);
+TrustedTypePolicy TrustedTypePolicyFactory_createPolicy1(TrustedTypePolicyFactory* self , jb_String * policyName, TrustedTypePolicyOptions * policyOptions);
 
 bool TrustedTypePolicyFactory_isHTML(TrustedTypePolicyFactory* self , jb_Any * value);
 
@@ -39,14 +39,14 @@ TrustedHTML TrustedTypePolicyFactory_emptyHTML(const TrustedTypePolicyFactory *s
 
 TrustedScript TrustedTypePolicyFactory_emptyScript(const TrustedTypePolicyFactory *self);
 
-jb_DOMString TrustedTypePolicyFactory_getAttributeType0(TrustedTypePolicyFactory* self , jb_DOMString * tagName, jb_DOMString * attribute);
+jb_String TrustedTypePolicyFactory_getAttributeType0(TrustedTypePolicyFactory* self , jb_String * tagName, jb_String * attribute);
 
-jb_DOMString TrustedTypePolicyFactory_getAttributeType1(TrustedTypePolicyFactory* self , jb_DOMString * tagName, jb_DOMString * attribute, jb_DOMString * elementNs);
+jb_String TrustedTypePolicyFactory_getAttributeType1(TrustedTypePolicyFactory* self , jb_String * tagName, jb_String * attribute, jb_String * elementNs);
 
-jb_DOMString TrustedTypePolicyFactory_getAttributeType2(TrustedTypePolicyFactory* self , jb_DOMString * tagName, jb_DOMString * attribute, jb_DOMString * elementNs, jb_DOMString * attrNs);
+jb_String TrustedTypePolicyFactory_getAttributeType2(TrustedTypePolicyFactory* self , jb_String * tagName, jb_String * attribute, jb_String * elementNs, jb_String * attrNs);
 
-jb_DOMString TrustedTypePolicyFactory_getPropertyType0(TrustedTypePolicyFactory* self , jb_DOMString * tagName, jb_DOMString * property);
+jb_String TrustedTypePolicyFactory_getPropertyType0(TrustedTypePolicyFactory* self , jb_String * tagName, jb_String * property);
 
-jb_DOMString TrustedTypePolicyFactory_getPropertyType1(TrustedTypePolicyFactory* self , jb_DOMString * tagName, jb_DOMString * property, jb_DOMString * elementNs);
+jb_String TrustedTypePolicyFactory_getPropertyType1(TrustedTypePolicyFactory* self , jb_String * tagName, jb_String * property, jb_String * elementNs);
 
 TrustedTypePolicy TrustedTypePolicyFactory_defaultPolicy(const TrustedTypePolicyFactory *self);

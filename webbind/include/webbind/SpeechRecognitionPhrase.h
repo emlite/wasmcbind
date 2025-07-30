@@ -7,10 +7,10 @@
 
 DECLARE_EMLITE_TYPE(SpeechRecognitionPhrase, em_Val);
 
-SpeechRecognitionPhrase SpeechRecognitionPhrase_new0(jb_DOMString * phrase);
+SpeechRecognitionPhrase SpeechRecognitionPhrase_new0(jb_String * phrase);
 
-SpeechRecognitionPhrase SpeechRecognitionPhrase_new1(jb_DOMString * phrase, float boost);
+SpeechRecognitionPhrase SpeechRecognitionPhrase_new1(jb_String * phrase, float boost);
 
-jb_DOMString SpeechRecognitionPhrase_phrase(const SpeechRecognitionPhrase *self);
+jb_String SpeechRecognitionPhrase_phrase(const SpeechRecognitionPhrase *self);
 
 float SpeechRecognitionPhrase_boost(const SpeechRecognitionPhrase *self);

@@ -11,16 +11,16 @@ typedef struct StaticRange StaticRange;
 
 DECLARE_EMLITE_TYPE(InputEvent, UIEvent);
 
-InputEvent InputEvent_new0(jb_DOMString * type);
+InputEvent InputEvent_new0(jb_String * type);
 
-InputEvent InputEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+InputEvent InputEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
-jb_USVString InputEvent_data(const InputEvent *self);
+jb_String InputEvent_data(const InputEvent *self);
 
 bool InputEvent_isComposing(const InputEvent *self);
 
-jb_DOMString InputEvent_inputType(const InputEvent *self);
+jb_String InputEvent_inputType(const InputEvent *self);
 
 DataTransfer InputEvent_dataTransfer(const InputEvent *self);
 
-jb_Sequence InputEvent_getTargetRanges(InputEvent* self );
+jb_Array InputEvent_getTargetRanges(InputEvent* self );

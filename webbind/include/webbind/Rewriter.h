@@ -22,9 +22,9 @@ jb_Function RewriterCreateOptions_monitor(const RewriterCreateOptions *self);
 
 void RewriterCreateOptions_set_monitor(RewriterCreateOptions* self, jb_Function * value);
 
-jb_DOMString RewriterCreateOptions_sharedContext(const RewriterCreateOptions *self);
+jb_String RewriterCreateOptions_sharedContext(const RewriterCreateOptions *self);
 
-void RewriterCreateOptions_set_sharedContext(RewriterCreateOptions* self, jb_DOMString * value);
+void RewriterCreateOptions_set_sharedContext(RewriterCreateOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(RewriterCreateCoreOptions, em_Val);
 
 RewriterTone RewriterCreateCoreOptions_tone(const RewriterCreateCoreOptions *self);
@@ -39,22 +39,22 @@ RewriterLength RewriterCreateCoreOptions_length(const RewriterCreateCoreOptions 
 
 void RewriterCreateCoreOptions_set_length(RewriterCreateCoreOptions* self, RewriterLength * value);
 
-jb_Sequence RewriterCreateCoreOptions_expectedInputLanguages(const RewriterCreateCoreOptions *self);
+jb_Array RewriterCreateCoreOptions_expectedInputLanguages(const RewriterCreateCoreOptions *self);
 
-void RewriterCreateCoreOptions_set_expectedInputLanguages(RewriterCreateCoreOptions* self, jb_Sequence * value);
+void RewriterCreateCoreOptions_set_expectedInputLanguages(RewriterCreateCoreOptions* self, jb_Array * value);
 
-jb_Sequence RewriterCreateCoreOptions_expectedContextLanguages(const RewriterCreateCoreOptions *self);
+jb_Array RewriterCreateCoreOptions_expectedContextLanguages(const RewriterCreateCoreOptions *self);
 
-void RewriterCreateCoreOptions_set_expectedContextLanguages(RewriterCreateCoreOptions* self, jb_Sequence * value);
+void RewriterCreateCoreOptions_set_expectedContextLanguages(RewriterCreateCoreOptions* self, jb_Array * value);
 
-jb_DOMString RewriterCreateCoreOptions_outputLanguage(const RewriterCreateCoreOptions *self);
+jb_String RewriterCreateCoreOptions_outputLanguage(const RewriterCreateCoreOptions *self);
 
-void RewriterCreateCoreOptions_set_outputLanguage(RewriterCreateCoreOptions* self, jb_DOMString * value);
+void RewriterCreateCoreOptions_set_outputLanguage(RewriterCreateCoreOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(RewriterRewriteOptions, em_Val);
 
-jb_DOMString RewriterRewriteOptions_context(const RewriterRewriteOptions *self);
+jb_String RewriterRewriteOptions_context(const RewriterRewriteOptions *self);
 
-void RewriterRewriteOptions_set_context(RewriterRewriteOptions* self, jb_DOMString * value);
+void RewriterRewriteOptions_set_context(RewriterRewriteOptions* self, jb_String * value);
 
 AbortSignal RewriterRewriteOptions_signal(const RewriterRewriteOptions *self);
 
@@ -69,15 +69,15 @@ jb_Promise Rewriter_availability0(Rewriter* self );
 
 jb_Promise Rewriter_availability1(Rewriter* self , RewriterCreateCoreOptions * options);
 
-jb_Promise Rewriter_rewrite0(Rewriter* self , jb_DOMString * input);
+jb_Promise Rewriter_rewrite0(Rewriter* self , jb_String * input);
 
-jb_Promise Rewriter_rewrite1(Rewriter* self , jb_DOMString * input, RewriterRewriteOptions * options);
+jb_Promise Rewriter_rewrite1(Rewriter* self , jb_String * input, RewriterRewriteOptions * options);
 
-ReadableStream Rewriter_rewriteStreaming0(Rewriter* self , jb_DOMString * input);
+ReadableStream Rewriter_rewriteStreaming0(Rewriter* self , jb_String * input);
 
-ReadableStream Rewriter_rewriteStreaming1(Rewriter* self , jb_DOMString * input, RewriterRewriteOptions * options);
+ReadableStream Rewriter_rewriteStreaming1(Rewriter* self , jb_String * input, RewriterRewriteOptions * options);
 
-jb_DOMString Rewriter_sharedContext(const Rewriter *self);
+jb_String Rewriter_sharedContext(const Rewriter *self);
 
 RewriterTone Rewriter_tone(const Rewriter *self);
 
@@ -85,15 +85,15 @@ RewriterFormat Rewriter_format(const Rewriter *self);
 
 RewriterLength Rewriter_length(const Rewriter *self);
 
-jb_FrozenArray Rewriter_expectedInputLanguages(const Rewriter *self);
+jb_Array Rewriter_expectedInputLanguages(const Rewriter *self);
 
-jb_FrozenArray Rewriter_expectedContextLanguages(const Rewriter *self);
+jb_Array Rewriter_expectedContextLanguages(const Rewriter *self);
 
-jb_DOMString Rewriter_outputLanguage(const Rewriter *self);
+jb_String Rewriter_outputLanguage(const Rewriter *self);
 
-jb_Promise Rewriter_measureInputUsage0(Rewriter* self , jb_DOMString * input);
+jb_Promise Rewriter_measureInputUsage0(Rewriter* self , jb_String * input);
 
-jb_Promise Rewriter_measureInputUsage1(Rewriter* self , jb_DOMString * input, RewriterRewriteOptions * options);
+jb_Promise Rewriter_measureInputUsage1(Rewriter* self , jb_String * input, RewriterRewriteOptions * options);
 
 double Rewriter_inputQuota(const Rewriter *self);
 

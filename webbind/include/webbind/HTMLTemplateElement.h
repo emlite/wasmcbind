@@ -14,9 +14,9 @@ HTMLTemplateElement HTMLTemplateElement_new();
 
 DocumentFragment HTMLTemplateElement_content(const HTMLTemplateElement *self);
 
-jb_DOMString HTMLTemplateElement_shadowRootMode(const HTMLTemplateElement *self);
+jb_String HTMLTemplateElement_shadowRootMode(const HTMLTemplateElement *self);
 
-void HTMLTemplateElement_set_shadowRootMode(HTMLTemplateElement* self, jb_DOMString * value);
+void HTMLTemplateElement_set_shadowRootMode(HTMLTemplateElement* self, jb_String * value);
 
 bool HTMLTemplateElement_shadowRootDelegatesFocus(const HTMLTemplateElement *self);
 
@@ -30,6 +30,6 @@ bool HTMLTemplateElement_shadowRootSerializable(const HTMLTemplateElement *self)
 
 void HTMLTemplateElement_set_shadowRootSerializable(HTMLTemplateElement* self, bool value);
 
-jb_DOMString HTMLTemplateElement_shadowRootCustomElementRegistry(const HTMLTemplateElement *self);
+jb_String HTMLTemplateElement_shadowRootCustomElementRegistry(const HTMLTemplateElement *self);
 
-void HTMLTemplateElement_set_shadowRootCustomElementRegistry(HTMLTemplateElement* self, jb_DOMString * value);
+void HTMLTemplateElement_set_shadowRootCustomElementRegistry(HTMLTemplateElement* self, jb_String * value);

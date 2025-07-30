@@ -10,7 +10,7 @@ typedef struct SpeechRecognitionResultList SpeechRecognitionResultList;
 
 DECLARE_EMLITE_TYPE(SpeechRecognitionEvent, Event);
 
-SpeechRecognitionEvent SpeechRecognitionEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+SpeechRecognitionEvent SpeechRecognitionEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 unsigned long SpeechRecognitionEvent_resultIndex(const SpeechRecognitionEvent *self);
 

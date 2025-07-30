@@ -13,13 +13,13 @@ typedef struct GPUDeviceDescriptor GPUDeviceDescriptor;
 
 DECLARE_EMLITE_TYPE(GPUDeviceDescriptor, em_Val);
 
-jb_Sequence GPUDeviceDescriptor_requiredFeatures(const GPUDeviceDescriptor *self);
+jb_Array GPUDeviceDescriptor_requiredFeatures(const GPUDeviceDescriptor *self);
 
-void GPUDeviceDescriptor_set_requiredFeatures(GPUDeviceDescriptor* self, jb_Sequence * value);
+void GPUDeviceDescriptor_set_requiredFeatures(GPUDeviceDescriptor* self, jb_Array * value);
 
-jb_Record GPUDeviceDescriptor_requiredLimits(const GPUDeviceDescriptor *self);
+jb_Object GPUDeviceDescriptor_requiredLimits(const GPUDeviceDescriptor *self);
 
-void GPUDeviceDescriptor_set_requiredLimits(GPUDeviceDescriptor* self, jb_Record * value);
+void GPUDeviceDescriptor_set_requiredLimits(GPUDeviceDescriptor* self, jb_Object * value);
 
 jb_Any GPUDeviceDescriptor_defaultQueue(const GPUDeviceDescriptor *self);
 

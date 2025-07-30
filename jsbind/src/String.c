@@ -114,7 +114,4 @@
         return em_Val_as_int(v);                           \
     }
 
-DEFINE_STRING_FUNCS(DOMString);
-DEFINE_STRING_FUNCS(CSSOMString);
-DEFINE_STRING_FUNCS(USVString);
-DEFINE_STRING_FUNCS(ByteString);
+DEFINE_STRING_FUNCS(String);

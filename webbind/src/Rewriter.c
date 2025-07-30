@@ -26,12 +26,12 @@ void RewriterCreateOptions_set_monitor(RewriterCreateOptions* self, jb_Function 
 }
 
 
-jb_DOMString RewriterCreateOptions_sharedContext(const RewriterCreateOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
+jb_String RewriterCreateOptions_sharedContext(const RewriterCreateOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
 }
 
 
-void RewriterCreateOptions_set_sharedContext(RewriterCreateOptions* self, jb_DOMString * value) {
+void RewriterCreateOptions_set_sharedContext(RewriterCreateOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sharedContext"), em_Val_from(value));
 }
 
@@ -68,44 +68,44 @@ void RewriterCreateCoreOptions_set_length(RewriterCreateCoreOptions* self, Rewri
 }
 
 
-jb_Sequence RewriterCreateCoreOptions_expectedInputLanguages(const RewriterCreateCoreOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
+jb_Array RewriterCreateCoreOptions_expectedInputLanguages(const RewriterCreateCoreOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
 }
 
 
-void RewriterCreateCoreOptions_set_expectedInputLanguages(RewriterCreateCoreOptions* self, jb_Sequence * value) {
+void RewriterCreateCoreOptions_set_expectedInputLanguages(RewriterCreateCoreOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages"), em_Val_from(value));
 }
 
 
-jb_Sequence RewriterCreateCoreOptions_expectedContextLanguages(const RewriterCreateCoreOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
+jb_Array RewriterCreateCoreOptions_expectedContextLanguages(const RewriterCreateCoreOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
 }
 
 
-void RewriterCreateCoreOptions_set_expectedContextLanguages(RewriterCreateCoreOptions* self, jb_Sequence * value) {
+void RewriterCreateCoreOptions_set_expectedContextLanguages(RewriterCreateCoreOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages"), em_Val_from(value));
 }
 
 
-jb_DOMString RewriterCreateCoreOptions_outputLanguage(const RewriterCreateCoreOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
+jb_String RewriterCreateCoreOptions_outputLanguage(const RewriterCreateCoreOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
 }
 
 
-void RewriterCreateCoreOptions_set_outputLanguage(RewriterCreateCoreOptions* self, jb_DOMString * value) {
+void RewriterCreateCoreOptions_set_outputLanguage(RewriterCreateCoreOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("outputLanguage"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(RewriterRewriteOptions, em_Val);
 
 
-jb_DOMString RewriterRewriteOptions_context(const RewriterRewriteOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("context")));
+jb_String RewriterRewriteOptions_context(const RewriterRewriteOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("context")));
 }
 
 
-void RewriterRewriteOptions_set_context(RewriterRewriteOptions* self, jb_DOMString * value) {
+void RewriterRewriteOptions_set_context(RewriterRewriteOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("context"), em_Val_from(value));
 }
 
@@ -142,28 +142,28 @@ jb_Promise Rewriter_availability1(Rewriter* self , RewriterCreateCoreOptions * o
 }
 
 
-jb_Promise Rewriter_rewrite0(Rewriter* self , jb_DOMString * input) {
+jb_Promise Rewriter_rewrite0(Rewriter* self , jb_String * input) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "rewrite", em_Val_from(input)));
 }
 
 
-jb_Promise Rewriter_rewrite1(Rewriter* self , jb_DOMString * input, RewriterRewriteOptions * options) {
+jb_Promise Rewriter_rewrite1(Rewriter* self , jb_String * input, RewriterRewriteOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "rewrite", em_Val_from(input), em_Val_from(options)));
 }
 
 
-ReadableStream Rewriter_rewriteStreaming0(Rewriter* self , jb_DOMString * input) {
+ReadableStream Rewriter_rewriteStreaming0(Rewriter* self , jb_String * input) {
     return em_Val_as(ReadableStream, em_Val_call(em_Val_as_val(self->inner), "rewriteStreaming", em_Val_from(input)));
 }
 
 
-ReadableStream Rewriter_rewriteStreaming1(Rewriter* self , jb_DOMString * input, RewriterRewriteOptions * options) {
+ReadableStream Rewriter_rewriteStreaming1(Rewriter* self , jb_String * input, RewriterRewriteOptions * options) {
     return em_Val_as(ReadableStream, em_Val_call(em_Val_as_val(self->inner), "rewriteStreaming", em_Val_from(input), em_Val_from(options)));
 }
 
 
-jb_DOMString Rewriter_sharedContext(const Rewriter *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
+jb_String Rewriter_sharedContext(const Rewriter *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sharedContext")));
 }
 
 
@@ -182,27 +182,27 @@ RewriterLength Rewriter_length(const Rewriter *self) {
 }
 
 
-jb_FrozenArray Rewriter_expectedInputLanguages(const Rewriter *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
+jb_Array Rewriter_expectedInputLanguages(const Rewriter *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedInputLanguages")));
 }
 
 
-jb_FrozenArray Rewriter_expectedContextLanguages(const Rewriter *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
+jb_Array Rewriter_expectedContextLanguages(const Rewriter *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("expectedContextLanguages")));
 }
 
 
-jb_DOMString Rewriter_outputLanguage(const Rewriter *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
+jb_String Rewriter_outputLanguage(const Rewriter *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputLanguage")));
 }
 
 
-jb_Promise Rewriter_measureInputUsage0(Rewriter* self , jb_DOMString * input) {
+jb_Promise Rewriter_measureInputUsage0(Rewriter* self , jb_String * input) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "measureInputUsage", em_Val_from(input)));
 }
 
 
-jb_Promise Rewriter_measureInputUsage1(Rewriter* self , jb_DOMString * input, RewriterRewriteOptions * options) {
+jb_Promise Rewriter_measureInputUsage1(Rewriter* self , jb_String * input, RewriterRewriteOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "measureInputUsage", em_Val_from(input), em_Val_from(options)));
 }
 

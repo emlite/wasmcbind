@@ -4,20 +4,20 @@
 DEFINE_EMLITE_TYPE(EventSource, EventTarget);
 
 
-EventSource EventSource_new0(jb_USVString * url) {
+EventSource EventSource_new0(jb_String * url) {
         em_Val vv = em_Val_new(em_Val_global("EventSource") , em_Val_from(url));
         return EventSource_from_val(&vv);
       }
 
 
-EventSource EventSource_new1(jb_USVString * url, jb_Any * eventSourceInitDict) {
+EventSource EventSource_new1(jb_String * url, jb_Any * eventSourceInitDict) {
         em_Val vv = em_Val_new(em_Val_global("EventSource") , em_Val_from(url), em_Val_from(eventSourceInitDict));
         return EventSource_from_val(&vv);
       }
 
 
-jb_USVString EventSource_url(const EventSource *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("url")));
+jb_String EventSource_url(const EventSource *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("url")));
 }
 
 

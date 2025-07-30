@@ -65,6 +65,6 @@ GPUTextureFormat GPUTexture_format(const GPUTexture *self);
 
 jb_Any GPUTexture_usage(const GPUTexture *self);
 
-jb_USVString GPUTexture_label(const GPUTexture *self);
+jb_String GPUTexture_label(const GPUTexture *self);
 
-void GPUTexture_set_label(GPUTexture* self, jb_USVString * value);
+void GPUTexture_set_label(GPUTexture* self, jb_String * value);

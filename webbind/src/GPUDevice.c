@@ -115,12 +115,12 @@ void GPUTextureDescriptor_set_usage(GPUTextureDescriptor* self, jb_Any * value) 
 }
 
 
-jb_Sequence GPUTextureDescriptor_viewFormats(const GPUTextureDescriptor *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("viewFormats")));
+jb_Array GPUTextureDescriptor_viewFormats(const GPUTextureDescriptor *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("viewFormats")));
 }
 
 
-void GPUTextureDescriptor_set_viewFormats(GPUTextureDescriptor* self, jb_Sequence * value) {
+void GPUTextureDescriptor_set_viewFormats(GPUTextureDescriptor* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("viewFormats"), em_Val_from(value));
 }
 
@@ -251,24 +251,24 @@ void GPUExternalTextureDescriptor_set_colorSpace(GPUExternalTextureDescriptor* s
 DEFINE_EMLITE_TYPE(GPUBindGroupLayoutDescriptor, em_Val);
 
 
-jb_Sequence GPUBindGroupLayoutDescriptor_entries(const GPUBindGroupLayoutDescriptor *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entries")));
+jb_Array GPUBindGroupLayoutDescriptor_entries(const GPUBindGroupLayoutDescriptor *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entries")));
 }
 
 
-void GPUBindGroupLayoutDescriptor_set_entries(GPUBindGroupLayoutDescriptor* self, jb_Sequence * value) {
+void GPUBindGroupLayoutDescriptor_set_entries(GPUBindGroupLayoutDescriptor* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("entries"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(GPUPipelineLayoutDescriptor, em_Val);
 
 
-jb_Sequence GPUPipelineLayoutDescriptor_bindGroupLayouts(const GPUPipelineLayoutDescriptor *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("bindGroupLayouts")));
+jb_Array GPUPipelineLayoutDescriptor_bindGroupLayouts(const GPUPipelineLayoutDescriptor *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("bindGroupLayouts")));
 }
 
 
-void GPUPipelineLayoutDescriptor_set_bindGroupLayouts(GPUPipelineLayoutDescriptor* self, jb_Sequence * value) {
+void GPUPipelineLayoutDescriptor_set_bindGroupLayouts(GPUPipelineLayoutDescriptor* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("bindGroupLayouts"), em_Val_from(value));
 }
 
@@ -285,34 +285,34 @@ void GPUBindGroupDescriptor_set_layout(GPUBindGroupDescriptor* self, GPUBindGrou
 }
 
 
-jb_Sequence GPUBindGroupDescriptor_entries(const GPUBindGroupDescriptor *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entries")));
+jb_Array GPUBindGroupDescriptor_entries(const GPUBindGroupDescriptor *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entries")));
 }
 
 
-void GPUBindGroupDescriptor_set_entries(GPUBindGroupDescriptor* self, jb_Sequence * value) {
+void GPUBindGroupDescriptor_set_entries(GPUBindGroupDescriptor* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("entries"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(GPUShaderModuleDescriptor, em_Val);
 
 
-jb_USVString GPUShaderModuleDescriptor_code(const GPUShaderModuleDescriptor *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("code")));
+jb_String GPUShaderModuleDescriptor_code(const GPUShaderModuleDescriptor *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("code")));
 }
 
 
-void GPUShaderModuleDescriptor_set_code(GPUShaderModuleDescriptor* self, jb_USVString * value) {
+void GPUShaderModuleDescriptor_set_code(GPUShaderModuleDescriptor* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("code"), em_Val_from(value));
 }
 
 
-jb_Sequence GPUShaderModuleDescriptor_compilationHints(const GPUShaderModuleDescriptor *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("compilationHints")));
+jb_Array GPUShaderModuleDescriptor_compilationHints(const GPUShaderModuleDescriptor *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("compilationHints")));
 }
 
 
-void GPUShaderModuleDescriptor_set_compilationHints(GPUShaderModuleDescriptor* self, jb_Sequence * value) {
+void GPUShaderModuleDescriptor_set_compilationHints(GPUShaderModuleDescriptor* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("compilationHints"), em_Val_from(value));
 }
 
@@ -564,12 +564,12 @@ void GPUDevice_set_onuncapturederror(GPUDevice* self, jb_Any * value) {
 }
 
 
-jb_USVString GPUDevice_label(const GPUDevice *self) {
-    return em_Val_as(jb_USVString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("label")));
+jb_String GPUDevice_label(const GPUDevice *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void GPUDevice_set_label(GPUDevice* self, jb_USVString * value) {
+void GPUDevice_set_label(GPUDevice* self, jb_String * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 

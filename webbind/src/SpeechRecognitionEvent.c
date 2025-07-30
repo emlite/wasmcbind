@@ -5,7 +5,7 @@
 DEFINE_EMLITE_TYPE(SpeechRecognitionEvent, Event);
 
 
-SpeechRecognitionEvent SpeechRecognitionEvent_new(jb_DOMString * type, jb_Any * eventInitDict) {
+SpeechRecognitionEvent SpeechRecognitionEvent_new(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("SpeechRecognitionEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return SpeechRecognitionEvent_from_val(&vv);
       }

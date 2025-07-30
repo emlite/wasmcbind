@@ -25,9 +25,9 @@ unsigned long HTMLVideoElement_videoWidth(const HTMLVideoElement *self);
 
 unsigned long HTMLVideoElement_videoHeight(const HTMLVideoElement *self);
 
-jb_USVString HTMLVideoElement_poster(const HTMLVideoElement *self);
+jb_String HTMLVideoElement_poster(const HTMLVideoElement *self);
 
-void HTMLVideoElement_set_poster(HTMLVideoElement* self, jb_USVString * value);
+void HTMLVideoElement_set_poster(HTMLVideoElement* self, jb_String * value);
 
 bool HTMLVideoElement_playsInline(const HTMLVideoElement *self);
 

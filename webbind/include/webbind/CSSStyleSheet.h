@@ -20,25 +20,25 @@ CSSRule CSSStyleSheet_ownerRule(const CSSStyleSheet *self);
 
 CSSRuleList CSSStyleSheet_cssRules(const CSSStyleSheet *self);
 
-unsigned long CSSStyleSheet_insertRule0(CSSStyleSheet* self , jb_CSSOMString * rule);
+unsigned long CSSStyleSheet_insertRule0(CSSStyleSheet* self , jb_String * rule);
 
-unsigned long CSSStyleSheet_insertRule1(CSSStyleSheet* self , jb_CSSOMString * rule, unsigned long index);
+unsigned long CSSStyleSheet_insertRule1(CSSStyleSheet* self , jb_String * rule, unsigned long index);
 
 jb_Undefined CSSStyleSheet_deleteRule(CSSStyleSheet* self , unsigned long index);
 
-jb_Promise CSSStyleSheet_replace(CSSStyleSheet* self , jb_USVString * text);
+jb_Promise CSSStyleSheet_replace(CSSStyleSheet* self , jb_String * text);
 
-jb_Undefined CSSStyleSheet_replaceSync(CSSStyleSheet* self , jb_USVString * text);
+jb_Undefined CSSStyleSheet_replaceSync(CSSStyleSheet* self , jb_String * text);
 
 CSSRuleList CSSStyleSheet_rules(const CSSStyleSheet *self);
 
 long CSSStyleSheet_addRule0(CSSStyleSheet* self );
 
-long CSSStyleSheet_addRule1(CSSStyleSheet* self , jb_DOMString * selector);
+long CSSStyleSheet_addRule1(CSSStyleSheet* self , jb_String * selector);
 
-long CSSStyleSheet_addRule2(CSSStyleSheet* self , jb_DOMString * selector, jb_DOMString * style);
+long CSSStyleSheet_addRule2(CSSStyleSheet* self , jb_String * selector, jb_String * style);
 
-long CSSStyleSheet_addRule3(CSSStyleSheet* self , jb_DOMString * selector, jb_DOMString * style, unsigned long index);
+long CSSStyleSheet_addRule3(CSSStyleSheet* self , jb_String * selector, jb_String * style, unsigned long index);
 
 jb_Undefined CSSStyleSheet_removeRule0(CSSStyleSheet* self );
 

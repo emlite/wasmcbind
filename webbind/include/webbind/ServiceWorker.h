@@ -9,7 +9,7 @@
 
 DECLARE_EMLITE_TYPE(ServiceWorker, EventTarget);
 
-jb_USVString ServiceWorker_scriptURL(const ServiceWorker *self);
+jb_String ServiceWorker_scriptURL(const ServiceWorker *self);
 
 ServiceWorkerState ServiceWorker_state(const ServiceWorker *self);
 

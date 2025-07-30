@@ -30,7 +30,7 @@ DECLARE_EMLITE_TYPE(PrivateAggregation, em_Val);
 
 jb_Undefined PrivateAggregation_contributeToHistogram(PrivateAggregation* self , PAHistogramContribution * contribution);
 
-jb_Undefined PrivateAggregation_contributeToHistogramOnEvent(PrivateAggregation* self , jb_DOMString * event, jb_Record * contribution);
+jb_Undefined PrivateAggregation_contributeToHistogramOnEvent(PrivateAggregation* self , jb_String * event, jb_Object * contribution);
 
 jb_Undefined PrivateAggregation_enableDebugMode0(PrivateAggregation* self );
 

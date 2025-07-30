@@ -14,6 +14,6 @@ USBConfiguration USBConfiguration_new(USBDevice * device, unsigned char configur
 
 unsigned char USBConfiguration_configurationValue(const USBConfiguration *self);
 
-jb_DOMString USBConfiguration_configurationName(const USBConfiguration *self);
+jb_String USBConfiguration_configurationName(const USBConfiguration *self);
 
-jb_FrozenArray USBConfiguration_interfaces(const USBConfiguration *self);
+jb_Array USBConfiguration_interfaces(const USBConfiguration *self);

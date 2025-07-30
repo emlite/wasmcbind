@@ -20,9 +20,9 @@ void MathMLElement_set_onbeforexrselect(MathMLElement* self, jb_Any * value);
 
 DOMStringMap MathMLElement_dataset(const MathMLElement *self);
 
-jb_DOMString MathMLElement_nonce(const MathMLElement *self);
+jb_String MathMLElement_nonce(const MathMLElement *self);
 
-void MathMLElement_set_nonce(MathMLElement* self, jb_DOMString * value);
+void MathMLElement_set_nonce(MathMLElement* self, jb_String * value);
 
 bool MathMLElement_autofocus(const MathMLElement *self);
 

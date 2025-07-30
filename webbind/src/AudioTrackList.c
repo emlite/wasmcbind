@@ -10,7 +10,7 @@ unsigned long AudioTrackList_length(const AudioTrackList *self) {
 }
 
 
-AudioTrack AudioTrackList_getTrackById(AudioTrackList* self , jb_DOMString * id) {
+AudioTrack AudioTrackList_getTrackById(AudioTrackList* self , jb_String * id) {
     return em_Val_as(AudioTrack, em_Val_call(EventTarget_as_val(self->inner), "getTrackById", em_Val_from(id)));
 }
 

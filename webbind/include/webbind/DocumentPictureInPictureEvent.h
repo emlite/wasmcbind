@@ -10,6 +10,6 @@ typedef struct Window Window;
 
 DECLARE_EMLITE_TYPE(DocumentPictureInPictureEvent, Event);
 
-DocumentPictureInPictureEvent DocumentPictureInPictureEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+DocumentPictureInPictureEvent DocumentPictureInPictureEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 Window DocumentPictureInPictureEvent_window(const DocumentPictureInPictureEvent *self);

@@ -23,18 +23,18 @@ jb_Any IntersectionObserver_root(const IntersectionObserver *self) {
 }
 
 
-jb_DOMString IntersectionObserver_rootMargin(const IntersectionObserver *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rootMargin")));
+jb_String IntersectionObserver_rootMargin(const IntersectionObserver *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rootMargin")));
 }
 
 
-jb_DOMString IntersectionObserver_scrollMargin(const IntersectionObserver *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("scrollMargin")));
+jb_String IntersectionObserver_scrollMargin(const IntersectionObserver *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("scrollMargin")));
 }
 
 
-jb_FrozenArray IntersectionObserver_thresholds(const IntersectionObserver *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("thresholds")));
+jb_Array IntersectionObserver_thresholds(const IntersectionObserver *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("thresholds")));
 }
 
 
@@ -63,7 +63,7 @@ jb_Undefined IntersectionObserver_disconnect(IntersectionObserver* self ) {
 }
 
 
-jb_Sequence IntersectionObserver_takeRecords(IntersectionObserver* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "takeRecords"));
+jb_Array IntersectionObserver_takeRecords(IntersectionObserver* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "takeRecords"));
 }
 

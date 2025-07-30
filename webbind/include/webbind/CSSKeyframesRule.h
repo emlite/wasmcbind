@@ -11,16 +11,16 @@ typedef struct CSSKeyframeRule CSSKeyframeRule;
 
 DECLARE_EMLITE_TYPE(CSSKeyframesRule, CSSRule);
 
-jb_CSSOMString CSSKeyframesRule_name(const CSSKeyframesRule *self);
+jb_String CSSKeyframesRule_name(const CSSKeyframesRule *self);
 
-void CSSKeyframesRule_set_name(CSSKeyframesRule* self, jb_CSSOMString * value);
+void CSSKeyframesRule_set_name(CSSKeyframesRule* self, jb_String * value);
 
 CSSRuleList CSSKeyframesRule_cssRules(const CSSKeyframesRule *self);
 
 unsigned long CSSKeyframesRule_length(const CSSKeyframesRule *self);
 
-jb_Undefined CSSKeyframesRule_appendRule(CSSKeyframesRule* self , jb_CSSOMString * rule);
+jb_Undefined CSSKeyframesRule_appendRule(CSSKeyframesRule* self , jb_String * rule);
 
-jb_Undefined CSSKeyframesRule_deleteRule(CSSKeyframesRule* self , jb_CSSOMString * select);
+jb_Undefined CSSKeyframesRule_deleteRule(CSSKeyframesRule* self , jb_String * select);
 
-CSSKeyframeRule CSSKeyframesRule_findRule(CSSKeyframesRule* self , jb_CSSOMString * select);
+CSSKeyframeRule CSSKeyframesRule_findRule(CSSKeyframesRule* self , jb_String * select);

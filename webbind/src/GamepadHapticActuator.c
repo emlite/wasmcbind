@@ -66,8 +66,8 @@ void GamepadEffectParameters_set_rightTrigger(GamepadEffectParameters* self, dou
 DEFINE_EMLITE_TYPE(GamepadHapticActuator, em_Val);
 
 
-jb_FrozenArray GamepadHapticActuator_effects(const GamepadHapticActuator *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("effects")));
+jb_Array GamepadHapticActuator_effects(const GamepadHapticActuator *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("effects")));
 }
 
 

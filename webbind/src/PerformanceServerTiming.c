@@ -4,8 +4,8 @@
 DEFINE_EMLITE_TYPE(PerformanceServerTiming, em_Val);
 
 
-jb_DOMString PerformanceServerTiming_name(const PerformanceServerTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String PerformanceServerTiming_name(const PerformanceServerTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
@@ -14,8 +14,8 @@ jb_Any PerformanceServerTiming_duration(const PerformanceServerTiming *self) {
 }
 
 
-jb_DOMString PerformanceServerTiming_description(const PerformanceServerTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("description")));
+jb_String PerformanceServerTiming_description(const PerformanceServerTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("description")));
 }
 
 

@@ -22,9 +22,9 @@ jb_Function WriterCreateOptions_monitor(const WriterCreateOptions *self);
 
 void WriterCreateOptions_set_monitor(WriterCreateOptions* self, jb_Function * value);
 
-jb_DOMString WriterCreateOptions_sharedContext(const WriterCreateOptions *self);
+jb_String WriterCreateOptions_sharedContext(const WriterCreateOptions *self);
 
-void WriterCreateOptions_set_sharedContext(WriterCreateOptions* self, jb_DOMString * value);
+void WriterCreateOptions_set_sharedContext(WriterCreateOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(WriterCreateCoreOptions, em_Val);
 
 WriterTone WriterCreateCoreOptions_tone(const WriterCreateCoreOptions *self);
@@ -39,22 +39,22 @@ WriterLength WriterCreateCoreOptions_length(const WriterCreateCoreOptions *self)
 
 void WriterCreateCoreOptions_set_length(WriterCreateCoreOptions* self, WriterLength * value);
 
-jb_Sequence WriterCreateCoreOptions_expectedInputLanguages(const WriterCreateCoreOptions *self);
+jb_Array WriterCreateCoreOptions_expectedInputLanguages(const WriterCreateCoreOptions *self);
 
-void WriterCreateCoreOptions_set_expectedInputLanguages(WriterCreateCoreOptions* self, jb_Sequence * value);
+void WriterCreateCoreOptions_set_expectedInputLanguages(WriterCreateCoreOptions* self, jb_Array * value);
 
-jb_Sequence WriterCreateCoreOptions_expectedContextLanguages(const WriterCreateCoreOptions *self);
+jb_Array WriterCreateCoreOptions_expectedContextLanguages(const WriterCreateCoreOptions *self);
 
-void WriterCreateCoreOptions_set_expectedContextLanguages(WriterCreateCoreOptions* self, jb_Sequence * value);
+void WriterCreateCoreOptions_set_expectedContextLanguages(WriterCreateCoreOptions* self, jb_Array * value);
 
-jb_DOMString WriterCreateCoreOptions_outputLanguage(const WriterCreateCoreOptions *self);
+jb_String WriterCreateCoreOptions_outputLanguage(const WriterCreateCoreOptions *self);
 
-void WriterCreateCoreOptions_set_outputLanguage(WriterCreateCoreOptions* self, jb_DOMString * value);
+void WriterCreateCoreOptions_set_outputLanguage(WriterCreateCoreOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(WriterWriteOptions, em_Val);
 
-jb_DOMString WriterWriteOptions_context(const WriterWriteOptions *self);
+jb_String WriterWriteOptions_context(const WriterWriteOptions *self);
 
-void WriterWriteOptions_set_context(WriterWriteOptions* self, jb_DOMString * value);
+void WriterWriteOptions_set_context(WriterWriteOptions* self, jb_String * value);
 
 AbortSignal WriterWriteOptions_signal(const WriterWriteOptions *self);
 
@@ -69,15 +69,15 @@ jb_Promise Writer_availability0(Writer* self );
 
 jb_Promise Writer_availability1(Writer* self , WriterCreateCoreOptions * options);
 
-jb_Promise Writer_write0(Writer* self , jb_DOMString * input);
+jb_Promise Writer_write0(Writer* self , jb_String * input);
 
-jb_Promise Writer_write1(Writer* self , jb_DOMString * input, WriterWriteOptions * options);
+jb_Promise Writer_write1(Writer* self , jb_String * input, WriterWriteOptions * options);
 
-ReadableStream Writer_writeStreaming0(Writer* self , jb_DOMString * input);
+ReadableStream Writer_writeStreaming0(Writer* self , jb_String * input);
 
-ReadableStream Writer_writeStreaming1(Writer* self , jb_DOMString * input, WriterWriteOptions * options);
+ReadableStream Writer_writeStreaming1(Writer* self , jb_String * input, WriterWriteOptions * options);
 
-jb_DOMString Writer_sharedContext(const Writer *self);
+jb_String Writer_sharedContext(const Writer *self);
 
 WriterTone Writer_tone(const Writer *self);
 
@@ -85,15 +85,15 @@ WriterFormat Writer_format(const Writer *self);
 
 WriterLength Writer_length(const Writer *self);
 
-jb_FrozenArray Writer_expectedInputLanguages(const Writer *self);
+jb_Array Writer_expectedInputLanguages(const Writer *self);
 
-jb_FrozenArray Writer_expectedContextLanguages(const Writer *self);
+jb_Array Writer_expectedContextLanguages(const Writer *self);
 
-jb_DOMString Writer_outputLanguage(const Writer *self);
+jb_String Writer_outputLanguage(const Writer *self);
 
-jb_Promise Writer_measureInputUsage0(Writer* self , jb_DOMString * input);
+jb_Promise Writer_measureInputUsage0(Writer* self , jb_String * input);
 
-jb_Promise Writer_measureInputUsage1(Writer* self , jb_DOMString * input, WriterWriteOptions * options);
+jb_Promise Writer_measureInputUsage1(Writer* self , jb_String * input, WriterWriteOptions * options);
 
 double Writer_inputQuota(const Writer *self);
 

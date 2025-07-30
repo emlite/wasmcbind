@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(CSSFunctionDescriptors, CSSStyleDeclaration);
 
-jb_CSSOMString CSSFunctionDescriptors_result(const CSSFunctionDescriptors *self);
+jb_String CSSFunctionDescriptors_result(const CSSFunctionDescriptors *self);
 
-void CSSFunctionDescriptors_set_result(CSSFunctionDescriptors* self, jb_CSSOMString * value);
+void CSSFunctionDescriptors_set_result(CSSFunctionDescriptors* self, jb_String * value);

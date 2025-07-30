@@ -13,12 +13,12 @@ HTMLTextAreaElement HTMLTextAreaElement_new() {
       }
 
 
-jb_DOMString HTMLTextAreaElement_autocomplete(const HTMLTextAreaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("autocomplete")));
+jb_String HTMLTextAreaElement_autocomplete(const HTMLTextAreaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("autocomplete")));
 }
 
 
-void HTMLTextAreaElement_set_autocomplete(HTMLTextAreaElement* self, jb_DOMString * value) {
+void HTMLTextAreaElement_set_autocomplete(HTMLTextAreaElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("autocomplete"), em_Val_from(value));
 }
 
@@ -33,12 +33,12 @@ void HTMLTextAreaElement_set_cols(HTMLTextAreaElement* self, unsigned long value
 }
 
 
-jb_DOMString HTMLTextAreaElement_dirName(const HTMLTextAreaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("dirName")));
+jb_String HTMLTextAreaElement_dirName(const HTMLTextAreaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("dirName")));
 }
 
 
-void HTMLTextAreaElement_set_dirName(HTMLTextAreaElement* self, jb_DOMString * value) {
+void HTMLTextAreaElement_set_dirName(HTMLTextAreaElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("dirName"), em_Val_from(value));
 }
 
@@ -78,22 +78,22 @@ void HTMLTextAreaElement_set_minLength(HTMLTextAreaElement* self, long value) {
 }
 
 
-jb_DOMString HTMLTextAreaElement_name(const HTMLTextAreaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLTextAreaElement_name(const HTMLTextAreaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLTextAreaElement_set_name(HTMLTextAreaElement* self, jb_DOMString * value) {
+void HTMLTextAreaElement_set_name(HTMLTextAreaElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTextAreaElement_placeholder(const HTMLTextAreaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("placeholder")));
+jb_String HTMLTextAreaElement_placeholder(const HTMLTextAreaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("placeholder")));
 }
 
 
-void HTMLTextAreaElement_set_placeholder(HTMLTextAreaElement* self, jb_DOMString * value) {
+void HTMLTextAreaElement_set_placeholder(HTMLTextAreaElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("placeholder"), em_Val_from(value));
 }
 
@@ -128,37 +128,37 @@ void HTMLTextAreaElement_set_rows(HTMLTextAreaElement* self, unsigned long value
 }
 
 
-jb_DOMString HTMLTextAreaElement_wrap(const HTMLTextAreaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("wrap")));
+jb_String HTMLTextAreaElement_wrap(const HTMLTextAreaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("wrap")));
 }
 
 
-void HTMLTextAreaElement_set_wrap(HTMLTextAreaElement* self, jb_DOMString * value) {
+void HTMLTextAreaElement_set_wrap(HTMLTextAreaElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("wrap"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTextAreaElement_type(const HTMLTextAreaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
+jb_String HTMLTextAreaElement_type(const HTMLTextAreaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-jb_DOMString HTMLTextAreaElement_defaultValue(const HTMLTextAreaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("defaultValue")));
+jb_String HTMLTextAreaElement_defaultValue(const HTMLTextAreaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("defaultValue")));
 }
 
 
-void HTMLTextAreaElement_set_defaultValue(HTMLTextAreaElement* self, jb_DOMString * value) {
+void HTMLTextAreaElement_set_defaultValue(HTMLTextAreaElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("defaultValue"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTextAreaElement_value(const HTMLTextAreaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
+jb_String HTMLTextAreaElement_value(const HTMLTextAreaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
 }
 
 
-void HTMLTextAreaElement_set_value(HTMLTextAreaElement* self, jb_DOMString * value) {
+void HTMLTextAreaElement_set_value(HTMLTextAreaElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
 }
 
@@ -178,8 +178,8 @@ ValidityState HTMLTextAreaElement_validity(const HTMLTextAreaElement *self) {
 }
 
 
-jb_DOMString HTMLTextAreaElement_validationMessage(const HTMLTextAreaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
+jb_String HTMLTextAreaElement_validationMessage(const HTMLTextAreaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
 }
 
 
@@ -193,7 +193,7 @@ bool HTMLTextAreaElement_reportValidity(HTMLTextAreaElement* self ) {
 }
 
 
-jb_Undefined HTMLTextAreaElement_setCustomValidity(HTMLTextAreaElement* self , jb_DOMString * error) {
+jb_Undefined HTMLTextAreaElement_setCustomValidity(HTMLTextAreaElement* self , jb_String * error) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setCustomValidity", em_Val_from(error)));
 }
 
@@ -228,22 +228,22 @@ void HTMLTextAreaElement_set_selectionEnd(HTMLTextAreaElement* self, unsigned lo
 }
 
 
-jb_DOMString HTMLTextAreaElement_selectionDirection(const HTMLTextAreaElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("selectionDirection")));
+jb_String HTMLTextAreaElement_selectionDirection(const HTMLTextAreaElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("selectionDirection")));
 }
 
 
-void HTMLTextAreaElement_set_selectionDirection(HTMLTextAreaElement* self, jb_DOMString * value) {
+void HTMLTextAreaElement_set_selectionDirection(HTMLTextAreaElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("selectionDirection"), em_Val_from(value));
 }
 
 
-jb_Undefined HTMLTextAreaElement_setRangeText0(HTMLTextAreaElement* self , jb_DOMString * replacement, unsigned long start, unsigned long end) {
+jb_Undefined HTMLTextAreaElement_setRangeText0(HTMLTextAreaElement* self , jb_String * replacement, unsigned long start, unsigned long end) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setRangeText", em_Val_from(replacement), em_Val_from(start), em_Val_from(end)));
 }
 
 
-jb_Undefined HTMLTextAreaElement_setRangeText1(HTMLTextAreaElement* self , jb_DOMString * replacement, unsigned long start, unsigned long end, SelectionMode * selectionMode) {
+jb_Undefined HTMLTextAreaElement_setRangeText1(HTMLTextAreaElement* self , jb_String * replacement, unsigned long start, unsigned long end, SelectionMode * selectionMode) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setRangeText", em_Val_from(replacement), em_Val_from(start), em_Val_from(end), em_Val_from(selectionMode)));
 }
 
@@ -253,7 +253,7 @@ jb_Undefined HTMLTextAreaElement_setSelectionRange0(HTMLTextAreaElement* self , 
 }
 
 
-jb_Undefined HTMLTextAreaElement_setSelectionRange1(HTMLTextAreaElement* self , unsigned long start, unsigned long end, jb_DOMString * direction) {
+jb_Undefined HTMLTextAreaElement_setSelectionRange1(HTMLTextAreaElement* self , unsigned long start, unsigned long end, jb_String * direction) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setSelectionRange", em_Val_from(start), em_Val_from(end), em_Val_from(direction)));
 }
 

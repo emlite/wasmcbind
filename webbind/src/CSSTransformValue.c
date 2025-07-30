@@ -6,7 +6,7 @@
 DEFINE_EMLITE_TYPE(CSSTransformValue, CSSStyleValue);
 
 
-CSSTransformValue CSSTransformValue_new(jb_Sequence * transforms) {
+CSSTransformValue CSSTransformValue_new(jb_Array * transforms) {
         em_Val vv = em_Val_new(em_Val_global("CSSTransformValue") , em_Val_from(transforms));
         return CSSTransformValue_from_val(&vv);
       }

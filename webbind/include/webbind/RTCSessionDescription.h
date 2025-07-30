@@ -12,6 +12,6 @@ RTCSessionDescription RTCSessionDescription_new(RTCSessionDescriptionInit * desc
 
 RTCSdpType RTCSessionDescription_type(const RTCSessionDescription *self);
 
-jb_DOMString RTCSessionDescription_sdp(const RTCSessionDescription *self);
+jb_String RTCSessionDescription_sdp(const RTCSessionDescription *self);
 
 RTCSessionDescriptionInit RTCSessionDescription_toJSON(RTCSessionDescription* self );

@@ -12,7 +12,7 @@ typedef struct FileSystemDirectoryHandle FileSystemDirectoryHandle;
 
 DECLARE_EMLITE_TYPE(StorageBucket, em_Val);
 
-jb_DOMString StorageBucket_name(const StorageBucket *self);
+jb_String StorageBucket_name(const StorageBucket *self);
 
 jb_Promise StorageBucket_persist(StorageBucket* self );
 

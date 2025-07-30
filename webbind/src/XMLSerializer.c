@@ -11,7 +11,7 @@ XMLSerializer XMLSerializer_new() {
       }
 
 
-jb_DOMString XMLSerializer_serializeToString(XMLSerializer* self , Node * root) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "serializeToString", em_Val_from(root)));
+jb_String XMLSerializer_serializeToString(XMLSerializer* self , Node * root) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "serializeToString", em_Val_from(root)));
 }
 

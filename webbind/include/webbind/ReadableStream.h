@@ -71,4 +71,4 @@ jb_Promise ReadableStream_pipeTo0(ReadableStream* self , WritableStream * destin
 
 jb_Promise ReadableStream_pipeTo1(ReadableStream* self , WritableStream * destination, StreamPipeOptions * options);
 
-jb_Sequence ReadableStream_tee(ReadableStream* self );
+jb_Array ReadableStream_tee(ReadableStream* self );

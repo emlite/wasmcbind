@@ -23,9 +23,9 @@ jb_Any GPUCanvasConfiguration_usage(const GPUCanvasConfiguration *self);
 
 void GPUCanvasConfiguration_set_usage(GPUCanvasConfiguration* self, jb_Any * value);
 
-jb_Sequence GPUCanvasConfiguration_viewFormats(const GPUCanvasConfiguration *self);
+jb_Array GPUCanvasConfiguration_viewFormats(const GPUCanvasConfiguration *self);
 
-void GPUCanvasConfiguration_set_viewFormats(GPUCanvasConfiguration* self, jb_Sequence * value);
+void GPUCanvasConfiguration_set_viewFormats(GPUCanvasConfiguration* self, jb_Array * value);
 
 PredefinedColorSpace GPUCanvasConfiguration_colorSpace(const GPUCanvasConfiguration *self);
 

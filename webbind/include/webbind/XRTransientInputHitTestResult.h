@@ -12,4 +12,4 @@ DECLARE_EMLITE_TYPE(XRTransientInputHitTestResult, em_Val);
 
 XRInputSource XRTransientInputHitTestResult_inputSource(const XRTransientInputHitTestResult *self);
 
-jb_FrozenArray XRTransientInputHitTestResult_results(const XRTransientInputHitTestResult *self);
+jb_Array XRTransientInputHitTestResult_results(const XRTransientInputHitTestResult *self);

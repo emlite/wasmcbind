@@ -41,9 +41,9 @@ SVGUseElement SVGElement_correspondingUseElement(const SVGElement *self);
 
 DOMStringMap SVGElement_dataset(const SVGElement *self);
 
-jb_DOMString SVGElement_nonce(const SVGElement *self);
+jb_String SVGElement_nonce(const SVGElement *self);
 
-void SVGElement_set_nonce(SVGElement* self, jb_DOMString * value);
+void SVGElement_set_nonce(SVGElement* self, jb_String * value);
 
 bool SVGElement_autofocus(const SVGElement *self);
 

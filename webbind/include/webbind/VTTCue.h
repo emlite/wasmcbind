@@ -11,7 +11,7 @@ typedef struct DocumentFragment DocumentFragment;
 
 DECLARE_EMLITE_TYPE(VTTCue, TextTrackCue);
 
-VTTCue VTTCue_new(double startTime, double endTime, jb_DOMString * text);
+VTTCue VTTCue_new(double startTime, double endTime, jb_String * text);
 
 VTTRegion VTTCue_region(const VTTCue *self);
 
@@ -49,8 +49,8 @@ AlignSetting VTTCue_align(const VTTCue *self);
 
 void VTTCue_set_align(VTTCue* self, AlignSetting * value);
 
-jb_DOMString VTTCue_text(const VTTCue *self);
+jb_String VTTCue_text(const VTTCue *self);
 
-void VTTCue_set_text(VTTCue* self, jb_DOMString * value);
+void VTTCue_set_text(VTTCue* self, jb_String * value);
 
 DocumentFragment VTTCue_getCueAsHTML(VTTCue* self );

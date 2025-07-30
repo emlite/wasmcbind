@@ -56,8 +56,8 @@ ImageDecoder ImageDecoder_new(jb_Any * init) {
       }
 
 
-jb_DOMString ImageDecoder_type(const ImageDecoder *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
+jb_String ImageDecoder_type(const ImageDecoder *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
@@ -96,7 +96,7 @@ jb_Undefined ImageDecoder_close(ImageDecoder* self ) {
 }
 
 
-jb_Promise ImageDecoder_isTypeSupported(ImageDecoder* self , jb_DOMString * type) {
+jb_Promise ImageDecoder_isTypeSupported(ImageDecoder* self , jb_String * type) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_global("imagedecoder"), "isTypeSupported", em_Val_from(type)));
 }
 

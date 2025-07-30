@@ -10,22 +10,22 @@ HTMLHRElement HTMLHRElement_new() {
       }
 
 
-jb_DOMString HTMLHRElement_align(const HTMLHRElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
+jb_String HTMLHRElement_align(const HTMLHRElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLHRElement_set_align(HTMLHRElement* self, jb_DOMString * value) {
+void HTMLHRElement_set_align(HTMLHRElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLHRElement_color(const HTMLHRElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("color")));
+jb_String HTMLHRElement_color(const HTMLHRElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("color")));
 }
 
 
-void HTMLHRElement_set_color(HTMLHRElement* self, jb_DOMString * value) {
+void HTMLHRElement_set_color(HTMLHRElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("color"), em_Val_from(value));
 }
 
@@ -40,22 +40,22 @@ void HTMLHRElement_set_noShade(HTMLHRElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLHRElement_size(const HTMLHRElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("size")));
+jb_String HTMLHRElement_size(const HTMLHRElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("size")));
 }
 
 
-void HTMLHRElement_set_size(HTMLHRElement* self, jb_DOMString * value) {
+void HTMLHRElement_set_size(HTMLHRElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("size"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLHRElement_width(const HTMLHRElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
+jb_String HTMLHRElement_width(const HTMLHRElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
-void HTMLHRElement_set_width(HTMLHRElement* self, jb_DOMString * value) {
+void HTMLHRElement_set_width(HTMLHRElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 

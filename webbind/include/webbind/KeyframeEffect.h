@@ -16,15 +16,15 @@ Element KeyframeEffect_target(const KeyframeEffect *self);
 
 void KeyframeEffect_set_target(KeyframeEffect* self, Element * value);
 
-jb_CSSOMString KeyframeEffect_pseudoElement(const KeyframeEffect *self);
+jb_String KeyframeEffect_pseudoElement(const KeyframeEffect *self);
 
-void KeyframeEffect_set_pseudoElement(KeyframeEffect* self, jb_CSSOMString * value);
+void KeyframeEffect_set_pseudoElement(KeyframeEffect* self, jb_String * value);
 
 CompositeOperation KeyframeEffect_composite(const KeyframeEffect *self);
 
 void KeyframeEffect_set_composite(KeyframeEffect* self, CompositeOperation * value);
 
-jb_Sequence KeyframeEffect_getKeyframes(KeyframeEffect* self );
+jb_Array KeyframeEffect_getKeyframes(KeyframeEffect* self );
 
 jb_Undefined KeyframeEffect_setKeyframes(KeyframeEffect* self , jb_Object * keyframes);
 

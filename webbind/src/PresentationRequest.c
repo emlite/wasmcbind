@@ -6,7 +6,7 @@
 DEFINE_EMLITE_TYPE(PresentationRequest, EventTarget);
 
 
-PresentationRequest PresentationRequest_new(jb_Sequence * urls) {
+PresentationRequest PresentationRequest_new(jb_Array * urls) {
         em_Val vv = em_Val_new(em_Val_global("PresentationRequest") , em_Val_from(urls));
         return PresentationRequest_from_val(&vv);
       }
@@ -17,7 +17,7 @@ jb_Promise PresentationRequest_start(PresentationRequest* self ) {
 }
 
 
-jb_Promise PresentationRequest_reconnect(PresentationRequest* self , jb_USVString * presentationId) {
+jb_Promise PresentationRequest_reconnect(PresentationRequest* self , jb_String * presentationId) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "reconnect", em_Val_from(presentationId)));
 }
 

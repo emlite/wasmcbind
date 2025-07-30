@@ -64,12 +64,12 @@ void XRRenderStateInit_set_baseLayer(XRRenderStateInit* self, XRWebGLLayer * val
 }
 
 
-jb_Sequence XRRenderStateInit_layers(const XRRenderStateInit *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("layers")));
+jb_Array XRRenderStateInit_layers(const XRRenderStateInit *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("layers")));
 }
 
 
-void XRRenderStateInit_set_layers(XRRenderStateInit* self, jb_Sequence * value) {
+void XRRenderStateInit_set_layers(XRRenderStateInit* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("layers"), em_Val_from(value));
 }
 
@@ -98,12 +98,12 @@ void XRHitTestOptionsInit_set_space(XRHitTestOptionsInit* self, XRSpace * value)
 }
 
 
-jb_Sequence XRHitTestOptionsInit_entityTypes(const XRHitTestOptionsInit *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entityTypes")));
+jb_Array XRHitTestOptionsInit_entityTypes(const XRHitTestOptionsInit *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entityTypes")));
 }
 
 
-void XRHitTestOptionsInit_set_entityTypes(XRHitTestOptionsInit* self, jb_Sequence * value) {
+void XRHitTestOptionsInit_set_entityTypes(XRHitTestOptionsInit* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("entityTypes"), em_Val_from(value));
 }
 
@@ -120,22 +120,22 @@ void XRHitTestOptionsInit_set_offsetRay(XRHitTestOptionsInit* self, XRRay * valu
 DEFINE_EMLITE_TYPE(XRTransientInputHitTestOptionsInit, em_Val);
 
 
-jb_DOMString XRTransientInputHitTestOptionsInit_profile(const XRTransientInputHitTestOptionsInit *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("profile")));
+jb_String XRTransientInputHitTestOptionsInit_profile(const XRTransientInputHitTestOptionsInit *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("profile")));
 }
 
 
-void XRTransientInputHitTestOptionsInit_set_profile(XRTransientInputHitTestOptionsInit* self, jb_DOMString * value) {
+void XRTransientInputHitTestOptionsInit_set_profile(XRTransientInputHitTestOptionsInit* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("profile"), em_Val_from(value));
 }
 
 
-jb_Sequence XRTransientInputHitTestOptionsInit_entityTypes(const XRTransientInputHitTestOptionsInit *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entityTypes")));
+jb_Array XRTransientInputHitTestOptionsInit_entityTypes(const XRTransientInputHitTestOptionsInit *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("entityTypes")));
 }
 
 
-void XRTransientInputHitTestOptionsInit_set_entityTypes(XRTransientInputHitTestOptionsInit* self, jb_Sequence * value) {
+void XRTransientInputHitTestOptionsInit_set_entityTypes(XRTransientInputHitTestOptionsInit* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("entityTypes"), em_Val_from(value));
 }
 
@@ -194,8 +194,8 @@ XRInputSourceArray XRSession_trackedSources(const XRSession *self) {
 }
 
 
-jb_FrozenArray XRSession_enabledFeatures(const XRSession *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("enabledFeatures")));
+jb_Array XRSession_enabledFeatures(const XRSession *self) {
+    return em_Val_as(jb_Array, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("enabledFeatures")));
 }
 
 
@@ -339,17 +339,17 @@ void XRSession_set_onframeratechange(XRSession* self, jb_Any * value) {
 }
 
 
-jb_FrozenArray XRSession_persistentAnchors(const XRSession *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("persistentAnchors")));
+jb_Array XRSession_persistentAnchors(const XRSession *self) {
+    return em_Val_as(jb_Array, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("persistentAnchors")));
 }
 
 
-jb_Promise XRSession_restorePersistentAnchor(XRSession* self , jb_DOMString * uuid) {
+jb_Promise XRSession_restorePersistentAnchor(XRSession* self , jb_String * uuid) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "restorePersistentAnchor", em_Val_from(uuid)));
 }
 
 
-jb_Promise XRSession_deletePersistentAnchor(XRSession* self , jb_DOMString * uuid) {
+jb_Promise XRSession_deletePersistentAnchor(XRSession* self , jb_String * uuid) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "deletePersistentAnchor", em_Val_from(uuid)));
 }
 

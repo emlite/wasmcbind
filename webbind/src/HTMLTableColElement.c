@@ -20,52 +20,52 @@ void HTMLTableColElement_set_span(HTMLTableColElement* self, unsigned long value
 }
 
 
-jb_DOMString HTMLTableColElement_align(const HTMLTableColElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
+jb_String HTMLTableColElement_align(const HTMLTableColElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLTableColElement_set_align(HTMLTableColElement* self, jb_DOMString * value) {
+void HTMLTableColElement_set_align(HTMLTableColElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableColElement_ch(const HTMLTableColElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("ch")));
+jb_String HTMLTableColElement_ch(const HTMLTableColElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("ch")));
 }
 
 
-void HTMLTableColElement_set_ch(HTMLTableColElement* self, jb_DOMString * value) {
+void HTMLTableColElement_set_ch(HTMLTableColElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("ch"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableColElement_chOff(const HTMLTableColElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("chOff")));
+jb_String HTMLTableColElement_chOff(const HTMLTableColElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("chOff")));
 }
 
 
-void HTMLTableColElement_set_chOff(HTMLTableColElement* self, jb_DOMString * value) {
+void HTMLTableColElement_set_chOff(HTMLTableColElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("chOff"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableColElement_vAlign(const HTMLTableColElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("vAlign")));
+jb_String HTMLTableColElement_vAlign(const HTMLTableColElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("vAlign")));
 }
 
 
-void HTMLTableColElement_set_vAlign(HTMLTableColElement* self, jb_DOMString * value) {
+void HTMLTableColElement_set_vAlign(HTMLTableColElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("vAlign"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableColElement_width(const HTMLTableColElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
+jb_String HTMLTableColElement_width(const HTMLTableColElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
-void HTMLTableColElement_set_width(HTMLTableColElement* self, jb_DOMString * value) {
+void HTMLTableColElement_set_width(HTMLTableColElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 

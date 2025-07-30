@@ -10,21 +10,21 @@ typedef struct ProfilerTrace ProfilerTrace;
 
 DECLARE_EMLITE_TYPE(ProfilerTrace, em_Val);
 
-jb_Sequence ProfilerTrace_resources(const ProfilerTrace *self);
+jb_Array ProfilerTrace_resources(const ProfilerTrace *self);
 
-void ProfilerTrace_set_resources(ProfilerTrace* self, jb_Sequence * value);
+void ProfilerTrace_set_resources(ProfilerTrace* self, jb_Array * value);
 
-jb_Sequence ProfilerTrace_frames(const ProfilerTrace *self);
+jb_Array ProfilerTrace_frames(const ProfilerTrace *self);
 
-void ProfilerTrace_set_frames(ProfilerTrace* self, jb_Sequence * value);
+void ProfilerTrace_set_frames(ProfilerTrace* self, jb_Array * value);
 
-jb_Sequence ProfilerTrace_stacks(const ProfilerTrace *self);
+jb_Array ProfilerTrace_stacks(const ProfilerTrace *self);
 
-void ProfilerTrace_set_stacks(ProfilerTrace* self, jb_Sequence * value);
+void ProfilerTrace_set_stacks(ProfilerTrace* self, jb_Array * value);
 
-jb_Sequence ProfilerTrace_samples(const ProfilerTrace *self);
+jb_Array ProfilerTrace_samples(const ProfilerTrace *self);
 
-void ProfilerTrace_set_samples(ProfilerTrace* self, jb_Sequence * value);
+void ProfilerTrace_set_samples(ProfilerTrace* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(Profiler, EventTarget);
 
 jb_Any Profiler_sampleInterval(const Profiler *self);

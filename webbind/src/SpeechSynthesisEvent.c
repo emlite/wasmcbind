@@ -5,7 +5,7 @@
 DEFINE_EMLITE_TYPE(SpeechSynthesisEvent, Event);
 
 
-SpeechSynthesisEvent SpeechSynthesisEvent_new(jb_DOMString * type, jb_Any * eventInitDict) {
+SpeechSynthesisEvent SpeechSynthesisEvent_new(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("SpeechSynthesisEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return SpeechSynthesisEvent_from_val(&vv);
       }
@@ -31,7 +31,7 @@ float SpeechSynthesisEvent_elapsedTime(const SpeechSynthesisEvent *self) {
 }
 
 
-jb_DOMString SpeechSynthesisEvent_name(const SpeechSynthesisEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("name")));
+jb_String SpeechSynthesisEvent_name(const SpeechSynthesisEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("name")));
 }
 

@@ -10,15 +10,15 @@ typedef struct MIDIPort MIDIPort;
 
 DECLARE_EMLITE_TYPE(MIDIPort, EventTarget);
 
-jb_DOMString MIDIPort_id(const MIDIPort *self);
+jb_String MIDIPort_id(const MIDIPort *self);
 
-jb_DOMString MIDIPort_manufacturer(const MIDIPort *self);
+jb_String MIDIPort_manufacturer(const MIDIPort *self);
 
-jb_DOMString MIDIPort_name(const MIDIPort *self);
+jb_String MIDIPort_name(const MIDIPort *self);
 
 MIDIPortType MIDIPort_type(const MIDIPort *self);
 
-jb_DOMString MIDIPort_version(const MIDIPort *self);
+jb_String MIDIPort_version(const MIDIPort *self);
 
 MIDIPortDeviceState MIDIPort_state(const MIDIPort *self);
 

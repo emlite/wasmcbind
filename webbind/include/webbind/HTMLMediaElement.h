@@ -20,31 +20,31 @@ DECLARE_EMLITE_TYPE(HTMLMediaElement, HTMLElement);
 
 MediaError HTMLMediaElement_error(const HTMLMediaElement *self);
 
-jb_USVString HTMLMediaElement_src(const HTMLMediaElement *self);
+jb_String HTMLMediaElement_src(const HTMLMediaElement *self);
 
-void HTMLMediaElement_set_src(HTMLMediaElement* self, jb_USVString * value);
+void HTMLMediaElement_set_src(HTMLMediaElement* self, jb_String * value);
 
 jb_Any HTMLMediaElement_srcObject(const HTMLMediaElement *self);
 
 void HTMLMediaElement_set_srcObject(HTMLMediaElement* self, jb_Any * value);
 
-jb_USVString HTMLMediaElement_currentSrc(const HTMLMediaElement *self);
+jb_String HTMLMediaElement_currentSrc(const HTMLMediaElement *self);
 
-jb_DOMString HTMLMediaElement_crossOrigin(const HTMLMediaElement *self);
+jb_String HTMLMediaElement_crossOrigin(const HTMLMediaElement *self);
 
-void HTMLMediaElement_set_crossOrigin(HTMLMediaElement* self, jb_DOMString * value);
+void HTMLMediaElement_set_crossOrigin(HTMLMediaElement* self, jb_String * value);
 
 unsigned short HTMLMediaElement_networkState(const HTMLMediaElement *self);
 
-jb_DOMString HTMLMediaElement_preload(const HTMLMediaElement *self);
+jb_String HTMLMediaElement_preload(const HTMLMediaElement *self);
 
-void HTMLMediaElement_set_preload(HTMLMediaElement* self, jb_DOMString * value);
+void HTMLMediaElement_set_preload(HTMLMediaElement* self, jb_String * value);
 
 TimeRanges HTMLMediaElement_buffered(const HTMLMediaElement *self);
 
 jb_Undefined HTMLMediaElement_load(HTMLMediaElement* self );
 
-CanPlayTypeResult HTMLMediaElement_canPlayType(HTMLMediaElement* self , jb_DOMString * type);
+CanPlayTypeResult HTMLMediaElement_canPlayType(HTMLMediaElement* self , jb_String * type);
 
 unsigned short HTMLMediaElement_readyState(const HTMLMediaElement *self);
 
@@ -116,13 +116,13 @@ TextTrackList HTMLMediaElement_textTracks(const HTMLMediaElement *self);
 
 TextTrack HTMLMediaElement_addTextTrack0(HTMLMediaElement* self , TextTrackKind * kind);
 
-TextTrack HTMLMediaElement_addTextTrack1(HTMLMediaElement* self , TextTrackKind * kind, jb_DOMString * label);
+TextTrack HTMLMediaElement_addTextTrack1(HTMLMediaElement* self , TextTrackKind * kind, jb_String * label);
 
-TextTrack HTMLMediaElement_addTextTrack2(HTMLMediaElement* self , TextTrackKind * kind, jb_DOMString * label, jb_DOMString * language);
+TextTrack HTMLMediaElement_addTextTrack2(HTMLMediaElement* self , TextTrackKind * kind, jb_String * label, jb_String * language);
 
-jb_DOMString HTMLMediaElement_sinkId(const HTMLMediaElement *self);
+jb_String HTMLMediaElement_sinkId(const HTMLMediaElement *self);
 
-jb_Promise HTMLMediaElement_setSinkId(HTMLMediaElement* self , jb_DOMString * sinkId);
+jb_Promise HTMLMediaElement_setSinkId(HTMLMediaElement* self , jb_String * sinkId);
 
 MediaKeys HTMLMediaElement_mediaKeys(const HTMLMediaElement *self);
 

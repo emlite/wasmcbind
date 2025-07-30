@@ -22,22 +22,22 @@ void HTMLFencedFrameElement_set_config(HTMLFencedFrameElement* self, FencedFrame
 }
 
 
-jb_DOMString HTMLFencedFrameElement_width(const HTMLFencedFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
+jb_String HTMLFencedFrameElement_width(const HTMLFencedFrameElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
-void HTMLFencedFrameElement_set_width(HTMLFencedFrameElement* self, jb_DOMString * value) {
+void HTMLFencedFrameElement_set_width(HTMLFencedFrameElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLFencedFrameElement_height(const HTMLFencedFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
+jb_String HTMLFencedFrameElement_height(const HTMLFencedFrameElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
-void HTMLFencedFrameElement_set_height(HTMLFencedFrameElement* self, jb_DOMString * value) {
+void HTMLFencedFrameElement_set_height(HTMLFencedFrameElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("height"), em_Val_from(value));
 }
 
@@ -47,12 +47,12 @@ DOMTokenList HTMLFencedFrameElement_sandbox(const HTMLFencedFrameElement *self) 
 }
 
 
-jb_DOMString HTMLFencedFrameElement_allow(const HTMLFencedFrameElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("allow")));
+jb_String HTMLFencedFrameElement_allow(const HTMLFencedFrameElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("allow")));
 }
 
 
-void HTMLFencedFrameElement_set_allow(HTMLFencedFrameElement* self, jb_DOMString * value) {
+void HTMLFencedFrameElement_set_allow(HTMLFencedFrameElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("allow"), em_Val_from(value));
 }
 

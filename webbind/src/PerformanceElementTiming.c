@@ -21,8 +21,8 @@ DOMRectReadOnly PerformanceElementTiming_intersectionRect(const PerformanceEleme
 }
 
 
-jb_DOMString PerformanceElementTiming_identifier(const PerformanceElementTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("identifier")));
+jb_String PerformanceElementTiming_identifier(const PerformanceElementTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("identifier")));
 }
 
 
@@ -36,8 +36,8 @@ unsigned long PerformanceElementTiming_naturalHeight(const PerformanceElementTim
 }
 
 
-jb_DOMString PerformanceElementTiming_id(const PerformanceElementTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("id")));
+jb_String PerformanceElementTiming_id(const PerformanceElementTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("id")));
 }
 
 
@@ -46,8 +46,8 @@ Element PerformanceElementTiming_element(const PerformanceElementTiming *self) {
 }
 
 
-jb_USVString PerformanceElementTiming_url(const PerformanceElementTiming *self) {
-    return em_Val_as(jb_USVString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("url")));
+jb_String PerformanceElementTiming_url(const PerformanceElementTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("url")));
 }
 
 

@@ -7,12 +7,12 @@
 DEFINE_EMLITE_TYPE(PaymentDetailsUpdate, em_Val);
 
 
-jb_DOMString PaymentDetailsUpdate_error(const PaymentDetailsUpdate *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("error")));
+jb_String PaymentDetailsUpdate_error(const PaymentDetailsUpdate *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("error")));
 }
 
 
-void PaymentDetailsUpdate_set_error(PaymentDetailsUpdate* self, jb_DOMString * value) {
+void PaymentDetailsUpdate_set_error(PaymentDetailsUpdate* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("error"), em_Val_from(value));
 }
 
@@ -59,13 +59,13 @@ void PaymentDetailsUpdate_set_paymentMethodErrors(PaymentDetailsUpdate* self, jb
 DEFINE_EMLITE_TYPE(PaymentRequest, EventTarget);
 
 
-PaymentRequest PaymentRequest_new0(jb_Sequence * methodData, jb_Any * details) {
+PaymentRequest PaymentRequest_new0(jb_Array * methodData, jb_Any * details) {
         em_Val vv = em_Val_new(em_Val_global("PaymentRequest") , em_Val_from(methodData), em_Val_from(details));
         return PaymentRequest_from_val(&vv);
       }
 
 
-PaymentRequest PaymentRequest_new1(jb_Sequence * methodData, jb_Any * details, jb_Any * options) {
+PaymentRequest PaymentRequest_new1(jb_Array * methodData, jb_Any * details, jb_Any * options) {
         em_Val vv = em_Val_new(em_Val_global("PaymentRequest") , em_Val_from(methodData), em_Val_from(details), em_Val_from(options));
         return PaymentRequest_from_val(&vv);
       }
@@ -91,8 +91,8 @@ jb_Promise PaymentRequest_canMakePayment(PaymentRequest* self ) {
 }
 
 
-jb_DOMString PaymentRequest_id(const PaymentRequest *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
+jb_String PaymentRequest_id(const PaymentRequest *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
@@ -101,8 +101,8 @@ ContactAddress PaymentRequest_shippingAddress(const PaymentRequest *self) {
 }
 
 
-jb_DOMString PaymentRequest_shippingOption(const PaymentRequest *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("shippingOption")));
+jb_String PaymentRequest_shippingOption(const PaymentRequest *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("shippingOption")));
 }
 
 

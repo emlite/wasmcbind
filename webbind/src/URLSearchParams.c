@@ -21,42 +21,42 @@ unsigned long URLSearchParams_size(const URLSearchParams *self) {
 }
 
 
-jb_Undefined URLSearchParams_append(URLSearchParams* self , jb_USVString * name, jb_USVString * value) {
+jb_Undefined URLSearchParams_append(URLSearchParams* self , jb_String * name, jb_String * value) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "append", em_Val_from(name), em_Val_from(value)));
 }
 
 
-jb_Undefined URLSearchParams_delete_0(URLSearchParams* self , jb_USVString * name) {
+jb_Undefined URLSearchParams_delete_0(URLSearchParams* self , jb_String * name) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "delete", em_Val_from(name)));
 }
 
 
-jb_Undefined URLSearchParams_delete_1(URLSearchParams* self , jb_USVString * name, jb_USVString * value) {
+jb_Undefined URLSearchParams_delete_1(URLSearchParams* self , jb_String * name, jb_String * value) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "delete", em_Val_from(name), em_Val_from(value)));
 }
 
 
-jb_USVString URLSearchParams_get(URLSearchParams* self , jb_USVString * name) {
-    return em_Val_as(jb_USVString, em_Val_call(em_Val_as_val(self->inner), "get", em_Val_from(name)));
+jb_String URLSearchParams_get(URLSearchParams* self , jb_String * name) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "get", em_Val_from(name)));
 }
 
 
-jb_Sequence URLSearchParams_getAll(URLSearchParams* self , jb_USVString * name) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getAll", em_Val_from(name)));
+jb_Array URLSearchParams_getAll(URLSearchParams* self , jb_String * name) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getAll", em_Val_from(name)));
 }
 
 
-bool URLSearchParams_has0(URLSearchParams* self , jb_USVString * name) {
+bool URLSearchParams_has0(URLSearchParams* self , jb_String * name) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "has", em_Val_from(name)));
 }
 
 
-bool URLSearchParams_has1(URLSearchParams* self , jb_USVString * name, jb_USVString * value) {
+bool URLSearchParams_has1(URLSearchParams* self , jb_String * name, jb_String * value) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "has", em_Val_from(name), em_Val_from(value)));
 }
 
 
-jb_Undefined URLSearchParams_set(URLSearchParams* self , jb_USVString * name, jb_USVString * value) {
+jb_Undefined URLSearchParams_set(URLSearchParams* self , jb_String * name, jb_String * value) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "set", em_Val_from(name), em_Val_from(value)));
 }
 

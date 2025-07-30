@@ -67,9 +67,9 @@ double MLBatchNormalizationOptions_epsilon(const MLBatchNormalizationOptions *se
 void MLBatchNormalizationOptions_set_epsilon(MLBatchNormalizationOptions* self, double value);
 DECLARE_EMLITE_TYPE(MLOperatorOptions, em_Val);
 
-jb_USVString MLOperatorOptions_label(const MLOperatorOptions *self);
+jb_String MLOperatorOptions_label(const MLOperatorOptions *self);
 
-void MLOperatorOptions_set_label(MLOperatorOptions* self, jb_USVString * value);
+void MLOperatorOptions_set_label(MLOperatorOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(MLClampOptions, em_Val);
 
 jb_Any MLClampOptions_minValue(const MLClampOptions *self);
@@ -81,17 +81,17 @@ jb_Any MLClampOptions_maxValue(const MLClampOptions *self);
 void MLClampOptions_set_maxValue(MLClampOptions* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(MLConv2dOptions, em_Val);
 
-jb_Sequence MLConv2dOptions_padding(const MLConv2dOptions *self);
+jb_Array MLConv2dOptions_padding(const MLConv2dOptions *self);
 
-void MLConv2dOptions_set_padding(MLConv2dOptions* self, jb_Sequence * value);
+void MLConv2dOptions_set_padding(MLConv2dOptions* self, jb_Array * value);
 
-jb_Sequence MLConv2dOptions_strides(const MLConv2dOptions *self);
+jb_Array MLConv2dOptions_strides(const MLConv2dOptions *self);
 
-void MLConv2dOptions_set_strides(MLConv2dOptions* self, jb_Sequence * value);
+void MLConv2dOptions_set_strides(MLConv2dOptions* self, jb_Array * value);
 
-jb_Sequence MLConv2dOptions_dilations(const MLConv2dOptions *self);
+jb_Array MLConv2dOptions_dilations(const MLConv2dOptions *self);
 
-void MLConv2dOptions_set_dilations(MLConv2dOptions* self, jb_Sequence * value);
+void MLConv2dOptions_set_dilations(MLConv2dOptions* self, jb_Array * value);
 
 unsigned long MLConv2dOptions_groups(const MLConv2dOptions *self);
 
@@ -110,25 +110,25 @@ MLOperand MLConv2dOptions_bias(const MLConv2dOptions *self);
 void MLConv2dOptions_set_bias(MLConv2dOptions* self, MLOperand * value);
 DECLARE_EMLITE_TYPE(MLConvTranspose2dOptions, em_Val);
 
-jb_Sequence MLConvTranspose2dOptions_padding(const MLConvTranspose2dOptions *self);
+jb_Array MLConvTranspose2dOptions_padding(const MLConvTranspose2dOptions *self);
 
-void MLConvTranspose2dOptions_set_padding(MLConvTranspose2dOptions* self, jb_Sequence * value);
+void MLConvTranspose2dOptions_set_padding(MLConvTranspose2dOptions* self, jb_Array * value);
 
-jb_Sequence MLConvTranspose2dOptions_strides(const MLConvTranspose2dOptions *self);
+jb_Array MLConvTranspose2dOptions_strides(const MLConvTranspose2dOptions *self);
 
-void MLConvTranspose2dOptions_set_strides(MLConvTranspose2dOptions* self, jb_Sequence * value);
+void MLConvTranspose2dOptions_set_strides(MLConvTranspose2dOptions* self, jb_Array * value);
 
-jb_Sequence MLConvTranspose2dOptions_dilations(const MLConvTranspose2dOptions *self);
+jb_Array MLConvTranspose2dOptions_dilations(const MLConvTranspose2dOptions *self);
 
-void MLConvTranspose2dOptions_set_dilations(MLConvTranspose2dOptions* self, jb_Sequence * value);
+void MLConvTranspose2dOptions_set_dilations(MLConvTranspose2dOptions* self, jb_Array * value);
 
-jb_Sequence MLConvTranspose2dOptions_outputPadding(const MLConvTranspose2dOptions *self);
+jb_Array MLConvTranspose2dOptions_outputPadding(const MLConvTranspose2dOptions *self);
 
-void MLConvTranspose2dOptions_set_outputPadding(MLConvTranspose2dOptions* self, jb_Sequence * value);
+void MLConvTranspose2dOptions_set_outputPadding(MLConvTranspose2dOptions* self, jb_Array * value);
 
-jb_Sequence MLConvTranspose2dOptions_outputSizes(const MLConvTranspose2dOptions *self);
+jb_Array MLConvTranspose2dOptions_outputSizes(const MLConvTranspose2dOptions *self);
 
-void MLConvTranspose2dOptions_set_outputSizes(MLConvTranspose2dOptions* self, jb_Sequence * value);
+void MLConvTranspose2dOptions_set_outputSizes(MLConvTranspose2dOptions* self, jb_Array * value);
 
 unsigned long MLConvTranspose2dOptions_groups(const MLConvTranspose2dOptions *self);
 
@@ -215,9 +215,9 @@ MLGruWeightLayout MLGruOptions_layout(const MLGruOptions *self);
 
 void MLGruOptions_set_layout(MLGruOptions* self, MLGruWeightLayout * value);
 
-jb_Sequence MLGruOptions_activations(const MLGruOptions *self);
+jb_Array MLGruOptions_activations(const MLGruOptions *self);
 
-void MLGruOptions_set_activations(MLGruOptions* self, jb_Sequence * value);
+void MLGruOptions_set_activations(MLGruOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MLGruCellOptions, em_Val);
 
 MLOperand MLGruCellOptions_bias(const MLGruCellOptions *self);
@@ -236,9 +236,9 @@ MLGruWeightLayout MLGruCellOptions_layout(const MLGruCellOptions *self);
 
 void MLGruCellOptions_set_layout(MLGruCellOptions* self, MLGruWeightLayout * value);
 
-jb_Sequence MLGruCellOptions_activations(const MLGruCellOptions *self);
+jb_Array MLGruCellOptions_activations(const MLGruCellOptions *self);
 
-void MLGruCellOptions_set_activations(MLGruCellOptions* self, jb_Sequence * value);
+void MLGruCellOptions_set_activations(MLGruCellOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MLHardSigmoidOptions, em_Val);
 
 double MLHardSigmoidOptions_alpha(const MLHardSigmoidOptions *self);
@@ -275,9 +275,9 @@ MLOperand MLLayerNormalizationOptions_bias(const MLLayerNormalizationOptions *se
 
 void MLLayerNormalizationOptions_set_bias(MLLayerNormalizationOptions* self, MLOperand * value);
 
-jb_Sequence MLLayerNormalizationOptions_axes(const MLLayerNormalizationOptions *self);
+jb_Array MLLayerNormalizationOptions_axes(const MLLayerNormalizationOptions *self);
 
-void MLLayerNormalizationOptions_set_axes(MLLayerNormalizationOptions* self, jb_Sequence * value);
+void MLLayerNormalizationOptions_set_axes(MLLayerNormalizationOptions* self, jb_Array * value);
 
 double MLLayerNormalizationOptions_epsilon(const MLLayerNormalizationOptions *self);
 
@@ -330,9 +330,9 @@ MLLstmWeightLayout MLLstmOptions_layout(const MLLstmOptions *self);
 
 void MLLstmOptions_set_layout(MLLstmOptions* self, MLLstmWeightLayout * value);
 
-jb_Sequence MLLstmOptions_activations(const MLLstmOptions *self);
+jb_Array MLLstmOptions_activations(const MLLstmOptions *self);
 
-void MLLstmOptions_set_activations(MLLstmOptions* self, jb_Sequence * value);
+void MLLstmOptions_set_activations(MLLstmOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MLLstmCellOptions, em_Val);
 
 MLOperand MLLstmCellOptions_bias(const MLLstmCellOptions *self);
@@ -351,9 +351,9 @@ MLLstmWeightLayout MLLstmCellOptions_layout(const MLLstmCellOptions *self);
 
 void MLLstmCellOptions_set_layout(MLLstmCellOptions* self, MLLstmWeightLayout * value);
 
-jb_Sequence MLLstmCellOptions_activations(const MLLstmCellOptions *self);
+jb_Array MLLstmCellOptions_activations(const MLLstmCellOptions *self);
 
-void MLLstmCellOptions_set_activations(MLLstmCellOptions* self, jb_Sequence * value);
+void MLLstmCellOptions_set_activations(MLLstmCellOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MLPadOptions, em_Val);
 
 MLPaddingMode MLPadOptions_mode(const MLPadOptions *self);
@@ -365,21 +365,21 @@ jb_Any MLPadOptions_value(const MLPadOptions *self);
 void MLPadOptions_set_value(MLPadOptions* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(MLPool2dOptions, em_Val);
 
-jb_Sequence MLPool2dOptions_windowDimensions(const MLPool2dOptions *self);
+jb_Array MLPool2dOptions_windowDimensions(const MLPool2dOptions *self);
 
-void MLPool2dOptions_set_windowDimensions(MLPool2dOptions* self, jb_Sequence * value);
+void MLPool2dOptions_set_windowDimensions(MLPool2dOptions* self, jb_Array * value);
 
-jb_Sequence MLPool2dOptions_padding(const MLPool2dOptions *self);
+jb_Array MLPool2dOptions_padding(const MLPool2dOptions *self);
 
-void MLPool2dOptions_set_padding(MLPool2dOptions* self, jb_Sequence * value);
+void MLPool2dOptions_set_padding(MLPool2dOptions* self, jb_Array * value);
 
-jb_Sequence MLPool2dOptions_strides(const MLPool2dOptions *self);
+jb_Array MLPool2dOptions_strides(const MLPool2dOptions *self);
 
-void MLPool2dOptions_set_strides(MLPool2dOptions* self, jb_Sequence * value);
+void MLPool2dOptions_set_strides(MLPool2dOptions* self, jb_Array * value);
 
-jb_Sequence MLPool2dOptions_dilations(const MLPool2dOptions *self);
+jb_Array MLPool2dOptions_dilations(const MLPool2dOptions *self);
 
-void MLPool2dOptions_set_dilations(MLPool2dOptions* self, jb_Sequence * value);
+void MLPool2dOptions_set_dilations(MLPool2dOptions* self, jb_Array * value);
 
 MLInputOperandLayout MLPool2dOptions_layout(const MLPool2dOptions *self);
 
@@ -389,14 +389,14 @@ MLRoundingType MLPool2dOptions_roundingType(const MLPool2dOptions *self);
 
 void MLPool2dOptions_set_roundingType(MLPool2dOptions* self, MLRoundingType * value);
 
-jb_Sequence MLPool2dOptions_outputSizes(const MLPool2dOptions *self);
+jb_Array MLPool2dOptions_outputSizes(const MLPool2dOptions *self);
 
-void MLPool2dOptions_set_outputSizes(MLPool2dOptions* self, jb_Sequence * value);
+void MLPool2dOptions_set_outputSizes(MLPool2dOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MLReduceOptions, em_Val);
 
-jb_Sequence MLReduceOptions_axes(const MLReduceOptions *self);
+jb_Array MLReduceOptions_axes(const MLReduceOptions *self);
 
-void MLReduceOptions_set_axes(MLReduceOptions* self, jb_Sequence * value);
+void MLReduceOptions_set_axes(MLReduceOptions* self, jb_Array * value);
 
 bool MLReduceOptions_keepDimensions(const MLReduceOptions *self);
 
@@ -407,22 +407,22 @@ MLInterpolationMode MLResample2dOptions_mode(const MLResample2dOptions *self);
 
 void MLResample2dOptions_set_mode(MLResample2dOptions* self, MLInterpolationMode * value);
 
-jb_Sequence MLResample2dOptions_scales(const MLResample2dOptions *self);
+jb_Array MLResample2dOptions_scales(const MLResample2dOptions *self);
 
-void MLResample2dOptions_set_scales(MLResample2dOptions* self, jb_Sequence * value);
+void MLResample2dOptions_set_scales(MLResample2dOptions* self, jb_Array * value);
 
-jb_Sequence MLResample2dOptions_sizes(const MLResample2dOptions *self);
+jb_Array MLResample2dOptions_sizes(const MLResample2dOptions *self);
 
-void MLResample2dOptions_set_sizes(MLResample2dOptions* self, jb_Sequence * value);
+void MLResample2dOptions_set_sizes(MLResample2dOptions* self, jb_Array * value);
 
-jb_Sequence MLResample2dOptions_axes(const MLResample2dOptions *self);
+jb_Array MLResample2dOptions_axes(const MLResample2dOptions *self);
 
-void MLResample2dOptions_set_axes(MLResample2dOptions* self, jb_Sequence * value);
+void MLResample2dOptions_set_axes(MLResample2dOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MLReverseOptions, em_Val);
 
-jb_Sequence MLReverseOptions_axes(const MLReverseOptions *self);
+jb_Array MLReverseOptions_axes(const MLReverseOptions *self);
 
-void MLReverseOptions_set_axes(MLReverseOptions* self, jb_Sequence * value);
+void MLReverseOptions_set_axes(MLReverseOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MLScatterOptions, em_Val);
 
 unsigned long MLScatterOptions_axis(const MLScatterOptions *self);
@@ -430,9 +430,9 @@ unsigned long MLScatterOptions_axis(const MLScatterOptions *self);
 void MLScatterOptions_set_axis(MLScatterOptions* self, unsigned long value);
 DECLARE_EMLITE_TYPE(MLSliceOptions, em_Val);
 
-jb_Sequence MLSliceOptions_strides(const MLSliceOptions *self);
+jb_Array MLSliceOptions_strides(const MLSliceOptions *self);
 
-void MLSliceOptions_set_strides(MLSliceOptions* self, jb_Sequence * value);
+void MLSliceOptions_set_strides(MLSliceOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MLSplitOptions, em_Val);
 
 unsigned long MLSplitOptions_axis(const MLSplitOptions *self);
@@ -440,9 +440,9 @@ unsigned long MLSplitOptions_axis(const MLSplitOptions *self);
 void MLSplitOptions_set_axis(MLSplitOptions* self, unsigned long value);
 DECLARE_EMLITE_TYPE(MLTransposeOptions, em_Val);
 
-jb_Sequence MLTransposeOptions_permutation(const MLTransposeOptions *self);
+jb_Array MLTransposeOptions_permutation(const MLTransposeOptions *self);
 
-void MLTransposeOptions_set_permutation(MLTransposeOptions* self, jb_Sequence * value);
+void MLTransposeOptions_set_permutation(MLTransposeOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MLTriangularOptions, em_Val);
 
 bool MLTriangularOptions_upper(const MLTriangularOptions *self);
@@ -456,7 +456,7 @@ DECLARE_EMLITE_TYPE(MLGraphBuilder, em_Val);
 
 MLGraphBuilder MLGraphBuilder_new(MLContext * context);
 
-MLOperand MLGraphBuilder_input(MLGraphBuilder* self , jb_USVString * name, MLOperandDescriptor * descriptor);
+MLOperand MLGraphBuilder_input(MLGraphBuilder* self , jb_String * name, MLOperandDescriptor * descriptor);
 
 MLOperand MLGraphBuilder_constant(MLGraphBuilder* self , MLTensor * tensor);
 
@@ -482,9 +482,9 @@ MLOperand MLGraphBuilder_clamp0(MLGraphBuilder* self , MLOperand * input);
 
 MLOperand MLGraphBuilder_clamp1(MLGraphBuilder* self , MLOperand * input, MLClampOptions * options);
 
-MLOperand MLGraphBuilder_concat0(MLGraphBuilder* self , jb_Sequence * inputs, unsigned long axis);
+MLOperand MLGraphBuilder_concat0(MLGraphBuilder* self , jb_Array * inputs, unsigned long axis);
 
-MLOperand MLGraphBuilder_concat1(MLGraphBuilder* self , jb_Sequence * inputs, unsigned long axis, MLOperatorOptions * options);
+MLOperand MLGraphBuilder_concat1(MLGraphBuilder* self , jb_Array * inputs, unsigned long axis, MLOperatorOptions * options);
 
 MLOperand MLGraphBuilder_conv2d0(MLGraphBuilder* self , MLOperand * input, MLOperand * filter);
 
@@ -634,9 +634,9 @@ MLOperand MLGraphBuilder_elu0(MLGraphBuilder* self , MLOperand * input);
 
 MLOperand MLGraphBuilder_elu1(MLGraphBuilder* self , MLOperand * input, MLEluOptions * options);
 
-MLOperand MLGraphBuilder_expand0(MLGraphBuilder* self , MLOperand * input, jb_Sequence * newShape);
+MLOperand MLGraphBuilder_expand0(MLGraphBuilder* self , MLOperand * input, jb_Array * newShape);
 
-MLOperand MLGraphBuilder_expand1(MLGraphBuilder* self , MLOperand * input, jb_Sequence * newShape, MLOperatorOptions * options);
+MLOperand MLGraphBuilder_expand1(MLGraphBuilder* self , MLOperand * input, jb_Array * newShape, MLOperatorOptions * options);
 
 MLOperand MLGraphBuilder_gather0(MLGraphBuilder* self , MLOperand * input, MLOperand * indices);
 
@@ -658,9 +658,9 @@ MLOperand MLGraphBuilder_gemm0(MLGraphBuilder* self , MLOperand * a, MLOperand *
 
 MLOperand MLGraphBuilder_gemm1(MLGraphBuilder* self , MLOperand * a, MLOperand * b, MLGemmOptions * options);
 
-jb_Sequence MLGraphBuilder_gru0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize);
+jb_Array MLGraphBuilder_gru0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize);
 
-jb_Sequence MLGraphBuilder_gru1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize, MLGruOptions * options);
+jb_Array MLGraphBuilder_gru1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize, MLGruOptions * options);
 
 MLOperand MLGraphBuilder_gruCell0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, MLOperand * hiddenState, unsigned long hiddenSize);
 
@@ -690,21 +690,21 @@ MLOperand MLGraphBuilder_linear0(MLGraphBuilder* self , MLOperand * input);
 
 MLOperand MLGraphBuilder_linear1(MLGraphBuilder* self , MLOperand * input, MLLinearOptions * options);
 
-jb_Sequence MLGraphBuilder_lstm0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize);
+jb_Array MLGraphBuilder_lstm0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize);
 
-jb_Sequence MLGraphBuilder_lstm1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize, MLLstmOptions * options);
+jb_Array MLGraphBuilder_lstm1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, unsigned long steps, unsigned long hiddenSize, MLLstmOptions * options);
 
-jb_Sequence MLGraphBuilder_lstmCell0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, MLOperand * hiddenState, MLOperand * cellState, unsigned long hiddenSize);
+jb_Array MLGraphBuilder_lstmCell0(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, MLOperand * hiddenState, MLOperand * cellState, unsigned long hiddenSize);
 
-jb_Sequence MLGraphBuilder_lstmCell1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, MLOperand * hiddenState, MLOperand * cellState, unsigned long hiddenSize, MLLstmCellOptions * options);
+jb_Array MLGraphBuilder_lstmCell1(MLGraphBuilder* self , MLOperand * input, MLOperand * weight, MLOperand * recurrentWeight, MLOperand * hiddenState, MLOperand * cellState, unsigned long hiddenSize, MLLstmCellOptions * options);
 
 MLOperand MLGraphBuilder_matmul0(MLGraphBuilder* self , MLOperand * a, MLOperand * b);
 
 MLOperand MLGraphBuilder_matmul1(MLGraphBuilder* self , MLOperand * a, MLOperand * b, MLOperatorOptions * options);
 
-MLOperand MLGraphBuilder_pad0(MLGraphBuilder* self , MLOperand * input, jb_Sequence * beginningPadding, jb_Sequence * endingPadding);
+MLOperand MLGraphBuilder_pad0(MLGraphBuilder* self , MLOperand * input, jb_Array * beginningPadding, jb_Array * endingPadding);
 
-MLOperand MLGraphBuilder_pad1(MLGraphBuilder* self , MLOperand * input, jb_Sequence * beginningPadding, jb_Sequence * endingPadding, MLPadOptions * options);
+MLOperand MLGraphBuilder_pad1(MLGraphBuilder* self , MLOperand * input, jb_Array * beginningPadding, jb_Array * endingPadding, MLPadOptions * options);
 
 MLOperand MLGraphBuilder_averagePool2d0(MLGraphBuilder* self , MLOperand * input);
 
@@ -770,9 +770,9 @@ MLOperand MLGraphBuilder_resample2d0(MLGraphBuilder* self , MLOperand * input);
 
 MLOperand MLGraphBuilder_resample2d1(MLGraphBuilder* self , MLOperand * input, MLResample2dOptions * options);
 
-MLOperand MLGraphBuilder_reshape0(MLGraphBuilder* self , MLOperand * input, jb_Sequence * newShape);
+MLOperand MLGraphBuilder_reshape0(MLGraphBuilder* self , MLOperand * input, jb_Array * newShape);
 
-MLOperand MLGraphBuilder_reshape1(MLGraphBuilder* self , MLOperand * input, jb_Sequence * newShape, MLOperatorOptions * options);
+MLOperand MLGraphBuilder_reshape1(MLGraphBuilder* self , MLOperand * input, jb_Array * newShape, MLOperatorOptions * options);
 
 MLOperand MLGraphBuilder_reverse0(MLGraphBuilder* self , MLOperand * input);
 
@@ -790,9 +790,9 @@ MLOperand MLGraphBuilder_sigmoid0(MLGraphBuilder* self , MLOperand * input);
 
 MLOperand MLGraphBuilder_sigmoid1(MLGraphBuilder* self , MLOperand * input, MLOperatorOptions * options);
 
-MLOperand MLGraphBuilder_slice0(MLGraphBuilder* self , MLOperand * input, jb_Sequence * starts, jb_Sequence * sizes);
+MLOperand MLGraphBuilder_slice0(MLGraphBuilder* self , MLOperand * input, jb_Array * starts, jb_Array * sizes);
 
-MLOperand MLGraphBuilder_slice1(MLGraphBuilder* self , MLOperand * input, jb_Sequence * starts, jb_Sequence * sizes, MLSliceOptions * options);
+MLOperand MLGraphBuilder_slice1(MLGraphBuilder* self , MLOperand * input, jb_Array * starts, jb_Array * sizes, MLSliceOptions * options);
 
 MLOperand MLGraphBuilder_softmax0(MLGraphBuilder* self , MLOperand * input, unsigned long axis);
 
@@ -806,17 +806,17 @@ MLOperand MLGraphBuilder_softsign0(MLGraphBuilder* self , MLOperand * input);
 
 MLOperand MLGraphBuilder_softsign1(MLGraphBuilder* self , MLOperand * input, MLOperatorOptions * options);
 
-jb_Sequence MLGraphBuilder_split0(MLGraphBuilder* self , MLOperand * input, jb_Any * splits);
+jb_Array MLGraphBuilder_split0(MLGraphBuilder* self , MLOperand * input, jb_Any * splits);
 
-jb_Sequence MLGraphBuilder_split1(MLGraphBuilder* self , MLOperand * input, jb_Any * splits, MLSplitOptions * options);
+jb_Array MLGraphBuilder_split1(MLGraphBuilder* self , MLOperand * input, jb_Any * splits, MLSplitOptions * options);
 
 MLOperand MLGraphBuilder_tanh0(MLGraphBuilder* self , MLOperand * input);
 
 MLOperand MLGraphBuilder_tanh1(MLGraphBuilder* self , MLOperand * input, MLOperatorOptions * options);
 
-MLOperand MLGraphBuilder_tile0(MLGraphBuilder* self , MLOperand * input, jb_Sequence * repetitions);
+MLOperand MLGraphBuilder_tile0(MLGraphBuilder* self , MLOperand * input, jb_Array * repetitions);
 
-MLOperand MLGraphBuilder_tile1(MLGraphBuilder* self , MLOperand * input, jb_Sequence * repetitions, MLOperatorOptions * options);
+MLOperand MLGraphBuilder_tile1(MLGraphBuilder* self , MLOperand * input, jb_Array * repetitions, MLOperatorOptions * options);
 
 MLOperand MLGraphBuilder_transpose0(MLGraphBuilder* self , MLOperand * input);
 

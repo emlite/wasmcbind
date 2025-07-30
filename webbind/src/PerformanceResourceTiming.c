@@ -5,18 +5,18 @@
 DEFINE_EMLITE_TYPE(PerformanceResourceTiming, PerformanceEntry);
 
 
-jb_DOMString PerformanceResourceTiming_initiatorType(const PerformanceResourceTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("initiatorType")));
+jb_String PerformanceResourceTiming_initiatorType(const PerformanceResourceTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("initiatorType")));
 }
 
 
-jb_DOMString PerformanceResourceTiming_deliveryType(const PerformanceResourceTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("deliveryType")));
+jb_String PerformanceResourceTiming_deliveryType(const PerformanceResourceTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("deliveryType")));
 }
 
 
-jb_ByteString PerformanceResourceTiming_nextHopProtocol(const PerformanceResourceTiming *self) {
-    return em_Val_as(jb_ByteString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("nextHopProtocol")));
+jb_String PerformanceResourceTiming_nextHopProtocol(const PerformanceResourceTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("nextHopProtocol")));
 }
 
 
@@ -115,13 +115,13 @@ RenderBlockingStatusType PerformanceResourceTiming_renderBlockingStatus(const Pe
 }
 
 
-jb_DOMString PerformanceResourceTiming_contentType(const PerformanceResourceTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("contentType")));
+jb_String PerformanceResourceTiming_contentType(const PerformanceResourceTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("contentType")));
 }
 
 
-jb_DOMString PerformanceResourceTiming_contentEncoding(const PerformanceResourceTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("contentEncoding")));
+jb_String PerformanceResourceTiming_contentEncoding(const PerformanceResourceTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("contentEncoding")));
 }
 
 
@@ -130,7 +130,7 @@ jb_Object PerformanceResourceTiming_toJSON(PerformanceResourceTiming* self ) {
 }
 
 
-jb_FrozenArray PerformanceResourceTiming_serverTiming(const PerformanceResourceTiming *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("serverTiming")));
+jb_Array PerformanceResourceTiming_serverTiming(const PerformanceResourceTiming *self) {
+    return em_Val_as(jb_Array, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("serverTiming")));
 }
 

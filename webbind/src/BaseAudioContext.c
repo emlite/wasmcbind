@@ -152,7 +152,7 @@ GainNode BaseAudioContext_createGain(BaseAudioContext* self ) {
 }
 
 
-IIRFilterNode BaseAudioContext_createIIRFilter(BaseAudioContext* self , jb_Sequence * feedforward, jb_Sequence * feedback) {
+IIRFilterNode BaseAudioContext_createIIRFilter(BaseAudioContext* self , jb_Array * feedforward, jb_Array * feedback) {
     return em_Val_as(IIRFilterNode, em_Val_call(EventTarget_as_val(self->inner), "createIIRFilter", em_Val_from(feedforward), em_Val_from(feedback)));
 }
 
@@ -167,12 +167,12 @@ PannerNode BaseAudioContext_createPanner(BaseAudioContext* self ) {
 }
 
 
-PeriodicWave BaseAudioContext_createPeriodicWave0(BaseAudioContext* self , jb_Sequence * real, jb_Sequence * imag) {
+PeriodicWave BaseAudioContext_createPeriodicWave0(BaseAudioContext* self , jb_Array * real, jb_Array * imag) {
     return em_Val_as(PeriodicWave, em_Val_call(EventTarget_as_val(self->inner), "createPeriodicWave", em_Val_from(real), em_Val_from(imag)));
 }
 
 
-PeriodicWave BaseAudioContext_createPeriodicWave1(BaseAudioContext* self , jb_Sequence * real, jb_Sequence * imag, PeriodicWaveConstraints * constraints) {
+PeriodicWave BaseAudioContext_createPeriodicWave1(BaseAudioContext* self , jb_Array * real, jb_Array * imag, PeriodicWaveConstraints * constraints) {
     return em_Val_as(PeriodicWave, em_Val_call(EventTarget_as_val(self->inner), "createPeriodicWave", em_Val_from(real), em_Val_from(imag), em_Val_from(constraints)));
 }
 

@@ -7,9 +7,9 @@
 
 DECLARE_EMLITE_TYPE(FontFaceVariationAxis, em_Val);
 
-jb_DOMString FontFaceVariationAxis_name(const FontFaceVariationAxis *self);
+jb_String FontFaceVariationAxis_name(const FontFaceVariationAxis *self);
 
-jb_DOMString FontFaceVariationAxis_axisTag(const FontFaceVariationAxis *self);
+jb_String FontFaceVariationAxis_axisTag(const FontFaceVariationAxis *self);
 
 double FontFaceVariationAxis_minimumValue(const FontFaceVariationAxis *self);
 

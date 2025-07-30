@@ -10,8 +10,8 @@ typedef struct PerformanceMarkOptions PerformanceMarkOptions;
 
 DECLARE_EMLITE_TYPE(PerformanceMark, PerformanceEntry);
 
-PerformanceMark PerformanceMark_new0(jb_DOMString * markName);
+PerformanceMark PerformanceMark_new0(jb_String * markName);
 
-PerformanceMark PerformanceMark_new1(jb_DOMString * markName, PerformanceMarkOptions * markOptions);
+PerformanceMark PerformanceMark_new1(jb_String * markName, PerformanceMarkOptions * markOptions);
 
 jb_Any PerformanceMark_detail(const PerformanceMark *self);

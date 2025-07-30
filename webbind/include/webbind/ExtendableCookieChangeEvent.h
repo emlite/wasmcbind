@@ -9,10 +9,10 @@
 
 DECLARE_EMLITE_TYPE(ExtendableCookieChangeEvent, ExtendableEvent);
 
-ExtendableCookieChangeEvent ExtendableCookieChangeEvent_new0(jb_DOMString * type);
+ExtendableCookieChangeEvent ExtendableCookieChangeEvent_new0(jb_String * type);
 
-ExtendableCookieChangeEvent ExtendableCookieChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+ExtendableCookieChangeEvent ExtendableCookieChangeEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
-jb_FrozenArray ExtendableCookieChangeEvent_changed(const ExtendableCookieChangeEvent *self);
+jb_Array ExtendableCookieChangeEvent_changed(const ExtendableCookieChangeEvent *self);
 
-jb_FrozenArray ExtendableCookieChangeEvent_deleted(const ExtendableCookieChangeEvent *self);
+jb_Array ExtendableCookieChangeEvent_deleted(const ExtendableCookieChangeEvent *self);

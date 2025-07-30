@@ -4,14 +4,14 @@
 DEFINE_EMLITE_TYPE(BroadcastChannel, EventTarget);
 
 
-BroadcastChannel BroadcastChannel_new(jb_DOMString * name) {
+BroadcastChannel BroadcastChannel_new(jb_String * name) {
         em_Val vv = em_Val_new(em_Val_global("BroadcastChannel") , em_Val_from(name));
         return BroadcastChannel_from_val(&vv);
       }
 
 
-jb_DOMString BroadcastChannel_name(const BroadcastChannel *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
+jb_String BroadcastChannel_name(const BroadcastChannel *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("name")));
 }
 
 

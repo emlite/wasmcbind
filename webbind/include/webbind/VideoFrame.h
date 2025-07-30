@@ -20,9 +20,9 @@ DOMRectInit VideoFrameCopyToOptions_rect(const VideoFrameCopyToOptions *self);
 
 void VideoFrameCopyToOptions_set_rect(VideoFrameCopyToOptions* self, DOMRectInit * value);
 
-jb_Sequence VideoFrameCopyToOptions_layout(const VideoFrameCopyToOptions *self);
+jb_Array VideoFrameCopyToOptions_layout(const VideoFrameCopyToOptions *self);
 
-void VideoFrameCopyToOptions_set_layout(VideoFrameCopyToOptions* self, jb_Sequence * value);
+void VideoFrameCopyToOptions_set_layout(VideoFrameCopyToOptions* self, jb_Array * value);
 
 VideoPixelFormat VideoFrameCopyToOptions_format(const VideoFrameCopyToOptions *self);
 

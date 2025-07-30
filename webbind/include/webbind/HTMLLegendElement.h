@@ -14,6 +14,6 @@ HTMLLegendElement HTMLLegendElement_new();
 
 HTMLFormElement HTMLLegendElement_form(const HTMLLegendElement *self);
 
-jb_DOMString HTMLLegendElement_align(const HTMLLegendElement *self);
+jb_String HTMLLegendElement_align(const HTMLLegendElement *self);
 
-void HTMLLegendElement_set_align(HTMLLegendElement* self, jb_DOMString * value);
+void HTMLLegendElement_set_align(HTMLLegendElement* self, jb_String * value);

@@ -6,12 +6,12 @@
 DEFINE_EMLITE_TYPE(GPURequestAdapterOptions, em_Val);
 
 
-jb_DOMString GPURequestAdapterOptions_featureLevel(const GPURequestAdapterOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("featureLevel")));
+jb_String GPURequestAdapterOptions_featureLevel(const GPURequestAdapterOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("featureLevel")));
 }
 
 
-void GPURequestAdapterOptions_set_featureLevel(GPURequestAdapterOptions* self, jb_DOMString * value) {
+void GPURequestAdapterOptions_set_featureLevel(GPURequestAdapterOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("featureLevel"), em_Val_from(value));
 }
 

@@ -39,7 +39,7 @@ float ScreenDetailed_devicePixelRatio(const ScreenDetailed *self) {
 }
 
 
-jb_DOMString ScreenDetailed_label(const ScreenDetailed *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Screen_as_val(self->inner), em_Val_from("label")));
+jb_String ScreenDetailed_label(const ScreenDetailed *self) {
+    return em_Val_as(jb_String, em_Val_get(Screen_as_val(self->inner), em_Val_from("label")));
 }
 

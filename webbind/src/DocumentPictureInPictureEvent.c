@@ -5,7 +5,7 @@
 DEFINE_EMLITE_TYPE(DocumentPictureInPictureEvent, Event);
 
 
-DocumentPictureInPictureEvent DocumentPictureInPictureEvent_new(jb_DOMString * type, jb_Any * eventInitDict) {
+DocumentPictureInPictureEvent DocumentPictureInPictureEvent_new(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("DocumentPictureInPictureEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return DocumentPictureInPictureEvent_from_val(&vv);
       }

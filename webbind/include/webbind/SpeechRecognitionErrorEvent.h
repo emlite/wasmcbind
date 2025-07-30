@@ -8,8 +8,8 @@
 
 DECLARE_EMLITE_TYPE(SpeechRecognitionErrorEvent, Event);
 
-SpeechRecognitionErrorEvent SpeechRecognitionErrorEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+SpeechRecognitionErrorEvent SpeechRecognitionErrorEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 SpeechRecognitionErrorCode SpeechRecognitionErrorEvent_error(const SpeechRecognitionErrorEvent *self);
 
-jb_DOMString SpeechRecognitionErrorEvent_message(const SpeechRecognitionErrorEvent *self);
+jb_String SpeechRecognitionErrorEvent_message(const SpeechRecognitionErrorEvent *self);

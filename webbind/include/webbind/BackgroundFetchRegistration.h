@@ -24,7 +24,7 @@ bool CacheQueryOptions_ignoreVary(const CacheQueryOptions *self);
 void CacheQueryOptions_set_ignoreVary(CacheQueryOptions* self, bool value);
 DECLARE_EMLITE_TYPE(BackgroundFetchRegistration, EventTarget);
 
-jb_DOMString BackgroundFetchRegistration_id(const BackgroundFetchRegistration *self);
+jb_String BackgroundFetchRegistration_id(const BackgroundFetchRegistration *self);
 
 long long BackgroundFetchRegistration_uploadTotal(const BackgroundFetchRegistration *self);
 

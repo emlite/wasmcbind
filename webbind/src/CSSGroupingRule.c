@@ -10,12 +10,12 @@ CSSRuleList CSSGroupingRule_cssRules(const CSSGroupingRule *self) {
 }
 
 
-unsigned long CSSGroupingRule_insertRule0(CSSGroupingRule* self , jb_CSSOMString * rule) {
+unsigned long CSSGroupingRule_insertRule0(CSSGroupingRule* self , jb_String * rule) {
     return em_Val_as(unsigned long, em_Val_call(CSSRule_as_val(self->inner), "insertRule", em_Val_from(rule)));
 }
 
 
-unsigned long CSSGroupingRule_insertRule1(CSSGroupingRule* self , jb_CSSOMString * rule, unsigned long index) {
+unsigned long CSSGroupingRule_insertRule1(CSSGroupingRule* self , jb_String * rule, unsigned long index) {
     return em_Val_as(unsigned long, em_Val_call(CSSRule_as_val(self->inner), "insertRule", em_Val_from(rule), em_Val_from(index)));
 }
 

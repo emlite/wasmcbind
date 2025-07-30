@@ -12,15 +12,15 @@ DECLARE_EMLITE_TYPE(SpeechSynthesisUtterance, EventTarget);
 
 SpeechSynthesisUtterance SpeechSynthesisUtterance_new0();
 
-SpeechSynthesisUtterance SpeechSynthesisUtterance_new1(jb_DOMString * text);
+SpeechSynthesisUtterance SpeechSynthesisUtterance_new1(jb_String * text);
 
-jb_DOMString SpeechSynthesisUtterance_text(const SpeechSynthesisUtterance *self);
+jb_String SpeechSynthesisUtterance_text(const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_text(SpeechSynthesisUtterance* self, jb_DOMString * value);
+void SpeechSynthesisUtterance_set_text(SpeechSynthesisUtterance* self, jb_String * value);
 
-jb_DOMString SpeechSynthesisUtterance_lang(const SpeechSynthesisUtterance *self);
+jb_String SpeechSynthesisUtterance_lang(const SpeechSynthesisUtterance *self);
 
-void SpeechSynthesisUtterance_set_lang(SpeechSynthesisUtterance* self, jb_DOMString * value);
+void SpeechSynthesisUtterance_set_lang(SpeechSynthesisUtterance* self, jb_String * value);
 
 SpeechSynthesisVoice SpeechSynthesisUtterance_voice(const SpeechSynthesisUtterance *self);
 

@@ -13,12 +13,12 @@ typedef struct RTCRtpTransceiver RTCRtpTransceiver;
 
 DECLARE_EMLITE_TYPE(RTCTrackEvent, Event);
 
-RTCTrackEvent RTCTrackEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+RTCTrackEvent RTCTrackEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 RTCRtpReceiver RTCTrackEvent_receiver(const RTCTrackEvent *self);
 
 MediaStreamTrack RTCTrackEvent_track(const RTCTrackEvent *self);
 
-jb_FrozenArray RTCTrackEvent_streams(const RTCTrackEvent *self);
+jb_Array RTCTrackEvent_streams(const RTCTrackEvent *self);
 
 RTCRtpTransceiver RTCTrackEvent_transceiver(const RTCTrackEvent *self);

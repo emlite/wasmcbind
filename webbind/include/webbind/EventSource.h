@@ -8,11 +8,11 @@
 
 DECLARE_EMLITE_TYPE(EventSource, EventTarget);
 
-EventSource EventSource_new0(jb_USVString * url);
+EventSource EventSource_new0(jb_String * url);
 
-EventSource EventSource_new1(jb_USVString * url, jb_Any * eventSourceInitDict);
+EventSource EventSource_new1(jb_String * url, jb_Any * eventSourceInitDict);
 
-jb_USVString EventSource_url(const EventSource *self);
+jb_String EventSource_url(const EventSource *self);
 
 bool EventSource_withCredentials(const EventSource *self);
 

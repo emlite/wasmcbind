@@ -16,7 +16,7 @@ jb_Promise RTCRtpScriptTransformer_generateKeyFrame0(RTCRtpScriptTransformer* se
 }
 
 
-jb_Promise RTCRtpScriptTransformer_generateKeyFrame1(RTCRtpScriptTransformer* self , jb_DOMString * rid) {
+jb_Promise RTCRtpScriptTransformer_generateKeyFrame1(RTCRtpScriptTransformer* self , jb_String * rid) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "generateKeyFrame", em_Val_from(rid)));
 }
 

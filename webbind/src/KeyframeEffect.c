@@ -21,12 +21,12 @@ void KeyframeEffect_set_target(KeyframeEffect* self, Element * value) {
 }
 
 
-jb_CSSOMString KeyframeEffect_pseudoElement(const KeyframeEffect *self) {
-    return em_Val_as(jb_CSSOMString, em_Val_get(AnimationEffect_as_val(self->inner), em_Val_from("pseudoElement")));
+jb_String KeyframeEffect_pseudoElement(const KeyframeEffect *self) {
+    return em_Val_as(jb_String, em_Val_get(AnimationEffect_as_val(self->inner), em_Val_from("pseudoElement")));
 }
 
 
-void KeyframeEffect_set_pseudoElement(KeyframeEffect* self, jb_CSSOMString * value) {
+void KeyframeEffect_set_pseudoElement(KeyframeEffect* self, jb_String * value) {
     em_Val_set(AnimationEffect_as_val(self->inner), em_Val_from("pseudoElement"), em_Val_from(value));
 }
 
@@ -41,8 +41,8 @@ void KeyframeEffect_set_composite(KeyframeEffect* self, CompositeOperation * val
 }
 
 
-jb_Sequence KeyframeEffect_getKeyframes(KeyframeEffect* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(AnimationEffect_as_val(self->inner), "getKeyframes"));
+jb_Array KeyframeEffect_getKeyframes(KeyframeEffect* self ) {
+    return em_Val_as(jb_Array, em_Val_call(AnimationEffect_as_val(self->inner), "getKeyframes"));
 }
 
 

@@ -27,22 +27,22 @@ void StorageInterestGroup_set_bidCount(StorageInterestGroup* self, long long val
 }
 
 
-jb_Sequence StorageInterestGroup_prevWinsMs(const StorageInterestGroup *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("prevWinsMs")));
+jb_Array StorageInterestGroup_prevWinsMs(const StorageInterestGroup *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("prevWinsMs")));
 }
 
 
-void StorageInterestGroup_set_prevWinsMs(StorageInterestGroup* self, jb_Sequence * value) {
+void StorageInterestGroup_set_prevWinsMs(StorageInterestGroup* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("prevWinsMs"), em_Val_from(value));
 }
 
 
-jb_USVString StorageInterestGroup_joiningOrigin(const StorageInterestGroup *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("joiningOrigin")));
+jb_String StorageInterestGroup_joiningOrigin(const StorageInterestGroup *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("joiningOrigin")));
 }
 
 
-void StorageInterestGroup_set_joiningOrigin(StorageInterestGroup* self, jb_USVString * value) {
+void StorageInterestGroup_set_joiningOrigin(StorageInterestGroup* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("joiningOrigin"), em_Val_from(value));
 }
 
@@ -99,7 +99,7 @@ void StorageInterestGroup_set_estimatedSize(StorageInterestGroup* self, long lon
 DEFINE_EMLITE_TYPE(SharedStorageWorkletGlobalScope, WorkletGlobalScope);
 
 
-jb_Undefined SharedStorageWorkletGlobalScope_register_(SharedStorageWorkletGlobalScope* self , jb_DOMString * name, jb_Function * operationCtor) {
+jb_Undefined SharedStorageWorkletGlobalScope_register_(SharedStorageWorkletGlobalScope* self , jb_String * name, jb_Function * operationCtor) {
     return em_Val_as(jb_Undefined, em_Val_call(WorkletGlobalScope_as_val(self->inner), "register", em_Val_from(name), em_Val_from(operationCtor)));
 }
 

@@ -47,8 +47,8 @@ jb_Undefined HandwritingStroke_addPoint(HandwritingStroke* self , HandwritingPoi
 }
 
 
-jb_Sequence HandwritingStroke_getPoints(HandwritingStroke* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getPoints"));
+jb_Array HandwritingStroke_getPoints(HandwritingStroke* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getPoints"));
 }
 
 

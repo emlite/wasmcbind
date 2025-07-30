@@ -9,7 +9,7 @@ DECLARE_EMLITE_TYPE(MLTensor, em_Val);
 
 MLOperandDataType MLTensor_dataType(const MLTensor *self);
 
-jb_FrozenArray MLTensor_shape(const MLTensor *self);
+jb_Array MLTensor_shape(const MLTensor *self);
 
 bool MLTensor_readable(const MLTensor *self);
 

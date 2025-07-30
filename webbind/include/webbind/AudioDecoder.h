@@ -12,9 +12,9 @@ typedef struct AudioDecoderSupport AudioDecoderSupport;
 
 DECLARE_EMLITE_TYPE(AudioDecoderConfig, em_Val);
 
-jb_DOMString AudioDecoderConfig_codec(const AudioDecoderConfig *self);
+jb_String AudioDecoderConfig_codec(const AudioDecoderConfig *self);
 
-void AudioDecoderConfig_set_codec(AudioDecoderConfig* self, jb_DOMString * value);
+void AudioDecoderConfig_set_codec(AudioDecoderConfig* self, jb_String * value);
 
 unsigned long AudioDecoderConfig_sampleRate(const AudioDecoderConfig *self);
 

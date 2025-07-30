@@ -8,13 +8,13 @@
 
 DECLARE_EMLITE_TYPE(ErrorEvent, Event);
 
-ErrorEvent ErrorEvent_new0(jb_DOMString * type);
+ErrorEvent ErrorEvent_new0(jb_String * type);
 
-ErrorEvent ErrorEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+ErrorEvent ErrorEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
-jb_DOMString ErrorEvent_message(const ErrorEvent *self);
+jb_String ErrorEvent_message(const ErrorEvent *self);
 
-jb_USVString ErrorEvent_filename(const ErrorEvent *self);
+jb_String ErrorEvent_filename(const ErrorEvent *self);
 
 unsigned long ErrorEvent_lineno(const ErrorEvent *self);
 

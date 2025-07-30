@@ -13,4 +13,4 @@ SubtleCrypto Crypto_subtle(const Crypto *self);
 
 jb_Any Crypto_getRandomValues(Crypto* self , jb_Any * array);
 
-jb_DOMString Crypto_randomUUID(Crypto* self );
+jb_String Crypto_randomUUID(Crypto* self );

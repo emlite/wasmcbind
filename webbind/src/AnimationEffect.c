@@ -76,12 +76,12 @@ void OptionalEffectTiming_set_direction(OptionalEffectTiming* self, PlaybackDire
 }
 
 
-jb_DOMString OptionalEffectTiming_easing(const OptionalEffectTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("easing")));
+jb_String OptionalEffectTiming_easing(const OptionalEffectTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("easing")));
 }
 
 
-void OptionalEffectTiming_set_easing(OptionalEffectTiming* self, jb_DOMString * value) {
+void OptionalEffectTiming_set_easing(OptionalEffectTiming* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("easing"), em_Val_from(value));
 }
 

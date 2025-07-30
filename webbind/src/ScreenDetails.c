@@ -5,8 +5,8 @@
 DEFINE_EMLITE_TYPE(ScreenDetails, EventTarget);
 
 
-jb_FrozenArray ScreenDetails_screens(const ScreenDetails *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("screens")));
+jb_Array ScreenDetails_screens(const ScreenDetails *self) {
+    return em_Val_as(jb_Array, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("screens")));
 }
 
 

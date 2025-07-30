@@ -30,12 +30,12 @@ void IDBIndexParameters_set_multiEntry(IDBIndexParameters* self, bool value) {
 DEFINE_EMLITE_TYPE(IDBObjectStore, em_Val);
 
 
-jb_DOMString IDBObjectStore_name(const IDBObjectStore *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String IDBObjectStore_name(const IDBObjectStore *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void IDBObjectStore_set_name(IDBObjectStore* self, jb_DOMString * value) {
+void IDBObjectStore_set_name(IDBObjectStore* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
@@ -170,22 +170,22 @@ IDBRequest IDBObjectStore_openKeyCursor2(IDBObjectStore* self , jb_Any * query, 
 }
 
 
-IDBIndex IDBObjectStore_index(IDBObjectStore* self , jb_DOMString * name) {
+IDBIndex IDBObjectStore_index(IDBObjectStore* self , jb_String * name) {
     return em_Val_as(IDBIndex, em_Val_call(em_Val_as_val(self->inner), "index", em_Val_from(name)));
 }
 
 
-IDBIndex IDBObjectStore_createIndex0(IDBObjectStore* self , jb_DOMString * name, jb_Any * keyPath) {
+IDBIndex IDBObjectStore_createIndex0(IDBObjectStore* self , jb_String * name, jb_Any * keyPath) {
     return em_Val_as(IDBIndex, em_Val_call(em_Val_as_val(self->inner), "createIndex", em_Val_from(name), em_Val_from(keyPath)));
 }
 
 
-IDBIndex IDBObjectStore_createIndex1(IDBObjectStore* self , jb_DOMString * name, jb_Any * keyPath, IDBIndexParameters * options) {
+IDBIndex IDBObjectStore_createIndex1(IDBObjectStore* self , jb_String * name, jb_Any * keyPath, IDBIndexParameters * options) {
     return em_Val_as(IDBIndex, em_Val_call(em_Val_as_val(self->inner), "createIndex", em_Val_from(name), em_Val_from(keyPath), em_Val_from(options)));
 }
 
 
-jb_Undefined IDBObjectStore_deleteIndex(IDBObjectStore* self , jb_DOMString * name) {
+jb_Undefined IDBObjectStore_deleteIndex(IDBObjectStore* self , jb_String * name) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "deleteIndex", em_Val_from(name)));
 }
 

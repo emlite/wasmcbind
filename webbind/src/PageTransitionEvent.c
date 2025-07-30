@@ -4,13 +4,13 @@
 DEFINE_EMLITE_TYPE(PageTransitionEvent, Event);
 
 
-PageTransitionEvent PageTransitionEvent_new0(jb_DOMString * type) {
+PageTransitionEvent PageTransitionEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("PageTransitionEvent") , em_Val_from(type));
         return PageTransitionEvent_from_val(&vv);
       }
 
 
-PageTransitionEvent PageTransitionEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+PageTransitionEvent PageTransitionEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("PageTransitionEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return PageTransitionEvent_from_val(&vv);
       }

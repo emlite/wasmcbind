@@ -10,9 +10,9 @@ typedef struct MediaKeysPolicy MediaKeysPolicy;
 
 DECLARE_EMLITE_TYPE(MediaKeysPolicy, em_Val);
 
-jb_DOMString MediaKeysPolicy_minHdcpVersion(const MediaKeysPolicy *self);
+jb_String MediaKeysPolicy_minHdcpVersion(const MediaKeysPolicy *self);
 
-void MediaKeysPolicy_set_minHdcpVersion(MediaKeysPolicy* self, jb_DOMString * value);
+void MediaKeysPolicy_set_minHdcpVersion(MediaKeysPolicy* self, jb_String * value);
 DECLARE_EMLITE_TYPE(MediaKeys, em_Val);
 
 MediaKeySession MediaKeys_createSession0(MediaKeys* self );

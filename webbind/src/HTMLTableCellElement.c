@@ -30,12 +30,12 @@ void HTMLTableCellElement_set_rowSpan(HTMLTableCellElement* self, unsigned long 
 }
 
 
-jb_DOMString HTMLTableCellElement_headers(const HTMLTableCellElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("headers")));
+jb_String HTMLTableCellElement_headers(const HTMLTableCellElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("headers")));
 }
 
 
-void HTMLTableCellElement_set_headers(HTMLTableCellElement* self, jb_DOMString * value) {
+void HTMLTableCellElement_set_headers(HTMLTableCellElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("headers"), em_Val_from(value));
 }
 
@@ -45,82 +45,82 @@ long HTMLTableCellElement_cellIndex(const HTMLTableCellElement *self) {
 }
 
 
-jb_DOMString HTMLTableCellElement_scope(const HTMLTableCellElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("scope")));
+jb_String HTMLTableCellElement_scope(const HTMLTableCellElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("scope")));
 }
 
 
-void HTMLTableCellElement_set_scope(HTMLTableCellElement* self, jb_DOMString * value) {
+void HTMLTableCellElement_set_scope(HTMLTableCellElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("scope"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableCellElement_abbr(const HTMLTableCellElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("abbr")));
+jb_String HTMLTableCellElement_abbr(const HTMLTableCellElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("abbr")));
 }
 
 
-void HTMLTableCellElement_set_abbr(HTMLTableCellElement* self, jb_DOMString * value) {
+void HTMLTableCellElement_set_abbr(HTMLTableCellElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("abbr"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableCellElement_align(const HTMLTableCellElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
+jb_String HTMLTableCellElement_align(const HTMLTableCellElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLTableCellElement_set_align(HTMLTableCellElement* self, jb_DOMString * value) {
+void HTMLTableCellElement_set_align(HTMLTableCellElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableCellElement_axis(const HTMLTableCellElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("axis")));
+jb_String HTMLTableCellElement_axis(const HTMLTableCellElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("axis")));
 }
 
 
-void HTMLTableCellElement_set_axis(HTMLTableCellElement* self, jb_DOMString * value) {
+void HTMLTableCellElement_set_axis(HTMLTableCellElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("axis"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableCellElement_height(const HTMLTableCellElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
+jb_String HTMLTableCellElement_height(const HTMLTableCellElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("height")));
 }
 
 
-void HTMLTableCellElement_set_height(HTMLTableCellElement* self, jb_DOMString * value) {
+void HTMLTableCellElement_set_height(HTMLTableCellElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("height"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableCellElement_width(const HTMLTableCellElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
+jb_String HTMLTableCellElement_width(const HTMLTableCellElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("width")));
 }
 
 
-void HTMLTableCellElement_set_width(HTMLTableCellElement* self, jb_DOMString * value) {
+void HTMLTableCellElement_set_width(HTMLTableCellElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("width"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableCellElement_ch(const HTMLTableCellElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("ch")));
+jb_String HTMLTableCellElement_ch(const HTMLTableCellElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("ch")));
 }
 
 
-void HTMLTableCellElement_set_ch(HTMLTableCellElement* self, jb_DOMString * value) {
+void HTMLTableCellElement_set_ch(HTMLTableCellElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("ch"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableCellElement_chOff(const HTMLTableCellElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("chOff")));
+jb_String HTMLTableCellElement_chOff(const HTMLTableCellElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("chOff")));
 }
 
 
-void HTMLTableCellElement_set_chOff(HTMLTableCellElement* self, jb_DOMString * value) {
+void HTMLTableCellElement_set_chOff(HTMLTableCellElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("chOff"), em_Val_from(value));
 }
 
@@ -135,22 +135,22 @@ void HTMLTableCellElement_set_noWrap(HTMLTableCellElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLTableCellElement_vAlign(const HTMLTableCellElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("vAlign")));
+jb_String HTMLTableCellElement_vAlign(const HTMLTableCellElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("vAlign")));
 }
 
 
-void HTMLTableCellElement_set_vAlign(HTMLTableCellElement* self, jb_DOMString * value) {
+void HTMLTableCellElement_set_vAlign(HTMLTableCellElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("vAlign"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableCellElement_bgColor(const HTMLTableCellElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("bgColor")));
+jb_String HTMLTableCellElement_bgColor(const HTMLTableCellElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("bgColor")));
 }
 
 
-void HTMLTableCellElement_set_bgColor(HTMLTableCellElement* self, jb_DOMString * value) {
+void HTMLTableCellElement_set_bgColor(HTMLTableCellElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("bgColor"), em_Val_from(value));
 }
 

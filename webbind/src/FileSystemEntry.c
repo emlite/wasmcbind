@@ -15,13 +15,13 @@ bool FileSystemEntry_isDirectory(const FileSystemEntry *self) {
 }
 
 
-jb_USVString FileSystemEntry_name(const FileSystemEntry *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String FileSystemEntry_name(const FileSystemEntry *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_USVString FileSystemEntry_fullPath(const FileSystemEntry *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fullPath")));
+jb_String FileSystemEntry_fullPath(const FileSystemEntry *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fullPath")));
 }
 
 

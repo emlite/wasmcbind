@@ -7,12 +7,12 @@
 DEFINE_EMLITE_TYPE(AudioOutputOptions, em_Val);
 
 
-jb_DOMString AudioOutputOptions_deviceId(const AudioOutputOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("deviceId")));
+jb_String AudioOutputOptions_deviceId(const AudioOutputOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("deviceId")));
 }
 
 
-void AudioOutputOptions_set_deviceId(AudioOutputOptions* self, jb_DOMString * value) {
+void AudioOutputOptions_set_deviceId(AudioOutputOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("deviceId"), em_Val_from(value));
 }
 
@@ -29,22 +29,22 @@ void CaptureHandleConfig_set_exposeOrigin(CaptureHandleConfig* self, bool value)
 }
 
 
-jb_DOMString CaptureHandleConfig_handle(const CaptureHandleConfig *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("handle")));
+jb_String CaptureHandleConfig_handle(const CaptureHandleConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("handle")));
 }
 
 
-void CaptureHandleConfig_set_handle(CaptureHandleConfig* self, jb_DOMString * value) {
+void CaptureHandleConfig_set_handle(CaptureHandleConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("handle"), em_Val_from(value));
 }
 
 
-jb_Sequence CaptureHandleConfig_permittedOrigins(const CaptureHandleConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("permittedOrigins")));
+jb_Array CaptureHandleConfig_permittedOrigins(const CaptureHandleConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("permittedOrigins")));
 }
 
 
-void CaptureHandleConfig_set_permittedOrigins(CaptureHandleConfig* self, jb_Sequence * value) {
+void CaptureHandleConfig_set_permittedOrigins(CaptureHandleConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("permittedOrigins"), em_Val_from(value));
 }
 
@@ -103,12 +103,12 @@ void MediaTrackSupportedConstraints_set_suppressLocalAudioPlayback(MediaTrackSup
 DEFINE_EMLITE_TYPE(MediaStreamConstraints, em_Val);
 
 
-jb_DOMString MediaStreamConstraints_peerIdentity(const MediaStreamConstraints *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("peerIdentity")));
+jb_String MediaStreamConstraints_peerIdentity(const MediaStreamConstraints *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("peerIdentity")));
 }
 
 
-void MediaStreamConstraints_set_peerIdentity(MediaStreamConstraints* self, jb_DOMString * value) {
+void MediaStreamConstraints_set_peerIdentity(MediaStreamConstraints* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("peerIdentity"), em_Val_from(value));
 }
 
@@ -232,7 +232,7 @@ jb_Undefined MediaDevices_setCaptureHandleConfig1(MediaDevices* self , CaptureHa
 }
 
 
-jb_Undefined MediaDevices_setSupportedCaptureActions(MediaDevices* self , jb_Sequence * actions) {
+jb_Undefined MediaDevices_setSupportedCaptureActions(MediaDevices* self , jb_Array * actions) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "setSupportedCaptureActions", em_Val_from(actions)));
 }
 

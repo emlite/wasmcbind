@@ -5,11 +5,11 @@
 
 
 
-bool CSS_supports0(jb_CSSOMString * property, jb_CSSOMString * value) {
+bool CSS_supports0(jb_String * property, jb_String * value) {
     return em_Val_as(bool, em_Val_call(em_Val_global("css"), "supports", em_Val_from(property), em_Val_from(value)));
 }
 
-bool CSS_supports1(jb_CSSOMString * conditionText) {
+bool CSS_supports1(jb_String * conditionText) {
     return em_Val_as(bool, em_Val_call(em_Val_global("css"), "supports", em_Val_from(conditionText)));
 }
 
@@ -55,24 +55,24 @@ jb_Promise CSS_parseDeclarationList1(jb_Any * css, jb_Any * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css"), "parseDeclarationList", em_Val_from(css), em_Val_from(options)));
 }
 
-CSSParserDeclaration CSS_parseDeclaration0(jb_DOMString * css) {
+CSSParserDeclaration CSS_parseDeclaration0(jb_String * css) {
     return em_Val_as(CSSParserDeclaration, em_Val_call(em_Val_global("css"), "parseDeclaration", em_Val_from(css)));
 }
 
-CSSParserDeclaration CSS_parseDeclaration1(jb_DOMString * css, jb_Any * options) {
+CSSParserDeclaration CSS_parseDeclaration1(jb_String * css, jb_Any * options) {
     return em_Val_as(CSSParserDeclaration, em_Val_call(em_Val_global("css"), "parseDeclaration", em_Val_from(css), em_Val_from(options)));
 }
 
-jb_Any CSS_parseValue(jb_DOMString * css) {
+jb_Any CSS_parseValue(jb_String * css) {
     return em_Val_as(jb_Any, em_Val_call(em_Val_global("css"), "parseValue", em_Val_from(css)));
 }
 
-jb_Sequence CSS_parseValueList(jb_DOMString * css) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_global("css"), "parseValueList", em_Val_from(css)));
+jb_Array CSS_parseValueList(jb_String * css) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_global("css"), "parseValueList", em_Val_from(css)));
 }
 
-jb_Sequence CSS_parseCommaValueList(jb_DOMString * css) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_global("css"), "parseCommaValueList", em_Val_from(css)));
+jb_Array CSS_parseCommaValueList(jb_String * css) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_global("css"), "parseCommaValueList", em_Val_from(css)));
 }
 
 
@@ -337,6 +337,6 @@ CSSUnitValue CSS_fr(double value) {
 
 
 
-jb_CSSOMString CSS_escape(jb_CSSOMString * ident) {
-    return em_Val_as(jb_CSSOMString, em_Val_call(em_Val_global("css"), "escape", em_Val_from(ident)));
+jb_String CSS_escape(jb_String * ident) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_global("css"), "escape", em_Val_from(ident)));
 }

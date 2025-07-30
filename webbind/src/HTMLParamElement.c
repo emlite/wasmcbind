@@ -10,42 +10,42 @@ HTMLParamElement HTMLParamElement_new() {
       }
 
 
-jb_DOMString HTMLParamElement_name(const HTMLParamElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLParamElement_name(const HTMLParamElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLParamElement_set_name(HTMLParamElement* self, jb_DOMString * value) {
+void HTMLParamElement_set_name(HTMLParamElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLParamElement_value(const HTMLParamElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
+jb_String HTMLParamElement_value(const HTMLParamElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
 }
 
 
-void HTMLParamElement_set_value(HTMLParamElement* self, jb_DOMString * value) {
+void HTMLParamElement_set_value(HTMLParamElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLParamElement_type(const HTMLParamElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
+jb_String HTMLParamElement_type(const HTMLParamElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void HTMLParamElement_set_type(HTMLParamElement* self, jb_DOMString * value) {
+void HTMLParamElement_set_type(HTMLParamElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLParamElement_valueType(const HTMLParamElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("valueType")));
+jb_String HTMLParamElement_valueType(const HTMLParamElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("valueType")));
 }
 
 
-void HTMLParamElement_set_valueType(HTMLParamElement* self, jb_DOMString * value) {
+void HTMLParamElement_set_valueType(HTMLParamElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("valueType"), em_Val_from(value));
 }
 

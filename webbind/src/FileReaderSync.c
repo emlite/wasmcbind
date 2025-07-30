@@ -16,22 +16,22 @@ jb_ArrayBuffer FileReaderSync_readAsArrayBuffer(FileReaderSync* self , Blob * bl
 }
 
 
-jb_DOMString FileReaderSync_readAsBinaryString(FileReaderSync* self , Blob * blob) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "readAsBinaryString", em_Val_from(blob)));
+jb_String FileReaderSync_readAsBinaryString(FileReaderSync* self , Blob * blob) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "readAsBinaryString", em_Val_from(blob)));
 }
 
 
-jb_DOMString FileReaderSync_readAsText0(FileReaderSync* self , Blob * blob) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "readAsText", em_Val_from(blob)));
+jb_String FileReaderSync_readAsText0(FileReaderSync* self , Blob * blob) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "readAsText", em_Val_from(blob)));
 }
 
 
-jb_DOMString FileReaderSync_readAsText1(FileReaderSync* self , Blob * blob, jb_DOMString * encoding) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "readAsText", em_Val_from(blob), em_Val_from(encoding)));
+jb_String FileReaderSync_readAsText1(FileReaderSync* self , Blob * blob, jb_String * encoding) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "readAsText", em_Val_from(blob), em_Val_from(encoding)));
 }
 
 
-jb_DOMString FileReaderSync_readAsDataURL(FileReaderSync* self , Blob * blob) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "readAsDataURL", em_Val_from(blob)));
+jb_String FileReaderSync_readAsDataURL(FileReaderSync* self , Blob * blob) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "readAsDataURL", em_Val_from(blob)));
 }
 

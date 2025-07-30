@@ -20,12 +20,12 @@ void HTMLOptGroupElement_set_disabled(HTMLOptGroupElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLOptGroupElement_label(const HTMLOptGroupElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("label")));
+jb_String HTMLOptGroupElement_label(const HTMLOptGroupElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void HTMLOptGroupElement_set_label(HTMLOptGroupElement* self, jb_DOMString * value) {
+void HTMLOptGroupElement_set_label(HTMLOptGroupElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 

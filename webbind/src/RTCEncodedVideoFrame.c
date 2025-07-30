@@ -14,12 +14,12 @@ void RTCEncodedVideoFrameMetadata_set_frameId(RTCEncodedVideoFrameMetadata* self
 }
 
 
-jb_Sequence RTCEncodedVideoFrameMetadata_dependencies(const RTCEncodedVideoFrameMetadata *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dependencies")));
+jb_Array RTCEncodedVideoFrameMetadata_dependencies(const RTCEncodedVideoFrameMetadata *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dependencies")));
 }
 
 
-void RTCEncodedVideoFrameMetadata_set_dependencies(RTCEncodedVideoFrameMetadata* self, jb_Sequence * value) {
+void RTCEncodedVideoFrameMetadata_set_dependencies(RTCEncodedVideoFrameMetadata* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("dependencies"), em_Val_from(value));
 }
 

@@ -4,18 +4,18 @@
 DEFINE_EMLITE_TYPE(NavigationDestination, em_Val);
 
 
-jb_USVString NavigationDestination_url(const NavigationDestination *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
+jb_String NavigationDestination_url(const NavigationDestination *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 
-jb_DOMString NavigationDestination_key(const NavigationDestination *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("key")));
+jb_String NavigationDestination_key(const NavigationDestination *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("key")));
 }
 
 
-jb_DOMString NavigationDestination_id(const NavigationDestination *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
+jb_String NavigationDestination_id(const NavigationDestination *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 

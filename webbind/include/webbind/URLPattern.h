@@ -9,9 +9,9 @@ typedef struct URLPatternResult URLPatternResult;
 
 DECLARE_EMLITE_TYPE(URLPatternResult, em_Val);
 
-jb_Sequence URLPatternResult_inputs(const URLPatternResult *self);
+jb_Array URLPatternResult_inputs(const URLPatternResult *self);
 
-void URLPatternResult_set_inputs(URLPatternResult* self, jb_Sequence * value);
+void URLPatternResult_set_inputs(URLPatternResult* self, jb_Array * value);
 
 jb_Any URLPatternResult_protocol(const URLPatternResult *self);
 
@@ -56,28 +56,28 @@ bool URLPattern_test0(URLPattern* self );
 
 bool URLPattern_test1(URLPattern* self , jb_Any * input);
 
-bool URLPattern_test2(URLPattern* self , jb_Any * input, jb_USVString * baseURL);
+bool URLPattern_test2(URLPattern* self , jb_Any * input, jb_String * baseURL);
 
 URLPatternResult URLPattern_exec0(URLPattern* self );
 
 URLPatternResult URLPattern_exec1(URLPattern* self , jb_Any * input);
 
-URLPatternResult URLPattern_exec2(URLPattern* self , jb_Any * input, jb_USVString * baseURL);
+URLPatternResult URLPattern_exec2(URLPattern* self , jb_Any * input, jb_String * baseURL);
 
-jb_USVString URLPattern_protocol(const URLPattern *self);
+jb_String URLPattern_protocol(const URLPattern *self);
 
-jb_USVString URLPattern_username(const URLPattern *self);
+jb_String URLPattern_username(const URLPattern *self);
 
-jb_USVString URLPattern_password(const URLPattern *self);
+jb_String URLPattern_password(const URLPattern *self);
 
-jb_USVString URLPattern_hostname(const URLPattern *self);
+jb_String URLPattern_hostname(const URLPattern *self);
 
-jb_USVString URLPattern_port(const URLPattern *self);
+jb_String URLPattern_port(const URLPattern *self);
 
-jb_USVString URLPattern_pathname(const URLPattern *self);
+jb_String URLPattern_pathname(const URLPattern *self);
 
-jb_USVString URLPattern_search(const URLPattern *self);
+jb_String URLPattern_search(const URLPattern *self);
 
-jb_USVString URLPattern_hash(const URLPattern *self);
+jb_String URLPattern_hash(const URLPattern *self);
 
 bool URLPattern_hasRegExpGroups(const URLPattern *self);

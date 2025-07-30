@@ -16,17 +16,17 @@ DECLARE_EMLITE_TYPE(TextDecoder, em_Val);
 
 TextDecoder TextDecoder_new0();
 
-TextDecoder TextDecoder_new1(jb_DOMString * label);
+TextDecoder TextDecoder_new1(jb_String * label);
 
-TextDecoder TextDecoder_new2(jb_DOMString * label, jb_Any * options);
+TextDecoder TextDecoder_new2(jb_String * label, jb_Any * options);
 
-jb_USVString TextDecoder_decode0(TextDecoder* self );
+jb_String TextDecoder_decode0(TextDecoder* self );
 
-jb_USVString TextDecoder_decode1(TextDecoder* self , jb_Any * input);
+jb_String TextDecoder_decode1(TextDecoder* self , jb_Any * input);
 
-jb_USVString TextDecoder_decode2(TextDecoder* self , jb_Any * input, TextDecodeOptions * options);
+jb_String TextDecoder_decode2(TextDecoder* self , jb_Any * input, TextDecodeOptions * options);
 
-jb_DOMString TextDecoder_encoding(const TextDecoder *self);
+jb_String TextDecoder_encoding(const TextDecoder *self);
 
 bool TextDecoder_fatal(const TextDecoder *self);
 

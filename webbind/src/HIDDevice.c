@@ -34,42 +34,42 @@ void HIDCollectionInfo_set_type(HIDCollectionInfo* self, unsigned char value) {
 }
 
 
-jb_Sequence HIDCollectionInfo_children(const HIDCollectionInfo *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("children")));
+jb_Array HIDCollectionInfo_children(const HIDCollectionInfo *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("children")));
 }
 
 
-void HIDCollectionInfo_set_children(HIDCollectionInfo* self, jb_Sequence * value) {
+void HIDCollectionInfo_set_children(HIDCollectionInfo* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("children"), em_Val_from(value));
 }
 
 
-jb_Sequence HIDCollectionInfo_inputReports(const HIDCollectionInfo *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("inputReports")));
+jb_Array HIDCollectionInfo_inputReports(const HIDCollectionInfo *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("inputReports")));
 }
 
 
-void HIDCollectionInfo_set_inputReports(HIDCollectionInfo* self, jb_Sequence * value) {
+void HIDCollectionInfo_set_inputReports(HIDCollectionInfo* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("inputReports"), em_Val_from(value));
 }
 
 
-jb_Sequence HIDCollectionInfo_outputReports(const HIDCollectionInfo *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputReports")));
+jb_Array HIDCollectionInfo_outputReports(const HIDCollectionInfo *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("outputReports")));
 }
 
 
-void HIDCollectionInfo_set_outputReports(HIDCollectionInfo* self, jb_Sequence * value) {
+void HIDCollectionInfo_set_outputReports(HIDCollectionInfo* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("outputReports"), em_Val_from(value));
 }
 
 
-jb_Sequence HIDCollectionInfo_featureReports(const HIDCollectionInfo *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("featureReports")));
+jb_Array HIDCollectionInfo_featureReports(const HIDCollectionInfo *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("featureReports")));
 }
 
 
-void HIDCollectionInfo_set_featureReports(HIDCollectionInfo* self, jb_Sequence * value) {
+void HIDCollectionInfo_set_featureReports(HIDCollectionInfo* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("featureReports"), em_Val_from(value));
 }
 
@@ -101,13 +101,13 @@ unsigned short HIDDevice_productId(const HIDDevice *self) {
 }
 
 
-jb_DOMString HIDDevice_productName(const HIDDevice *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("productName")));
+jb_String HIDDevice_productName(const HIDDevice *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("productName")));
 }
 
 
-jb_FrozenArray HIDDevice_collections(const HIDDevice *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("collections")));
+jb_Array HIDDevice_collections(const HIDDevice *self) {
+    return em_Val_as(jb_Array, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("collections")));
 }
 
 

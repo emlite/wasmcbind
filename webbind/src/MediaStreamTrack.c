@@ -4,12 +4,12 @@
 DEFINE_EMLITE_TYPE(MediaTrackCapabilities, em_Val);
 
 
-jb_DOMString MediaTrackCapabilities_displaySurface(const MediaTrackCapabilities *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("displaySurface")));
+jb_String MediaTrackCapabilities_displaySurface(const MediaTrackCapabilities *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("displaySurface")));
 }
 
 
-void MediaTrackCapabilities_set_displaySurface(MediaTrackCapabilities* self, jb_DOMString * value) {
+void MediaTrackCapabilities_set_displaySurface(MediaTrackCapabilities* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("displaySurface"), em_Val_from(value));
 }
 
@@ -24,36 +24,36 @@ void MediaTrackCapabilities_set_logicalSurface(MediaTrackCapabilities* self, boo
 }
 
 
-jb_Sequence MediaTrackCapabilities_cursor(const MediaTrackCapabilities *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cursor")));
+jb_Array MediaTrackCapabilities_cursor(const MediaTrackCapabilities *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cursor")));
 }
 
 
-void MediaTrackCapabilities_set_cursor(MediaTrackCapabilities* self, jb_Sequence * value) {
+void MediaTrackCapabilities_set_cursor(MediaTrackCapabilities* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("cursor"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(MediaTrackConstraints, em_Val);
 
 
-jb_Sequence MediaTrackConstraints_advanced(const MediaTrackConstraints *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("advanced")));
+jb_Array MediaTrackConstraints_advanced(const MediaTrackConstraints *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("advanced")));
 }
 
 
-void MediaTrackConstraints_set_advanced(MediaTrackConstraints* self, jb_Sequence * value) {
+void MediaTrackConstraints_set_advanced(MediaTrackConstraints* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("advanced"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(MediaTrackSettings, em_Val);
 
 
-jb_DOMString MediaTrackSettings_displaySurface(const MediaTrackSettings *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("displaySurface")));
+jb_String MediaTrackSettings_displaySurface(const MediaTrackSettings *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("displaySurface")));
 }
 
 
-void MediaTrackSettings_set_displaySurface(MediaTrackSettings* self, jb_DOMString * value) {
+void MediaTrackSettings_set_displaySurface(MediaTrackSettings* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("displaySurface"), em_Val_from(value));
 }
 
@@ -68,12 +68,12 @@ void MediaTrackSettings_set_logicalSurface(MediaTrackSettings* self, bool value)
 }
 
 
-jb_DOMString MediaTrackSettings_cursor(const MediaTrackSettings *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cursor")));
+jb_String MediaTrackSettings_cursor(const MediaTrackSettings *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cursor")));
 }
 
 
-void MediaTrackSettings_set_cursor(MediaTrackSettings* self, jb_DOMString * value) {
+void MediaTrackSettings_set_cursor(MediaTrackSettings* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("cursor"), em_Val_from(value));
 }
 
@@ -110,40 +110,40 @@ void MediaTrackSettings_set_screenPixelRatio(MediaTrackSettings* self, double va
 DEFINE_EMLITE_TYPE(CaptureHandle, em_Val);
 
 
-jb_DOMString CaptureHandle_origin(const CaptureHandle *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("origin")));
+jb_String CaptureHandle_origin(const CaptureHandle *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("origin")));
 }
 
 
-void CaptureHandle_set_origin(CaptureHandle* self, jb_DOMString * value) {
+void CaptureHandle_set_origin(CaptureHandle* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("origin"), em_Val_from(value));
 }
 
 
-jb_DOMString CaptureHandle_handle(const CaptureHandle *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("handle")));
+jb_String CaptureHandle_handle(const CaptureHandle *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("handle")));
 }
 
 
-void CaptureHandle_set_handle(CaptureHandle* self, jb_DOMString * value) {
+void CaptureHandle_set_handle(CaptureHandle* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("handle"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(MediaStreamTrack, EventTarget);
 
 
-jb_DOMString MediaStreamTrack_kind(const MediaStreamTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("kind")));
+jb_String MediaStreamTrack_kind(const MediaStreamTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("kind")));
 }
 
 
-jb_DOMString MediaStreamTrack_id(const MediaStreamTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
+jb_String MediaStreamTrack_id(const MediaStreamTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
-jb_DOMString MediaStreamTrack_label(const MediaStreamTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("label")));
+jb_String MediaStreamTrack_label(const MediaStreamTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("label")));
 }
 
 
@@ -247,8 +247,8 @@ void MediaStreamTrack_set_oncapturehandlechange(MediaStreamTrack* self, jb_Any *
 }
 
 
-jb_Sequence MediaStreamTrack_getSupportedCaptureActions(MediaStreamTrack* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getSupportedCaptureActions"));
+jb_Array MediaStreamTrack_getSupportedCaptureActions(MediaStreamTrack* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getSupportedCaptureActions"));
 }
 
 
@@ -257,12 +257,12 @@ jb_Promise MediaStreamTrack_sendCaptureAction(MediaStreamTrack* self , CaptureAc
 }
 
 
-jb_DOMString MediaStreamTrack_contentHint(const MediaStreamTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("contentHint")));
+jb_String MediaStreamTrack_contentHint(const MediaStreamTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("contentHint")));
 }
 
 
-void MediaStreamTrack_set_contentHint(MediaStreamTrack* self, jb_DOMString * value) {
+void MediaStreamTrack_set_contentHint(MediaStreamTrack* self, jb_String * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("contentHint"), em_Val_from(value));
 }
 

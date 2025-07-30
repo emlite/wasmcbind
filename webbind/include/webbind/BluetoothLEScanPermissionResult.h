@@ -10,6 +10,6 @@ typedef struct BluetoothLEScan BluetoothLEScan;
 
 DECLARE_EMLITE_TYPE(BluetoothLEScanPermissionResult, PermissionStatus);
 
-jb_FrozenArray BluetoothLEScanPermissionResult_scans(const BluetoothLEScanPermissionResult *self);
+jb_Array BluetoothLEScanPermissionResult_scans(const BluetoothLEScanPermissionResult *self);
 
-void BluetoothLEScanPermissionResult_set_scans(BluetoothLEScanPermissionResult* self, jb_FrozenArray * value);
+void BluetoothLEScanPermissionResult_set_scans(BluetoothLEScanPermissionResult* self, jb_Array * value);

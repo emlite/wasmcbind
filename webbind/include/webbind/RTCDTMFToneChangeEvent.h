@@ -8,8 +8,8 @@
 
 DECLARE_EMLITE_TYPE(RTCDTMFToneChangeEvent, Event);
 
-RTCDTMFToneChangeEvent RTCDTMFToneChangeEvent_new0(jb_DOMString * type);
+RTCDTMFToneChangeEvent RTCDTMFToneChangeEvent_new0(jb_String * type);
 
-RTCDTMFToneChangeEvent RTCDTMFToneChangeEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+RTCDTMFToneChangeEvent RTCDTMFToneChangeEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
-jb_DOMString RTCDTMFToneChangeEvent_tone(const RTCDTMFToneChangeEvent *self);
+jb_String RTCDTMFToneChangeEvent_tone(const RTCDTMFToneChangeEvent *self);

@@ -8,8 +8,8 @@
 
 DECLARE_EMLITE_TYPE(CSSKeywordValue, CSSStyleValue);
 
-CSSKeywordValue CSSKeywordValue_new(jb_USVString * value);
+CSSKeywordValue CSSKeywordValue_new(jb_String * value);
 
-jb_USVString CSSKeywordValue_value(const CSSKeywordValue *self);
+jb_String CSSKeywordValue_value(const CSSKeywordValue *self);
 
-void CSSKeywordValue_set_value(CSSKeywordValue* self, jb_USVString * value);
+void CSSKeywordValue_set_value(CSSKeywordValue* self, jb_String * value);

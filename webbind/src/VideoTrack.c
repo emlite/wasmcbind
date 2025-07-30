@@ -5,23 +5,23 @@
 DEFINE_EMLITE_TYPE(VideoTrack, em_Val);
 
 
-jb_DOMString VideoTrack_id(const VideoTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
+jb_String VideoTrack_id(const VideoTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
-jb_DOMString VideoTrack_kind(const VideoTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("kind")));
+jb_String VideoTrack_kind(const VideoTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("kind")));
 }
 
 
-jb_DOMString VideoTrack_label(const VideoTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
+jb_String VideoTrack_label(const VideoTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-jb_DOMString VideoTrack_language(const VideoTrack *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("language")));
+jb_String VideoTrack_language(const VideoTrack *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("language")));
 }
 
 

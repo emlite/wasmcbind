@@ -10,7 +10,7 @@ DECLARE_EMLITE_TYPE(RTCError, DOMException);
 
 RTCError RTCError_new0(jb_Any * init);
 
-RTCError RTCError_new1(jb_Any * init, jb_DOMString * message);
+RTCError RTCError_new1(jb_Any * init, jb_String * message);
 
 RTCErrorDetailType RTCError_errorDetail(const RTCError *self);
 

@@ -7,7 +7,7 @@
 DEFINE_EMLITE_TYPE(BluetoothAdvertisingEvent, Event);
 
 
-BluetoothAdvertisingEvent BluetoothAdvertisingEvent_new(jb_DOMString * type, jb_Any * init) {
+BluetoothAdvertisingEvent BluetoothAdvertisingEvent_new(jb_String * type, jb_Any * init) {
         em_Val vv = em_Val_new(em_Val_global("BluetoothAdvertisingEvent") , em_Val_from(type), em_Val_from(init));
         return BluetoothAdvertisingEvent_from_val(&vv);
       }
@@ -18,13 +18,13 @@ BluetoothDevice BluetoothAdvertisingEvent_device(const BluetoothAdvertisingEvent
 }
 
 
-jb_FrozenArray BluetoothAdvertisingEvent_uuids(const BluetoothAdvertisingEvent *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(Event_as_val(self->inner), em_Val_from("uuids")));
+jb_Array BluetoothAdvertisingEvent_uuids(const BluetoothAdvertisingEvent *self) {
+    return em_Val_as(jb_Array, em_Val_get(Event_as_val(self->inner), em_Val_from("uuids")));
 }
 
 
-jb_DOMString BluetoothAdvertisingEvent_name(const BluetoothAdvertisingEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("name")));
+jb_String BluetoothAdvertisingEvent_name(const BluetoothAdvertisingEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("name")));
 }
 
 

@@ -13,9 +13,9 @@ typedef struct VideoEncoderSupport VideoEncoderSupport;
 
 DECLARE_EMLITE_TYPE(VideoEncoderConfig, em_Val);
 
-jb_DOMString VideoEncoderConfig_codec(const VideoEncoderConfig *self);
+jb_String VideoEncoderConfig_codec(const VideoEncoderConfig *self);
 
-void VideoEncoderConfig_set_codec(VideoEncoderConfig* self, jb_DOMString * value);
+void VideoEncoderConfig_set_codec(VideoEncoderConfig* self, jb_String * value);
 
 unsigned long VideoEncoderConfig_width(const VideoEncoderConfig *self);
 
@@ -49,9 +49,9 @@ AlphaOption VideoEncoderConfig_alpha(const VideoEncoderConfig *self);
 
 void VideoEncoderConfig_set_alpha(VideoEncoderConfig* self, AlphaOption * value);
 
-jb_DOMString VideoEncoderConfig_scalabilityMode(const VideoEncoderConfig *self);
+jb_String VideoEncoderConfig_scalabilityMode(const VideoEncoderConfig *self);
 
-void VideoEncoderConfig_set_scalabilityMode(VideoEncoderConfig* self, jb_DOMString * value);
+void VideoEncoderConfig_set_scalabilityMode(VideoEncoderConfig* self, jb_String * value);
 
 VideoEncoderBitrateMode VideoEncoderConfig_bitrateMode(const VideoEncoderConfig *self);
 
@@ -61,9 +61,9 @@ LatencyMode VideoEncoderConfig_latencyMode(const VideoEncoderConfig *self);
 
 void VideoEncoderConfig_set_latencyMode(VideoEncoderConfig* self, LatencyMode * value);
 
-jb_DOMString VideoEncoderConfig_contentHint(const VideoEncoderConfig *self);
+jb_String VideoEncoderConfig_contentHint(const VideoEncoderConfig *self);
 
-void VideoEncoderConfig_set_contentHint(VideoEncoderConfig* self, jb_DOMString * value);
+void VideoEncoderConfig_set_contentHint(VideoEncoderConfig* self, jb_String * value);
 DECLARE_EMLITE_TYPE(VideoEncoderEncodeOptions, em_Val);
 
 bool VideoEncoderEncodeOptions_keyFrame(const VideoEncoderEncodeOptions *self);

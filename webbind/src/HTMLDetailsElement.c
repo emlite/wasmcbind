@@ -10,12 +10,12 @@ HTMLDetailsElement HTMLDetailsElement_new() {
       }
 
 
-jb_DOMString HTMLDetailsElement_name(const HTMLDetailsElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLDetailsElement_name(const HTMLDetailsElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLDetailsElement_set_name(HTMLDetailsElement* self, jb_DOMString * value) {
+void HTMLDetailsElement_set_name(HTMLDetailsElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 

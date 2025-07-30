@@ -8,11 +8,11 @@
 
 DECLARE_EMLITE_TYPE(DocumentType, Node);
 
-jb_DOMString DocumentType_name(const DocumentType *self);
+jb_String DocumentType_name(const DocumentType *self);
 
-jb_DOMString DocumentType_publicId(const DocumentType *self);
+jb_String DocumentType_publicId(const DocumentType *self);
 
-jb_DOMString DocumentType_systemId(const DocumentType *self);
+jb_String DocumentType_systemId(const DocumentType *self);
 
 jb_Undefined DocumentType_before(DocumentType* self , jb_Any * nodes);
 

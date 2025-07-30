@@ -6,12 +6,12 @@
 DEFINE_EMLITE_TYPE(IDBIndex, em_Val);
 
 
-jb_DOMString IDBIndex_name(const IDBIndex *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String IDBIndex_name(const IDBIndex *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void IDBIndex_set_name(IDBIndex* self, jb_DOMString * value) {
+void IDBIndex_set_name(IDBIndex* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 

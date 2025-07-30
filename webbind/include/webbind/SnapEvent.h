@@ -10,9 +10,9 @@ typedef struct Node Node;
 
 DECLARE_EMLITE_TYPE(SnapEvent, Event);
 
-SnapEvent SnapEvent_new0(jb_DOMString * type);
+SnapEvent SnapEvent_new0(jb_String * type);
 
-SnapEvent SnapEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+SnapEvent SnapEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
 Node SnapEvent_snapTargetBlock(const SnapEvent *self);
 

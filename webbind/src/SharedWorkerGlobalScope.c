@@ -4,8 +4,8 @@
 DEFINE_EMLITE_TYPE(SharedWorkerGlobalScope, WorkerGlobalScope);
 
 
-jb_DOMString SharedWorkerGlobalScope_name(const SharedWorkerGlobalScope *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(WorkerGlobalScope_as_val(self->inner), em_Val_from("name")));
+jb_String SharedWorkerGlobalScope_name(const SharedWorkerGlobalScope *self) {
+    return em_Val_as(jb_String, em_Val_get(WorkerGlobalScope_as_val(self->inner), em_Val_from("name")));
 }
 
 

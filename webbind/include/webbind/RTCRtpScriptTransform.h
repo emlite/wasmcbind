@@ -13,4 +13,4 @@ RTCRtpScriptTransform RTCRtpScriptTransform_new0(Worker * worker);
 
 RTCRtpScriptTransform RTCRtpScriptTransform_new1(Worker * worker, jb_Any * options);
 
-RTCRtpScriptTransform RTCRtpScriptTransform_new2(Worker * worker, jb_Any * options, jb_Sequence * transfer);
+RTCRtpScriptTransform RTCRtpScriptTransform_new2(Worker * worker, jb_Any * options, jb_Array * transfer);

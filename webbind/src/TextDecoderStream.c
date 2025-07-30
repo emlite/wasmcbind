@@ -12,20 +12,20 @@ TextDecoderStream TextDecoderStream_new0() {
       }
 
 
-TextDecoderStream TextDecoderStream_new1(jb_DOMString * label) {
+TextDecoderStream TextDecoderStream_new1(jb_String * label) {
         em_Val vv = em_Val_new(em_Val_global("TextDecoderStream") , em_Val_from(label));
         return TextDecoderStream_from_val(&vv);
       }
 
 
-TextDecoderStream TextDecoderStream_new2(jb_DOMString * label, jb_Any * options) {
+TextDecoderStream TextDecoderStream_new2(jb_String * label, jb_Any * options) {
         em_Val vv = em_Val_new(em_Val_global("TextDecoderStream") , em_Val_from(label), em_Val_from(options));
         return TextDecoderStream_from_val(&vv);
       }
 
 
-jb_DOMString TextDecoderStream_encoding(const TextDecoderStream *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("encoding")));
+jb_String TextDecoderStream_encoding(const TextDecoderStream *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("encoding")));
 }
 
 

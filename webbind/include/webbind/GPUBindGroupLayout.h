@@ -7,6 +7,6 @@
 
 DECLARE_EMLITE_TYPE(GPUBindGroupLayout, em_Val);
 
-jb_USVString GPUBindGroupLayout_label(const GPUBindGroupLayout *self);
+jb_String GPUBindGroupLayout_label(const GPUBindGroupLayout *self);
 
-void GPUBindGroupLayout_set_label(GPUBindGroupLayout* self, jb_USVString * value);
+void GPUBindGroupLayout_set_label(GPUBindGroupLayout* self, jb_String * value);

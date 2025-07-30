@@ -17,12 +17,12 @@ HTMLInputElement HTMLInputElement_new() {
       }
 
 
-jb_DOMString HTMLInputElement_accept(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("accept")));
+jb_String HTMLInputElement_accept(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("accept")));
 }
 
 
-void HTMLInputElement_set_accept(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_accept(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("accept"), em_Val_from(value));
 }
 
@@ -37,22 +37,22 @@ void HTMLInputElement_set_alpha(HTMLInputElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLInputElement_alt(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("alt")));
+jb_String HTMLInputElement_alt(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("alt")));
 }
 
 
-void HTMLInputElement_set_alt(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_alt(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("alt"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_autocomplete(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("autocomplete")));
+jb_String HTMLInputElement_autocomplete(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("autocomplete")));
 }
 
 
-void HTMLInputElement_set_autocomplete(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_autocomplete(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("autocomplete"), em_Val_from(value));
 }
 
@@ -77,22 +77,22 @@ void HTMLInputElement_set_checked(HTMLInputElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLInputElement_colorSpace(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("colorSpace")));
+jb_String HTMLInputElement_colorSpace(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("colorSpace")));
 }
 
 
-void HTMLInputElement_set_colorSpace(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_colorSpace(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("colorSpace"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_dirName(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("dirName")));
+jb_String HTMLInputElement_dirName(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("dirName")));
 }
 
 
-void HTMLInputElement_set_dirName(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_dirName(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("dirName"), em_Val_from(value));
 }
 
@@ -122,32 +122,32 @@ void HTMLInputElement_set_files(HTMLInputElement* self, FileList * value) {
 }
 
 
-jb_USVString HTMLInputElement_formAction(const HTMLInputElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formAction")));
+jb_String HTMLInputElement_formAction(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formAction")));
 }
 
 
-void HTMLInputElement_set_formAction(HTMLInputElement* self, jb_USVString * value) {
+void HTMLInputElement_set_formAction(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("formAction"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_formEnctype(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formEnctype")));
+jb_String HTMLInputElement_formEnctype(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formEnctype")));
 }
 
 
-void HTMLInputElement_set_formEnctype(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_formEnctype(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("formEnctype"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_formMethod(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formMethod")));
+jb_String HTMLInputElement_formMethod(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formMethod")));
 }
 
 
-void HTMLInputElement_set_formMethod(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_formMethod(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("formMethod"), em_Val_from(value));
 }
 
@@ -162,12 +162,12 @@ void HTMLInputElement_set_formNoValidate(HTMLInputElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLInputElement_formTarget(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formTarget")));
+jb_String HTMLInputElement_formTarget(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("formTarget")));
 }
 
 
-void HTMLInputElement_set_formTarget(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_formTarget(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("formTarget"), em_Val_from(value));
 }
 
@@ -197,12 +197,12 @@ HTMLDataListElement HTMLInputElement_list(const HTMLInputElement *self) {
 }
 
 
-jb_DOMString HTMLInputElement_max(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("max")));
+jb_String HTMLInputElement_max(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("max")));
 }
 
 
-void HTMLInputElement_set_max(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_max(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("max"), em_Val_from(value));
 }
 
@@ -217,12 +217,12 @@ void HTMLInputElement_set_maxLength(HTMLInputElement* self, long value) {
 }
 
 
-jb_DOMString HTMLInputElement_min(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("min")));
+jb_String HTMLInputElement_min(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("min")));
 }
 
 
-void HTMLInputElement_set_min(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_min(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("min"), em_Val_from(value));
 }
 
@@ -247,32 +247,32 @@ void HTMLInputElement_set_multiple(HTMLInputElement* self, bool value) {
 }
 
 
-jb_DOMString HTMLInputElement_name(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLInputElement_name(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLInputElement_set_name(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_name(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_pattern(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("pattern")));
+jb_String HTMLInputElement_pattern(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("pattern")));
 }
 
 
-void HTMLInputElement_set_pattern(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_pattern(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("pattern"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_placeholder(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("placeholder")));
+jb_String HTMLInputElement_placeholder(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("placeholder")));
 }
 
 
-void HTMLInputElement_set_placeholder(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_placeholder(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("placeholder"), em_Val_from(value));
 }
 
@@ -307,52 +307,52 @@ void HTMLInputElement_set_size(HTMLInputElement* self, unsigned long value) {
 }
 
 
-jb_USVString HTMLInputElement_src(const HTMLInputElement *self) {
-    return em_Val_as(jb_USVString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
+jb_String HTMLInputElement_src(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void HTMLInputElement_set_src(HTMLInputElement* self, jb_USVString * value) {
+void HTMLInputElement_set_src(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_step(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("step")));
+jb_String HTMLInputElement_step(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("step")));
 }
 
 
-void HTMLInputElement_set_step(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_step(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("step"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_type(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
+jb_String HTMLInputElement_type(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-void HTMLInputElement_set_type(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_type(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("type"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_defaultValue(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("defaultValue")));
+jb_String HTMLInputElement_defaultValue(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("defaultValue")));
 }
 
 
-void HTMLInputElement_set_defaultValue(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_defaultValue(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("defaultValue"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_value(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
+jb_String HTMLInputElement_value(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
 }
 
 
-void HTMLInputElement_set_value(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_value(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
 }
 
@@ -417,8 +417,8 @@ ValidityState HTMLInputElement_validity(const HTMLInputElement *self) {
 }
 
 
-jb_DOMString HTMLInputElement_validationMessage(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
+jb_String HTMLInputElement_validationMessage(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
 }
 
 
@@ -432,7 +432,7 @@ bool HTMLInputElement_reportValidity(HTMLInputElement* self ) {
 }
 
 
-jb_Undefined HTMLInputElement_setCustomValidity(HTMLInputElement* self , jb_DOMString * error) {
+jb_Undefined HTMLInputElement_setCustomValidity(HTMLInputElement* self , jb_String * error) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setCustomValidity", em_Val_from(error)));
 }
 
@@ -467,22 +467,22 @@ void HTMLInputElement_set_selectionEnd(HTMLInputElement* self, unsigned long val
 }
 
 
-jb_DOMString HTMLInputElement_selectionDirection(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("selectionDirection")));
+jb_String HTMLInputElement_selectionDirection(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("selectionDirection")));
 }
 
 
-void HTMLInputElement_set_selectionDirection(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_selectionDirection(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("selectionDirection"), em_Val_from(value));
 }
 
 
-jb_Undefined HTMLInputElement_setRangeText0(HTMLInputElement* self , jb_DOMString * replacement, unsigned long start, unsigned long end) {
+jb_Undefined HTMLInputElement_setRangeText0(HTMLInputElement* self , jb_String * replacement, unsigned long start, unsigned long end) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setRangeText", em_Val_from(replacement), em_Val_from(start), em_Val_from(end)));
 }
 
 
-jb_Undefined HTMLInputElement_setRangeText1(HTMLInputElement* self , jb_DOMString * replacement, unsigned long start, unsigned long end, SelectionMode * selectionMode) {
+jb_Undefined HTMLInputElement_setRangeText1(HTMLInputElement* self , jb_String * replacement, unsigned long start, unsigned long end, SelectionMode * selectionMode) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setRangeText", em_Val_from(replacement), em_Val_from(start), em_Val_from(end), em_Val_from(selectionMode)));
 }
 
@@ -492,7 +492,7 @@ jb_Undefined HTMLInputElement_setSelectionRange0(HTMLInputElement* self , unsign
 }
 
 
-jb_Undefined HTMLInputElement_setSelectionRange1(HTMLInputElement* self , unsigned long start, unsigned long end, jb_DOMString * direction) {
+jb_Undefined HTMLInputElement_setSelectionRange1(HTMLInputElement* self , unsigned long start, unsigned long end, jb_String * direction) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setSelectionRange", em_Val_from(start), em_Val_from(end), em_Val_from(direction)));
 }
 
@@ -512,37 +512,37 @@ void HTMLInputElement_set_webkitdirectory(HTMLInputElement* self, bool value) {
 }
 
 
-jb_FrozenArray HTMLInputElement_webkitEntries(const HTMLInputElement *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("webkitEntries")));
+jb_Array HTMLInputElement_webkitEntries(const HTMLInputElement *self) {
+    return em_Val_as(jb_Array, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("webkitEntries")));
 }
 
 
-jb_DOMString HTMLInputElement_capture(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("capture")));
+jb_String HTMLInputElement_capture(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("capture")));
 }
 
 
-void HTMLInputElement_set_capture(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_capture(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("capture"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_align(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
+jb_String HTMLInputElement_align(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLInputElement_set_align(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_align(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLInputElement_useMap(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("useMap")));
+jb_String HTMLInputElement_useMap(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("useMap")));
 }
 
 
-void HTMLInputElement_set_useMap(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_useMap(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("useMap"), em_Val_from(value));
 }
 
@@ -557,12 +557,12 @@ void HTMLInputElement_set_popoverTargetElement(HTMLInputElement* self, Element *
 }
 
 
-jb_DOMString HTMLInputElement_popoverTargetAction(const HTMLInputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("popoverTargetAction")));
+jb_String HTMLInputElement_popoverTargetAction(const HTMLInputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("popoverTargetAction")));
 }
 
 
-void HTMLInputElement_set_popoverTargetAction(HTMLInputElement* self, jb_DOMString * value) {
+void HTMLInputElement_set_popoverTargetAction(HTMLInputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("popoverTargetAction"), em_Val_from(value));
 }
 

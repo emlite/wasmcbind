@@ -9,44 +9,44 @@
 DEFINE_EMLITE_TYPE(RTCRtpCapabilities, em_Val);
 
 
-jb_Sequence RTCRtpCapabilities_codecs(const RTCRtpCapabilities *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("codecs")));
+jb_Array RTCRtpCapabilities_codecs(const RTCRtpCapabilities *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("codecs")));
 }
 
 
-void RTCRtpCapabilities_set_codecs(RTCRtpCapabilities* self, jb_Sequence * value) {
+void RTCRtpCapabilities_set_codecs(RTCRtpCapabilities* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("codecs"), em_Val_from(value));
 }
 
 
-jb_Sequence RTCRtpCapabilities_headerExtensions(const RTCRtpCapabilities *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("headerExtensions")));
+jb_Array RTCRtpCapabilities_headerExtensions(const RTCRtpCapabilities *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("headerExtensions")));
 }
 
 
-void RTCRtpCapabilities_set_headerExtensions(RTCRtpCapabilities* self, jb_Sequence * value) {
+void RTCRtpCapabilities_set_headerExtensions(RTCRtpCapabilities* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("headerExtensions"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(RTCRtpSendParameters, em_Val);
 
 
-jb_DOMString RTCRtpSendParameters_transactionId(const RTCRtpSendParameters *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("transactionId")));
+jb_String RTCRtpSendParameters_transactionId(const RTCRtpSendParameters *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("transactionId")));
 }
 
 
-void RTCRtpSendParameters_set_transactionId(RTCRtpSendParameters* self, jb_DOMString * value) {
+void RTCRtpSendParameters_set_transactionId(RTCRtpSendParameters* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("transactionId"), em_Val_from(value));
 }
 
 
-jb_Sequence RTCRtpSendParameters_encodings(const RTCRtpSendParameters *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("encodings")));
+jb_Array RTCRtpSendParameters_encodings(const RTCRtpSendParameters *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("encodings")));
 }
 
 
-void RTCRtpSendParameters_set_encodings(RTCRtpSendParameters* self, jb_Sequence * value) {
+void RTCRtpSendParameters_set_encodings(RTCRtpSendParameters* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("encodings"), em_Val_from(value));
 }
 
@@ -65,7 +65,7 @@ RTCDtlsTransport RTCRtpSender_transport(const RTCRtpSender *self) {
 }
 
 
-RTCRtpCapabilities RTCRtpSender_getCapabilities(RTCRtpSender* self , jb_DOMString * kind) {
+RTCRtpCapabilities RTCRtpSender_getCapabilities(RTCRtpSender* self , jb_String * kind) {
     return em_Val_as(RTCRtpCapabilities, em_Val_call(em_Val_global("rtcrtpsender"), "getCapabilities", em_Val_from(kind)));
 }
 
@@ -115,7 +115,7 @@ jb_Promise RTCRtpSender_generateKeyFrame0(RTCRtpSender* self ) {
 }
 
 
-jb_Promise RTCRtpSender_generateKeyFrame1(RTCRtpSender* self , jb_Sequence * rids) {
+jb_Promise RTCRtpSender_generateKeyFrame1(RTCRtpSender* self , jb_Array * rids) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "generateKeyFrame", em_Val_from(rids)));
 }
 

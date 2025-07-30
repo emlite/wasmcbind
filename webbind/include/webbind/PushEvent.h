@@ -10,8 +10,8 @@ typedef struct PushMessageData PushMessageData;
 
 DECLARE_EMLITE_TYPE(PushEvent, ExtendableEvent);
 
-PushEvent PushEvent_new0(jb_DOMString * type);
+PushEvent PushEvent_new0(jb_String * type);
 
-PushEvent PushEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+PushEvent PushEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
 PushMessageData PushEvent_data(const PushEvent *self);

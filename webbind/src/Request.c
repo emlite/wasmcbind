@@ -21,13 +21,13 @@ Request Request_new1(jb_Any * input, jb_Any * init) {
       }
 
 
-jb_ByteString Request_method(const Request *self) {
-    return em_Val_as(jb_ByteString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("method")));
+jb_String Request_method(const Request *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("method")));
 }
 
 
-jb_USVString Request_url(const Request *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
+jb_String Request_url(const Request *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 
@@ -41,8 +41,8 @@ RequestDestination Request_destination(const Request *self) {
 }
 
 
-jb_USVString Request_referrer(const Request *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("referrer")));
+jb_String Request_referrer(const Request *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("referrer")));
 }
 
 
@@ -71,8 +71,8 @@ RequestRedirect Request_redirect(const Request *self) {
 }
 
 
-jb_DOMString Request_integrity(const Request *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("integrity")));
+jb_String Request_integrity(const Request *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("integrity")));
 }
 
 

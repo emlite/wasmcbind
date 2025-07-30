@@ -5,18 +5,18 @@
 DEFINE_EMLITE_TYPE(Plugin, em_Val);
 
 
-jb_DOMString Plugin_name(const Plugin *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String Plugin_name(const Plugin *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString Plugin_description(const Plugin *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("description")));
+jb_String Plugin_description(const Plugin *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("description")));
 }
 
 
-jb_DOMString Plugin_filename(const Plugin *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filename")));
+jb_String Plugin_filename(const Plugin *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filename")));
 }
 
 
@@ -30,7 +30,7 @@ MimeType Plugin_item(Plugin* self , unsigned long index) {
 }
 
 
-MimeType Plugin_namedItem(Plugin* self , jb_DOMString * name) {
+MimeType Plugin_namedItem(Plugin* self , jb_String * name) {
     return em_Val_as(MimeType, em_Val_call(em_Val_as_val(self->inner), "namedItem", em_Val_from(name)));
 }
 

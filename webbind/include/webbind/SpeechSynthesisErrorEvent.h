@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(SpeechSynthesisErrorEvent, SpeechSynthesisEvent);
 
-SpeechSynthesisErrorEvent SpeechSynthesisErrorEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+SpeechSynthesisErrorEvent SpeechSynthesisErrorEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 SpeechSynthesisErrorCode SpeechSynthesisErrorEvent_error(const SpeechSynthesisErrorEvent *self);

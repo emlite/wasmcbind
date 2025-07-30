@@ -5,7 +5,7 @@
 DEFINE_EMLITE_TYPE(BlobEvent, Event);
 
 
-BlobEvent BlobEvent_new(jb_DOMString * type, jb_Any * eventInitDict) {
+BlobEvent BlobEvent_new(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("BlobEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return BlobEvent_from_val(&vv);
       }

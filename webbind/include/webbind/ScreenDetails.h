@@ -10,7 +10,7 @@ typedef struct ScreenDetailed ScreenDetailed;
 
 DECLARE_EMLITE_TYPE(ScreenDetails, EventTarget);
 
-jb_FrozenArray ScreenDetails_screens(const ScreenDetails *self);
+jb_Array ScreenDetails_screens(const ScreenDetails *self);
 
 ScreenDetailed ScreenDetails_currentScreen(const ScreenDetails *self);
 

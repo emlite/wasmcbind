@@ -49,42 +49,42 @@
 DEFINE_EMLITE_TYPE(MediaKeySystemConfiguration, em_Val);
 
 
-jb_DOMString MediaKeySystemConfiguration_label(const MediaKeySystemConfiguration *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
+jb_String MediaKeySystemConfiguration_label(const MediaKeySystemConfiguration *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("label")));
 }
 
 
-void MediaKeySystemConfiguration_set_label(MediaKeySystemConfiguration* self, jb_DOMString * value) {
+void MediaKeySystemConfiguration_set_label(MediaKeySystemConfiguration* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("label"), em_Val_from(value));
 }
 
 
-jb_Sequence MediaKeySystemConfiguration_initDataTypes(const MediaKeySystemConfiguration *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("initDataTypes")));
+jb_Array MediaKeySystemConfiguration_initDataTypes(const MediaKeySystemConfiguration *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("initDataTypes")));
 }
 
 
-void MediaKeySystemConfiguration_set_initDataTypes(MediaKeySystemConfiguration* self, jb_Sequence * value) {
+void MediaKeySystemConfiguration_set_initDataTypes(MediaKeySystemConfiguration* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("initDataTypes"), em_Val_from(value));
 }
 
 
-jb_Sequence MediaKeySystemConfiguration_audioCapabilities(const MediaKeySystemConfiguration *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("audioCapabilities")));
+jb_Array MediaKeySystemConfiguration_audioCapabilities(const MediaKeySystemConfiguration *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("audioCapabilities")));
 }
 
 
-void MediaKeySystemConfiguration_set_audioCapabilities(MediaKeySystemConfiguration* self, jb_Sequence * value) {
+void MediaKeySystemConfiguration_set_audioCapabilities(MediaKeySystemConfiguration* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("audioCapabilities"), em_Val_from(value));
 }
 
 
-jb_Sequence MediaKeySystemConfiguration_videoCapabilities(const MediaKeySystemConfiguration *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("videoCapabilities")));
+jb_Array MediaKeySystemConfiguration_videoCapabilities(const MediaKeySystemConfiguration *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("videoCapabilities")));
 }
 
 
-void MediaKeySystemConfiguration_set_videoCapabilities(MediaKeySystemConfiguration* self, jb_Sequence * value) {
+void MediaKeySystemConfiguration_set_videoCapabilities(MediaKeySystemConfiguration* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("videoCapabilities"), em_Val_from(value));
 }
 
@@ -109,54 +109,54 @@ void MediaKeySystemConfiguration_set_persistentState(MediaKeySystemConfiguration
 }
 
 
-jb_Sequence MediaKeySystemConfiguration_sessionTypes(const MediaKeySystemConfiguration *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sessionTypes")));
+jb_Array MediaKeySystemConfiguration_sessionTypes(const MediaKeySystemConfiguration *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sessionTypes")));
 }
 
 
-void MediaKeySystemConfiguration_set_sessionTypes(MediaKeySystemConfiguration* self, jb_Sequence * value) {
+void MediaKeySystemConfiguration_set_sessionTypes(MediaKeySystemConfiguration* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sessionTypes"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(RelatedApplication, em_Val);
 
 
-jb_USVString RelatedApplication_platform(const RelatedApplication *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("platform")));
+jb_String RelatedApplication_platform(const RelatedApplication *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("platform")));
 }
 
 
-void RelatedApplication_set_platform(RelatedApplication* self, jb_USVString * value) {
+void RelatedApplication_set_platform(RelatedApplication* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("platform"), em_Val_from(value));
 }
 
 
-jb_USVString RelatedApplication_url(const RelatedApplication *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
+jb_String RelatedApplication_url(const RelatedApplication *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 
-void RelatedApplication_set_url(RelatedApplication* self, jb_USVString * value) {
+void RelatedApplication_set_url(RelatedApplication* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("url"), em_Val_from(value));
 }
 
 
-jb_DOMString RelatedApplication_id(const RelatedApplication *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
+jb_String RelatedApplication_id(const RelatedApplication *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
-void RelatedApplication_set_id(RelatedApplication* self, jb_DOMString * value) {
+void RelatedApplication_set_id(RelatedApplication* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("id"), em_Val_from(value));
 }
 
 
-jb_USVString RelatedApplication_version(const RelatedApplication *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("version")));
+jb_String RelatedApplication_version(const RelatedApplication *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("version")));
 }
 
 
-void RelatedApplication_set_version(RelatedApplication* self, jb_USVString * value) {
+void RelatedApplication_set_version(RelatedApplication* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("version"), em_Val_from(value));
 }
 
@@ -195,12 +195,12 @@ void HandwritingRecognizerQueryResult_set_hints(HandwritingRecognizerQueryResult
 DEFINE_EMLITE_TYPE(HandwritingModelConstraint, em_Val);
 
 
-jb_Sequence HandwritingModelConstraint_languages(const HandwritingModelConstraint *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("languages")));
+jb_Array HandwritingModelConstraint_languages(const HandwritingModelConstraint *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("languages")));
 }
 
 
-void HandwritingModelConstraint_set_languages(HandwritingModelConstraint* self, jb_Sequence * value) {
+void HandwritingModelConstraint_set_languages(HandwritingModelConstraint* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("languages"), em_Val_from(value));
 }
 
@@ -217,12 +217,12 @@ void AuctionAdInterestGroup_set_priority(AuctionAdInterestGroup* self, double va
 }
 
 
-jb_Record AuctionAdInterestGroup_prioritySignalsOverrides(const AuctionAdInterestGroup *self) {
-    return em_Val_as(jb_Record, em_Val_get(em_Val_as_val(self->inner), em_Val_from("prioritySignalsOverrides")));
+jb_Object AuctionAdInterestGroup_prioritySignalsOverrides(const AuctionAdInterestGroup *self) {
+    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("prioritySignalsOverrides")));
 }
 
 
-void AuctionAdInterestGroup_set_prioritySignalsOverrides(AuctionAdInterestGroup* self, jb_Record * value) {
+void AuctionAdInterestGroup_set_prioritySignalsOverrides(AuctionAdInterestGroup* self, jb_Object * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("prioritySignalsOverrides"), em_Val_from(value));
 }
 
@@ -237,12 +237,12 @@ void AuctionAdInterestGroup_set_lifetimeMs(AuctionAdInterestGroup* self, double 
 }
 
 
-jb_DOMString AuctionAdInterestGroup_additionalBidKey(const AuctionAdInterestGroup *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("additionalBidKey")));
+jb_String AuctionAdInterestGroup_additionalBidKey(const AuctionAdInterestGroup *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("additionalBidKey")));
 }
 
 
-void AuctionAdInterestGroup_set_additionalBidKey(AuctionAdInterestGroup* self, jb_DOMString * value) {
+void AuctionAdInterestGroup_set_additionalBidKey(AuctionAdInterestGroup* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("additionalBidKey"), em_Val_from(value));
 }
 
@@ -259,54 +259,54 @@ void AuctionAdInterestGroup_set_privateAggregationConfig(AuctionAdInterestGroup*
 DEFINE_EMLITE_TYPE(AuctionAdInterestGroupKey, em_Val);
 
 
-jb_USVString AuctionAdInterestGroupKey_owner(const AuctionAdInterestGroupKey *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("owner")));
+jb_String AuctionAdInterestGroupKey_owner(const AuctionAdInterestGroupKey *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("owner")));
 }
 
 
-void AuctionAdInterestGroupKey_set_owner(AuctionAdInterestGroupKey* self, jb_USVString * value) {
+void AuctionAdInterestGroupKey_set_owner(AuctionAdInterestGroupKey* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("owner"), em_Val_from(value));
 }
 
 
-jb_USVString AuctionAdInterestGroupKey_name(const AuctionAdInterestGroupKey *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String AuctionAdInterestGroupKey_name(const AuctionAdInterestGroupKey *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void AuctionAdInterestGroupKey_set_name(AuctionAdInterestGroupKey* self, jb_USVString * value) {
+void AuctionAdInterestGroupKey_set_name(AuctionAdInterestGroupKey* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(AuctionAdConfig, em_Val);
 
 
-jb_USVString AuctionAdConfig_seller(const AuctionAdConfig *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("seller")));
+jb_String AuctionAdConfig_seller(const AuctionAdConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("seller")));
 }
 
 
-void AuctionAdConfig_set_seller(AuctionAdConfig* self, jb_USVString * value) {
+void AuctionAdConfig_set_seller(AuctionAdConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("seller"), em_Val_from(value));
 }
 
 
-jb_USVString AuctionAdConfig_decisionLogicURL(const AuctionAdConfig *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("decisionLogicURL")));
+jb_String AuctionAdConfig_decisionLogicURL(const AuctionAdConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("decisionLogicURL")));
 }
 
 
-void AuctionAdConfig_set_decisionLogicURL(AuctionAdConfig* self, jb_USVString * value) {
+void AuctionAdConfig_set_decisionLogicURL(AuctionAdConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("decisionLogicURL"), em_Val_from(value));
 }
 
 
-jb_USVString AuctionAdConfig_trustedScoringSignalsURL(const AuctionAdConfig *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("trustedScoringSignalsURL")));
+jb_String AuctionAdConfig_trustedScoringSignalsURL(const AuctionAdConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("trustedScoringSignalsURL")));
 }
 
 
-void AuctionAdConfig_set_trustedScoringSignalsURL(AuctionAdConfig* self, jb_USVString * value) {
+void AuctionAdConfig_set_trustedScoringSignalsURL(AuctionAdConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("trustedScoringSignalsURL"), em_Val_from(value));
 }
 
@@ -321,12 +321,12 @@ void AuctionAdConfig_set_maxTrustedScoringSignalsURLLength(AuctionAdConfig* self
 }
 
 
-jb_USVString AuctionAdConfig_trustedScoringSignalsCoordinator(const AuctionAdConfig *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("trustedScoringSignalsCoordinator")));
+jb_String AuctionAdConfig_trustedScoringSignalsCoordinator(const AuctionAdConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("trustedScoringSignalsCoordinator")));
 }
 
 
-void AuctionAdConfig_set_trustedScoringSignalsCoordinator(AuctionAdConfig* self, jb_USVString * value) {
+void AuctionAdConfig_set_trustedScoringSignalsCoordinator(AuctionAdConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("trustedScoringSignalsCoordinator"), em_Val_from(value));
 }
 
@@ -341,12 +341,12 @@ void AuctionAdConfig_set_sendCreativeScanningMetadata(AuctionAdConfig* self, boo
 }
 
 
-jb_Sequence AuctionAdConfig_interestGroupBuyers(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("interestGroupBuyers")));
+jb_Array AuctionAdConfig_interestGroupBuyers(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("interestGroupBuyers")));
 }
 
 
-void AuctionAdConfig_set_interestGroupBuyers(AuctionAdConfig* self, jb_Sequence * value) {
+void AuctionAdConfig_set_interestGroupBuyers(AuctionAdConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("interestGroupBuyers"), em_Val_from(value));
 }
 
@@ -451,12 +451,12 @@ void AuctionAdConfig_set_reportingTimeout(AuctionAdConfig* self, long long value
 }
 
 
-jb_USVString AuctionAdConfig_sellerCurrency(const AuctionAdConfig *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sellerCurrency")));
+jb_String AuctionAdConfig_sellerCurrency(const AuctionAdConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sellerCurrency")));
 }
 
 
-void AuctionAdConfig_set_sellerCurrency(AuctionAdConfig* self, jb_USVString * value) {
+void AuctionAdConfig_set_sellerCurrency(AuctionAdConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sellerCurrency"), em_Val_from(value));
 }
 
@@ -471,62 +471,62 @@ void AuctionAdConfig_set_perBuyerCurrencies(AuctionAdConfig* self, jb_Promise * 
 }
 
 
-jb_Record AuctionAdConfig_perBuyerMultiBidLimits(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Record, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerMultiBidLimits")));
+jb_Object AuctionAdConfig_perBuyerMultiBidLimits(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerMultiBidLimits")));
 }
 
 
-void AuctionAdConfig_set_perBuyerMultiBidLimits(AuctionAdConfig* self, jb_Record * value) {
+void AuctionAdConfig_set_perBuyerMultiBidLimits(AuctionAdConfig* self, jb_Object * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("perBuyerMultiBidLimits"), em_Val_from(value));
 }
 
 
-jb_Record AuctionAdConfig_perBuyerGroupLimits(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Record, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerGroupLimits")));
+jb_Object AuctionAdConfig_perBuyerGroupLimits(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerGroupLimits")));
 }
 
 
-void AuctionAdConfig_set_perBuyerGroupLimits(AuctionAdConfig* self, jb_Record * value) {
+void AuctionAdConfig_set_perBuyerGroupLimits(AuctionAdConfig* self, jb_Object * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("perBuyerGroupLimits"), em_Val_from(value));
 }
 
 
-jb_Record AuctionAdConfig_perBuyerExperimentGroupIds(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Record, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerExperimentGroupIds")));
+jb_Object AuctionAdConfig_perBuyerExperimentGroupIds(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerExperimentGroupIds")));
 }
 
 
-void AuctionAdConfig_set_perBuyerExperimentGroupIds(AuctionAdConfig* self, jb_Record * value) {
+void AuctionAdConfig_set_perBuyerExperimentGroupIds(AuctionAdConfig* self, jb_Object * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("perBuyerExperimentGroupIds"), em_Val_from(value));
 }
 
 
-jb_Record AuctionAdConfig_perBuyerPrioritySignals(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Record, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerPrioritySignals")));
+jb_Object AuctionAdConfig_perBuyerPrioritySignals(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerPrioritySignals")));
 }
 
 
-void AuctionAdConfig_set_perBuyerPrioritySignals(AuctionAdConfig* self, jb_Record * value) {
+void AuctionAdConfig_set_perBuyerPrioritySignals(AuctionAdConfig* self, jb_Object * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("perBuyerPrioritySignals"), em_Val_from(value));
 }
 
 
-jb_Sequence AuctionAdConfig_auctionReportBuyerKeys(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("auctionReportBuyerKeys")));
+jb_Array AuctionAdConfig_auctionReportBuyerKeys(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("auctionReportBuyerKeys")));
 }
 
 
-void AuctionAdConfig_set_auctionReportBuyerKeys(AuctionAdConfig* self, jb_Sequence * value) {
+void AuctionAdConfig_set_auctionReportBuyerKeys(AuctionAdConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("auctionReportBuyerKeys"), em_Val_from(value));
 }
 
 
-jb_Record AuctionAdConfig_auctionReportBuyers(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Record, em_Val_get(em_Val_as_val(self->inner), em_Val_from("auctionReportBuyers")));
+jb_Object AuctionAdConfig_auctionReportBuyers(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("auctionReportBuyers")));
 }
 
 
-void AuctionAdConfig_set_auctionReportBuyers(AuctionAdConfig* self, jb_Record * value) {
+void AuctionAdConfig_set_auctionReportBuyers(AuctionAdConfig* self, jb_Object * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("auctionReportBuyers"), em_Val_from(value));
 }
 
@@ -541,12 +541,12 @@ void AuctionAdConfig_set_auctionReportBuyerDebugModeConfig(AuctionAdConfig* self
 }
 
 
-jb_Sequence AuctionAdConfig_requiredSellerCapabilities(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requiredSellerCapabilities")));
+jb_Array AuctionAdConfig_requiredSellerCapabilities(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requiredSellerCapabilities")));
 }
 
 
-void AuctionAdConfig_set_requiredSellerCapabilities(AuctionAdConfig* self, jb_Sequence * value) {
+void AuctionAdConfig_set_requiredSellerCapabilities(AuctionAdConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("requiredSellerCapabilities"), em_Val_from(value));
 }
 
@@ -561,22 +561,22 @@ void AuctionAdConfig_set_privateAggregationConfig(AuctionAdConfig* self, jb_Any 
 }
 
 
-jb_Record AuctionAdConfig_requestedSize(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Record, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requestedSize")));
+jb_Object AuctionAdConfig_requestedSize(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requestedSize")));
 }
 
 
-void AuctionAdConfig_set_requestedSize(AuctionAdConfig* self, jb_Record * value) {
+void AuctionAdConfig_set_requestedSize(AuctionAdConfig* self, jb_Object * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("requestedSize"), em_Val_from(value));
 }
 
 
-jb_Sequence AuctionAdConfig_allSlotsRequestedSizes(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("allSlotsRequestedSizes")));
+jb_Array AuctionAdConfig_allSlotsRequestedSizes(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("allSlotsRequestedSizes")));
 }
 
 
-void AuctionAdConfig_set_allSlotsRequestedSizes(AuctionAdConfig* self, jb_Sequence * value) {
+void AuctionAdConfig_set_allSlotsRequestedSizes(AuctionAdConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("allSlotsRequestedSizes"), em_Val_from(value));
 }
 
@@ -591,12 +591,12 @@ void AuctionAdConfig_set_additionalBids(AuctionAdConfig* self, jb_Promise * valu
 }
 
 
-jb_DOMString AuctionAdConfig_auctionNonce(const AuctionAdConfig *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("auctionNonce")));
+jb_String AuctionAdConfig_auctionNonce(const AuctionAdConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("auctionNonce")));
 }
 
 
-void AuctionAdConfig_set_auctionNonce(AuctionAdConfig* self, jb_DOMString * value) {
+void AuctionAdConfig_set_auctionNonce(AuctionAdConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("auctionNonce"), em_Val_from(value));
 }
 
@@ -611,22 +611,22 @@ void AuctionAdConfig_set_sellerRealTimeReportingConfig(AuctionAdConfig* self, jb
 }
 
 
-jb_Record AuctionAdConfig_perBuyerRealTimeReportingConfig(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Record, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerRealTimeReportingConfig")));
+jb_Object AuctionAdConfig_perBuyerRealTimeReportingConfig(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerRealTimeReportingConfig")));
 }
 
 
-void AuctionAdConfig_set_perBuyerRealTimeReportingConfig(AuctionAdConfig* self, jb_Record * value) {
+void AuctionAdConfig_set_perBuyerRealTimeReportingConfig(AuctionAdConfig* self, jb_Object * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("perBuyerRealTimeReportingConfig"), em_Val_from(value));
 }
 
 
-jb_Sequence AuctionAdConfig_componentAuctions(const AuctionAdConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("componentAuctions")));
+jb_Array AuctionAdConfig_componentAuctions(const AuctionAdConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("componentAuctions")));
 }
 
 
-void AuctionAdConfig_set_componentAuctions(AuctionAdConfig* self, jb_Sequence * value) {
+void AuctionAdConfig_set_componentAuctions(AuctionAdConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("componentAuctions"), em_Val_from(value));
 }
 
@@ -661,24 +661,24 @@ void AuctionAdConfig_set_serverResponse(AuctionAdConfig* self, jb_Promise * valu
 }
 
 
-jb_USVString AuctionAdConfig_requestId(const AuctionAdConfig *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requestId")));
+jb_String AuctionAdConfig_requestId(const AuctionAdConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requestId")));
 }
 
 
-void AuctionAdConfig_set_requestId(AuctionAdConfig* self, jb_USVString * value) {
+void AuctionAdConfig_set_requestId(AuctionAdConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("requestId"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(AdAuctionData, em_Val);
 
 
-jb_USVString AdAuctionData_requestId(const AdAuctionData *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requestId")));
+jb_String AdAuctionData_requestId(const AdAuctionData *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requestId")));
 }
 
 
-void AdAuctionData_set_requestId(AdAuctionData* self, jb_USVString * value) {
+void AdAuctionData_set_requestId(AdAuctionData* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("requestId"), em_Val_from(value));
 }
 
@@ -693,44 +693,44 @@ void AdAuctionData_set_request(AdAuctionData* self, jb_Uint8Array * value) {
 }
 
 
-jb_Sequence AdAuctionData_requests(const AdAuctionData *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requests")));
+jb_Array AdAuctionData_requests(const AdAuctionData *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("requests")));
 }
 
 
-void AdAuctionData_set_requests(AdAuctionData* self, jb_Sequence * value) {
+void AdAuctionData_set_requests(AdAuctionData* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("requests"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(AdAuctionDataConfig, em_Val);
 
 
-jb_USVString AdAuctionDataConfig_seller(const AdAuctionDataConfig *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("seller")));
+jb_String AdAuctionDataConfig_seller(const AdAuctionDataConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("seller")));
 }
 
 
-void AdAuctionDataConfig_set_seller(AdAuctionDataConfig* self, jb_USVString * value) {
+void AdAuctionDataConfig_set_seller(AdAuctionDataConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("seller"), em_Val_from(value));
 }
 
 
-jb_USVString AdAuctionDataConfig_coordinatorOrigin(const AdAuctionDataConfig *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("coordinatorOrigin")));
+jb_String AdAuctionDataConfig_coordinatorOrigin(const AdAuctionDataConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("coordinatorOrigin")));
 }
 
 
-void AdAuctionDataConfig_set_coordinatorOrigin(AdAuctionDataConfig* self, jb_USVString * value) {
+void AdAuctionDataConfig_set_coordinatorOrigin(AdAuctionDataConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("coordinatorOrigin"), em_Val_from(value));
 }
 
 
-jb_Sequence AdAuctionDataConfig_sellers(const AdAuctionDataConfig *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sellers")));
+jb_Array AdAuctionDataConfig_sellers(const AdAuctionDataConfig *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sellers")));
 }
 
 
-void AdAuctionDataConfig_set_sellers(AdAuctionDataConfig* self, jb_Sequence * value) {
+void AdAuctionDataConfig_set_sellers(AdAuctionDataConfig* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("sellers"), em_Val_from(value));
 }
 
@@ -745,54 +745,54 @@ void AdAuctionDataConfig_set_requestSize(AdAuctionDataConfig* self, unsigned lon
 }
 
 
-jb_Record AdAuctionDataConfig_perBuyerConfig(const AdAuctionDataConfig *self) {
-    return em_Val_as(jb_Record, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerConfig")));
+jb_Object AdAuctionDataConfig_perBuyerConfig(const AdAuctionDataConfig *self) {
+    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("perBuyerConfig")));
 }
 
 
-void AdAuctionDataConfig_set_perBuyerConfig(AdAuctionDataConfig* self, jb_Record * value) {
+void AdAuctionDataConfig_set_perBuyerConfig(AdAuctionDataConfig* self, jb_Object * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("perBuyerConfig"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(ShareData, em_Val);
 
 
-jb_Sequence ShareData_files(const ShareData *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("files")));
+jb_Array ShareData_files(const ShareData *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("files")));
 }
 
 
-void ShareData_set_files(ShareData* self, jb_Sequence * value) {
+void ShareData_set_files(ShareData* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("files"), em_Val_from(value));
 }
 
 
-jb_USVString ShareData_title(const ShareData *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("title")));
+jb_String ShareData_title(const ShareData *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("title")));
 }
 
 
-void ShareData_set_title(ShareData* self, jb_USVString * value) {
+void ShareData_set_title(ShareData* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("title"), em_Val_from(value));
 }
 
 
-jb_USVString ShareData_text(const ShareData *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("text")));
+jb_String ShareData_text(const ShareData *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("text")));
 }
 
 
-void ShareData_set_text(ShareData* self, jb_USVString * value) {
+void ShareData_set_text(ShareData* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("text"), em_Val_from(value));
 }
 
 
-jb_USVString ShareData_url(const ShareData *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
+jb_String ShareData_url(const ShareData *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("url")));
 }
 
 
-void ShareData_set_url(ShareData* self, jb_USVString * value) {
+void ShareData_set_url(ShareData* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("url"), em_Val_from(value));
 }
 
@@ -836,12 +836,12 @@ jb_Promise Navigator_getBattery(Navigator* self ) {
 }
 
 
-bool Navigator_sendBeacon0(Navigator* self , jb_USVString * url) {
+bool Navigator_sendBeacon0(Navigator* self , jb_String * url) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "sendBeacon", em_Val_from(url)));
 }
 
 
-bool Navigator_sendBeacon1(Navigator* self , jb_USVString * url, jb_Any * data) {
+bool Navigator_sendBeacon1(Navigator* self , jb_String * url, jb_Any * data) {
     return em_Val_as(bool, em_Val_call(em_Val_as_val(self->inner), "sendBeacon", em_Val_from(url), em_Val_from(data)));
 }
 
@@ -866,12 +866,12 @@ DevicePosture Navigator_devicePosture(const Navigator *self) {
 }
 
 
-jb_Promise Navigator_requestMediaKeySystemAccess(Navigator* self , jb_DOMString * keySystem, jb_Sequence * supportedConfigurations) {
+jb_Promise Navigator_requestMediaKeySystemAccess(Navigator* self , jb_String * keySystem, jb_Array * supportedConfigurations) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "requestMediaKeySystemAccess", em_Val_from(keySystem), em_Val_from(supportedConfigurations)));
 }
 
 
-jb_Promise Navigator_deprecatedReplaceInURN(Navigator* self , jb_Any * urnOrConfig, jb_Record * replacements) {
+jb_Promise Navigator_deprecatedReplaceInURN(Navigator* self , jb_Any * urnOrConfig, jb_Object * replacements) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "deprecatedReplaceInURN", em_Val_from(urnOrConfig), em_Val_from(replacements)));
 }
 
@@ -886,13 +886,13 @@ jb_Promise Navigator_deprecatedURNtoURL1(Navigator* self , jb_Any * urnOrConfig,
 }
 
 
-jb_Sequence Navigator_adAuctionComponents(Navigator* self , unsigned short numAdComponents) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "adAuctionComponents", em_Val_from(numAdComponents)));
+jb_Array Navigator_adAuctionComponents(Navigator* self , unsigned short numAdComponents) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "adAuctionComponents", em_Val_from(numAdComponents)));
 }
 
 
-jb_Sequence Navigator_getGamepads(Navigator* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "getGamepads"));
+jb_Array Navigator_getGamepads(Navigator* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "getGamepads"));
 }
 
 
@@ -1016,12 +1016,12 @@ jb_Promise Navigator_leaveAdInterestGroup1(Navigator* self , AuctionAdInterestGr
 }
 
 
-jb_Promise Navigator_clearOriginJoinedAdInterestGroups0(Navigator* self , jb_USVString * owner) {
+jb_Promise Navigator_clearOriginJoinedAdInterestGroups0(Navigator* self , jb_String * owner) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "clearOriginJoinedAdInterestGroups", em_Val_from(owner)));
 }
 
 
-jb_Promise Navigator_clearOriginJoinedAdInterestGroups1(Navigator* self , jb_USVString * owner, jb_Sequence * interestGroupsToKeep) {
+jb_Promise Navigator_clearOriginJoinedAdInterestGroups1(Navigator* self , jb_String * owner, jb_Array * interestGroupsToKeep) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "clearOriginJoinedAdInterestGroups", em_Val_from(owner), em_Val_from(interestGroupsToKeep)));
 }
 
@@ -1161,18 +1161,18 @@ bool Navigator_taintEnabled(Navigator* self ) {
 }
 
 
-jb_DOMString Navigator_oscpu(const Navigator *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("oscpu")));
+jb_String Navigator_oscpu(const Navigator *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("oscpu")));
 }
 
 
-jb_DOMString Navigator_language(const Navigator *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("language")));
+jb_String Navigator_language(const Navigator *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("language")));
 }
 
 
-jb_FrozenArray Navigator_languages(const Navigator *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(em_Val_as_val(self->inner), em_Val_from("languages")));
+jb_Array Navigator_languages(const Navigator *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("languages")));
 }
 
 
@@ -1181,12 +1181,12 @@ bool Navigator_onLine(const Navigator *self) {
 }
 
 
-jb_Undefined Navigator_registerProtocolHandler(Navigator* self , jb_DOMString * scheme, jb_USVString * url) {
+jb_Undefined Navigator_registerProtocolHandler(Navigator* self , jb_String * scheme, jb_String * url) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "registerProtocolHandler", em_Val_from(scheme), em_Val_from(url)));
 }
 
 
-jb_Undefined Navigator_unregisterProtocolHandler(Navigator* self , jb_DOMString * scheme, jb_USVString * url) {
+jb_Undefined Navigator_unregisterProtocolHandler(Navigator* self , jb_String * scheme, jb_String * url) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "unregisterProtocolHandler", em_Val_from(scheme), em_Val_from(url)));
 }
 

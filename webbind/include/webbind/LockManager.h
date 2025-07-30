@@ -28,15 +28,15 @@ AbortSignal LockOptions_signal(const LockOptions *self);
 void LockOptions_set_signal(LockOptions* self, AbortSignal * value);
 DECLARE_EMLITE_TYPE(LockManagerSnapshot, em_Val);
 
-jb_Sequence LockManagerSnapshot_held(const LockManagerSnapshot *self);
+jb_Array LockManagerSnapshot_held(const LockManagerSnapshot *self);
 
-void LockManagerSnapshot_set_held(LockManagerSnapshot* self, jb_Sequence * value);
+void LockManagerSnapshot_set_held(LockManagerSnapshot* self, jb_Array * value);
 
-jb_Sequence LockManagerSnapshot_pending(const LockManagerSnapshot *self);
+jb_Array LockManagerSnapshot_pending(const LockManagerSnapshot *self);
 
-void LockManagerSnapshot_set_pending(LockManagerSnapshot* self, jb_Sequence * value);
+void LockManagerSnapshot_set_pending(LockManagerSnapshot* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(LockManager, em_Val);
 
-jb_Promise LockManager_request(LockManager* self , jb_DOMString * name, LockOptions * options, jb_Function * callback);
+jb_Promise LockManager_request(LockManager* self , jb_String * name, LockOptions * options, jb_Function * callback);
 
 jb_Promise LockManager_query(LockManager* self );

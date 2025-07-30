@@ -10,12 +10,12 @@ TextTrack TextTrackCue_track(const TextTrackCue *self) {
 }
 
 
-jb_DOMString TextTrackCue_id(const TextTrackCue *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
+jb_String TextTrackCue_id(const TextTrackCue *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
-void TextTrackCue_set_id(TextTrackCue* self, jb_DOMString * value) {
+void TextTrackCue_set_id(TextTrackCue* self, jb_String * value) {
     em_Val_set(EventTarget_as_val(self->inner), em_Val_from("id"), em_Val_from(value));
 }
 

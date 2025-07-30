@@ -19,9 +19,9 @@ typedef struct GPUTexture GPUTexture;
 
 DECLARE_EMLITE_TYPE(GPURenderPassDescriptor, em_Val);
 
-jb_Sequence GPURenderPassDescriptor_colorAttachments(const GPURenderPassDescriptor *self);
+jb_Array GPURenderPassDescriptor_colorAttachments(const GPURenderPassDescriptor *self);
 
-void GPURenderPassDescriptor_set_colorAttachments(GPURenderPassDescriptor* self, jb_Sequence * value);
+void GPURenderPassDescriptor_set_colorAttachments(GPURenderPassDescriptor* self, jb_Array * value);
 
 jb_Any GPURenderPassDescriptor_depthStencilAttachment(const GPURenderPassDescriptor *self);
 
@@ -96,12 +96,12 @@ GPUCommandBuffer GPUCommandEncoder_finish0(GPUCommandEncoder* self );
 
 GPUCommandBuffer GPUCommandEncoder_finish1(GPUCommandEncoder* self , GPUCommandBufferDescriptor * descriptor);
 
-jb_USVString GPUCommandEncoder_label(const GPUCommandEncoder *self);
+jb_String GPUCommandEncoder_label(const GPUCommandEncoder *self);
 
-void GPUCommandEncoder_set_label(GPUCommandEncoder* self, jb_USVString * value);
+void GPUCommandEncoder_set_label(GPUCommandEncoder* self, jb_String * value);
 
-jb_Undefined GPUCommandEncoder_pushDebugGroup(GPUCommandEncoder* self , jb_USVString * groupLabel);
+jb_Undefined GPUCommandEncoder_pushDebugGroup(GPUCommandEncoder* self , jb_String * groupLabel);
 
 jb_Undefined GPUCommandEncoder_popDebugGroup(GPUCommandEncoder* self );
 
-jb_Undefined GPUCommandEncoder_insertDebugMarker(GPUCommandEncoder* self , jb_USVString * markerLabel);
+jb_Undefined GPUCommandEncoder_insertDebugMarker(GPUCommandEncoder* self , jb_String * markerLabel);

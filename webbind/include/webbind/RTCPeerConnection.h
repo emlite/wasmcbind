@@ -41,23 +41,23 @@ RTCSdpType RTCLocalSessionDescriptionInit_type(const RTCLocalSessionDescriptionI
 
 void RTCLocalSessionDescriptionInit_set_type(RTCLocalSessionDescriptionInit* self, RTCSdpType * value);
 
-jb_DOMString RTCLocalSessionDescriptionInit_sdp(const RTCLocalSessionDescriptionInit *self);
+jb_String RTCLocalSessionDescriptionInit_sdp(const RTCLocalSessionDescriptionInit *self);
 
-void RTCLocalSessionDescriptionInit_set_sdp(RTCLocalSessionDescriptionInit* self, jb_DOMString * value);
+void RTCLocalSessionDescriptionInit_set_sdp(RTCLocalSessionDescriptionInit* self, jb_String * value);
 DECLARE_EMLITE_TYPE(RTCSessionDescriptionInit, em_Val);
 
 RTCSdpType RTCSessionDescriptionInit_type(const RTCSessionDescriptionInit *self);
 
 void RTCSessionDescriptionInit_set_type(RTCSessionDescriptionInit* self, RTCSdpType * value);
 
-jb_DOMString RTCSessionDescriptionInit_sdp(const RTCSessionDescriptionInit *self);
+jb_String RTCSessionDescriptionInit_sdp(const RTCSessionDescriptionInit *self);
 
-void RTCSessionDescriptionInit_set_sdp(RTCSessionDescriptionInit* self, jb_DOMString * value);
+void RTCSessionDescriptionInit_set_sdp(RTCSessionDescriptionInit* self, jb_String * value);
 DECLARE_EMLITE_TYPE(RTCConfiguration, em_Val);
 
-jb_Sequence RTCConfiguration_iceServers(const RTCConfiguration *self);
+jb_Array RTCConfiguration_iceServers(const RTCConfiguration *self);
 
-void RTCConfiguration_set_iceServers(RTCConfiguration* self, jb_Sequence * value);
+void RTCConfiguration_set_iceServers(RTCConfiguration* self, jb_Array * value);
 
 RTCIceTransportPolicy RTCConfiguration_iceTransportPolicy(const RTCConfiguration *self);
 
@@ -71,39 +71,39 @@ RTCRtcpMuxPolicy RTCConfiguration_rtcpMuxPolicy(const RTCConfiguration *self);
 
 void RTCConfiguration_set_rtcpMuxPolicy(RTCConfiguration* self, RTCRtcpMuxPolicy * value);
 
-jb_Sequence RTCConfiguration_certificates(const RTCConfiguration *self);
+jb_Array RTCConfiguration_certificates(const RTCConfiguration *self);
 
-void RTCConfiguration_set_certificates(RTCConfiguration* self, jb_Sequence * value);
+void RTCConfiguration_set_certificates(RTCConfiguration* self, jb_Array * value);
 
 unsigned char RTCConfiguration_iceCandidatePoolSize(const RTCConfiguration *self);
 
 void RTCConfiguration_set_iceCandidatePoolSize(RTCConfiguration* self, unsigned char value);
 DECLARE_EMLITE_TYPE(RTCIdentityProviderOptions, em_Val);
 
-jb_DOMString RTCIdentityProviderOptions_protocol(const RTCIdentityProviderOptions *self);
+jb_String RTCIdentityProviderOptions_protocol(const RTCIdentityProviderOptions *self);
 
-void RTCIdentityProviderOptions_set_protocol(RTCIdentityProviderOptions* self, jb_DOMString * value);
+void RTCIdentityProviderOptions_set_protocol(RTCIdentityProviderOptions* self, jb_String * value);
 
-jb_DOMString RTCIdentityProviderOptions_usernameHint(const RTCIdentityProviderOptions *self);
+jb_String RTCIdentityProviderOptions_usernameHint(const RTCIdentityProviderOptions *self);
 
-void RTCIdentityProviderOptions_set_usernameHint(RTCIdentityProviderOptions* self, jb_DOMString * value);
+void RTCIdentityProviderOptions_set_usernameHint(RTCIdentityProviderOptions* self, jb_String * value);
 
-jb_DOMString RTCIdentityProviderOptions_peerIdentity(const RTCIdentityProviderOptions *self);
+jb_String RTCIdentityProviderOptions_peerIdentity(const RTCIdentityProviderOptions *self);
 
-void RTCIdentityProviderOptions_set_peerIdentity(RTCIdentityProviderOptions* self, jb_DOMString * value);
+void RTCIdentityProviderOptions_set_peerIdentity(RTCIdentityProviderOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(RTCRtpTransceiverInit, em_Val);
 
 RTCRtpTransceiverDirection RTCRtpTransceiverInit_direction(const RTCRtpTransceiverInit *self);
 
 void RTCRtpTransceiverInit_set_direction(RTCRtpTransceiverInit* self, RTCRtpTransceiverDirection * value);
 
-jb_Sequence RTCRtpTransceiverInit_streams(const RTCRtpTransceiverInit *self);
+jb_Array RTCRtpTransceiverInit_streams(const RTCRtpTransceiverInit *self);
 
-void RTCRtpTransceiverInit_set_streams(RTCRtpTransceiverInit* self, jb_Sequence * value);
+void RTCRtpTransceiverInit_set_streams(RTCRtpTransceiverInit* self, jb_Array * value);
 
-jb_Sequence RTCRtpTransceiverInit_sendEncodings(const RTCRtpTransceiverInit *self);
+jb_Array RTCRtpTransceiverInit_sendEncodings(const RTCRtpTransceiverInit *self);
 
-void RTCRtpTransceiverInit_set_sendEncodings(RTCRtpTransceiverInit* self, jb_Sequence * value);
+void RTCRtpTransceiverInit_set_sendEncodings(RTCRtpTransceiverInit* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(RTCDataChannelInit, em_Val);
 
 bool RTCDataChannelInit_ordered(const RTCDataChannelInit *self);
@@ -118,9 +118,9 @@ unsigned short RTCDataChannelInit_maxRetransmits(const RTCDataChannelInit *self)
 
 void RTCDataChannelInit_set_maxRetransmits(RTCDataChannelInit* self, unsigned short value);
 
-jb_USVString RTCDataChannelInit_protocol(const RTCDataChannelInit *self);
+jb_String RTCDataChannelInit_protocol(const RTCDataChannelInit *self);
 
-void RTCDataChannelInit_set_protocol(RTCDataChannelInit* self, jb_USVString * value);
+void RTCDataChannelInit_set_protocol(RTCDataChannelInit* self, jb_String * value);
 
 bool RTCDataChannelInit_negotiated(const RTCDataChannelInit *self);
 
@@ -207,25 +207,25 @@ jb_Any RTCPeerConnection_onconnectionstatechange(const RTCPeerConnection *self);
 
 void RTCPeerConnection_set_onconnectionstatechange(RTCPeerConnection* self, jb_Any * value);
 
-jb_Undefined RTCPeerConnection_setIdentityProvider0(RTCPeerConnection* self , jb_DOMString * provider);
+jb_Undefined RTCPeerConnection_setIdentityProvider0(RTCPeerConnection* self , jb_String * provider);
 
-jb_Undefined RTCPeerConnection_setIdentityProvider1(RTCPeerConnection* self , jb_DOMString * provider, RTCIdentityProviderOptions * options);
+jb_Undefined RTCPeerConnection_setIdentityProvider1(RTCPeerConnection* self , jb_String * provider, RTCIdentityProviderOptions * options);
 
 jb_Promise RTCPeerConnection_getIdentityAssertion(RTCPeerConnection* self );
 
 jb_Promise RTCPeerConnection_peerIdentity(const RTCPeerConnection *self);
 
-jb_DOMString RTCPeerConnection_idpLoginUrl(const RTCPeerConnection *self);
+jb_String RTCPeerConnection_idpLoginUrl(const RTCPeerConnection *self);
 
-jb_DOMString RTCPeerConnection_idpErrorInfo(const RTCPeerConnection *self);
+jb_String RTCPeerConnection_idpErrorInfo(const RTCPeerConnection *self);
 
 jb_Promise RTCPeerConnection_generateCertificate(RTCPeerConnection* self , jb_Any * keygenAlgorithm);
 
-jb_Sequence RTCPeerConnection_getSenders(RTCPeerConnection* self );
+jb_Array RTCPeerConnection_getSenders(RTCPeerConnection* self );
 
-jb_Sequence RTCPeerConnection_getReceivers(RTCPeerConnection* self );
+jb_Array RTCPeerConnection_getReceivers(RTCPeerConnection* self );
 
-jb_Sequence RTCPeerConnection_getTransceivers(RTCPeerConnection* self );
+jb_Array RTCPeerConnection_getTransceivers(RTCPeerConnection* self );
 
 RTCRtpSender RTCPeerConnection_addTrack(RTCPeerConnection* self , MediaStreamTrack * track, MediaStream * streams);
 
@@ -241,9 +241,9 @@ void RTCPeerConnection_set_ontrack(RTCPeerConnection* self, jb_Any * value);
 
 RTCSctpTransport RTCPeerConnection_sctp(const RTCPeerConnection *self);
 
-RTCDataChannel RTCPeerConnection_createDataChannel0(RTCPeerConnection* self , jb_USVString * label);
+RTCDataChannel RTCPeerConnection_createDataChannel0(RTCPeerConnection* self , jb_String * label);
 
-RTCDataChannel RTCPeerConnection_createDataChannel1(RTCPeerConnection* self , jb_USVString * label, RTCDataChannelInit * dataChannelDict);
+RTCDataChannel RTCPeerConnection_createDataChannel1(RTCPeerConnection* self , jb_String * label, RTCDataChannelInit * dataChannelDict);
 
 jb_Any RTCPeerConnection_ondatachannel(const RTCPeerConnection *self);
 

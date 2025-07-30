@@ -116,7 +116,7 @@ SVGTransform SVGSVGElement_createSVGTransformFromMatrix0(SVGSVGElement* self );
 
 SVGTransform SVGSVGElement_createSVGTransformFromMatrix1(SVGSVGElement* self , DOMMatrix2DInit * matrix);
 
-Element SVGSVGElement_getElementById(SVGSVGElement* self , jb_DOMString * elementId);
+Element SVGSVGElement_getElementById(SVGSVGElement* self , jb_String * elementId);
 
 unsigned long SVGSVGElement_suspendRedraw(SVGSVGElement* self , unsigned long maxWaitMilliseconds);
 

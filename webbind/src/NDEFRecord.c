@@ -10,18 +10,18 @@ NDEFRecord NDEFRecord_new(jb_Any * recordInit) {
       }
 
 
-jb_USVString NDEFRecord_recordType(const NDEFRecord *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("recordType")));
+jb_String NDEFRecord_recordType(const NDEFRecord *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("recordType")));
 }
 
 
-jb_USVString NDEFRecord_mediaType(const NDEFRecord *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("mediaType")));
+jb_String NDEFRecord_mediaType(const NDEFRecord *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("mediaType")));
 }
 
 
-jb_USVString NDEFRecord_id(const NDEFRecord *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
+jb_String NDEFRecord_id(const NDEFRecord *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
 }
 
 
@@ -30,17 +30,17 @@ jb_DataView NDEFRecord_data(const NDEFRecord *self) {
 }
 
 
-jb_USVString NDEFRecord_encoding(const NDEFRecord *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("encoding")));
+jb_String NDEFRecord_encoding(const NDEFRecord *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("encoding")));
 }
 
 
-jb_USVString NDEFRecord_lang(const NDEFRecord *self) {
-    return em_Val_as(jb_USVString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lang")));
+jb_String NDEFRecord_lang(const NDEFRecord *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("lang")));
 }
 
 
-jb_Sequence NDEFRecord_toRecords(NDEFRecord* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(em_Val_as_val(self->inner), "toRecords"));
+jb_Array NDEFRecord_toRecords(NDEFRecord* self ) {
+    return em_Val_as(jb_Array, em_Val_call(em_Val_as_val(self->inner), "toRecords"));
 }
 

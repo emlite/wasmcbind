@@ -4,12 +4,12 @@
 DEFINE_EMLITE_TYPE(SpeechGrammar, em_Val);
 
 
-jb_DOMString SpeechGrammar_src(const SpeechGrammar *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("src")));
+jb_String SpeechGrammar_src(const SpeechGrammar *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("src")));
 }
 
 
-void SpeechGrammar_set_src(SpeechGrammar* self, jb_DOMString * value) {
+void SpeechGrammar_set_src(SpeechGrammar* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("src"), em_Val_from(value));
 }
 

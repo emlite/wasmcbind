@@ -10,6 +10,6 @@ typedef struct PresentationConnection PresentationConnection;
 
 DECLARE_EMLITE_TYPE(PresentationConnectionAvailableEvent, Event);
 
-PresentationConnectionAvailableEvent PresentationConnectionAvailableEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+PresentationConnectionAvailableEvent PresentationConnectionAvailableEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 PresentationConnection PresentationConnectionAvailableEvent_connection(const PresentationConnectionAvailableEvent *self);

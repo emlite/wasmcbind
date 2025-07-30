@@ -13,9 +13,9 @@ typedef struct SpeechRecognitionOptions SpeechRecognitionOptions;
 
 DECLARE_EMLITE_TYPE(SpeechRecognitionOptions, em_Val);
 
-jb_Sequence SpeechRecognitionOptions_langs(const SpeechRecognitionOptions *self);
+jb_Array SpeechRecognitionOptions_langs(const SpeechRecognitionOptions *self);
 
-void SpeechRecognitionOptions_set_langs(SpeechRecognitionOptions* self, jb_Sequence * value);
+void SpeechRecognitionOptions_set_langs(SpeechRecognitionOptions* self, jb_Array * value);
 
 bool SpeechRecognitionOptions_processLocally(const SpeechRecognitionOptions *self);
 
@@ -28,9 +28,9 @@ SpeechGrammarList SpeechRecognition_grammars(const SpeechRecognition *self);
 
 void SpeechRecognition_set_grammars(SpeechRecognition* self, SpeechGrammarList * value);
 
-jb_DOMString SpeechRecognition_lang(const SpeechRecognition *self);
+jb_String SpeechRecognition_lang(const SpeechRecognition *self);
 
-void SpeechRecognition_set_lang(SpeechRecognition* self, jb_DOMString * value);
+void SpeechRecognition_set_lang(SpeechRecognition* self, jb_String * value);
 
 bool SpeechRecognition_continuous(const SpeechRecognition *self);
 
@@ -48,9 +48,9 @@ bool SpeechRecognition_processLocally(const SpeechRecognition *self);
 
 void SpeechRecognition_set_processLocally(SpeechRecognition* self, bool value);
 
-jb_ObservableArray SpeechRecognition_phrases(const SpeechRecognition *self);
+jb_Array SpeechRecognition_phrases(const SpeechRecognition *self);
 
-void SpeechRecognition_set_phrases(SpeechRecognition* self, jb_ObservableArray * value);
+void SpeechRecognition_set_phrases(SpeechRecognition* self, jb_Array * value);
 
 jb_Undefined SpeechRecognition_start(SpeechRecognition* self , MediaStreamTrack * audioTrack);
 

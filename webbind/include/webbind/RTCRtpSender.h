@@ -17,22 +17,22 @@ typedef struct RTCRtpCodec RTCRtpCodec;
 
 DECLARE_EMLITE_TYPE(RTCRtpCapabilities, em_Val);
 
-jb_Sequence RTCRtpCapabilities_codecs(const RTCRtpCapabilities *self);
+jb_Array RTCRtpCapabilities_codecs(const RTCRtpCapabilities *self);
 
-void RTCRtpCapabilities_set_codecs(RTCRtpCapabilities* self, jb_Sequence * value);
+void RTCRtpCapabilities_set_codecs(RTCRtpCapabilities* self, jb_Array * value);
 
-jb_Sequence RTCRtpCapabilities_headerExtensions(const RTCRtpCapabilities *self);
+jb_Array RTCRtpCapabilities_headerExtensions(const RTCRtpCapabilities *self);
 
-void RTCRtpCapabilities_set_headerExtensions(RTCRtpCapabilities* self, jb_Sequence * value);
+void RTCRtpCapabilities_set_headerExtensions(RTCRtpCapabilities* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(RTCRtpSendParameters, em_Val);
 
-jb_DOMString RTCRtpSendParameters_transactionId(const RTCRtpSendParameters *self);
+jb_String RTCRtpSendParameters_transactionId(const RTCRtpSendParameters *self);
 
-void RTCRtpSendParameters_set_transactionId(RTCRtpSendParameters* self, jb_DOMString * value);
+void RTCRtpSendParameters_set_transactionId(RTCRtpSendParameters* self, jb_String * value);
 
-jb_Sequence RTCRtpSendParameters_encodings(const RTCRtpSendParameters *self);
+jb_Array RTCRtpSendParameters_encodings(const RTCRtpSendParameters *self);
 
-void RTCRtpSendParameters_set_encodings(RTCRtpSendParameters* self, jb_Sequence * value);
+void RTCRtpSendParameters_set_encodings(RTCRtpSendParameters* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(RTCSetParameterOptions, em_Val);
 DECLARE_EMLITE_TYPE(RTCRtpSender, em_Val);
 
@@ -40,7 +40,7 @@ MediaStreamTrack RTCRtpSender_track(const RTCRtpSender *self);
 
 RTCDtlsTransport RTCRtpSender_transport(const RTCRtpSender *self);
 
-RTCRtpCapabilities RTCRtpSender_getCapabilities(RTCRtpSender* self , jb_DOMString * kind);
+RTCRtpCapabilities RTCRtpSender_getCapabilities(RTCRtpSender* self , jb_String * kind);
 
 jb_Promise RTCRtpSender_setParameters0(RTCRtpSender* self , RTCRtpSendParameters * parameters);
 
@@ -60,6 +60,6 @@ void RTCRtpSender_set_transform(RTCRtpSender* self, jb_Any * value);
 
 jb_Promise RTCRtpSender_generateKeyFrame0(RTCRtpSender* self );
 
-jb_Promise RTCRtpSender_generateKeyFrame1(RTCRtpSender* self , jb_Sequence * rids);
+jb_Promise RTCRtpSender_generateKeyFrame1(RTCRtpSender* self , jb_Array * rids);
 
 RTCDTMFSender RTCRtpSender_dtmf(const RTCRtpSender *self);

@@ -5,12 +5,12 @@
 DEFINE_EMLITE_TYPE(CharacterData, Node);
 
 
-jb_DOMString CharacterData_data(const CharacterData *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Node_as_val(self->inner), em_Val_from("data")));
+jb_String CharacterData_data(const CharacterData *self) {
+    return em_Val_as(jb_String, em_Val_get(Node_as_val(self->inner), em_Val_from("data")));
 }
 
 
-void CharacterData_set_data(CharacterData* self, jb_DOMString * value) {
+void CharacterData_set_data(CharacterData* self, jb_String * value) {
     em_Val_set(Node_as_val(self->inner), em_Val_from("data"), em_Val_from(value));
 }
 
@@ -20,17 +20,17 @@ unsigned long CharacterData_length(const CharacterData *self) {
 }
 
 
-jb_DOMString CharacterData_substringData(CharacterData* self , unsigned long offset, unsigned long count) {
-    return em_Val_as(jb_DOMString, em_Val_call(Node_as_val(self->inner), "substringData", em_Val_from(offset), em_Val_from(count)));
+jb_String CharacterData_substringData(CharacterData* self , unsigned long offset, unsigned long count) {
+    return em_Val_as(jb_String, em_Val_call(Node_as_val(self->inner), "substringData", em_Val_from(offset), em_Val_from(count)));
 }
 
 
-jb_Undefined CharacterData_appendData(CharacterData* self , jb_DOMString * data) {
+jb_Undefined CharacterData_appendData(CharacterData* self , jb_String * data) {
     return em_Val_as(jb_Undefined, em_Val_call(Node_as_val(self->inner), "appendData", em_Val_from(data)));
 }
 
 
-jb_Undefined CharacterData_insertData(CharacterData* self , unsigned long offset, jb_DOMString * data) {
+jb_Undefined CharacterData_insertData(CharacterData* self , unsigned long offset, jb_String * data) {
     return em_Val_as(jb_Undefined, em_Val_call(Node_as_val(self->inner), "insertData", em_Val_from(offset), em_Val_from(data)));
 }
 
@@ -40,7 +40,7 @@ jb_Undefined CharacterData_deleteData(CharacterData* self , unsigned long offset
 }
 
 
-jb_Undefined CharacterData_replaceData(CharacterData* self , unsigned long offset, unsigned long count, jb_DOMString * data) {
+jb_Undefined CharacterData_replaceData(CharacterData* self , unsigned long offset, unsigned long count, jb_String * data) {
     return em_Val_as(jb_Undefined, em_Val_call(Node_as_val(self->inner), "replaceData", em_Val_from(offset), em_Val_from(count), em_Val_from(data)));
 }
 

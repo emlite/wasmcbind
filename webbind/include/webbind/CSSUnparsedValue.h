@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(CSSUnparsedValue, CSSStyleValue);
 
-CSSUnparsedValue CSSUnparsedValue_new(jb_Sequence * members);
+CSSUnparsedValue CSSUnparsedValue_new(jb_Array * members);
 
 unsigned long CSSUnparsedValue_length(const CSSUnparsedValue *self);

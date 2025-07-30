@@ -10,10 +10,10 @@ typedef struct RTCIceCandidate RTCIceCandidate;
 
 DECLARE_EMLITE_TYPE(RTCPeerConnectionIceEvent, Event);
 
-RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new0(jb_DOMString * type);
+RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new0(jb_String * type);
 
-RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new1(jb_DOMString * type, jb_Any * eventInitDict);
+RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new1(jb_String * type, jb_Any * eventInitDict);
 
 RTCIceCandidate RTCPeerConnectionIceEvent_candidate(const RTCPeerConnectionIceEvent *self);
 
-jb_USVString RTCPeerConnectionIceEvent_url(const RTCPeerConnectionIceEvent *self);
+jb_String RTCPeerConnectionIceEvent_url(const RTCPeerConnectionIceEvent *self);

@@ -32,42 +32,42 @@ jb_Undefined HTMLTableSectionElement_deleteRow(HTMLTableSectionElement* self , l
 }
 
 
-jb_DOMString HTMLTableSectionElement_align(const HTMLTableSectionElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
+jb_String HTMLTableSectionElement_align(const HTMLTableSectionElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("align")));
 }
 
 
-void HTMLTableSectionElement_set_align(HTMLTableSectionElement* self, jb_DOMString * value) {
+void HTMLTableSectionElement_set_align(HTMLTableSectionElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("align"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableSectionElement_ch(const HTMLTableSectionElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("ch")));
+jb_String HTMLTableSectionElement_ch(const HTMLTableSectionElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("ch")));
 }
 
 
-void HTMLTableSectionElement_set_ch(HTMLTableSectionElement* self, jb_DOMString * value) {
+void HTMLTableSectionElement_set_ch(HTMLTableSectionElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("ch"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableSectionElement_chOff(const HTMLTableSectionElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("chOff")));
+jb_String HTMLTableSectionElement_chOff(const HTMLTableSectionElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("chOff")));
 }
 
 
-void HTMLTableSectionElement_set_chOff(HTMLTableSectionElement* self, jb_DOMString * value) {
+void HTMLTableSectionElement_set_chOff(HTMLTableSectionElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("chOff"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLTableSectionElement_vAlign(const HTMLTableSectionElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("vAlign")));
+jb_String HTMLTableSectionElement_vAlign(const HTMLTableSectionElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("vAlign")));
 }
 
 
-void HTMLTableSectionElement_set_vAlign(HTMLTableSectionElement* self, jb_DOMString * value) {
+void HTMLTableSectionElement_set_vAlign(HTMLTableSectionElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("vAlign"), em_Val_from(value));
 }
 

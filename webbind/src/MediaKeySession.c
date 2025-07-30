@@ -5,8 +5,8 @@
 DEFINE_EMLITE_TYPE(MediaKeySession, EventTarget);
 
 
-jb_DOMString MediaKeySession_sessionId(const MediaKeySession *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("sessionId")));
+jb_String MediaKeySession_sessionId(const MediaKeySession *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("sessionId")));
 }
 
 
@@ -45,12 +45,12 @@ void MediaKeySession_set_onmessage(MediaKeySession* self, jb_Any * value) {
 }
 
 
-jb_Promise MediaKeySession_generateRequest(MediaKeySession* self , jb_DOMString * initDataType, jb_Any * initData) {
+jb_Promise MediaKeySession_generateRequest(MediaKeySession* self , jb_String * initDataType, jb_Any * initData) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "generateRequest", em_Val_from(initDataType), em_Val_from(initData)));
 }
 
 
-jb_Promise MediaKeySession_load(MediaKeySession* self , jb_DOMString * sessionId) {
+jb_Promise MediaKeySession_load(MediaKeySession* self , jb_String * sessionId) {
     return em_Val_as(jb_Promise, em_Val_call(EventTarget_as_val(self->inner), "load", em_Val_from(sessionId)));
 }
 

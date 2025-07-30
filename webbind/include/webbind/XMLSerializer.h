@@ -11,4 +11,4 @@ DECLARE_EMLITE_TYPE(XMLSerializer, em_Val);
 
 XMLSerializer XMLSerializer_new();
 
-jb_DOMString XMLSerializer_serializeToString(XMLSerializer* self , Node * root);
+jb_String XMLSerializer_serializeToString(XMLSerializer* self , Node * root);

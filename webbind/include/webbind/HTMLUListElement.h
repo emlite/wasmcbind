@@ -14,6 +14,6 @@ bool HTMLUListElement_compact(const HTMLUListElement *self);
 
 void HTMLUListElement_set_compact(HTMLUListElement* self, bool value);
 
-jb_DOMString HTMLUListElement_type(const HTMLUListElement *self);
+jb_String HTMLUListElement_type(const HTMLUListElement *self);
 
-void HTMLUListElement_set_type(HTMLUListElement* self, jb_DOMString * value);
+void HTMLUListElement_set_type(HTMLUListElement* self, jb_String * value);

@@ -11,9 +11,9 @@ typedef struct AbortSignal AbortSignal;
 
 DECLARE_EMLITE_TYPE(ColorSelectionResult, em_Val);
 
-jb_DOMString ColorSelectionResult_sRGBHex(const ColorSelectionResult *self);
+jb_String ColorSelectionResult_sRGBHex(const ColorSelectionResult *self);
 
-void ColorSelectionResult_set_sRGBHex(ColorSelectionResult* self, jb_DOMString * value);
+void ColorSelectionResult_set_sRGBHex(ColorSelectionResult* self, jb_String * value);
 DECLARE_EMLITE_TYPE(ColorSelectionOptions, em_Val);
 
 AbortSignal ColorSelectionOptions_signal(const ColorSelectionOptions *self);

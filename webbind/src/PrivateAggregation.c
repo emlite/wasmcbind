@@ -53,7 +53,7 @@ jb_Undefined PrivateAggregation_contributeToHistogram(PrivateAggregation* self ,
 }
 
 
-jb_Undefined PrivateAggregation_contributeToHistogramOnEvent(PrivateAggregation* self , jb_DOMString * event, jb_Record * contribution) {
+jb_Undefined PrivateAggregation_contributeToHistogramOnEvent(PrivateAggregation* self , jb_String * event, jb_Object * contribution) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "contributeToHistogramOnEvent", em_Val_from(event), em_Val_from(contribution)));
 }
 

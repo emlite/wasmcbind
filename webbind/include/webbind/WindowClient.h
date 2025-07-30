@@ -14,8 +14,8 @@ DocumentVisibilityState WindowClient_visibilityState(const WindowClient *self);
 
 bool WindowClient_focused(const WindowClient *self);
 
-jb_FrozenArray WindowClient_ancestorOrigins(const WindowClient *self);
+jb_Array WindowClient_ancestorOrigins(const WindowClient *self);
 
 jb_Promise WindowClient_focus(WindowClient* self );
 
-jb_Promise WindowClient_navigate(WindowClient* self , jb_USVString * url);
+jb_Promise WindowClient_navigate(WindowClient* self , jb_String * url);

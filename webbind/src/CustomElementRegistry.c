@@ -5,12 +5,12 @@
 DEFINE_EMLITE_TYPE(ElementDefinitionOptions, em_Val);
 
 
-jb_DOMString ElementDefinitionOptions_extends(const ElementDefinitionOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("extends")));
+jb_String ElementDefinitionOptions_extends(const ElementDefinitionOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("extends")));
 }
 
 
-void ElementDefinitionOptions_set_extends(ElementDefinitionOptions* self, jb_DOMString * value) {
+void ElementDefinitionOptions_set_extends(ElementDefinitionOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("extends"), em_Val_from(value));
 }
 
@@ -23,27 +23,27 @@ CustomElementRegistry CustomElementRegistry_new() {
       }
 
 
-jb_Undefined CustomElementRegistry_define0(CustomElementRegistry* self , jb_DOMString * name, jb_Function * constructor) {
+jb_Undefined CustomElementRegistry_define0(CustomElementRegistry* self , jb_String * name, jb_Function * constructor) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "define", em_Val_from(name), em_Val_from(constructor)));
 }
 
 
-jb_Undefined CustomElementRegistry_define1(CustomElementRegistry* self , jb_DOMString * name, jb_Function * constructor, ElementDefinitionOptions * options) {
+jb_Undefined CustomElementRegistry_define1(CustomElementRegistry* self , jb_String * name, jb_Function * constructor, ElementDefinitionOptions * options) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "define", em_Val_from(name), em_Val_from(constructor), em_Val_from(options)));
 }
 
 
-jb_Any CustomElementRegistry_get(CustomElementRegistry* self , jb_DOMString * name) {
+jb_Any CustomElementRegistry_get(CustomElementRegistry* self , jb_String * name) {
     return em_Val_as(jb_Any, em_Val_call(em_Val_as_val(self->inner), "get", em_Val_from(name)));
 }
 
 
-jb_DOMString CustomElementRegistry_getName(CustomElementRegistry* self , jb_Function * constructor) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "getName", em_Val_from(constructor)));
+jb_String CustomElementRegistry_getName(CustomElementRegistry* self , jb_Function * constructor) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "getName", em_Val_from(constructor)));
 }
 
 
-jb_Promise CustomElementRegistry_whenDefined(CustomElementRegistry* self , jb_DOMString * name) {
+jb_Promise CustomElementRegistry_whenDefined(CustomElementRegistry* self , jb_String * name) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_as_val(self->inner), "whenDefined", em_Val_from(name)));
 }
 

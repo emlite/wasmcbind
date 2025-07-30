@@ -6,12 +6,12 @@
 DEFINE_EMLITE_TYPE(VideoDecoderConfig, em_Val);
 
 
-jb_DOMString VideoDecoderConfig_codec(const VideoDecoderConfig *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("codec")));
+jb_String VideoDecoderConfig_codec(const VideoDecoderConfig *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("codec")));
 }
 
 
-void VideoDecoderConfig_set_codec(VideoDecoderConfig* self, jb_DOMString * value) {
+void VideoDecoderConfig_set_codec(VideoDecoderConfig* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("codec"), em_Val_from(value));
 }
 

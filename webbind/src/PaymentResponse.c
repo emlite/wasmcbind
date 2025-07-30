@@ -37,12 +37,12 @@ void PaymentValidationErrors_set_shippingAddress(PaymentValidationErrors* self, 
 }
 
 
-jb_DOMString PaymentValidationErrors_error(const PaymentValidationErrors *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("error")));
+jb_String PaymentValidationErrors_error(const PaymentValidationErrors *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("error")));
 }
 
 
-void PaymentValidationErrors_set_error(PaymentValidationErrors* self, jb_DOMString * value) {
+void PaymentValidationErrors_set_error(PaymentValidationErrors* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("error"), em_Val_from(value));
 }
 
@@ -64,13 +64,13 @@ jb_Object PaymentResponse_toJSON(PaymentResponse* self ) {
 }
 
 
-jb_DOMString PaymentResponse_requestId(const PaymentResponse *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("requestId")));
+jb_String PaymentResponse_requestId(const PaymentResponse *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("requestId")));
 }
 
 
-jb_DOMString PaymentResponse_methodName(const PaymentResponse *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("methodName")));
+jb_String PaymentResponse_methodName(const PaymentResponse *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("methodName")));
 }
 
 
@@ -84,23 +84,23 @@ ContactAddress PaymentResponse_shippingAddress(const PaymentResponse *self) {
 }
 
 
-jb_DOMString PaymentResponse_shippingOption(const PaymentResponse *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("shippingOption")));
+jb_String PaymentResponse_shippingOption(const PaymentResponse *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("shippingOption")));
 }
 
 
-jb_DOMString PaymentResponse_payerName(const PaymentResponse *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("payerName")));
+jb_String PaymentResponse_payerName(const PaymentResponse *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("payerName")));
 }
 
 
-jb_DOMString PaymentResponse_payerEmail(const PaymentResponse *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("payerEmail")));
+jb_String PaymentResponse_payerEmail(const PaymentResponse *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("payerEmail")));
 }
 
 
-jb_DOMString PaymentResponse_payerPhone(const PaymentResponse *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("payerPhone")));
+jb_String PaymentResponse_payerPhone(const PaymentResponse *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("payerPhone")));
 }
 
 

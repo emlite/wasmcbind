@@ -8,8 +8,8 @@
 
 DECLARE_EMLITE_TYPE(KeyFrameRequestEvent, Event);
 
-KeyFrameRequestEvent KeyFrameRequestEvent_new0(jb_DOMString * type);
+KeyFrameRequestEvent KeyFrameRequestEvent_new0(jb_String * type);
 
-KeyFrameRequestEvent KeyFrameRequestEvent_new1(jb_DOMString * type, jb_DOMString * rid);
+KeyFrameRequestEvent KeyFrameRequestEvent_new1(jb_String * type, jb_String * rid);
 
-jb_DOMString KeyFrameRequestEvent_rid(const KeyFrameRequestEvent *self);
+jb_String KeyFrameRequestEvent_rid(const KeyFrameRequestEvent *self);

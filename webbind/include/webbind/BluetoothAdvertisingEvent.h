@@ -12,13 +12,13 @@ typedef struct BluetoothServiceDataMap BluetoothServiceDataMap;
 
 DECLARE_EMLITE_TYPE(BluetoothAdvertisingEvent, Event);
 
-BluetoothAdvertisingEvent BluetoothAdvertisingEvent_new(jb_DOMString * type, jb_Any * init);
+BluetoothAdvertisingEvent BluetoothAdvertisingEvent_new(jb_String * type, jb_Any * init);
 
 BluetoothDevice BluetoothAdvertisingEvent_device(const BluetoothAdvertisingEvent *self);
 
-jb_FrozenArray BluetoothAdvertisingEvent_uuids(const BluetoothAdvertisingEvent *self);
+jb_Array BluetoothAdvertisingEvent_uuids(const BluetoothAdvertisingEvent *self);
 
-jb_DOMString BluetoothAdvertisingEvent_name(const BluetoothAdvertisingEvent *self);
+jb_String BluetoothAdvertisingEvent_name(const BluetoothAdvertisingEvent *self);
 
 unsigned short BluetoothAdvertisingEvent_appearance(const BluetoothAdvertisingEvent *self);
 

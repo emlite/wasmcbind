@@ -38,13 +38,13 @@ MediaStreamTrack RTCRtpReceiver_track(const RTCRtpReceiver *self);
 
 RTCDtlsTransport RTCRtpReceiver_transport(const RTCRtpReceiver *self);
 
-RTCRtpCapabilities RTCRtpReceiver_getCapabilities(RTCRtpReceiver* self , jb_DOMString * kind);
+RTCRtpCapabilities RTCRtpReceiver_getCapabilities(RTCRtpReceiver* self , jb_String * kind);
 
 RTCRtpReceiveParameters RTCRtpReceiver_getParameters(RTCRtpReceiver* self );
 
-jb_Sequence RTCRtpReceiver_getContributingSources(RTCRtpReceiver* self );
+jb_Array RTCRtpReceiver_getContributingSources(RTCRtpReceiver* self );
 
-jb_Sequence RTCRtpReceiver_getSynchronizationSources(RTCRtpReceiver* self );
+jb_Array RTCRtpReceiver_getSynchronizationSources(RTCRtpReceiver* self );
 
 jb_Promise RTCRtpReceiver_getStats(RTCRtpReceiver* self );
 

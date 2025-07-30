@@ -8,8 +8,8 @@
 
 DECLARE_EMLITE_TYPE(SyncEvent, ExtendableEvent);
 
-SyncEvent SyncEvent_new(jb_DOMString * type, jb_Any * init);
+SyncEvent SyncEvent_new(jb_String * type, jb_Any * init);
 
-jb_DOMString SyncEvent_tag(const SyncEvent *self);
+jb_String SyncEvent_tag(const SyncEvent *self);
 
 bool SyncEvent_lastChance(const SyncEvent *self);

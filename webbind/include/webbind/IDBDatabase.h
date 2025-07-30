@@ -28,7 +28,7 @@ bool IDBObjectStoreParameters_autoIncrement(const IDBObjectStoreParameters *self
 void IDBObjectStoreParameters_set_autoIncrement(IDBObjectStoreParameters* self, bool value);
 DECLARE_EMLITE_TYPE(IDBDatabase, EventTarget);
 
-jb_DOMString IDBDatabase_name(const IDBDatabase *self);
+jb_String IDBDatabase_name(const IDBDatabase *self);
 
 long long IDBDatabase_version(const IDBDatabase *self);
 
@@ -42,11 +42,11 @@ IDBTransaction IDBDatabase_transaction2(IDBDatabase* self , jb_Any * storeNames,
 
 jb_Undefined IDBDatabase_close(IDBDatabase* self );
 
-IDBObjectStore IDBDatabase_createObjectStore0(IDBDatabase* self , jb_DOMString * name);
+IDBObjectStore IDBDatabase_createObjectStore0(IDBDatabase* self , jb_String * name);
 
-IDBObjectStore IDBDatabase_createObjectStore1(IDBDatabase* self , jb_DOMString * name, IDBObjectStoreParameters * options);
+IDBObjectStore IDBDatabase_createObjectStore1(IDBDatabase* self , jb_String * name, IDBObjectStoreParameters * options);
 
-jb_Undefined IDBDatabase_deleteObjectStore(IDBDatabase* self , jb_DOMString * name);
+jb_Undefined IDBDatabase_deleteObjectStore(IDBDatabase* self , jb_String * name);
 
 jb_Any IDBDatabase_onabort(const IDBDatabase *self);
 

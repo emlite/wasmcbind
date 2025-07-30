@@ -9,22 +9,22 @@ unsigned long Storage_length(const Storage *self) {
 }
 
 
-jb_DOMString Storage_key(Storage* self , unsigned long index) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "key", em_Val_from(index)));
+jb_String Storage_key(Storage* self , unsigned long index) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "key", em_Val_from(index)));
 }
 
 
-jb_DOMString Storage_getItem(Storage* self , jb_DOMString * key) {
-    return em_Val_as(jb_DOMString, em_Val_call(em_Val_as_val(self->inner), "getItem", em_Val_from(key)));
+jb_String Storage_getItem(Storage* self , jb_String * key) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_as_val(self->inner), "getItem", em_Val_from(key)));
 }
 
 
-jb_Undefined Storage_setItem(Storage* self , jb_DOMString * key, jb_DOMString * value) {
+jb_Undefined Storage_setItem(Storage* self , jb_String * key, jb_String * value) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "setItem", em_Val_from(key), em_Val_from(value)));
 }
 
 
-jb_Undefined Storage_removeItem(Storage* self , jb_DOMString * key) {
+jb_Undefined Storage_removeItem(Storage* self , jb_String * key) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "removeItem", em_Val_from(key)));
 }
 

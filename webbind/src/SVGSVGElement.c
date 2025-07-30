@@ -246,7 +246,7 @@ SVGTransform SVGSVGElement_createSVGTransformFromMatrix1(SVGSVGElement* self , D
 }
 
 
-Element SVGSVGElement_getElementById(SVGSVGElement* self , jb_DOMString * elementId) {
+Element SVGSVGElement_getElementById(SVGSVGElement* self , jb_String * elementId) {
     return em_Val_as(Element, em_Val_call(SVGGraphicsElement_as_val(self->inner), "getElementById", em_Val_from(elementId)));
 }
 

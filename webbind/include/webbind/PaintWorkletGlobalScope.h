@@ -8,6 +8,6 @@
 
 DECLARE_EMLITE_TYPE(PaintWorkletGlobalScope, WorkletGlobalScope);
 
-jb_Undefined PaintWorkletGlobalScope_registerPaint(PaintWorkletGlobalScope* self , jb_DOMString * name, jb_Any * paintCtor);
+jb_Undefined PaintWorkletGlobalScope_registerPaint(PaintWorkletGlobalScope* self , jb_String * name, jb_Any * paintCtor);
 
 double PaintWorkletGlobalScope_devicePixelRatio(const PaintWorkletGlobalScope *self);

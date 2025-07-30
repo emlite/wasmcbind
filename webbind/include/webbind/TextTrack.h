@@ -14,13 +14,13 @@ DECLARE_EMLITE_TYPE(TextTrack, EventTarget);
 
 TextTrackKind TextTrack_kind(const TextTrack *self);
 
-jb_DOMString TextTrack_label(const TextTrack *self);
+jb_String TextTrack_label(const TextTrack *self);
 
-jb_DOMString TextTrack_language(const TextTrack *self);
+jb_String TextTrack_language(const TextTrack *self);
 
-jb_DOMString TextTrack_id(const TextTrack *self);
+jb_String TextTrack_id(const TextTrack *self);
 
-jb_DOMString TextTrack_inBandMetadataTrackDispatchType(const TextTrack *self);
+jb_String TextTrack_inBandMetadataTrackDispatchType(const TextTrack *self);
 
 TextTrackMode TextTrack_mode(const TextTrack *self);
 

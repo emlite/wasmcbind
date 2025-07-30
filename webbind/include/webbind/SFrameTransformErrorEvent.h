@@ -8,7 +8,7 @@
 
 DECLARE_EMLITE_TYPE(SFrameTransformErrorEvent, Event);
 
-SFrameTransformErrorEvent SFrameTransformErrorEvent_new(jb_DOMString * type, jb_Any * eventInitDict);
+SFrameTransformErrorEvent SFrameTransformErrorEvent_new(jb_String * type, jb_Any * eventInitDict);
 
 SFrameTransformErrorEventType SFrameTransformErrorEvent_errorType(const SFrameTransformErrorEvent *self);
 

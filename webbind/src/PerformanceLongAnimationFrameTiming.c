@@ -15,13 +15,13 @@ jb_Any PerformanceLongAnimationFrameTiming_duration(const PerformanceLongAnimati
 }
 
 
-jb_DOMString PerformanceLongAnimationFrameTiming_name(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
+jb_String PerformanceLongAnimationFrameTiming_name(const PerformanceLongAnimationFrameTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("name")));
 }
 
 
-jb_DOMString PerformanceLongAnimationFrameTiming_entryType(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
+jb_String PerformanceLongAnimationFrameTiming_entryType(const PerformanceLongAnimationFrameTiming *self) {
+    return em_Val_as(jb_String, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("entryType")));
 }
 
 
@@ -45,8 +45,8 @@ jb_Any PerformanceLongAnimationFrameTiming_firstUIEventTimestamp(const Performan
 }
 
 
-jb_FrozenArray PerformanceLongAnimationFrameTiming_scripts(const PerformanceLongAnimationFrameTiming *self) {
-    return em_Val_as(jb_FrozenArray, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("scripts")));
+jb_Array PerformanceLongAnimationFrameTiming_scripts(const PerformanceLongAnimationFrameTiming *self) {
+    return em_Val_as(jb_Array, em_Val_get(PerformanceEntry_as_val(self->inner), em_Val_from("scripts")));
 }
 
 

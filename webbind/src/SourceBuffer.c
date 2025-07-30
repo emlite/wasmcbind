@@ -133,7 +133,7 @@ jb_Undefined SourceBuffer_abort(SourceBuffer* self ) {
 }
 
 
-jb_Undefined SourceBuffer_changeType(SourceBuffer* self , jb_DOMString * type) {
+jb_Undefined SourceBuffer_changeType(SourceBuffer* self , jb_String * type) {
     return em_Val_as(jb_Undefined, em_Val_call(EventTarget_as_val(self->inner), "changeType", em_Val_from(type)));
 }
 

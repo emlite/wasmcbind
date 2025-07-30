@@ -24,37 +24,37 @@ HTMLFormElement HTMLOutputElement_form(const HTMLOutputElement *self) {
 }
 
 
-jb_DOMString HTMLOutputElement_name(const HTMLOutputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
+jb_String HTMLOutputElement_name(const HTMLOutputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void HTMLOutputElement_set_name(HTMLOutputElement* self, jb_DOMString * value) {
+void HTMLOutputElement_set_name(HTMLOutputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLOutputElement_type(const HTMLOutputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
+jb_String HTMLOutputElement_type(const HTMLOutputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("type")));
 }
 
 
-jb_DOMString HTMLOutputElement_defaultValue(const HTMLOutputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("defaultValue")));
+jb_String HTMLOutputElement_defaultValue(const HTMLOutputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("defaultValue")));
 }
 
 
-void HTMLOutputElement_set_defaultValue(HTMLOutputElement* self, jb_DOMString * value) {
+void HTMLOutputElement_set_defaultValue(HTMLOutputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("defaultValue"), em_Val_from(value));
 }
 
 
-jb_DOMString HTMLOutputElement_value(const HTMLOutputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
+jb_String HTMLOutputElement_value(const HTMLOutputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("value")));
 }
 
 
-void HTMLOutputElement_set_value(HTMLOutputElement* self, jb_DOMString * value) {
+void HTMLOutputElement_set_value(HTMLOutputElement* self, jb_String * value) {
     em_Val_set(HTMLElement_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
 }
 
@@ -69,8 +69,8 @@ ValidityState HTMLOutputElement_validity(const HTMLOutputElement *self) {
 }
 
 
-jb_DOMString HTMLOutputElement_validationMessage(const HTMLOutputElement *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
+jb_String HTMLOutputElement_validationMessage(const HTMLOutputElement *self) {
+    return em_Val_as(jb_String, em_Val_get(HTMLElement_as_val(self->inner), em_Val_from("validationMessage")));
 }
 
 
@@ -84,7 +84,7 @@ bool HTMLOutputElement_reportValidity(HTMLOutputElement* self ) {
 }
 
 
-jb_Undefined HTMLOutputElement_setCustomValidity(HTMLOutputElement* self , jb_DOMString * error) {
+jb_Undefined HTMLOutputElement_setCustomValidity(HTMLOutputElement* self , jb_String * error) {
     return em_Val_as(jb_Undefined, em_Val_call(HTMLElement_as_val(self->inner), "setCustomValidity", em_Val_from(error)));
 }
 

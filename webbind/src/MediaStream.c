@@ -5,33 +5,33 @@
 DEFINE_EMLITE_TYPE(MediaStream, EventTarget);
 
 
-MediaStream MediaStream_new(jb_Sequence * tracks) {
+MediaStream MediaStream_new(jb_Array * tracks) {
         em_Val vv = em_Val_new(em_Val_global("MediaStream") , em_Val_from(tracks));
         return MediaStream_from_val(&vv);
       }
 
 
-jb_DOMString MediaStream_id(const MediaStream *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
+jb_String MediaStream_id(const MediaStream *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("id")));
 }
 
 
-jb_Sequence MediaStream_getAudioTracks(MediaStream* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getAudioTracks"));
+jb_Array MediaStream_getAudioTracks(MediaStream* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getAudioTracks"));
 }
 
 
-jb_Sequence MediaStream_getVideoTracks(MediaStream* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getVideoTracks"));
+jb_Array MediaStream_getVideoTracks(MediaStream* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getVideoTracks"));
 }
 
 
-jb_Sequence MediaStream_getTracks(MediaStream* self ) {
-    return em_Val_as(jb_Sequence, em_Val_call(EventTarget_as_val(self->inner), "getTracks"));
+jb_Array MediaStream_getTracks(MediaStream* self ) {
+    return em_Val_as(jb_Array, em_Val_call(EventTarget_as_val(self->inner), "getTracks"));
 }
 
 
-MediaStreamTrack MediaStream_getTrackById(MediaStream* self , jb_DOMString * trackId) {
+MediaStreamTrack MediaStream_getTrackById(MediaStream* self , jb_String * trackId) {
     return em_Val_as(MediaStreamTrack, em_Val_call(EventTarget_as_val(self->inner), "getTrackById", em_Val_from(trackId)));
 }
 

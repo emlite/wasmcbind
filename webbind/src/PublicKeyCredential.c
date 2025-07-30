@@ -47,12 +47,12 @@ void PublicKeyCredentialCreationOptions_set_challenge(PublicKeyCredentialCreatio
 }
 
 
-jb_Sequence PublicKeyCredentialCreationOptions_pubKeyCredParams(const PublicKeyCredentialCreationOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pubKeyCredParams")));
+jb_Array PublicKeyCredentialCreationOptions_pubKeyCredParams(const PublicKeyCredentialCreationOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pubKeyCredParams")));
 }
 
 
-void PublicKeyCredentialCreationOptions_set_pubKeyCredParams(PublicKeyCredentialCreationOptions* self, jb_Sequence * value) {
+void PublicKeyCredentialCreationOptions_set_pubKeyCredParams(PublicKeyCredentialCreationOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("pubKeyCredParams"), em_Val_from(value));
 }
 
@@ -67,12 +67,12 @@ void PublicKeyCredentialCreationOptions_set_timeout(PublicKeyCredentialCreationO
 }
 
 
-jb_Sequence PublicKeyCredentialCreationOptions_excludeCredentials(const PublicKeyCredentialCreationOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("excludeCredentials")));
+jb_Array PublicKeyCredentialCreationOptions_excludeCredentials(const PublicKeyCredentialCreationOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("excludeCredentials")));
 }
 
 
-void PublicKeyCredentialCreationOptions_set_excludeCredentials(PublicKeyCredentialCreationOptions* self, jb_Sequence * value) {
+void PublicKeyCredentialCreationOptions_set_excludeCredentials(PublicKeyCredentialCreationOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("excludeCredentials"), em_Val_from(value));
 }
 
@@ -87,32 +87,32 @@ void PublicKeyCredentialCreationOptions_set_authenticatorSelection(PublicKeyCred
 }
 
 
-jb_Sequence PublicKeyCredentialCreationOptions_hints(const PublicKeyCredentialCreationOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hints")));
+jb_Array PublicKeyCredentialCreationOptions_hints(const PublicKeyCredentialCreationOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hints")));
 }
 
 
-void PublicKeyCredentialCreationOptions_set_hints(PublicKeyCredentialCreationOptions* self, jb_Sequence * value) {
+void PublicKeyCredentialCreationOptions_set_hints(PublicKeyCredentialCreationOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("hints"), em_Val_from(value));
 }
 
 
-jb_DOMString PublicKeyCredentialCreationOptions_attestation(const PublicKeyCredentialCreationOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attestation")));
+jb_String PublicKeyCredentialCreationOptions_attestation(const PublicKeyCredentialCreationOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attestation")));
 }
 
 
-void PublicKeyCredentialCreationOptions_set_attestation(PublicKeyCredentialCreationOptions* self, jb_DOMString * value) {
+void PublicKeyCredentialCreationOptions_set_attestation(PublicKeyCredentialCreationOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("attestation"), em_Val_from(value));
 }
 
 
-jb_Sequence PublicKeyCredentialCreationOptions_attestationFormats(const PublicKeyCredentialCreationOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attestationFormats")));
+jb_Array PublicKeyCredentialCreationOptions_attestationFormats(const PublicKeyCredentialCreationOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attestationFormats")));
 }
 
 
-void PublicKeyCredentialCreationOptions_set_attestationFormats(PublicKeyCredentialCreationOptions* self, jb_Sequence * value) {
+void PublicKeyCredentialCreationOptions_set_attestationFormats(PublicKeyCredentialCreationOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("attestationFormats"), em_Val_from(value));
 }
 
@@ -159,12 +159,12 @@ void PublicKeyCredentialCreationOptionsJSON_set_challenge(PublicKeyCredentialCre
 }
 
 
-jb_Sequence PublicKeyCredentialCreationOptionsJSON_pubKeyCredParams(const PublicKeyCredentialCreationOptionsJSON *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pubKeyCredParams")));
+jb_Array PublicKeyCredentialCreationOptionsJSON_pubKeyCredParams(const PublicKeyCredentialCreationOptionsJSON *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pubKeyCredParams")));
 }
 
 
-void PublicKeyCredentialCreationOptionsJSON_set_pubKeyCredParams(PublicKeyCredentialCreationOptionsJSON* self, jb_Sequence * value) {
+void PublicKeyCredentialCreationOptionsJSON_set_pubKeyCredParams(PublicKeyCredentialCreationOptionsJSON* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("pubKeyCredParams"), em_Val_from(value));
 }
 
@@ -179,12 +179,12 @@ void PublicKeyCredentialCreationOptionsJSON_set_timeout(PublicKeyCredentialCreat
 }
 
 
-jb_Sequence PublicKeyCredentialCreationOptionsJSON_excludeCredentials(const PublicKeyCredentialCreationOptionsJSON *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("excludeCredentials")));
+jb_Array PublicKeyCredentialCreationOptionsJSON_excludeCredentials(const PublicKeyCredentialCreationOptionsJSON *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("excludeCredentials")));
 }
 
 
-void PublicKeyCredentialCreationOptionsJSON_set_excludeCredentials(PublicKeyCredentialCreationOptionsJSON* self, jb_Sequence * value) {
+void PublicKeyCredentialCreationOptionsJSON_set_excludeCredentials(PublicKeyCredentialCreationOptionsJSON* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("excludeCredentials"), em_Val_from(value));
 }
 
@@ -199,32 +199,32 @@ void PublicKeyCredentialCreationOptionsJSON_set_authenticatorSelection(PublicKey
 }
 
 
-jb_Sequence PublicKeyCredentialCreationOptionsJSON_hints(const PublicKeyCredentialCreationOptionsJSON *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hints")));
+jb_Array PublicKeyCredentialCreationOptionsJSON_hints(const PublicKeyCredentialCreationOptionsJSON *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hints")));
 }
 
 
-void PublicKeyCredentialCreationOptionsJSON_set_hints(PublicKeyCredentialCreationOptionsJSON* self, jb_Sequence * value) {
+void PublicKeyCredentialCreationOptionsJSON_set_hints(PublicKeyCredentialCreationOptionsJSON* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("hints"), em_Val_from(value));
 }
 
 
-jb_DOMString PublicKeyCredentialCreationOptionsJSON_attestation(const PublicKeyCredentialCreationOptionsJSON *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attestation")));
+jb_String PublicKeyCredentialCreationOptionsJSON_attestation(const PublicKeyCredentialCreationOptionsJSON *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attestation")));
 }
 
 
-void PublicKeyCredentialCreationOptionsJSON_set_attestation(PublicKeyCredentialCreationOptionsJSON* self, jb_DOMString * value) {
+void PublicKeyCredentialCreationOptionsJSON_set_attestation(PublicKeyCredentialCreationOptionsJSON* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("attestation"), em_Val_from(value));
 }
 
 
-jb_Sequence PublicKeyCredentialCreationOptionsJSON_attestationFormats(const PublicKeyCredentialCreationOptionsJSON *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attestationFormats")));
+jb_Array PublicKeyCredentialCreationOptionsJSON_attestationFormats(const PublicKeyCredentialCreationOptionsJSON *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attestationFormats")));
 }
 
 
-void PublicKeyCredentialCreationOptionsJSON_set_attestationFormats(PublicKeyCredentialCreationOptionsJSON* self, jb_Sequence * value) {
+void PublicKeyCredentialCreationOptionsJSON_set_attestationFormats(PublicKeyCredentialCreationOptionsJSON* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("attestationFormats"), em_Val_from(value));
 }
 
@@ -261,42 +261,42 @@ void PublicKeyCredentialRequestOptions_set_timeout(PublicKeyCredentialRequestOpt
 }
 
 
-jb_DOMString PublicKeyCredentialRequestOptions_rpId(const PublicKeyCredentialRequestOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rpId")));
+jb_String PublicKeyCredentialRequestOptions_rpId(const PublicKeyCredentialRequestOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rpId")));
 }
 
 
-void PublicKeyCredentialRequestOptions_set_rpId(PublicKeyCredentialRequestOptions* self, jb_DOMString * value) {
+void PublicKeyCredentialRequestOptions_set_rpId(PublicKeyCredentialRequestOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("rpId"), em_Val_from(value));
 }
 
 
-jb_Sequence PublicKeyCredentialRequestOptions_allowCredentials(const PublicKeyCredentialRequestOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("allowCredentials")));
+jb_Array PublicKeyCredentialRequestOptions_allowCredentials(const PublicKeyCredentialRequestOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("allowCredentials")));
 }
 
 
-void PublicKeyCredentialRequestOptions_set_allowCredentials(PublicKeyCredentialRequestOptions* self, jb_Sequence * value) {
+void PublicKeyCredentialRequestOptions_set_allowCredentials(PublicKeyCredentialRequestOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("allowCredentials"), em_Val_from(value));
 }
 
 
-jb_DOMString PublicKeyCredentialRequestOptions_userVerification(const PublicKeyCredentialRequestOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("userVerification")));
+jb_String PublicKeyCredentialRequestOptions_userVerification(const PublicKeyCredentialRequestOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("userVerification")));
 }
 
 
-void PublicKeyCredentialRequestOptions_set_userVerification(PublicKeyCredentialRequestOptions* self, jb_DOMString * value) {
+void PublicKeyCredentialRequestOptions_set_userVerification(PublicKeyCredentialRequestOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("userVerification"), em_Val_from(value));
 }
 
 
-jb_Sequence PublicKeyCredentialRequestOptions_hints(const PublicKeyCredentialRequestOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hints")));
+jb_Array PublicKeyCredentialRequestOptions_hints(const PublicKeyCredentialRequestOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hints")));
 }
 
 
-void PublicKeyCredentialRequestOptions_set_hints(PublicKeyCredentialRequestOptions* self, jb_Sequence * value) {
+void PublicKeyCredentialRequestOptions_set_hints(PublicKeyCredentialRequestOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("hints"), em_Val_from(value));
 }
 
@@ -333,42 +333,42 @@ void PublicKeyCredentialRequestOptionsJSON_set_timeout(PublicKeyCredentialReques
 }
 
 
-jb_DOMString PublicKeyCredentialRequestOptionsJSON_rpId(const PublicKeyCredentialRequestOptionsJSON *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rpId")));
+jb_String PublicKeyCredentialRequestOptionsJSON_rpId(const PublicKeyCredentialRequestOptionsJSON *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rpId")));
 }
 
 
-void PublicKeyCredentialRequestOptionsJSON_set_rpId(PublicKeyCredentialRequestOptionsJSON* self, jb_DOMString * value) {
+void PublicKeyCredentialRequestOptionsJSON_set_rpId(PublicKeyCredentialRequestOptionsJSON* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("rpId"), em_Val_from(value));
 }
 
 
-jb_Sequence PublicKeyCredentialRequestOptionsJSON_allowCredentials(const PublicKeyCredentialRequestOptionsJSON *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("allowCredentials")));
+jb_Array PublicKeyCredentialRequestOptionsJSON_allowCredentials(const PublicKeyCredentialRequestOptionsJSON *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("allowCredentials")));
 }
 
 
-void PublicKeyCredentialRequestOptionsJSON_set_allowCredentials(PublicKeyCredentialRequestOptionsJSON* self, jb_Sequence * value) {
+void PublicKeyCredentialRequestOptionsJSON_set_allowCredentials(PublicKeyCredentialRequestOptionsJSON* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("allowCredentials"), em_Val_from(value));
 }
 
 
-jb_DOMString PublicKeyCredentialRequestOptionsJSON_userVerification(const PublicKeyCredentialRequestOptionsJSON *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("userVerification")));
+jb_String PublicKeyCredentialRequestOptionsJSON_userVerification(const PublicKeyCredentialRequestOptionsJSON *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("userVerification")));
 }
 
 
-void PublicKeyCredentialRequestOptionsJSON_set_userVerification(PublicKeyCredentialRequestOptionsJSON* self, jb_DOMString * value) {
+void PublicKeyCredentialRequestOptionsJSON_set_userVerification(PublicKeyCredentialRequestOptionsJSON* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("userVerification"), em_Val_from(value));
 }
 
 
-jb_Sequence PublicKeyCredentialRequestOptionsJSON_hints(const PublicKeyCredentialRequestOptionsJSON *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hints")));
+jb_Array PublicKeyCredentialRequestOptionsJSON_hints(const PublicKeyCredentialRequestOptionsJSON *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hints")));
 }
 
 
-void PublicKeyCredentialRequestOptionsJSON_set_hints(PublicKeyCredentialRequestOptionsJSON* self, jb_Sequence * value) {
+void PublicKeyCredentialRequestOptionsJSON_set_hints(PublicKeyCredentialRequestOptionsJSON* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("hints"), em_Val_from(value));
 }
 
@@ -385,12 +385,12 @@ void PublicKeyCredentialRequestOptionsJSON_set_extensions(PublicKeyCredentialReq
 DEFINE_EMLITE_TYPE(UnknownCredentialOptions, em_Val);
 
 
-jb_DOMString UnknownCredentialOptions_rpId(const UnknownCredentialOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rpId")));
+jb_String UnknownCredentialOptions_rpId(const UnknownCredentialOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rpId")));
 }
 
 
-void UnknownCredentialOptions_set_rpId(UnknownCredentialOptions* self, jb_DOMString * value) {
+void UnknownCredentialOptions_set_rpId(UnknownCredentialOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("rpId"), em_Val_from(value));
 }
 
@@ -407,12 +407,12 @@ void UnknownCredentialOptions_set_credentialId(UnknownCredentialOptions* self, j
 DEFINE_EMLITE_TYPE(AllAcceptedCredentialsOptions, em_Val);
 
 
-jb_DOMString AllAcceptedCredentialsOptions_rpId(const AllAcceptedCredentialsOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rpId")));
+jb_String AllAcceptedCredentialsOptions_rpId(const AllAcceptedCredentialsOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rpId")));
 }
 
 
-void AllAcceptedCredentialsOptions_set_rpId(AllAcceptedCredentialsOptions* self, jb_DOMString * value) {
+void AllAcceptedCredentialsOptions_set_rpId(AllAcceptedCredentialsOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("rpId"), em_Val_from(value));
 }
 
@@ -427,24 +427,24 @@ void AllAcceptedCredentialsOptions_set_userId(AllAcceptedCredentialsOptions* sel
 }
 
 
-jb_Sequence AllAcceptedCredentialsOptions_allAcceptedCredentialIds(const AllAcceptedCredentialsOptions *self) {
-    return em_Val_as(jb_Sequence, em_Val_get(em_Val_as_val(self->inner), em_Val_from("allAcceptedCredentialIds")));
+jb_Array AllAcceptedCredentialsOptions_allAcceptedCredentialIds(const AllAcceptedCredentialsOptions *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("allAcceptedCredentialIds")));
 }
 
 
-void AllAcceptedCredentialsOptions_set_allAcceptedCredentialIds(AllAcceptedCredentialsOptions* self, jb_Sequence * value) {
+void AllAcceptedCredentialsOptions_set_allAcceptedCredentialIds(AllAcceptedCredentialsOptions* self, jb_Array * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("allAcceptedCredentialIds"), em_Val_from(value));
 }
 
 DEFINE_EMLITE_TYPE(CurrentUserDetailsOptions, em_Val);
 
 
-jb_DOMString CurrentUserDetailsOptions_rpId(const CurrentUserDetailsOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rpId")));
+jb_String CurrentUserDetailsOptions_rpId(const CurrentUserDetailsOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rpId")));
 }
 
 
-void CurrentUserDetailsOptions_set_rpId(CurrentUserDetailsOptions* self, jb_DOMString * value) {
+void CurrentUserDetailsOptions_set_rpId(CurrentUserDetailsOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("rpId"), em_Val_from(value));
 }
 
@@ -459,22 +459,22 @@ void CurrentUserDetailsOptions_set_userId(CurrentUserDetailsOptions* self, jb_An
 }
 
 
-jb_DOMString CurrentUserDetailsOptions_name(const CurrentUserDetailsOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String CurrentUserDetailsOptions_name(const CurrentUserDetailsOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 
-void CurrentUserDetailsOptions_set_name(CurrentUserDetailsOptions* self, jb_DOMString * value) {
+void CurrentUserDetailsOptions_set_name(CurrentUserDetailsOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("name"), em_Val_from(value));
 }
 
 
-jb_DOMString CurrentUserDetailsOptions_displayName(const CurrentUserDetailsOptions *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("displayName")));
+jb_String CurrentUserDetailsOptions_displayName(const CurrentUserDetailsOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("displayName")));
 }
 
 
-void CurrentUserDetailsOptions_set_displayName(CurrentUserDetailsOptions* self, jb_DOMString * value) {
+void CurrentUserDetailsOptions_set_displayName(CurrentUserDetailsOptions* self, jb_String * value) {
     em_Val_set(em_Val_as_val(self->inner), em_Val_from("displayName"), em_Val_from(value));
 }
 
@@ -491,8 +491,8 @@ AuthenticatorResponse PublicKeyCredential_response(const PublicKeyCredential *se
 }
 
 
-jb_DOMString PublicKeyCredential_authenticatorAttachment(const PublicKeyCredential *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Credential_as_val(self->inner), em_Val_from("authenticatorAttachment")));
+jb_String PublicKeyCredential_authenticatorAttachment(const PublicKeyCredential *self) {
+    return em_Val_as(jb_String, em_Val_get(Credential_as_val(self->inner), em_Val_from("authenticatorAttachment")));
 }
 
 

@@ -22,13 +22,13 @@ unsigned long AttributionImpressionOptions_matchValue(const AttributionImpressio
 
 void AttributionImpressionOptions_set_matchValue(AttributionImpressionOptions* self, unsigned long value);
 
-jb_Sequence AttributionImpressionOptions_conversionSites(const AttributionImpressionOptions *self);
+jb_Array AttributionImpressionOptions_conversionSites(const AttributionImpressionOptions *self);
 
-void AttributionImpressionOptions_set_conversionSites(AttributionImpressionOptions* self, jb_Sequence * value);
+void AttributionImpressionOptions_set_conversionSites(AttributionImpressionOptions* self, jb_Array * value);
 
-jb_Sequence AttributionImpressionOptions_conversionCallers(const AttributionImpressionOptions *self);
+jb_Array AttributionImpressionOptions_conversionCallers(const AttributionImpressionOptions *self);
 
-void AttributionImpressionOptions_set_conversionCallers(AttributionImpressionOptions* self, jb_Sequence * value);
+void AttributionImpressionOptions_set_conversionCallers(AttributionImpressionOptions* self, jb_Array * value);
 
 unsigned long AttributionImpressionOptions_lifetimeDays(const AttributionImpressionOptions *self);
 
@@ -44,9 +44,9 @@ jb_Uint8Array AttributionConversionResult_report(const AttributionConversionResu
 void AttributionConversionResult_set_report(AttributionConversionResult* self, jb_Uint8Array * value);
 DECLARE_EMLITE_TYPE(AttributionConversionOptions, em_Val);
 
-jb_USVString AttributionConversionOptions_aggregationService(const AttributionConversionOptions *self);
+jb_String AttributionConversionOptions_aggregationService(const AttributionConversionOptions *self);
 
-void AttributionConversionOptions_set_aggregationService(AttributionConversionOptions* self, jb_USVString * value);
+void AttributionConversionOptions_set_aggregationService(AttributionConversionOptions* self, jb_String * value);
 
 double AttributionConversionOptions_epsilon(const AttributionConversionOptions *self);
 
@@ -60,17 +60,17 @@ unsigned long AttributionConversionOptions_lookbackDays(const AttributionConvers
 
 void AttributionConversionOptions_set_lookbackDays(AttributionConversionOptions* self, unsigned long value);
 
-jb_Sequence AttributionConversionOptions_matchValues(const AttributionConversionOptions *self);
+jb_Array AttributionConversionOptions_matchValues(const AttributionConversionOptions *self);
 
-void AttributionConversionOptions_set_matchValues(AttributionConversionOptions* self, jb_Sequence * value);
+void AttributionConversionOptions_set_matchValues(AttributionConversionOptions* self, jb_Array * value);
 
-jb_Sequence AttributionConversionOptions_impressionSites(const AttributionConversionOptions *self);
+jb_Array AttributionConversionOptions_impressionSites(const AttributionConversionOptions *self);
 
-void AttributionConversionOptions_set_impressionSites(AttributionConversionOptions* self, jb_Sequence * value);
+void AttributionConversionOptions_set_impressionSites(AttributionConversionOptions* self, jb_Array * value);
 
-jb_Sequence AttributionConversionOptions_impressionCallers(const AttributionConversionOptions *self);
+jb_Array AttributionConversionOptions_impressionCallers(const AttributionConversionOptions *self);
 
-void AttributionConversionOptions_set_impressionCallers(AttributionConversionOptions* self, jb_Sequence * value);
+void AttributionConversionOptions_set_impressionCallers(AttributionConversionOptions* self, jb_Array * value);
 
 AttributionLogic AttributionConversionOptions_logic(const AttributionConversionOptions *self);
 

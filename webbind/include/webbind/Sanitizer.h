@@ -9,25 +9,25 @@ typedef struct SanitizerConfig SanitizerConfig;
 
 DECLARE_EMLITE_TYPE(SanitizerConfig, em_Val);
 
-jb_Sequence SanitizerConfig_elements(const SanitizerConfig *self);
+jb_Array SanitizerConfig_elements(const SanitizerConfig *self);
 
-void SanitizerConfig_set_elements(SanitizerConfig* self, jb_Sequence * value);
+void SanitizerConfig_set_elements(SanitizerConfig* self, jb_Array * value);
 
-jb_Sequence SanitizerConfig_removeElements(const SanitizerConfig *self);
+jb_Array SanitizerConfig_removeElements(const SanitizerConfig *self);
 
-void SanitizerConfig_set_removeElements(SanitizerConfig* self, jb_Sequence * value);
+void SanitizerConfig_set_removeElements(SanitizerConfig* self, jb_Array * value);
 
-jb_Sequence SanitizerConfig_replaceWithChildrenElements(const SanitizerConfig *self);
+jb_Array SanitizerConfig_replaceWithChildrenElements(const SanitizerConfig *self);
 
-void SanitizerConfig_set_replaceWithChildrenElements(SanitizerConfig* self, jb_Sequence * value);
+void SanitizerConfig_set_replaceWithChildrenElements(SanitizerConfig* self, jb_Array * value);
 
-jb_Sequence SanitizerConfig_attributes(const SanitizerConfig *self);
+jb_Array SanitizerConfig_attributes(const SanitizerConfig *self);
 
-void SanitizerConfig_set_attributes(SanitizerConfig* self, jb_Sequence * value);
+void SanitizerConfig_set_attributes(SanitizerConfig* self, jb_Array * value);
 
-jb_Sequence SanitizerConfig_removeAttributes(const SanitizerConfig *self);
+jb_Array SanitizerConfig_removeAttributes(const SanitizerConfig *self);
 
-void SanitizerConfig_set_removeAttributes(SanitizerConfig* self, jb_Sequence * value);
+void SanitizerConfig_set_removeAttributes(SanitizerConfig* self, jb_Array * value);
 
 bool SanitizerConfig_comments(const SanitizerConfig *self);
 

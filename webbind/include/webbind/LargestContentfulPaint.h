@@ -14,9 +14,9 @@ jb_Any LargestContentfulPaint_loadTime(const LargestContentfulPaint *self);
 
 unsigned long LargestContentfulPaint_size(const LargestContentfulPaint *self);
 
-jb_DOMString LargestContentfulPaint_id(const LargestContentfulPaint *self);
+jb_String LargestContentfulPaint_id(const LargestContentfulPaint *self);
 
-jb_DOMString LargestContentfulPaint_url(const LargestContentfulPaint *self);
+jb_String LargestContentfulPaint_url(const LargestContentfulPaint *self);
 
 Element LargestContentfulPaint_element(const LargestContentfulPaint *self);
 

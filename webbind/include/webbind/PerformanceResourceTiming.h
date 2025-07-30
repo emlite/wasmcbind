@@ -10,11 +10,11 @@ typedef struct PerformanceServerTiming PerformanceServerTiming;
 
 DECLARE_EMLITE_TYPE(PerformanceResourceTiming, PerformanceEntry);
 
-jb_DOMString PerformanceResourceTiming_initiatorType(const PerformanceResourceTiming *self);
+jb_String PerformanceResourceTiming_initiatorType(const PerformanceResourceTiming *self);
 
-jb_DOMString PerformanceResourceTiming_deliveryType(const PerformanceResourceTiming *self);
+jb_String PerformanceResourceTiming_deliveryType(const PerformanceResourceTiming *self);
 
-jb_ByteString PerformanceResourceTiming_nextHopProtocol(const PerformanceResourceTiming *self);
+jb_String PerformanceResourceTiming_nextHopProtocol(const PerformanceResourceTiming *self);
 
 jb_Any PerformanceResourceTiming_workerStart(const PerformanceResourceTiming *self);
 
@@ -54,10 +54,10 @@ unsigned short PerformanceResourceTiming_responseStatus(const PerformanceResourc
 
 RenderBlockingStatusType PerformanceResourceTiming_renderBlockingStatus(const PerformanceResourceTiming *self);
 
-jb_DOMString PerformanceResourceTiming_contentType(const PerformanceResourceTiming *self);
+jb_String PerformanceResourceTiming_contentType(const PerformanceResourceTiming *self);
 
-jb_DOMString PerformanceResourceTiming_contentEncoding(const PerformanceResourceTiming *self);
+jb_String PerformanceResourceTiming_contentEncoding(const PerformanceResourceTiming *self);
 
 jb_Object PerformanceResourceTiming_toJSON(PerformanceResourceTiming* self );
 
-jb_FrozenArray PerformanceResourceTiming_serverTiming(const PerformanceResourceTiming *self);
+jb_Array PerformanceResourceTiming_serverTiming(const PerformanceResourceTiming *self);

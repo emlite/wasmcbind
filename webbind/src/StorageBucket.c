@@ -8,8 +8,8 @@
 DEFINE_EMLITE_TYPE(StorageBucket, em_Val);
 
 
-jb_DOMString StorageBucket_name(const StorageBucket *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
+jb_String StorageBucket_name(const StorageBucket *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("name")));
 }
 
 

@@ -8,12 +8,12 @@
 
 DECLARE_EMLITE_TYPE(File, Blob);
 
-File File_new0(jb_Sequence * fileBits, jb_USVString * fileName);
+File File_new0(jb_Array * fileBits, jb_String * fileName);
 
-File File_new1(jb_Sequence * fileBits, jb_USVString * fileName, jb_Any * options);
+File File_new1(jb_Array * fileBits, jb_String * fileName, jb_Any * options);
 
-jb_DOMString File_name(const File *self);
+jb_String File_name(const File *self);
 
 long long File_lastModified(const File *self);
 
-jb_USVString File_webkitRelativePath(const File *self);
+jb_String File_webkitRelativePath(const File *self);

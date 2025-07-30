@@ -7,7 +7,7 @@ static inline em_Val R() {
 jb_Any Reflect_apply(
     const jb_Function *target,
     const jb_Any *thisArg,
-    const jb_Sequence *argumentsList
+    const jb_Array *argumentsList
 ) {
     return em_Val_as(
         jb_Any,
@@ -23,7 +23,7 @@ jb_Any Reflect_apply(
 
 jb_Any Reflect_construct(
     const jb_Function *target,
-    const jb_Sequence *args,
+    const jb_Array *args,
     const jb_Any *newTarget
 ) {
     return em_Val_as(
@@ -134,9 +134,9 @@ bool Reflect_isExtensible(const jb_Any *target) {
     );
 }
 
-jb_Sequence ownKeys(const jb_Any *target) {
+jb_Array ownKeys(const jb_Any *target) {
     return em_Val_as(
-        jb_Sequence,
+        jb_Array,
         em_Val_call(
             R(),
             "ownKeys",

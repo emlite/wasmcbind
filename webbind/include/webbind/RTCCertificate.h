@@ -9,15 +9,15 @@ typedef struct RTCDtlsFingerprint RTCDtlsFingerprint;
 
 DECLARE_EMLITE_TYPE(RTCDtlsFingerprint, em_Val);
 
-jb_DOMString RTCDtlsFingerprint_algorithm(const RTCDtlsFingerprint *self);
+jb_String RTCDtlsFingerprint_algorithm(const RTCDtlsFingerprint *self);
 
-void RTCDtlsFingerprint_set_algorithm(RTCDtlsFingerprint* self, jb_DOMString * value);
+void RTCDtlsFingerprint_set_algorithm(RTCDtlsFingerprint* self, jb_String * value);
 
-jb_DOMString RTCDtlsFingerprint_value(const RTCDtlsFingerprint *self);
+jb_String RTCDtlsFingerprint_value(const RTCDtlsFingerprint *self);
 
-void RTCDtlsFingerprint_set_value(RTCDtlsFingerprint* self, jb_DOMString * value);
+void RTCDtlsFingerprint_set_value(RTCDtlsFingerprint* self, jb_String * value);
 DECLARE_EMLITE_TYPE(RTCCertificate, em_Val);
 
 jb_Any RTCCertificate_expires(const RTCCertificate *self);
 
-jb_Sequence RTCCertificate_getFingerprints(RTCCertificate* self );
+jb_Array RTCCertificate_getFingerprints(RTCCertificate* self );

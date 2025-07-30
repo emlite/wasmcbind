@@ -6,8 +6,8 @@
 DEFINE_EMLITE_TYPE(MutationRecord, em_Val);
 
 
-jb_DOMString MutationRecord_type(const MutationRecord *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
+jb_String MutationRecord_type(const MutationRecord *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
 }
 
 
@@ -36,17 +36,17 @@ Node MutationRecord_nextSibling(const MutationRecord *self) {
 }
 
 
-jb_DOMString MutationRecord_attributeName(const MutationRecord *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attributeName")));
+jb_String MutationRecord_attributeName(const MutationRecord *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attributeName")));
 }
 
 
-jb_DOMString MutationRecord_attributeNamespace(const MutationRecord *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attributeNamespace")));
+jb_String MutationRecord_attributeNamespace(const MutationRecord *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("attributeNamespace")));
 }
 
 
-jb_DOMString MutationRecord_oldValue(const MutationRecord *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(em_Val_as_val(self->inner), em_Val_from("oldValue")));
+jb_String MutationRecord_oldValue(const MutationRecord *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("oldValue")));
 }
 

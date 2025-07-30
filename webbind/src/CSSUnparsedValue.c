@@ -4,7 +4,7 @@
 DEFINE_EMLITE_TYPE(CSSUnparsedValue, CSSStyleValue);
 
 
-CSSUnparsedValue CSSUnparsedValue_new(jb_Sequence * members) {
+CSSUnparsedValue CSSUnparsedValue_new(jb_Array * members) {
         em_Val vv = em_Val_new(em_Val_global("CSSUnparsedValue") , em_Val_from(members));
         return CSSUnparsedValue_from_val(&vv);
       }

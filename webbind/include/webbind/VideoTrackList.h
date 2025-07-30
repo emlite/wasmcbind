@@ -12,7 +12,7 @@ DECLARE_EMLITE_TYPE(VideoTrackList, EventTarget);
 
 unsigned long VideoTrackList_length(const VideoTrackList *self);
 
-VideoTrack VideoTrackList_getTrackById(VideoTrackList* self , jb_DOMString * id);
+VideoTrack VideoTrackList_getTrackById(VideoTrackList* self , jb_String * id);
 
 long VideoTrackList_selectedIndex(const VideoTrackList *self);
 

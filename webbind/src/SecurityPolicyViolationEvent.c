@@ -4,55 +4,55 @@
 DEFINE_EMLITE_TYPE(SecurityPolicyViolationEvent, Event);
 
 
-SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new0(jb_DOMString * type) {
+SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new0(jb_String * type) {
         em_Val vv = em_Val_new(em_Val_global("SecurityPolicyViolationEvent") , em_Val_from(type));
         return SecurityPolicyViolationEvent_from_val(&vv);
       }
 
 
-SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new1(jb_DOMString * type, jb_Any * eventInitDict) {
+SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new1(jb_String * type, jb_Any * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("SecurityPolicyViolationEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return SecurityPolicyViolationEvent_from_val(&vv);
       }
 
 
-jb_USVString SecurityPolicyViolationEvent_documentURI(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), em_Val_from("documentURI")));
+jb_String SecurityPolicyViolationEvent_documentURI(const SecurityPolicyViolationEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("documentURI")));
 }
 
 
-jb_USVString SecurityPolicyViolationEvent_referrer(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), em_Val_from("referrer")));
+jb_String SecurityPolicyViolationEvent_referrer(const SecurityPolicyViolationEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("referrer")));
 }
 
 
-jb_USVString SecurityPolicyViolationEvent_blockedURI(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), em_Val_from("blockedURI")));
+jb_String SecurityPolicyViolationEvent_blockedURI(const SecurityPolicyViolationEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("blockedURI")));
 }
 
 
-jb_DOMString SecurityPolicyViolationEvent_effectiveDirective(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("effectiveDirective")));
+jb_String SecurityPolicyViolationEvent_effectiveDirective(const SecurityPolicyViolationEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("effectiveDirective")));
 }
 
 
-jb_DOMString SecurityPolicyViolationEvent_violatedDirective(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("violatedDirective")));
+jb_String SecurityPolicyViolationEvent_violatedDirective(const SecurityPolicyViolationEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("violatedDirective")));
 }
 
 
-jb_DOMString SecurityPolicyViolationEvent_originalPolicy(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("originalPolicy")));
+jb_String SecurityPolicyViolationEvent_originalPolicy(const SecurityPolicyViolationEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("originalPolicy")));
 }
 
 
-jb_USVString SecurityPolicyViolationEvent_sourceFile(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_USVString, em_Val_get(Event_as_val(self->inner), em_Val_from("sourceFile")));
+jb_String SecurityPolicyViolationEvent_sourceFile(const SecurityPolicyViolationEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("sourceFile")));
 }
 
 
-jb_DOMString SecurityPolicyViolationEvent_sample(const SecurityPolicyViolationEvent *self) {
-    return em_Val_as(jb_DOMString, em_Val_get(Event_as_val(self->inner), em_Val_from("sample")));
+jb_String SecurityPolicyViolationEvent_sample(const SecurityPolicyViolationEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("sample")));
 }
 
 
