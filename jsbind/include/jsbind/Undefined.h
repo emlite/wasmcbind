@@ -1,7 +1,7 @@
 #pragma once
 
-#include <emlite/emlite.h>
 #include "utils.h"
+#include <emlite/emlite.h>
 
 DECLARE_EMLITE_TYPE(jb_Undefined, em_Val);
 

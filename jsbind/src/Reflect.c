@@ -61,10 +61,7 @@ bool Reflect_deleteProperty(
     return em_Val_as(
         bool,
         em_Val_call(
-            R(),
-            "deleteProperty",
-            target->inner,
-            key->inner
+            R(), "deleteProperty", target->inner, key->inner
         )
     );
 }
@@ -103,56 +100,34 @@ jb_Any Reflect_getOwnPropertyDescriptor(
 jb_Any Reflect_getPrototypeOf(const jb_Any *target) {
     return em_Val_as(
         jb_Any,
-        em_Val_call(
-            R(),
-            "getPrototypeOf",
-            target->inner
-        )
+        em_Val_call(R(), "getPrototypeOf", target->inner)
     );
 }
 
 bool Reflect_has(const jb_Any *target, const jb_Any *key) {
     return em_Val_as(
         bool,
-        em_Val_call(
-            R(),
-            "has",
-            target->inner,
-            key->inner
-        )
+        em_Val_call(R(), "has", target->inner, key->inner)
     );
 }
 
 bool Reflect_isExtensible(const jb_Any *target) {
     return em_Val_as(
         bool,
-        em_Val_call(
-            R(),
-            "isExtensible",
-            target->inner
-        )
+        em_Val_call(R(), "isExtensible", target->inner)
     );
 }
 
 jb_Array ownKeys(const jb_Any *target) {
     return em_Val_as(
-        jb_Array,
-        em_Val_call(
-            R(),
-            "ownKeys",
-            target->inner
-        )
+        jb_Array, em_Val_call(R(), "ownKeys", target->inner)
     );
 }
 
 bool Reflect_preventExtensions(const jb_Any *target) {
     return em_Val_as(
         bool,
-        em_Val_call(
-            R(),
-            "preventExtensions",
-            target->inner
-        )
+        em_Val_call(R(), "preventExtensions", target->inner)
     );
 }
 

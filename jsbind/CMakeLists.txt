@@ -11,16 +11,17 @@ set(JSBIND_SOURCES
     src/Reflect.c
     src/Null.c
     src/Console.c
-    # src/Date.c
-    # src/JSON.c
     src/Error.c
-    # src/time.c
-    # src/Response.c
-    # src/url.c
-    # src/Math.c
-    # src/text.c
     src/Promise.c
-    src/Array.c
+    src/Date.c
+    src/JSON.c
+    src/Math.c
+    src/Response.c
+    src/text.c
+    src/time.c
+    src/url.c
+    src/Map.c
+    src/Set.c
 )
 
 set(JSBIND_HEADERS
@@ -36,16 +37,16 @@ set(JSBIND_HEADERS
     include/jsbind/Null.h
     include/jsbind/Console.h
     include/jsbind/utils.h
-    # include/jsbind/Set.h
-    # include/jsbind/Map.h
-    # include/jsbind/Math.h
-    # include/jsbind/Date.h
-    # include/jsbind/JSON.h
+    include/jsbind/Set.h
+    include/jsbind/Map.h
+    include/jsbind/Math.h
+    include/jsbind/Date.h
+    include/jsbind/JSON.h
     include/jsbind/Error.h
-    # include/jsbind/time.h
-    # include/jsbind/Response.h
-    # include/jsbind/url.h
-    # include/jsbind/text.h
+    include/jsbind/time.h
+    include/jsbind/Response.h
+    include/jsbind/url.h
+    include/jsbind/text.h
 )
 
 target_sources(jsbind 

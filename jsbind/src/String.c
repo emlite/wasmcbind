@@ -1,4 +1,7 @@
+#include <jsbind/Array.h>
 #include <jsbind/String.h>
+
+DEFINE_EMLITE_TYPE(jb_String, em_Val);
 
 #define DEFINE_STRING_FUNCS(name)                          \
     size_t jb_##name##_byte_len(const jb_##name *s) {      \
@@ -112,6 +115,235 @@
             s->inner, "localeCompare", otherv         \
         );                                            \
         return em_Val_as_int(v);                           \
+    }                                                      \
+    jb_Any jb_##name##_match(                              \
+        const jb_##name *s, const jb_Any *pat              \
+    ) {                                                    \
+        return (jb_Any                                     \
+        ){.inner =                                         \
+              em_Val_call(s->inner, "match", pat->inner)}; \
+    }                                                      \
+    jb_Any jb_##name##_match_all(                          \
+        const jb_##name *s, const jb_Any *pat              \
+    ) {                                                    \
+        return (jb_Any                                     \
+        ){.inner = em_Val_call(                            \
+              s->inner, "matchAll", pat->inner             \
+          )};                                              \
+    }                                                      \
+    jb_##name jb_##name##_normalize(                       \
+        const jb_##name *s, const char *form               \
+    ) {                                                    \
+        if (form) {                                        \
+            return (jb_##name                              \
+            ){.inner = em_Val_call(                        \
+                  s->inner,                                \
+                  "normalize",                             \
+                  em_Val_from_string(form)                 \
+              )};                                          \
+        }                                                  \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(s->inner, "normalize")};    \
+    }                                                      \
+    jb_##name jb_##name##_pad_end(                         \
+        const jb_##name *s,                                \
+        size_t target_len,                                 \
+        const char *pad                                    \
+    ) {                                                    \
+        if (pad) {                                         \
+            return (jb_##name                              \
+            ){.inner = em_Val_call(                        \
+                  s->inner,                                \
+                  "padEnd",                                \
+                  em_Val_from_int(target_len),             \
+                  em_Val_from_string(pad)                  \
+              )};                                          \
+        }                                                  \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(                            \
+              s->inner,                                    \
+              "padEnd",                                    \
+              em_Val_from_int(target_len)                  \
+          )};                                              \
+    }                                                      \
+    jb_##name jb_##name##_pad_start(                       \
+        const jb_##name *s,                                \
+        size_t target_len,                                 \
+        const char *pad                                    \
+    ) {                                                    \
+        if (pad) {                                         \
+            return (jb_##name                              \
+            ){.inner = em_Val_call(                        \
+                  s->inner,                                \
+                  "padStart",                              \
+                  em_Val_from_int(target_len),             \
+                  em_Val_from_string(pad)                  \
+              )};                                          \
+        }                                                  \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(                            \
+              s->inner,                                    \
+              "padStart",                                  \
+              em_Val_from_int(target_len)                  \
+          )};                                              \
+    }                                                      \
+    jb_##name jb_##name##_repeat(                          \
+        const jb_##name *s, size_t count                   \
+    ) {                                                    \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(                            \
+              s->inner, "repeat", em_Val_from_int(count)   \
+          )};                                              \
+    }                                                      \
+    jb_##name jb_##name##_replace(                         \
+        const jb_##name *s,                                \
+        const jb_Any *pat,                                 \
+        const jb_Any *repl                                 \
+    ) {                                                    \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(                            \
+              s->inner, "replace", pat->inner, repl->inner \
+          )};                                              \
+    }                                                      \
+    jb_##name jb_##name##_replace_all(                     \
+        const jb_##name *s,                                \
+        const jb_Any *pat,                                 \
+        const jb_Any *repl                                 \
+    ) {                                                    \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(                            \
+              s->inner,                                    \
+              "replaceAll",                                \
+              pat->inner,                                  \
+              repl->inner                                  \
+          )};                                              \
+    }                                                      \
+    int jb_##name##_search(                                \
+        const jb_##name *s, const jb_Any *pat              \
+    ) {                                                    \
+        return em_Val_as_int(                              \
+            em_Val_call(s->inner, "search", pat->inner)    \
+        );                                                 \
+    }                                                      \
+    jb_##name jb_##name##_slice(                           \
+        const jb_##name *s, int start, int end             \
+    ) {                                                    \
+        if (end != -1) {                                   \
+            return (jb_##name                              \
+            ){.inner = em_Val_call(                        \
+                  s->inner,                                \
+                  "slice",                                 \
+                  em_Val_from_int(start),                  \
+                  em_Val_from_int(end)                     \
+              )};                                          \
+        }                                                  \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(                            \
+              s->inner, "slice", em_Val_from_int(start)    \
+          )};                                              \
+    }                                                      \
+    jb_Array jb_##name##_split(                            \
+        const jb_##name *s, const char *sep                \
+    ) {                                                    \
+        return (jb_Array                                   \
+        ){.inner = em_Val_call(                            \
+              s->inner, "split", em_Val_from_string(sep)   \
+          )};                                              \
+    }                                                      \
+    bool jb_##name##_starts_with(                          \
+        const jb_##name *s, const char *pat                \
+    ) {                                                    \
+        return em_Val_as_bool(em_Val_call(                 \
+            s->inner,                                      \
+            "startsWith",                                  \
+            em_Val_from_string(pat)                        \
+        ));                                                \
+    }                                                      \
+    jb_##name jb_##name##_substring(                       \
+        const jb_##name *s, size_t start, int end          \
+    ) {                                                    \
+        if (end != -1) {                                   \
+            return (jb_##name                              \
+            ){.inner = em_Val_call(                        \
+                  s->inner,                                \
+                  "substring",                             \
+                  em_Val_from_int(start),                  \
+                  em_Val_from_int(end)                     \
+              )};                                          \
+        }                                                  \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(                            \
+              s->inner,                                    \
+              "substring",                                 \
+              em_Val_from_int(start)                       \
+          )};                                              \
+    }                                                      \
+    jb_##name jb_##name##_to_locale_lower_case(            \
+        const jb_##name *s                                 \
+    ) {                                                    \
+        return (jb_##name                                  \
+        ){.inner =                                         \
+              em_Val_call(s->inner, "toLocaleLowerCase")}; \
+    }                                                      \
+    jb_##name jb_##name##_to_locale_upper_case(            \
+        const jb_##name *s                                 \
+    ) {                                                    \
+        return (jb_##name                                  \
+        ){.inner =                                         \
+              em_Val_call(s->inner, "toLocaleUpperCase")}; \
+    }                                                      \
+    jb_##name jb_##name##_to_lower_case(const jb_##name *s \
+    ) {                                                    \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(s->inner, "toLowerCase")};  \
+    }                                                      \
+    jb_##name jb_##name##_to_upper_case(const jb_##name *s \
+    ) {                                                    \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(s->inner, "toUpperCase")};  \
+    }                                                      \
+    jb_##name jb_##name##_to_well_formed(                  \
+        const jb_##name *s                                 \
+    ) {                                                    \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(s->inner, "toWellFormed")}; \
+    }                                                      \
+    jb_##name jb_##name##_trim(const jb_##name *s) {       \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(s->inner, "trim")};         \
+    }                                                      \
+    jb_##name jb_##name##_trim_end(const jb_##name *s) {   \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(s->inner, "trimEnd")};      \
+    }                                                      \
+    jb_##name jb_##name##_trim_start(const jb_##name *s) { \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(s->inner, "trimStart")};    \
+    }                                                      \
+    jb_##name jb_##name##_toString(const jb_##name *s) {   \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(s->inner, "toString")};     \
+    }                                                      \
+    jb_##name jb_##name##_substr(                          \
+        const jb_##name *s, int from, int length           \
+    ) {                                                    \
+        if (length != -1) {                                \
+            return (jb_##name                              \
+            ){.inner = em_Val_call(                        \
+                  s->inner,                                \
+                  "substr",                                \
+                  em_Val_from_int(from),                   \
+                  em_Val_from_int(length)                  \
+              )};                                          \
+        }                                                  \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(                            \
+              s->inner, "substr", em_Val_from_int(from)    \
+          )};                                              \
+    }                                                      \
+    jb_##name jb_##name##_valueOf(const jb_##name *s) {    \
+        return (jb_##name                                  \
+        ){.inner = em_Val_call(s->inner, "valueOf")};      \
     }
 
 DEFINE_STRING_FUNCS(String);

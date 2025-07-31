@@ -4,8 +4,8 @@
 jb_Any button_cb(const jb_Array *args, const jb_Any *data) {
     jb_Any ev0    = jb_Array_get(args, 0);
     MouseEvent ev = MouseEvent_from_val(&ev0);
-    Console con   = Console_get();
-    Console_log(
+    jb_Console con  = jb_Console_get();
+    jb_Console_log(
         &con,
         2,
         ANY("Button clicked at:"),

@@ -18,7 +18,9 @@ jb_Any Reflect_construct(
 );
 
 bool Reflect_defineProperty(
-    const jb_Any *target, const jb_Any *key, const jb_Any *attributes
+    const jb_Any *target,
+    const jb_Any *key,
+    const jb_Any *attributes
 );
 
 bool Reflect_deleteProperty(
