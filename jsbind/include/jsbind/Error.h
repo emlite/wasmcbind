@@ -5,6 +5,10 @@
 #include "utils.h"
 #include "String.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 DECLARE_EMLITE_TYPE(jb_Error, em_Val);
 
 // Create a new Error with a message
@@ -33,3 +37,7 @@ jb_SyntaxError jb_SyntaxError_new(const char* msg);
 jb_TypeError jb_TypeError_new(const char* msg);
 jb_URIError jb_URIError_new(const char* msg);
 jb_AggregateError jb_AggregateError_new(const char* msg);
+
+#ifdef __cplusplus
+}
+#endif

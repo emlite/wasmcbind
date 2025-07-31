@@ -4,6 +4,10 @@
 #include "utils.h"
 #include <emlite/emlite.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 DECLARE_EMLITE_TYPE(jb_Console, em_Val);
 
 jb_Console jb_Console_get();
@@ -21,3 +25,7 @@ void jb_Console_info(
 );
 
 void jb_Console_clear(const jb_Console *con);
+
+#ifdef __cplusplus
+}
+#endif

@@ -5,6 +5,10 @@
 #include "utils.h"
 #include <emlite/emlite.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 jb_Any Reflect_apply(
     const jb_Function *target,
     const jb_Any *thisArg,
@@ -57,3 +61,7 @@ bool Reflect_set(
 bool Reflect_setPrototypeOf(
     const jb_Any *target, const jb_Any *proto
 );
+
+#ifdef __cplusplus
+}
+#endif

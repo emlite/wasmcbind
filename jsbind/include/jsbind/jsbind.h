@@ -2,6 +2,10 @@
 
 #include <emlite/emlite.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "Any.h"
 #include "Array.h"
 #include "Console.h"
@@ -29,3 +33,7 @@ jb_String jb_btoa(const jb_String *data);
 
 int32_t jb_parse_int(const char *src, int32_t radix);
 double jb_parse_float(const char *src);
+
+#ifdef __cplusplus
+}
+#endif

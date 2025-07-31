@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define DECLARE_EMLITE_TYPE(name, parent)                  \
     typedef struct name {                                  \
         parent inner;                                      \
@@ -23,3 +27,7 @@
     em_Val name##_as_val(name self) {                      \
         return parent##_as_val(self.inner);                \
     }
+
+#ifdef __cplusplus
+}
+#endif

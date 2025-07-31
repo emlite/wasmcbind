@@ -5,6 +5,10 @@
 #include "utils.h"
 #include <emlite/emlite.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 DECLARE_EMLITE_TYPE(jb_Promise, em_Val);
 
 // Promise.then, catch, finally
@@ -23,3 +27,7 @@ jb_Promise jb_Promise_finally(
 // Promise.resolve, reject (static)
 jb_Promise jb_Promise_resolve(const jb_Any *value);
 jb_Promise jb_Promise_reject(const jb_Any *reason);
+
+#ifdef __cplusplus
+}
+#endif

@@ -5,6 +5,10 @@
 #include "utils.h"
 #include <emlite/emlite.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 DECLARE_EMLITE_TYPE(jb_Function, em_Val);
 
 // Create a function from a global name
@@ -46,3 +50,7 @@ jb_Function jb_Function_from(
 
 #define FUNC(x, data)                                      \
     ((jb_Function){.inner = em_Val_make_fn(x, data)})
+
+#ifdef __cplusplus
+}
+#endif

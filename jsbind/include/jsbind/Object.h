@@ -4,6 +4,10 @@
 #include "utils.h"
 #include <emlite/emlite.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 DECLARE_EMLITE_TYPE(jb_Object, em_Val);
 
 jb_Object jb_Object_new();
@@ -16,3 +20,7 @@ void jb_Object_set(
 int jb_Object_has_own_property(
     const jb_Object *o, const char *prop
 );
+
+#ifdef __cplusplus
+}
+#endif
