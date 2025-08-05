@@ -23,6 +23,7 @@ jb_Any button_cb(const jb_Array *args, const jb_Any *data) {
 }
 
 int main() {
+    emlite_init_handle_table();
     Window win            = window();
     Document document     = Window_document(&win);
     HTMLCollection bodies = Document_getElementsByTagName(

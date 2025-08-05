@@ -26,6 +26,7 @@ jb_Any on_fetch_fulfilled(
 }
 
 int main() {
+    emlite_init_handle_table();
     jb_Console con = jb_Console_get();
 
     // String

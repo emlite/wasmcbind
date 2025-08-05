@@ -12,6 +12,7 @@ jb_Any button_cb(const jb_Array *args, const jb_Any *data) {
 }
 
 int main() {
+    emlite_init_handle_table();
     AudioContext context = AudioContext_new0();
     OscillatorNode oscillator = OscillatorNode_new0(&context);
     OscillatorType t = OscillatorType_triangle();
