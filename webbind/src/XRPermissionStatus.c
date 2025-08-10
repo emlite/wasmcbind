@@ -1,6 +1,5 @@
 #include <webbind/XRPermissionStatus.h>
 
-
 DEFINE_EMLITE_TYPE(XRPermissionStatus, PermissionStatus);
 
 

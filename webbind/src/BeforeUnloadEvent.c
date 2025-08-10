@@ -1,6 +1,5 @@
 #include <webbind/BeforeUnloadEvent.h>
 
-
 DEFINE_EMLITE_TYPE(BeforeUnloadEvent, Event);
 
 

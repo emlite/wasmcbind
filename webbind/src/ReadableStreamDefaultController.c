@@ -1,6 +1,5 @@
 #include <webbind/ReadableStreamDefaultController.h>
 
-
 DEFINE_EMLITE_TYPE(ReadableStreamDefaultController, em_Val);
 
 

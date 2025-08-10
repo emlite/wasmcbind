@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct PreferenceObject PreferenceObject;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct PreferenceObject PreferenceObject;
 
 DECLARE_EMLITE_TYPE(PreferenceManager, em_Val);
 
@@ -18,3 +21,7 @@ PreferenceObject PreferenceManager_reducedMotion(const PreferenceManager *self);
 PreferenceObject PreferenceManager_reducedTransparency(const PreferenceManager *self);
 
 PreferenceObject PreferenceManager_reducedData(const PreferenceManager *self);
+
+#ifdef __cplusplus
+}
+#endif

@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Node Node;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct Node Node;
 
 DECLARE_EMLITE_TYPE(AbstractRange, em_Val);
 
@@ -18,3 +21,7 @@ Node AbstractRange_endContainer(const AbstractRange *self);
 unsigned long AbstractRange_endOffset(const AbstractRange *self);
 
 bool AbstractRange_collapsed(const AbstractRange *self);
+
+#ifdef __cplusplus
+}
+#endif

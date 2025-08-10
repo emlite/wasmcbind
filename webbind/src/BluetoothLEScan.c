@@ -1,6 +1,6 @@
 #include <webbind/BluetoothLEScan.h>
-#include <webbind/BluetoothLEScanFilter.h>
 
+#include <webbind/BluetoothLEScanFilter.h>
 
 DEFINE_EMLITE_TYPE(BluetoothLEScan, em_Val);
 

@@ -1,6 +1,6 @@
 #include <webbind/GPUShaderModule.h>
-#include <webbind/GPUCompilationInfo.h>
 
+#include <webbind/GPUCompilationInfo.h>
 
 DEFINE_EMLITE_TYPE(GPUShaderModule, em_Val);
 

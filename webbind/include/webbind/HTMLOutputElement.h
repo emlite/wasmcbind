@@ -2,14 +2,18 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct DOMTokenList DOMTokenList;
 typedef struct HTMLFormElement HTMLFormElement;
 typedef struct ValidityState ValidityState;
 typedef struct NodeList NodeList;
-
 
 DECLARE_EMLITE_TYPE(HTMLOutputElement, HTMLElement);
 
@@ -46,3 +50,7 @@ bool HTMLOutputElement_reportValidity(HTMLOutputElement* self );
 jb_Undefined HTMLOutputElement_setCustomValidity(HTMLOutputElement* self , jb_String * error);
 
 NodeList HTMLOutputElement_labels(const HTMLOutputElement *self);
+
+#ifdef __cplusplus
+}
+#endif

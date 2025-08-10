@@ -1,6 +1,5 @@
 #include <webbind/NavigationDestination.h>
 
-
 DEFINE_EMLITE_TYPE(NavigationDestination, em_Val);
 
 

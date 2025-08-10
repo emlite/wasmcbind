@@ -1,20 +1,9 @@
 #include <webbind/SVGPathElement.h>
+
 #include <webbind/SVGAnimatedNumber.h>
 #include <webbind/DOMPoint.h>
 #include <webbind/SVGPathSegment.h>
-
-
-DEFINE_EMLITE_TYPE(SVGPathDataSettings, em_Val);
-
-
-bool SVGPathDataSettings_normalize(const SVGPathDataSettings *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("normalize")));
-}
-
-
-void SVGPathDataSettings_set_normalize(SVGPathDataSettings* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("normalize"), em_Val_from(value));
-}
+#include <webbind/SVGPathDataSettings.h>
 
 DEFINE_EMLITE_TYPE(SVGPathElement, SVGGeometryElement);
 

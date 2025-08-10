@@ -1,6 +1,5 @@
 #include <webbind/PermissionStatus.h>
 
-
 DEFINE_EMLITE_TYPE(PermissionStatus, EventTarget);
 
 

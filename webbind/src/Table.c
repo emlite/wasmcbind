@@ -1,16 +1,17 @@
 #include <webbind/Table.h>
 
+#include <webbind/TableDescriptor.h>
 
 DEFINE_EMLITE_TYPE(Table, em_Val);
 
 
-Table Table_new0(jb_Any * descriptor) {
+Table Table_new0(TableDescriptor * descriptor) {
         em_Val vv = em_Val_new(em_Val_global("Table") , em_Val_from(descriptor));
         return Table_from_val(&vv);
       }
 
 
-Table Table_new1(jb_Any * descriptor, jb_Any * value) {
+Table Table_new1(TableDescriptor * descriptor, jb_Any * value) {
         em_Val vv = em_Val_new(em_Val_global("Table") , em_Val_from(descriptor), em_Val_from(value));
         return Table_from_val(&vv);
       }

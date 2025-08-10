@@ -1,11 +1,12 @@
 #include <webbind/NavigationCurrentEntryChangeEvent.h>
-#include <webbind/NavigationHistoryEntry.h>
 
+#include <webbind/NavigationCurrentEntryChangeEventInit.h>
+#include <webbind/NavigationHistoryEntry.h>
 
 DEFINE_EMLITE_TYPE(NavigationCurrentEntryChangeEvent, Event);
 
 
-NavigationCurrentEntryChangeEvent NavigationCurrentEntryChangeEvent_new(jb_String * type, jb_Any * eventInitDict) {
+NavigationCurrentEntryChangeEvent NavigationCurrentEntryChangeEvent_new(jb_String * type, NavigationCurrentEntryChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("NavigationCurrentEntryChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return NavigationCurrentEntryChangeEvent_from_val(&vv);
       }

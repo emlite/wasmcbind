@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(SVGStringList, em_Val);
 
@@ -24,3 +27,7 @@ jb_String SVGStringList_replaceItem(SVGStringList* self , jb_String * newItem, u
 jb_String SVGStringList_removeItem(SVGStringList* self , unsigned long index);
 
 jb_String SVGStringList_appendItem(SVGStringList* self , jb_String * newItem);
+
+#ifdef __cplusplus
+}
+#endif

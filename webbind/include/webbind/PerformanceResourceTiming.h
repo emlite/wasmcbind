@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "PerformanceEntry.h"
 #include "enums.h"
 
-typedef struct PerformanceServerTiming PerformanceServerTiming;
+#include "PerformanceEntry.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct PerformanceServerTiming PerformanceServerTiming;
 
 DECLARE_EMLITE_TYPE(PerformanceResourceTiming, PerformanceEntry);
 
@@ -61,3 +65,7 @@ jb_String PerformanceResourceTiming_contentEncoding(const PerformanceResourceTim
 jb_Object PerformanceResourceTiming_toJSON(PerformanceResourceTiming* self );
 
 jb_Array PerformanceResourceTiming_serverTiming(const PerformanceResourceTiming *self);
+
+#ifdef __cplusplus
+}
+#endif

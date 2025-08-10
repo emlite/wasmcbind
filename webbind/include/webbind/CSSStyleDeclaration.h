@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct CSSRule CSSRule;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct CSSRule CSSRule;
 
 DECLARE_EMLITE_TYPE(CSSStyleDeclaration, em_Val);
 
@@ -28,3 +31,7 @@ jb_Undefined CSSStyleDeclaration_setProperty1(CSSStyleDeclaration* self , jb_Str
 jb_String CSSStyleDeclaration_removeProperty(CSSStyleDeclaration* self , jb_String * property);
 
 CSSRule CSSStyleDeclaration_parentRule(const CSSStyleDeclaration *self);
+
+#ifdef __cplusplus
+}
+#endif

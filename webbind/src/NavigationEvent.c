@@ -1,6 +1,7 @@
 #include <webbind/NavigationEvent.h>
-#include <webbind/EventTarget.h>
 
+#include <webbind/NavigationEventInit.h>
+#include <webbind/EventTarget.h>
 
 DEFINE_EMLITE_TYPE(NavigationEvent, UIEvent);
 
@@ -11,7 +12,7 @@ NavigationEvent NavigationEvent_new0(jb_String * type) {
       }
 
 
-NavigationEvent NavigationEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+NavigationEvent NavigationEvent_new1(jb_String * type, NavigationEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("NavigationEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return NavigationEvent_from_val(&vv);
       }

@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct MediaKeyStatusMap MediaKeyStatusMap;
+#include "EventTarget.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct MediaKeyStatusMap MediaKeyStatusMap;
 
 DECLARE_EMLITE_TYPE(MediaKeySession, EventTarget);
 
@@ -35,3 +39,7 @@ jb_Promise MediaKeySession_update(MediaKeySession* self , jb_Any * response);
 jb_Promise MediaKeySession_close(MediaKeySession* self );
 
 jb_Promise MediaKeySession_remove(MediaKeySession* self );
+
+#ifdef __cplusplus
+}
+#endif

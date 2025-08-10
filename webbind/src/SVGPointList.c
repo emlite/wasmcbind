@@ -1,6 +1,6 @@
 #include <webbind/SVGPointList.h>
-#include <webbind/DOMPoint.h>
 
+#include <webbind/DOMPoint.h>
 
 DEFINE_EMLITE_TYPE(SVGPointList, em_Val);
 

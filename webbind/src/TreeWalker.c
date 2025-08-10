@@ -1,6 +1,6 @@
 #include <webbind/TreeWalker.h>
-#include <webbind/Node.h>
 
+#include <webbind/Node.h>
 
 DEFINE_EMLITE_TYPE(TreeWalker, em_Val);
 

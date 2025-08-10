@@ -1,6 +1,5 @@
 #include <webbind/AnimationWorkletGlobalScope.h>
 
-
 DEFINE_EMLITE_TYPE(AnimationWorkletGlobalScope, WorkletGlobalScope);
 
 

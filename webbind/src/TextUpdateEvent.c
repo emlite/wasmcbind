@@ -1,5 +1,6 @@
 #include <webbind/TextUpdateEvent.h>
 
+#include <webbind/TextUpdateEventInit.h>
 
 DEFINE_EMLITE_TYPE(TextUpdateEvent, Event);
 
@@ -10,7 +11,7 @@ TextUpdateEvent TextUpdateEvent_new0(jb_String * type) {
       }
 
 
-TextUpdateEvent TextUpdateEvent_new1(jb_String * type, jb_Any * options) {
+TextUpdateEvent TextUpdateEvent_new1(jb_String * type, TextUpdateEventInit * options) {
         em_Val vv = em_Val_new(em_Val_global("TextUpdateEvent") , em_Val_from(type), em_Val_from(options));
         return TextUpdateEvent_from_val(&vv);
       }

@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(GPUSupportedLimits, em_Val);
 
@@ -68,3 +71,7 @@ unsigned long GPUSupportedLimits_maxComputeWorkgroupSizeY(const GPUSupportedLimi
 unsigned long GPUSupportedLimits_maxComputeWorkgroupSizeZ(const GPUSupportedLimits *self);
 
 unsigned long GPUSupportedLimits_maxComputeWorkgroupsPerDimension(const GPUSupportedLimits *self);
+
+#ifdef __cplusplus
+}
+#endif

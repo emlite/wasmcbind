@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct CSSUnparsedValue CSSUnparsedValue;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct CSSUnparsedValue CSSUnparsedValue;
 
 DECLARE_EMLITE_TYPE(CSSVariableReferenceValue, em_Val);
 
@@ -18,3 +21,7 @@ jb_String CSSVariableReferenceValue_variable(const CSSVariableReferenceValue *se
 void CSSVariableReferenceValue_set_variable(CSSVariableReferenceValue* self, jb_String * value);
 
 CSSUnparsedValue CSSVariableReferenceValue_fallback(const CSSVariableReferenceValue *self);
+
+#ifdef __cplusplus
+}
+#endif

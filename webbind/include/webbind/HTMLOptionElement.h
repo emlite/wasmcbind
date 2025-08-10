@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct HTMLFormElement HTMLFormElement;
+#include "HTMLElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct HTMLFormElement HTMLFormElement;
 
 DECLARE_EMLITE_TYPE(HTMLOptionElement, HTMLElement);
 
@@ -39,3 +43,7 @@ jb_String HTMLOptionElement_text(const HTMLOptionElement *self);
 void HTMLOptionElement_set_text(HTMLOptionElement* self, jb_String * value);
 
 long HTMLOptionElement_index(const HTMLOptionElement *self);
+
+#ifdef __cplusplus
+}
+#endif

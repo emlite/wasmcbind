@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSParserRule.h"
 #include "enums.h"
 
-typedef struct CSSParserValue CSSParserValue;
+#include "CSSParserRule.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct CSSParserValue CSSParserValue;
 
 DECLARE_EMLITE_TYPE(CSSParserAtRule, CSSParserRule);
 
@@ -19,3 +23,7 @@ jb_String CSSParserAtRule_name(const CSSParserAtRule *self);
 jb_Array CSSParserAtRule_prelude(const CSSParserAtRule *self);
 
 jb_Array CSSParserAtRule_body(const CSSParserAtRule *self);
+
+#ifdef __cplusplus
+}
+#endif

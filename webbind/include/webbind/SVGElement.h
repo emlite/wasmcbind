@@ -2,27 +2,21 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Element.h"
 #include "enums.h"
+
+#include "Element.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedString SVGAnimatedString;
 typedef struct SVGSVGElement SVGSVGElement;
 typedef struct SVGUseElement SVGUseElement;
 typedef struct DOMStringMap DOMStringMap;
 typedef struct FocusOptions FocusOptions;
-typedef struct CSSStyleDeclaration CSSStyleDeclaration;
 typedef struct CSSStyleProperties CSSStyleProperties;
 
-
-DECLARE_EMLITE_TYPE(FocusOptions, em_Val);
-
-bool FocusOptions_preventScroll(const FocusOptions *self);
-
-void FocusOptions_set_preventScroll(FocusOptions* self, bool value);
-
-bool FocusOptions_focusVisible(const FocusOptions *self);
-
-void FocusOptions_set_focusVisible(FocusOptions* self, bool value);
 DECLARE_EMLITE_TYPE(SVGElement, Element);
 
 SVGAnimatedString SVGElement_className(const SVGElement *self);
@@ -60,3 +54,7 @@ jb_Undefined SVGElement_focus1(SVGElement* self , FocusOptions * options);
 jb_Undefined SVGElement_blur(SVGElement* self );
 
 CSSStyleProperties SVGElement_style(const SVGElement *self);
+
+#ifdef __cplusplus
+}
+#endif

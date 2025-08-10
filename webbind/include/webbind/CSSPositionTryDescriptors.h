@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSStyleDeclaration.h"
 #include "enums.h"
 
+#include "CSSStyleDeclaration.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(CSSPositionTryDescriptors, CSSStyleDeclaration);
 
@@ -287,3 +291,7 @@ void CSSPositionTryDescriptors_set_positionArea(CSSPositionTryDescriptors* self,
 jb_String CSSPositionTryDescriptors_position_area(const CSSPositionTryDescriptors *self);
 
 void CSSPositionTryDescriptors_set_position_area(CSSPositionTryDescriptors* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

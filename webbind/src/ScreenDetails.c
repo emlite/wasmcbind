@@ -1,6 +1,6 @@
 #include <webbind/ScreenDetails.h>
-#include <webbind/ScreenDetailed.h>
 
+#include <webbind/ScreenDetailed.h>
 
 DEFINE_EMLITE_TYPE(ScreenDetails, EventTarget);
 

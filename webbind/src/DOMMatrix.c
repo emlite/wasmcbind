@@ -1,6 +1,6 @@
 #include <webbind/DOMMatrix.h>
-#include <webbind/DOMPointReadOnly.h>
 
+#include <webbind/DOMMatrixInit.h>
 
 DEFINE_EMLITE_TYPE(DOMMatrix, DOMMatrixReadOnly);
 

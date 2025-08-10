@@ -2,13 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct AudioParam AudioParam;
 typedef struct BaseAudioContext BaseAudioContext;
-typedef struct AudioContext AudioContext;
-
 
 DECLARE_EMLITE_TYPE(AudioNode, EventTarget);
 
@@ -35,3 +38,7 @@ void AudioNode_set_channelCountMode(AudioNode* self, ChannelCountMode * value);
 ChannelInterpretation AudioNode_channelInterpretation(const AudioNode *self);
 
 void AudioNode_set_channelInterpretation(AudioNode* self, ChannelInterpretation * value);
+
+#ifdef __cplusplus
+}
+#endif

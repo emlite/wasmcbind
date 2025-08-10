@@ -1,6 +1,7 @@
 #include <webbind/Event.h>
-#include <webbind/EventTarget.h>
 
+#include <webbind/EventInit.h>
+#include <webbind/EventTarget.h>
 
 DEFINE_EMLITE_TYPE(Event, em_Val);
 
@@ -11,7 +12,7 @@ Event Event_new0(jb_String * type) {
       }
 
 
-Event Event_new1(jb_String * type, jb_Any * eventInitDict) {
+Event Event_new1(jb_String * type, EventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("Event") , em_Val_from(type), em_Val_from(eventInitDict));
         return Event_from_val(&vv);
       }

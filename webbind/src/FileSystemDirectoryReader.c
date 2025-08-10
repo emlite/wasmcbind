@@ -1,6 +1,5 @@
 #include <webbind/FileSystemDirectoryReader.h>
 
-
 DEFINE_EMLITE_TYPE(FileSystemDirectoryReader, em_Val);
 
 

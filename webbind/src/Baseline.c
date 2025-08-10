@@ -1,6 +1,5 @@
 #include <webbind/Baseline.h>
 
-
 DEFINE_EMLITE_TYPE(Baseline, em_Val);
 
 

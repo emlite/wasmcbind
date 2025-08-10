@@ -1,6 +1,6 @@
 #include <webbind/XRHand.h>
-#include <webbind/XRJointSpace.h>
 
+#include <webbind/XRJointSpace.h>
 
 DEFINE_EMLITE_TYPE(XRHand, em_Val);
 

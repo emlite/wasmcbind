@@ -1,7 +1,7 @@
 #include <webbind/XRPlane.h>
+
 #include <webbind/XRSpace.h>
 #include <webbind/DOMPointReadOnly.h>
-
 
 DEFINE_EMLITE_TYPE(XRPlane, em_Val);
 

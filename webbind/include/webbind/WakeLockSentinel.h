@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(WakeLockSentinel, EventTarget);
 
@@ -17,3 +21,7 @@ jb_Promise WakeLockSentinel_release(WakeLockSentinel* self );
 jb_Any WakeLockSentinel_onrelease(const WakeLockSentinel *self);
 
 void WakeLockSentinel_set_onrelease(WakeLockSentinel* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

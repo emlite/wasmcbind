@@ -1,6 +1,7 @@
 #include <webbind/PushSubscriptionChangeEvent.h>
-#include <webbind/PushSubscription.h>
 
+#include <webbind/PushSubscriptionChangeEventInit.h>
+#include <webbind/PushSubscription.h>
 
 DEFINE_EMLITE_TYPE(PushSubscriptionChangeEvent, ExtendableEvent);
 
@@ -11,7 +12,7 @@ PushSubscriptionChangeEvent PushSubscriptionChangeEvent_new0(jb_String * type) {
       }
 
 
-PushSubscriptionChangeEvent PushSubscriptionChangeEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+PushSubscriptionChangeEvent PushSubscriptionChangeEvent_new1(jb_String * type, PushSubscriptionChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("PushSubscriptionChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return PushSubscriptionChangeEvent_from_val(&vv);
       }

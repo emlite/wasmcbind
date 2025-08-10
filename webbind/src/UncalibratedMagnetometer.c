@@ -1,5 +1,6 @@
 #include <webbind/UncalibratedMagnetometer.h>
 
+#include <webbind/MagnetometerSensorOptions.h>
 
 DEFINE_EMLITE_TYPE(UncalibratedMagnetometer, Sensor);
 
@@ -10,7 +11,7 @@ UncalibratedMagnetometer UncalibratedMagnetometer_new0() {
       }
 
 
-UncalibratedMagnetometer UncalibratedMagnetometer_new1(jb_Any * sensorOptions) {
+UncalibratedMagnetometer UncalibratedMagnetometer_new1(MagnetometerSensorOptions * sensorOptions) {
         em_Val vv = em_Val_new(em_Val_global("UncalibratedMagnetometer") , em_Val_from(sensorOptions));
         return UncalibratedMagnetometer_from_val(&vv);
       }

@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
 
-typedef struct SVGStringList SVGStringList;
+#include "SVGElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct SVGStringList SVGStringList;
 
 DECLARE_EMLITE_TYPE(SVGAnimationElement, SVGElement);
 
@@ -41,3 +45,7 @@ jb_Undefined SVGAnimationElement_endElementAt(SVGAnimationElement* self , float 
 SVGStringList SVGAnimationElement_requiredExtensions(const SVGAnimationElement *self);
 
 SVGStringList SVGAnimationElement_systemLanguage(const SVGAnimationElement *self);
+
+#ifdef __cplusplus
+}
+#endif

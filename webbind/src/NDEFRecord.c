@@ -1,10 +1,11 @@
 #include <webbind/NDEFRecord.h>
 
+#include <webbind/NDEFRecordInit.h>
 
 DEFINE_EMLITE_TYPE(NDEFRecord, em_Val);
 
 
-NDEFRecord NDEFRecord_new(jb_Any * recordInit) {
+NDEFRecord NDEFRecord_new(NDEFRecordInit * recordInit) {
         em_Val vv = em_Val_new(em_Val_global("NDEFRecord") , em_Val_from(recordInit));
         return NDEFRecord_from_val(&vv);
       }

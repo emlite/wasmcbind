@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct DOMTokenList DOMTokenList;
 typedef struct CSSStyleSheet CSSStyleSheet;
-
 
 DECLARE_EMLITE_TYPE(HTMLStyleElement, HTMLElement);
 
@@ -28,3 +32,7 @@ jb_String HTMLStyleElement_type(const HTMLStyleElement *self);
 void HTMLStyleElement_set_type(HTMLStyleElement* self, jb_String * value);
 
 CSSStyleSheet HTMLStyleElement_sheet(const HTMLStyleElement *self);
+
+#ifdef __cplusplus
+}
+#endif

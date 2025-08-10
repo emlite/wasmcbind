@@ -4,9 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Blob Blob;
-typedef struct ReadableStream ReadableStream;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct BlobPropertyBag BlobPropertyBag;
+typedef struct ReadableStream ReadableStream;
 
 DECLARE_EMLITE_TYPE(Blob, em_Val);
 
@@ -14,7 +17,7 @@ Blob Blob_new0();
 
 Blob Blob_new1(jb_Array * blobParts);
 
-Blob Blob_new2(jb_Array * blobParts, jb_Any * options);
+Blob Blob_new2(jb_Array * blobParts, BlobPropertyBag * options);
 
 long long Blob_size(const Blob *self);
 
@@ -35,3 +38,7 @@ jb_Promise Blob_text(Blob* self );
 jb_Promise Blob_arrayBuffer(Blob* self );
 
 jb_Promise Blob_bytes(Blob* self );
+
+#ifdef __cplusplus
+}
+#endif

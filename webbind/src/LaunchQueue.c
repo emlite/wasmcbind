@@ -1,6 +1,5 @@
 #include <webbind/LaunchQueue.h>
 
-
 DEFINE_EMLITE_TYPE(LaunchQueue, em_Val);
 
 

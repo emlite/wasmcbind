@@ -4,5 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(EXT_texture_norm16, em_Val);
+
+#ifdef __cplusplus
+}
+#endif

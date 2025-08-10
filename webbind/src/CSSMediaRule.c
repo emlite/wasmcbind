@@ -1,6 +1,6 @@
 #include <webbind/CSSMediaRule.h>
-#include <webbind/MediaList.h>
 
+#include <webbind/MediaList.h>
 
 DEFINE_EMLITE_TYPE(CSSMediaRule, CSSConditionRule);
 

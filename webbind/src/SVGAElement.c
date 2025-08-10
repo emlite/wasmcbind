@@ -1,7 +1,7 @@
 #include <webbind/SVGAElement.h>
+
 #include <webbind/SVGAnimatedString.h>
 #include <webbind/DOMTokenList.h>
-
 
 DEFINE_EMLITE_TYPE(SVGAElement, SVGGraphicsElement);
 

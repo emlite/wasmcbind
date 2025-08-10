@@ -1,71 +1,9 @@
 #include <webbind/XMLHttpRequest.h>
+
 #include <webbind/XMLHttpRequestUpload.h>
 #include <webbind/Document.h>
-
-
-DEFINE_EMLITE_TYPE(AttributionReportingRequestOptions, em_Val);
-
-
-bool AttributionReportingRequestOptions_eventSourceEligible(const AttributionReportingRequestOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("eventSourceEligible")));
-}
-
-
-void AttributionReportingRequestOptions_set_eventSourceEligible(AttributionReportingRequestOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("eventSourceEligible"), em_Val_from(value));
-}
-
-
-bool AttributionReportingRequestOptions_triggerEligible(const AttributionReportingRequestOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("triggerEligible")));
-}
-
-
-void AttributionReportingRequestOptions_set_triggerEligible(AttributionReportingRequestOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("triggerEligible"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(PrivateToken, em_Val);
-
-
-TokenVersion PrivateToken_version(const PrivateToken *self) {
-    return em_Val_as(TokenVersion, em_Val_get(em_Val_as_val(self->inner), em_Val_from("version")));
-}
-
-
-void PrivateToken_set_version(PrivateToken* self, TokenVersion * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("version"), em_Val_from(value));
-}
-
-
-OperationType PrivateToken_operation(const PrivateToken *self) {
-    return em_Val_as(OperationType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("operation")));
-}
-
-
-void PrivateToken_set_operation(PrivateToken* self, OperationType * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("operation"), em_Val_from(value));
-}
-
-
-RefreshPolicy PrivateToken_refreshPolicy(const PrivateToken *self) {
-    return em_Val_as(RefreshPolicy, em_Val_get(em_Val_as_val(self->inner), em_Val_from("refreshPolicy")));
-}
-
-
-void PrivateToken_set_refreshPolicy(PrivateToken* self, RefreshPolicy * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("refreshPolicy"), em_Val_from(value));
-}
-
-
-jb_Array PrivateToken_issuers(const PrivateToken *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("issuers")));
-}
-
-
-void PrivateToken_set_issuers(PrivateToken* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("issuers"), em_Val_from(value));
-}
+#include <webbind/AttributionReportingRequestOptions.h>
+#include <webbind/PrivateToken.h>
 
 DEFINE_EMLITE_TYPE(XMLHttpRequest, XMLHttpRequestEventTarget);
 

@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct DOMRect DOMRect;
+#include "EventTarget.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct DOMRect DOMRect;
 
 DECLARE_EMLITE_TYPE(WindowControlsOverlay, EventTarget);
 
@@ -17,3 +21,7 @@ DOMRect WindowControlsOverlay_getTitlebarAreaRect(WindowControlsOverlay* self );
 jb_Any WindowControlsOverlay_ongeometrychange(const WindowControlsOverlay *self);
 
 void WindowControlsOverlay_set_ongeometrychange(WindowControlsOverlay* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

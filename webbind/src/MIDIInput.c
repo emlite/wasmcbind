@@ -1,6 +1,5 @@
 #include <webbind/MIDIInput.h>
 
-
 DEFINE_EMLITE_TYPE(MIDIInput, MIDIPort);
 
 

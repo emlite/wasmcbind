@@ -1,7 +1,7 @@
 #include <webbind/SVGMaskElement.h>
+
 #include <webbind/SVGAnimatedEnumeration.h>
 #include <webbind/SVGAnimatedLength.h>
-
 
 DEFINE_EMLITE_TYPE(SVGMaskElement, SVGElement);
 

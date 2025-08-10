@@ -1,6 +1,7 @@
 #include <webbind/ExtendableMessageEvent.h>
-#include <webbind/MessagePort.h>
 
+#include <webbind/ExtendableMessageEventInit.h>
+#include <webbind/MessagePort.h>
 
 DEFINE_EMLITE_TYPE(ExtendableMessageEvent, ExtendableEvent);
 
@@ -11,7 +12,7 @@ ExtendableMessageEvent ExtendableMessageEvent_new0(jb_String * type) {
       }
 
 
-ExtendableMessageEvent ExtendableMessageEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+ExtendableMessageEvent ExtendableMessageEvent_new1(jb_String * type, ExtendableMessageEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("ExtendableMessageEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return ExtendableMessageEvent_from_val(&vv);
       }

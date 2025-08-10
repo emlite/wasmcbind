@@ -1,6 +1,7 @@
 #include <webbind/TouchEvent.h>
-#include <webbind/TouchList.h>
 
+#include <webbind/TouchEventInit.h>
+#include <webbind/TouchList.h>
 
 DEFINE_EMLITE_TYPE(TouchEvent, UIEvent);
 
@@ -11,7 +12,7 @@ TouchEvent TouchEvent_new0(jb_String * type) {
       }
 
 
-TouchEvent TouchEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+TouchEvent TouchEvent_new1(jb_String * type, TouchEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("TouchEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return TouchEvent_from_val(&vv);
       }

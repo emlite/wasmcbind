@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(GamepadPose, em_Val);
 
@@ -22,3 +25,7 @@ jb_Float32Array GamepadPose_orientation(const GamepadPose *self);
 jb_Float32Array GamepadPose_angularVelocity(const GamepadPose *self);
 
 jb_Float32Array GamepadPose_angularAcceleration(const GamepadPose *self);
+
+#ifdef __cplusplus
+}
+#endif

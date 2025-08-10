@@ -1,6 +1,6 @@
 #include <webbind/XRLightEstimate.h>
-#include <webbind/DOMPointReadOnly.h>
 
+#include <webbind/DOMPointReadOnly.h>
 
 DEFINE_EMLITE_TYPE(XRLightEstimate, em_Val);
 

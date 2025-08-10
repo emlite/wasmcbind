@@ -1,9 +1,10 @@
 #include <webbind/XRWebGLLayer.h>
+
+#include <webbind/XRSession.h>
+#include <webbind/XRWebGLLayerInit.h>
 #include <webbind/WebGLFramebuffer.h>
 #include <webbind/XRViewport.h>
 #include <webbind/XRView.h>
-#include <webbind/XRSession.h>
-
 
 DEFINE_EMLITE_TYPE(XRWebGLLayer, XRLayer);
 
@@ -14,7 +15,7 @@ XRWebGLLayer XRWebGLLayer_new0(XRSession * session, jb_Any * context) {
       }
 
 
-XRWebGLLayer XRWebGLLayer_new1(XRSession * session, jb_Any * context, jb_Any * layerInit) {
+XRWebGLLayer XRWebGLLayer_new1(XRSession * session, jb_Any * context, XRWebGLLayerInit * layerInit) {
         em_Val vv = em_Val_new(em_Val_global("XRWebGLLayer") , em_Val_from(session), em_Val_from(context), em_Val_from(layerInit));
         return XRWebGLLayer_from_val(&vv);
       }

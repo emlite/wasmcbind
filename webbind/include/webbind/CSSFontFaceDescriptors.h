@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSStyleDeclaration.h"
 #include "enums.h"
 
+#include "CSSStyleDeclaration.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(CSSFontFaceDescriptors, CSSStyleDeclaration);
 
@@ -171,3 +175,7 @@ void CSSFontFaceDescriptors_set_subscriptSizeOverride(CSSFontFaceDescriptors* se
 jb_String CSSFontFaceDescriptors_subscript_size_override(const CSSFontFaceDescriptors *self);
 
 void CSSFontFaceDescriptors_set_subscript_size_override(CSSFontFaceDescriptors* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

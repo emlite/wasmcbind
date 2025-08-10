@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(History, em_Val);
 
@@ -30,3 +33,7 @@ jb_Undefined History_pushState1(History* self , jb_Any * data, jb_String * unuse
 jb_Undefined History_replaceState0(History* self , jb_Any * data, jb_String * unused);
 
 jb_Undefined History_replaceState1(History* self , jb_Any * data, jb_String * unused, jb_String * url);
+
+#ifdef __cplusplus
+}
+#endif

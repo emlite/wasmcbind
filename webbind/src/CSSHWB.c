@@ -1,6 +1,6 @@
 #include <webbind/CSSHWB.h>
-#include <webbind/CSSNumericValue.h>
 
+#include <webbind/CSSNumericValue.h>
 
 DEFINE_EMLITE_TYPE(CSSHWB, CSSColorValue);
 

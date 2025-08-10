@@ -1,6 +1,5 @@
 #include <webbind/SharedWorkerGlobalScope.h>
 
-
 DEFINE_EMLITE_TYPE(SharedWorkerGlobalScope, WorkerGlobalScope);
 
 

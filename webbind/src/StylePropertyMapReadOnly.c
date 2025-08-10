@@ -1,6 +1,6 @@
 #include <webbind/StylePropertyMapReadOnly.h>
-#include <webbind/CSSStyleValue.h>
 
+#include <webbind/CSSStyleValue.h>
 
 DEFINE_EMLITE_TYPE(StylePropertyMapReadOnly, em_Val);
 

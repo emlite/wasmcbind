@@ -1,6 +1,6 @@
 #include <webbind/DOMRect.h>
-#include <webbind/DOMRectReadOnly.h>
 
+#include <webbind/DOMRectInit.h>
 
 DEFINE_EMLITE_TYPE(DOMRect, DOMRectReadOnly);
 

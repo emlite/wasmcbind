@@ -1,6 +1,6 @@
 #include <webbind/OVR_multiview2.h>
-#include <webbind/WebGLTexture.h>
 
+#include <webbind/WebGLTexture.h>
 
 DEFINE_EMLITE_TYPE(OVR_multiview2, em_Val);
 

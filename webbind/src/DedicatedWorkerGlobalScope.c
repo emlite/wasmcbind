@@ -1,6 +1,6 @@
 #include <webbind/DedicatedWorkerGlobalScope.h>
-#include <webbind/MessagePort.h>
 
+#include <webbind/StructuredSerializeOptions.h>
 
 DEFINE_EMLITE_TYPE(DedicatedWorkerGlobalScope, WorkerGlobalScope);
 

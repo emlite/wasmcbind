@@ -1,6 +1,6 @@
 #include <webbind/WakeLock.h>
-#include <webbind/WakeLockSentinel.h>
 
+#include <webbind/WakeLockSentinel.h>
 
 DEFINE_EMLITE_TYPE(WakeLock, em_Val);
 

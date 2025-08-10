@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(VisualViewport, EventTarget);
 
@@ -33,3 +37,7 @@ void VisualViewport_set_onscroll(VisualViewport* self, jb_Any * value);
 jb_Any VisualViewport_onscrollend(const VisualViewport *self);
 
 void VisualViewport_set_onscrollend(VisualViewport* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,6 @@
 #include <webbind/BreakToken.h>
-#include <webbind/ChildBreakToken.h>
 
+#include <webbind/ChildBreakToken.h>
 
 DEFINE_EMLITE_TYPE(BreakToken, em_Val);
 

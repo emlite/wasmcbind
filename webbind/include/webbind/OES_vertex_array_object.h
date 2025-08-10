@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct WebGLVertexArrayObjectOES WebGLVertexArrayObjectOES;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct WebGLVertexArrayObjectOES WebGLVertexArrayObjectOES;
 
 DECLARE_EMLITE_TYPE(OES_vertex_array_object, em_Val);
 
@@ -16,3 +19,7 @@ jb_Undefined OES_vertex_array_object_deleteVertexArrayOES(OES_vertex_array_objec
 jb_Any OES_vertex_array_object_isVertexArrayOES(OES_vertex_array_object* self , WebGLVertexArrayObjectOES * arrayObject);
 
 jb_Undefined OES_vertex_array_object_bindVertexArrayOES(OES_vertex_array_object* self , WebGLVertexArrayObjectOES * arrayObject);
+
+#ifdef __cplusplus
+}
+#endif

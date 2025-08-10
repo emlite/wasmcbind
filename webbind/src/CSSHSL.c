@@ -1,6 +1,5 @@
 #include <webbind/CSSHSL.h>
 
-
 DEFINE_EMLITE_TYPE(CSSHSL, CSSColorValue);
 
 

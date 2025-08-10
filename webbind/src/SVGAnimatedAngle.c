@@ -1,6 +1,6 @@
 #include <webbind/SVGAnimatedAngle.h>
-#include <webbind/SVGAngle.h>
 
+#include <webbind/SVGAngle.h>
 
 DEFINE_EMLITE_TYPE(SVGAnimatedAngle, em_Val);
 

@@ -1,6 +1,5 @@
 #include <webbind/HTMLMarqueeElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLMarqueeElement, HTMLElement);
 
 

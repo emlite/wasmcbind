@@ -1,6 +1,5 @@
 #include <webbind/CSSScale.h>
 
-
 DEFINE_EMLITE_TYPE(CSSScale, CSSTransformComponent);
 
 

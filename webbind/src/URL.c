@@ -1,6 +1,6 @@
 #include <webbind/URL.h>
-#include <webbind/URLSearchParams.h>
 
+#include <webbind/URLSearchParams.h>
 
 DEFINE_EMLITE_TYPE(URL, em_Val);
 

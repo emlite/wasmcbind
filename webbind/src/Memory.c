@@ -1,10 +1,11 @@
 #include <webbind/Memory.h>
 
+#include <webbind/MemoryDescriptor.h>
 
 DEFINE_EMLITE_TYPE(Memory, em_Val);
 
 
-Memory Memory_new(jb_Any * descriptor) {
+Memory Memory_new(MemoryDescriptor * descriptor) {
         em_Val vv = em_Val_new(em_Val_global("Memory") , em_Val_from(descriptor));
         return Memory_from_val(&vv);
       }

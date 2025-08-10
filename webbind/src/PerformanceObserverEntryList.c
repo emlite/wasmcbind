@@ -1,6 +1,5 @@
 #include <webbind/PerformanceObserverEntryList.h>
 
-
 DEFINE_EMLITE_TYPE(PerformanceObserverEntryList, em_Val);
 
 

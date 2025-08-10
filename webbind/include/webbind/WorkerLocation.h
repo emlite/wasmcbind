@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(WorkerLocation, em_Val);
 
@@ -24,3 +27,7 @@ jb_String WorkerLocation_pathname(const WorkerLocation *self);
 jb_String WorkerLocation_search(const WorkerLocation *self);
 
 jb_String WorkerLocation_hash(const WorkerLocation *self);
+
+#ifdef __cplusplus
+}
+#endif

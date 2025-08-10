@@ -4,9 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct URL URL;
-typedef struct URLSearchParams URLSearchParams;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct URLSearchParams URLSearchParams;
 
 DECLARE_EMLITE_TYPE(URL, em_Val);
 
@@ -71,3 +73,7 @@ jb_String URL_toJSON(URL* self );
 jb_String URL_createObjectURL(URL* self , jb_Any * obj);
 
 jb_Undefined URL_revokeObjectURL(URL* self , jb_String * url);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,9 +1,8 @@
 #include <webbind/MathMLElement.h>
-#include <webbind/CSSStyleDeclaration.h>
-#include <webbind/DOMStringMap.h>
-#include <webbind/SVGElement.h>
-#include <webbind/CSSStyleProperties.h>
 
+#include <webbind/CSSStyleProperties.h>
+#include <webbind/DOMStringMap.h>
+#include <webbind/FocusOptions.h>
 
 DEFINE_EMLITE_TYPE(MathMLElement, Element);
 

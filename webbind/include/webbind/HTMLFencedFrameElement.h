@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct FencedFrameConfig FencedFrameConfig;
 typedef struct DOMTokenList DOMTokenList;
-
 
 DECLARE_EMLITE_TYPE(HTMLFencedFrameElement, HTMLElement);
 
@@ -30,3 +34,7 @@ DOMTokenList HTMLFencedFrameElement_sandbox(const HTMLFencedFrameElement *self);
 jb_String HTMLFencedFrameElement_allow(const HTMLFencedFrameElement *self);
 
 void HTMLFencedFrameElement_set_allow(HTMLFencedFrameElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

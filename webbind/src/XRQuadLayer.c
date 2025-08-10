@@ -1,7 +1,7 @@
 #include <webbind/XRQuadLayer.h>
+
 #include <webbind/XRSpace.h>
 #include <webbind/XRRigidTransform.h>
-
 
 DEFINE_EMLITE_TYPE(XRQuadLayer, XRCompositionLayer);
 

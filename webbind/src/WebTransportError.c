@@ -1,5 +1,6 @@
 #include <webbind/WebTransportError.h>
 
+#include <webbind/WebTransportErrorOptions.h>
 
 DEFINE_EMLITE_TYPE(WebTransportError, DOMException);
 
@@ -16,7 +17,7 @@ WebTransportError WebTransportError_new1(jb_String * message) {
       }
 
 
-WebTransportError WebTransportError_new2(jb_String * message, jb_Any * options) {
+WebTransportError WebTransportError_new2(jb_String * message, WebTransportErrorOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("WebTransportError") , em_Val_from(message), em_Val_from(options));
         return WebTransportError_from_val(&vv);
       }

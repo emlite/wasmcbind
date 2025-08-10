@@ -1,6 +1,5 @@
 #include <webbind/HTMLTableColElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLTableColElement, HTMLElement);
 
 

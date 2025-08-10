@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "PerformanceEntry.h"
 #include "enums.h"
 
-typedef struct TaskAttributionTiming TaskAttributionTiming;
+#include "PerformanceEntry.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct TaskAttributionTiming TaskAttributionTiming;
 
 DECLARE_EMLITE_TYPE(PerformanceLongTaskTiming, PerformanceEntry);
 
@@ -21,3 +25,7 @@ jb_String PerformanceLongTaskTiming_entryType(const PerformanceLongTaskTiming *s
 jb_Array PerformanceLongTaskTiming_attribution(const PerformanceLongTaskTiming *self);
 
 jb_Object PerformanceLongTaskTiming_toJSON(PerformanceLongTaskTiming* self );
+
+#ifdef __cplusplus
+}
+#endif

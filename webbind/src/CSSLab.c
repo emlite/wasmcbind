@@ -1,6 +1,5 @@
 #include <webbind/CSSLab.h>
 
-
 DEFINE_EMLITE_TYPE(CSSLab, CSSColorValue);
 
 

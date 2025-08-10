@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct NodeList NodeList;
+#include "HTMLElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct NodeList NodeList;
 
 DECLARE_EMLITE_TYPE(HTMLProgressElement, HTMLElement);
 
@@ -23,3 +27,7 @@ void HTMLProgressElement_set_max(HTMLProgressElement* self, double value);
 double HTMLProgressElement_position(const HTMLProgressElement *self);
 
 NodeList HTMLProgressElement_labels(const HTMLProgressElement *self);
+
+#ifdef __cplusplus
+}
+#endif

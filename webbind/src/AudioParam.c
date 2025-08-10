@@ -1,6 +1,5 @@
 #include <webbind/AudioParam.h>
 
-
 DEFINE_EMLITE_TYPE(AudioParam, em_Val);
 
 

@@ -1,6 +1,5 @@
 #include <webbind/HTMLParagraphElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLParagraphElement, HTMLElement);
 
 

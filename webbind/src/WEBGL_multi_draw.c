@@ -1,6 +1,5 @@
 #include <webbind/WEBGL_multi_draw.h>
 
-
 DEFINE_EMLITE_TYPE(WEBGL_multi_draw, em_Val);
 
 

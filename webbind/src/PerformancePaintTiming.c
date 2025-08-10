@@ -1,6 +1,5 @@
 #include <webbind/PerformancePaintTiming.h>
 
-
 DEFINE_EMLITE_TYPE(PerformancePaintTiming, PerformanceEntry);
 
 

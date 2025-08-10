@@ -1,6 +1,6 @@
 #include <webbind/CSSNumericArray.h>
-#include <webbind/CSSNumericValue.h>
 
+#include <webbind/CSSNumericValue.h>
 
 DEFINE_EMLITE_TYPE(CSSNumericArray, em_Val);
 

@@ -1,6 +1,5 @@
 #include <webbind/WEBGL_provoking_vertex.h>
 
-
 DEFINE_EMLITE_TYPE(WEBGL_provoking_vertex, em_Val);
 
 

@@ -1,6 +1,5 @@
 #include <webbind/NavigatorManagedData.h>
 
-
 DEFINE_EMLITE_TYPE(NavigatorManagedData, EventTarget);
 
 

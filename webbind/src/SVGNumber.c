@@ -1,6 +1,5 @@
 #include <webbind/SVGNumber.h>
 
-
 DEFINE_EMLITE_TYPE(SVGNumber, em_Val);
 
 

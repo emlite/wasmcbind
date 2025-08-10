@@ -1,5 +1,6 @@
 #include <webbind/ErrorEvent.h>
 
+#include <webbind/ErrorEventInit.h>
 
 DEFINE_EMLITE_TYPE(ErrorEvent, Event);
 
@@ -10,7 +11,7 @@ ErrorEvent ErrorEvent_new0(jb_String * type) {
       }
 
 
-ErrorEvent ErrorEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+ErrorEvent ErrorEvent_new1(jb_String * type, ErrorEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("ErrorEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return ErrorEvent_from_val(&vv);
       }

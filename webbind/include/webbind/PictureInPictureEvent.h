@@ -2,14 +2,23 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Event.h"
 #include "enums.h"
 
-typedef struct PictureInPictureWindow PictureInPictureWindow;
+#include "Event.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct PictureInPictureEventInit PictureInPictureEventInit;
+typedef struct PictureInPictureWindow PictureInPictureWindow;
 
 DECLARE_EMLITE_TYPE(PictureInPictureEvent, Event);
 
-PictureInPictureEvent PictureInPictureEvent_new(jb_String * type, jb_Any * eventInitDict);
+PictureInPictureEvent PictureInPictureEvent_new(jb_String * type, PictureInPictureEventInit * eventInitDict);
 
 PictureInPictureWindow PictureInPictureEvent_pictureInPictureWindow(const PictureInPictureEvent *self);
+
+#ifdef __cplusplus
+}
+#endif

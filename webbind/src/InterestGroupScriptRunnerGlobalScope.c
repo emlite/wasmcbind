@@ -1,7 +1,7 @@
 #include <webbind/InterestGroupScriptRunnerGlobalScope.h>
+
 #include <webbind/PrivateAggregation.h>
 #include <webbind/ProtectedAudienceUtilities.h>
-
 
 DEFINE_EMLITE_TYPE(InterestGroupScriptRunnerGlobalScope, em_Val);
 

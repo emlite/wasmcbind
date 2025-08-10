@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct DOMPoint DOMPoint;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct DOMPoint DOMPoint;
 
 DECLARE_EMLITE_TYPE(SVGPointList, em_Val);
 
@@ -26,3 +29,7 @@ DOMPoint SVGPointList_replaceItem(SVGPointList* self , DOMPoint * newItem, unsig
 DOMPoint SVGPointList_removeItem(SVGPointList* self , unsigned long index);
 
 DOMPoint SVGPointList_appendItem(SVGPointList* self , DOMPoint * newItem);
+
+#ifdef __cplusplus
+}
+#endif

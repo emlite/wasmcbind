@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(Headers, em_Val);
 
@@ -22,3 +25,7 @@ jb_Array Headers_getSetCookie(Headers* self );
 bool Headers_has(Headers* self , jb_String * name);
 
 jb_Undefined Headers_set(Headers* self , jb_String * name, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

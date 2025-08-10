@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSStyleDeclaration.h"
 #include "enums.h"
 
+#include "CSSStyleDeclaration.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(CSSPageDescriptors, CSSStyleDeclaration);
 
@@ -63,3 +67,7 @@ void CSSPageDescriptors_set_marks(CSSPageDescriptors* self, jb_String * value);
 jb_String CSSPageDescriptors_bleed(const CSSPageDescriptors *self);
 
 void CSSPageDescriptors_set_bleed(CSSPageDescriptors* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

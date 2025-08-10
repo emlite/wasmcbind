@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLMarqueeElement, HTMLElement);
 
@@ -57,3 +61,7 @@ void HTMLMarqueeElement_set_width(HTMLMarqueeElement* self, jb_String * value);
 jb_Undefined HTMLMarqueeElement_start(HTMLMarqueeElement* self );
 
 jb_Undefined HTMLMarqueeElement_stop(HTMLMarqueeElement* self );
+
+#ifdef __cplusplus
+}
+#endif

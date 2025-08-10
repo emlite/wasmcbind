@@ -1,6 +1,5 @@
 #include <webbind/TransformStreamDefaultController.h>
 
-
 DEFINE_EMLITE_TYPE(TransformStreamDefaultController, em_Val);
 
 

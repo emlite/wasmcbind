@@ -1,10 +1,11 @@
 #include <webbind/SyncEvent.h>
 
+#include <webbind/SyncEventInit.h>
 
 DEFINE_EMLITE_TYPE(SyncEvent, ExtendableEvent);
 
 
-SyncEvent SyncEvent_new(jb_String * type, jb_Any * init) {
+SyncEvent SyncEvent_new(jb_String * type, SyncEventInit * init) {
         em_Val vv = em_Val_new(em_Val_global("SyncEvent") , em_Val_from(type), em_Val_from(init));
         return SyncEvent_from_val(&vv);
       }

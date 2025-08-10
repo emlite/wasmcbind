@@ -1,6 +1,6 @@
 #include <webbind/TextTrackList.h>
-#include <webbind/TextTrack.h>
 
+#include <webbind/TextTrack.h>
 
 DEFINE_EMLITE_TYPE(TextTrackList, EventTarget);
 

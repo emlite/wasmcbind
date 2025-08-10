@@ -1,5 +1,6 @@
 #include <webbind/CustomEvent.h>
 
+#include <webbind/CustomEventInit.h>
 
 DEFINE_EMLITE_TYPE(CustomEvent, Event);
 
@@ -10,7 +11,7 @@ CustomEvent CustomEvent_new0(jb_String * type) {
       }
 
 
-CustomEvent CustomEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+CustomEvent CustomEvent_new1(jb_String * type, CustomEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("CustomEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return CustomEvent_from_val(&vv);
       }

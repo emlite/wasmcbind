@@ -4,9 +4,16 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct XRInputSource XRInputSource;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct XRInputSource XRInputSource;
 
 DECLARE_EMLITE_TYPE(XRInputSourceArray, em_Val);
 
 unsigned long XRInputSourceArray_length(const XRInputSourceArray *self);
+
+#ifdef __cplusplus
+}
+#endif

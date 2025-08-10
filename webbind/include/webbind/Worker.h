@@ -2,16 +2,22 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
-#include "MessagePort.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct WorkerOptions WorkerOptions;
+typedef struct StructuredSerializeOptions StructuredSerializeOptions;
 
 DECLARE_EMLITE_TYPE(Worker, EventTarget);
 
 Worker Worker_new0(jb_Any * scriptURL);
 
-Worker Worker_new1(jb_Any * scriptURL, jb_Any * options);
+Worker Worker_new1(jb_Any * scriptURL, WorkerOptions * options);
 
 jb_Undefined Worker_terminate(Worker* self );
 
@@ -30,3 +36,7 @@ void Worker_set_onmessage(Worker* self, jb_Any * value);
 jb_Any Worker_onmessageerror(const Worker *self);
 
 void Worker_set_onmessageerror(Worker* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

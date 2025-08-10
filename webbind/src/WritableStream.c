@@ -1,6 +1,7 @@
 #include <webbind/WritableStream.h>
-#include <webbind/WritableStreamDefaultWriter.h>
 
+#include <webbind/QueuingStrategy.h>
+#include <webbind/WritableStreamDefaultWriter.h>
 
 DEFINE_EMLITE_TYPE(WritableStream, em_Val);
 
@@ -17,7 +18,7 @@ WritableStream WritableStream_new1(jb_Object * underlyingSink) {
       }
 
 
-WritableStream WritableStream_new2(jb_Object * underlyingSink, jb_Any * strategy) {
+WritableStream WritableStream_new2(jb_Object * underlyingSink, QueuingStrategy * strategy) {
         em_Val vv = em_Val_new(em_Val_global("WritableStream") , em_Val_from(underlyingSink), em_Val_from(strategy));
         return WritableStream_from_val(&vv);
       }

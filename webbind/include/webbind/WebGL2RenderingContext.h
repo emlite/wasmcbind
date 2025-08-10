@@ -4,6 +4,10 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct WebGLTexture WebGLTexture;
 typedef struct WebGLProgram WebGLProgram;
 typedef struct WebGLUniformLocation WebGLUniformLocation;
@@ -14,7 +18,6 @@ typedef struct WebGLTransformFeedback WebGLTransformFeedback;
 typedef struct WebGLActiveInfo WebGLActiveInfo;
 typedef struct WebGLBuffer WebGLBuffer;
 typedef struct WebGLVertexArrayObject WebGLVertexArrayObject;
-
 
 DECLARE_EMLITE_TYPE(WebGL2RenderingContext, em_Val);
 
@@ -347,3 +350,7 @@ jb_Undefined WebGL2RenderingContext_uniformMatrix4fv1(WebGL2RenderingContext* se
 jb_Undefined WebGL2RenderingContext_uniformMatrix4fv2(WebGL2RenderingContext* self , WebGLUniformLocation * location, jb_Any * transpose, jb_Any * data, long long srcOffset, jb_Any * srcLength);
 
 jb_Undefined WebGL2RenderingContext_readPixels(WebGL2RenderingContext* self , jb_Any * x, jb_Any * y, jb_Any * width, jb_Any * height, jb_Any * format, jb_Any * type, jb_Any * dstData, long long dstOffset);
+
+#ifdef __cplusplus
+}
+#endif

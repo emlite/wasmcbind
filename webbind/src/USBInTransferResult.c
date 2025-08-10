@@ -1,6 +1,5 @@
 #include <webbind/USBInTransferResult.h>
 
-
 DEFINE_EMLITE_TYPE(USBInTransferResult, em_Val);
 
 

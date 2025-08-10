@@ -1,7 +1,8 @@
 #include <webbind/DeviceMotionEvent.h>
+
+#include <webbind/DeviceMotionEventInit.h>
 #include <webbind/DeviceMotionEventAcceleration.h>
 #include <webbind/DeviceMotionEventRotationRate.h>
-
 
 DEFINE_EMLITE_TYPE(DeviceMotionEvent, Event);
 
@@ -12,7 +13,7 @@ DeviceMotionEvent DeviceMotionEvent_new0(jb_String * type) {
       }
 
 
-DeviceMotionEvent DeviceMotionEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+DeviceMotionEvent DeviceMotionEvent_new1(jb_String * type, DeviceMotionEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("DeviceMotionEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return DeviceMotionEvent_from_val(&vv);
       }

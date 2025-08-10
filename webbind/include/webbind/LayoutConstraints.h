@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(LayoutConstraints, em_Val);
 
@@ -24,3 +27,7 @@ double LayoutConstraints_blockFragmentationOffset(const LayoutConstraints *self)
 BlockFragmentationType LayoutConstraints_blockFragmentationType(const LayoutConstraints *self);
 
 jb_Any LayoutConstraints_data(const LayoutConstraints *self);
+
+#ifdef __cplusplus
+}
+#endif

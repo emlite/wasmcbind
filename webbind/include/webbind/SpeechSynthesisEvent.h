@@ -2,15 +2,20 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Event.h"
 #include "enums.h"
 
-typedef struct SpeechSynthesisUtterance SpeechSynthesisUtterance;
+#include "Event.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct SpeechSynthesisEventInit SpeechSynthesisEventInit;
+typedef struct SpeechSynthesisUtterance SpeechSynthesisUtterance;
 
 DECLARE_EMLITE_TYPE(SpeechSynthesisEvent, Event);
 
-SpeechSynthesisEvent SpeechSynthesisEvent_new(jb_String * type, jb_Any * eventInitDict);
+SpeechSynthesisEvent SpeechSynthesisEvent_new(jb_String * type, SpeechSynthesisEventInit * eventInitDict);
 
 SpeechSynthesisUtterance SpeechSynthesisEvent_utterance(const SpeechSynthesisEvent *self);
 
@@ -21,3 +26,7 @@ unsigned long SpeechSynthesisEvent_charLength(const SpeechSynthesisEvent *self);
 float SpeechSynthesisEvent_elapsedTime(const SpeechSynthesisEvent *self);
 
 jb_String SpeechSynthesisEvent_name(const SpeechSynthesisEvent *self);
+
+#ifdef __cplusplus
+}
+#endif

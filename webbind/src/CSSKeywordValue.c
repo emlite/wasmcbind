@@ -1,6 +1,5 @@
 #include <webbind/CSSKeywordValue.h>
 
-
 DEFINE_EMLITE_TYPE(CSSKeywordValue, CSSStyleValue);
 
 

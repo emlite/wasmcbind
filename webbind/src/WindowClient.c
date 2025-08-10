@@ -1,6 +1,5 @@
 #include <webbind/WindowClient.h>
 
-
 DEFINE_EMLITE_TYPE(WindowClient, Client);
 
 

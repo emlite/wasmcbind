@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSColorValue.h"
 #include "enums.h"
 
-typedef struct CSSNumericValue CSSNumericValue;
+#include "CSSColorValue.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct CSSNumericValue CSSNumericValue;
 
 DECLARE_EMLITE_TYPE(CSSHWB, CSSColorValue);
 
@@ -29,3 +33,7 @@ void CSSHWB_set_b(CSSHWB* self, jb_Any * value);
 jb_Any CSSHWB_alpha(const CSSHWB *self);
 
 void CSSHWB_set_alpha(CSSHWB* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

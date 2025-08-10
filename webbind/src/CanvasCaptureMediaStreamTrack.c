@@ -1,6 +1,6 @@
 #include <webbind/CanvasCaptureMediaStreamTrack.h>
-#include <webbind/HTMLCanvasElement.h>
 
+#include <webbind/HTMLCanvasElement.h>
 
 DEFINE_EMLITE_TYPE(CanvasCaptureMediaStreamTrack, MediaStreamTrack);
 

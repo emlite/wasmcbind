@@ -1,6 +1,5 @@
 #include <webbind/PerformanceMeasure.h>
 
-
 DEFINE_EMLITE_TYPE(PerformanceMeasure, PerformanceEntry);
 
 

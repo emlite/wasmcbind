@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct VideoTrack VideoTrack;
+#include "EventTarget.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct VideoTrack VideoTrack;
 
 DECLARE_EMLITE_TYPE(VideoTrackList, EventTarget);
 
@@ -27,3 +31,7 @@ void VideoTrackList_set_onaddtrack(VideoTrackList* self, jb_Any * value);
 jb_Any VideoTrackList_onremovetrack(const VideoTrackList *self);
 
 void VideoTrackList_set_onremovetrack(VideoTrackList* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

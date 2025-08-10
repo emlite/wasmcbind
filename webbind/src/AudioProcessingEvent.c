@@ -1,11 +1,12 @@
 #include <webbind/AudioProcessingEvent.h>
-#include <webbind/AudioBuffer.h>
 
+#include <webbind/AudioProcessingEventInit.h>
+#include <webbind/AudioBuffer.h>
 
 DEFINE_EMLITE_TYPE(AudioProcessingEvent, Event);
 
 
-AudioProcessingEvent AudioProcessingEvent_new(jb_String * type, jb_Any * eventInitDict) {
+AudioProcessingEvent AudioProcessingEvent_new(jb_String * type, AudioProcessingEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("AudioProcessingEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return AudioProcessingEvent_from_val(&vv);
       }

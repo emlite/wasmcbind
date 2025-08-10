@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct Document Document;
+#include "HTMLElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct Document Document;
 
 DECLARE_EMLITE_TYPE(HTMLEmbedElement, HTMLElement);
 
@@ -37,3 +41,7 @@ void HTMLEmbedElement_set_align(HTMLEmbedElement* self, jb_String * value);
 jb_String HTMLEmbedElement_name(const HTMLEmbedElement *self);
 
 void HTMLEmbedElement_set_name(HTMLEmbedElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

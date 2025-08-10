@@ -1,6 +1,5 @@
 #include <webbind/CSSParserBlock.h>
 
-
 DEFINE_EMLITE_TYPE(CSSParserBlock, CSSParserValue);
 
 

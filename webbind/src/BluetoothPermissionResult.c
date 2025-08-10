@@ -1,6 +1,6 @@
 #include <webbind/BluetoothPermissionResult.h>
-#include <webbind/BluetoothDevice.h>
 
+#include <webbind/BluetoothDevice.h>
 
 DEFINE_EMLITE_TYPE(BluetoothPermissionResult, PermissionStatus);
 

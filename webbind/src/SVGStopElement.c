@@ -1,6 +1,6 @@
 #include <webbind/SVGStopElement.h>
-#include <webbind/SVGAnimatedNumber.h>
 
+#include <webbind/SVGAnimatedNumber.h>
 
 DEFINE_EMLITE_TYPE(SVGStopElement, SVGElement);
 

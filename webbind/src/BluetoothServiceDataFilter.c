@@ -1,6 +1,5 @@
 #include <webbind/BluetoothServiceDataFilter.h>
 
-
 DEFINE_EMLITE_TYPE(BluetoothServiceDataFilter, em_Val);
 
 

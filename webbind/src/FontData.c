@@ -1,6 +1,6 @@
 #include <webbind/FontData.h>
-#include <webbind/Blob.h>
 
+#include <webbind/Blob.h>
 
 DEFINE_EMLITE_TYPE(FontData, em_Val);
 

@@ -1,6 +1,6 @@
 #include <webbind/HTMLDataListElement.h>
-#include <webbind/HTMLCollection.h>
 
+#include <webbind/HTMLCollection.h>
 
 DEFINE_EMLITE_TYPE(HTMLDataListElement, HTMLElement);
 

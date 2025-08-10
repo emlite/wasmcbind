@@ -4,10 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct AnimationNodeList AnimationNodeList;
-typedef struct AnimationEffect AnimationEffect;
-typedef struct GroupEffect GroupEffect;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct AnimationEffect AnimationEffect;
+typedef struct AnimationNodeList AnimationNodeList;
 
 DECLARE_EMLITE_TYPE(GroupEffect, em_Val);
 
@@ -26,3 +28,7 @@ GroupEffect GroupEffect_clone(GroupEffect* self );
 jb_Undefined GroupEffect_prepend(GroupEffect* self , AnimationEffect * effects);
 
 jb_Undefined GroupEffect_append(GroupEffect* self , AnimationEffect * effects);
+
+#ifdef __cplusplus
+}
+#endif

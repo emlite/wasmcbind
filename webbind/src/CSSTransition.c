@@ -1,6 +1,5 @@
 #include <webbind/CSSTransition.h>
 
-
 DEFINE_EMLITE_TYPE(CSSTransition, Animation);
 
 

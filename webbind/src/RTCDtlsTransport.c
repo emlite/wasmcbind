@@ -1,6 +1,6 @@
 #include <webbind/RTCDtlsTransport.h>
-#include <webbind/RTCIceTransport.h>
 
+#include <webbind/RTCIceTransport.h>
 
 DEFINE_EMLITE_TYPE(RTCDtlsTransport, EventTarget);
 

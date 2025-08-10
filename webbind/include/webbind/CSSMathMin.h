@@ -2,14 +2,22 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSMathValue.h"
 #include "enums.h"
 
-typedef struct CSSNumericArray CSSNumericArray;
+#include "CSSMathValue.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct CSSNumericArray CSSNumericArray;
 
 DECLARE_EMLITE_TYPE(CSSMathMin, CSSMathValue);
 
 CSSMathMin CSSMathMin_new(jb_Any * args);
 
 CSSNumericArray CSSMathMin_values(const CSSMathMin *self);
+
+#ifdef __cplusplus
+}
+#endif

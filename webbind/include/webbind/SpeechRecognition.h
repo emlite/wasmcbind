@@ -2,24 +2,19 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct SpeechGrammarList SpeechGrammarList;
-typedef struct SpeechRecognitionPhraseList SpeechRecognitionPhraseList;
+typedef struct SpeechRecognitionPhrase SpeechRecognitionPhrase;
 typedef struct MediaStreamTrack MediaStreamTrack;
 typedef struct SpeechRecognitionOptions SpeechRecognitionOptions;
 
-
-DECLARE_EMLITE_TYPE(SpeechRecognitionOptions, em_Val);
-
-jb_Array SpeechRecognitionOptions_langs(const SpeechRecognitionOptions *self);
-
-void SpeechRecognitionOptions_set_langs(SpeechRecognitionOptions* self, jb_Array * value);
-
-bool SpeechRecognitionOptions_processLocally(const SpeechRecognitionOptions *self);
-
-void SpeechRecognitionOptions_set_processLocally(SpeechRecognitionOptions* self, bool value);
 DECLARE_EMLITE_TYPE(SpeechRecognition, EventTarget);
 
 SpeechRecognition SpeechRecognition_new();
@@ -105,3 +100,7 @@ void SpeechRecognition_set_onstart(SpeechRecognition* self, jb_Any * value);
 jb_Any SpeechRecognition_onend(const SpeechRecognition *self);
 
 void SpeechRecognition_set_onend(SpeechRecognition* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

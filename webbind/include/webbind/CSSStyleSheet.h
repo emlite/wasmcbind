@@ -2,19 +2,23 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "StyleSheet.h"
 #include "enums.h"
 
+#include "StyleSheet.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct CSSStyleSheetInit CSSStyleSheetInit;
 typedef struct CSSRule CSSRule;
 typedef struct CSSRuleList CSSRuleList;
-typedef struct CSSStyleSheet CSSStyleSheet;
-
 
 DECLARE_EMLITE_TYPE(CSSStyleSheet, StyleSheet);
 
 CSSStyleSheet CSSStyleSheet_new0();
 
-CSSStyleSheet CSSStyleSheet_new1(jb_Any * options);
+CSSStyleSheet CSSStyleSheet_new1(CSSStyleSheetInit * options);
 
 CSSRule CSSStyleSheet_ownerRule(const CSSStyleSheet *self);
 
@@ -43,3 +47,7 @@ long CSSStyleSheet_addRule3(CSSStyleSheet* self , jb_String * selector, jb_Strin
 jb_Undefined CSSStyleSheet_removeRule0(CSSStyleSheet* self );
 
 jb_Undefined CSSStyleSheet_removeRule1(CSSStyleSheet* self , unsigned long index);
+
+#ifdef __cplusplus
+}
+#endif

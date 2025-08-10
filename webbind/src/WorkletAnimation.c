@@ -1,6 +1,6 @@
 #include <webbind/WorkletAnimation.h>
-#include <webbind/AnimationTimeline.h>
 
+#include <webbind/AnimationTimeline.h>
 
 DEFINE_EMLITE_TYPE(WorkletAnimation, Animation);
 

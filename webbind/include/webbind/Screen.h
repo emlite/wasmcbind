@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct ScreenOrientation ScreenOrientation;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct ScreenOrientation ScreenOrientation;
 
 DECLARE_EMLITE_TYPE(Screen, em_Val);
 
@@ -28,3 +31,7 @@ bool Screen_isExtended(const Screen *self);
 jb_Any Screen_onchange(const Screen *self);
 
 void Screen_set_onchange(Screen* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

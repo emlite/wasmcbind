@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(CryptoKey, em_Val);
 
@@ -14,3 +17,7 @@ bool CryptoKey_extractable(const CryptoKey *self);
 jb_Object CryptoKey_algorithm(const CryptoKey *self);
 
 jb_Object CryptoKey_usages(const CryptoKey *self);
+
+#ifdef __cplusplus
+}
+#endif

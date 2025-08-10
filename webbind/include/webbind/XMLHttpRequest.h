@@ -2,41 +2,19 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "XMLHttpRequestEventTarget.h"
 #include "enums.h"
+
+#include "XMLHttpRequestEventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct XMLHttpRequestUpload XMLHttpRequestUpload;
 typedef struct Document Document;
 typedef struct AttributionReportingRequestOptions AttributionReportingRequestOptions;
 typedef struct PrivateToken PrivateToken;
 
-
-DECLARE_EMLITE_TYPE(AttributionReportingRequestOptions, em_Val);
-
-bool AttributionReportingRequestOptions_eventSourceEligible(const AttributionReportingRequestOptions *self);
-
-void AttributionReportingRequestOptions_set_eventSourceEligible(AttributionReportingRequestOptions* self, bool value);
-
-bool AttributionReportingRequestOptions_triggerEligible(const AttributionReportingRequestOptions *self);
-
-void AttributionReportingRequestOptions_set_triggerEligible(AttributionReportingRequestOptions* self, bool value);
-DECLARE_EMLITE_TYPE(PrivateToken, em_Val);
-
-TokenVersion PrivateToken_version(const PrivateToken *self);
-
-void PrivateToken_set_version(PrivateToken* self, TokenVersion * value);
-
-OperationType PrivateToken_operation(const PrivateToken *self);
-
-void PrivateToken_set_operation(PrivateToken* self, OperationType * value);
-
-RefreshPolicy PrivateToken_refreshPolicy(const PrivateToken *self);
-
-void PrivateToken_set_refreshPolicy(PrivateToken* self, RefreshPolicy * value);
-
-jb_Array PrivateToken_issuers(const PrivateToken *self);
-
-void PrivateToken_set_issuers(PrivateToken* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(XMLHttpRequest, XMLHttpRequestEventTarget);
 
 XMLHttpRequest XMLHttpRequest_new();
@@ -96,3 +74,7 @@ Document XMLHttpRequest_responseXML(const XMLHttpRequest *self);
 jb_Undefined XMLHttpRequest_setAttributionReporting(XMLHttpRequest* self , AttributionReportingRequestOptions * options);
 
 jb_Undefined XMLHttpRequest_setPrivateToken(XMLHttpRequest* self , PrivateToken * privateToken);
+
+#ifdef __cplusplus
+}
+#endif

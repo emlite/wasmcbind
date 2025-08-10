@@ -1,6 +1,5 @@
 #include <webbind/BatteryManager.h>
 
-
 DEFINE_EMLITE_TYPE(BatteryManager, EventTarget);
 
 

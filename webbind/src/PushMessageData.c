@@ -1,6 +1,6 @@
 #include <webbind/PushMessageData.h>
-#include <webbind/Blob.h>
 
+#include <webbind/Blob.h>
 
 DEFINE_EMLITE_TYPE(PushMessageData, em_Val);
 

@@ -4,10 +4,13 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Blob Blob;
-typedef struct HTMLElement HTMLElement;
-typedef struct HTMLFormElement HTMLFormElement;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct HTMLFormElement HTMLFormElement;
+typedef struct HTMLElement HTMLElement;
+typedef struct Blob Blob;
 
 DECLARE_EMLITE_TYPE(FormData, em_Val);
 
@@ -32,3 +35,7 @@ bool FormData_has(FormData* self , jb_String * name);
 jb_Undefined FormData_set0(FormData* self , jb_String * name, Blob * blobValue);
 
 jb_Undefined FormData_set1(FormData* self , jb_String * name, Blob * blobValue, jb_String * filename);
+
+#ifdef __cplusplus
+}
+#endif

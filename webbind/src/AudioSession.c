@@ -1,6 +1,5 @@
 #include <webbind/AudioSession.h>
 
-
 DEFINE_EMLITE_TYPE(AudioSession, EventTarget);
 
 

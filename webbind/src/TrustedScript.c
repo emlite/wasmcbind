@@ -1,6 +1,5 @@
 #include <webbind/TrustedScript.h>
 
-
 DEFINE_EMLITE_TYPE(TrustedScript, em_Val);
 
 

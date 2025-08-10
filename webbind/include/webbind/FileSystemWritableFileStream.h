@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "WritableStream.h"
 #include "enums.h"
 
+#include "WritableStream.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(FileSystemWritableFileStream, WritableStream);
 
@@ -13,3 +17,7 @@ jb_Promise FileSystemWritableFileStream_write(FileSystemWritableFileStream* self
 jb_Promise FileSystemWritableFileStream_seek(FileSystemWritableFileStream* self , long long position);
 
 jb_Promise FileSystemWritableFileStream_truncate(FileSystemWritableFileStream* self , long long size);
+
+#ifdef __cplusplus
+}
+#endif

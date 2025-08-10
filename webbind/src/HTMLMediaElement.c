@@ -1,4 +1,5 @@
 #include <webbind/HTMLMediaElement.h>
+
 #include <webbind/MediaError.h>
 #include <webbind/TimeRanges.h>
 #include <webbind/AudioTrackList.h>
@@ -8,7 +9,6 @@
 #include <webbind/MediaKeys.h>
 #include <webbind/MediaStream.h>
 #include <webbind/RemotePlayback.h>
-
 
 DEFINE_EMLITE_TYPE(HTMLMediaElement, HTMLElement);
 

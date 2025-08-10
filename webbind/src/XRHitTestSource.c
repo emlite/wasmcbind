@@ -1,6 +1,5 @@
 #include <webbind/XRHitTestSource.h>
 
-
 DEFINE_EMLITE_TYPE(XRHitTestSource, em_Val);
 
 

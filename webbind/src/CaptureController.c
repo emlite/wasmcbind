@@ -1,6 +1,6 @@
 #include <webbind/CaptureController.h>
-#include <webbind/HTMLElement.h>
 
+#include <webbind/HTMLElement.h>
 
 DEFINE_EMLITE_TYPE(CaptureController, EventTarget);
 

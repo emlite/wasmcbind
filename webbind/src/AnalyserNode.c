@@ -1,6 +1,7 @@
 #include <webbind/AnalyserNode.h>
-#include <webbind/BaseAudioContext.h>
 
+#include <webbind/BaseAudioContext.h>
+#include <webbind/AnalyserOptions.h>
 
 DEFINE_EMLITE_TYPE(AnalyserNode, AudioNode);
 
@@ -11,7 +12,7 @@ AnalyserNode AnalyserNode_new0(BaseAudioContext * context) {
       }
 
 
-AnalyserNode AnalyserNode_new1(BaseAudioContext * context, jb_Any * options) {
+AnalyserNode AnalyserNode_new1(BaseAudioContext * context, AnalyserOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("AnalyserNode") , em_Val_from(context), em_Val_from(options));
         return AnalyserNode_from_val(&vv);
       }

@@ -1,6 +1,7 @@
 #include <webbind/ClipboardItem.h>
-#include <webbind/Blob.h>
 
+#include <webbind/ClipboardItemOptions.h>
+#include <webbind/Blob.h>
 
 DEFINE_EMLITE_TYPE(ClipboardItem, em_Val);
 
@@ -11,7 +12,7 @@ ClipboardItem ClipboardItem_new0(jb_Object * items) {
       }
 
 
-ClipboardItem ClipboardItem_new1(jb_Object * items, jb_Any * options) {
+ClipboardItem ClipboardItem_new1(jb_Object * items, ClipboardItemOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("ClipboardItem") , em_Val_from(items), em_Val_from(options));
         return ClipboardItem_from_val(&vv);
       }

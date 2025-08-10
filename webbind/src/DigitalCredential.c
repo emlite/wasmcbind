@@ -1,6 +1,5 @@
 #include <webbind/DigitalCredential.h>
 
-
 DEFINE_EMLITE_TYPE(DigitalCredential, Credential);
 
 

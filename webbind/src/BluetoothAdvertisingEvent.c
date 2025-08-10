@@ -1,13 +1,14 @@
 #include <webbind/BluetoothAdvertisingEvent.h>
+
+#include <webbind/BluetoothAdvertisingEventInit.h>
 #include <webbind/BluetoothDevice.h>
 #include <webbind/BluetoothManufacturerDataMap.h>
 #include <webbind/BluetoothServiceDataMap.h>
 
-
 DEFINE_EMLITE_TYPE(BluetoothAdvertisingEvent, Event);
 
 
-BluetoothAdvertisingEvent BluetoothAdvertisingEvent_new(jb_String * type, jb_Any * init) {
+BluetoothAdvertisingEvent BluetoothAdvertisingEvent_new(jb_String * type, BluetoothAdvertisingEventInit * init) {
         em_Val vv = em_Val_new(em_Val_global("BluetoothAdvertisingEvent") , em_Val_from(type), em_Val_from(init));
         return BluetoothAdvertisingEvent_from_val(&vv);
       }

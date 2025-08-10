@@ -2,12 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "DOMPointReadOnly.h"
-#include "SVGGeometryElement.h"
 #include "enums.h"
 
-typedef struct DOMPoint DOMPoint;
+#include "DOMPointReadOnly.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct DOMPointInit DOMPointInit;
 
 DECLARE_EMLITE_TYPE(DOMPoint, DOMPointReadOnly);
 
@@ -40,3 +43,7 @@ void DOMPoint_set_z(DOMPoint* self, double value);
 double DOMPoint_w(const DOMPoint *self);
 
 void DOMPoint_set_w(DOMPoint* self, double value);
+
+#ifdef __cplusplus
+}
+#endif

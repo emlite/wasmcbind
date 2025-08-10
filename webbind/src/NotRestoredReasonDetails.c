@@ -1,6 +1,5 @@
 #include <webbind/NotRestoredReasonDetails.h>
 
-
 DEFINE_EMLITE_TYPE(NotRestoredReasonDetails, em_Val);
 
 

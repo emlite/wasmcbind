@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct NavigationHistoryEntry NavigationHistoryEntry;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct NavigationHistoryEntry NavigationHistoryEntry;
 
 DECLARE_EMLITE_TYPE(NavigationTransition, em_Val);
 
@@ -14,3 +17,7 @@ NavigationType NavigationTransition_navigationType(const NavigationTransition *s
 NavigationHistoryEntry NavigationTransition_from(const NavigationTransition *self);
 
 jb_Promise NavigationTransition_finished(const NavigationTransition *self);
+
+#ifdef __cplusplus
+}
+#endif

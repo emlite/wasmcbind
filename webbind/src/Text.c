@@ -1,11 +1,13 @@
 #include <webbind/Text.h>
+
 #include <webbind/DOMQuad.h>
-#include <webbind/Document.h>
+#include <webbind/BoxQuadOptions.h>
+#include <webbind/DOMQuadInit.h>
+#include <webbind/ConvertCoordinateOptions.h>
 #include <webbind/DOMRectReadOnly.h>
 #include <webbind/DOMPoint.h>
-#include <webbind/SVGGeometryElement.h>
+#include <webbind/DOMPointInit.h>
 #include <webbind/HTMLSlotElement.h>
-
 
 DEFINE_EMLITE_TYPE(Text, CharacterData);
 

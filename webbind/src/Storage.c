@@ -1,6 +1,5 @@
 #include <webbind/Storage.h>
 
-
 DEFINE_EMLITE_TYPE(Storage, em_Val);
 
 

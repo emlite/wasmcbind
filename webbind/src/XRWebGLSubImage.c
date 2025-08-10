@@ -1,6 +1,6 @@
 #include <webbind/XRWebGLSubImage.h>
-#include <webbind/WebGLTexture.h>
 
+#include <webbind/WebGLTexture.h>
 
 DEFINE_EMLITE_TYPE(XRWebGLSubImage, XRSubImage);
 

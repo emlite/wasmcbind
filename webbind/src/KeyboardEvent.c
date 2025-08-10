@@ -1,6 +1,7 @@
 #include <webbind/KeyboardEvent.h>
-#include <webbind/Window.h>
 
+#include <webbind/KeyboardEventInit.h>
+#include <webbind/Window.h>
 
 DEFINE_EMLITE_TYPE(KeyboardEvent, UIEvent);
 
@@ -11,7 +12,7 @@ KeyboardEvent KeyboardEvent_new0(jb_String * type) {
       }
 
 
-KeyboardEvent KeyboardEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+KeyboardEvent KeyboardEvent_new1(jb_String * type, KeyboardEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("KeyboardEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return KeyboardEvent_from_val(&vv);
       }

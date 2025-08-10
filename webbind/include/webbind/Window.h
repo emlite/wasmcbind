@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
-#include "window.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct Document Document;
 typedef struct Location Location;
@@ -20,7 +24,7 @@ typedef struct Viewport Viewport;
 typedef struct MediaQueryList MediaQueryList;
 typedef struct Screen Screen;
 typedef struct VisualViewport VisualViewport;
-typedef struct CSSStyleDeclaration CSSStyleDeclaration;
+typedef struct CSSStyleProperties CSSStyleProperties;
 typedef struct DigitalGoodsService DigitalGoodsService;
 typedef struct DocumentPictureInPicture DocumentPictureInPicture;
 typedef struct Fence Fence;
@@ -41,47 +45,7 @@ typedef struct LaunchQueue LaunchQueue;
 typedef struct ScreenDetails ScreenDetails;
 typedef struct Crypto Crypto;
 typedef struct Storage Storage;
-typedef struct CSSStyleProperties CSSStyleProperties;
 
-
-DECLARE_EMLITE_TYPE(WindowPostMessageOptions, em_Val);
-
-jb_String WindowPostMessageOptions_targetOrigin(const WindowPostMessageOptions *self);
-
-void WindowPostMessageOptions_set_targetOrigin(WindowPostMessageOptions* self, jb_String * value);
-DECLARE_EMLITE_TYPE(OpenFilePickerOptions, em_Val);
-
-bool OpenFilePickerOptions_multiple(const OpenFilePickerOptions *self);
-
-void OpenFilePickerOptions_set_multiple(OpenFilePickerOptions* self, bool value);
-DECLARE_EMLITE_TYPE(SaveFilePickerOptions, em_Val);
-
-jb_String SaveFilePickerOptions_suggestedName(const SaveFilePickerOptions *self);
-
-void SaveFilePickerOptions_set_suggestedName(SaveFilePickerOptions* self, jb_String * value);
-DECLARE_EMLITE_TYPE(DirectoryPickerOptions, em_Val);
-
-jb_String DirectoryPickerOptions_id(const DirectoryPickerOptions *self);
-
-void DirectoryPickerOptions_set_id(DirectoryPickerOptions* self, jb_String * value);
-
-jb_Any DirectoryPickerOptions_startIn(const DirectoryPickerOptions *self);
-
-void DirectoryPickerOptions_set_startIn(DirectoryPickerOptions* self, jb_Any * value);
-
-FileSystemPermissionMode DirectoryPickerOptions_mode(const DirectoryPickerOptions *self);
-
-void DirectoryPickerOptions_set_mode(DirectoryPickerOptions* self, FileSystemPermissionMode * value);
-DECLARE_EMLITE_TYPE(QueryOptions, em_Val);
-
-jb_Array QueryOptions_postscriptNames(const QueryOptions *self);
-
-void QueryOptions_set_postscriptNames(QueryOptions* self, jb_Array * value);
-DECLARE_EMLITE_TYPE(IdleRequestOptions, em_Val);
-
-unsigned long IdleRequestOptions_timeout(const IdleRequestOptions *self);
-
-void IdleRequestOptions_set_timeout(IdleRequestOptions* self, unsigned long value);
 DECLARE_EMLITE_TYPE(Window, EventTarget);
 
 jb_Any Window_window(const Window *self);
@@ -94,7 +58,7 @@ jb_String Window_name(const Window *self);
 
 void Window_set_name(Window* self, jb_String * value);
 
-jb_Any Window_location(const Window *self);
+Location Window_location(const Window *self);
 
 History Window_history(const Window *self);
 
@@ -323,3 +287,7 @@ jb_Undefined Window_cancelAnimationFrame(Window* self , unsigned long handle);
 Storage Window_sessionStorage(const Window *self);
 
 Storage Window_localStorage(const Window *self);
+
+#ifdef __cplusplus
+}
+#endif

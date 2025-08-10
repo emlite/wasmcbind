@@ -4,6 +4,10 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct USBConfiguration USBConfiguration;
 typedef struct USBInTransferResult USBInTransferResult;
 typedef struct USBControlTransferParameters USBControlTransferParameters;
@@ -11,28 +15,6 @@ typedef struct USBOutTransferResult USBOutTransferResult;
 typedef struct USBIsochronousInTransferResult USBIsochronousInTransferResult;
 typedef struct USBIsochronousOutTransferResult USBIsochronousOutTransferResult;
 
-
-DECLARE_EMLITE_TYPE(USBControlTransferParameters, em_Val);
-
-USBRequestType USBControlTransferParameters_requestType(const USBControlTransferParameters *self);
-
-void USBControlTransferParameters_set_requestType(USBControlTransferParameters* self, USBRequestType * value);
-
-USBRecipient USBControlTransferParameters_recipient(const USBControlTransferParameters *self);
-
-void USBControlTransferParameters_set_recipient(USBControlTransferParameters* self, USBRecipient * value);
-
-unsigned char USBControlTransferParameters_request(const USBControlTransferParameters *self);
-
-void USBControlTransferParameters_set_request(USBControlTransferParameters* self, unsigned char value);
-
-unsigned short USBControlTransferParameters_value(const USBControlTransferParameters *self);
-
-void USBControlTransferParameters_set_value(USBControlTransferParameters* self, unsigned short value);
-
-unsigned short USBControlTransferParameters_index(const USBControlTransferParameters *self);
-
-void USBControlTransferParameters_set_index(USBControlTransferParameters* self, unsigned short value);
 DECLARE_EMLITE_TYPE(USBDevice, em_Val);
 
 unsigned char USBDevice_usbVersionMajor(const USBDevice *self);
@@ -100,3 +82,7 @@ jb_Promise USBDevice_isochronousTransferIn(USBDevice* self , unsigned char endpo
 jb_Promise USBDevice_isochronousTransferOut(USBDevice* self , unsigned char endpointNumber, jb_Any * data, jb_Array * packetLengths);
 
 jb_Promise USBDevice_reset(USBDevice* self );
+
+#ifdef __cplusplus
+}
+#endif

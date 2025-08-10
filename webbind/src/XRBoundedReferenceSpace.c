@@ -1,6 +1,6 @@
 #include <webbind/XRBoundedReferenceSpace.h>
-#include <webbind/DOMPointReadOnly.h>
 
+#include <webbind/DOMPointReadOnly.h>
 
 DEFINE_EMLITE_TYPE(XRBoundedReferenceSpace, XRReferenceSpace);
 

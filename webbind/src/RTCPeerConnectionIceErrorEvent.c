@@ -1,10 +1,11 @@
 #include <webbind/RTCPeerConnectionIceErrorEvent.h>
 
+#include <webbind/RTCPeerConnectionIceErrorEventInit.h>
 
 DEFINE_EMLITE_TYPE(RTCPeerConnectionIceErrorEvent, Event);
 
 
-RTCPeerConnectionIceErrorEvent RTCPeerConnectionIceErrorEvent_new(jb_String * type, jb_Any * eventInitDict) {
+RTCPeerConnectionIceErrorEvent RTCPeerConnectionIceErrorEvent_new(jb_String * type, RTCPeerConnectionIceErrorEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("RTCPeerConnectionIceErrorEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return RTCPeerConnectionIceErrorEvent_from_val(&vv);
       }

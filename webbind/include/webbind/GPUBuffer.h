@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(GPUBuffer, em_Val);
 
@@ -32,3 +35,7 @@ jb_Undefined GPUBuffer_destroy(GPUBuffer* self );
 jb_String GPUBuffer_label(const GPUBuffer *self);
 
 void GPUBuffer_set_label(GPUBuffer* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

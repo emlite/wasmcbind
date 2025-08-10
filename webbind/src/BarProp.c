@@ -1,6 +1,5 @@
 #include <webbind/BarProp.h>
 
-
 DEFINE_EMLITE_TYPE(BarProp, em_Val);
 
 

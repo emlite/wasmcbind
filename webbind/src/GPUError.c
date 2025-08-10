@@ -1,6 +1,5 @@
 #include <webbind/GPUError.h>
 
-
 DEFINE_EMLITE_TYPE(GPUError, em_Val);
 
 

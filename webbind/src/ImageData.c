@@ -1,6 +1,6 @@
 #include <webbind/ImageData.h>
-#include <webbind/CanvasRenderingContext2D.h>
 
+#include <webbind/ImageDataSettings.h>
 
 DEFINE_EMLITE_TYPE(ImageData, em_Val);
 

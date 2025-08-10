@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct DocumentFragment DocumentFragment;
+#include "HTMLElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct DocumentFragment DocumentFragment;
 
 DECLARE_EMLITE_TYPE(HTMLTemplateElement, HTMLElement);
 
@@ -33,3 +37,7 @@ void HTMLTemplateElement_set_shadowRootSerializable(HTMLTemplateElement* self, b
 jb_String HTMLTemplateElement_shadowRootCustomElementRegistry(const HTMLTemplateElement *self);
 
 void HTMLTemplateElement_set_shadowRootCustomElementRegistry(HTMLTemplateElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

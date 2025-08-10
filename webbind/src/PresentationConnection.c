@@ -1,6 +1,5 @@
 #include <webbind/PresentationConnection.h>
 
-
 DEFINE_EMLITE_TYPE(PresentationConnection, EventTarget);
 
 

@@ -1,63 +1,9 @@
 #include <webbind/Translator.h>
+
+#include <webbind/TranslatorCreateOptions.h>
+#include <webbind/TranslatorCreateCoreOptions.h>
+#include <webbind/TranslatorTranslateOptions.h>
 #include <webbind/ReadableStream.h>
-#include <webbind/AbortSignal.h>
-
-
-DEFINE_EMLITE_TYPE(TranslatorCreateOptions, em_Val);
-
-
-AbortSignal TranslatorCreateOptions_signal(const TranslatorCreateOptions *self) {
-    return em_Val_as(AbortSignal, em_Val_get(em_Val_as_val(self->inner), em_Val_from("signal")));
-}
-
-
-void TranslatorCreateOptions_set_signal(TranslatorCreateOptions* self, AbortSignal * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("signal"), em_Val_from(value));
-}
-
-
-jb_Function TranslatorCreateOptions_monitor(const TranslatorCreateOptions *self) {
-    return em_Val_as(jb_Function, em_Val_get(em_Val_as_val(self->inner), em_Val_from("monitor")));
-}
-
-
-void TranslatorCreateOptions_set_monitor(TranslatorCreateOptions* self, jb_Function * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("monitor"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(TranslatorCreateCoreOptions, em_Val);
-
-
-jb_String TranslatorCreateCoreOptions_sourceLanguage(const TranslatorCreateCoreOptions *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sourceLanguage")));
-}
-
-
-void TranslatorCreateCoreOptions_set_sourceLanguage(TranslatorCreateCoreOptions* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("sourceLanguage"), em_Val_from(value));
-}
-
-
-jb_String TranslatorCreateCoreOptions_targetLanguage(const TranslatorCreateCoreOptions *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("targetLanguage")));
-}
-
-
-void TranslatorCreateCoreOptions_set_targetLanguage(TranslatorCreateCoreOptions* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("targetLanguage"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(TranslatorTranslateOptions, em_Val);
-
-
-AbortSignal TranslatorTranslateOptions_signal(const TranslatorTranslateOptions *self) {
-    return em_Val_as(AbortSignal, em_Val_get(em_Val_as_val(self->inner), em_Val_from("signal")));
-}
-
-
-void TranslatorTranslateOptions_set_signal(TranslatorTranslateOptions* self, AbortSignal * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("signal"), em_Val_from(value));
-}
 
 DEFINE_EMLITE_TYPE(Translator, em_Val);
 

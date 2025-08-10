@@ -1,5 +1,6 @@
 #include <webbind/ProximitySensor.h>
 
+#include <webbind/SensorOptions.h>
 
 DEFINE_EMLITE_TYPE(ProximitySensor, Sensor);
 
@@ -10,7 +11,7 @@ ProximitySensor ProximitySensor_new0() {
       }
 
 
-ProximitySensor ProximitySensor_new1(jb_Any * sensorOptions) {
+ProximitySensor ProximitySensor_new1(SensorOptions * sensorOptions) {
         em_Val vv = em_Val_new(em_Val_global("ProximitySensor") , em_Val_from(sensorOptions));
         return ProximitySensor_from_val(&vv);
       }

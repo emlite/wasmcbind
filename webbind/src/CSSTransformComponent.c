@@ -1,6 +1,6 @@
 #include <webbind/CSSTransformComponent.h>
-#include <webbind/DOMMatrix.h>
 
+#include <webbind/DOMMatrix.h>
 
 DEFINE_EMLITE_TYPE(CSSTransformComponent, em_Val);
 

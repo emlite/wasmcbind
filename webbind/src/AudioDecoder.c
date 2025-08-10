@@ -1,75 +1,14 @@
 #include <webbind/AudioDecoder.h>
+
+#include <webbind/AudioDecoderInit.h>
+#include <webbind/AudioDecoderConfig.h>
 #include <webbind/EncodedAudioChunk.h>
-
-
-DEFINE_EMLITE_TYPE(AudioDecoderConfig, em_Val);
-
-
-jb_String AudioDecoderConfig_codec(const AudioDecoderConfig *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("codec")));
-}
-
-
-void AudioDecoderConfig_set_codec(AudioDecoderConfig* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("codec"), em_Val_from(value));
-}
-
-
-unsigned long AudioDecoderConfig_sampleRate(const AudioDecoderConfig *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sampleRate")));
-}
-
-
-void AudioDecoderConfig_set_sampleRate(AudioDecoderConfig* self, unsigned long value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("sampleRate"), em_Val_from(value));
-}
-
-
-unsigned long AudioDecoderConfig_numberOfChannels(const AudioDecoderConfig *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("numberOfChannels")));
-}
-
-
-void AudioDecoderConfig_set_numberOfChannels(AudioDecoderConfig* self, unsigned long value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("numberOfChannels"), em_Val_from(value));
-}
-
-
-jb_Any AudioDecoderConfig_description(const AudioDecoderConfig *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("description")));
-}
-
-
-void AudioDecoderConfig_set_description(AudioDecoderConfig* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("description"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(AudioDecoderSupport, em_Val);
-
-
-bool AudioDecoderSupport_supported(const AudioDecoderSupport *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("supported")));
-}
-
-
-void AudioDecoderSupport_set_supported(AudioDecoderSupport* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("supported"), em_Val_from(value));
-}
-
-
-AudioDecoderConfig AudioDecoderSupport_config(const AudioDecoderSupport *self) {
-    return em_Val_as(AudioDecoderConfig, em_Val_get(em_Val_as_val(self->inner), em_Val_from("config")));
-}
-
-
-void AudioDecoderSupport_set_config(AudioDecoderSupport* self, AudioDecoderConfig * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("config"), em_Val_from(value));
-}
+#include <webbind/AudioDecoderSupport.h>
 
 DEFINE_EMLITE_TYPE(AudioDecoder, EventTarget);
 
 
-AudioDecoder AudioDecoder_new(jb_Any * init) {
+AudioDecoder AudioDecoder_new(AudioDecoderInit * init) {
         em_Val vv = em_Val_new(em_Val_global("AudioDecoder") , em_Val_from(init));
         return AudioDecoder_from_val(&vv);
       }

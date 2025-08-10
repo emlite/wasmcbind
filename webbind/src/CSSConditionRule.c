@@ -1,6 +1,5 @@
 #include <webbind/CSSConditionRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSConditionRule, CSSGroupingRule);
 
 

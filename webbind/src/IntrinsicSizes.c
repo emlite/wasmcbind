@@ -1,6 +1,5 @@
 #include <webbind/IntrinsicSizes.h>
 
-
 DEFINE_EMLITE_TYPE(IntrinsicSizes, em_Val);
 
 

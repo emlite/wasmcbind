@@ -1,7 +1,7 @@
 #include <webbind/XRPose.h>
+
 #include <webbind/XRRigidTransform.h>
 #include <webbind/DOMPointReadOnly.h>
-
 
 DEFINE_EMLITE_TYPE(XRPose, em_Val);
 

@@ -1,11 +1,12 @@
 #include <webbind/HIDInputReportEvent.h>
-#include <webbind/HIDDevice.h>
 
+#include <webbind/HIDInputReportEventInit.h>
+#include <webbind/HIDDevice.h>
 
 DEFINE_EMLITE_TYPE(HIDInputReportEvent, Event);
 
 
-HIDInputReportEvent HIDInputReportEvent_new(jb_String * type, jb_Any * eventInitDict) {
+HIDInputReportEvent HIDInputReportEvent_new(jb_String * type, HIDInputReportEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("HIDInputReportEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return HIDInputReportEvent_from_val(&vv);
       }

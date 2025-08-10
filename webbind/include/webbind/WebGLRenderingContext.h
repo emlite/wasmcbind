@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct WebGLUniformLocation WebGLUniformLocation;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct WebGLUniformLocation WebGLUniformLocation;
 
 DECLARE_EMLITE_TYPE(WebGLRenderingContext, em_Val);
 
@@ -46,3 +49,7 @@ jb_Undefined WebGLRenderingContext_uniformMatrix2fv(WebGLRenderingContext* self 
 jb_Undefined WebGLRenderingContext_uniformMatrix3fv(WebGLRenderingContext* self , WebGLUniformLocation * location, jb_Any * transpose, jb_Any * value);
 
 jb_Undefined WebGLRenderingContext_uniformMatrix4fv(WebGLRenderingContext* self , WebGLUniformLocation * location, jb_Any * transpose, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

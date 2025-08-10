@@ -1,6 +1,6 @@
 #include <webbind/RestrictionTarget.h>
-#include <webbind/Element.h>
 
+#include <webbind/Element.h>
 
 DEFINE_EMLITE_TYPE(RestrictionTarget, em_Val);
 

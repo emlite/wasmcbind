@@ -1,6 +1,7 @@
 #include <webbind/MessageEvent.h>
-#include <webbind/MessagePort.h>
 
+#include <webbind/MessageEventInit.h>
+#include <webbind/MessagePort.h>
 
 DEFINE_EMLITE_TYPE(MessageEvent, Event);
 
@@ -11,7 +12,7 @@ MessageEvent MessageEvent_new0(jb_String * type) {
       }
 
 
-MessageEvent MessageEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+MessageEvent MessageEvent_new1(jb_String * type, MessageEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("MessageEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return MessageEvent_from_val(&vv);
       }

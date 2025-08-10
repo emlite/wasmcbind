@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct WritableStream WritableStream;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct WritableStream WritableStream;
 
 DECLARE_EMLITE_TYPE(WritableStreamDefaultWriter, em_Val);
 
@@ -28,3 +31,7 @@ jb_Undefined WritableStreamDefaultWriter_releaseLock(WritableStreamDefaultWriter
 jb_Promise WritableStreamDefaultWriter_write0(WritableStreamDefaultWriter* self );
 
 jb_Promise WritableStreamDefaultWriter_write1(WritableStreamDefaultWriter* self , jb_Any * chunk);
+
+#ifdef __cplusplus
+}
+#endif

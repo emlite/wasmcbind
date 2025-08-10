@@ -1,4 +1,5 @@
 #include <webbind/XRFrame.h>
+
 #include <webbind/XRSession.h>
 #include <webbind/XRViewerPose.h>
 #include <webbind/XRReferenceSpace.h>
@@ -19,7 +20,6 @@
 #include <webbind/XRLightEstimate.h>
 #include <webbind/XRLightProbe.h>
 #include <webbind/XRPlaneSet.h>
-
 
 DEFINE_EMLITE_TYPE(XRFrame, em_Val);
 

@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSTransformComponent.h"
 #include "enums.h"
 
-typedef struct CSSNumericValue CSSNumericValue;
+#include "CSSTransformComponent.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct CSSNumericValue CSSNumericValue;
 
 DECLARE_EMLITE_TYPE(CSSTranslate, CSSTransformComponent);
 
@@ -25,3 +29,7 @@ void CSSTranslate_set_y(CSSTranslate* self, CSSNumericValue * value);
 CSSNumericValue CSSTranslate_z(const CSSTranslate *self);
 
 void CSSTranslate_set_z(CSSTranslate* self, CSSNumericValue * value);
+
+#ifdef __cplusplus
+}
+#endif

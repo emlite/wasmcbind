@@ -1,8 +1,9 @@
 #include <webbind/SFrameTransform.h>
+
+#include <webbind/SFrameTransformOptions.h>
 #include <webbind/CryptoKey.h>
 #include <webbind/ReadableStream.h>
 #include <webbind/WritableStream.h>
-
 
 DEFINE_EMLITE_TYPE(SFrameTransform, EventTarget);
 
@@ -13,7 +14,7 @@ SFrameTransform SFrameTransform_new0() {
       }
 
 
-SFrameTransform SFrameTransform_new1(jb_Any * options) {
+SFrameTransform SFrameTransform_new1(SFrameTransformOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("SFrameTransform") , em_Val_from(options));
         return SFrameTransform_from_val(&vv);
       }

@@ -4,11 +4,18 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Node Node;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct Node Node;
 
 DECLARE_EMLITE_TYPE(XMLSerializer, em_Val);
 
 XMLSerializer XMLSerializer_new();
 
 jb_String XMLSerializer_serializeToString(XMLSerializer* self , Node * root);
+
+#ifdef __cplusplus
+}
+#endif

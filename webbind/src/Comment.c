@@ -1,6 +1,5 @@
 #include <webbind/Comment.h>
 
-
 DEFINE_EMLITE_TYPE(Comment, CharacterData);
 
 

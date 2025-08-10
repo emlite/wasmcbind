@@ -1,11 +1,12 @@
 #include <webbind/HIDConnectionEvent.h>
-#include <webbind/HIDDevice.h>
 
+#include <webbind/HIDConnectionEventInit.h>
+#include <webbind/HIDDevice.h>
 
 DEFINE_EMLITE_TYPE(HIDConnectionEvent, Event);
 
 
-HIDConnectionEvent HIDConnectionEvent_new(jb_String * type, jb_Any * eventInitDict) {
+HIDConnectionEvent HIDConnectionEvent_new(jb_String * type, HIDConnectionEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("HIDConnectionEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return HIDConnectionEvent_from_val(&vv);
       }

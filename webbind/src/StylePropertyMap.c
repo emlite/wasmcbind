@@ -1,6 +1,5 @@
 #include <webbind/StylePropertyMap.h>
 
-
 DEFINE_EMLITE_TYPE(StylePropertyMap, StylePropertyMapReadOnly);
 
 

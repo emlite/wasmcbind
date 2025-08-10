@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct ChildBreakToken ChildBreakToken;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct ChildBreakToken ChildBreakToken;
 
 DECLARE_EMLITE_TYPE(LayoutFragment, em_Val);
 
@@ -24,3 +27,7 @@ void LayoutFragment_set_blockOffset(LayoutFragment* self, double value);
 jb_Any LayoutFragment_data(const LayoutFragment *self);
 
 ChildBreakToken LayoutFragment_breakToken(const LayoutFragment *self);
+
+#ifdef __cplusplus
+}
+#endif

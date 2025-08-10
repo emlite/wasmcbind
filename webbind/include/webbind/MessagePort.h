@@ -2,17 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct StructuredSerializeOptions StructuredSerializeOptions;
 
-
-DECLARE_EMLITE_TYPE(StructuredSerializeOptions, em_Val);
-
-jb_Array StructuredSerializeOptions_transfer(const StructuredSerializeOptions *self);
-
-void StructuredSerializeOptions_set_transfer(StructuredSerializeOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(MessagePort, EventTarget);
 
 jb_Undefined MessagePort_postMessage0(MessagePort* self , jb_Any * message);
@@ -34,3 +33,7 @@ void MessagePort_set_onmessage(MessagePort* self, jb_Any * value);
 jb_Any MessagePort_onmessageerror(const MessagePort *self);
 
 void MessagePort_set_onmessageerror(MessagePort* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

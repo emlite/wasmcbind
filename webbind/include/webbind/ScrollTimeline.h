@@ -2,18 +2,27 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "AnimationTimeline.h"
 #include "enums.h"
 
-typedef struct Element Element;
+#include "AnimationTimeline.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct ScrollTimelineOptions ScrollTimelineOptions;
+typedef struct Element Element;
 
 DECLARE_EMLITE_TYPE(ScrollTimeline, AnimationTimeline);
 
 ScrollTimeline ScrollTimeline_new0();
 
-ScrollTimeline ScrollTimeline_new1(jb_Any * options);
+ScrollTimeline ScrollTimeline_new1(ScrollTimelineOptions * options);
 
 Element ScrollTimeline_source(const ScrollTimeline *self);
 
 ScrollAxis ScrollTimeline_axis(const ScrollTimeline *self);
+
+#ifdef __cplusplus
+}
+#endif

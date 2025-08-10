@@ -1,6 +1,7 @@
 #include <webbind/PointerTimeline.h>
-#include <webbind/Element.h>
 
+#include <webbind/PointerTimelineOptions.h>
+#include <webbind/Element.h>
 
 DEFINE_EMLITE_TYPE(PointerTimeline, AnimationTimeline);
 
@@ -11,7 +12,7 @@ PointerTimeline PointerTimeline_new0() {
       }
 
 
-PointerTimeline PointerTimeline_new1(jb_Any * options) {
+PointerTimeline PointerTimeline_new1(PointerTimelineOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("PointerTimeline") , em_Val_from(options));
         return PointerTimeline_from_val(&vv);
       }

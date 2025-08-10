@@ -1,6 +1,5 @@
 #include <webbind/CSSCounterStyleRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSCounterStyleRule, CSSRule);
 
 

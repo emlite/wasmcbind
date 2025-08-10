@@ -1,6 +1,5 @@
 #include <webbind/RTCDTMFSender.h>
 
-
 DEFINE_EMLITE_TYPE(RTCDTMFSender, EventTarget);
 
 

@@ -2,18 +2,27 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Event.h"
 #include "enums.h"
 
-typedef struct TimeRanges TimeRanges;
+#include "Event.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct BufferedChangeEventInit BufferedChangeEventInit;
+typedef struct TimeRanges TimeRanges;
 
 DECLARE_EMLITE_TYPE(BufferedChangeEvent, Event);
 
 BufferedChangeEvent BufferedChangeEvent_new0(jb_String * type);
 
-BufferedChangeEvent BufferedChangeEvent_new1(jb_String * type, jb_Any * eventInitDict);
+BufferedChangeEvent BufferedChangeEvent_new1(jb_String * type, BufferedChangeEventInit * eventInitDict);
 
 TimeRanges BufferedChangeEvent_addedRanges(const BufferedChangeEvent *self);
 
 TimeRanges BufferedChangeEvent_removedRanges(const BufferedChangeEvent *self);
+
+#ifdef __cplusplus
+}
+#endif

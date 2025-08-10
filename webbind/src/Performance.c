@@ -1,54 +1,12 @@
 #include <webbind/Performance.h>
+
 #include <webbind/EventCounts.h>
 #include <webbind/PerformanceTiming.h>
 #include <webbind/PerformanceNavigation.h>
+#include <webbind/MemoryMeasurement.h>
 #include <webbind/PerformanceMark.h>
+#include <webbind/PerformanceMarkOptions.h>
 #include <webbind/PerformanceMeasure.h>
-
-
-DEFINE_EMLITE_TYPE(MemoryMeasurement, em_Val);
-
-
-long long MemoryMeasurement_bytes(const MemoryMeasurement *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("bytes")));
-}
-
-
-void MemoryMeasurement_set_bytes(MemoryMeasurement* self, long long value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("bytes"), em_Val_from(value));
-}
-
-
-jb_Array MemoryMeasurement_breakdown(const MemoryMeasurement *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("breakdown")));
-}
-
-
-void MemoryMeasurement_set_breakdown(MemoryMeasurement* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("breakdown"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(PerformanceMarkOptions, em_Val);
-
-
-jb_Any PerformanceMarkOptions_detail(const PerformanceMarkOptions *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("detail")));
-}
-
-
-void PerformanceMarkOptions_set_detail(PerformanceMarkOptions* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("detail"), em_Val_from(value));
-}
-
-
-jb_Any PerformanceMarkOptions_startTime(const PerformanceMarkOptions *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("startTime")));
-}
-
-
-void PerformanceMarkOptions_set_startTime(PerformanceMarkOptions* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("startTime"), em_Val_from(value));
-}
 
 DEFINE_EMLITE_TYPE(Performance, EventTarget);
 

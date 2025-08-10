@@ -1,6 +1,5 @@
 #include <webbind/UserActivation.h>
 
-
 DEFINE_EMLITE_TYPE(UserActivation, em_Val);
 
 

@@ -1,12 +1,13 @@
 #include <webbind/FetchEvent.h>
+
+#include <webbind/FetchEventInit.h>
 #include <webbind/Request.h>
 #include <webbind/Response.h>
-
 
 DEFINE_EMLITE_TYPE(FetchEvent, ExtendableEvent);
 
 
-FetchEvent FetchEvent_new(jb_String * type, jb_Any * eventInitDict) {
+FetchEvent FetchEvent_new(jb_String * type, FetchEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("FetchEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return FetchEvent_from_val(&vv);
       }

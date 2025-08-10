@@ -2,13 +2,19 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Credential.h"
 #include "enums.h"
 
+#include "Credential.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct FederatedCredentialInit FederatedCredentialInit;
 
 DECLARE_EMLITE_TYPE(FederatedCredential, Credential);
 
-FederatedCredential FederatedCredential_new(jb_Any * data);
+FederatedCredential FederatedCredential_new(FederatedCredentialInit * data);
 
 jb_String FederatedCredential_provider(const FederatedCredential *self);
 
@@ -17,3 +23,7 @@ jb_String FederatedCredential_protocol(const FederatedCredential *self);
 jb_String FederatedCredential_name(const FederatedCredential *self);
 
 jb_String FederatedCredential_iconURL(const FederatedCredential *self);
+
+#ifdef __cplusplus
+}
+#endif

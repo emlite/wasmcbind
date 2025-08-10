@@ -2,8 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
+
+#include "SVGElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
@@ -11,7 +16,6 @@ typedef struct SVGAnimatedAngle SVGAnimatedAngle;
 typedef struct SVGAngle SVGAngle;
 typedef struct SVGAnimatedRect SVGAnimatedRect;
 typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
-
 
 DECLARE_EMLITE_TYPE(SVGMarkerElement, SVGElement);
 
@@ -40,3 +44,7 @@ jb_Undefined SVGMarkerElement_setOrientToAngle(SVGMarkerElement* self , SVGAngle
 SVGAnimatedRect SVGMarkerElement_viewBox(const SVGMarkerElement *self);
 
 SVGAnimatedPreserveAspectRatio SVGMarkerElement_preserveAspectRatio(const SVGMarkerElement *self);
+
+#ifdef __cplusplus
+}
+#endif

@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct CSSStyleValue CSSStyleValue;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct CSSStyleValue CSSStyleValue;
 
 DECLARE_EMLITE_TYPE(StylePropertyMapReadOnly, em_Val);
 
@@ -16,3 +19,7 @@ jb_Array StylePropertyMapReadOnly_getAll(StylePropertyMapReadOnly* self , jb_Str
 bool StylePropertyMapReadOnly_has(StylePropertyMapReadOnly* self , jb_String * property);
 
 unsigned long StylePropertyMapReadOnly_size(const StylePropertyMapReadOnly *self);
+
+#ifdef __cplusplus
+}
+#endif

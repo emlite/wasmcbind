@@ -1,7 +1,7 @@
 #include <webbind/SVGAnimatedRect.h>
+
 #include <webbind/DOMRect.h>
 #include <webbind/DOMRectReadOnly.h>
-
 
 DEFINE_EMLITE_TYPE(SVGAnimatedRect, em_Val);
 

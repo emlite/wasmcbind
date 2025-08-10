@@ -1,6 +1,6 @@
 #include <webbind/ViewTransition.h>
-#include <webbind/ViewTransitionTypeSet.h>
 
+#include <webbind/ViewTransitionTypeSet.h>
 
 DEFINE_EMLITE_TYPE(ViewTransition, em_Val);
 

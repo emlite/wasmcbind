@@ -1,6 +1,6 @@
 #include <webbind/InputDeviceInfo.h>
-#include <webbind/MediaStreamTrack.h>
 
+#include <webbind/MediaTrackCapabilities.h>
 
 DEFINE_EMLITE_TYPE(InputDeviceInfo, MediaDeviceInfo);
 

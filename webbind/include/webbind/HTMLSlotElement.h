@@ -2,19 +2,18 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct Node Node;
 typedef struct AssignedNodesOptions AssignedNodesOptions;
 typedef struct Element Element;
 
-
-DECLARE_EMLITE_TYPE(AssignedNodesOptions, em_Val);
-
-bool AssignedNodesOptions_flatten(const AssignedNodesOptions *self);
-
-void AssignedNodesOptions_set_flatten(AssignedNodesOptions* self, bool value);
 DECLARE_EMLITE_TYPE(HTMLSlotElement, HTMLElement);
 
 HTMLSlotElement HTMLSlotElement_new();
@@ -32,3 +31,7 @@ jb_Array HTMLSlotElement_assignedElements0(HTMLSlotElement* self );
 jb_Array HTMLSlotElement_assignedElements1(HTMLSlotElement* self , AssignedNodesOptions * options);
 
 jb_Undefined HTMLSlotElement_assign(HTMLSlotElement* self , jb_Any * nodes);
+
+#ifdef __cplusplus
+}
+#endif

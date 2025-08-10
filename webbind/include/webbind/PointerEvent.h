@@ -2,17 +2,21 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "MouseEvent.h"
 #include "enums.h"
 
-typedef struct PointerEvent PointerEvent;
+#include "MouseEvent.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct PointerEventInit PointerEventInit;
 
 DECLARE_EMLITE_TYPE(PointerEvent, MouseEvent);
 
 PointerEvent PointerEvent_new0(jb_String * type);
 
-PointerEvent PointerEvent_new1(jb_String * type, jb_Any * eventInitDict);
+PointerEvent PointerEvent_new1(jb_String * type, PointerEventInit * eventInitDict);
 
 long PointerEvent_pointerId(const PointerEvent *self);
 
@@ -43,3 +47,7 @@ long PointerEvent_persistentDeviceId(const PointerEvent *self);
 jb_Array PointerEvent_getCoalescedEvents(PointerEvent* self );
 
 jb_Array PointerEvent_getPredictedEvents(PointerEvent* self );
+
+#ifdef __cplusplus
+}
+#endif

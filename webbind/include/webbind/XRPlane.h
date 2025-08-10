@@ -4,9 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct XRSpace XRSpace;
 typedef struct DOMPointReadOnly DOMPointReadOnly;
-
 
 DECLARE_EMLITE_TYPE(XRPlane, em_Val);
 
@@ -19,3 +22,7 @@ XRPlaneOrientation XRPlane_orientation(const XRPlane *self);
 jb_Any XRPlane_lastChangedTime(const XRPlane *self);
 
 jb_String XRPlane_semanticLabel(const XRPlane *self);
+
+#ifdef __cplusplus
+}
+#endif

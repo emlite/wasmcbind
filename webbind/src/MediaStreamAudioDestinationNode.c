@@ -1,7 +1,8 @@
 #include <webbind/MediaStreamAudioDestinationNode.h>
-#include <webbind/MediaStream.h>
-#include <webbind/AudioContext.h>
 
+#include <webbind/AudioContext.h>
+#include <webbind/AudioNodeOptions.h>
+#include <webbind/MediaStream.h>
 
 DEFINE_EMLITE_TYPE(MediaStreamAudioDestinationNode, AudioNode);
 
@@ -12,7 +13,7 @@ MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode_new0(AudioContex
       }
 
 
-MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode_new1(AudioContext * context, jb_Any * options) {
+MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode_new1(AudioContext * context, AudioNodeOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("MediaStreamAudioDestinationNode") , em_Val_from(context), em_Val_from(options));
         return MediaStreamAudioDestinationNode_from_val(&vv);
       }

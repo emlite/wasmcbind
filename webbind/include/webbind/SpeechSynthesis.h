@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SpeechSynthesisUtterance SpeechSynthesisUtterance;
 typedef struct SpeechSynthesisVoice SpeechSynthesisVoice;
-
 
 DECLARE_EMLITE_TYPE(SpeechSynthesis, EventTarget);
 
@@ -30,3 +34,7 @@ jb_Undefined SpeechSynthesis_pause(SpeechSynthesis* self );
 jb_Undefined SpeechSynthesis_resume(SpeechSynthesis* self );
 
 jb_Array SpeechSynthesis_getVoices(SpeechSynthesis* self );
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,7 +1,8 @@
 #include <webbind/CSSStyleSheet.h>
+
+#include <webbind/CSSStyleSheetInit.h>
 #include <webbind/CSSRule.h>
 #include <webbind/CSSRuleList.h>
-
 
 DEFINE_EMLITE_TYPE(CSSStyleSheet, StyleSheet);
 
@@ -12,7 +13,7 @@ CSSStyleSheet CSSStyleSheet_new0() {
       }
 
 
-CSSStyleSheet CSSStyleSheet_new1(jb_Any * options) {
+CSSStyleSheet CSSStyleSheet_new1(CSSStyleSheetInit * options) {
         em_Val vv = em_Val_new(em_Val_global("CSSStyleSheet") , em_Val_from(options));
         return CSSStyleSheet_from_val(&vv);
       }

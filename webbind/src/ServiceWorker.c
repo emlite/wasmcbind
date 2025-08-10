@@ -1,6 +1,6 @@
 #include <webbind/ServiceWorker.h>
-#include <webbind/MessagePort.h>
 
+#include <webbind/StructuredSerializeOptions.h>
 
 DEFINE_EMLITE_TYPE(ServiceWorker, EventTarget);
 

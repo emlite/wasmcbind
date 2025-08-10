@@ -1,6 +1,5 @@
 #include <webbind/WebTransportWriter.h>
 
-
 DEFINE_EMLITE_TYPE(WebTransportWriter, WritableStreamDefaultWriter);
 
 

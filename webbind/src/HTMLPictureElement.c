@@ -1,6 +1,5 @@
 #include <webbind/HTMLPictureElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLPictureElement, HTMLElement);
 
 

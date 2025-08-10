@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct DOMTokenList DOMTokenList;
 typedef struct CSSStyleSheet CSSStyleSheet;
-
 
 DECLARE_EMLITE_TYPE(HTMLLinkElement, HTMLElement);
 
@@ -84,3 +88,7 @@ jb_String HTMLLinkElement_target(const HTMLLinkElement *self);
 void HTMLLinkElement_set_target(HTMLLinkElement* self, jb_String * value);
 
 CSSStyleSheet HTMLLinkElement_sheet(const HTMLLinkElement *self);
+
+#ifdef __cplusplus
+}
+#endif

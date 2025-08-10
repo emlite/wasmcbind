@@ -4,10 +4,13 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct Node Node;
 typedef struct DocumentFragment DocumentFragment;
 typedef struct Document Document;
-
 
 DECLARE_EMLITE_TYPE(XSLTProcessor, em_Val);
 
@@ -28,3 +31,7 @@ jb_Undefined XSLTProcessor_removeParameter(XSLTProcessor* self , jb_String * nam
 jb_Undefined XSLTProcessor_clearParameters(XSLTProcessor* self );
 
 jb_Undefined XSLTProcessor_reset(XSLTProcessor* self );
+
+#ifdef __cplusplus
+}
+#endif

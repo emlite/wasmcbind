@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct TextTrack TextTrack;
+#include "HTMLElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct TextTrack TextTrack;
 
 DECLARE_EMLITE_TYPE(HTMLTrackElement, HTMLElement);
 
@@ -35,3 +39,7 @@ void HTMLTrackElement_set_default_(HTMLTrackElement* self, bool value);
 unsigned short HTMLTrackElement_readyState(const HTMLTrackElement *self);
 
 TextTrack HTMLTrackElement_track(const HTMLTrackElement *self);
+
+#ifdef __cplusplus
+}
+#endif

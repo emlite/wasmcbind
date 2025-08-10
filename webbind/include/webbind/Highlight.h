@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct AbstractRange AbstractRange;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct AbstractRange AbstractRange;
 
 DECLARE_EMLITE_TYPE(Highlight, em_Val);
 
@@ -18,3 +21,7 @@ void Highlight_set_priority(Highlight* self, long value);
 HighlightType Highlight_type(const Highlight *self);
 
 void Highlight_set_type(Highlight* self, HighlightType * value);
+
+#ifdef __cplusplus
+}
+#endif

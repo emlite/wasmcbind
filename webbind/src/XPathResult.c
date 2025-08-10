@@ -1,6 +1,6 @@
 #include <webbind/XPathResult.h>
-#include <webbind/Node.h>
 
+#include <webbind/Node.h>
 
 DEFINE_EMLITE_TYPE(XPathResult, em_Val);
 

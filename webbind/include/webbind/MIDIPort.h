@@ -2,11 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct MIDIPort MIDIPort;
+#include "EventTarget.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(MIDIPort, EventTarget);
 
@@ -31,3 +33,7 @@ void MIDIPort_set_onstatechange(MIDIPort* self, jb_Any * value);
 jb_Promise MIDIPort_open(MIDIPort* self );
 
 jb_Promise MIDIPort_close(MIDIPort* self );
+
+#ifdef __cplusplus
+}
+#endif

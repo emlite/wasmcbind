@@ -4,12 +4,17 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct TableDescriptor TableDescriptor;
 
 DECLARE_EMLITE_TYPE(Table, em_Val);
 
-Table Table_new0(jb_Any * descriptor);
+Table Table_new0(TableDescriptor * descriptor);
 
-Table Table_new1(jb_Any * descriptor, jb_Any * value);
+Table Table_new1(TableDescriptor * descriptor, jb_Any * value);
 
 unsigned long Table_grow0(Table* self , unsigned long delta);
 
@@ -22,3 +27,7 @@ jb_Undefined Table_set0(Table* self , unsigned long index);
 jb_Undefined Table_set1(Table* self , unsigned long index, jb_Any * value);
 
 unsigned long Table_length(const Table *self);
+
+#ifdef __cplusplus
+}
+#endif

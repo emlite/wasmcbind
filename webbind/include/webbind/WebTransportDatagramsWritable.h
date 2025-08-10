@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "WritableStream.h"
 #include "enums.h"
 
-typedef struct WebTransportSendGroup WebTransportSendGroup;
+#include "WritableStream.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct WebTransportSendGroup WebTransportSendGroup;
 
 DECLARE_EMLITE_TYPE(WebTransportDatagramsWritable, WritableStream);
 
@@ -17,3 +21,7 @@ void WebTransportDatagramsWritable_set_sendGroup(WebTransportDatagramsWritable* 
 long long WebTransportDatagramsWritable_sendOrder(const WebTransportDatagramsWritable *self);
 
 void WebTransportDatagramsWritable_set_sendOrder(WebTransportDatagramsWritable* self, long long value);
+
+#ifdef __cplusplus
+}
+#endif

@@ -2,18 +2,22 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CanvasRenderingContext2D.h"
-#include "SVGSVGElement.h"
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct OffscreenCanvas OffscreenCanvas;
+typedef struct CanvasRenderingContext2DSettings CanvasRenderingContext2DSettings;
 typedef struct DOMMatrix DOMMatrix;
+typedef struct DOMMatrix2DInit DOMMatrix2DInit;
 typedef struct CanvasGradient CanvasGradient;
 typedef struct CanvasPattern CanvasPattern;
 typedef struct Path2D Path2D;
 typedef struct TextMetrics TextMetrics;
 typedef struct ImageData ImageData;
-
+typedef struct ImageDataSettings ImageDataSettings;
 
 DECLARE_EMLITE_TYPE(OffscreenCanvasRenderingContext2D, em_Val);
 
@@ -234,3 +238,7 @@ jb_Undefined OffscreenCanvasRenderingContext2D_arc1(OffscreenCanvasRenderingCont
 jb_Undefined OffscreenCanvasRenderingContext2D_ellipse0(OffscreenCanvasRenderingContext2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle);
 
 jb_Undefined OffscreenCanvasRenderingContext2D_ellipse1(OffscreenCanvasRenderingContext2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise);
+
+#ifdef __cplusplus
+}
+#endif

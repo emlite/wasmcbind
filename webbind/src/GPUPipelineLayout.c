@@ -1,6 +1,5 @@
 #include <webbind/GPUPipelineLayout.h>
 
-
 DEFINE_EMLITE_TYPE(GPUPipelineLayout, em_Val);
 
 

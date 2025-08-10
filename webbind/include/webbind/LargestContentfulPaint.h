@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "PerformanceEntry.h"
 #include "enums.h"
 
-typedef struct Element Element;
+#include "PerformanceEntry.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct Element Element;
 
 DECLARE_EMLITE_TYPE(LargestContentfulPaint, PerformanceEntry);
 
@@ -25,3 +29,7 @@ jb_Object LargestContentfulPaint_toJSON(LargestContentfulPaint* self );
 jb_Any LargestContentfulPaint_paintTime(const LargestContentfulPaint *self);
 
 jb_Any LargestContentfulPaint_presentationTime(const LargestContentfulPaint *self);
+
+#ifdef __cplusplus
+}
+#endif

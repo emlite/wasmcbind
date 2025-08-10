@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "PerformanceEntry.h"
 #include "enums.h"
 
-typedef struct PerformanceScriptTiming PerformanceScriptTiming;
+#include "PerformanceEntry.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct PerformanceScriptTiming PerformanceScriptTiming;
 
 DECLARE_EMLITE_TYPE(PerformanceLongAnimationFrameTiming, PerformanceEntry);
 
@@ -33,3 +37,7 @@ jb_Object PerformanceLongAnimationFrameTiming_toJSON(PerformanceLongAnimationFra
 jb_Any PerformanceLongAnimationFrameTiming_paintTime(const PerformanceLongAnimationFrameTiming *self);
 
 jb_Any PerformanceLongAnimationFrameTiming_presentationTime(const PerformanceLongAnimationFrameTiming *self);
+
+#ifdef __cplusplus
+}
+#endif

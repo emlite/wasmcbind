@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Attr Attr;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct Attr Attr;
 
 DECLARE_EMLITE_TYPE(NamedNodeMap, em_Val);
 
@@ -24,3 +27,7 @@ Attr NamedNodeMap_setNamedItemNS(NamedNodeMap* self , Attr * attr);
 Attr NamedNodeMap_removeNamedItem(NamedNodeMap* self , jb_String * qualifiedName);
 
 Attr NamedNodeMap_removeNamedItemNS(NamedNodeMap* self , jb_String * namespace_, jb_String * localName);
+
+#ifdef __cplusplus
+}
+#endif

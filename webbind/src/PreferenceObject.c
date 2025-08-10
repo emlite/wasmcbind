@@ -1,6 +1,5 @@
 #include <webbind/PreferenceObject.h>
 
-
 DEFINE_EMLITE_TYPE(PreferenceObject, EventTarget);
 
 

@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLFontElement, HTMLElement);
 
@@ -21,3 +25,7 @@ void HTMLFontElement_set_face(HTMLFontElement* self, jb_String * value);
 jb_String HTMLFontElement_size(const HTMLFontElement *self);
 
 void HTMLFontElement_set_size(HTMLFontElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

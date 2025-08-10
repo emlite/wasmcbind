@@ -4,10 +4,13 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct DocumentType DocumentType;
 typedef struct XMLDocument XMLDocument;
 typedef struct Document Document;
-
 
 DECLARE_EMLITE_TYPE(DOMImplementation, em_Val);
 
@@ -22,3 +25,7 @@ Document DOMImplementation_createHTMLDocument0(DOMImplementation* self );
 Document DOMImplementation_createHTMLDocument1(DOMImplementation* self , jb_String * title);
 
 bool DOMImplementation_hasFeature(DOMImplementation* self );
+
+#ifdef __cplusplus
+}
+#endif

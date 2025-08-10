@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(Sensor, EventTarget);
 
@@ -29,3 +33,7 @@ void Sensor_set_onactivate(Sensor* self, jb_Any * value);
 jb_Any Sensor_onerror(const Sensor *self);
 
 void Sensor_set_onerror(Sensor* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,5 @@
 #include <webbind/CSSFunctionDescriptors.h>
 
-
 DEFINE_EMLITE_TYPE(CSSFunctionDescriptors, CSSStyleDeclaration);
 
 

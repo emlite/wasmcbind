@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct ImageDataSettings ImageDataSettings;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct ImageDataSettings ImageDataSettings;
 
 DECLARE_EMLITE_TYPE(ImageData, em_Val);
 
@@ -24,3 +27,7 @@ jb_Any ImageData_data(const ImageData *self);
 ImageDataPixelFormat ImageData_pixelFormat(const ImageData *self);
 
 PredefinedColorSpace ImageData_colorSpace(const ImageData *self);
+
+#ifdef __cplusplus
+}
+#endif

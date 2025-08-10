@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct SpeechSynthesisVoice SpeechSynthesisVoice;
+#include "EventTarget.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct SpeechSynthesisVoice SpeechSynthesisVoice;
 
 DECLARE_EMLITE_TYPE(SpeechSynthesisUtterance, EventTarget);
 
@@ -65,3 +69,7 @@ void SpeechSynthesisUtterance_set_onmark(SpeechSynthesisUtterance* self, jb_Any 
 jb_Any SpeechSynthesisUtterance_onboundary(const SpeechSynthesisUtterance *self);
 
 void SpeechSynthesisUtterance_set_onboundary(SpeechSynthesisUtterance* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

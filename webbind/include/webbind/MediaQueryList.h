@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(MediaQueryList, EventTarget);
 
@@ -19,3 +23,7 @@ jb_Undefined MediaQueryList_removeListener(MediaQueryList* self , jb_Function * 
 jb_Any MediaQueryList_onchange(const MediaQueryList *self);
 
 void MediaQueryList_set_onchange(MediaQueryList* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

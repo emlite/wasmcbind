@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(PerformanceEntry, em_Val);
 
@@ -20,3 +23,7 @@ jb_Any PerformanceEntry_duration(const PerformanceEntry *self);
 long long PerformanceEntry_navigationId(const PerformanceEntry *self);
 
 jb_Object PerformanceEntry_toJSON(PerformanceEntry* self );
+
+#ifdef __cplusplus
+}
+#endif

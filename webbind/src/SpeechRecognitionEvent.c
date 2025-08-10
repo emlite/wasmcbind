@@ -1,11 +1,12 @@
 #include <webbind/SpeechRecognitionEvent.h>
-#include <webbind/SpeechRecognitionResultList.h>
 
+#include <webbind/SpeechRecognitionEventInit.h>
+#include <webbind/SpeechRecognitionResultList.h>
 
 DEFINE_EMLITE_TYPE(SpeechRecognitionEvent, Event);
 
 
-SpeechRecognitionEvent SpeechRecognitionEvent_new(jb_String * type, jb_Any * eventInitDict) {
+SpeechRecognitionEvent SpeechRecognitionEvent_new(jb_String * type, SpeechRecognitionEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("SpeechRecognitionEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return SpeechRecognitionEvent_from_val(&vv);
       }

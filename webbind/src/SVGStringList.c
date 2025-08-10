@@ -1,6 +1,5 @@
 #include <webbind/SVGStringList.h>
 
-
 DEFINE_EMLITE_TYPE(SVGStringList, em_Val);
 
 

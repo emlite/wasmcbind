@@ -1,93 +1,10 @@
 #include <webbind/RTCIceTransport.h>
+
 #include <webbind/RTCIceCandidate.h>
 #include <webbind/RTCIceCandidatePair.h>
-
-
-DEFINE_EMLITE_TYPE(RTCIceParameters, em_Val);
-
-
-jb_String RTCIceParameters_usernameFragment(const RTCIceParameters *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("usernameFragment")));
-}
-
-
-void RTCIceParameters_set_usernameFragment(RTCIceParameters* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("usernameFragment"), em_Val_from(value));
-}
-
-
-jb_String RTCIceParameters_password(const RTCIceParameters *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("password")));
-}
-
-
-void RTCIceParameters_set_password(RTCIceParameters* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("password"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(RTCIceGatherOptions, em_Val);
-
-
-RTCIceTransportPolicy RTCIceGatherOptions_gatherPolicy(const RTCIceGatherOptions *self) {
-    return em_Val_as(RTCIceTransportPolicy, em_Val_get(em_Val_as_val(self->inner), em_Val_from("gatherPolicy")));
-}
-
-
-void RTCIceGatherOptions_set_gatherPolicy(RTCIceGatherOptions* self, RTCIceTransportPolicy * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("gatherPolicy"), em_Val_from(value));
-}
-
-
-jb_Array RTCIceGatherOptions_iceServers(const RTCIceGatherOptions *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("iceServers")));
-}
-
-
-void RTCIceGatherOptions_set_iceServers(RTCIceGatherOptions* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("iceServers"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(RTCIceCandidateInit, em_Val);
-
-
-jb_String RTCIceCandidateInit_candidate(const RTCIceCandidateInit *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("candidate")));
-}
-
-
-void RTCIceCandidateInit_set_candidate(RTCIceCandidateInit* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("candidate"), em_Val_from(value));
-}
-
-
-jb_String RTCIceCandidateInit_sdpMid(const RTCIceCandidateInit *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sdpMid")));
-}
-
-
-void RTCIceCandidateInit_set_sdpMid(RTCIceCandidateInit* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("sdpMid"), em_Val_from(value));
-}
-
-
-unsigned short RTCIceCandidateInit_sdpMLineIndex(const RTCIceCandidateInit *self) {
-    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sdpMLineIndex")));
-}
-
-
-void RTCIceCandidateInit_set_sdpMLineIndex(RTCIceCandidateInit* self, unsigned short value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("sdpMLineIndex"), em_Val_from(value));
-}
-
-
-jb_String RTCIceCandidateInit_usernameFragment(const RTCIceCandidateInit *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("usernameFragment")));
-}
-
-
-void RTCIceCandidateInit_set_usernameFragment(RTCIceCandidateInit* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("usernameFragment"), em_Val_from(value));
-}
+#include <webbind/RTCIceParameters.h>
+#include <webbind/RTCIceGatherOptions.h>
+#include <webbind/RTCIceCandidateInit.h>
 
 DEFINE_EMLITE_TYPE(RTCIceTransport, EventTarget);
 

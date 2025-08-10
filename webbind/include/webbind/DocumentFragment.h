@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Node.h"
 #include "enums.h"
+
+#include "Node.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct Element Element;
 typedef struct HTMLCollection HTMLCollection;
 typedef struct NodeList NodeList;
-
 
 DECLARE_EMLITE_TYPE(DocumentFragment, Node);
 
@@ -35,3 +39,7 @@ jb_Undefined DocumentFragment_moveBefore(DocumentFragment* self , Node * node, N
 Element DocumentFragment_querySelector(DocumentFragment* self , jb_String * selectors);
 
 NodeList DocumentFragment_querySelectorAll(DocumentFragment* self , jb_String * selectors);
+
+#ifdef __cplusplus
+}
+#endif

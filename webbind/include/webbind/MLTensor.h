@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(MLTensor, em_Val);
 
@@ -18,3 +21,7 @@ bool MLTensor_writable(const MLTensor *self);
 bool MLTensor_constant(const MLTensor *self);
 
 jb_Undefined MLTensor_destroy(MLTensor* self );
+
+#ifdef __cplusplus
+}
+#endif

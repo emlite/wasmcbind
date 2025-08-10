@@ -1,6 +1,5 @@
 #include <webbind/LayoutConstraints.h>
 
-
 DEFINE_EMLITE_TYPE(LayoutConstraints, em_Val);
 
 

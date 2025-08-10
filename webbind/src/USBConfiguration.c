@@ -1,7 +1,7 @@
 #include <webbind/USBConfiguration.h>
-#include <webbind/USBInterface.h>
-#include <webbind/USBDevice.h>
 
+#include <webbind/USBDevice.h>
+#include <webbind/USBInterface.h>
 
 DEFINE_EMLITE_TYPE(USBConfiguration, em_Val);
 

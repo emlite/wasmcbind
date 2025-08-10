@@ -1,6 +1,6 @@
 #include <webbind/Viewport.h>
-#include <webbind/DOMRect.h>
 
+#include <webbind/DOMRect.h>
 
 DEFINE_EMLITE_TYPE(Viewport, em_Val);
 

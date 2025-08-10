@@ -1,6 +1,6 @@
 #include <webbind/XRSubImage.h>
-#include <webbind/XRViewport.h>
 
+#include <webbind/XRViewport.h>
 
 DEFINE_EMLITE_TYPE(XRSubImage, em_Val);
 

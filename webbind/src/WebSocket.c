@@ -1,6 +1,5 @@
 #include <webbind/WebSocket.h>
 
-
 DEFINE_EMLITE_TYPE(WebSocket, EventTarget);
 
 

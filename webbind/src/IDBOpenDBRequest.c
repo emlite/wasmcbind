@@ -1,6 +1,5 @@
 #include <webbind/IDBOpenDBRequest.h>
 
-
 DEFINE_EMLITE_TYPE(IDBOpenDBRequest, IDBRequest);
 
 

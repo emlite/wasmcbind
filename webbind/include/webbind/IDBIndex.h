@@ -4,9 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct IDBObjectStore IDBObjectStore;
 typedef struct IDBRequest IDBRequest;
-
 
 DECLARE_EMLITE_TYPE(IDBIndex, em_Val);
 
@@ -53,3 +56,7 @@ IDBRequest IDBIndex_openKeyCursor0(IDBIndex* self );
 IDBRequest IDBIndex_openKeyCursor1(IDBIndex* self , jb_Any * query);
 
 IDBRequest IDBIndex_openKeyCursor2(IDBIndex* self , jb_Any * query, IDBCursorDirection * direction);
+
+#ifdef __cplusplus
+}
+#endif

@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct HTMLElement HTMLElement;
+#include "EventTarget.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct HTMLElement HTMLElement;
 
 DECLARE_EMLITE_TYPE(CaptureController, EventTarget);
 
@@ -33,3 +37,7 @@ jb_Any CaptureController_onzoomlevelchange(const CaptureController *self);
 void CaptureController_set_onzoomlevelchange(CaptureController* self, jb_Any * value);
 
 jb_Promise CaptureController_forwardWheel(CaptureController* self , HTMLElement * element);
+
+#ifdef __cplusplus
+}
+#endif

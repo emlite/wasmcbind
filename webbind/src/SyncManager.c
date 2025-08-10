@@ -1,6 +1,5 @@
 #include <webbind/SyncManager.h>
 
-
 DEFINE_EMLITE_TYPE(SyncManager, em_Val);
 
 

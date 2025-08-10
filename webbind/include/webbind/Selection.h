@@ -4,18 +4,15 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct Node Node;
 typedef struct Range Range;
 typedef struct StaticRange StaticRange;
 typedef struct GetComposedRangesOptions GetComposedRangesOptions;
-typedef struct ShadowRoot ShadowRoot;
 
-
-DECLARE_EMLITE_TYPE(GetComposedRangesOptions, em_Val);
-
-jb_Array GetComposedRangesOptions_shadowRoots(const GetComposedRangesOptions *self);
-
-void GetComposedRangesOptions_set_shadowRoots(GetComposedRangesOptions* self, jb_Array * value);
 DECLARE_EMLITE_TYPE(Selection, em_Val);
 
 Node Selection_anchorNode(const Selection *self);
@@ -81,3 +78,7 @@ jb_Undefined Selection_deleteFromDocument(Selection* self );
 bool Selection_containsNode0(Selection* self , Node * node);
 
 bool Selection_containsNode1(Selection* self , Node * node, bool allowPartialContainment);
+
+#ifdef __cplusplus
+}
+#endif

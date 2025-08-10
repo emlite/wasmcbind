@@ -1,6 +1,6 @@
 #include <webbind/HTMLMeterElement.h>
-#include <webbind/NodeList.h>
 
+#include <webbind/NodeList.h>
 
 DEFINE_EMLITE_TYPE(HTMLMeterElement, HTMLElement);
 

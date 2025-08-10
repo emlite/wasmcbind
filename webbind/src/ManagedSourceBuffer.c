@@ -1,6 +1,5 @@
 #include <webbind/ManagedSourceBuffer.h>
 
-
 DEFINE_EMLITE_TYPE(ManagedSourceBuffer, SourceBuffer);
 
 

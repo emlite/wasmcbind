@@ -1,6 +1,6 @@
 #include <webbind/RTCSessionDescription.h>
-#include <webbind/RTCPeerConnection.h>
 
+#include <webbind/RTCSessionDescriptionInit.h>
 
 DEFINE_EMLITE_TYPE(RTCSessionDescription, em_Val);
 

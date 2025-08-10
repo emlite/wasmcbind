@@ -4,8 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct AudioParam AudioParam;
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(AudioParam, em_Val);
 
@@ -36,3 +37,7 @@ AudioParam AudioParam_setValueCurveAtTime(AudioParam* self , jb_Array * values, 
 AudioParam AudioParam_cancelScheduledValues(AudioParam* self , double cancelTime);
 
 AudioParam AudioParam_cancelAndHoldAtTime(AudioParam* self , double cancelTime);
+
+#ifdef __cplusplus
+}
+#endif

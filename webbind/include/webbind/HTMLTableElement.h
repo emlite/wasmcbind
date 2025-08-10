@@ -2,14 +2,18 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct HTMLTableCaptionElement HTMLTableCaptionElement;
 typedef struct HTMLTableSectionElement HTMLTableSectionElement;
 typedef struct HTMLCollection HTMLCollection;
 typedef struct HTMLTableRowElement HTMLTableRowElement;
-
 
 DECLARE_EMLITE_TYPE(HTMLTableElement, HTMLElement);
 
@@ -86,3 +90,7 @@ void HTMLTableElement_set_cellPadding(HTMLTableElement* self, jb_String * value)
 jb_String HTMLTableElement_cellSpacing(const HTMLTableElement *self);
 
 void HTMLTableElement_set_cellSpacing(HTMLTableElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

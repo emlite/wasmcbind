@@ -2,8 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGGraphicsElement.h"
 #include "enums.h"
+
+#include "SVGGraphicsElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 typedef struct DOMPointReadOnly DOMPointReadOnly;
@@ -22,56 +27,6 @@ typedef struct Element Element;
 typedef struct SVGAnimatedRect SVGAnimatedRect;
 typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
 
-
-DECLARE_EMLITE_TYPE(DOMMatrix2DInit, em_Val);
-
-double DOMMatrix2DInit_a(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_a(DOMMatrix2DInit* self, double value);
-
-double DOMMatrix2DInit_b(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_b(DOMMatrix2DInit* self, double value);
-
-double DOMMatrix2DInit_c(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_c(DOMMatrix2DInit* self, double value);
-
-double DOMMatrix2DInit_d(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_d(DOMMatrix2DInit* self, double value);
-
-double DOMMatrix2DInit_e(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_e(DOMMatrix2DInit* self, double value);
-
-double DOMMatrix2DInit_f(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_f(DOMMatrix2DInit* self, double value);
-
-double DOMMatrix2DInit_m11(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_m11(DOMMatrix2DInit* self, double value);
-
-double DOMMatrix2DInit_m12(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_m12(DOMMatrix2DInit* self, double value);
-
-double DOMMatrix2DInit_m21(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_m21(DOMMatrix2DInit* self, double value);
-
-double DOMMatrix2DInit_m22(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_m22(DOMMatrix2DInit* self, double value);
-
-double DOMMatrix2DInit_m41(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_m41(DOMMatrix2DInit* self, double value);
-
-double DOMMatrix2DInit_m42(const DOMMatrix2DInit *self);
-
-void DOMMatrix2DInit_set_m42(DOMMatrix2DInit* self, double value);
 DECLARE_EMLITE_TYPE(SVGSVGElement, SVGGraphicsElement);
 
 SVGAnimatedLength SVGSVGElement_x(const SVGSVGElement *self);
@@ -143,3 +98,7 @@ SVGAnimatedPreserveAspectRatio SVGSVGElement_preserveAspectRatio(const SVGSVGEle
 jb_Any SVGSVGElement_onportalactivate(const SVGSVGElement *self);
 
 void SVGSVGElement_set_onportalactivate(SVGSVGElement* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

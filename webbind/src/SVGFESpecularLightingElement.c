@@ -1,8 +1,8 @@
 #include <webbind/SVGFESpecularLightingElement.h>
+
 #include <webbind/SVGAnimatedString.h>
 #include <webbind/SVGAnimatedNumber.h>
 #include <webbind/SVGAnimatedLength.h>
-
 
 DEFINE_EMLITE_TYPE(SVGFESpecularLightingElement, SVGElement);
 

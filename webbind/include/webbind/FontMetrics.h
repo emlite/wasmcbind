@@ -4,9 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct Baseline Baseline;
 typedef struct Font Font;
-
 
 DECLARE_EMLITE_TYPE(FontMetrics, em_Val);
 
@@ -37,3 +40,7 @@ Baseline FontMetrics_dominantBaseline(const FontMetrics *self);
 jb_Array FontMetrics_baselines(const FontMetrics *self);
 
 jb_Array FontMetrics_fonts(const FontMetrics *self);
+
+#ifdef __cplusplus
+}
+#endif

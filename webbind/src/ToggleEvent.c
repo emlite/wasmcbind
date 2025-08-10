@@ -1,6 +1,7 @@
 #include <webbind/ToggleEvent.h>
-#include <webbind/Element.h>
 
+#include <webbind/ToggleEventInit.h>
+#include <webbind/Element.h>
 
 DEFINE_EMLITE_TYPE(ToggleEvent, Event);
 
@@ -11,7 +12,7 @@ ToggleEvent ToggleEvent_new0(jb_String * type) {
       }
 
 
-ToggleEvent ToggleEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+ToggleEvent ToggleEvent_new1(jb_String * type, ToggleEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("ToggleEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return ToggleEvent_from_val(&vv);
       }

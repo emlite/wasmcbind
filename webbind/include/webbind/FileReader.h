@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct Blob Blob;
 typedef struct DOMException DOMException;
-
 
 DECLARE_EMLITE_TYPE(FileReader, EventTarget);
 
@@ -54,3 +58,7 @@ void FileReader_set_onerror(FileReader* self, jb_Any * value);
 jb_Any FileReader_onloadend(const FileReader *self);
 
 void FileReader_set_onloadend(FileReader* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

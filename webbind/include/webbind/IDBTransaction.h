@@ -2,14 +2,18 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct DOMStringList DOMStringList;
 typedef struct IDBDatabase IDBDatabase;
 typedef struct DOMException DOMException;
 typedef struct IDBObjectStore IDBObjectStore;
-
 
 DECLARE_EMLITE_TYPE(IDBTransaction, EventTarget);
 
@@ -40,3 +44,7 @@ void IDBTransaction_set_oncomplete(IDBTransaction* self, jb_Any * value);
 jb_Any IDBTransaction_onerror(const IDBTransaction *self);
 
 void IDBTransaction_set_onerror(IDBTransaction* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

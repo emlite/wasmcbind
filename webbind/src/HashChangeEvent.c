@@ -1,5 +1,6 @@
 #include <webbind/HashChangeEvent.h>
 
+#include <webbind/HashChangeEventInit.h>
 
 DEFINE_EMLITE_TYPE(HashChangeEvent, Event);
 
@@ -10,7 +11,7 @@ HashChangeEvent HashChangeEvent_new0(jb_String * type) {
       }
 
 
-HashChangeEvent HashChangeEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+HashChangeEvent HashChangeEvent_new1(jb_String * type, HashChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("HashChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return HashChangeEvent_from_val(&vv);
       }

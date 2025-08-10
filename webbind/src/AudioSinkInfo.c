@@ -1,6 +1,5 @@
 #include <webbind/AudioSinkInfo.h>
 
-
 DEFINE_EMLITE_TYPE(AudioSinkInfo, em_Val);
 
 

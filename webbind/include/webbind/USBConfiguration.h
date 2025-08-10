@@ -4,9 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct USBInterface USBInterface;
-typedef struct USBDevice USBDevice;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct USBDevice USBDevice;
+typedef struct USBInterface USBInterface;
 
 DECLARE_EMLITE_TYPE(USBConfiguration, em_Val);
 
@@ -17,3 +20,7 @@ unsigned char USBConfiguration_configurationValue(const USBConfiguration *self);
 jb_String USBConfiguration_configurationName(const USBConfiguration *self);
 
 jb_Array USBConfiguration_interfaces(const USBConfiguration *self);
+
+#ifdef __cplusplus
+}
+#endif

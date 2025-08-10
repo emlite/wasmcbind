@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLMediaElement.h"
 #include "enums.h"
+
+#include "HTMLMediaElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct VideoPlaybackQuality VideoPlaybackQuality;
 typedef struct PictureInPictureWindow PictureInPictureWindow;
-
 
 DECLARE_EMLITE_TYPE(HTMLVideoElement, HTMLMediaElement);
 
@@ -52,3 +56,7 @@ void HTMLVideoElement_set_disablePictureInPicture(HTMLVideoElement* self, bool v
 unsigned long HTMLVideoElement_requestVideoFrameCallback(HTMLVideoElement* self , jb_Function * callback);
 
 jb_Undefined HTMLVideoElement_cancelVideoFrameCallback(HTMLVideoElement* self , unsigned long handle);
+
+#ifdef __cplusplus
+}
+#endif

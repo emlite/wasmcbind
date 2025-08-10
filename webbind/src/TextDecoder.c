@@ -1,17 +1,7 @@
 #include <webbind/TextDecoder.h>
 
-
-DEFINE_EMLITE_TYPE(TextDecodeOptions, em_Val);
-
-
-bool TextDecodeOptions_stream(const TextDecodeOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("stream")));
-}
-
-
-void TextDecodeOptions_set_stream(TextDecodeOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("stream"), em_Val_from(value));
-}
+#include <webbind/TextDecoderOptions.h>
+#include <webbind/TextDecodeOptions.h>
 
 DEFINE_EMLITE_TYPE(TextDecoder, em_Val);
 
@@ -28,7 +18,7 @@ TextDecoder TextDecoder_new1(jb_String * label) {
       }
 
 
-TextDecoder TextDecoder_new2(jb_String * label, jb_Any * options) {
+TextDecoder TextDecoder_new2(jb_String * label, TextDecoderOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("TextDecoder") , em_Val_from(label), em_Val_from(options));
         return TextDecoder_from_val(&vv);
       }

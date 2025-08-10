@@ -2,10 +2,20 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "AbstractRange.h"
 #include "enums.h"
 
+#include "AbstractRange.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct StaticRangeInit StaticRangeInit;
 
 DECLARE_EMLITE_TYPE(StaticRange, AbstractRange);
 
-StaticRange StaticRange_new(jb_Any * init);
+StaticRange StaticRange_new(StaticRangeInit * init);
+
+#ifdef __cplusplus
+}
+#endif

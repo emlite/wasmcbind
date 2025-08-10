@@ -1,6 +1,5 @@
 #include <webbind/HTMLSourceElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLSourceElement, HTMLElement);
 
 

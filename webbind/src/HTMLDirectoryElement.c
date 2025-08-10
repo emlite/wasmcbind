@@ -1,6 +1,5 @@
 #include <webbind/HTMLDirectoryElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLDirectoryElement, HTMLElement);
 
 

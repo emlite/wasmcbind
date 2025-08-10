@@ -2,15 +2,18 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "AbstractRange.h"
 #include "enums.h"
 
+#include "AbstractRange.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct Node Node;
-typedef struct Range Range;
 typedef struct DocumentFragment DocumentFragment;
 typedef struct DOMRectList DOMRectList;
 typedef struct DOMRect DOMRect;
-
 
 DECLARE_EMLITE_TYPE(Range, AbstractRange);
 
@@ -65,3 +68,7 @@ DOMRectList Range_getClientRects(Range* self );
 DOMRect Range_getBoundingClientRect(Range* self );
 
 DocumentFragment Range_createContextualFragment(Range* self , jb_Any * string);
+
+#ifdef __cplusplus
+}
+#endif

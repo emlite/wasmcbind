@@ -1,6 +1,5 @@
 #include <webbind/GPUDeviceLostInfo.h>
 
-
 DEFINE_EMLITE_TYPE(GPUDeviceLostInfo, em_Val);
 
 

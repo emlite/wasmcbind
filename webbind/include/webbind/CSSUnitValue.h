@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSNumericValue.h"
 #include "enums.h"
 
+#include "CSSNumericValue.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(CSSUnitValue, CSSNumericValue);
 
@@ -15,3 +19,7 @@ double CSSUnitValue_value(const CSSUnitValue *self);
 void CSSUnitValue_set_value(CSSUnitValue* self, double value);
 
 jb_String CSSUnitValue_unit(const CSSUnitValue *self);
+
+#ifdef __cplusplus
+}
+#endif

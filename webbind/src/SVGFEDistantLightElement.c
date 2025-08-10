@@ -1,6 +1,6 @@
 #include <webbind/SVGFEDistantLightElement.h>
-#include <webbind/SVGAnimatedNumber.h>
 
+#include <webbind/SVGAnimatedNumber.h>
 
 DEFINE_EMLITE_TYPE(SVGFEDistantLightElement, SVGElement);
 

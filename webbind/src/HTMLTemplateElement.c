@@ -1,6 +1,6 @@
 #include <webbind/HTMLTemplateElement.h>
-#include <webbind/DocumentFragment.h>
 
+#include <webbind/DocumentFragment.h>
 
 DEFINE_EMLITE_TYPE(HTMLTemplateElement, HTMLElement);
 

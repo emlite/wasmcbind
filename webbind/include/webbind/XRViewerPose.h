@@ -2,12 +2,20 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "XRPose.h"
 #include "enums.h"
 
-typedef struct XRView XRView;
+#include "XRPose.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct XRView XRView;
 
 DECLARE_EMLITE_TYPE(XRViewerPose, XRPose);
 
 jb_Array XRViewerPose_views(const XRViewerPose *self);
+
+#ifdef __cplusplus
+}
+#endif

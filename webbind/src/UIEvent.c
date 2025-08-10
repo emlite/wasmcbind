@@ -1,7 +1,8 @@
 #include <webbind/UIEvent.h>
+
+#include <webbind/UIEventInit.h>
 #include <webbind/Window.h>
 #include <webbind/InputDeviceCapabilities.h>
-
 
 DEFINE_EMLITE_TYPE(UIEvent, Event);
 
@@ -12,7 +13,7 @@ UIEvent UIEvent_new0(jb_String * type) {
       }
 
 
-UIEvent UIEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+UIEvent UIEvent_new1(jb_String * type, UIEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("UIEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return UIEvent_from_val(&vv);
       }

@@ -1,6 +1,5 @@
 #include <webbind/HTMLSpanElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLSpanElement, HTMLElement);
 
 

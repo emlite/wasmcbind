@@ -4,9 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct XRCamera XRCamera;
 typedef struct XRRigidTransform XRRigidTransform;
-
 
 DECLARE_EMLITE_TYPE(XRView, em_Val);
 
@@ -23,3 +26,7 @@ bool XRView_isFirstPersonObserver(const XRView *self);
 jb_Float32Array XRView_projectionMatrix(const XRView *self);
 
 XRRigidTransform XRView_transform(const XRView *self);
+
+#ifdef __cplusplus
+}
+#endif

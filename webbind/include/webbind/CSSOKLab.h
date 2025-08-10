@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSColorValue.h"
 #include "enums.h"
 
+#include "CSSColorValue.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(CSSOKLab, CSSColorValue);
 
@@ -27,3 +31,7 @@ void CSSOKLab_set_b(CSSOKLab* self, jb_Any * value);
 jb_Any CSSOKLab_alpha(const CSSOKLab *self);
 
 void CSSOKLab_set_alpha(CSSOKLab* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,7 +1,8 @@
 #include <webbind/ConvolverNode.h>
-#include <webbind/AudioBuffer.h>
-#include <webbind/BaseAudioContext.h>
 
+#include <webbind/BaseAudioContext.h>
+#include <webbind/ConvolverOptions.h>
+#include <webbind/AudioBuffer.h>
 
 DEFINE_EMLITE_TYPE(ConvolverNode, AudioNode);
 
@@ -12,7 +13,7 @@ ConvolverNode ConvolverNode_new0(BaseAudioContext * context) {
       }
 
 
-ConvolverNode ConvolverNode_new1(BaseAudioContext * context, jb_Any * options) {
+ConvolverNode ConvolverNode_new1(BaseAudioContext * context, ConvolverOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("ConvolverNode") , em_Val_from(context), em_Val_from(options));
         return ConvolverNode_from_val(&vv);
       }

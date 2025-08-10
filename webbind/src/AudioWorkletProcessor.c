@@ -1,6 +1,6 @@
 #include <webbind/AudioWorkletProcessor.h>
-#include <webbind/MessagePort.h>
 
+#include <webbind/MessagePort.h>
 
 DEFINE_EMLITE_TYPE(AudioWorkletProcessor, em_Val);
 
@@ -11,7 +11,7 @@ AudioWorkletProcessor AudioWorkletProcessor_new() {
       }
 
 
-jb_Any AudioWorkletProcessor_port(const AudioWorkletProcessor *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("port")));
+MessagePort AudioWorkletProcessor_port(const AudioWorkletProcessor *self) {
+    return em_Val_as(MessagePort, em_Val_get(em_Val_as_val(self->inner), em_Val_from("port")));
 }
 

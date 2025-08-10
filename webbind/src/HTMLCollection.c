@@ -1,6 +1,6 @@
 #include <webbind/HTMLCollection.h>
-#include <webbind/Element.h>
 
+#include <webbind/Element.h>
 
 DEFINE_EMLITE_TYPE(HTMLCollection, em_Val);
 

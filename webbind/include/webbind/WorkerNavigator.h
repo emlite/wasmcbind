@@ -4,6 +4,10 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct MediaCapabilities MediaCapabilities;
 typedef struct Permissions Permissions;
 typedef struct Serial Serial;
@@ -17,7 +21,6 @@ typedef struct NavigatorUAData NavigatorUAData;
 typedef struct LockManager LockManager;
 typedef struct GPU GPU;
 typedef struct ML ML;
-
 
 DECLARE_EMLITE_TYPE(WorkerNavigator, em_Val);
 
@@ -68,3 +71,7 @@ LockManager WorkerNavigator_locks(const WorkerNavigator *self);
 GPU WorkerNavigator_gpu(const WorkerNavigator *self);
 
 ML WorkerNavigator_ml(const WorkerNavigator *self);
+
+#ifdef __cplusplus
+}
+#endif

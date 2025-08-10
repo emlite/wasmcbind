@@ -1,6 +1,6 @@
 #include <webbind/AudioTrackList.h>
-#include <webbind/AudioTrack.h>
 
+#include <webbind/AudioTrack.h>
 
 DEFINE_EMLITE_TYPE(AudioTrackList, EventTarget);
 

@@ -1,6 +1,6 @@
 #include <webbind/XRReferenceSpace.h>
-#include <webbind/XRRigidTransform.h>
 
+#include <webbind/XRRigidTransform.h>
 
 DEFINE_EMLITE_TYPE(XRReferenceSpace, XRSpace);
 

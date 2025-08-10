@@ -1,6 +1,5 @@
 #include <webbind/IdleDeadline.h>
 
-
 DEFINE_EMLITE_TYPE(IdleDeadline, em_Val);
 
 

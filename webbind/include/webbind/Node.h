@@ -2,20 +2,19 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct Document Document;
 typedef struct GetRootNodeOptions GetRootNodeOptions;
 typedef struct Element Element;
 typedef struct NodeList NodeList;
 
-
-DECLARE_EMLITE_TYPE(GetRootNodeOptions, em_Val);
-
-bool GetRootNodeOptions_composed(const GetRootNodeOptions *self);
-
-void GetRootNodeOptions_set_composed(GetRootNodeOptions* self, bool value);
 DECLARE_EMLITE_TYPE(Node, EventTarget);
 
 unsigned short Node_nodeType(const Node *self);
@@ -83,3 +82,7 @@ Node Node_appendChild(Node* self , Node * node);
 Node Node_replaceChild(Node* self , Node * node, Node * child);
 
 Node Node_removeChild(Node* self , Node * child);
+
+#ifdef __cplusplus
+}
+#endif

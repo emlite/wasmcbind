@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct ViewTransitionTypeSet ViewTransitionTypeSet;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct ViewTransitionTypeSet ViewTransitionTypeSet;
 
 DECLARE_EMLITE_TYPE(ViewTransition, em_Val);
 
@@ -20,3 +23,7 @@ jb_Undefined ViewTransition_skipTransition(ViewTransition* self );
 ViewTransitionTypeSet ViewTransition_types(const ViewTransition *self);
 
 void ViewTransition_set_types(ViewTransition* self, ViewTransitionTypeSet * value);
+
+#ifdef __cplusplus
+}
+#endif

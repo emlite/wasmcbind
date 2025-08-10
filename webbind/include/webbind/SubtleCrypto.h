@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct CryptoKey CryptoKey;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct CryptoKey CryptoKey;
 
 DECLARE_EMLITE_TYPE(SubtleCrypto, em_Val);
 
@@ -34,3 +37,7 @@ jb_Promise SubtleCrypto_exportKey(SubtleCrypto* self , KeyFormat * format, Crypt
 jb_Promise SubtleCrypto_wrapKey(SubtleCrypto* self , KeyFormat * format, CryptoKey * key, CryptoKey * wrappingKey, jb_Any * wrapAlgorithm);
 
 jb_Promise SubtleCrypto_unwrapKey(SubtleCrypto* self , KeyFormat * format, jb_Any * wrappedKey, CryptoKey * unwrappingKey, jb_Any * unwrapAlgorithm, jb_Any * unwrappedKeyAlgorithm, bool extractable, jb_Array * keyUsages);
+
+#ifdef __cplusplus
+}
+#endif

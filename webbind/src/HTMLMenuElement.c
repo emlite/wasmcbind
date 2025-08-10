@@ -1,6 +1,5 @@
 #include <webbind/HTMLMenuElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLMenuElement, HTMLElement);
 
 

@@ -1,6 +1,6 @@
 #include <webbind/HTMLOptionsCollection.h>
-#include <webbind/HTMLOptionElement.h>
 
+#include <webbind/HTMLOptionElement.h>
 
 DEFINE_EMLITE_TYPE(HTMLOptionsCollection, HTMLCollection);
 

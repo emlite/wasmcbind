@@ -1,6 +1,5 @@
 #include <webbind/ResizeObserverSize.h>
 
-
 DEFINE_EMLITE_TYPE(ResizeObserverSize, em_Val);
 
 

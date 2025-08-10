@@ -1,10 +1,11 @@
 #include <webbind/FederatedCredential.h>
 
+#include <webbind/FederatedCredentialInit.h>
 
 DEFINE_EMLITE_TYPE(FederatedCredential, Credential);
 
 
-FederatedCredential FederatedCredential_new(jb_Any * data) {
+FederatedCredential FederatedCredential_new(FederatedCredentialInit * data) {
         em_Val vv = em_Val_new(em_Val_global("FederatedCredential") , em_Val_from(data));
         return FederatedCredential_from_val(&vv);
       }

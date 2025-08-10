@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "PerformanceEntry.h"
 #include "enums.h"
 
-typedef struct LayoutShiftAttribution LayoutShiftAttribution;
+#include "PerformanceEntry.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct LayoutShiftAttribution LayoutShiftAttribution;
 
 DECLARE_EMLITE_TYPE(LayoutShift, PerformanceEntry);
 
@@ -19,3 +23,7 @@ jb_Any LayoutShift_lastInputTime(const LayoutShift *self);
 jb_Array LayoutShift_sources(const LayoutShift *self);
 
 jb_Object LayoutShift_toJSON(LayoutShift* self );
+
+#ifdef __cplusplus
+}
+#endif

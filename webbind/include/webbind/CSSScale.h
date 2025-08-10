@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSTransformComponent.h"
 #include "enums.h"
 
+#include "CSSTransformComponent.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(CSSScale, CSSTransformComponent);
 
@@ -23,3 +27,7 @@ void CSSScale_set_y(CSSScale* self, jb_Any * value);
 jb_Any CSSScale_z(const CSSScale *self);
 
 void CSSScale_set_z(CSSScale* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

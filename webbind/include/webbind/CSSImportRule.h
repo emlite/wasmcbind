@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSRule.h"
 #include "enums.h"
+
+#include "CSSRule.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct MediaList MediaList;
 typedef struct CSSStyleSheet CSSStyleSheet;
-
 
 DECLARE_EMLITE_TYPE(CSSImportRule, CSSRule);
 
@@ -20,3 +24,7 @@ CSSStyleSheet CSSImportRule_styleSheet(const CSSImportRule *self);
 jb_String CSSImportRule_layerName(const CSSImportRule *self);
 
 jb_String CSSImportRule_supportsText(const CSSImportRule *self);
+
+#ifdef __cplusplus
+}
+#endif

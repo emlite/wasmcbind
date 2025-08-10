@@ -1,6 +1,6 @@
 #include <webbind/Subscriber.h>
-#include <webbind/AbortSignal.h>
 
+#include <webbind/AbortSignal.h>
 
 DEFINE_EMLITE_TYPE(Subscriber, em_Val);
 
@@ -20,7 +20,7 @@ jb_Undefined Subscriber_complete(Subscriber* self ) {
 }
 
 
-jb_Undefined Subscriber_addTeardown(Subscriber* self , jb_Any * teardown) {
+jb_Undefined Subscriber_addTeardown(Subscriber* self , jb_Function * teardown) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "addTeardown", em_Val_from(teardown)));
 }
 

@@ -1,4 +1,5 @@
 #include <webbind/WebGL2RenderingContext.h>
+
 #include <webbind/WebGLTexture.h>
 #include <webbind/WebGLProgram.h>
 #include <webbind/WebGLUniformLocation.h>
@@ -9,7 +10,6 @@
 #include <webbind/WebGLActiveInfo.h>
 #include <webbind/WebGLBuffer.h>
 #include <webbind/WebGLVertexArrayObject.h>
-
 
 DEFINE_EMLITE_TYPE(WebGL2RenderingContext, em_Val);
 

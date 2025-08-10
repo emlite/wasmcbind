@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLHRElement, HTMLElement);
 
@@ -29,3 +33,7 @@ void HTMLHRElement_set_size(HTMLHRElement* self, jb_String * value);
 jb_String HTMLHRElement_width(const HTMLHRElement *self);
 
 void HTMLHRElement_set_width(HTMLHRElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

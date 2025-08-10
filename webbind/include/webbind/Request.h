@@ -4,19 +4,22 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct RequestInit RequestInit;
 typedef struct Headers Headers;
 typedef struct AbortSignal AbortSignal;
-typedef struct Request Request;
 typedef struct ReadableStream ReadableStream;
 typedef struct Blob Blob;
 typedef struct FormData FormData;
-
 
 DECLARE_EMLITE_TYPE(Request, em_Val);
 
 Request Request_new0(jb_Any * input);
 
-Request Request_new1(jb_Any * input, jb_Any * init);
+Request Request_new1(jb_Any * input, RequestInit * init);
 
 jb_String Request_method(const Request *self);
 
@@ -69,3 +72,7 @@ jb_Promise Request_formData(Request* self );
 jb_Promise Request_json(Request* self );
 
 jb_Promise Request_text(Request* self );
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,6 @@
 #include <webbind/CharacterData.h>
-#include <webbind/Element.h>
 
+#include <webbind/Element.h>
 
 DEFINE_EMLITE_TYPE(CharacterData, Node);
 

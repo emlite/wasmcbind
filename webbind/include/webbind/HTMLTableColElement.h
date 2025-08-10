@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLTableColElement, HTMLElement);
 
@@ -33,3 +37,7 @@ void HTMLTableColElement_set_vAlign(HTMLTableColElement* self, jb_String * value
 jb_String HTMLTableColElement_width(const HTMLTableColElement *self);
 
 void HTMLTableColElement_set_width(HTMLTableColElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

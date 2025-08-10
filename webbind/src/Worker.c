@@ -1,6 +1,7 @@
 #include <webbind/Worker.h>
-#include <webbind/MessagePort.h>
 
+#include <webbind/WorkerOptions.h>
+#include <webbind/StructuredSerializeOptions.h>
 
 DEFINE_EMLITE_TYPE(Worker, EventTarget);
 
@@ -11,7 +12,7 @@ Worker Worker_new0(jb_Any * scriptURL) {
       }
 
 
-Worker Worker_new1(jb_Any * scriptURL, jb_Any * options) {
+Worker Worker_new1(jb_Any * scriptURL, WorkerOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("Worker") , em_Val_from(scriptURL), em_Val_from(options));
         return Worker_from_val(&vv);
       }

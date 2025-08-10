@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "PerformanceEntry.h"
 #include "enums.h"
 
-typedef struct Window Window;
+#include "PerformanceEntry.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct Window Window;
 
 DECLARE_EMLITE_TYPE(PerformanceScriptTiming, PerformanceEntry);
 
@@ -39,3 +43,7 @@ Window PerformanceScriptTiming_window(const PerformanceScriptTiming *self);
 ScriptWindowAttribution PerformanceScriptTiming_windowAttribution(const PerformanceScriptTiming *self);
 
 jb_Object PerformanceScriptTiming_toJSON(PerformanceScriptTiming* self );
+
+#ifdef __cplusplus
+}
+#endif

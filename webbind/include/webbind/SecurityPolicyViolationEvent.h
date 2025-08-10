@@ -2,15 +2,21 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Event.h"
 #include "enums.h"
 
+#include "Event.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct SecurityPolicyViolationEventInit SecurityPolicyViolationEventInit;
 
 DECLARE_EMLITE_TYPE(SecurityPolicyViolationEvent, Event);
 
 SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new0(jb_String * type);
 
-SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new1(jb_String * type, jb_Any * eventInitDict);
+SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new1(jb_String * type, SecurityPolicyViolationEventInit * eventInitDict);
 
 jb_String SecurityPolicyViolationEvent_documentURI(const SecurityPolicyViolationEvent *self);
 
@@ -35,3 +41,7 @@ unsigned short SecurityPolicyViolationEvent_statusCode(const SecurityPolicyViola
 unsigned long SecurityPolicyViolationEvent_lineNumber(const SecurityPolicyViolationEvent *self);
 
 unsigned long SecurityPolicyViolationEvent_columnNumber(const SecurityPolicyViolationEvent *self);
+
+#ifdef __cplusplus
+}
+#endif

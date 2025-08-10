@@ -1,6 +1,5 @@
 #include <webbind/CSSLayerBlockRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSLayerBlockRule, CSSGroupingRule);
 
 

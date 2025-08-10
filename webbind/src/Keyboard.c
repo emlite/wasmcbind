@@ -1,6 +1,6 @@
 #include <webbind/Keyboard.h>
-#include <webbind/KeyboardLayoutMap.h>
 
+#include <webbind/KeyboardLayoutMap.h>
 
 DEFINE_EMLITE_TYPE(Keyboard, EventTarget);
 

@@ -2,17 +2,20 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "StorageManager.h"
 #include "enums.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct Storage Storage;
 typedef struct IDBFactory IDBFactory;
 typedef struct LockManager LockManager;
 typedef struct CacheStorage CacheStorage;
 typedef struct FileSystemDirectoryHandle FileSystemDirectoryHandle;
+typedef struct StorageEstimate StorageEstimate;
 typedef struct BroadcastChannel BroadcastChannel;
 typedef struct SharedWorker SharedWorker;
-
 
 DECLARE_EMLITE_TYPE(StorageAccessHandle, em_Val);
 
@@ -39,3 +42,7 @@ BroadcastChannel StorageAccessHandle_BroadcastChannel_(StorageAccessHandle* self
 SharedWorker StorageAccessHandle_SharedWorker_0(StorageAccessHandle* self , jb_String * scriptURL);
 
 SharedWorker StorageAccessHandle_SharedWorker_1(StorageAccessHandle* self , jb_String * scriptURL, jb_Any * options);
+
+#ifdef __cplusplus
+}
+#endif

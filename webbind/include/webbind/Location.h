@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct DOMStringList DOMStringList;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct DOMStringList DOMStringList;
 
 DECLARE_EMLITE_TYPE(Location, em_Val);
 
@@ -50,3 +53,7 @@ jb_Undefined Location_replace(Location* self , jb_String * url);
 jb_Undefined Location_reload(Location* self );
 
 DOMStringList Location_ancestorOrigins(const Location *self);
+
+#ifdef __cplusplus
+}
+#endif

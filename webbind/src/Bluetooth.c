@@ -1,91 +1,9 @@
 #include <webbind/Bluetooth.h>
+
 #include <webbind/BluetoothDevice.h>
+#include <webbind/RequestDeviceOptions.h>
 #include <webbind/BluetoothLEScan.h>
-
-
-DEFINE_EMLITE_TYPE(RequestDeviceOptions, em_Val);
-
-
-jb_Array RequestDeviceOptions_filters(const RequestDeviceOptions *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filters")));
-}
-
-
-void RequestDeviceOptions_set_filters(RequestDeviceOptions* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("filters"), em_Val_from(value));
-}
-
-
-jb_Array RequestDeviceOptions_exclusionFilters(const RequestDeviceOptions *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("exclusionFilters")));
-}
-
-
-void RequestDeviceOptions_set_exclusionFilters(RequestDeviceOptions* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("exclusionFilters"), em_Val_from(value));
-}
-
-
-jb_Array RequestDeviceOptions_optionalServices(const RequestDeviceOptions *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("optionalServices")));
-}
-
-
-void RequestDeviceOptions_set_optionalServices(RequestDeviceOptions* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("optionalServices"), em_Val_from(value));
-}
-
-
-jb_Array RequestDeviceOptions_optionalManufacturerData(const RequestDeviceOptions *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("optionalManufacturerData")));
-}
-
-
-void RequestDeviceOptions_set_optionalManufacturerData(RequestDeviceOptions* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("optionalManufacturerData"), em_Val_from(value));
-}
-
-
-bool RequestDeviceOptions_acceptAllDevices(const RequestDeviceOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("acceptAllDevices")));
-}
-
-
-void RequestDeviceOptions_set_acceptAllDevices(RequestDeviceOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("acceptAllDevices"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(BluetoothLEScanOptions, em_Val);
-
-
-jb_Array BluetoothLEScanOptions_filters(const BluetoothLEScanOptions *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("filters")));
-}
-
-
-void BluetoothLEScanOptions_set_filters(BluetoothLEScanOptions* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("filters"), em_Val_from(value));
-}
-
-
-bool BluetoothLEScanOptions_keepRepeatedDevices(const BluetoothLEScanOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("keepRepeatedDevices")));
-}
-
-
-void BluetoothLEScanOptions_set_keepRepeatedDevices(BluetoothLEScanOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("keepRepeatedDevices"), em_Val_from(value));
-}
-
-
-bool BluetoothLEScanOptions_acceptAllAdvertisements(const BluetoothLEScanOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("acceptAllAdvertisements")));
-}
-
-
-void BluetoothLEScanOptions_set_acceptAllAdvertisements(BluetoothLEScanOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("acceptAllAdvertisements"), em_Val_from(value));
-}
+#include <webbind/BluetoothLEScanOptions.h>
 
 DEFINE_EMLITE_TYPE(Bluetooth, EventTarget);
 

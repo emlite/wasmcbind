@@ -1,8 +1,8 @@
 #include <webbind/ResizeObserverEntry.h>
+
 #include <webbind/Element.h>
 #include <webbind/DOMRectReadOnly.h>
 #include <webbind/ResizeObserverSize.h>
-
 
 DEFINE_EMLITE_TYPE(ResizeObserverEntry, em_Val);
 

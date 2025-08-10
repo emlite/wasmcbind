@@ -1,5 +1,6 @@
 #include <webbind/TextFormat.h>
 
+#include <webbind/TextFormatInit.h>
 
 DEFINE_EMLITE_TYPE(TextFormat, em_Val);
 
@@ -10,7 +11,7 @@ TextFormat TextFormat_new0() {
       }
 
 
-TextFormat TextFormat_new1(jb_Any * options) {
+TextFormat TextFormat_new1(TextFormatInit * options) {
         em_Val vv = em_Val_new(em_Val_global("TextFormat") , em_Val_from(options));
         return TextFormat_from_val(&vv);
       }

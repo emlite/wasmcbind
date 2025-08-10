@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct TextTrackCueList TextTrackCueList;
 typedef struct TextTrackCue TextTrackCue;
 typedef struct SourceBuffer SourceBuffer;
-
 
 DECLARE_EMLITE_TYPE(TextTrack, EventTarget);
 
@@ -39,3 +43,7 @@ jb_Any TextTrack_oncuechange(const TextTrack *self);
 void TextTrack_set_oncuechange(TextTrack* self, jb_Any * value);
 
 SourceBuffer TextTrack_sourceBuffer(const TextTrack *self);
+
+#ifdef __cplusplus
+}
+#endif

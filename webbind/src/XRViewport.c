@@ -1,6 +1,5 @@
 #include <webbind/XRViewport.h>
 
-
 DEFINE_EMLITE_TYPE(XRViewport, em_Val);
 
 

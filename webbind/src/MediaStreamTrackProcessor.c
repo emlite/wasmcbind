@@ -1,11 +1,12 @@
 #include <webbind/MediaStreamTrackProcessor.h>
-#include <webbind/ReadableStream.h>
 
+#include <webbind/MediaStreamTrackProcessorInit.h>
+#include <webbind/ReadableStream.h>
 
 DEFINE_EMLITE_TYPE(MediaStreamTrackProcessor, em_Val);
 
 
-MediaStreamTrackProcessor MediaStreamTrackProcessor_new(jb_Any * init) {
+MediaStreamTrackProcessor MediaStreamTrackProcessor_new(MediaStreamTrackProcessorInit * init) {
         em_Val vv = em_Val_new(em_Val_global("MediaStreamTrackProcessor") , em_Val_from(init));
         return MediaStreamTrackProcessor_from_val(&vv);
       }

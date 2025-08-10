@@ -1,5 +1,6 @@
 #include <webbind/AnimationPlaybackEvent.h>
 
+#include <webbind/AnimationPlaybackEventInit.h>
 
 DEFINE_EMLITE_TYPE(AnimationPlaybackEvent, Event);
 
@@ -10,7 +11,7 @@ AnimationPlaybackEvent AnimationPlaybackEvent_new0(jb_String * type) {
       }
 
 
-AnimationPlaybackEvent AnimationPlaybackEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+AnimationPlaybackEvent AnimationPlaybackEvent_new1(jb_String * type, AnimationPlaybackEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("AnimationPlaybackEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return AnimationPlaybackEvent_from_val(&vv);
       }

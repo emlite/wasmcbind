@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(SVGLength, em_Val);
 
@@ -24,3 +27,7 @@ void SVGLength_set_valueAsString(SVGLength* self, jb_String * value);
 jb_Undefined SVGLength_newValueSpecifiedUnits(SVGLength* self , unsigned short unitType, float valueInSpecifiedUnits);
 
 jb_Undefined SVGLength_convertToSpecifiedUnits(SVGLength* self , unsigned short unitType);
+
+#ifdef __cplusplus
+}
+#endif

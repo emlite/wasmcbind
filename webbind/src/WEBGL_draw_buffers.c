@@ -1,6 +1,5 @@
 #include <webbind/WEBGL_draw_buffers.h>
 
-
 DEFINE_EMLITE_TYPE(WEBGL_draw_buffers, em_Val);
 
 

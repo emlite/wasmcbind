@@ -1,10 +1,11 @@
 #include <webbind/CountQueuingStrategy.h>
 
+#include <webbind/QueuingStrategyInit.h>
 
 DEFINE_EMLITE_TYPE(CountQueuingStrategy, em_Val);
 
 
-CountQueuingStrategy CountQueuingStrategy_new(jb_Any * init) {
+CountQueuingStrategy CountQueuingStrategy_new(QueuingStrategyInit * init) {
         em_Val vv = em_Val_new(em_Val_global("CountQueuingStrategy") , em_Val_from(init));
         return CountQueuingStrategy_from_val(&vv);
       }

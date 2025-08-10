@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct RTCDtlsTransport RTCDtlsTransport;
+#include "EventTarget.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct RTCDtlsTransport RTCDtlsTransport;
 
 DECLARE_EMLITE_TYPE(RTCSctpTransport, EventTarget);
 
@@ -21,3 +25,7 @@ unsigned short RTCSctpTransport_maxChannels(const RTCSctpTransport *self);
 jb_Any RTCSctpTransport_onstatechange(const RTCSctpTransport *self);
 
 void RTCSctpTransport_set_onstatechange(RTCSctpTransport* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

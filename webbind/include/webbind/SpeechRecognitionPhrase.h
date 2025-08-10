@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(SpeechRecognitionPhrase, em_Val);
 
@@ -14,3 +17,7 @@ SpeechRecognitionPhrase SpeechRecognitionPhrase_new1(jb_String * phrase, float b
 jb_String SpeechRecognitionPhrase_phrase(const SpeechRecognitionPhrase *self);
 
 float SpeechRecognitionPhrase_boost(const SpeechRecognitionPhrase *self);
+
+#ifdef __cplusplus
+}
+#endif

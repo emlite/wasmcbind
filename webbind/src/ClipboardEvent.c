@@ -1,6 +1,7 @@
 #include <webbind/ClipboardEvent.h>
-#include <webbind/DataTransfer.h>
 
+#include <webbind/ClipboardEventInit.h>
+#include <webbind/DataTransfer.h>
 
 DEFINE_EMLITE_TYPE(ClipboardEvent, Event);
 
@@ -11,7 +12,7 @@ ClipboardEvent ClipboardEvent_new0(jb_String * type) {
       }
 
 
-ClipboardEvent ClipboardEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+ClipboardEvent ClipboardEvent_new1(jb_String * type, ClipboardEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("ClipboardEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return ClipboardEvent_from_val(&vv);
       }

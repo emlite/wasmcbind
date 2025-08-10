@@ -1,6 +1,5 @@
 #include <webbind/CSSViewTransitionRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSViewTransitionRule, CSSRule);
 
 

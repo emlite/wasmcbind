@@ -1,6 +1,6 @@
 #include <webbind/DOMPoint.h>
-#include <webbind/SVGGeometryElement.h>
 
+#include <webbind/DOMPointInit.h>
 
 DEFINE_EMLITE_TYPE(DOMPoint, DOMPointReadOnly);
 

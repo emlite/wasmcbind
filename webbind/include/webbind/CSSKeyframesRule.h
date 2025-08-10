@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSRule.h"
 #include "enums.h"
+
+#include "CSSRule.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct CSSRuleList CSSRuleList;
 typedef struct CSSKeyframeRule CSSKeyframeRule;
-
 
 DECLARE_EMLITE_TYPE(CSSKeyframesRule, CSSRule);
 
@@ -24,3 +28,7 @@ jb_Undefined CSSKeyframesRule_appendRule(CSSKeyframesRule* self , jb_String * ru
 jb_Undefined CSSKeyframesRule_deleteRule(CSSKeyframesRule* self , jb_String * select);
 
 CSSKeyframeRule CSSKeyframesRule_findRule(CSSKeyframesRule* self , jb_String * select);
+
+#ifdef __cplusplus
+}
+#endif

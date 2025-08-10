@@ -2,10 +2,18 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLPictureElement, HTMLElement);
 
 HTMLPictureElement HTMLPictureElement_new();
+
+#ifdef __cplusplus
+}
+#endif

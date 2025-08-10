@@ -1,6 +1,5 @@
 #include <webbind/FontFaceVariationAxis.h>
 
-
 DEFINE_EMLITE_TYPE(FontFaceVariationAxis, em_Val);
 
 

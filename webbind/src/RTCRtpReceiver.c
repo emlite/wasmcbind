@@ -1,55 +1,12 @@
 #include <webbind/RTCRtpReceiver.h>
+
 #include <webbind/MediaStreamTrack.h>
 #include <webbind/RTCDtlsTransport.h>
-#include <webbind/RTCRtpSender.h>
+#include <webbind/RTCRtpCapabilities.h>
+#include <webbind/RTCRtpReceiveParameters.h>
+#include <webbind/RTCRtpContributingSource.h>
+#include <webbind/RTCRtpSynchronizationSource.h>
 #include <webbind/RTCStatsReport.h>
-
-
-DEFINE_EMLITE_TYPE(RTCRtpReceiveParameters, em_Val);
-
-DEFINE_EMLITE_TYPE(RTCRtpContributingSource, em_Val);
-
-
-jb_Any RTCRtpContributingSource_timestamp(const RTCRtpContributingSource *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("timestamp")));
-}
-
-
-void RTCRtpContributingSource_set_timestamp(RTCRtpContributingSource* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("timestamp"), em_Val_from(value));
-}
-
-
-unsigned long RTCRtpContributingSource_source(const RTCRtpContributingSource *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("source")));
-}
-
-
-void RTCRtpContributingSource_set_source(RTCRtpContributingSource* self, unsigned long value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("source"), em_Val_from(value));
-}
-
-
-double RTCRtpContributingSource_audioLevel(const RTCRtpContributingSource *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("audioLevel")));
-}
-
-
-void RTCRtpContributingSource_set_audioLevel(RTCRtpContributingSource* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("audioLevel"), em_Val_from(value));
-}
-
-
-unsigned long RTCRtpContributingSource_rtpTimestamp(const RTCRtpContributingSource *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rtpTimestamp")));
-}
-
-
-void RTCRtpContributingSource_set_rtpTimestamp(RTCRtpContributingSource* self, unsigned long value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("rtpTimestamp"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(RTCRtpSynchronizationSource, em_Val);
 
 DEFINE_EMLITE_TYPE(RTCRtpReceiver, em_Val);
 

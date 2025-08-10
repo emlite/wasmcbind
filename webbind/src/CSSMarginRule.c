@@ -1,6 +1,6 @@
 #include <webbind/CSSMarginRule.h>
-#include <webbind/CSSStyleDeclaration.h>
 
+#include <webbind/CSSStyleDeclaration.h>
 
 DEFINE_EMLITE_TYPE(CSSMarginRule, CSSRule);
 

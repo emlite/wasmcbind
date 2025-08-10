@@ -1,6 +1,6 @@
 #include <webbind/AbstractRange.h>
-#include <webbind/Node.h>
 
+#include <webbind/Node.h>
 
 DEFINE_EMLITE_TYPE(AbstractRange, em_Val);
 

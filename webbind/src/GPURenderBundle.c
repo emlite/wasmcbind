@@ -1,6 +1,5 @@
 #include <webbind/GPURenderBundle.h>
 
-
 DEFINE_EMLITE_TYPE(GPURenderBundle, em_Val);
 
 

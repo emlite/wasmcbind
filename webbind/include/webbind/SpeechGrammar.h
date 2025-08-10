@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(SpeechGrammar, em_Val);
 
@@ -14,3 +17,7 @@ void SpeechGrammar_set_src(SpeechGrammar* self, jb_String * value);
 float SpeechGrammar_weight(const SpeechGrammar *self);
 
 void SpeechGrammar_set_weight(SpeechGrammar* self, float value);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,56 +1,13 @@
 #include <webbind/RTCRtpSender.h>
+
 #include <webbind/MediaStreamTrack.h>
 #include <webbind/RTCDtlsTransport.h>
+#include <webbind/RTCRtpCapabilities.h>
+#include <webbind/RTCRtpSendParameters.h>
+#include <webbind/RTCSetParameterOptions.h>
 #include <webbind/MediaStream.h>
 #include <webbind/RTCStatsReport.h>
 #include <webbind/RTCDTMFSender.h>
-
-
-DEFINE_EMLITE_TYPE(RTCRtpCapabilities, em_Val);
-
-
-jb_Array RTCRtpCapabilities_codecs(const RTCRtpCapabilities *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("codecs")));
-}
-
-
-void RTCRtpCapabilities_set_codecs(RTCRtpCapabilities* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("codecs"), em_Val_from(value));
-}
-
-
-jb_Array RTCRtpCapabilities_headerExtensions(const RTCRtpCapabilities *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("headerExtensions")));
-}
-
-
-void RTCRtpCapabilities_set_headerExtensions(RTCRtpCapabilities* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("headerExtensions"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(RTCRtpSendParameters, em_Val);
-
-
-jb_String RTCRtpSendParameters_transactionId(const RTCRtpSendParameters *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("transactionId")));
-}
-
-
-void RTCRtpSendParameters_set_transactionId(RTCRtpSendParameters* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("transactionId"), em_Val_from(value));
-}
-
-
-jb_Array RTCRtpSendParameters_encodings(const RTCRtpSendParameters *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("encodings")));
-}
-
-
-void RTCRtpSendParameters_set_encodings(RTCRtpSendParameters* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("encodings"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(RTCSetParameterOptions, em_Val);
 
 DEFINE_EMLITE_TYPE(RTCRtpSender, em_Val);
 

@@ -1,6 +1,7 @@
 #include <webbind/Blob.h>
-#include <webbind/ReadableStream.h>
 
+#include <webbind/BlobPropertyBag.h>
+#include <webbind/ReadableStream.h>
 
 DEFINE_EMLITE_TYPE(Blob, em_Val);
 
@@ -17,7 +18,7 @@ Blob Blob_new1(jb_Array * blobParts) {
       }
 
 
-Blob Blob_new2(jb_Array * blobParts, jb_Any * options) {
+Blob Blob_new2(jb_Array * blobParts, BlobPropertyBag * options) {
         em_Val vv = em_Val_new(em_Val_global("Blob") , em_Val_from(blobParts), em_Val_from(options));
         return Blob_from_val(&vv);
       }

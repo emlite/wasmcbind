@@ -4,9 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct DataTransferItem DataTransferItem;
 typedef struct File File;
-
 
 DECLARE_EMLITE_TYPE(DataTransferItemList, em_Val);
 
@@ -17,3 +20,7 @@ DataTransferItem DataTransferItemList_add(DataTransferItemList* self , File * da
 jb_Undefined DataTransferItemList_remove(DataTransferItemList* self , unsigned long index);
 
 jb_Undefined DataTransferItemList_clear(DataTransferItemList* self );
+
+#ifdef __cplusplus
+}
+#endif

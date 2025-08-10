@@ -1,8 +1,9 @@
 #include <webbind/OscillatorNode.h>
+
+#include <webbind/BaseAudioContext.h>
+#include <webbind/OscillatorOptions.h>
 #include <webbind/AudioParam.h>
 #include <webbind/PeriodicWave.h>
-#include <webbind/BaseAudioContext.h>
-
 
 DEFINE_EMLITE_TYPE(OscillatorNode, AudioScheduledSourceNode);
 
@@ -13,7 +14,7 @@ OscillatorNode OscillatorNode_new0(BaseAudioContext * context) {
       }
 
 
-OscillatorNode OscillatorNode_new1(BaseAudioContext * context, jb_Any * options) {
+OscillatorNode OscillatorNode_new1(BaseAudioContext * context, OscillatorOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("OscillatorNode") , em_Val_from(context), em_Val_from(options));
         return OscillatorNode_from_val(&vv);
       }

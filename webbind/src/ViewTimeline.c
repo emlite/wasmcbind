@@ -1,7 +1,8 @@
 #include <webbind/ViewTimeline.h>
+
+#include <webbind/ViewTimelineOptions.h>
 #include <webbind/Element.h>
 #include <webbind/CSSNumericValue.h>
-
 
 DEFINE_EMLITE_TYPE(ViewTimeline, ScrollTimeline);
 
@@ -12,7 +13,7 @@ ViewTimeline ViewTimeline_new0() {
       }
 
 
-ViewTimeline ViewTimeline_new1(jb_Any * options) {
+ViewTimeline ViewTimeline_new1(ViewTimelineOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("ViewTimeline") , em_Val_from(options));
         return ViewTimeline_from_val(&vv);
       }

@@ -1,6 +1,5 @@
 #include <webbind/CSSOKLCH.h>
 
-
 DEFINE_EMLITE_TYPE(CSSOKLCH, CSSColorValue);
 
 

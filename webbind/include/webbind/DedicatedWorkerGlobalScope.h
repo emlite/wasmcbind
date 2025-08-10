@@ -2,10 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "WorkerGlobalScope.h"
-#include "MessagePort.h"
 #include "enums.h"
 
+#include "WorkerGlobalScope.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct StructuredSerializeOptions StructuredSerializeOptions;
 
 DECLARE_EMLITE_TYPE(DedicatedWorkerGlobalScope, WorkerGlobalScope);
 
@@ -32,3 +37,7 @@ void DedicatedWorkerGlobalScope_set_onmessage(DedicatedWorkerGlobalScope* self, 
 jb_Any DedicatedWorkerGlobalScope_onmessageerror(const DedicatedWorkerGlobalScope *self);
 
 void DedicatedWorkerGlobalScope_set_onmessageerror(DedicatedWorkerGlobalScope* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

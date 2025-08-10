@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(PresentationConnection, EventTarget);
 
@@ -39,3 +43,7 @@ jb_Any PresentationConnection_onmessage(const PresentationConnection *self);
 void PresentationConnection_set_onmessage(PresentationConnection* self, jb_Any * value);
 
 jb_Undefined PresentationConnection_send(PresentationConnection* self , jb_Any * data);
+
+#ifdef __cplusplus
+}
+#endif

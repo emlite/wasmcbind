@@ -1,0 +1,68 @@
+#pragma once
+
+#include <emlite/emlite.h>
+#include <jsbind/jsbind.h>
+#include "enums.h"
+
+#include "PublicKeyCredentialRpEntity.h"
+#include "PublicKeyCredentialUserEntityJSON.h"
+#include "PublicKeyCredentialParameters.h"
+#include "PublicKeyCredentialDescriptorJSON.h"
+#include "AuthenticatorSelectionCriteria.h"
+#include "AuthenticationExtensionsClientInputsJSON.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+DECLARE_EMLITE_TYPE(PublicKeyCredentialCreationOptionsJSON, em_Val);
+
+PublicKeyCredentialRpEntity PublicKeyCredentialCreationOptionsJSON_rp(const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_rp(PublicKeyCredentialCreationOptionsJSON* self, PublicKeyCredentialRpEntity * value);
+
+PublicKeyCredentialUserEntityJSON PublicKeyCredentialCreationOptionsJSON_user(const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_user(PublicKeyCredentialCreationOptionsJSON* self, PublicKeyCredentialUserEntityJSON * value);
+
+jb_Any PublicKeyCredentialCreationOptionsJSON_challenge(const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_challenge(PublicKeyCredentialCreationOptionsJSON* self, jb_Any * value);
+
+jb_Array PublicKeyCredentialCreationOptionsJSON_pubKeyCredParams(const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_pubKeyCredParams(PublicKeyCredentialCreationOptionsJSON* self, jb_Array * value);
+
+unsigned long PublicKeyCredentialCreationOptionsJSON_timeout(const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_timeout(PublicKeyCredentialCreationOptionsJSON* self, unsigned long value);
+
+jb_Array PublicKeyCredentialCreationOptionsJSON_excludeCredentials(const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_excludeCredentials(PublicKeyCredentialCreationOptionsJSON* self, jb_Array * value);
+
+AuthenticatorSelectionCriteria PublicKeyCredentialCreationOptionsJSON_authenticatorSelection(const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_authenticatorSelection(PublicKeyCredentialCreationOptionsJSON* self, AuthenticatorSelectionCriteria * value);
+
+jb_Array PublicKeyCredentialCreationOptionsJSON_hints(const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_hints(PublicKeyCredentialCreationOptionsJSON* self, jb_Array * value);
+
+jb_String PublicKeyCredentialCreationOptionsJSON_attestation(const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_attestation(PublicKeyCredentialCreationOptionsJSON* self, jb_String * value);
+
+jb_Array PublicKeyCredentialCreationOptionsJSON_attestationFormats(const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_attestationFormats(PublicKeyCredentialCreationOptionsJSON* self, jb_Array * value);
+
+AuthenticationExtensionsClientInputsJSON PublicKeyCredentialCreationOptionsJSON_extensions(const PublicKeyCredentialCreationOptionsJSON *self);
+
+void PublicKeyCredentialCreationOptionsJSON_set_extensions(PublicKeyCredentialCreationOptionsJSON* self, AuthenticationExtensionsClientInputsJSON * value);
+
+PublicKeyCredentialCreationOptionsJSON PublicKeyCredentialCreationOptionsJSON_new();
+
+#ifdef __cplusplus
+}
+#endif

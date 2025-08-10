@@ -1,11 +1,12 @@
 #include <webbind/XRLayerEvent.h>
-#include <webbind/XRLayer.h>
 
+#include <webbind/XRLayerEventInit.h>
+#include <webbind/XRLayer.h>
 
 DEFINE_EMLITE_TYPE(XRLayerEvent, Event);
 
 
-XRLayerEvent XRLayerEvent_new(jb_String * type, jb_Any * eventInitDict) {
+XRLayerEvent XRLayerEvent_new(jb_String * type, XRLayerEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("XRLayerEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return XRLayerEvent_from_val(&vv);
       }

@@ -1,6 +1,5 @@
 #include <webbind/ReadableStreamBYOBRequest.h>
 
-
 DEFINE_EMLITE_TYPE(ReadableStreamBYOBRequest, em_Val);
 
 

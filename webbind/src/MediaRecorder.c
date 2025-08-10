@@ -1,6 +1,7 @@
 #include <webbind/MediaRecorder.h>
-#include <webbind/MediaStream.h>
 
+#include <webbind/MediaStream.h>
+#include <webbind/MediaRecorderOptions.h>
 
 DEFINE_EMLITE_TYPE(MediaRecorder, EventTarget);
 
@@ -11,7 +12,7 @@ MediaRecorder MediaRecorder_new0(MediaStream * stream) {
       }
 
 
-MediaRecorder MediaRecorder_new1(MediaStream * stream, jb_Any * options) {
+MediaRecorder MediaRecorder_new1(MediaStream * stream, MediaRecorderOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("MediaRecorder") , em_Val_from(stream), em_Val_from(options));
         return MediaRecorder_from_val(&vv);
       }

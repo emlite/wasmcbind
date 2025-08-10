@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct Element Element;
 typedef struct Node Node;
-
 
 DECLARE_EMLITE_TYPE(NamedFlow, EventTarget);
 
@@ -22,3 +26,7 @@ short NamedFlow_firstEmptyRegionIndex(const NamedFlow *self);
 jb_Array NamedFlow_getContent(NamedFlow* self );
 
 jb_Array NamedFlow_getRegionsByContent(NamedFlow* self , Node * node);
+
+#ifdef __cplusplus
+}
+#endif

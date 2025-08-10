@@ -1,6 +1,6 @@
 #include <webbind/PerformanceLongTaskTiming.h>
-#include <webbind/TaskAttributionTiming.h>
 
+#include <webbind/TaskAttributionTiming.h>
 
 DEFINE_EMLITE_TYPE(PerformanceLongTaskTiming, PerformanceEntry);
 

@@ -1,7 +1,7 @@
 #include <webbind/TextEncoderStream.h>
+
 #include <webbind/ReadableStream.h>
 #include <webbind/WritableStream.h>
-
 
 DEFINE_EMLITE_TYPE(TextEncoderStream, em_Val);
 

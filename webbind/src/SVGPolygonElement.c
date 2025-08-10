@@ -1,6 +1,6 @@
 #include <webbind/SVGPolygonElement.h>
-#include <webbind/SVGPointList.h>
 
+#include <webbind/SVGPointList.h>
 
 DEFINE_EMLITE_TYPE(SVGPolygonElement, SVGGeometryElement);
 

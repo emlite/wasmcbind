@@ -1,6 +1,5 @@
 #include <webbind/MediaKeyStatusMap.h>
 
-
 DEFINE_EMLITE_TYPE(MediaKeyStatusMap, em_Val);
 
 

@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(DOMTokenList, em_Val);
 
@@ -28,3 +31,7 @@ bool DOMTokenList_supports(DOMTokenList* self , jb_String * token);
 jb_String DOMTokenList_value(const DOMTokenList *self);
 
 void DOMTokenList_set_value(DOMTokenList* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

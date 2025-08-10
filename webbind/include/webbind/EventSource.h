@@ -2,15 +2,21 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct EventSourceInit EventSourceInit;
 
 DECLARE_EMLITE_TYPE(EventSource, EventTarget);
 
 EventSource EventSource_new0(jb_String * url);
 
-EventSource EventSource_new1(jb_String * url, jb_Any * eventSourceInitDict);
+EventSource EventSource_new1(jb_String * url, EventSourceInit * eventSourceInitDict);
 
 jb_String EventSource_url(const EventSource *self);
 
@@ -31,3 +37,7 @@ jb_Any EventSource_onerror(const EventSource *self);
 void EventSource_set_onerror(EventSource* self, jb_Any * value);
 
 jb_Undefined EventSource_close(EventSource* self );
+
+#ifdef __cplusplus
+}
+#endif

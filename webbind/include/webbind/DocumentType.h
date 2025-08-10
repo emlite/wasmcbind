@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Node.h"
 #include "enums.h"
 
+#include "Node.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(DocumentType, Node);
 
@@ -21,3 +25,7 @@ jb_Undefined DocumentType_after(DocumentType* self , jb_Any * nodes);
 jb_Undefined DocumentType_replaceWith(DocumentType* self , jb_Any * nodes);
 
 jb_Undefined DocumentType_remove(DocumentType* self );
+
+#ifdef __cplusplus
+}
+#endif

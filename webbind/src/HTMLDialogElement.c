@@ -1,6 +1,5 @@
 #include <webbind/HTMLDialogElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLDialogElement, HTMLElement);
 
 

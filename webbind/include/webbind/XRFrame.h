@@ -4,6 +4,10 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct XRSession XRSession;
 typedef struct XRViewerPose XRViewerPose;
 typedef struct XRReferenceSpace XRReferenceSpace;
@@ -24,7 +28,6 @@ typedef struct XRTransientInputHitTestSource XRTransientInputHitTestSource;
 typedef struct XRLightEstimate XRLightEstimate;
 typedef struct XRLightProbe XRLightProbe;
 typedef struct XRPlaneSet XRPlaneSet;
-
 
 DECLARE_EMLITE_TYPE(XRFrame, em_Val);
 
@@ -57,3 +60,7 @@ jb_Array XRFrame_getHitTestResultsForTransientInput(XRFrame* self , XRTransientI
 XRLightEstimate XRFrame_getLightEstimate(XRFrame* self , XRLightProbe * lightProbe);
 
 XRPlaneSet XRFrame_detectedPlanes(const XRFrame *self);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,11 +1,12 @@
 #include <webbind/SpeechSynthesisEvent.h>
-#include <webbind/SpeechSynthesisUtterance.h>
 
+#include <webbind/SpeechSynthesisEventInit.h>
+#include <webbind/SpeechSynthesisUtterance.h>
 
 DEFINE_EMLITE_TYPE(SpeechSynthesisEvent, Event);
 
 
-SpeechSynthesisEvent SpeechSynthesisEvent_new(jb_String * type, jb_Any * eventInitDict) {
+SpeechSynthesisEvent SpeechSynthesisEvent_new(jb_String * type, SpeechSynthesisEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("SpeechSynthesisEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return SpeechSynthesisEvent_from_val(&vv);
       }

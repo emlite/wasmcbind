@@ -1,6 +1,5 @@
 #include <webbind/PerformanceTiming.h>
 
-
 DEFINE_EMLITE_TYPE(PerformanceTiming, em_Val);
 
 

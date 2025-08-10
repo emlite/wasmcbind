@@ -1,6 +1,5 @@
 #include <webbind/PushSubscriptionOptions.h>
 
-
 DEFINE_EMLITE_TYPE(PushSubscriptionOptions, em_Val);
 
 

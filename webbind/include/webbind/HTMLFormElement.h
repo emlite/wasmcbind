@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct DOMTokenList DOMTokenList;
 typedef struct HTMLFormControlsCollection HTMLFormControlsCollection;
-
 
 DECLARE_EMLITE_TYPE(HTMLFormElement, HTMLElement);
 
@@ -70,3 +74,7 @@ jb_Undefined HTMLFormElement_reset(HTMLFormElement* self );
 bool HTMLFormElement_checkValidity(HTMLFormElement* self );
 
 bool HTMLFormElement_reportValidity(HTMLFormElement* self );
+
+#ifdef __cplusplus
+}
+#endif

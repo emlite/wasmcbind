@@ -1,6 +1,5 @@
 #include <webbind/NetworkInformation.h>
 
-
 DEFINE_EMLITE_TYPE(NetworkInformation, EventTarget);
 
 

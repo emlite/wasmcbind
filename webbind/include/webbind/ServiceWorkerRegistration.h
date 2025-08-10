@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct ServiceWorker ServiceWorker;
 typedef struct NavigationPreloadManager NavigationPreloadManager;
-typedef struct ServiceWorkerRegistration ServiceWorkerRegistration;
 typedef struct BackgroundFetchManager BackgroundFetchManager;
 typedef struct SyncManager SyncManager;
 typedef struct ContentIndex ContentIndex;
@@ -18,71 +22,7 @@ typedef struct GetNotificationOptions GetNotificationOptions;
 typedef struct PaymentManager PaymentManager;
 typedef struct PeriodicSyncManager PeriodicSyncManager;
 typedef struct PushManager PushManager;
-typedef struct NotificationAction NotificationAction;
 
-
-DECLARE_EMLITE_TYPE(NotificationOptions, em_Val);
-
-NotificationDirection NotificationOptions_dir(const NotificationOptions *self);
-
-void NotificationOptions_set_dir(NotificationOptions* self, NotificationDirection * value);
-
-jb_String NotificationOptions_lang(const NotificationOptions *self);
-
-void NotificationOptions_set_lang(NotificationOptions* self, jb_String * value);
-
-jb_String NotificationOptions_body(const NotificationOptions *self);
-
-void NotificationOptions_set_body(NotificationOptions* self, jb_String * value);
-
-jb_String NotificationOptions_tag(const NotificationOptions *self);
-
-void NotificationOptions_set_tag(NotificationOptions* self, jb_String * value);
-
-jb_String NotificationOptions_image(const NotificationOptions *self);
-
-void NotificationOptions_set_image(NotificationOptions* self, jb_String * value);
-
-jb_String NotificationOptions_icon(const NotificationOptions *self);
-
-void NotificationOptions_set_icon(NotificationOptions* self, jb_String * value);
-
-jb_String NotificationOptions_badge(const NotificationOptions *self);
-
-void NotificationOptions_set_badge(NotificationOptions* self, jb_String * value);
-
-jb_Any NotificationOptions_vibrate(const NotificationOptions *self);
-
-void NotificationOptions_set_vibrate(NotificationOptions* self, jb_Any * value);
-
-jb_Any NotificationOptions_timestamp(const NotificationOptions *self);
-
-void NotificationOptions_set_timestamp(NotificationOptions* self, jb_Any * value);
-
-bool NotificationOptions_renotify(const NotificationOptions *self);
-
-void NotificationOptions_set_renotify(NotificationOptions* self, bool value);
-
-bool NotificationOptions_silent(const NotificationOptions *self);
-
-void NotificationOptions_set_silent(NotificationOptions* self, bool value);
-
-bool NotificationOptions_requireInteraction(const NotificationOptions *self);
-
-void NotificationOptions_set_requireInteraction(NotificationOptions* self, bool value);
-
-jb_Any NotificationOptions_data(const NotificationOptions *self);
-
-void NotificationOptions_set_data(NotificationOptions* self, jb_Any * value);
-
-jb_Array NotificationOptions_actions(const NotificationOptions *self);
-
-void NotificationOptions_set_actions(NotificationOptions* self, jb_Array * value);
-DECLARE_EMLITE_TYPE(GetNotificationOptions, em_Val);
-
-jb_String GetNotificationOptions_tag(const GetNotificationOptions *self);
-
-void GetNotificationOptions_set_tag(GetNotificationOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(ServiceWorkerRegistration, EventTarget);
 
 ServiceWorker ServiceWorkerRegistration_installing(const ServiceWorkerRegistration *self);
@@ -126,3 +66,7 @@ PaymentManager ServiceWorkerRegistration_paymentManager(const ServiceWorkerRegis
 PeriodicSyncManager ServiceWorkerRegistration_periodicSync(const ServiceWorkerRegistration *self);
 
 PushManager ServiceWorkerRegistration_pushManager(const ServiceWorkerRegistration *self);
+
+#ifdef __cplusplus
+}
+#endif

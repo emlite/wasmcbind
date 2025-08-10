@@ -1,7 +1,8 @@
 #include <webbind/DynamicsCompressorNode.h>
-#include <webbind/AudioParam.h>
-#include <webbind/BaseAudioContext.h>
 
+#include <webbind/BaseAudioContext.h>
+#include <webbind/DynamicsCompressorOptions.h>
+#include <webbind/AudioParam.h>
 
 DEFINE_EMLITE_TYPE(DynamicsCompressorNode, AudioNode);
 
@@ -12,7 +13,7 @@ DynamicsCompressorNode DynamicsCompressorNode_new0(BaseAudioContext * context) {
       }
 
 
-DynamicsCompressorNode DynamicsCompressorNode_new1(BaseAudioContext * context, jb_Any * options) {
+DynamicsCompressorNode DynamicsCompressorNode_new1(BaseAudioContext * context, DynamicsCompressorOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("DynamicsCompressorNode") , em_Val_from(context), em_Val_from(options));
         return DynamicsCompressorNode_from_val(&vv);
       }

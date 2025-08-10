@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLParamElement, HTMLElement);
 
@@ -25,3 +29,7 @@ void HTMLParamElement_set_type(HTMLParamElement* self, jb_String * value);
 jb_String HTMLParamElement_valueType(const HTMLParamElement *self);
 
 void HTMLParamElement_set_valueType(HTMLParamElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

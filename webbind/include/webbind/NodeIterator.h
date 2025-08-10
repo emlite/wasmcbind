@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Node Node;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct Node Node;
 
 DECLARE_EMLITE_TYPE(NodeIterator, em_Val);
 
@@ -24,3 +27,7 @@ Node NodeIterator_nextNode(NodeIterator* self );
 Node NodeIterator_previousNode(NodeIterator* self );
 
 jb_Undefined NodeIterator_detach(NodeIterator* self );
+
+#ifdef __cplusplus
+}
+#endif

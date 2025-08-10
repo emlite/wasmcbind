@@ -1,6 +1,5 @@
 #include <webbind/XMLHttpRequestEventTarget.h>
 
-
 DEFINE_EMLITE_TYPE(XMLHttpRequestEventTarget, EventTarget);
 
 

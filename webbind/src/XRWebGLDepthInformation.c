@@ -1,6 +1,6 @@
 #include <webbind/XRWebGLDepthInformation.h>
-#include <webbind/WebGLTexture.h>
 
+#include <webbind/WebGLTexture.h>
 
 DEFINE_EMLITE_TYPE(XRWebGLDepthInformation, XRDepthInformation);
 

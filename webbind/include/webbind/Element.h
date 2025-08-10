@@ -2,8 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Node.h"
 #include "enums.h"
+
+#include "Node.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct DOMTokenList DOMTokenList;
 typedef struct NamedNodeMap NamedNodeMap;
@@ -24,110 +29,17 @@ typedef struct GetHTMLOptions GetHTMLOptions;
 typedef struct PointerLockOptions PointerLockOptions;
 typedef struct Range Range;
 typedef struct DOMQuad DOMQuad;
+typedef struct BoxQuadOptions BoxQuadOptions;
+typedef struct DOMQuadInit DOMQuadInit;
+typedef struct ConvertCoordinateOptions ConvertCoordinateOptions;
 typedef struct DOMRectReadOnly DOMRectReadOnly;
 typedef struct DOMPoint DOMPoint;
+typedef struct DOMPointInit DOMPointInit;
 typedef struct NodeList NodeList;
 typedef struct HTMLSlotElement HTMLSlotElement;
 typedef struct Animation Animation;
 typedef struct GetAnimationsOptions GetAnimationsOptions;
-typedef struct ScreenDetailed ScreenDetailed;
-typedef struct ConvertCoordinateOptions ConvertCoordinateOptions;
-typedef struct DOMPointInit DOMPointInit;
-typedef struct DOMQuadInit DOMQuadInit;
-typedef struct BoxQuadOptions BoxQuadOptions;
-typedef struct ShadowRootMode ShadowRootMode;
-typedef struct SpatialNavigationDirection SpatialNavigationDirection;
-typedef struct FocusableAreaSearchMode FocusableAreaSearchMode;
 
-
-DECLARE_EMLITE_TYPE(ShadowRootInit, em_Val);
-
-ShadowRootMode ShadowRootInit_mode(const ShadowRootInit *self);
-
-void ShadowRootInit_set_mode(ShadowRootInit* self, ShadowRootMode * value);
-
-bool ShadowRootInit_delegatesFocus(const ShadowRootInit *self);
-
-void ShadowRootInit_set_delegatesFocus(ShadowRootInit* self, bool value);
-
-SlotAssignmentMode ShadowRootInit_slotAssignment(const ShadowRootInit *self);
-
-void ShadowRootInit_set_slotAssignment(ShadowRootInit* self, SlotAssignmentMode * value);
-
-bool ShadowRootInit_clonable(const ShadowRootInit *self);
-
-void ShadowRootInit_set_clonable(ShadowRootInit* self, bool value);
-
-bool ShadowRootInit_serializable(const ShadowRootInit *self);
-
-void ShadowRootInit_set_serializable(ShadowRootInit* self, bool value);
-
-CustomElementRegistry ShadowRootInit_customElementRegistry(const ShadowRootInit *self);
-
-void ShadowRootInit_set_customElementRegistry(ShadowRootInit* self, CustomElementRegistry * value);
-DECLARE_EMLITE_TYPE(FocusableAreasOption, em_Val);
-
-FocusableAreaSearchMode FocusableAreasOption_mode(const FocusableAreasOption *self);
-
-void FocusableAreasOption_set_mode(FocusableAreasOption* self, FocusableAreaSearchMode * value);
-DECLARE_EMLITE_TYPE(SpatialNavigationSearchOptions, em_Val);
-
-jb_Array SpatialNavigationSearchOptions_candidates(const SpatialNavigationSearchOptions *self);
-
-void SpatialNavigationSearchOptions_set_candidates(SpatialNavigationSearchOptions* self, jb_Array * value);
-
-Node SpatialNavigationSearchOptions_container(const SpatialNavigationSearchOptions *self);
-
-void SpatialNavigationSearchOptions_set_container(SpatialNavigationSearchOptions* self, Node * value);
-DECLARE_EMLITE_TYPE(CheckVisibilityOptions, em_Val);
-
-bool CheckVisibilityOptions_checkOpacity(const CheckVisibilityOptions *self);
-
-void CheckVisibilityOptions_set_checkOpacity(CheckVisibilityOptions* self, bool value);
-
-bool CheckVisibilityOptions_checkVisibilityCSS(const CheckVisibilityOptions *self);
-
-void CheckVisibilityOptions_set_checkVisibilityCSS(CheckVisibilityOptions* self, bool value);
-
-bool CheckVisibilityOptions_contentVisibilityAuto(const CheckVisibilityOptions *self);
-
-void CheckVisibilityOptions_set_contentVisibilityAuto(CheckVisibilityOptions* self, bool value);
-
-bool CheckVisibilityOptions_opacityProperty(const CheckVisibilityOptions *self);
-
-void CheckVisibilityOptions_set_opacityProperty(CheckVisibilityOptions* self, bool value);
-
-bool CheckVisibilityOptions_visibilityProperty(const CheckVisibilityOptions *self);
-
-void CheckVisibilityOptions_set_visibilityProperty(CheckVisibilityOptions* self, bool value);
-DECLARE_EMLITE_TYPE(FullscreenOptions, em_Val);
-
-ScreenDetailed FullscreenOptions_screen(const FullscreenOptions *self);
-
-void FullscreenOptions_set_screen(FullscreenOptions* self, ScreenDetailed * value);
-DECLARE_EMLITE_TYPE(GetHTMLOptions, em_Val);
-
-bool GetHTMLOptions_serializableShadowRoots(const GetHTMLOptions *self);
-
-void GetHTMLOptions_set_serializableShadowRoots(GetHTMLOptions* self, bool value);
-
-jb_Array GetHTMLOptions_shadowRoots(const GetHTMLOptions *self);
-
-void GetHTMLOptions_set_shadowRoots(GetHTMLOptions* self, jb_Array * value);
-DECLARE_EMLITE_TYPE(PointerLockOptions, em_Val);
-
-bool PointerLockOptions_unadjustedMovement(const PointerLockOptions *self);
-
-void PointerLockOptions_set_unadjustedMovement(PointerLockOptions* self, bool value);
-DECLARE_EMLITE_TYPE(GetAnimationsOptions, em_Val);
-
-bool GetAnimationsOptions_subtree(const GetAnimationsOptions *self);
-
-void GetAnimationsOptions_set_subtree(GetAnimationsOptions* self, bool value);
-
-jb_String GetAnimationsOptions_pseudoElement(const GetAnimationsOptions *self);
-
-void GetAnimationsOptions_set_pseudoElement(GetAnimationsOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(Element, Node);
 
 jb_String Element_namespaceURI(const Element *self);
@@ -577,3 +489,7 @@ Animation Element_animate1(Element* self , jb_Object * keyframes, jb_Any * optio
 jb_Array Element_getAnimations0(Element* self );
 
 jb_Array Element_getAnimations1(Element* self , GetAnimationsOptions * options);
+
+#ifdef __cplusplus
+}
+#endif

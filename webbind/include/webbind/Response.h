@@ -4,12 +4,15 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Response Response;
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct ResponseInit ResponseInit;
 typedef struct Headers Headers;
 typedef struct ReadableStream ReadableStream;
 typedef struct Blob Blob;
 typedef struct FormData FormData;
-
 
 DECLARE_EMLITE_TYPE(Response, em_Val);
 
@@ -17,7 +20,7 @@ Response Response_new0();
 
 Response Response_new1(jb_Any * body);
 
-Response Response_new2(jb_Any * body, jb_Any * init);
+Response Response_new2(jb_Any * body, ResponseInit * init);
 
 Response Response_error(Response* self );
 
@@ -56,3 +59,7 @@ jb_Promise Response_bytes(Response* self );
 jb_Promise Response_formData(Response* self );
 
 jb_Promise Response_text(Response* self );
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,6 @@
 #include <webbind/CanvasPattern.h>
-#include <webbind/SVGSVGElement.h>
 
+#include <webbind/DOMMatrix2DInit.h>
 
 DEFINE_EMLITE_TYPE(CanvasPattern, em_Val);
 

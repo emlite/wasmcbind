@@ -1,6 +1,5 @@
 #include <webbind/GeolocationCoordinates.h>
 
-
 DEFINE_EMLITE_TYPE(GeolocationCoordinates, em_Val);
 
 

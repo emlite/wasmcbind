@@ -2,17 +2,23 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "AudioNode.h"
 #include "enums.h"
 
-typedef struct AudioParam AudioParam;
+#include "AudioNode.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct BaseAudioContext BaseAudioContext;
+typedef struct DynamicsCompressorOptions DynamicsCompressorOptions;
+typedef struct AudioParam AudioParam;
 
 DECLARE_EMLITE_TYPE(DynamicsCompressorNode, AudioNode);
 
 DynamicsCompressorNode DynamicsCompressorNode_new0(BaseAudioContext * context);
 
-DynamicsCompressorNode DynamicsCompressorNode_new1(BaseAudioContext * context, jb_Any * options);
+DynamicsCompressorNode DynamicsCompressorNode_new1(BaseAudioContext * context, DynamicsCompressorOptions * options);
 
 AudioParam DynamicsCompressorNode_threshold(const DynamicsCompressorNode *self);
 
@@ -25,3 +31,7 @@ float DynamicsCompressorNode_reduction(const DynamicsCompressorNode *self);
 AudioParam DynamicsCompressorNode_attack(const DynamicsCompressorNode *self);
 
 AudioParam DynamicsCompressorNode_release(const DynamicsCompressorNode *self);
+
+#ifdef __cplusplus
+}
+#endif

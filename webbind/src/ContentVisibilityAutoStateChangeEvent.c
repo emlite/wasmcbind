@@ -1,5 +1,6 @@
 #include <webbind/ContentVisibilityAutoStateChangeEvent.h>
 
+#include <webbind/ContentVisibilityAutoStateChangeEventInit.h>
 
 DEFINE_EMLITE_TYPE(ContentVisibilityAutoStateChangeEvent, Event);
 
@@ -10,7 +11,7 @@ ContentVisibilityAutoStateChangeEvent ContentVisibilityAutoStateChangeEvent_new0
       }
 
 
-ContentVisibilityAutoStateChangeEvent ContentVisibilityAutoStateChangeEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+ContentVisibilityAutoStateChangeEvent ContentVisibilityAutoStateChangeEvent_new1(jb_String * type, ContentVisibilityAutoStateChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("ContentVisibilityAutoStateChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return ContentVisibilityAutoStateChangeEvent_from_val(&vv);
       }

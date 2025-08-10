@@ -1,6 +1,6 @@
 #include <webbind/FileReaderSync.h>
-#include <webbind/Blob.h>
 
+#include <webbind/Blob.h>
 
 DEFINE_EMLITE_TYPE(FileReaderSync, em_Val);
 

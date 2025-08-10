@@ -1,5 +1,6 @@
 #include <webbind/MediaEncryptedEvent.h>
 
+#include <webbind/MediaEncryptedEventInit.h>
 
 DEFINE_EMLITE_TYPE(MediaEncryptedEvent, Event);
 
@@ -10,7 +11,7 @@ MediaEncryptedEvent MediaEncryptedEvent_new0(jb_String * type) {
       }
 
 
-MediaEncryptedEvent MediaEncryptedEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+MediaEncryptedEvent MediaEncryptedEvent_new1(jb_String * type, MediaEncryptedEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("MediaEncryptedEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return MediaEncryptedEvent_from_val(&vv);
       }

@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Node Node;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct Node Node;
 
 DECLARE_EMLITE_TYPE(TreeWalker, em_Val);
 
@@ -32,3 +35,7 @@ Node TreeWalker_nextSibling(TreeWalker* self );
 Node TreeWalker_previousNode(TreeWalker* self );
 
 Node TreeWalker_nextNode(TreeWalker* self );
+
+#ifdef __cplusplus
+}
+#endif

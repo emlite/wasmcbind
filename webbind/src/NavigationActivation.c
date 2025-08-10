@@ -1,6 +1,6 @@
 #include <webbind/NavigationActivation.h>
-#include <webbind/NavigationHistoryEntry.h>
 
+#include <webbind/NavigationHistoryEntry.h>
 
 DEFINE_EMLITE_TYPE(NavigationActivation, em_Val);
 

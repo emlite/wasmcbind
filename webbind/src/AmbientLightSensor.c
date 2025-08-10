@@ -1,5 +1,6 @@
 #include <webbind/AmbientLightSensor.h>
 
+#include <webbind/SensorOptions.h>
 
 DEFINE_EMLITE_TYPE(AmbientLightSensor, Sensor);
 
@@ -10,7 +11,7 @@ AmbientLightSensor AmbientLightSensor_new0() {
       }
 
 
-AmbientLightSensor AmbientLightSensor_new1(jb_Any * sensorOptions) {
+AmbientLightSensor AmbientLightSensor_new1(SensorOptions * sensorOptions) {
         em_Val vv = em_Val_new(em_Val_global("AmbientLightSensor") , em_Val_from(sensorOptions));
         return AmbientLightSensor_from_val(&vv);
       }

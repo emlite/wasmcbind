@@ -1,6 +1,6 @@
 #include <webbind/CSSNestedDeclarations.h>
-#include <webbind/CSSStyleProperties.h>
 
+#include <webbind/CSSStyleProperties.h>
 
 DEFINE_EMLITE_TYPE(CSSNestedDeclarations, CSSRule);
 

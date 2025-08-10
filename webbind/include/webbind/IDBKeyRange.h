@@ -4,8 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct IDBKeyRange IDBKeyRange;
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(IDBKeyRange, em_Val);
 
@@ -34,3 +35,7 @@ IDBKeyRange IDBKeyRange_bound1(IDBKeyRange* self , jb_Any * lower, jb_Any * uppe
 IDBKeyRange IDBKeyRange_bound2(IDBKeyRange* self , jb_Any * lower, jb_Any * upper, bool lowerOpen, bool upperOpen);
 
 bool IDBKeyRange_includes(IDBKeyRange* self , jb_Any * key);
+
+#ifdef __cplusplus
+}
+#endif

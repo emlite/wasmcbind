@@ -2,15 +2,19 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGGraphicsElement.h"
-#include "SVGGeometryElement.h"
 #include "enums.h"
+
+#include "SVGGraphicsElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct DOMPoint DOMPoint;
 typedef struct DOMRect DOMRect;
-
+typedef struct DOMPointInit DOMPointInit;
 
 DECLARE_EMLITE_TYPE(SVGTextContentElement, SVGGraphicsElement);
 
@@ -37,3 +41,7 @@ long SVGTextContentElement_getCharNumAtPosition0(SVGTextContentElement* self );
 long SVGTextContentElement_getCharNumAtPosition1(SVGTextContentElement* self , DOMPointInit * point);
 
 jb_Undefined SVGTextContentElement_selectSubString(SVGTextContentElement* self , unsigned long charnum, unsigned long nchars);
+
+#ifdef __cplusplus
+}
+#endif

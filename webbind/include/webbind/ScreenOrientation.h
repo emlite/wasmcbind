@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(ScreenOrientation, EventTarget);
 
@@ -19,3 +23,7 @@ unsigned short ScreenOrientation_angle(const ScreenOrientation *self);
 jb_Any ScreenOrientation_onchange(const ScreenOrientation *self);
 
 void ScreenOrientation_set_onchange(ScreenOrientation* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

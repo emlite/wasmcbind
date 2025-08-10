@@ -1,10 +1,11 @@
 #include <webbind/AudioBuffer.h>
 
+#include <webbind/AudioBufferOptions.h>
 
 DEFINE_EMLITE_TYPE(AudioBuffer, em_Val);
 
 
-AudioBuffer AudioBuffer_new(jb_Any * options) {
+AudioBuffer AudioBuffer_new(AudioBufferOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("AudioBuffer") , em_Val_from(options));
         return AudioBuffer_from_val(&vv);
       }

@@ -1,6 +1,5 @@
 #include <webbind/CSSColorProfileRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSColorProfileRule, CSSRule);
 
 

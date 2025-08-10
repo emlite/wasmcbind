@@ -1,6 +1,5 @@
 #include <webbind/DOMStringList.h>
 
-
 DEFINE_EMLITE_TYPE(DOMStringList, em_Val);
 
 

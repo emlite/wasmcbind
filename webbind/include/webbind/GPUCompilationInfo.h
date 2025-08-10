@@ -4,9 +4,16 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct GPUCompilationMessage GPUCompilationMessage;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct GPUCompilationMessage GPUCompilationMessage;
 
 DECLARE_EMLITE_TYPE(GPUCompilationInfo, em_Val);
 
 jb_Array GPUCompilationInfo_messages(const GPUCompilationInfo *self);
+
+#ifdef __cplusplus
+}
+#endif

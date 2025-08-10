@@ -1,7 +1,8 @@
 #include <webbind/TextDecoderStream.h>
+
+#include <webbind/TextDecoderOptions.h>
 #include <webbind/ReadableStream.h>
 #include <webbind/WritableStream.h>
-
 
 DEFINE_EMLITE_TYPE(TextDecoderStream, em_Val);
 
@@ -18,7 +19,7 @@ TextDecoderStream TextDecoderStream_new1(jb_String * label) {
       }
 
 
-TextDecoderStream TextDecoderStream_new2(jb_String * label, jb_Any * options) {
+TextDecoderStream TextDecoderStream_new2(jb_String * label, TextDecoderOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("TextDecoderStream") , em_Val_from(label), em_Val_from(options));
         return TextDecoderStream_from_val(&vv);
       }

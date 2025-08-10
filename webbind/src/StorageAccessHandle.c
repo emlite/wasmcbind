@@ -1,13 +1,13 @@
 #include <webbind/StorageAccessHandle.h>
+
 #include <webbind/Storage.h>
 #include <webbind/IDBFactory.h>
 #include <webbind/LockManager.h>
 #include <webbind/CacheStorage.h>
 #include <webbind/FileSystemDirectoryHandle.h>
-#include <webbind/StorageManager.h>
+#include <webbind/StorageEstimate.h>
 #include <webbind/BroadcastChannel.h>
 #include <webbind/SharedWorker.h>
-
 
 DEFINE_EMLITE_TYPE(StorageAccessHandle, em_Val);
 

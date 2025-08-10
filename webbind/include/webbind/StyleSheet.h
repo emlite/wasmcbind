@@ -4,9 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct CSSStyleSheet CSSStyleSheet;
 typedef struct MediaList MediaList;
-
 
 DECLARE_EMLITE_TYPE(StyleSheet, em_Val);
 
@@ -25,3 +28,7 @@ MediaList StyleSheet_media(const StyleSheet *self);
 bool StyleSheet_disabled(const StyleSheet *self);
 
 void StyleSheet_set_disabled(StyleSheet* self, bool value);
+
+#ifdef __cplusplus
+}
+#endif

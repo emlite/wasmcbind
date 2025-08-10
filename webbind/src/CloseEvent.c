@@ -1,5 +1,6 @@
 #include <webbind/CloseEvent.h>
 
+#include <webbind/CloseEventInit.h>
 
 DEFINE_EMLITE_TYPE(CloseEvent, Event);
 
@@ -10,7 +11,7 @@ CloseEvent CloseEvent_new0(jb_String * type) {
       }
 
 
-CloseEvent CloseEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+CloseEvent CloseEvent_new1(jb_String * type, CloseEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("CloseEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return CloseEvent_from_val(&vv);
       }

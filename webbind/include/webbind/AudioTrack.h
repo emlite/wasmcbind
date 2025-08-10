@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct SourceBuffer SourceBuffer;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct SourceBuffer SourceBuffer;
 
 DECLARE_EMLITE_TYPE(AudioTrack, em_Val);
 
@@ -22,3 +25,7 @@ bool AudioTrack_enabled(const AudioTrack *self);
 void AudioTrack_set_enabled(AudioTrack* self, bool value);
 
 SourceBuffer AudioTrack_sourceBuffer(const AudioTrack *self);
+
+#ifdef __cplusplus
+}
+#endif

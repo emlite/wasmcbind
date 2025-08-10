@@ -1,6 +1,6 @@
 #include <webbind/IDBCursor.h>
-#include <webbind/IDBRequest.h>
 
+#include <webbind/IDBRequest.h>
 
 DEFINE_EMLITE_TYPE(IDBCursor, em_Val);
 

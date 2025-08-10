@@ -1,71 +1,22 @@
 #include <webbind/PaymentRequest.h>
+
+#include <webbind/PaymentMethodData.h>
+#include <webbind/PaymentDetailsInit.h>
+#include <webbind/PaymentOptions.h>
 #include <webbind/PaymentResponse.h>
+#include <webbind/PaymentDetailsUpdate.h>
 #include <webbind/ContactAddress.h>
-#include <webbind/PaymentRequestEvent.h>
-
-
-DEFINE_EMLITE_TYPE(PaymentDetailsUpdate, em_Val);
-
-
-jb_String PaymentDetailsUpdate_error(const PaymentDetailsUpdate *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("error")));
-}
-
-
-void PaymentDetailsUpdate_set_error(PaymentDetailsUpdate* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("error"), em_Val_from(value));
-}
-
-
-jb_Any PaymentDetailsUpdate_total(const PaymentDetailsUpdate *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("total")));
-}
-
-
-void PaymentDetailsUpdate_set_total(PaymentDetailsUpdate* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("total"), em_Val_from(value));
-}
-
-
-jb_Any PaymentDetailsUpdate_shippingAddressErrors(const PaymentDetailsUpdate *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shippingAddressErrors")));
-}
-
-
-void PaymentDetailsUpdate_set_shippingAddressErrors(PaymentDetailsUpdate* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("shippingAddressErrors"), em_Val_from(value));
-}
-
-
-jb_Any PaymentDetailsUpdate_payerErrors(const PaymentDetailsUpdate *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("payerErrors")));
-}
-
-
-void PaymentDetailsUpdate_set_payerErrors(PaymentDetailsUpdate* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("payerErrors"), em_Val_from(value));
-}
-
-
-jb_Object PaymentDetailsUpdate_paymentMethodErrors(const PaymentDetailsUpdate *self) {
-    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("paymentMethodErrors")));
-}
-
-
-void PaymentDetailsUpdate_set_paymentMethodErrors(PaymentDetailsUpdate* self, jb_Object * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("paymentMethodErrors"), em_Val_from(value));
-}
 
 DEFINE_EMLITE_TYPE(PaymentRequest, EventTarget);
 
 
-PaymentRequest PaymentRequest_new0(jb_Array * methodData, jb_Any * details) {
+PaymentRequest PaymentRequest_new0(jb_Array * methodData, PaymentDetailsInit * details) {
         em_Val vv = em_Val_new(em_Val_global("PaymentRequest") , em_Val_from(methodData), em_Val_from(details));
         return PaymentRequest_from_val(&vv);
       }
 
 
-PaymentRequest PaymentRequest_new1(jb_Array * methodData, jb_Any * details, jb_Any * options) {
+PaymentRequest PaymentRequest_new1(jb_Array * methodData, PaymentDetailsInit * details, PaymentOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("PaymentRequest") , em_Val_from(methodData), em_Val_from(details), em_Val_from(options));
         return PaymentRequest_from_val(&vv);
       }

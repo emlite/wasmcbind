@@ -4,15 +4,19 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct IntersectionObserverInit IntersectionObserverInit;
 typedef struct Element Element;
 typedef struct IntersectionObserverEntry IntersectionObserverEntry;
-
 
 DECLARE_EMLITE_TYPE(IntersectionObserver, em_Val);
 
 IntersectionObserver IntersectionObserver_new0(jb_Function * callback);
 
-IntersectionObserver IntersectionObserver_new1(jb_Function * callback, jb_Any * options);
+IntersectionObserver IntersectionObserver_new1(jb_Function * callback, IntersectionObserverInit * options);
 
 jb_Any IntersectionObserver_root(const IntersectionObserver *self);
 
@@ -33,3 +37,7 @@ jb_Undefined IntersectionObserver_unobserve(IntersectionObserver* self , Element
 jb_Undefined IntersectionObserver_disconnect(IntersectionObserver* self );
 
 jb_Array IntersectionObserver_takeRecords(IntersectionObserver* self );
+
+#ifdef __cplusplus
+}
+#endif

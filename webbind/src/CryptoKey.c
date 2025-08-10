@@ -1,6 +1,5 @@
 #include <webbind/CryptoKey.h>
 
-
 DEFINE_EMLITE_TYPE(CryptoKey, em_Val);
 
 

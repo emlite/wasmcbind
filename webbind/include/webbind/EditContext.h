@@ -2,18 +2,23 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct EditContextInit EditContextInit;
 typedef struct DOMRect DOMRect;
 typedef struct HTMLElement HTMLElement;
-
 
 DECLARE_EMLITE_TYPE(EditContext, EventTarget);
 
 EditContext EditContext_new0();
 
-EditContext EditContext_new1(jb_Any * options);
+EditContext EditContext_new1(EditContextInit * options);
 
 jb_Undefined EditContext_updateText(EditContext* self , unsigned long rangeStart, unsigned long rangeEnd, jb_String * text);
 
@@ -56,3 +61,7 @@ void EditContext_set_oncompositionstart(EditContext* self, jb_Any * value);
 jb_Any EditContext_oncompositionend(const EditContext *self);
 
 void EditContext_set_oncompositionend(EditContext* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

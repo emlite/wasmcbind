@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct SVGLength SVGLength;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct SVGLength SVGLength;
 
 DECLARE_EMLITE_TYPE(SVGLengthList, em_Val);
 
@@ -26,3 +29,7 @@ SVGLength SVGLengthList_replaceItem(SVGLengthList* self , SVGLength * newItem, u
 SVGLength SVGLengthList_removeItem(SVGLengthList* self , unsigned long index);
 
 SVGLength SVGLengthList_appendItem(SVGLengthList* self , SVGLength * newItem);
+
+#ifdef __cplusplus
+}
+#endif

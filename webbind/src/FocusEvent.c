@@ -1,6 +1,7 @@
 #include <webbind/FocusEvent.h>
-#include <webbind/EventTarget.h>
 
+#include <webbind/FocusEventInit.h>
+#include <webbind/EventTarget.h>
 
 DEFINE_EMLITE_TYPE(FocusEvent, UIEvent);
 
@@ -11,7 +12,7 @@ FocusEvent FocusEvent_new0(jb_String * type) {
       }
 
 
-FocusEvent FocusEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+FocusEvent FocusEvent_new1(jb_String * type, FocusEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("FocusEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return FocusEvent_from_val(&vv);
       }

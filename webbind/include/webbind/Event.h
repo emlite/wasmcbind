@@ -4,14 +4,18 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct EventTarget EventTarget;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct EventInit EventInit;
+typedef struct EventTarget EventTarget;
 
 DECLARE_EMLITE_TYPE(Event, em_Val);
 
 Event Event_new0(jb_String * type);
 
-Event Event_new1(jb_String * type, jb_Any * eventInitDict);
+Event Event_new1(jb_String * type, EventInit * eventInitDict);
 
 jb_String Event_type(const Event *self);
 
@@ -56,3 +60,7 @@ jb_Undefined Event_initEvent0(Event* self , jb_String * type);
 jb_Undefined Event_initEvent1(Event* self , jb_String * type, bool bubbles);
 
 jb_Undefined Event_initEvent2(Event* self , jb_String * type, bool bubbles, bool cancelable);
+
+#ifdef __cplusplus
+}
+#endif

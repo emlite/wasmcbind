@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "TextTrackCue.h"
 #include "enums.h"
 
+#include "TextTrackCue.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(DataCue, TextTrackCue);
 
@@ -17,3 +21,7 @@ jb_Any DataCue_value(const DataCue *self);
 void DataCue_set_value(DataCue* self, jb_Any * value);
 
 jb_String DataCue_type(const DataCue *self);
+
+#ifdef __cplusplus
+}
+#endif

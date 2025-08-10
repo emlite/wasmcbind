@@ -1,6 +1,5 @@
 #include <webbind/WakeLockSentinel.h>
 
-
 DEFINE_EMLITE_TYPE(WakeLockSentinel, EventTarget);
 
 

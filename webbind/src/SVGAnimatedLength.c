@@ -1,6 +1,6 @@
 #include <webbind/SVGAnimatedLength.h>
-#include <webbind/SVGLength.h>
 
+#include <webbind/SVGLength.h>
 
 DEFINE_EMLITE_TYPE(SVGAnimatedLength, em_Val);
 

@@ -2,15 +2,20 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "RTCIceTransport.h"
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct RTCLocalIceCandidateInit RTCLocalIceCandidateInit;
+typedef struct RTCIceCandidateInit RTCIceCandidateInit;
 
 DECLARE_EMLITE_TYPE(RTCIceCandidate, em_Val);
 
 RTCIceCandidate RTCIceCandidate_new0();
 
-RTCIceCandidate RTCIceCandidate_new1(jb_Any * candidateInitDict);
+RTCIceCandidate RTCIceCandidate_new1(RTCLocalIceCandidateInit * candidateInitDict);
 
 jb_String RTCIceCandidate_candidate(const RTCIceCandidate *self);
 
@@ -45,3 +50,7 @@ RTCIceServerTransportProtocol RTCIceCandidate_relayProtocol(const RTCIceCandidat
 jb_String RTCIceCandidate_url(const RTCIceCandidate *self);
 
 RTCIceCandidateInit RTCIceCandidate_toJSON(RTCIceCandidate* self );
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,4 +1,7 @@
 #include <webbind/AudioContext.h>
+
+#include <webbind/AudioContextOptions.h>
+#include <webbind/AudioTimestamp.h>
 #include <webbind/MediaElementAudioSourceNode.h>
 #include <webbind/HTMLMediaElement.h>
 #include <webbind/MediaStreamAudioSourceNode.h>
@@ -6,29 +9,6 @@
 #include <webbind/MediaStreamTrackAudioSourceNode.h>
 #include <webbind/MediaStreamTrack.h>
 #include <webbind/MediaStreamAudioDestinationNode.h>
-
-
-DEFINE_EMLITE_TYPE(AudioTimestamp, em_Val);
-
-
-double AudioTimestamp_contextTime(const AudioTimestamp *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("contextTime")));
-}
-
-
-void AudioTimestamp_set_contextTime(AudioTimestamp* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("contextTime"), em_Val_from(value));
-}
-
-
-jb_Any AudioTimestamp_performanceTime(const AudioTimestamp *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("performanceTime")));
-}
-
-
-void AudioTimestamp_set_performanceTime(AudioTimestamp* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("performanceTime"), em_Val_from(value));
-}
 
 DEFINE_EMLITE_TYPE(AudioContext, BaseAudioContext);
 
@@ -39,7 +19,7 @@ AudioContext AudioContext_new0() {
       }
 
 
-AudioContext AudioContext_new1(jb_Any * contextOptions) {
+AudioContext AudioContext_new1(AudioContextOptions * contextOptions) {
         em_Val vv = em_Val_new(em_Val_global("AudioContext") , em_Val_from(contextOptions));
         return AudioContext_from_val(&vv);
       }

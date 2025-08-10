@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(BluetoothCharacteristicProperties, em_Val);
 
@@ -24,3 +27,7 @@ bool BluetoothCharacteristicProperties_authenticatedSignedWrites(const Bluetooth
 bool BluetoothCharacteristicProperties_reliableWrite(const BluetoothCharacteristicProperties *self);
 
 bool BluetoothCharacteristicProperties_writableAuxiliaries(const BluetoothCharacteristicProperties *self);
+
+#ifdef __cplusplus
+}
+#endif

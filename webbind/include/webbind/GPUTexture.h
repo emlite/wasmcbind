@@ -4,43 +4,13 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct GPUTextureView GPUTextureView;
 typedef struct GPUTextureViewDescriptor GPUTextureViewDescriptor;
 
-
-DECLARE_EMLITE_TYPE(GPUTextureViewDescriptor, em_Val);
-
-GPUTextureFormat GPUTextureViewDescriptor_format(const GPUTextureViewDescriptor *self);
-
-void GPUTextureViewDescriptor_set_format(GPUTextureViewDescriptor* self, GPUTextureFormat * value);
-
-GPUTextureViewDimension GPUTextureViewDescriptor_dimension(const GPUTextureViewDescriptor *self);
-
-void GPUTextureViewDescriptor_set_dimension(GPUTextureViewDescriptor* self, GPUTextureViewDimension * value);
-
-jb_Any GPUTextureViewDescriptor_usage(const GPUTextureViewDescriptor *self);
-
-void GPUTextureViewDescriptor_set_usage(GPUTextureViewDescriptor* self, jb_Any * value);
-
-GPUTextureAspect GPUTextureViewDescriptor_aspect(const GPUTextureViewDescriptor *self);
-
-void GPUTextureViewDescriptor_set_aspect(GPUTextureViewDescriptor* self, GPUTextureAspect * value);
-
-jb_Any GPUTextureViewDescriptor_baseMipLevel(const GPUTextureViewDescriptor *self);
-
-void GPUTextureViewDescriptor_set_baseMipLevel(GPUTextureViewDescriptor* self, jb_Any * value);
-
-jb_Any GPUTextureViewDescriptor_mipLevelCount(const GPUTextureViewDescriptor *self);
-
-void GPUTextureViewDescriptor_set_mipLevelCount(GPUTextureViewDescriptor* self, jb_Any * value);
-
-jb_Any GPUTextureViewDescriptor_baseArrayLayer(const GPUTextureViewDescriptor *self);
-
-void GPUTextureViewDescriptor_set_baseArrayLayer(GPUTextureViewDescriptor* self, jb_Any * value);
-
-jb_Any GPUTextureViewDescriptor_arrayLayerCount(const GPUTextureViewDescriptor *self);
-
-void GPUTextureViewDescriptor_set_arrayLayerCount(GPUTextureViewDescriptor* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(GPUTexture, em_Val);
 
 GPUTextureView GPUTexture_createView0(GPUTexture* self );
@@ -68,3 +38,7 @@ jb_Any GPUTexture_usage(const GPUTexture *self);
 jb_String GPUTexture_label(const GPUTexture *self);
 
 void GPUTexture_set_label(GPUTexture* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

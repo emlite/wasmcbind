@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSTransformComponent.h"
 #include "enums.h"
 
-typedef struct CSSNumericValue CSSNumericValue;
+#include "CSSTransformComponent.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct CSSNumericValue CSSNumericValue;
 
 DECLARE_EMLITE_TYPE(CSSRotate, CSSTransformComponent);
 
@@ -27,3 +31,7 @@ void CSSRotate_set_z(CSSRotate* self, jb_Any * value);
 CSSNumericValue CSSRotate_angle(const CSSRotate *self);
 
 void CSSRotate_set_angle(CSSRotate* self, CSSNumericValue * value);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,5 +1,6 @@
 #include <webbind/CompositionEvent.h>
 
+#include <webbind/CompositionEventInit.h>
 
 DEFINE_EMLITE_TYPE(CompositionEvent, UIEvent);
 
@@ -10,7 +11,7 @@ CompositionEvent CompositionEvent_new0(jb_String * type) {
       }
 
 
-CompositionEvent CompositionEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+CompositionEvent CompositionEvent_new1(jb_String * type, CompositionEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("CompositionEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return CompositionEvent_from_val(&vv);
       }

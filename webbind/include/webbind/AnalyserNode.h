@@ -2,15 +2,22 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "AudioNode.h"
 #include "enums.h"
 
+#include "AudioNode.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct BaseAudioContext BaseAudioContext;
+typedef struct AnalyserOptions AnalyserOptions;
 
 DECLARE_EMLITE_TYPE(AnalyserNode, AudioNode);
 
 AnalyserNode AnalyserNode_new0(BaseAudioContext * context);
 
-AnalyserNode AnalyserNode_new1(BaseAudioContext * context, jb_Any * options);
+AnalyserNode AnalyserNode_new1(BaseAudioContext * context, AnalyserOptions * options);
 
 jb_Undefined AnalyserNode_getFloatFrequencyData(AnalyserNode* self , jb_Float32Array * array);
 
@@ -37,3 +44,7 @@ void AnalyserNode_set_maxDecibels(AnalyserNode* self, double value);
 double AnalyserNode_smoothingTimeConstant(const AnalyserNode *self);
 
 void AnalyserNode_set_smoothingTimeConstant(AnalyserNode* self, double value);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,6 @@
 #include <webbind/SharedStorageSetMethod.h>
-#include <webbind/SharedStorage.h>
 
+#include <webbind/SharedStorageSetMethodOptions.h>
 
 DEFINE_EMLITE_TYPE(SharedStorageSetMethod, SharedStorageModifierMethod);
 

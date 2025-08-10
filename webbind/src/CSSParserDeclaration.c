@@ -1,6 +1,6 @@
 #include <webbind/CSSParserDeclaration.h>
-#include <webbind/CSSParserValue.h>
 
+#include <webbind/CSSParserValue.h>
 
 DEFINE_EMLITE_TYPE(CSSParserDeclaration, CSSParserRule);
 

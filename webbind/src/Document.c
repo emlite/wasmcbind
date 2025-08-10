@@ -1,4 +1,5 @@
 #include <webbind/Document.h>
+
 #include <webbind/DOMImplementation.h>
 #include <webbind/DocumentType.h>
 #include <webbind/Element.h>
@@ -17,6 +18,7 @@
 #include <webbind/NamedFlowMap.h>
 #include <webbind/ViewTransition.h>
 #include <webbind/CaretPosition.h>
+#include <webbind/CaretPositionFromPointOptions.h>
 #include <webbind/FontMetrics.h>
 #include <webbind/StylePropertyMapReadOnly.h>
 #include <webbind/Location.h>
@@ -30,111 +32,15 @@
 #include <webbind/DocumentTimeline.h>
 #include <webbind/FontFaceSet.h>
 #include <webbind/DOMQuad.h>
+#include <webbind/BoxQuadOptions.h>
+#include <webbind/DOMQuadInit.h>
+#include <webbind/ConvertCoordinateOptions.h>
 #include <webbind/DOMRectReadOnly.h>
 #include <webbind/DOMPoint.h>
-#include <webbind/SVGGeometryElement.h>
+#include <webbind/DOMPointInit.h>
 #include <webbind/Animation.h>
 #include <webbind/XPathExpression.h>
 #include <webbind/XPathResult.h>
-
-
-DEFINE_EMLITE_TYPE(CaretPositionFromPointOptions, em_Val);
-
-
-jb_Array CaretPositionFromPointOptions_shadowRoots(const CaretPositionFromPointOptions *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowRoots")));
-}
-
-
-void CaretPositionFromPointOptions_set_shadowRoots(CaretPositionFromPointOptions* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("shadowRoots"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(BoxQuadOptions, em_Val);
-
-
-CSSBoxType BoxQuadOptions_box(const BoxQuadOptions *self) {
-    return em_Val_as(CSSBoxType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("box")));
-}
-
-
-void BoxQuadOptions_set_box(BoxQuadOptions* self, CSSBoxType * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("box"), em_Val_from(value));
-}
-
-
-jb_Any BoxQuadOptions_relativeTo(const BoxQuadOptions *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("relativeTo")));
-}
-
-
-void BoxQuadOptions_set_relativeTo(BoxQuadOptions* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("relativeTo"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(DOMQuadInit, em_Val);
-
-
-DOMPointInit DOMQuadInit_p1(const DOMQuadInit *self) {
-    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), em_Val_from("p1")));
-}
-
-
-void DOMQuadInit_set_p1(DOMQuadInit* self, DOMPointInit * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("p1"), em_Val_from(value));
-}
-
-
-DOMPointInit DOMQuadInit_p2(const DOMQuadInit *self) {
-    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), em_Val_from("p2")));
-}
-
-
-void DOMQuadInit_set_p2(DOMQuadInit* self, DOMPointInit * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("p2"), em_Val_from(value));
-}
-
-
-DOMPointInit DOMQuadInit_p3(const DOMQuadInit *self) {
-    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), em_Val_from("p3")));
-}
-
-
-void DOMQuadInit_set_p3(DOMQuadInit* self, DOMPointInit * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("p3"), em_Val_from(value));
-}
-
-
-DOMPointInit DOMQuadInit_p4(const DOMQuadInit *self) {
-    return em_Val_as(DOMPointInit, em_Val_get(em_Val_as_val(self->inner), em_Val_from("p4")));
-}
-
-
-void DOMQuadInit_set_p4(DOMQuadInit* self, DOMPointInit * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("p4"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(ConvertCoordinateOptions, em_Val);
-
-
-CSSBoxType ConvertCoordinateOptions_fromBox(const ConvertCoordinateOptions *self) {
-    return em_Val_as(CSSBoxType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("fromBox")));
-}
-
-
-void ConvertCoordinateOptions_set_fromBox(ConvertCoordinateOptions* self, CSSBoxType * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("fromBox"), em_Val_from(value));
-}
-
-
-CSSBoxType ConvertCoordinateOptions_toBox(const ConvertCoordinateOptions *self) {
-    return em_Val_as(CSSBoxType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("toBox")));
-}
-
-
-void ConvertCoordinateOptions_set_toBox(ConvertCoordinateOptions* self, CSSBoxType * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("toBox"), em_Val_from(value));
-}
 
 DEFINE_EMLITE_TYPE(Document, Node);
 
@@ -415,8 +321,8 @@ Document Document_parseHTMLUnsafe(Document* self , jb_Any * html) {
 }
 
 
-jb_Any Document_location(const Document *self) {
-    return em_Val_as(jb_Any, em_Val_get(Node_as_val(self->inner), em_Val_from("location")));
+Location Document_location(const Document *self) {
+    return em_Val_as(Location, em_Val_get(Node_as_val(self->inner), em_Val_from("location")));
 }
 
 

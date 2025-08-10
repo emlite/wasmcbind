@@ -4,43 +4,40 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct CSSUnitValue CSSUnitValue;
-typedef struct CSSParserDeclaration CSSParserDeclaration;
+#include "Worklet.h"
+#include "HighlightRegistry.h"
+#include "CSSParserRule.h"
+#include "CSSParserOptions.h"
+#include "CSSParserDeclaration.h"
+#include "PropertyDefinition.h"
+#include "CSSUnitValue.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct Worklet Worklet;
+typedef struct HighlightRegistry HighlightRegistry;
 typedef struct CSSParserRule CSSParserRule;
+typedef struct CSSParserDeclaration CSSParserDeclaration;
+typedef struct CSSUnitValue CSSUnitValue;
 
-
-
-
-bool CSS_supports0(jb_String * property, jb_String * value);
-bool CSS_supports1(jb_String * conditionText);
-
-
-
-
-
-
-
-
-
-
+jb_String CSS_escape(jb_String * ident);
+bool CSS_supports(jb_String * conditionText);
 jb_Promise CSS_parseStylesheet0(jb_Any * css);
-jb_Promise CSS_parseStylesheet1(jb_Any * css, jb_Any * options);
+jb_Promise CSS_parseStylesheet1(jb_Any * css, CSSParserOptions * options);
 jb_Promise CSS_parseRuleList0(jb_Any * css);
-jb_Promise CSS_parseRuleList1(jb_Any * css, jb_Any * options);
+jb_Promise CSS_parseRuleList1(jb_Any * css, CSSParserOptions * options);
 jb_Promise CSS_parseRule0(jb_Any * css);
-jb_Promise CSS_parseRule1(jb_Any * css, jb_Any * options);
+jb_Promise CSS_parseRule1(jb_Any * css, CSSParserOptions * options);
 jb_Promise CSS_parseDeclarationList0(jb_Any * css);
-jb_Promise CSS_parseDeclarationList1(jb_Any * css, jb_Any * options);
+jb_Promise CSS_parseDeclarationList1(jb_Any * css, CSSParserOptions * options);
 CSSParserDeclaration CSS_parseDeclaration0(jb_String * css);
-CSSParserDeclaration CSS_parseDeclaration1(jb_String * css, jb_Any * options);
+CSSParserDeclaration CSS_parseDeclaration1(jb_String * css, CSSParserOptions * options);
 jb_Any CSS_parseValue(jb_String * css);
 jb_Array CSS_parseValueList(jb_String * css);
 jb_Array CSS_parseCommaValueList(jb_String * css);
-
-
-jb_Undefined CSS_registerProperty(jb_Any * definition);
-
-
+jb_Undefined CSS_registerProperty(PropertyDefinition * definition);
 CSSUnitValue CSS_number(double value);
 CSSUnitValue CSS_percent(double value);
 CSSUnitValue CSS_cap(double value);
@@ -105,5 +102,6 @@ CSSUnitValue CSS_dpcm(double value);
 CSSUnitValue CSS_dppx(double value);
 CSSUnitValue CSS_fr(double value);
 
-
-jb_String CSS_escape(jb_String * ident);
+#ifdef __cplusplus
+}
+#endif

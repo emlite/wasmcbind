@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct AudioParam AudioParam;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct AudioParam AudioParam;
 
 DECLARE_EMLITE_TYPE(AudioListener, em_Val);
 
@@ -30,3 +33,7 @@ AudioParam AudioListener_upZ(const AudioListener *self);
 jb_Undefined AudioListener_setPosition(AudioListener* self , float x, float y, float z);
 
 jb_Undefined AudioListener_setOrientation(AudioListener* self , float x, float y, float z, float xUp, float yUp, float zUp);
+
+#ifdef __cplusplus
+}
+#endif

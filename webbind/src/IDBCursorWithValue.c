@@ -1,6 +1,5 @@
 #include <webbind/IDBCursorWithValue.h>
 
-
 DEFINE_EMLITE_TYPE(IDBCursorWithValue, IDBCursor);
 
 

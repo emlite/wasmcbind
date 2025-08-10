@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct Document Document;
+#include "HTMLElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct Document Document;
 
 DECLARE_EMLITE_TYPE(HTMLFrameElement, HTMLElement);
 
@@ -47,3 +51,7 @@ void HTMLFrameElement_set_marginHeight(HTMLFrameElement* self, jb_String * value
 jb_String HTMLFrameElement_marginWidth(const HTMLFrameElement *self);
 
 void HTMLFrameElement_set_marginWidth(HTMLFrameElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

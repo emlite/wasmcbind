@@ -1,6 +1,6 @@
 #include <webbind/GPUCompilationInfo.h>
-#include <webbind/GPUCompilationMessage.h>
 
+#include <webbind/GPUCompilationMessage.h>
 
 DEFINE_EMLITE_TYPE(GPUCompilationInfo, em_Val);
 

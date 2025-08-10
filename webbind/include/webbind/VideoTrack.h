@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct SourceBuffer SourceBuffer;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct SourceBuffer SourceBuffer;
 
 DECLARE_EMLITE_TYPE(VideoTrack, em_Val);
 
@@ -22,3 +25,7 @@ bool VideoTrack_selected(const VideoTrack *self);
 void VideoTrack_set_selected(VideoTrack* self, bool value);
 
 SourceBuffer VideoTrack_sourceBuffer(const VideoTrack *self);
+
+#ifdef __cplusplus
+}
+#endif

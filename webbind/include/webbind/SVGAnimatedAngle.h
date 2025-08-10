@@ -4,11 +4,18 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct SVGAngle SVGAngle;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct SVGAngle SVGAngle;
 
 DECLARE_EMLITE_TYPE(SVGAnimatedAngle, em_Val);
 
 SVGAngle SVGAnimatedAngle_baseVal(const SVGAnimatedAngle *self);
 
 SVGAngle SVGAnimatedAngle_animVal(const SVGAnimatedAngle *self);
+
+#ifdef __cplusplus
+}
+#endif

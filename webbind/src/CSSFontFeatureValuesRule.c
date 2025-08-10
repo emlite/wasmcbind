@@ -1,6 +1,6 @@
 #include <webbind/CSSFontFeatureValuesRule.h>
-#include <webbind/CSSFontFeatureValuesMap.h>
 
+#include <webbind/CSSFontFeatureValuesMap.h>
 
 DEFINE_EMLITE_TYPE(CSSFontFeatureValuesRule, CSSRule);
 

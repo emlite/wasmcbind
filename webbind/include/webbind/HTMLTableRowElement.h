@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct HTMLCollection HTMLCollection;
 typedef struct HTMLTableCellElement HTMLTableCellElement;
-
 
 DECLARE_EMLITE_TYPE(HTMLTableRowElement, HTMLElement);
 
@@ -44,3 +48,7 @@ void HTMLTableRowElement_set_vAlign(HTMLTableRowElement* self, jb_String * value
 jb_String HTMLTableRowElement_bgColor(const HTMLTableRowElement *self);
 
 void HTMLTableRowElement_set_bgColor(HTMLTableRowElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

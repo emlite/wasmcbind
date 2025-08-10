@@ -1,6 +1,6 @@
 #include <webbind/USBPermissionResult.h>
-#include <webbind/USBDevice.h>
 
+#include <webbind/USBDevice.h>
 
 DEFINE_EMLITE_TYPE(USBPermissionResult, PermissionStatus);
 

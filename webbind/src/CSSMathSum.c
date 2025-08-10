@@ -1,6 +1,6 @@
 #include <webbind/CSSMathSum.h>
-#include <webbind/CSSNumericArray.h>
 
+#include <webbind/CSSNumericArray.h>
 
 DEFINE_EMLITE_TYPE(CSSMathSum, CSSMathValue);
 

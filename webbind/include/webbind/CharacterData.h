@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Node.h"
 #include "enums.h"
 
-typedef struct Element Element;
+#include "Node.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct Element Element;
 
 DECLARE_EMLITE_TYPE(CharacterData, Node);
 
@@ -37,3 +41,7 @@ jb_Undefined CharacterData_after(CharacterData* self , jb_Any * nodes);
 jb_Undefined CharacterData_replaceWith(CharacterData* self , jb_Any * nodes);
 
 jb_Undefined CharacterData_remove(CharacterData* self );
+
+#ifdef __cplusplus
+}
+#endif

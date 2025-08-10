@@ -2,14 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct BluetoothRemoteGATTService BluetoothRemoteGATTService;
 typedef struct BluetoothCharacteristicProperties BluetoothCharacteristicProperties;
 typedef struct BluetoothRemoteGATTDescriptor BluetoothRemoteGATTDescriptor;
-typedef struct BluetoothRemoteGATTCharacteristic BluetoothRemoteGATTCharacteristic;
-
 
 DECLARE_EMLITE_TYPE(BluetoothRemoteGATTCharacteristic, EventTarget);
 
@@ -42,3 +45,7 @@ jb_Promise BluetoothRemoteGATTCharacteristic_stopNotifications(BluetoothRemoteGA
 jb_Any BluetoothRemoteGATTCharacteristic_oncharacteristicvaluechanged(const BluetoothRemoteGATTCharacteristic *self);
 
 void BluetoothRemoteGATTCharacteristic_set_oncharacteristicvaluechanged(BluetoothRemoteGATTCharacteristic* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

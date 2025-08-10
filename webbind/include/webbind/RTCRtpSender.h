@@ -4,6 +4,10 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct MediaStreamTrack MediaStreamTrack;
 typedef struct RTCDtlsTransport RTCDtlsTransport;
 typedef struct RTCRtpCapabilities RTCRtpCapabilities;
@@ -12,28 +16,7 @@ typedef struct RTCSetParameterOptions RTCSetParameterOptions;
 typedef struct MediaStream MediaStream;
 typedef struct RTCStatsReport RTCStatsReport;
 typedef struct RTCDTMFSender RTCDTMFSender;
-typedef struct RTCRtpCodec RTCRtpCodec;
 
-
-DECLARE_EMLITE_TYPE(RTCRtpCapabilities, em_Val);
-
-jb_Array RTCRtpCapabilities_codecs(const RTCRtpCapabilities *self);
-
-void RTCRtpCapabilities_set_codecs(RTCRtpCapabilities* self, jb_Array * value);
-
-jb_Array RTCRtpCapabilities_headerExtensions(const RTCRtpCapabilities *self);
-
-void RTCRtpCapabilities_set_headerExtensions(RTCRtpCapabilities* self, jb_Array * value);
-DECLARE_EMLITE_TYPE(RTCRtpSendParameters, em_Val);
-
-jb_String RTCRtpSendParameters_transactionId(const RTCRtpSendParameters *self);
-
-void RTCRtpSendParameters_set_transactionId(RTCRtpSendParameters* self, jb_String * value);
-
-jb_Array RTCRtpSendParameters_encodings(const RTCRtpSendParameters *self);
-
-void RTCRtpSendParameters_set_encodings(RTCRtpSendParameters* self, jb_Array * value);
-DECLARE_EMLITE_TYPE(RTCSetParameterOptions, em_Val);
 DECLARE_EMLITE_TYPE(RTCRtpSender, em_Val);
 
 MediaStreamTrack RTCRtpSender_track(const RTCRtpSender *self);
@@ -63,3 +46,7 @@ jb_Promise RTCRtpSender_generateKeyFrame0(RTCRtpSender* self );
 jb_Promise RTCRtpSender_generateKeyFrame1(RTCRtpSender* self , jb_Array * rids);
 
 RTCDTMFSender RTCRtpSender_dtmf(const RTCRtpSender *self);
+
+#ifdef __cplusplus
+}
+#endif

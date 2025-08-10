@@ -1,6 +1,6 @@
 #include <webbind/PerformanceNavigationTiming.h>
-#include <webbind/NotRestoredReasons.h>
 
+#include <webbind/NotRestoredReasons.h>
 
 DEFINE_EMLITE_TYPE(PerformanceNavigationTiming, PerformanceResourceTiming);
 

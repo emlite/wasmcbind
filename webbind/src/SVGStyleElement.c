@@ -1,6 +1,6 @@
 #include <webbind/SVGStyleElement.h>
-#include <webbind/CSSStyleSheet.h>
 
+#include <webbind/CSSStyleSheet.h>
 
 DEFINE_EMLITE_TYPE(SVGStyleElement, SVGElement);
 

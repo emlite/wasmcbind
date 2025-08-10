@@ -1,6 +1,7 @@
 #include <webbind/RTCIceCandidate.h>
-#include <webbind/RTCIceTransport.h>
 
+#include <webbind/RTCLocalIceCandidateInit.h>
+#include <webbind/RTCIceCandidateInit.h>
 
 DEFINE_EMLITE_TYPE(RTCIceCandidate, em_Val);
 
@@ -11,7 +12,7 @@ RTCIceCandidate RTCIceCandidate_new0() {
       }
 
 
-RTCIceCandidate RTCIceCandidate_new1(jb_Any * candidateInitDict) {
+RTCIceCandidate RTCIceCandidate_new1(RTCLocalIceCandidateInit * candidateInitDict) {
         em_Val vv = em_Val_new(em_Val_global("RTCIceCandidate") , em_Val_from(candidateInitDict));
         return RTCIceCandidate_from_val(&vv);
       }

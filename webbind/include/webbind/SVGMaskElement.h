@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
+
+#include "SVGElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
-
 
 DECLARE_EMLITE_TYPE(SVGMaskElement, SVGElement);
 
@@ -22,3 +26,7 @@ SVGAnimatedLength SVGMaskElement_y(const SVGMaskElement *self);
 SVGAnimatedLength SVGMaskElement_width(const SVGMaskElement *self);
 
 SVGAnimatedLength SVGMaskElement_height(const SVGMaskElement *self);
+
+#ifdef __cplusplus
+}
+#endif

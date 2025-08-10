@@ -1,6 +1,7 @@
 #include <webbind/MediaMetadata.h>
-#include <webbind/ChapterInformation.h>
 
+#include <webbind/MediaMetadataInit.h>
+#include <webbind/ChapterInformation.h>
 
 DEFINE_EMLITE_TYPE(MediaMetadata, em_Val);
 
@@ -11,7 +12,7 @@ MediaMetadata MediaMetadata_new0() {
       }
 
 
-MediaMetadata MediaMetadata_new1(jb_Any * init) {
+MediaMetadata MediaMetadata_new1(MediaMetadataInit * init) {
         em_Val vv = em_Val_new(em_Val_global("MediaMetadata") , em_Val_from(init));
         return MediaMetadata_from_val(&vv);
       }

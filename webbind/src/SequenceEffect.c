@@ -1,5 +1,6 @@
 #include <webbind/SequenceEffect.h>
 
+#include <webbind/AnimationEffect.h>
 
 DEFINE_EMLITE_TYPE(SequenceEffect, GroupEffect);
 

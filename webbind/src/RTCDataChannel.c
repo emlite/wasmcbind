@@ -1,6 +1,5 @@
 #include <webbind/RTCDataChannel.h>
 
-
 DEFINE_EMLITE_TYPE(RTCDataChannel, EventTarget);
 
 

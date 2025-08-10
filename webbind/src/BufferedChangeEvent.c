@@ -1,6 +1,7 @@
 #include <webbind/BufferedChangeEvent.h>
-#include <webbind/TimeRanges.h>
 
+#include <webbind/BufferedChangeEventInit.h>
+#include <webbind/TimeRanges.h>
 
 DEFINE_EMLITE_TYPE(BufferedChangeEvent, Event);
 
@@ -11,7 +12,7 @@ BufferedChangeEvent BufferedChangeEvent_new0(jb_String * type) {
       }
 
 
-BufferedChangeEvent BufferedChangeEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+BufferedChangeEvent BufferedChangeEvent_new1(jb_String * type, BufferedChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("BufferedChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return BufferedChangeEvent_from_val(&vv);
       }

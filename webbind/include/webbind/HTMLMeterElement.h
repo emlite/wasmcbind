@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct NodeList NodeList;
+#include "HTMLElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct NodeList NodeList;
 
 DECLARE_EMLITE_TYPE(HTMLMeterElement, HTMLElement);
 
@@ -37,3 +41,7 @@ double HTMLMeterElement_optimum(const HTMLMeterElement *self);
 void HTMLMeterElement_set_optimum(HTMLMeterElement* self, double value);
 
 NodeList HTMLMeterElement_labels(const HTMLMeterElement *self);
+
+#ifdef __cplusplus
+}
+#endif

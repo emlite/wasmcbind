@@ -1,88 +1,13 @@
 #include <webbind/Navigation.h>
+
 #include <webbind/NavigationHistoryEntry.h>
+#include <webbind/NavigationUpdateCurrentEntryOptions.h>
 #include <webbind/NavigationTransition.h>
 #include <webbind/NavigationActivation.h>
-
-
-DEFINE_EMLITE_TYPE(NavigationUpdateCurrentEntryOptions, em_Val);
-
-
-jb_Any NavigationUpdateCurrentEntryOptions_state(const NavigationUpdateCurrentEntryOptions *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("state")));
-}
-
-
-void NavigationUpdateCurrentEntryOptions_set_state(NavigationUpdateCurrentEntryOptions* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("state"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(NavigationResult, em_Val);
-
-
-jb_Promise NavigationResult_committed(const NavigationResult *self) {
-    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), em_Val_from("committed")));
-}
-
-
-void NavigationResult_set_committed(NavigationResult* self, jb_Promise * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("committed"), em_Val_from(value));
-}
-
-
-jb_Promise NavigationResult_finished(const NavigationResult *self) {
-    return em_Val_as(jb_Promise, em_Val_get(em_Val_as_val(self->inner), em_Val_from("finished")));
-}
-
-
-void NavigationResult_set_finished(NavigationResult* self, jb_Promise * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("finished"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(NavigationNavigateOptions, em_Val);
-
-
-jb_Any NavigationNavigateOptions_state(const NavigationNavigateOptions *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("state")));
-}
-
-
-void NavigationNavigateOptions_set_state(NavigationNavigateOptions* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("state"), em_Val_from(value));
-}
-
-
-NavigationHistoryBehavior NavigationNavigateOptions_history(const NavigationNavigateOptions *self) {
-    return em_Val_as(NavigationHistoryBehavior, em_Val_get(em_Val_as_val(self->inner), em_Val_from("history")));
-}
-
-
-void NavigationNavigateOptions_set_history(NavigationNavigateOptions* self, NavigationHistoryBehavior * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("history"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(NavigationReloadOptions, em_Val);
-
-
-jb_Any NavigationReloadOptions_state(const NavigationReloadOptions *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("state")));
-}
-
-
-void NavigationReloadOptions_set_state(NavigationReloadOptions* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("state"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(NavigationOptions, em_Val);
-
-
-jb_Any NavigationOptions_info(const NavigationOptions *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("info")));
-}
-
-
-void NavigationOptions_set_info(NavigationOptions* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("info"), em_Val_from(value));
-}
+#include <webbind/NavigationResult.h>
+#include <webbind/NavigationNavigateOptions.h>
+#include <webbind/NavigationReloadOptions.h>
+#include <webbind/NavigationOptions.h>
 
 DEFINE_EMLITE_TYPE(Navigation, EventTarget);
 

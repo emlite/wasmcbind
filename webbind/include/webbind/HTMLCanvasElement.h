@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct OffscreenCanvas OffscreenCanvas;
 typedef struct MediaStream MediaStream;
-
 
 DECLARE_EMLITE_TYPE(HTMLCanvasElement, HTMLElement);
 
@@ -42,3 +46,7 @@ OffscreenCanvas HTMLCanvasElement_transferControlToOffscreen(HTMLCanvasElement* 
 MediaStream HTMLCanvasElement_captureStream0(HTMLCanvasElement* self );
 
 MediaStream HTMLCanvasElement_captureStream1(HTMLCanvasElement* self , double frameRequestRate);
+
+#ifdef __cplusplus
+}
+#endif

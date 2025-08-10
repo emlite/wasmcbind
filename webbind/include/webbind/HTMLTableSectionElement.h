@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct HTMLCollection HTMLCollection;
 typedef struct HTMLTableRowElement HTMLTableRowElement;
-
 
 DECLARE_EMLITE_TYPE(HTMLTableSectionElement, HTMLElement);
 
@@ -36,3 +40,7 @@ void HTMLTableSectionElement_set_chOff(HTMLTableSectionElement* self, jb_String 
 jb_String HTMLTableSectionElement_vAlign(const HTMLTableSectionElement *self);
 
 void HTMLTableSectionElement_set_vAlign(HTMLTableSectionElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

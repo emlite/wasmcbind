@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(BatteryManager, EventTarget);
 
@@ -31,3 +35,7 @@ void BatteryManager_set_ondischargingtimechange(BatteryManager* self, jb_Any * v
 jb_Any BatteryManager_onlevelchange(const BatteryManager *self);
 
 void BatteryManager_set_onlevelchange(BatteryManager* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,11 +1,12 @@
 #include <webbind/NDEFMessage.h>
-#include <webbind/NDEFRecord.h>
 
+#include <webbind/NDEFMessageInit.h>
+#include <webbind/NDEFRecord.h>
 
 DEFINE_EMLITE_TYPE(NDEFMessage, em_Val);
 
 
-NDEFMessage NDEFMessage_new(jb_Any * messageInit) {
+NDEFMessage NDEFMessage_new(NDEFMessageInit * messageInit) {
         em_Val vv = em_Val_new(em_Val_global("NDEFMessage") , em_Val_from(messageInit));
         return NDEFMessage_from_val(&vv);
       }

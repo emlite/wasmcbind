@@ -1,6 +1,5 @@
 #include <webbind/TextMetrics.h>
 
-
 DEFINE_EMLITE_TYPE(TextMetrics, em_Val);
 
 

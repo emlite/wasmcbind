@@ -2,13 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "StorageManager.h"
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct StorageEstimate StorageEstimate;
 typedef struct IDBFactory IDBFactory;
 typedef struct CacheStorage CacheStorage;
 typedef struct FileSystemDirectoryHandle FileSystemDirectoryHandle;
-
 
 DECLARE_EMLITE_TYPE(StorageBucket, em_Val);
 
@@ -29,3 +32,7 @@ IDBFactory StorageBucket_indexedDB(const StorageBucket *self);
 CacheStorage StorageBucket_caches(const StorageBucket *self);
 
 jb_Promise StorageBucket_getDirectory(StorageBucket* self );
+
+#ifdef __cplusplus
+}
+#endif

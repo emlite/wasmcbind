@@ -1,7 +1,7 @@
 #include <webbind/BluetoothRemoteGATTServer.h>
+
 #include <webbind/BluetoothDevice.h>
 #include <webbind/BluetoothRemoteGATTService.h>
-
 
 DEFINE_EMLITE_TYPE(BluetoothRemoteGATTServer, em_Val);
 

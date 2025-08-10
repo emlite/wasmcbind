@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGTextContentElement.h"
 #include "enums.h"
+
+#include "SVGTextContentElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedLengthList SVGAnimatedLengthList;
 typedef struct SVGAnimatedNumberList SVGAnimatedNumberList;
-
 
 DECLARE_EMLITE_TYPE(SVGTextPositioningElement, SVGTextContentElement);
 
@@ -20,3 +24,7 @@ SVGAnimatedLengthList SVGTextPositioningElement_dx(const SVGTextPositioningEleme
 SVGAnimatedLengthList SVGTextPositioningElement_dy(const SVGTextPositioningElement *self);
 
 SVGAnimatedNumberList SVGTextPositioningElement_rotate(const SVGTextPositioningElement *self);
+
+#ifdef __cplusplus
+}
+#endif

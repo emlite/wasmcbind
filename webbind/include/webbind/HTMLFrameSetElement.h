@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLFrameSetElement, HTMLElement);
 
@@ -21,3 +25,7 @@ void HTMLFrameSetElement_set_rows(HTMLFrameSetElement* self, jb_String * value);
 jb_Any HTMLFrameSetElement_onportalactivate(const HTMLFrameSetElement *self);
 
 void HTMLFrameSetElement_set_onportalactivate(HTMLFrameSetElement* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

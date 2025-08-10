@@ -1,7 +1,7 @@
 #include <webbind/HTMLVideoElement.h>
+
 #include <webbind/VideoPlaybackQuality.h>
 #include <webbind/PictureInPictureWindow.h>
-
 
 DEFINE_EMLITE_TYPE(HTMLVideoElement, HTMLMediaElement);
 

@@ -2,9 +2,11 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
+#include "enums.h"
 
-typedef struct ReadableStream ReadableStream;
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(SecurityPolicyViolationEventDisposition, em_Val);
 SecurityPolicyViolationEventDisposition SecurityPolicyViolationEventDisposition_enforce();
@@ -1886,3 +1888,7 @@ XMLHttpRequestResponseType XMLHttpRequestResponseType_blob();
 XMLHttpRequestResponseType XMLHttpRequestResponseType_document();
 XMLHttpRequestResponseType XMLHttpRequestResponseType_json();
 XMLHttpRequestResponseType XMLHttpRequestResponseType_text();
+
+#ifdef __cplusplus
+}
+#endif

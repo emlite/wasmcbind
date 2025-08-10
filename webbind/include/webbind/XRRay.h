@@ -4,9 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct DOMPointReadOnly DOMPointReadOnly;
-typedef struct XRRigidTransform XRRigidTransform;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct XRRigidTransform XRRigidTransform;
+typedef struct DOMPointReadOnly DOMPointReadOnly;
 
 DECLARE_EMLITE_TYPE(XRRay, em_Val);
 
@@ -17,3 +20,7 @@ DOMPointReadOnly XRRay_origin(const XRRay *self);
 DOMPointReadOnly XRRay_direction(const XRRay *self);
 
 jb_Float32Array XRRay_matrix(const XRRay *self);
+
+#ifdef __cplusplus
+}
+#endif

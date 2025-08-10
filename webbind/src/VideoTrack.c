@@ -1,6 +1,6 @@
 #include <webbind/VideoTrack.h>
-#include <webbind/SourceBuffer.h>
 
+#include <webbind/SourceBuffer.h>
 
 DEFINE_EMLITE_TYPE(VideoTrack, em_Val);
 

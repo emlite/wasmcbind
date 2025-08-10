@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(RTCDataChannel, EventTarget);
 
@@ -63,3 +67,7 @@ void RTCDataChannel_set_binaryType(RTCDataChannel* self, BinaryType * value);
 jb_Undefined RTCDataChannel_send(RTCDataChannel* self , jb_Any * data);
 
 RTCPriorityType RTCDataChannel_priority(const RTCDataChannel *self);
+
+#ifdef __cplusplus
+}
+#endif

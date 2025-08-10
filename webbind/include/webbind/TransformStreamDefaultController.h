@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(TransformStreamDefaultController, em_Val);
 
@@ -18,3 +21,7 @@ jb_Undefined TransformStreamDefaultController_error0(TransformStreamDefaultContr
 jb_Undefined TransformStreamDefaultController_error1(TransformStreamDefaultController* self , jb_Any * reason);
 
 jb_Undefined TransformStreamDefaultController_terminate(TransformStreamDefaultController* self );
+
+#ifdef __cplusplus
+}
+#endif

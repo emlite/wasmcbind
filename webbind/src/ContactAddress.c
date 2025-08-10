@@ -1,6 +1,5 @@
 #include <webbind/ContactAddress.h>
 
-
 DEFINE_EMLITE_TYPE(ContactAddress, em_Val);
 
 

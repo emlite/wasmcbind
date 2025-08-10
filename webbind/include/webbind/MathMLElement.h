@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Element.h"
-#include "SVGElement.h"
 #include "enums.h"
 
-typedef struct CSSStyleDeclaration CSSStyleDeclaration;
-typedef struct DOMStringMap DOMStringMap;
+#include "Element.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct CSSStyleProperties CSSStyleProperties;
+typedef struct DOMStringMap DOMStringMap;
+typedef struct FocusOptions FocusOptions;
 
 DECLARE_EMLITE_TYPE(MathMLElement, Element);
 
@@ -37,3 +41,7 @@ jb_Undefined MathMLElement_focus0(MathMLElement* self );
 jb_Undefined MathMLElement_focus1(MathMLElement* self , FocusOptions * options);
 
 jb_Undefined MathMLElement_blur(MathMLElement* self );
+
+#ifdef __cplusplus
+}
+#endif

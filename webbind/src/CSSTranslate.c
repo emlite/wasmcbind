@@ -1,6 +1,6 @@
 #include <webbind/CSSTranslate.h>
-#include <webbind/CSSNumericValue.h>
 
+#include <webbind/CSSNumericValue.h>
 
 DEFINE_EMLITE_TYPE(CSSTranslate, CSSTransformComponent);
 

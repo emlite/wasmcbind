@@ -1,6 +1,7 @@
 #include <webbind/RTCPeerConnectionIceEvent.h>
-#include <webbind/RTCIceCandidate.h>
 
+#include <webbind/RTCPeerConnectionIceEventInit.h>
+#include <webbind/RTCIceCandidate.h>
 
 DEFINE_EMLITE_TYPE(RTCPeerConnectionIceEvent, Event);
 
@@ -11,7 +12,7 @@ RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new0(jb_String * type) {
       }
 
 
-RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new1(jb_String * type, RTCPeerConnectionIceEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("RTCPeerConnectionIceEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return RTCPeerConnectionIceEvent_from_val(&vv);
       }

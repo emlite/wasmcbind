@@ -1,6 +1,5 @@
 #include <webbind/DOMException.h>
 
-
 DEFINE_EMLITE_TYPE(DOMException, em_Val);
 
 

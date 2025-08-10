@@ -1,5 +1,6 @@
 #include <webbind/TaskController.h>
 
+#include <webbind/TaskControllerInit.h>
 
 DEFINE_EMLITE_TYPE(TaskController, AbortController);
 
@@ -10,7 +11,7 @@ TaskController TaskController_new0() {
       }
 
 
-TaskController TaskController_new1(jb_Any * init) {
+TaskController TaskController_new1(TaskControllerInit * init) {
         em_Val vv = em_Val_new(em_Val_global("TaskController") , em_Val_from(init));
         return TaskController_from_val(&vv);
       }

@@ -2,11 +2,14 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGSVGElement.h"
 #include "enums.h"
 
-typedef struct SVGTransform SVGTransform;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct SVGTransform SVGTransform;
+typedef struct DOMMatrix2DInit DOMMatrix2DInit;
 
 DECLARE_EMLITE_TYPE(SVGTransformList, em_Val);
 
@@ -33,3 +36,7 @@ SVGTransform SVGTransformList_createSVGTransformFromMatrix0(SVGTransformList* se
 SVGTransform SVGTransformList_createSVGTransformFromMatrix1(SVGTransformList* self , DOMMatrix2DInit * matrix);
 
 SVGTransform SVGTransformList_consolidate(SVGTransformList* self );
+
+#ifdef __cplusplus
+}
+#endif

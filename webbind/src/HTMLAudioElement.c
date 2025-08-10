@@ -1,6 +1,5 @@
 #include <webbind/HTMLAudioElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLAudioElement, HTMLMediaElement);
 
 

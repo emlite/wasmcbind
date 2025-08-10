@@ -1,17 +1,6 @@
 #include <webbind/IdentityCredential.h>
 
-
-DEFINE_EMLITE_TYPE(IdentityCredentialDisconnectOptions, em_Val);
-
-
-jb_String IdentityCredentialDisconnectOptions_accountHint(const IdentityCredentialDisconnectOptions *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("accountHint")));
-}
-
-
-void IdentityCredentialDisconnectOptions_set_accountHint(IdentityCredentialDisconnectOptions* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("accountHint"), em_Val_from(value));
-}
+#include <webbind/IdentityCredentialDisconnectOptions.h>
 
 DEFINE_EMLITE_TYPE(IdentityCredential, Credential);
 

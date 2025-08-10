@@ -1,46 +1,16 @@
 #include <webbind/NavigateEvent.h>
+
+#include <webbind/NavigateEventInit.h>
 #include <webbind/NavigationDestination.h>
 #include <webbind/AbortSignal.h>
 #include <webbind/FormData.h>
 #include <webbind/Element.h>
-
-
-DEFINE_EMLITE_TYPE(NavigationInterceptOptions, em_Val);
-
-
-jb_Function NavigationInterceptOptions_handler(const NavigationInterceptOptions *self) {
-    return em_Val_as(jb_Function, em_Val_get(em_Val_as_val(self->inner), em_Val_from("handler")));
-}
-
-
-void NavigationInterceptOptions_set_handler(NavigationInterceptOptions* self, jb_Function * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("handler"), em_Val_from(value));
-}
-
-
-NavigationFocusReset NavigationInterceptOptions_focusReset(const NavigationInterceptOptions *self) {
-    return em_Val_as(NavigationFocusReset, em_Val_get(em_Val_as_val(self->inner), em_Val_from("focusReset")));
-}
-
-
-void NavigationInterceptOptions_set_focusReset(NavigationInterceptOptions* self, NavigationFocusReset * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("focusReset"), em_Val_from(value));
-}
-
-
-NavigationScrollBehavior NavigationInterceptOptions_scroll(const NavigationInterceptOptions *self) {
-    return em_Val_as(NavigationScrollBehavior, em_Val_get(em_Val_as_val(self->inner), em_Val_from("scroll")));
-}
-
-
-void NavigationInterceptOptions_set_scroll(NavigationInterceptOptions* self, NavigationScrollBehavior * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("scroll"), em_Val_from(value));
-}
+#include <webbind/NavigationInterceptOptions.h>
 
 DEFINE_EMLITE_TYPE(NavigateEvent, Event);
 
 
-NavigateEvent NavigateEvent_new(jb_String * type, jb_Any * eventInitDict) {
+NavigateEvent NavigateEvent_new(jb_String * type, NavigateEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("NavigateEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return NavigateEvent_from_val(&vv);
       }

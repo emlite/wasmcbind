@@ -1,6 +1,6 @@
 #include <webbind/Location.h>
-#include <webbind/DOMStringList.h>
 
+#include <webbind/DOMStringList.h>
 
 DEFINE_EMLITE_TYPE(Location, em_Val);
 

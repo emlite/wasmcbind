@@ -1,6 +1,6 @@
 #include <webbind/USBIsochronousOutTransferResult.h>
-#include <webbind/USBIsochronousOutTransferPacket.h>
 
+#include <webbind/USBIsochronousOutTransferPacket.h>
 
 DEFINE_EMLITE_TYPE(USBIsochronousOutTransferResult, em_Val);
 

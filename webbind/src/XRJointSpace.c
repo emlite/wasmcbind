@@ -1,6 +1,5 @@
 #include <webbind/XRJointSpace.h>
 
-
 DEFINE_EMLITE_TYPE(XRJointSpace, XRSpace);
 
 

@@ -4,21 +4,14 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct WebTransportDatagramsWritable WebTransportDatagramsWritable;
 typedef struct WebTransportSendOptions WebTransportSendOptions;
 typedef struct ReadableStream ReadableStream;
-typedef struct WebTransportSendGroup WebTransportSendGroup;
 
-
-DECLARE_EMLITE_TYPE(WebTransportSendOptions, em_Val);
-
-WebTransportSendGroup WebTransportSendOptions_sendGroup(const WebTransportSendOptions *self);
-
-void WebTransportSendOptions_set_sendGroup(WebTransportSendOptions* self, WebTransportSendGroup * value);
-
-long long WebTransportSendOptions_sendOrder(const WebTransportSendOptions *self);
-
-void WebTransportSendOptions_set_sendOrder(WebTransportSendOptions* self, long long value);
 DECLARE_EMLITE_TYPE(WebTransportDatagramDuplexStream, em_Val);
 
 WebTransportDatagramsWritable WebTransportDatagramDuplexStream_createWritable0(WebTransportDatagramDuplexStream* self );
@@ -44,3 +37,7 @@ void WebTransportDatagramDuplexStream_set_incomingHighWaterMark(WebTransportData
 double WebTransportDatagramDuplexStream_outgoingHighWaterMark(const WebTransportDatagramDuplexStream *self);
 
 void WebTransportDatagramDuplexStream_set_outgoingHighWaterMark(WebTransportDatagramDuplexStream* self, double value);
+
+#ifdef __cplusplus
+}
+#endif

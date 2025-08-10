@@ -1,6 +1,5 @@
 #include <webbind/VTTRegion.h>
 
-
 DEFINE_EMLITE_TYPE(VTTRegion, em_Val);
 
 

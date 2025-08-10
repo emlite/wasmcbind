@@ -2,17 +2,22 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "UIEvent.h"
 #include "enums.h"
 
-typedef struct Window Window;
+#include "UIEvent.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct KeyboardEventInit KeyboardEventInit;
+typedef struct Window Window;
 
 DECLARE_EMLITE_TYPE(KeyboardEvent, UIEvent);
 
 KeyboardEvent KeyboardEvent_new0(jb_String * type);
 
-KeyboardEvent KeyboardEvent_new1(jb_String * type, jb_Any * eventInitDict);
+KeyboardEvent KeyboardEvent_new1(jb_String * type, KeyboardEventInit * eventInitDict);
 
 jb_String KeyboardEvent_key(const KeyboardEvent *self);
 
@@ -57,3 +62,7 @@ jb_Undefined KeyboardEvent_initKeyboardEvent9(KeyboardEvent* self , jb_String * 
 unsigned long KeyboardEvent_charCode(const KeyboardEvent *self);
 
 unsigned long KeyboardEvent_keyCode(const KeyboardEvent *self);
+
+#ifdef __cplusplus
+}
+#endif

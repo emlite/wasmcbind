@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct DOMTokenList DOMTokenList;
+#include "HTMLElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct DOMTokenList DOMTokenList;
 
 DECLARE_EMLITE_TYPE(HTMLAnchorElement, HTMLElement);
 
@@ -115,3 +119,7 @@ void HTMLAnchorElement_set_search(HTMLAnchorElement* self, jb_String * value);
 jb_String HTMLAnchorElement_hash(const HTMLAnchorElement *self);
 
 void HTMLAnchorElement_set_hash(HTMLAnchorElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

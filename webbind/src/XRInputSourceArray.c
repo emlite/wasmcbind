@@ -1,6 +1,6 @@
 #include <webbind/XRInputSourceArray.h>
-#include <webbind/XRInputSource.h>
 
+#include <webbind/XRInputSource.h>
 
 DEFINE_EMLITE_TYPE(XRInputSourceArray, em_Val);
 

@@ -1,6 +1,6 @@
 #include <webbind/SourceBufferList.h>
-#include <webbind/SourceBuffer.h>
 
+#include <webbind/SourceBuffer.h>
 
 DEFINE_EMLITE_TYPE(SourceBufferList, EventTarget);
 

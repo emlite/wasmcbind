@@ -1,241 +1,34 @@
 #include <webbind/Element.h>
+
 #include <webbind/DOMTokenList.h>
 #include <webbind/NamedNodeMap.h>
 #include <webbind/Attr.h>
 #include <webbind/ShadowRoot.h>
+#include <webbind/ShadowRootInit.h>
 #include <webbind/CustomElementRegistry.h>
 #include <webbind/HTMLCollection.h>
+#include <webbind/FocusableAreasOption.h>
+#include <webbind/SpatialNavigationSearchOptions.h>
 #include <webbind/CSSPseudoElement.h>
 #include <webbind/StylePropertyMapReadOnly.h>
 #include <webbind/DOMRectList.h>
 #include <webbind/DOMRect.h>
+#include <webbind/CheckVisibilityOptions.h>
+#include <webbind/FullscreenOptions.h>
+#include <webbind/GetHTMLOptions.h>
+#include <webbind/PointerLockOptions.h>
 #include <webbind/Range.h>
 #include <webbind/DOMQuad.h>
-#include <webbind/Document.h>
+#include <webbind/BoxQuadOptions.h>
+#include <webbind/DOMQuadInit.h>
+#include <webbind/ConvertCoordinateOptions.h>
 #include <webbind/DOMRectReadOnly.h>
 #include <webbind/DOMPoint.h>
-#include <webbind/SVGGeometryElement.h>
+#include <webbind/DOMPointInit.h>
 #include <webbind/NodeList.h>
 #include <webbind/HTMLSlotElement.h>
 #include <webbind/Animation.h>
-#include <webbind/ScreenDetailed.h>
-
-
-DEFINE_EMLITE_TYPE(ShadowRootInit, em_Val);
-
-
-ShadowRootMode ShadowRootInit_mode(const ShadowRootInit *self) {
-    return em_Val_as(ShadowRootMode, em_Val_get(em_Val_as_val(self->inner), em_Val_from("mode")));
-}
-
-
-void ShadowRootInit_set_mode(ShadowRootInit* self, ShadowRootMode * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("mode"), em_Val_from(value));
-}
-
-
-bool ShadowRootInit_delegatesFocus(const ShadowRootInit *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("delegatesFocus")));
-}
-
-
-void ShadowRootInit_set_delegatesFocus(ShadowRootInit* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("delegatesFocus"), em_Val_from(value));
-}
-
-
-SlotAssignmentMode ShadowRootInit_slotAssignment(const ShadowRootInit *self) {
-    return em_Val_as(SlotAssignmentMode, em_Val_get(em_Val_as_val(self->inner), em_Val_from("slotAssignment")));
-}
-
-
-void ShadowRootInit_set_slotAssignment(ShadowRootInit* self, SlotAssignmentMode * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("slotAssignment"), em_Val_from(value));
-}
-
-
-bool ShadowRootInit_clonable(const ShadowRootInit *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("clonable")));
-}
-
-
-void ShadowRootInit_set_clonable(ShadowRootInit* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("clonable"), em_Val_from(value));
-}
-
-
-bool ShadowRootInit_serializable(const ShadowRootInit *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("serializable")));
-}
-
-
-void ShadowRootInit_set_serializable(ShadowRootInit* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("serializable"), em_Val_from(value));
-}
-
-
-CustomElementRegistry ShadowRootInit_customElementRegistry(const ShadowRootInit *self) {
-    return em_Val_as(CustomElementRegistry, em_Val_get(em_Val_as_val(self->inner), em_Val_from("customElementRegistry")));
-}
-
-
-void ShadowRootInit_set_customElementRegistry(ShadowRootInit* self, CustomElementRegistry * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("customElementRegistry"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(FocusableAreasOption, em_Val);
-
-
-FocusableAreaSearchMode FocusableAreasOption_mode(const FocusableAreasOption *self) {
-    return em_Val_as(FocusableAreaSearchMode, em_Val_get(em_Val_as_val(self->inner), em_Val_from("mode")));
-}
-
-
-void FocusableAreasOption_set_mode(FocusableAreasOption* self, FocusableAreaSearchMode * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("mode"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(SpatialNavigationSearchOptions, em_Val);
-
-
-jb_Array SpatialNavigationSearchOptions_candidates(const SpatialNavigationSearchOptions *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("candidates")));
-}
-
-
-void SpatialNavigationSearchOptions_set_candidates(SpatialNavigationSearchOptions* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("candidates"), em_Val_from(value));
-}
-
-
-Node SpatialNavigationSearchOptions_container(const SpatialNavigationSearchOptions *self) {
-    return em_Val_as(Node, em_Val_get(em_Val_as_val(self->inner), em_Val_from("container")));
-}
-
-
-void SpatialNavigationSearchOptions_set_container(SpatialNavigationSearchOptions* self, Node * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("container"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(CheckVisibilityOptions, em_Val);
-
-
-bool CheckVisibilityOptions_checkOpacity(const CheckVisibilityOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("checkOpacity")));
-}
-
-
-void CheckVisibilityOptions_set_checkOpacity(CheckVisibilityOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("checkOpacity"), em_Val_from(value));
-}
-
-
-bool CheckVisibilityOptions_checkVisibilityCSS(const CheckVisibilityOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("checkVisibilityCSS")));
-}
-
-
-void CheckVisibilityOptions_set_checkVisibilityCSS(CheckVisibilityOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("checkVisibilityCSS"), em_Val_from(value));
-}
-
-
-bool CheckVisibilityOptions_contentVisibilityAuto(const CheckVisibilityOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("contentVisibilityAuto")));
-}
-
-
-void CheckVisibilityOptions_set_contentVisibilityAuto(CheckVisibilityOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("contentVisibilityAuto"), em_Val_from(value));
-}
-
-
-bool CheckVisibilityOptions_opacityProperty(const CheckVisibilityOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("opacityProperty")));
-}
-
-
-void CheckVisibilityOptions_set_opacityProperty(CheckVisibilityOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("opacityProperty"), em_Val_from(value));
-}
-
-
-bool CheckVisibilityOptions_visibilityProperty(const CheckVisibilityOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("visibilityProperty")));
-}
-
-
-void CheckVisibilityOptions_set_visibilityProperty(CheckVisibilityOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("visibilityProperty"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(FullscreenOptions, em_Val);
-
-
-ScreenDetailed FullscreenOptions_screen(const FullscreenOptions *self) {
-    return em_Val_as(ScreenDetailed, em_Val_get(em_Val_as_val(self->inner), em_Val_from("screen")));
-}
-
-
-void FullscreenOptions_set_screen(FullscreenOptions* self, ScreenDetailed * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("screen"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(GetHTMLOptions, em_Val);
-
-
-bool GetHTMLOptions_serializableShadowRoots(const GetHTMLOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("serializableShadowRoots")));
-}
-
-
-void GetHTMLOptions_set_serializableShadowRoots(GetHTMLOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("serializableShadowRoots"), em_Val_from(value));
-}
-
-
-jb_Array GetHTMLOptions_shadowRoots(const GetHTMLOptions *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shadowRoots")));
-}
-
-
-void GetHTMLOptions_set_shadowRoots(GetHTMLOptions* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("shadowRoots"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(PointerLockOptions, em_Val);
-
-
-bool PointerLockOptions_unadjustedMovement(const PointerLockOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("unadjustedMovement")));
-}
-
-
-void PointerLockOptions_set_unadjustedMovement(PointerLockOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("unadjustedMovement"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(GetAnimationsOptions, em_Val);
-
-
-bool GetAnimationsOptions_subtree(const GetAnimationsOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("subtree")));
-}
-
-
-void GetAnimationsOptions_set_subtree(GetAnimationsOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("subtree"), em_Val_from(value));
-}
-
-
-jb_String GetAnimationsOptions_pseudoElement(const GetAnimationsOptions *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pseudoElement")));
-}
-
-
-void GetAnimationsOptions_set_pseudoElement(GetAnimationsOptions* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("pseudoElement"), em_Val_from(value));
-}
+#include <webbind/GetAnimationsOptions.h>
 
 DEFINE_EMLITE_TYPE(Element, Node);
 

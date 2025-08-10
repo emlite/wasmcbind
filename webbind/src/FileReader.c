@@ -1,7 +1,7 @@
 #include <webbind/FileReader.h>
+
 #include <webbind/Blob.h>
 #include <webbind/DOMException.h>
-
 
 DEFINE_EMLITE_TYPE(FileReader, EventTarget);
 

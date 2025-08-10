@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct BluetoothLEScanFilter BluetoothLEScanFilter;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct BluetoothLEScanFilter BluetoothLEScanFilter;
 
 DECLARE_EMLITE_TYPE(BluetoothLEScan, em_Val);
 
@@ -18,3 +21,7 @@ bool BluetoothLEScan_acceptAllAdvertisements(const BluetoothLEScan *self);
 bool BluetoothLEScan_active(const BluetoothLEScan *self);
 
 jb_Undefined BluetoothLEScan_stop(BluetoothLEScan* self );
+
+#ifdef __cplusplus
+}
+#endif

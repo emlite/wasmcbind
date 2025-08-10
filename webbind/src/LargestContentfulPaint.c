@@ -1,6 +1,6 @@
 #include <webbind/LargestContentfulPaint.h>
-#include <webbind/Element.h>
 
+#include <webbind/Element.h>
 
 DEFINE_EMLITE_TYPE(LargestContentfulPaint, PerformanceEntry);
 

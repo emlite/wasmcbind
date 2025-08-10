@@ -1,6 +1,5 @@
 #include <webbind/WEBGL_lose_context.h>
 
-
 DEFINE_EMLITE_TYPE(WEBGL_lose_context, em_Val);
 
 

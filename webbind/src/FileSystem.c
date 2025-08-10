@@ -1,6 +1,6 @@
 #include <webbind/FileSystem.h>
-#include <webbind/FileSystemDirectoryEntry.h>
 
+#include <webbind/FileSystemDirectoryEntry.h>
 
 DEFINE_EMLITE_TYPE(FileSystem, em_Val);
 

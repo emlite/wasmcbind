@@ -1,6 +1,5 @@
 #include <webbind/CanMakePaymentEvent.h>
 
-
 DEFINE_EMLITE_TYPE(CanMakePaymentEvent, ExtendableEvent);
 
 

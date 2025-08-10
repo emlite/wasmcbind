@@ -1,6 +1,6 @@
 #include <webbind/PerformanceResourceTiming.h>
-#include <webbind/PerformanceServerTiming.h>
 
+#include <webbind/PerformanceServerTiming.h>
 
 DEFINE_EMLITE_TYPE(PerformanceResourceTiming, PerformanceEntry);
 

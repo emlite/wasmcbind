@@ -1,6 +1,6 @@
 #include <webbind/TextTrackCue.h>
-#include <webbind/TextTrack.h>
 
+#include <webbind/TextTrack.h>
 
 DEFINE_EMLITE_TYPE(TextTrackCue, EventTarget);
 

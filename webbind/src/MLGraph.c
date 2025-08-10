@@ -1,6 +1,5 @@
 #include <webbind/MLGraph.h>
 
-
 DEFINE_EMLITE_TYPE(MLGraph, em_Val);
 
 

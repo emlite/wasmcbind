@@ -1,6 +1,6 @@
 #include <webbind/SharedStorageClearMethod.h>
-#include <webbind/SharedStorage.h>
 
+#include <webbind/SharedStorageModifierMethodOptions.h>
 
 DEFINE_EMLITE_TYPE(SharedStorageClearMethod, SharedStorageModifierMethod);
 

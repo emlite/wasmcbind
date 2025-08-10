@@ -1,6 +1,5 @@
 #include <webbind/HTMLTimeElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLTimeElement, HTMLElement);
 
 

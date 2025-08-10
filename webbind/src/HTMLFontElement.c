@@ -1,6 +1,5 @@
 #include <webbind/HTMLFontElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLFontElement, HTMLElement);
 
 

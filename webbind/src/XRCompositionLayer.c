@@ -1,6 +1,5 @@
 #include <webbind/XRCompositionLayer.h>
 
-
 DEFINE_EMLITE_TYPE(XRCompositionLayer, XRLayer);
 
 

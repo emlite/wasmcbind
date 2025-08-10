@@ -1,6 +1,6 @@
 #include <webbind/PerformanceLongAnimationFrameTiming.h>
-#include <webbind/PerformanceScriptTiming.h>
 
+#include <webbind/PerformanceScriptTiming.h>
 
 DEFINE_EMLITE_TYPE(PerformanceLongAnimationFrameTiming, PerformanceEntry);
 

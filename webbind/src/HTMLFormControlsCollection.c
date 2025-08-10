@@ -1,6 +1,5 @@
 #include <webbind/HTMLFormControlsCollection.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLFormControlsCollection, HTMLCollection);
 
 

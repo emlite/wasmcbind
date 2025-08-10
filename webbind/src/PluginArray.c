@@ -1,6 +1,6 @@
 #include <webbind/PluginArray.h>
-#include <webbind/Plugin.h>
 
+#include <webbind/Plugin.h>
 
 DEFINE_EMLITE_TYPE(PluginArray, em_Val);
 

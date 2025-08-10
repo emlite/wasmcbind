@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLTableCellElement, HTMLElement);
 
@@ -67,3 +71,7 @@ void HTMLTableCellElement_set_vAlign(HTMLTableCellElement* self, jb_String * val
 jb_String HTMLTableCellElement_bgColor(const HTMLTableCellElement *self);
 
 void HTMLTableCellElement_set_bgColor(HTMLTableCellElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

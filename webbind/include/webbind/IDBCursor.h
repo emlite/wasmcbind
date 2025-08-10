@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct IDBRequest IDBRequest;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct IDBRequest IDBRequest;
 
 DECLARE_EMLITE_TYPE(IDBCursor, em_Val);
 
@@ -30,3 +33,7 @@ jb_Undefined IDBCursor_continuePrimaryKey(IDBCursor* self , jb_Any * key, jb_Any
 IDBRequest IDBCursor_update(IDBCursor* self , jb_Any * value);
 
 IDBRequest IDBCursor_delete_(IDBCursor* self );
+
+#ifdef __cplusplus
+}
+#endif

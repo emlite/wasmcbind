@@ -1,6 +1,5 @@
 #include <webbind/PaintSize.h>
 
-
 DEFINE_EMLITE_TYPE(PaintSize, em_Val);
 
 

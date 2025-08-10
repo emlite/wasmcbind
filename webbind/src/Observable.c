@@ -1,18 +1,6 @@
 #include <webbind/Observable.h>
-#include <webbind/AbortSignal.h>
 
-
-DEFINE_EMLITE_TYPE(SubscribeOptions, em_Val);
-
-
-AbortSignal SubscribeOptions_signal(const SubscribeOptions *self) {
-    return em_Val_as(AbortSignal, em_Val_get(em_Val_as_val(self->inner), em_Val_from("signal")));
-}
-
-
-void SubscribeOptions_set_signal(SubscribeOptions* self, AbortSignal * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("signal"), em_Val_from(value));
-}
+#include <webbind/SubscribeOptions.h>
 
 DEFINE_EMLITE_TYPE(Observable, em_Val);
 
@@ -93,7 +81,7 @@ Observable Observable_catch_(Observable* self , jb_Function * callback) {
 }
 
 
-Observable Observable_finally(Observable* self , jb_Any * callback) {
+Observable Observable_finally(Observable* self , jb_Function * callback) {
     return em_Val_as(Observable, em_Val_call(em_Val_as_val(self->inner), "finally", em_Val_from(callback)));
 }
 

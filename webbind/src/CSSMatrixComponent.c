@@ -1,7 +1,8 @@
 #include <webbind/CSSMatrixComponent.h>
-#include <webbind/DOMMatrix.h>
-#include <webbind/DOMMatrixReadOnly.h>
 
+#include <webbind/DOMMatrixReadOnly.h>
+#include <webbind/CSSMatrixComponentOptions.h>
+#include <webbind/DOMMatrix.h>
 
 DEFINE_EMLITE_TYPE(CSSMatrixComponent, CSSTransformComponent);
 
@@ -12,7 +13,7 @@ CSSMatrixComponent CSSMatrixComponent_new0(DOMMatrixReadOnly * matrix) {
       }
 
 
-CSSMatrixComponent CSSMatrixComponent_new1(DOMMatrixReadOnly * matrix, jb_Any * options) {
+CSSMatrixComponent CSSMatrixComponent_new1(DOMMatrixReadOnly * matrix, CSSMatrixComponentOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("CSSMatrixComponent") , em_Val_from(matrix), em_Val_from(options));
         return CSSMatrixComponent_from_val(&vv);
       }

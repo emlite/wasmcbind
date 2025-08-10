@@ -1,7 +1,7 @@
 #include <webbind/MediaKeySystemAccess.h>
-#include <webbind/Navigator.h>
-#include <webbind/MediaKeys.h>
 
+#include <webbind/MediaKeySystemConfiguration.h>
+#include <webbind/MediaKeys.h>
 
 DEFINE_EMLITE_TYPE(MediaKeySystemAccess, em_Val);
 

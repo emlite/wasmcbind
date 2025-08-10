@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct BluetoothRemoteGATTCharacteristic BluetoothRemoteGATTCharacteristic;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct BluetoothRemoteGATTCharacteristic BluetoothRemoteGATTCharacteristic;
 
 DECLARE_EMLITE_TYPE(BluetoothRemoteGATTDescriptor, em_Val);
 
@@ -18,3 +21,7 @@ jb_DataView BluetoothRemoteGATTDescriptor_value(const BluetoothRemoteGATTDescrip
 jb_Promise BluetoothRemoteGATTDescriptor_readValue(BluetoothRemoteGATTDescriptor* self );
 
 jb_Promise BluetoothRemoteGATTDescriptor_writeValue(BluetoothRemoteGATTDescriptor* self , jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

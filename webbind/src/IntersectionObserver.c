@@ -1,7 +1,8 @@
 #include <webbind/IntersectionObserver.h>
+
+#include <webbind/IntersectionObserverInit.h>
 #include <webbind/Element.h>
 #include <webbind/IntersectionObserverEntry.h>
-
 
 DEFINE_EMLITE_TYPE(IntersectionObserver, em_Val);
 
@@ -12,7 +13,7 @@ IntersectionObserver IntersectionObserver_new0(jb_Function * callback) {
       }
 
 
-IntersectionObserver IntersectionObserver_new1(jb_Function * callback, jb_Any * options) {
+IntersectionObserver IntersectionObserver_new1(jb_Function * callback, IntersectionObserverInit * options) {
         em_Val vv = em_Val_new(em_Val_global("IntersectionObserver") , em_Val_from(callback), em_Val_from(options));
         return IntersectionObserver_from_val(&vv);
       }

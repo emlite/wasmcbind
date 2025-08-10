@@ -1,7 +1,7 @@
 #include <webbind/InterestGroupBiddingAndScoringScriptRunnerGlobalScope.h>
+
 #include <webbind/ForDebuggingOnly.h>
 #include <webbind/RealTimeReporting.h>
-
 
 DEFINE_EMLITE_TYPE(InterestGroupBiddingAndScoringScriptRunnerGlobalScope, InterestGroupScriptRunnerGlobalScope);
 

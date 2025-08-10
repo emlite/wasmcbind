@@ -1,7 +1,7 @@
 #include <webbind/IDBIndex.h>
+
 #include <webbind/IDBObjectStore.h>
 #include <webbind/IDBRequest.h>
-
 
 DEFINE_EMLITE_TYPE(IDBIndex, em_Val);
 

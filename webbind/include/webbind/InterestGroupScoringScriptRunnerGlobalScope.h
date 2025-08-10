@@ -2,8 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "InterestGroupBiddingAndScoringScriptRunnerGlobalScope.h"
 #include "enums.h"
 
+#include "InterestGroupBiddingAndScoringScriptRunnerGlobalScope.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(InterestGroupScoringScriptRunnerGlobalScope, InterestGroupBiddingAndScoringScriptRunnerGlobalScope);
+
+#ifdef __cplusplus
+}
+#endif

@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSColorValue.h"
 #include "enums.h"
 
+#include "CSSColorValue.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(CSSRGB, CSSColorValue);
 
@@ -27,3 +31,7 @@ void CSSRGB_set_b(CSSRGB* self, jb_Any * value);
 jb_Any CSSRGB_alpha(const CSSRGB *self);
 
 void CSSRGB_set_alpha(CSSRGB* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

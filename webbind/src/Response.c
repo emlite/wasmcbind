@@ -1,9 +1,10 @@
 #include <webbind/Response.h>
+
+#include <webbind/ResponseInit.h>
 #include <webbind/Headers.h>
 #include <webbind/ReadableStream.h>
 #include <webbind/Blob.h>
 #include <webbind/FormData.h>
-
 
 DEFINE_EMLITE_TYPE(Response, em_Val);
 
@@ -20,7 +21,7 @@ Response Response_new1(jb_Any * body) {
       }
 
 
-Response Response_new2(jb_Any * body, jb_Any * init) {
+Response Response_new2(jb_Any * body, ResponseInit * init) {
         em_Val vv = em_Val_new(em_Val_global("Response") , em_Val_from(body), em_Val_from(init));
         return Response_from_val(&vv);
       }

@@ -1,18 +1,7 @@
 #include <webbind/PressureObserver.h>
+
+#include <webbind/PressureObserverOptions.h>
 #include <webbind/PressureRecord.h>
-
-
-DEFINE_EMLITE_TYPE(PressureObserverOptions, em_Val);
-
-
-unsigned long PressureObserverOptions_sampleInterval(const PressureObserverOptions *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sampleInterval")));
-}
-
-
-void PressureObserverOptions_set_sampleInterval(PressureObserverOptions* self, unsigned long value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("sampleInterval"), em_Val_from(value));
-}
 
 DEFINE_EMLITE_TYPE(PressureObserver, em_Val);
 

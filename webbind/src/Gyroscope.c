@@ -1,5 +1,6 @@
 #include <webbind/Gyroscope.h>
 
+#include <webbind/GyroscopeSensorOptions.h>
 
 DEFINE_EMLITE_TYPE(Gyroscope, Sensor);
 
@@ -10,7 +11,7 @@ Gyroscope Gyroscope_new0() {
       }
 
 
-Gyroscope Gyroscope_new1(jb_Any * sensorOptions) {
+Gyroscope Gyroscope_new1(GyroscopeSensorOptions * sensorOptions) {
         em_Val vv = em_Val_new(em_Val_global("Gyroscope") , em_Val_from(sensorOptions));
         return Gyroscope_from_val(&vv);
       }

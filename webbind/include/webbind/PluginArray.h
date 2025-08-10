@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Plugin Plugin;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct Plugin Plugin;
 
 DECLARE_EMLITE_TYPE(PluginArray, em_Val);
 
@@ -16,3 +19,7 @@ unsigned long PluginArray_length(const PluginArray *self);
 Plugin PluginArray_item(PluginArray* self , unsigned long index);
 
 Plugin PluginArray_namedItem(PluginArray* self , jb_String * name);
+
+#ifdef __cplusplus
+}
+#endif

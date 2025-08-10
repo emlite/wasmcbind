@@ -1,6 +1,6 @@
 #include <webbind/BluetoothLEScanPermissionResult.h>
-#include <webbind/BluetoothLEScan.h>
 
+#include <webbind/BluetoothLEScan.h>
 
 DEFINE_EMLITE_TYPE(BluetoothLEScanPermissionResult, PermissionStatus);
 

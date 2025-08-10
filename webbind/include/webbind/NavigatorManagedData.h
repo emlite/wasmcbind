@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(NavigatorManagedData, EventTarget);
 
@@ -23,3 +27,7 @@ jb_Promise NavigatorManagedData_getDirectoryId(NavigatorManagedData* self );
 jb_Promise NavigatorManagedData_getHostname(NavigatorManagedData* self );
 
 jb_Promise NavigatorManagedData_getSerialNumber(NavigatorManagedData* self );
+
+#ifdef __cplusplus
+}
+#endif

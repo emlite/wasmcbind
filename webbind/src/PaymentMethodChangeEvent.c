@@ -1,5 +1,6 @@
 #include <webbind/PaymentMethodChangeEvent.h>
 
+#include <webbind/PaymentMethodChangeEventInit.h>
 
 DEFINE_EMLITE_TYPE(PaymentMethodChangeEvent, PaymentRequestUpdateEvent);
 
@@ -10,7 +11,7 @@ PaymentMethodChangeEvent PaymentMethodChangeEvent_new0(jb_String * type) {
       }
 
 
-PaymentMethodChangeEvent PaymentMethodChangeEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+PaymentMethodChangeEvent PaymentMethodChangeEvent_new1(jb_String * type, PaymentMethodChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("PaymentMethodChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return PaymentMethodChangeEvent_from_val(&vv);
       }

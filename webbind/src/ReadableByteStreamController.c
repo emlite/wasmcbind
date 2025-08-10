@@ -1,6 +1,6 @@
 #include <webbind/ReadableByteStreamController.h>
-#include <webbind/ReadableStreamBYOBRequest.h>
 
+#include <webbind/ReadableStreamBYOBRequest.h>
 
 DEFINE_EMLITE_TYPE(ReadableByteStreamController, em_Val);
 

@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Blob Blob;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct Blob Blob;
 
 DECLARE_EMLITE_TYPE(FontData, em_Val);
 
@@ -18,3 +21,7 @@ jb_String FontData_fullName(const FontData *self);
 jb_String FontData_family(const FontData *self);
 
 jb_String FontData_style(const FontData *self);
+
+#ifdef __cplusplus
+}
+#endif

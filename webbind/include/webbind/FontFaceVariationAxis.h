@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(FontFaceVariationAxis, em_Val);
 
@@ -16,3 +19,7 @@ double FontFaceVariationAxis_minimumValue(const FontFaceVariationAxis *self);
 double FontFaceVariationAxis_maximumValue(const FontFaceVariationAxis *self);
 
 double FontFaceVariationAxis_defaultValue(const FontFaceVariationAxis *self);
+
+#ifdef __cplusplus
+}
+#endif

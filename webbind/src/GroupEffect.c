@@ -1,7 +1,7 @@
 #include <webbind/GroupEffect.h>
-#include <webbind/AnimationNodeList.h>
-#include <webbind/AnimationEffect.h>
 
+#include <webbind/AnimationEffect.h>
+#include <webbind/AnimationNodeList.h>
 
 DEFINE_EMLITE_TYPE(GroupEffect, em_Val);
 

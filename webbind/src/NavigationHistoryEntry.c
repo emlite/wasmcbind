@@ -1,6 +1,5 @@
 #include <webbind/NavigationHistoryEntry.h>
 
-
 DEFINE_EMLITE_TYPE(NavigationHistoryEntry, EventTarget);
 
 

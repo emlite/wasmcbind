@@ -1,6 +1,6 @@
 #include <webbind/SharedStorageWorkletNavigator.h>
-#include <webbind/LockManager.h>
 
+#include <webbind/LockManager.h>
 
 DEFINE_EMLITE_TYPE(SharedStorageWorkletNavigator, em_Val);
 

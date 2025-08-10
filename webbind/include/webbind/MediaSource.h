@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct MediaSourceHandle MediaSourceHandle;
 typedef struct SourceBufferList SourceBufferList;
 typedef struct SourceBuffer SourceBuffer;
-
 
 DECLARE_EMLITE_TYPE(MediaSource, EventTarget);
 
@@ -53,3 +57,7 @@ jb_Undefined MediaSource_setLiveSeekableRange(MediaSource* self , double start, 
 jb_Undefined MediaSource_clearLiveSeekableRange(MediaSource* self );
 
 bool MediaSource_isTypeSupported(MediaSource* self , jb_String * type);
+
+#ifdef __cplusplus
+}
+#endif

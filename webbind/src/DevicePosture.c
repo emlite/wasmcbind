@@ -1,6 +1,5 @@
 #include <webbind/DevicePosture.h>
 
-
 DEFINE_EMLITE_TYPE(DevicePosture, EventTarget);
 
 

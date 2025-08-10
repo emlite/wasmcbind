@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct AudioTrack AudioTrack;
+#include "EventTarget.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct AudioTrack AudioTrack;
 
 DECLARE_EMLITE_TYPE(AudioTrackList, EventTarget);
 
@@ -25,3 +29,7 @@ void AudioTrackList_set_onaddtrack(AudioTrackList* self, jb_Any * value);
 jb_Any AudioTrackList_onremovetrack(const AudioTrackList *self);
 
 void AudioTrackList_set_onremovetrack(AudioTrackList* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,6 @@
 #include <webbind/WebTransportSendGroup.h>
-#include <webbind/WebTransportSendStream.h>
 
+#include <webbind/WebTransportSendStreamStats.h>
 
 DEFINE_EMLITE_TYPE(WebTransportSendGroup, em_Val);
 

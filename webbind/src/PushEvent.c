@@ -1,6 +1,7 @@
 #include <webbind/PushEvent.h>
-#include <webbind/PushMessageData.h>
 
+#include <webbind/PushEventInit.h>
+#include <webbind/PushMessageData.h>
 
 DEFINE_EMLITE_TYPE(PushEvent, ExtendableEvent);
 
@@ -11,7 +12,7 @@ PushEvent PushEvent_new0(jb_String * type) {
       }
 
 
-PushEvent PushEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+PushEvent PushEvent_new1(jb_String * type, PushEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("PushEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return PushEvent_from_val(&vv);
       }

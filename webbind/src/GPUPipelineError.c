@@ -1,5 +1,6 @@
 #include <webbind/GPUPipelineError.h>
 
+#include <webbind/GPUPipelineErrorInit.h>
 
 DEFINE_EMLITE_TYPE(GPUPipelineError, DOMException);
 
@@ -16,7 +17,7 @@ GPUPipelineError GPUPipelineError_new1(jb_String * message) {
       }
 
 
-GPUPipelineError GPUPipelineError_new2(jb_String * message, jb_Any * options) {
+GPUPipelineError GPUPipelineError_new2(jb_String * message, GPUPipelineErrorInit * options) {
         em_Val vv = em_Val_new(em_Val_global("GPUPipelineError") , em_Val_from(message), em_Val_from(options));
         return GPUPipelineError_from_val(&vv);
       }

@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "PerformanceEntry.h"
 #include "enums.h"
+
+#include "PerformanceEntry.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct DOMRectReadOnly DOMRectReadOnly;
 typedef struct Element Element;
-
 
 DECLARE_EMLITE_TYPE(PerformanceElementTiming, PerformanceEntry);
 
@@ -34,3 +38,7 @@ jb_Object PerformanceElementTiming_toJSON(PerformanceElementTiming* self );
 jb_Any PerformanceElementTiming_paintTime(const PerformanceElementTiming *self);
 
 jb_Any PerformanceElementTiming_presentationTime(const PerformanceElementTiming *self);
+
+#ifdef __cplusplus
+}
+#endif

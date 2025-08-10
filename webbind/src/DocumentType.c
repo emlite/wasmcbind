@@ -1,6 +1,5 @@
 #include <webbind/DocumentType.h>
 
-
 DEFINE_EMLITE_TYPE(DocumentType, Node);
 
 

@@ -1,6 +1,5 @@
 #include <webbind/Sensor.h>
 
-
 DEFINE_EMLITE_TYPE(Sensor, EventTarget);
 
 

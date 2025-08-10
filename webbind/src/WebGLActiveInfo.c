@@ -1,6 +1,5 @@
 #include <webbind/WebGLActiveInfo.h>
 
-
 DEFINE_EMLITE_TYPE(WebGLActiveInfo, em_Val);
 
 

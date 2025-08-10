@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct HTMLFormElement HTMLFormElement;
 typedef struct Document Document;
 typedef struct ValidityState ValidityState;
-
 
 DECLARE_EMLITE_TYPE(HTMLObjectElement, HTMLElement);
 
@@ -97,3 +101,7 @@ void HTMLObjectElement_set_useMap(HTMLObjectElement* self, jb_String * value);
 jb_String HTMLObjectElement_border(const HTMLObjectElement *self);
 
 void HTMLObjectElement_set_border(HTMLObjectElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

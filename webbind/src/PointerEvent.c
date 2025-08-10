@@ -1,5 +1,6 @@
 #include <webbind/PointerEvent.h>
 
+#include <webbind/PointerEventInit.h>
 
 DEFINE_EMLITE_TYPE(PointerEvent, MouseEvent);
 
@@ -10,7 +11,7 @@ PointerEvent PointerEvent_new0(jb_String * type) {
       }
 
 
-PointerEvent PointerEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+PointerEvent PointerEvent_new1(jb_String * type, PointerEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("PointerEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return PointerEvent_from_val(&vv);
       }

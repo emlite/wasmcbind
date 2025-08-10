@@ -1,6 +1,5 @@
 #include <webbind/SVGAngle.h>
 
-
 DEFINE_EMLITE_TYPE(SVGAngle, em_Val);
 
 

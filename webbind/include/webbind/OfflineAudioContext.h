@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "BaseAudioContext.h"
 #include "enums.h"
 
-typedef struct AudioBuffer AudioBuffer;
+#include "BaseAudioContext.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct AudioBuffer AudioBuffer;
 
 DECLARE_EMLITE_TYPE(OfflineAudioContext, BaseAudioContext);
 
@@ -23,3 +27,7 @@ unsigned long OfflineAudioContext_length(const OfflineAudioContext *self);
 jb_Any OfflineAudioContext_oncomplete(const OfflineAudioContext *self);
 
 void OfflineAudioContext_set_oncomplete(OfflineAudioContext* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

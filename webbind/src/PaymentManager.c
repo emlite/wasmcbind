@@ -1,6 +1,5 @@
 #include <webbind/PaymentManager.h>
 
-
 DEFINE_EMLITE_TYPE(PaymentManager, em_Val);
 
 

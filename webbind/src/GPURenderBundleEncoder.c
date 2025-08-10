@@ -1,11 +1,10 @@
 #include <webbind/GPURenderBundleEncoder.h>
+
 #include <webbind/GPURenderBundle.h>
+#include <webbind/GPURenderBundleDescriptor.h>
 #include <webbind/GPUBindGroup.h>
 #include <webbind/GPURenderPipeline.h>
 #include <webbind/GPUBuffer.h>
-
-
-DEFINE_EMLITE_TYPE(GPURenderBundleDescriptor, em_Val);
 
 DEFINE_EMLITE_TYPE(GPURenderBundleEncoder, em_Val);
 

@@ -1,6 +1,6 @@
 #include <webbind/Instance.h>
-#include <webbind/Module.h>
 
+#include <webbind/Module.h>
 
 DEFINE_EMLITE_TYPE(Instance, em_Val);
 

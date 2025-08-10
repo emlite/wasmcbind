@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "InterestGroupBiddingAndScoringScriptRunnerGlobalScope.h"
 #include "enums.h"
 
+#include "InterestGroupBiddingAndScoringScriptRunnerGlobalScope.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(InterestGroupBiddingScriptRunnerGlobalScope, InterestGroupBiddingAndScoringScriptRunnerGlobalScope);
 
@@ -17,3 +21,7 @@ jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPriority(InterestGro
 jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPrioritySignalsOverride0(InterestGroupBiddingScriptRunnerGlobalScope* self , jb_String * key);
 
 jb_Undefined InterestGroupBiddingScriptRunnerGlobalScope_setPrioritySignalsOverride1(InterestGroupBiddingScriptRunnerGlobalScope* self , jb_String * key, double priority);
+
+#ifdef __cplusplus
+}
+#endif

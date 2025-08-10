@@ -1,6 +1,5 @@
 #include <webbind/GeolocationPositionError.h>
 
-
 DEFINE_EMLITE_TYPE(GeolocationPositionError, em_Val);
 
 

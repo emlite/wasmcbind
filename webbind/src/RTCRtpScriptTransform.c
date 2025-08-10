@@ -1,6 +1,6 @@
 #include <webbind/RTCRtpScriptTransform.h>
-#include <webbind/Worker.h>
 
+#include <webbind/Worker.h>
 
 DEFINE_EMLITE_TYPE(RTCRtpScriptTransform, em_Val);
 

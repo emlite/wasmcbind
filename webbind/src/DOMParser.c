@@ -1,6 +1,6 @@
 #include <webbind/DOMParser.h>
-#include <webbind/Document.h>
 
+#include <webbind/Document.h>
 
 DEFINE_EMLITE_TYPE(DOMParser, em_Val);
 

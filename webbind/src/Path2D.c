@@ -1,6 +1,6 @@
 #include <webbind/Path2D.h>
-#include <webbind/SVGSVGElement.h>
 
+#include <webbind/DOMMatrix2DInit.h>
 
 DEFINE_EMLITE_TYPE(Path2D, em_Val);
 

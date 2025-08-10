@@ -1,6 +1,6 @@
 #include <webbind/EXT_disjoint_timer_query.h>
-#include <webbind/WebGLTimerQueryEXT.h>
 
+#include <webbind/WebGLTimerQueryEXT.h>
 
 DEFINE_EMLITE_TYPE(EXT_disjoint_timer_query, em_Val);
 

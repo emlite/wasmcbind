@@ -1,6 +1,5 @@
 #include <webbind/Headers.h>
 
-
 DEFINE_EMLITE_TYPE(Headers, em_Val);
 
 

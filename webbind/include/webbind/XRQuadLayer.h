@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "XRCompositionLayer.h"
 #include "enums.h"
+
+#include "XRCompositionLayer.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct XRSpace XRSpace;
 typedef struct XRRigidTransform XRRigidTransform;
-
 
 DECLARE_EMLITE_TYPE(XRQuadLayer, XRCompositionLayer);
 
@@ -30,3 +34,7 @@ void XRQuadLayer_set_height(XRQuadLayer* self, float value);
 jb_Any XRQuadLayer_onredraw(const XRQuadLayer *self);
 
 void XRQuadLayer_set_onredraw(XRQuadLayer* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

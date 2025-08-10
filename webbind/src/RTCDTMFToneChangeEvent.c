@@ -1,5 +1,6 @@
 #include <webbind/RTCDTMFToneChangeEvent.h>
 
+#include <webbind/RTCDTMFToneChangeEventInit.h>
 
 DEFINE_EMLITE_TYPE(RTCDTMFToneChangeEvent, Event);
 
@@ -10,7 +11,7 @@ RTCDTMFToneChangeEvent RTCDTMFToneChangeEvent_new0(jb_String * type) {
       }
 
 
-RTCDTMFToneChangeEvent RTCDTMFToneChangeEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+RTCDTMFToneChangeEvent RTCDTMFToneChangeEvent_new1(jb_String * type, RTCDTMFToneChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("RTCDTMFToneChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return RTCDTMFToneChangeEvent_from_val(&vv);
       }

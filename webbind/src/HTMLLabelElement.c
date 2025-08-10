@@ -1,6 +1,6 @@
 #include <webbind/HTMLLabelElement.h>
-#include <webbind/HTMLFormElement.h>
 
+#include <webbind/HTMLFormElement.h>
 
 DEFINE_EMLITE_TYPE(HTMLLabelElement, HTMLElement);
 

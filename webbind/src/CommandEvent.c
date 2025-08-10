@@ -1,6 +1,7 @@
 #include <webbind/CommandEvent.h>
-#include <webbind/Element.h>
 
+#include <webbind/CommandEventInit.h>
+#include <webbind/Element.h>
 
 DEFINE_EMLITE_TYPE(CommandEvent, Event);
 
@@ -11,7 +12,7 @@ CommandEvent CommandEvent_new0(jb_String * type) {
       }
 
 
-CommandEvent CommandEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+CommandEvent CommandEvent_new1(jb_String * type, CommandEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("CommandEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return CommandEvent_from_val(&vv);
       }

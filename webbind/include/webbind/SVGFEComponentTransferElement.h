@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
+
+#include "SVGElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedString SVGAnimatedString;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
-
 
 DECLARE_EMLITE_TYPE(SVGFEComponentTransferElement, SVGElement);
 
@@ -22,3 +26,7 @@ SVGAnimatedLength SVGFEComponentTransferElement_width(const SVGFEComponentTransf
 SVGAnimatedLength SVGFEComponentTransferElement_height(const SVGFEComponentTransferElement *self);
 
 SVGAnimatedString SVGFEComponentTransferElement_result(const SVGFEComponentTransferElement *self);
+
+#ifdef __cplusplus
+}
+#endif

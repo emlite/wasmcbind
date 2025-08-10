@@ -2,11 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGSVGElement.h"
 #include "enums.h"
 
-typedef struct Path2D Path2D;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct DOMMatrix2DInit DOMMatrix2DInit;
 
 DECLARE_EMLITE_TYPE(Path2D, em_Val);
 
@@ -43,3 +45,7 @@ jb_Undefined Path2D_arc1(Path2D* self , double x, double y, double radius, doubl
 jb_Undefined Path2D_ellipse0(Path2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle);
 
 jb_Undefined Path2D_ellipse1(Path2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise);
+
+#ifdef __cplusplus
+}
+#endif

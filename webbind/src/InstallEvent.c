@@ -1,5 +1,6 @@
 #include <webbind/InstallEvent.h>
 
+#include <webbind/ExtendableEventInit.h>
 
 DEFINE_EMLITE_TYPE(InstallEvent, ExtendableEvent);
 
@@ -10,7 +11,7 @@ InstallEvent InstallEvent_new0(jb_String * type) {
       }
 
 
-InstallEvent InstallEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+InstallEvent InstallEvent_new1(jb_String * type, ExtendableEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("InstallEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return InstallEvent_from_val(&vv);
       }

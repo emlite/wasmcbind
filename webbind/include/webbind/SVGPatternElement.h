@@ -2,8 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
+
+#include "SVGElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedTransformList SVGAnimatedTransformList;
@@ -11,7 +16,6 @@ typedef struct SVGAnimatedLength SVGAnimatedLength;
 typedef struct SVGAnimatedRect SVGAnimatedRect;
 typedef struct SVGAnimatedPreserveAspectRatio SVGAnimatedPreserveAspectRatio;
 typedef struct SVGAnimatedString SVGAnimatedString;
-
 
 DECLARE_EMLITE_TYPE(SVGPatternElement, SVGElement);
 
@@ -34,3 +38,7 @@ SVGAnimatedRect SVGPatternElement_viewBox(const SVGPatternElement *self);
 SVGAnimatedPreserveAspectRatio SVGPatternElement_preserveAspectRatio(const SVGPatternElement *self);
 
 SVGAnimatedString SVGPatternElement_href(const SVGPatternElement *self);
+
+#ifdef __cplusplus
+}
+#endif

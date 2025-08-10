@@ -1,5 +1,6 @@
 #include <webbind/Accelerometer.h>
 
+#include <webbind/AccelerometerSensorOptions.h>
 
 DEFINE_EMLITE_TYPE(Accelerometer, Sensor);
 
@@ -10,7 +11,7 @@ Accelerometer Accelerometer_new0() {
       }
 
 
-Accelerometer Accelerometer_new1(jb_Any * options) {
+Accelerometer Accelerometer_new1(AccelerometerSensorOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("Accelerometer") , em_Val_from(options));
         return Accelerometer_from_val(&vv);
       }

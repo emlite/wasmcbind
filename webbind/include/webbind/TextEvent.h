@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "UIEvent.h"
 #include "enums.h"
 
-typedef struct Window Window;
+#include "UIEvent.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct Window Window;
 
 DECLARE_EMLITE_TYPE(TextEvent, UIEvent);
 
@@ -21,3 +25,7 @@ jb_Undefined TextEvent_initTextEvent2(TextEvent* self , jb_String * type, bool b
 jb_Undefined TextEvent_initTextEvent3(TextEvent* self , jb_String * type, bool bubbles, bool cancelable, Window * view);
 
 jb_Undefined TextEvent_initTextEvent4(TextEvent* self , jb_String * type, bool bubbles, bool cancelable, Window * view, jb_String * data);
+
+#ifdef __cplusplus
+}
+#endif

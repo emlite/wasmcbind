@@ -1,5 +1,6 @@
 #include <webbind/ReportingObserver.h>
 
+#include <webbind/ReportingObserverOptions.h>
 
 DEFINE_EMLITE_TYPE(ReportingObserver, em_Val);
 
@@ -10,7 +11,7 @@ ReportingObserver ReportingObserver_new0(jb_Function * callback) {
       }
 
 
-ReportingObserver ReportingObserver_new1(jb_Function * callback, jb_Any * options) {
+ReportingObserver ReportingObserver_new1(jb_Function * callback, ReportingObserverOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("ReportingObserver") , em_Val_from(callback), em_Val_from(options));
         return ReportingObserver_from_val(&vv);
       }

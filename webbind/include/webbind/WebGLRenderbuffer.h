@@ -2,8 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "WebGLObject.h"
 #include "enums.h"
 
+#include "WebGLObject.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(WebGLRenderbuffer, WebGLObject);
+
+#ifdef __cplusplus
+}
+#endif

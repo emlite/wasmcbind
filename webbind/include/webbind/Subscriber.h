@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct AbortSignal AbortSignal;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct AbortSignal AbortSignal;
 
 DECLARE_EMLITE_TYPE(Subscriber, em_Val);
 
@@ -15,8 +18,12 @@ jb_Undefined Subscriber_error(Subscriber* self , jb_Any * error);
 
 jb_Undefined Subscriber_complete(Subscriber* self );
 
-jb_Undefined Subscriber_addTeardown(Subscriber* self , jb_Any * teardown);
+jb_Undefined Subscriber_addTeardown(Subscriber* self , jb_Function * teardown);
 
 bool Subscriber_active(const Subscriber *self);
 
 AbortSignal Subscriber_signal(const Subscriber *self);
+
+#ifdef __cplusplus
+}
+#endif

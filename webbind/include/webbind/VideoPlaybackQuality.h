@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(VideoPlaybackQuality, em_Val);
 
@@ -14,3 +17,7 @@ unsigned long VideoPlaybackQuality_droppedVideoFrames(const VideoPlaybackQuality
 unsigned long VideoPlaybackQuality_totalVideoFrames(const VideoPlaybackQuality *self);
 
 unsigned long VideoPlaybackQuality_corruptedVideoFrames(const VideoPlaybackQuality *self);
+
+#ifdef __cplusplus
+}
+#endif

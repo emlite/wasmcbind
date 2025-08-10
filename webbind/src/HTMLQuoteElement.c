@@ -1,6 +1,5 @@
 #include <webbind/HTMLQuoteElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLQuoteElement, HTMLElement);
 
 

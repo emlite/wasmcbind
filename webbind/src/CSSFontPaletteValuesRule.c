@@ -1,6 +1,5 @@
 #include <webbind/CSSFontPaletteValuesRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSFontPaletteValuesRule, CSSRule);
 
 

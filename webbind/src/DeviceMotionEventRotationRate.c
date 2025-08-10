@@ -1,6 +1,5 @@
 #include <webbind/DeviceMotionEventRotationRate.h>
 
-
 DEFINE_EMLITE_TYPE(DeviceMotionEventRotationRate, em_Val);
 
 

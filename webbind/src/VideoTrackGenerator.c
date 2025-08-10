@@ -1,7 +1,7 @@
 #include <webbind/VideoTrackGenerator.h>
+
 #include <webbind/WritableStream.h>
 #include <webbind/MediaStreamTrack.h>
-
 
 DEFINE_EMLITE_TYPE(VideoTrackGenerator, em_Val);
 

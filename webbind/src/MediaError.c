@@ -1,6 +1,5 @@
 #include <webbind/MediaError.h>
 
-
 DEFINE_EMLITE_TYPE(MediaError, em_Val);
 
 

@@ -1,14 +1,15 @@
 #include <webbind/RTCTrackEvent.h>
+
+#include <webbind/RTCTrackEventInit.h>
 #include <webbind/RTCRtpReceiver.h>
 #include <webbind/MediaStreamTrack.h>
 #include <webbind/MediaStream.h>
 #include <webbind/RTCRtpTransceiver.h>
 
-
 DEFINE_EMLITE_TYPE(RTCTrackEvent, Event);
 
 
-RTCTrackEvent RTCTrackEvent_new(jb_String * type, jb_Any * eventInitDict) {
+RTCTrackEvent RTCTrackEvent_new(jb_String * type, RTCTrackEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("RTCTrackEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return RTCTrackEvent_from_val(&vv);
       }

@@ -1,7 +1,7 @@
 #include <webbind/HTMLTableSectionElement.h>
+
 #include <webbind/HTMLCollection.h>
 #include <webbind/HTMLTableRowElement.h>
-
 
 DEFINE_EMLITE_TYPE(HTMLTableSectionElement, HTMLElement);
 

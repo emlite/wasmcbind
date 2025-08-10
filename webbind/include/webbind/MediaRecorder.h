@@ -2,17 +2,22 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct MediaStream MediaStream;
+#include "EventTarget.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct MediaStream MediaStream;
+typedef struct MediaRecorderOptions MediaRecorderOptions;
 
 DECLARE_EMLITE_TYPE(MediaRecorder, EventTarget);
 
 MediaRecorder MediaRecorder_new0(MediaStream * stream);
 
-MediaRecorder MediaRecorder_new1(MediaStream * stream, jb_Any * options);
+MediaRecorder MediaRecorder_new1(MediaStream * stream, MediaRecorderOptions * options);
 
 MediaStream MediaRecorder_stream(const MediaRecorder *self);
 
@@ -63,3 +68,7 @@ jb_Undefined MediaRecorder_resume(MediaRecorder* self );
 jb_Undefined MediaRecorder_requestData(MediaRecorder* self );
 
 bool MediaRecorder_isTypeSupported(MediaRecorder* self , jb_String * type);
+
+#ifdef __cplusplus
+}
+#endif

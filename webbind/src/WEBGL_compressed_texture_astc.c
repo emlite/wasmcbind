@@ -1,6 +1,5 @@
 #include <webbind/WEBGL_compressed_texture_astc.h>
 
-
 DEFINE_EMLITE_TYPE(WEBGL_compressed_texture_astc, em_Val);
 
 

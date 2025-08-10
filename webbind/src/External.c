@@ -1,6 +1,5 @@
 #include <webbind/External.h>
 
-
 DEFINE_EMLITE_TYPE(External, em_Val);
 
 

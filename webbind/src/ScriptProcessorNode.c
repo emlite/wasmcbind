@@ -1,6 +1,5 @@
 #include <webbind/ScriptProcessorNode.h>
 
-
 DEFINE_EMLITE_TYPE(ScriptProcessorNode, AudioNode);
 
 

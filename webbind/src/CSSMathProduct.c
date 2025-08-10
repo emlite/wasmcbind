@@ -1,6 +1,6 @@
 #include <webbind/CSSMathProduct.h>
-#include <webbind/CSSNumericArray.h>
 
+#include <webbind/CSSNumericArray.h>
 
 DEFINE_EMLITE_TYPE(CSSMathProduct, CSSMathValue);
 

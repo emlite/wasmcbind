@@ -1,6 +1,5 @@
 #include <webbind/GPUQuerySet.h>
 
-
 DEFINE_EMLITE_TYPE(GPUQuerySet, em_Val);
 
 

@@ -2,15 +2,18 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct WorkerGlobalScope WorkerGlobalScope;
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct WorkerLocation WorkerLocation;
 typedef struct WorkerNavigator WorkerNavigator;
 typedef struct FontFaceSet FontFaceSet;
 typedef struct Crypto Crypto;
-
 
 DECLARE_EMLITE_TYPE(WorkerGlobalScope, EventTarget);
 
@@ -49,3 +52,7 @@ void WorkerGlobalScope_set_onunhandledrejection(WorkerGlobalScope* self, jb_Any 
 FontFaceSet WorkerGlobalScope_fonts(const WorkerGlobalScope *self);
 
 Crypto WorkerGlobalScope_crypto(const WorkerGlobalScope *self);
+
+#ifdef __cplusplus
+}
+#endif

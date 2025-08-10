@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(ReadableStreamDefaultController, em_Val);
 
@@ -18,3 +21,7 @@ jb_Undefined ReadableStreamDefaultController_enqueue1(ReadableStreamDefaultContr
 jb_Undefined ReadableStreamDefaultController_error0(ReadableStreamDefaultController* self );
 
 jb_Undefined ReadableStreamDefaultController_error1(ReadableStreamDefaultController* self , jb_Any * e);
+
+#ifdef __cplusplus
+}
+#endif

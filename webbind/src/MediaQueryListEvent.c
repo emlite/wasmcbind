@@ -1,5 +1,6 @@
 #include <webbind/MediaQueryListEvent.h>
 
+#include <webbind/MediaQueryListEventInit.h>
 
 DEFINE_EMLITE_TYPE(MediaQueryListEvent, Event);
 
@@ -10,7 +11,7 @@ MediaQueryListEvent MediaQueryListEvent_new0(jb_String * type) {
       }
 
 
-MediaQueryListEvent MediaQueryListEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+MediaQueryListEvent MediaQueryListEvent_new1(jb_String * type, MediaQueryListEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("MediaQueryListEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return MediaQueryListEvent_from_val(&vv);
       }

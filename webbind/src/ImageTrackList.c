@@ -1,6 +1,6 @@
 #include <webbind/ImageTrackList.h>
-#include <webbind/ImageTrack.h>
 
+#include <webbind/ImageTrack.h>
 
 DEFINE_EMLITE_TYPE(ImageTrackList, em_Val);
 

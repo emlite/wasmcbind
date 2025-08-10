@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "PerformanceResourceTiming.h"
 #include "enums.h"
 
-typedef struct NotRestoredReasons NotRestoredReasons;
+#include "PerformanceResourceTiming.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct NotRestoredReasons NotRestoredReasons;
 
 DECLARE_EMLITE_TYPE(PerformanceNavigationTiming, PerformanceResourceTiming);
 
@@ -37,3 +41,7 @@ NotRestoredReasons PerformanceNavigationTiming_notRestoredReasons(const Performa
 jb_Object PerformanceNavigationTiming_toJSON(PerformanceNavigationTiming* self );
 
 jb_Any PerformanceNavigationTiming_activationStart(const PerformanceNavigationTiming *self);
+
+#ifdef __cplusplus
+}
+#endif

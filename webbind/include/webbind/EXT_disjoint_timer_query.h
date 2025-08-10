@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct WebGLTimerQueryEXT WebGLTimerQueryEXT;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct WebGLTimerQueryEXT WebGLTimerQueryEXT;
 
 DECLARE_EMLITE_TYPE(EXT_disjoint_timer_query, em_Val);
 
@@ -24,3 +27,7 @@ jb_Undefined EXT_disjoint_timer_query_queryCounterEXT(EXT_disjoint_timer_query* 
 jb_Any EXT_disjoint_timer_query_getQueryEXT(EXT_disjoint_timer_query* self , jb_Any * target, jb_Any * pname);
 
 jb_Any EXT_disjoint_timer_query_getQueryObjectEXT(EXT_disjoint_timer_query* self , WebGLTimerQueryEXT * query, jb_Any * pname);
+
+#ifdef __cplusplus
+}
+#endif

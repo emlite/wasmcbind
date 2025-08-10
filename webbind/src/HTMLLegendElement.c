@@ -1,6 +1,6 @@
 #include <webbind/HTMLLegendElement.h>
-#include <webbind/HTMLFormElement.h>
 
+#include <webbind/HTMLFormElement.h>
 
 DEFINE_EMLITE_TYPE(HTMLLegendElement, HTMLElement);
 

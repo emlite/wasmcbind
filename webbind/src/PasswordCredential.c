@@ -1,10 +1,11 @@
 #include <webbind/PasswordCredential.h>
 
+#include <webbind/PasswordCredentialData.h>
 
 DEFINE_EMLITE_TYPE(PasswordCredential, Credential);
 
 
-PasswordCredential PasswordCredential_new(jb_Any * data) {
+PasswordCredential PasswordCredential_new(PasswordCredentialData * data) {
         em_Val vv = em_Val_new(em_Val_global("PasswordCredential") , em_Val_from(data));
         return PasswordCredential_from_val(&vv);
       }

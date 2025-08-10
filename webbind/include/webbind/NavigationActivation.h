@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct NavigationHistoryEntry NavigationHistoryEntry;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct NavigationHistoryEntry NavigationHistoryEntry;
 
 DECLARE_EMLITE_TYPE(NavigationActivation, em_Val);
 
@@ -14,3 +17,7 @@ NavigationHistoryEntry NavigationActivation_from(const NavigationActivation *sel
 NavigationHistoryEntry NavigationActivation_entry(const NavigationActivation *self);
 
 NavigationType NavigationActivation_navigationType(const NavigationActivation *self);
+
+#ifdef __cplusplus
+}
+#endif

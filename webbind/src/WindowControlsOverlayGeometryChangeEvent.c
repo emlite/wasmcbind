@@ -1,11 +1,12 @@
 #include <webbind/WindowControlsOverlayGeometryChangeEvent.h>
-#include <webbind/DOMRect.h>
 
+#include <webbind/WindowControlsOverlayGeometryChangeEventInit.h>
+#include <webbind/DOMRect.h>
 
 DEFINE_EMLITE_TYPE(WindowControlsOverlayGeometryChangeEvent, Event);
 
 
-WindowControlsOverlayGeometryChangeEvent WindowControlsOverlayGeometryChangeEvent_new(jb_String * type, jb_Any * eventInitDict) {
+WindowControlsOverlayGeometryChangeEvent WindowControlsOverlayGeometryChangeEvent_new(jb_String * type, WindowControlsOverlayGeometryChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("WindowControlsOverlayGeometryChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return WindowControlsOverlayGeometryChangeEvent_from_val(&vv);
       }

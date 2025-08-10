@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGGeometryElement.h"
 #include "enums.h"
 
-typedef struct SVGAnimatedLength SVGAnimatedLength;
+#include "SVGGeometryElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 DECLARE_EMLITE_TYPE(SVGRectElement, SVGGeometryElement);
 
@@ -21,3 +25,7 @@ SVGAnimatedLength SVGRectElement_height(const SVGRectElement *self);
 SVGAnimatedLength SVGRectElement_rx(const SVGRectElement *self);
 
 SVGAnimatedLength SVGRectElement_ry(const SVGRectElement *self);
+
+#ifdef __cplusplus
+}
+#endif

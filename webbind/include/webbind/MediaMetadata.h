@@ -4,14 +4,18 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct ChapterInformation ChapterInformation;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct MediaMetadataInit MediaMetadataInit;
+typedef struct ChapterInformation ChapterInformation;
 
 DECLARE_EMLITE_TYPE(MediaMetadata, em_Val);
 
 MediaMetadata MediaMetadata_new0();
 
-MediaMetadata MediaMetadata_new1(jb_Any * init);
+MediaMetadata MediaMetadata_new1(MediaMetadataInit * init);
 
 jb_String MediaMetadata_title(const MediaMetadata *self);
 
@@ -30,3 +34,7 @@ jb_Array MediaMetadata_artwork(const MediaMetadata *self);
 void MediaMetadata_set_artwork(MediaMetadata* self, jb_Array * value);
 
 jb_Array MediaMetadata_chapterInfo(const MediaMetadata *self);
+
+#ifdef __cplusplus
+}
+#endif

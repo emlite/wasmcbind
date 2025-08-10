@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGGraphicsElement.h"
 #include "enums.h"
+
+#include "SVGGraphicsElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 typedef struct SVGElement SVGElement;
 typedef struct SVGAnimatedString SVGAnimatedString;
-
 
 DECLARE_EMLITE_TYPE(SVGUseElement, SVGGraphicsElement);
 
@@ -25,3 +29,7 @@ SVGElement SVGUseElement_instanceRoot(const SVGUseElement *self);
 SVGElement SVGUseElement_animatedInstanceRoot(const SVGUseElement *self);
 
 SVGAnimatedString SVGUseElement_href(const SVGUseElement *self);
+
+#ifdef __cplusplus
+}
+#endif

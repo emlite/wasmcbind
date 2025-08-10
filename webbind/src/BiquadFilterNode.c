@@ -1,7 +1,8 @@
 #include <webbind/BiquadFilterNode.h>
-#include <webbind/AudioParam.h>
-#include <webbind/BaseAudioContext.h>
 
+#include <webbind/BaseAudioContext.h>
+#include <webbind/BiquadFilterOptions.h>
+#include <webbind/AudioParam.h>
 
 DEFINE_EMLITE_TYPE(BiquadFilterNode, AudioNode);
 
@@ -12,7 +13,7 @@ BiquadFilterNode BiquadFilterNode_new0(BaseAudioContext * context) {
       }
 
 
-BiquadFilterNode BiquadFilterNode_new1(BaseAudioContext * context, jb_Any * options) {
+BiquadFilterNode BiquadFilterNode_new1(BaseAudioContext * context, BiquadFilterOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("BiquadFilterNode") , em_Val_from(context), em_Val_from(options));
         return BiquadFilterNode_from_val(&vv);
       }

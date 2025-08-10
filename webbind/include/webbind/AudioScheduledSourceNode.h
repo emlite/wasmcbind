@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "AudioNode.h"
 #include "enums.h"
 
+#include "AudioNode.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(AudioScheduledSourceNode, AudioNode);
 
@@ -19,3 +23,7 @@ jb_Undefined AudioScheduledSourceNode_start1(AudioScheduledSourceNode* self , do
 jb_Undefined AudioScheduledSourceNode_stop0(AudioScheduledSourceNode* self );
 
 jb_Undefined AudioScheduledSourceNode_stop1(AudioScheduledSourceNode* self , double when);
+
+#ifdef __cplusplus
+}
+#endif

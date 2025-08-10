@@ -1,6 +1,6 @@
 #include <webbind/MediaStream.h>
-#include <webbind/MediaStreamTrack.h>
 
+#include <webbind/MediaStreamTrack.h>
 
 DEFINE_EMLITE_TYPE(MediaStream, EventTarget);
 

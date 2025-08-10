@@ -1,33 +1,18 @@
 #include <webbind/CSS.h>
-#include <webbind/CSSUnitValue.h>
-#include <webbind/CSSParserDeclaration.h>
 
-
-
-
-bool CSS_supports0(jb_String * property, jb_String * value) {
-    return em_Val_as(bool, em_Val_call(em_Val_global("css"), "supports", em_Val_from(property), em_Val_from(value)));
+jb_String CSS_escape(jb_String * ident) {
+    return em_Val_as(jb_String, em_Val_call(em_Val_global("css"), "escape", em_Val_from(ident)));
 }
 
-bool CSS_supports1(jb_String * conditionText) {
+bool CSS_supports(jb_String * conditionText) {
     return em_Val_as(bool, em_Val_call(em_Val_global("css"), "supports", em_Val_from(conditionText)));
 }
-
-
-
-
-
-
-
-
-
-
 
 jb_Promise CSS_parseStylesheet0(jb_Any * css) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css"), "parseStylesheet", em_Val_from(css)));
 }
 
-jb_Promise CSS_parseStylesheet1(jb_Any * css, jb_Any * options) {
+jb_Promise CSS_parseStylesheet1(jb_Any * css, CSSParserOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css"), "parseStylesheet", em_Val_from(css), em_Val_from(options)));
 }
 
@@ -35,7 +20,7 @@ jb_Promise CSS_parseRuleList0(jb_Any * css) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css"), "parseRuleList", em_Val_from(css)));
 }
 
-jb_Promise CSS_parseRuleList1(jb_Any * css, jb_Any * options) {
+jb_Promise CSS_parseRuleList1(jb_Any * css, CSSParserOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css"), "parseRuleList", em_Val_from(css), em_Val_from(options)));
 }
 
@@ -43,7 +28,7 @@ jb_Promise CSS_parseRule0(jb_Any * css) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css"), "parseRule", em_Val_from(css)));
 }
 
-jb_Promise CSS_parseRule1(jb_Any * css, jb_Any * options) {
+jb_Promise CSS_parseRule1(jb_Any * css, CSSParserOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css"), "parseRule", em_Val_from(css), em_Val_from(options)));
 }
 
@@ -51,7 +36,7 @@ jb_Promise CSS_parseDeclarationList0(jb_Any * css) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css"), "parseDeclarationList", em_Val_from(css)));
 }
 
-jb_Promise CSS_parseDeclarationList1(jb_Any * css, jb_Any * options) {
+jb_Promise CSS_parseDeclarationList1(jb_Any * css, CSSParserOptions * options) {
     return em_Val_as(jb_Promise, em_Val_call(em_Val_global("css"), "parseDeclarationList", em_Val_from(css), em_Val_from(options)));
 }
 
@@ -59,7 +44,7 @@ CSSParserDeclaration CSS_parseDeclaration0(jb_String * css) {
     return em_Val_as(CSSParserDeclaration, em_Val_call(em_Val_global("css"), "parseDeclaration", em_Val_from(css)));
 }
 
-CSSParserDeclaration CSS_parseDeclaration1(jb_String * css, jb_Any * options) {
+CSSParserDeclaration CSS_parseDeclaration1(jb_String * css, CSSParserOptions * options) {
     return em_Val_as(CSSParserDeclaration, em_Val_call(em_Val_global("css"), "parseDeclaration", em_Val_from(css), em_Val_from(options)));
 }
 
@@ -75,13 +60,9 @@ jb_Array CSS_parseCommaValueList(jb_String * css) {
     return em_Val_as(jb_Array, em_Val_call(em_Val_global("css"), "parseCommaValueList", em_Val_from(css)));
 }
 
-
-
-jb_Undefined CSS_registerProperty(jb_Any * definition) {
+jb_Undefined CSS_registerProperty(PropertyDefinition * definition) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("css"), "registerProperty", em_Val_from(definition)));
 }
-
-
 
 CSSUnitValue CSS_number(double value) {
     return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css"), "number", em_Val_from(value)));
@@ -335,8 +316,3 @@ CSSUnitValue CSS_fr(double value) {
     return em_Val_as(CSSUnitValue, em_Val_call(em_Val_global("css"), "fr", em_Val_from(value)));
 }
 
-
-
-jb_String CSS_escape(jb_String * ident) {
-    return em_Val_as(jb_String, em_Val_call(em_Val_global("css"), "escape", em_Val_from(ident)));
-}

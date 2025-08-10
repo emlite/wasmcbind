@@ -1,6 +1,6 @@
 #include <webbind/HTMLScriptElement.h>
-#include <webbind/DOMTokenList.h>
 
+#include <webbind/DOMTokenList.h>
 
 DEFINE_EMLITE_TYPE(HTMLScriptElement, HTMLElement);
 

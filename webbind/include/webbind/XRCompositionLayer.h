@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "XRLayer.h"
 #include "enums.h"
 
+#include "XRLayer.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(XRCompositionLayer, XRLayer);
 
@@ -31,3 +35,7 @@ void XRCompositionLayer_set_quality(XRCompositionLayer* self, XRLayerQuality * v
 bool XRCompositionLayer_needsRedraw(const XRCompositionLayer *self);
 
 jb_Undefined XRCompositionLayer_destroy(XRCompositionLayer* self );
+
+#ifdef __cplusplus
+}
+#endif

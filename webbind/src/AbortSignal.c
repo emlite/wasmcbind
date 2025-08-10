@@ -1,6 +1,5 @@
 #include <webbind/AbortSignal.h>
 
-
 DEFINE_EMLITE_TYPE(AbortSignal, EventTarget);
 
 

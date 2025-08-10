@@ -1,6 +1,7 @@
 #include <webbind/SnapEvent.h>
-#include <webbind/Node.h>
 
+#include <webbind/SnapEventInit.h>
+#include <webbind/Node.h>
 
 DEFINE_EMLITE_TYPE(SnapEvent, Event);
 
@@ -11,7 +12,7 @@ SnapEvent SnapEvent_new0(jb_String * type) {
       }
 
 
-SnapEvent SnapEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+SnapEvent SnapEvent_new1(jb_String * type, SnapEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("SnapEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return SnapEvent_from_val(&vv);
       }

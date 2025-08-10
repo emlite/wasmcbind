@@ -1,6 +1,5 @@
 #include <webbind/CanvasGradient.h>
 
-
 DEFINE_EMLITE_TYPE(CanvasGradient, em_Val);
 
 

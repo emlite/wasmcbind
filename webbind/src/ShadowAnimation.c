@@ -1,6 +1,5 @@
 #include <webbind/ShadowAnimation.h>
 
-
 DEFINE_EMLITE_TYPE(ShadowAnimation, Animation);
 
 

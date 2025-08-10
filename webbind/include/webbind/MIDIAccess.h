@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct MIDIInputMap MIDIInputMap;
 typedef struct MIDIOutputMap MIDIOutputMap;
-
 
 DECLARE_EMLITE_TYPE(MIDIAccess, EventTarget);
 
@@ -20,3 +24,7 @@ jb_Any MIDIAccess_onstatechange(const MIDIAccess *self);
 void MIDIAccess_set_onstatechange(MIDIAccess* self, jb_Any * value);
 
 bool MIDIAccess_sysexEnabled(const MIDIAccess *self);
+
+#ifdef __cplusplus
+}
+#endif

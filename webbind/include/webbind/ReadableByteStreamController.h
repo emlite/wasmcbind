@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct ReadableStreamBYOBRequest ReadableStreamBYOBRequest;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct ReadableStreamBYOBRequest ReadableStreamBYOBRequest;
 
 DECLARE_EMLITE_TYPE(ReadableByteStreamController, em_Val);
 
@@ -20,3 +23,7 @@ jb_Undefined ReadableByteStreamController_enqueue(ReadableByteStreamController* 
 jb_Undefined ReadableByteStreamController_error0(ReadableByteStreamController* self );
 
 jb_Undefined ReadableByteStreamController_error1(ReadableByteStreamController* self , jb_Any * e);
+
+#ifdef __cplusplus
+}
+#endif

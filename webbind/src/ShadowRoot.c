@@ -1,7 +1,8 @@
 #include <webbind/ShadowRoot.h>
-#include <webbind/Element.h>
-#include <webbind/Animation.h>
 
+#include <webbind/Element.h>
+#include <webbind/GetHTMLOptions.h>
+#include <webbind/Animation.h>
 
 DEFINE_EMLITE_TYPE(ShadowRoot, DocumentFragment);
 

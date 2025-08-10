@@ -2,8 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct EventCounts EventCounts;
 typedef struct PerformanceTiming PerformanceTiming;
@@ -13,25 +18,6 @@ typedef struct PerformanceMark PerformanceMark;
 typedef struct PerformanceMarkOptions PerformanceMarkOptions;
 typedef struct PerformanceMeasure PerformanceMeasure;
 
-
-DECLARE_EMLITE_TYPE(MemoryMeasurement, em_Val);
-
-long long MemoryMeasurement_bytes(const MemoryMeasurement *self);
-
-void MemoryMeasurement_set_bytes(MemoryMeasurement* self, long long value);
-
-jb_Array MemoryMeasurement_breakdown(const MemoryMeasurement *self);
-
-void MemoryMeasurement_set_breakdown(MemoryMeasurement* self, jb_Array * value);
-DECLARE_EMLITE_TYPE(PerformanceMarkOptions, em_Val);
-
-jb_Any PerformanceMarkOptions_detail(const PerformanceMarkOptions *self);
-
-void PerformanceMarkOptions_set_detail(PerformanceMarkOptions* self, jb_Any * value);
-
-jb_Any PerformanceMarkOptions_startTime(const PerformanceMarkOptions *self);
-
-void PerformanceMarkOptions_set_startTime(PerformanceMarkOptions* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(Performance, EventTarget);
 
 jb_Any Performance_now(Performance* self );
@@ -83,3 +69,7 @@ PerformanceMeasure Performance_measure2(Performance* self , jb_String * measureN
 jb_Undefined Performance_clearMeasures0(Performance* self );
 
 jb_Undefined Performance_clearMeasures1(Performance* self , jb_String * measureName);
+
+#ifdef __cplusplus
+}
+#endif

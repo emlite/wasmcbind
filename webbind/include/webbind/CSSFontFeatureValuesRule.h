@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSRule.h"
 #include "enums.h"
 
-typedef struct CSSFontFeatureValuesMap CSSFontFeatureValuesMap;
+#include "CSSRule.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct CSSFontFeatureValuesMap CSSFontFeatureValuesMap;
 
 DECLARE_EMLITE_TYPE(CSSFontFeatureValuesRule, CSSRule);
 
@@ -27,3 +31,7 @@ CSSFontFeatureValuesMap CSSFontFeatureValuesRule_characterVariant(const CSSFontF
 CSSFontFeatureValuesMap CSSFontFeatureValuesRule_styleset(const CSSFontFeatureValuesRule *self);
 
 CSSFontFeatureValuesMap CSSFontFeatureValuesRule_historicalForms(const CSSFontFeatureValuesRule *self);
+
+#ifdef __cplusplus
+}
+#endif

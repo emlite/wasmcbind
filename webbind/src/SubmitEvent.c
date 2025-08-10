@@ -1,6 +1,7 @@
 #include <webbind/SubmitEvent.h>
-#include <webbind/HTMLElement.h>
 
+#include <webbind/SubmitEventInit.h>
+#include <webbind/HTMLElement.h>
 
 DEFINE_EMLITE_TYPE(SubmitEvent, Event);
 
@@ -11,7 +12,7 @@ SubmitEvent SubmitEvent_new0(jb_String * type) {
       }
 
 
-SubmitEvent SubmitEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+SubmitEvent SubmitEvent_new1(jb_String * type, SubmitEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("SubmitEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return SubmitEvent_from_val(&vv);
       }

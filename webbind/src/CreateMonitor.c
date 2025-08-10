@@ -1,6 +1,5 @@
 #include <webbind/CreateMonitor.h>
 
-
 DEFINE_EMLITE_TYPE(CreateMonitor, EventTarget);
 
 

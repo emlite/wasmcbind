@@ -1,6 +1,6 @@
 #include <webbind/FontFacePalettes.h>
-#include <webbind/FontFacePalette.h>
 
+#include <webbind/FontFacePalette.h>
 
 DEFINE_EMLITE_TYPE(FontFacePalettes, em_Val);
 

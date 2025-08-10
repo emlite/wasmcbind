@@ -1,6 +1,6 @@
 #include <webbind/NotRestoredReasons.h>
-#include <webbind/NotRestoredReasonDetails.h>
 
+#include <webbind/NotRestoredReasonDetails.h>
 
 DEFINE_EMLITE_TYPE(NotRestoredReasons, em_Val);
 

@@ -1,5 +1,6 @@
 #include <webbind/EventSource.h>
 
+#include <webbind/EventSourceInit.h>
 
 DEFINE_EMLITE_TYPE(EventSource, EventTarget);
 
@@ -10,7 +11,7 @@ EventSource EventSource_new0(jb_String * url) {
       }
 
 
-EventSource EventSource_new1(jb_String * url, jb_Any * eventSourceInitDict) {
+EventSource EventSource_new1(jb_String * url, EventSourceInit * eventSourceInitDict) {
         em_Val vv = em_Val_new(em_Val_global("EventSource") , em_Val_from(url), em_Val_from(eventSourceInitDict));
         return EventSource_from_val(&vv);
       }

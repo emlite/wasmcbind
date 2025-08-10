@@ -1,6 +1,5 @@
 #include <webbind/CSSContainerRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSContainerRule, CSSConditionRule);
 
 

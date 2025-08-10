@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGSVGElement.h"
 #include "enums.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct HTMLCanvasElement HTMLCanvasElement;
 typedef struct CanvasRenderingContext2DSettings CanvasRenderingContext2DSettings;
 typedef struct DOMMatrix DOMMatrix;
+typedef struct DOMMatrix2DInit DOMMatrix2DInit;
 typedef struct CanvasGradient CanvasGradient;
 typedef struct CanvasPattern CanvasPattern;
 typedef struct Path2D Path2D;
@@ -16,37 +20,6 @@ typedef struct TextMetrics TextMetrics;
 typedef struct ImageData ImageData;
 typedef struct ImageDataSettings ImageDataSettings;
 
-
-DECLARE_EMLITE_TYPE(CanvasRenderingContext2DSettings, em_Val);
-
-bool CanvasRenderingContext2DSettings_alpha(const CanvasRenderingContext2DSettings *self);
-
-void CanvasRenderingContext2DSettings_set_alpha(CanvasRenderingContext2DSettings* self, bool value);
-
-bool CanvasRenderingContext2DSettings_desynchronized(const CanvasRenderingContext2DSettings *self);
-
-void CanvasRenderingContext2DSettings_set_desynchronized(CanvasRenderingContext2DSettings* self, bool value);
-
-PredefinedColorSpace CanvasRenderingContext2DSettings_colorSpace(const CanvasRenderingContext2DSettings *self);
-
-void CanvasRenderingContext2DSettings_set_colorSpace(CanvasRenderingContext2DSettings* self, PredefinedColorSpace * value);
-
-CanvasColorType CanvasRenderingContext2DSettings_colorType(const CanvasRenderingContext2DSettings *self);
-
-void CanvasRenderingContext2DSettings_set_colorType(CanvasRenderingContext2DSettings* self, CanvasColorType * value);
-
-bool CanvasRenderingContext2DSettings_willReadFrequently(const CanvasRenderingContext2DSettings *self);
-
-void CanvasRenderingContext2DSettings_set_willReadFrequently(CanvasRenderingContext2DSettings* self, bool value);
-DECLARE_EMLITE_TYPE(ImageDataSettings, em_Val);
-
-PredefinedColorSpace ImageDataSettings_colorSpace(const ImageDataSettings *self);
-
-void ImageDataSettings_set_colorSpace(ImageDataSettings* self, PredefinedColorSpace * value);
-
-ImageDataPixelFormat ImageDataSettings_pixelFormat(const ImageDataSettings *self);
-
-void ImageDataSettings_set_pixelFormat(ImageDataSettings* self, ImageDataPixelFormat * value);
 DECLARE_EMLITE_TYPE(CanvasRenderingContext2D, em_Val);
 
 HTMLCanvasElement CanvasRenderingContext2D_canvas(const CanvasRenderingContext2D *self);
@@ -268,3 +241,7 @@ jb_Undefined CanvasRenderingContext2D_arc1(CanvasRenderingContext2D* self , doub
 jb_Undefined CanvasRenderingContext2D_ellipse0(CanvasRenderingContext2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle);
 
 jb_Undefined CanvasRenderingContext2D_ellipse1(CanvasRenderingContext2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise);
+
+#ifdef __cplusplus
+}
+#endif

@@ -2,11 +2,14 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGSVGElement.h"
 #include "enums.h"
 
-typedef struct DOMMatrix DOMMatrix;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct DOMMatrix DOMMatrix;
+typedef struct DOMMatrix2DInit DOMMatrix2DInit;
 
 DECLARE_EMLITE_TYPE(SVGTransform, em_Val);
 
@@ -29,3 +32,7 @@ jb_Undefined SVGTransform_setRotate(SVGTransform* self , float angle, float cx, 
 jb_Undefined SVGTransform_setSkewX(SVGTransform* self , float angle);
 
 jb_Undefined SVGTransform_setSkewY(SVGTransform* self , float angle);
+
+#ifdef __cplusplus
+}
+#endif

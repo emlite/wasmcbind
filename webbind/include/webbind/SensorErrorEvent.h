@@ -2,14 +2,23 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Event.h"
 #include "enums.h"
 
-typedef struct DOMException DOMException;
+#include "Event.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct SensorErrorEventInit SensorErrorEventInit;
+typedef struct DOMException DOMException;
 
 DECLARE_EMLITE_TYPE(SensorErrorEvent, Event);
 
-SensorErrorEvent SensorErrorEvent_new(jb_String * type, jb_Any * errorEventInitDict);
+SensorErrorEvent SensorErrorEvent_new(jb_String * type, SensorErrorEventInit * errorEventInitDict);
 
 DOMException SensorErrorEvent_error(const SensorErrorEvent *self);
+
+#ifdef __cplusplus
+}
+#endif

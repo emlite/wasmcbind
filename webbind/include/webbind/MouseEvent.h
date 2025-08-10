@@ -2,18 +2,23 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "UIEvent.h"
 #include "enums.h"
 
+#include "UIEvent.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct MouseEventInit MouseEventInit;
 typedef struct EventTarget EventTarget;
 typedef struct Window Window;
-
 
 DECLARE_EMLITE_TYPE(MouseEvent, UIEvent);
 
 MouseEvent MouseEvent_new0(jb_String * type);
 
-MouseEvent MouseEvent_new1(jb_String * type, jb_Any * eventInitDict);
+MouseEvent MouseEvent_new1(jb_String * type, MouseEventInit * eventInitDict);
 
 long MouseEvent_screenX(const MouseEvent *self);
 
@@ -88,3 +93,7 @@ jb_Undefined MouseEvent_initMouseEvent12(MouseEvent* self , jb_String * typeArg,
 jb_Undefined MouseEvent_initMouseEvent13(MouseEvent* self , jb_String * typeArg, bool bubblesArg, bool cancelableArg, Window * viewArg, long detailArg, long screenXArg, long screenYArg, long clientXArg, long clientYArg, bool ctrlKeyArg, bool altKeyArg, bool shiftKeyArg, bool metaKeyArg, short buttonArg);
 
 jb_Undefined MouseEvent_initMouseEvent14(MouseEvent* self , jb_String * typeArg, bool bubblesArg, bool cancelableArg, Window * viewArg, long detailArg, long screenXArg, long screenYArg, long clientXArg, long clientYArg, bool ctrlKeyArg, bool altKeyArg, bool shiftKeyArg, bool metaKeyArg, short buttonArg, EventTarget * relatedTargetArg);
+
+#ifdef __cplusplus
+}
+#endif

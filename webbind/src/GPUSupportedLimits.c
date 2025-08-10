@@ -1,6 +1,5 @@
 #include <webbind/GPUSupportedLimits.h>
 
-
 DEFINE_EMLITE_TYPE(GPUSupportedLimits, em_Val);
 
 

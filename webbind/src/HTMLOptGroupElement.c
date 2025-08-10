@@ -1,6 +1,5 @@
 #include <webbind/HTMLOptGroupElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLOptGroupElement, HTMLElement);
 
 

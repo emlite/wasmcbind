@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(USBIsochronousOutTransferPacket, em_Val);
 
@@ -14,3 +17,7 @@ USBIsochronousOutTransferPacket USBIsochronousOutTransferPacket_new1(USBTransfer
 unsigned long USBIsochronousOutTransferPacket_bytesWritten(const USBIsochronousOutTransferPacket *self);
 
 USBTransferStatus USBIsochronousOutTransferPacket_status(const USBIsochronousOutTransferPacket *self);
+
+#ifdef __cplusplus
+}
+#endif

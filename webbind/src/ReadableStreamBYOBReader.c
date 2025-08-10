@@ -1,19 +1,8 @@
 #include <webbind/ReadableStreamBYOBReader.h>
-#include <webbind/ReadableStreamDefaultReader.h>
+
 #include <webbind/ReadableStream.h>
-
-
-DEFINE_EMLITE_TYPE(ReadableStreamBYOBReaderReadOptions, em_Val);
-
-
-long long ReadableStreamBYOBReaderReadOptions_min(const ReadableStreamBYOBReaderReadOptions *self) {
-    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("min")));
-}
-
-
-void ReadableStreamBYOBReaderReadOptions_set_min(ReadableStreamBYOBReaderReadOptions* self, long long value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("min"), em_Val_from(value));
-}
+#include <webbind/ReadableStreamReadResult.h>
+#include <webbind/ReadableStreamBYOBReaderReadOptions.h>
 
 DEFINE_EMLITE_TYPE(ReadableStreamBYOBReader, em_Val);
 

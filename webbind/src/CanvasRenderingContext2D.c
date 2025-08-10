@@ -1,88 +1,16 @@
 #include <webbind/CanvasRenderingContext2D.h>
+
 #include <webbind/HTMLCanvasElement.h>
+#include <webbind/CanvasRenderingContext2DSettings.h>
 #include <webbind/DOMMatrix.h>
-#include <webbind/SVGSVGElement.h>
+#include <webbind/DOMMatrix2DInit.h>
 #include <webbind/CanvasGradient.h>
 #include <webbind/CanvasPattern.h>
 #include <webbind/Path2D.h>
 #include <webbind/Element.h>
 #include <webbind/TextMetrics.h>
 #include <webbind/ImageData.h>
-
-
-DEFINE_EMLITE_TYPE(CanvasRenderingContext2DSettings, em_Val);
-
-
-bool CanvasRenderingContext2DSettings_alpha(const CanvasRenderingContext2DSettings *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("alpha")));
-}
-
-
-void CanvasRenderingContext2DSettings_set_alpha(CanvasRenderingContext2DSettings* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("alpha"), em_Val_from(value));
-}
-
-
-bool CanvasRenderingContext2DSettings_desynchronized(const CanvasRenderingContext2DSettings *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("desynchronized")));
-}
-
-
-void CanvasRenderingContext2DSettings_set_desynchronized(CanvasRenderingContext2DSettings* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("desynchronized"), em_Val_from(value));
-}
-
-
-PredefinedColorSpace CanvasRenderingContext2DSettings_colorSpace(const CanvasRenderingContext2DSettings *self) {
-    return em_Val_as(PredefinedColorSpace, em_Val_get(em_Val_as_val(self->inner), em_Val_from("colorSpace")));
-}
-
-
-void CanvasRenderingContext2DSettings_set_colorSpace(CanvasRenderingContext2DSettings* self, PredefinedColorSpace * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("colorSpace"), em_Val_from(value));
-}
-
-
-CanvasColorType CanvasRenderingContext2DSettings_colorType(const CanvasRenderingContext2DSettings *self) {
-    return em_Val_as(CanvasColorType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("colorType")));
-}
-
-
-void CanvasRenderingContext2DSettings_set_colorType(CanvasRenderingContext2DSettings* self, CanvasColorType * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("colorType"), em_Val_from(value));
-}
-
-
-bool CanvasRenderingContext2DSettings_willReadFrequently(const CanvasRenderingContext2DSettings *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("willReadFrequently")));
-}
-
-
-void CanvasRenderingContext2DSettings_set_willReadFrequently(CanvasRenderingContext2DSettings* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("willReadFrequently"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(ImageDataSettings, em_Val);
-
-
-PredefinedColorSpace ImageDataSettings_colorSpace(const ImageDataSettings *self) {
-    return em_Val_as(PredefinedColorSpace, em_Val_get(em_Val_as_val(self->inner), em_Val_from("colorSpace")));
-}
-
-
-void ImageDataSettings_set_colorSpace(ImageDataSettings* self, PredefinedColorSpace * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("colorSpace"), em_Val_from(value));
-}
-
-
-ImageDataPixelFormat ImageDataSettings_pixelFormat(const ImageDataSettings *self) {
-    return em_Val_as(ImageDataPixelFormat, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pixelFormat")));
-}
-
-
-void ImageDataSettings_set_pixelFormat(ImageDataSettings* self, ImageDataPixelFormat * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("pixelFormat"), em_Val_from(value));
-}
+#include <webbind/ImageDataSettings.h>
 
 DEFINE_EMLITE_TYPE(CanvasRenderingContext2D, em_Val);
 

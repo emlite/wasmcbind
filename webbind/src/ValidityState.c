@@ -1,6 +1,5 @@
 #include <webbind/ValidityState.h>
 
-
 DEFINE_EMLITE_TYPE(ValidityState, em_Val);
 
 

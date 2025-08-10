@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLCollection.h"
 #include "enums.h"
 
-typedef struct HTMLOptionElement HTMLOptionElement;
+#include "HTMLCollection.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct HTMLOptionElement HTMLOptionElement;
 
 DECLARE_EMLITE_TYPE(HTMLOptionsCollection, HTMLCollection);
 
@@ -23,3 +27,7 @@ jb_Undefined HTMLOptionsCollection_remove(HTMLOptionsCollection* self , long ind
 long HTMLOptionsCollection_selectedIndex(const HTMLOptionsCollection *self);
 
 void HTMLOptionsCollection_set_selectedIndex(HTMLOptionsCollection* self, long value);
+
+#ifdef __cplusplus
+}
+#endif

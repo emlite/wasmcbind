@@ -4,14 +4,18 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct AnimationTimeline AnimationTimeline;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct AnimationTriggerOptions AnimationTriggerOptions;
+typedef struct AnimationTimeline AnimationTimeline;
 
 DECLARE_EMLITE_TYPE(AnimationTrigger, em_Val);
 
 AnimationTrigger AnimationTrigger_new0();
 
-AnimationTrigger AnimationTrigger_new1(jb_Any * options);
+AnimationTrigger AnimationTrigger_new1(AnimationTriggerOptions * options);
 
 AnimationTimeline AnimationTrigger_timeline(const AnimationTrigger *self);
 
@@ -36,3 +40,7 @@ void AnimationTrigger_set_exitRangeStart(AnimationTrigger* self, jb_Any * value)
 jb_Any AnimationTrigger_exitRangeEnd(const AnimationTrigger *self);
 
 void AnimationTrigger_set_exitRangeEnd(AnimationTrigger* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

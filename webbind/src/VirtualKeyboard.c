@@ -1,6 +1,6 @@
 #include <webbind/VirtualKeyboard.h>
-#include <webbind/DOMRect.h>
 
+#include <webbind/DOMRect.h>
 
 DEFINE_EMLITE_TYPE(VirtualKeyboard, EventTarget);
 

@@ -4,11 +4,16 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct CSSStyleValue CSSStyleValue;
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(CSSStyleValue, em_Val);
 
 CSSStyleValue CSSStyleValue_parse(CSSStyleValue* self , jb_String * property, jb_String * cssText);
 
 jb_Array CSSStyleValue_parseAll(CSSStyleValue* self , jb_String * property, jb_String * cssText);
+
+#ifdef __cplusplus
+}
+#endif

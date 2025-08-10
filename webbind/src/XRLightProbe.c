@@ -1,6 +1,6 @@
 #include <webbind/XRLightProbe.h>
-#include <webbind/XRSpace.h>
 
+#include <webbind/XRSpace.h>
 
 DEFINE_EMLITE_TYPE(XRLightProbe, EventTarget);
 

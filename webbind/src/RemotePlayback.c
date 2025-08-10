@@ -1,6 +1,5 @@
 #include <webbind/RemotePlayback.h>
 
-
 DEFINE_EMLITE_TYPE(RemotePlayback, EventTarget);
 
 

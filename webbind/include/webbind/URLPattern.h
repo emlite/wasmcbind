@@ -4,53 +4,20 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct URLPatternOptions URLPatternOptions;
 typedef struct URLPatternResult URLPatternResult;
 
-
-DECLARE_EMLITE_TYPE(URLPatternResult, em_Val);
-
-jb_Array URLPatternResult_inputs(const URLPatternResult *self);
-
-void URLPatternResult_set_inputs(URLPatternResult* self, jb_Array * value);
-
-jb_Any URLPatternResult_protocol(const URLPatternResult *self);
-
-void URLPatternResult_set_protocol(URLPatternResult* self, jb_Any * value);
-
-jb_Any URLPatternResult_username(const URLPatternResult *self);
-
-void URLPatternResult_set_username(URLPatternResult* self, jb_Any * value);
-
-jb_Any URLPatternResult_password(const URLPatternResult *self);
-
-void URLPatternResult_set_password(URLPatternResult* self, jb_Any * value);
-
-jb_Any URLPatternResult_hostname(const URLPatternResult *self);
-
-void URLPatternResult_set_hostname(URLPatternResult* self, jb_Any * value);
-
-jb_Any URLPatternResult_port(const URLPatternResult *self);
-
-void URLPatternResult_set_port(URLPatternResult* self, jb_Any * value);
-
-jb_Any URLPatternResult_pathname(const URLPatternResult *self);
-
-void URLPatternResult_set_pathname(URLPatternResult* self, jb_Any * value);
-
-jb_Any URLPatternResult_search(const URLPatternResult *self);
-
-void URLPatternResult_set_search(URLPatternResult* self, jb_Any * value);
-
-jb_Any URLPatternResult_hash(const URLPatternResult *self);
-
-void URLPatternResult_set_hash(URLPatternResult* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(URLPattern, em_Val);
 
 URLPattern URLPattern_new0();
 
 URLPattern URLPattern_new1(jb_Any * input);
 
-URLPattern URLPattern_new2(jb_Any * input, jb_Any * options);
+URLPattern URLPattern_new2(jb_Any * input, URLPatternOptions * options);
 
 bool URLPattern_test0(URLPattern* self );
 
@@ -81,3 +48,7 @@ jb_String URLPattern_search(const URLPattern *self);
 jb_String URLPattern_hash(const URLPattern *self);
 
 bool URLPattern_hasRegExpGroups(const URLPattern *self);
+
+#ifdef __cplusplus
+}
+#endif

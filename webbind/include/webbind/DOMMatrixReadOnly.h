@@ -2,14 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "DOMPointReadOnly.h"
-#include "SVGGeometryElement.h"
 #include "enums.h"
 
-typedef struct DOMMatrixReadOnly DOMMatrixReadOnly;
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct DOMMatrixInit DOMMatrixInit;
 typedef struct DOMMatrix DOMMatrix;
 typedef struct DOMPoint DOMPoint;
-
+typedef struct DOMPointInit DOMPointInit;
 
 DECLARE_EMLITE_TYPE(DOMMatrixReadOnly, em_Val);
 
@@ -162,3 +164,7 @@ jb_Float32Array DOMMatrixReadOnly_toFloat32Array(DOMMatrixReadOnly* self );
 jb_Float64Array DOMMatrixReadOnly_toFloat64Array(DOMMatrixReadOnly* self );
 
 jb_Object DOMMatrixReadOnly_toJSON(DOMMatrixReadOnly* self );
+
+#ifdef __cplusplus
+}
+#endif

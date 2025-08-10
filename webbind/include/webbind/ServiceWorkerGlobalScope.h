@@ -2,14 +2,18 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "WorkerGlobalScope.h"
 #include "enums.h"
+
+#include "WorkerGlobalScope.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct Clients Clients;
 typedef struct ServiceWorkerRegistration ServiceWorkerRegistration;
 typedef struct ServiceWorker ServiceWorker;
 typedef struct CookieStore CookieStore;
-
 
 DECLARE_EMLITE_TYPE(ServiceWorkerGlobalScope, WorkerGlobalScope);
 
@@ -98,3 +102,7 @@ void ServiceWorkerGlobalScope_set_onpush(ServiceWorkerGlobalScope* self, jb_Any 
 jb_Any ServiceWorkerGlobalScope_onpushsubscriptionchange(const ServiceWorkerGlobalScope *self);
 
 void ServiceWorkerGlobalScope_set_onpushsubscriptionchange(ServiceWorkerGlobalScope* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

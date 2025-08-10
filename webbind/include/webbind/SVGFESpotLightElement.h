@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
 
-typedef struct SVGAnimatedNumber SVGAnimatedNumber;
+#include "SVGElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct SVGAnimatedNumber SVGAnimatedNumber;
 
 DECLARE_EMLITE_TYPE(SVGFESpotLightElement, SVGElement);
 
@@ -25,3 +29,7 @@ SVGAnimatedNumber SVGFESpotLightElement_pointsAtZ(const SVGFESpotLightElement *s
 SVGAnimatedNumber SVGFESpotLightElement_specularExponent(const SVGFESpotLightElement *self);
 
 SVGAnimatedNumber SVGFESpotLightElement_limitingConeAngle(const SVGFESpotLightElement *self);
+
+#ifdef __cplusplus
+}
+#endif

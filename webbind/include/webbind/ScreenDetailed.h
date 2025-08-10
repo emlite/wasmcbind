@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Screen.h"
 #include "enums.h"
 
+#include "Screen.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(ScreenDetailed, Screen);
 
@@ -23,3 +27,7 @@ bool ScreenDetailed_isInternal(const ScreenDetailed *self);
 float ScreenDetailed_devicePixelRatio(const ScreenDetailed *self);
 
 jb_String ScreenDetailed_label(const ScreenDetailed *self);
+
+#ifdef __cplusplus
+}
+#endif

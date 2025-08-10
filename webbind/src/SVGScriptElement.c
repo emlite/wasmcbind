@@ -1,6 +1,6 @@
 #include <webbind/SVGScriptElement.h>
-#include <webbind/SVGAnimatedString.h>
 
+#include <webbind/SVGAnimatedString.h>
 
 DEFINE_EMLITE_TYPE(SVGScriptElement, SVGElement);
 

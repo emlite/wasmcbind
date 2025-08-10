@@ -1,9 +1,9 @@
 #include <webbind/DOMMatrixReadOnly.h>
-#include <webbind/DOMPointReadOnly.h>
+
+#include <webbind/DOMMatrixInit.h>
 #include <webbind/DOMMatrix.h>
 #include <webbind/DOMPoint.h>
-#include <webbind/SVGGeometryElement.h>
-
+#include <webbind/DOMPointInit.h>
 
 DEFINE_EMLITE_TYPE(DOMMatrixReadOnly, em_Val);
 

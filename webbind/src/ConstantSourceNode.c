@@ -1,7 +1,8 @@
 #include <webbind/ConstantSourceNode.h>
-#include <webbind/AudioParam.h>
-#include <webbind/BaseAudioContext.h>
 
+#include <webbind/BaseAudioContext.h>
+#include <webbind/ConstantSourceOptions.h>
+#include <webbind/AudioParam.h>
 
 DEFINE_EMLITE_TYPE(ConstantSourceNode, AudioScheduledSourceNode);
 
@@ -12,7 +13,7 @@ ConstantSourceNode ConstantSourceNode_new0(BaseAudioContext * context) {
       }
 
 
-ConstantSourceNode ConstantSourceNode_new1(BaseAudioContext * context, jb_Any * options) {
+ConstantSourceNode ConstantSourceNode_new1(BaseAudioContext * context, ConstantSourceOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("ConstantSourceNode") , em_Val_from(context), em_Val_from(options));
         return ConstantSourceNode_from_val(&vv);
       }

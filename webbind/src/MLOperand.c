@@ -1,6 +1,5 @@
 #include <webbind/MLOperand.h>
 
-
 DEFINE_EMLITE_TYPE(MLOperand, em_Val);
 
 

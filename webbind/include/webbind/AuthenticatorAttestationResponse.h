@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "AuthenticatorResponse.h"
 #include "enums.h"
 
+#include "AuthenticatorResponse.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(AuthenticatorAttestationResponse, AuthenticatorResponse);
 
@@ -17,3 +21,7 @@ jb_ArrayBuffer AuthenticatorAttestationResponse_getAuthenticatorData(Authenticat
 jb_ArrayBuffer AuthenticatorAttestationResponse_getPublicKey(AuthenticatorAttestationResponse* self );
 
 jb_Any AuthenticatorAttestationResponse_getPublicKeyAlgorithm(AuthenticatorAttestationResponse* self );
+
+#ifdef __cplusplus
+}
+#endif

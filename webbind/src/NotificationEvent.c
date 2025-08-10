@@ -1,11 +1,12 @@
 #include <webbind/NotificationEvent.h>
-#include <webbind/Notification.h>
 
+#include <webbind/NotificationEventInit.h>
+#include <webbind/Notification.h>
 
 DEFINE_EMLITE_TYPE(NotificationEvent, ExtendableEvent);
 
 
-NotificationEvent NotificationEvent_new(jb_String * type, jb_Any * eventInitDict) {
+NotificationEvent NotificationEvent_new(jb_String * type, NotificationEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("NotificationEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return NotificationEvent_from_val(&vv);
       }

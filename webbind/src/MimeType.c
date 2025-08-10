@@ -1,6 +1,6 @@
 #include <webbind/MimeType.h>
-#include <webbind/Plugin.h>
 
+#include <webbind/Plugin.h>
 
 DEFINE_EMLITE_TYPE(MimeType, em_Val);
 

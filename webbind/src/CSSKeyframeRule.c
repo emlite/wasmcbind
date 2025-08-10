@@ -1,6 +1,6 @@
 #include <webbind/CSSKeyframeRule.h>
-#include <webbind/CSSStyleProperties.h>
 
+#include <webbind/CSSStyleProperties.h>
 
 DEFINE_EMLITE_TYPE(CSSKeyframeRule, CSSRule);
 

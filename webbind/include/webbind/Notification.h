@@ -2,26 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct NotificationAction NotificationAction;
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct NotificationOptions NotificationOptions;
+typedef struct NotificationAction NotificationAction;
 
-
-DECLARE_EMLITE_TYPE(NotificationAction, em_Val);
-
-jb_String NotificationAction_action(const NotificationAction *self);
-
-void NotificationAction_set_action(NotificationAction* self, jb_String * value);
-
-jb_String NotificationAction_title(const NotificationAction *self);
-
-void NotificationAction_set_title(NotificationAction* self, jb_String * value);
-
-jb_String NotificationAction_icon(const NotificationAction *self);
-
-void NotificationAction_set_icon(NotificationAction* self, jb_String * value);
 DECLARE_EMLITE_TYPE(Notification, EventTarget);
 
 Notification Notification_new0(jb_String * title);
@@ -83,3 +74,7 @@ jb_Any Notification_data(const Notification *self);
 jb_Array Notification_actions(const Notification *self);
 
 jb_Undefined Notification_close(Notification* self );
+
+#ifdef __cplusplus
+}
+#endif

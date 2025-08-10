@@ -2,17 +2,23 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "AudioNode.h"
 #include "enums.h"
 
-typedef struct AudioParam AudioParam;
+#include "AudioNode.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct BaseAudioContext BaseAudioContext;
+typedef struct PannerOptions PannerOptions;
+typedef struct AudioParam AudioParam;
 
 DECLARE_EMLITE_TYPE(PannerNode, AudioNode);
 
 PannerNode PannerNode_new0(BaseAudioContext * context);
 
-PannerNode PannerNode_new1(BaseAudioContext * context, jb_Any * options);
+PannerNode PannerNode_new1(BaseAudioContext * context, PannerOptions * options);
 
 PanningModelType PannerNode_panningModel(const PannerNode *self);
 
@@ -61,3 +67,7 @@ void PannerNode_set_coneOuterGain(PannerNode* self, double value);
 jb_Undefined PannerNode_setPosition(PannerNode* self , float x, float y, float z);
 
 jb_Undefined PannerNode_setOrientation(PannerNode* self , float x, float y, float z);
+
+#ifdef __cplusplus
+}
+#endif

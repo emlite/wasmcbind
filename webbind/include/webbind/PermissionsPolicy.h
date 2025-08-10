@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(PermissionsPolicy, em_Val);
 
@@ -16,3 +19,7 @@ jb_Array PermissionsPolicy_features(PermissionsPolicy* self );
 jb_Array PermissionsPolicy_allowedFeatures(PermissionsPolicy* self );
 
 jb_Array PermissionsPolicy_getAllowlistForFeature(PermissionsPolicy* self , jb_String * feature);
+
+#ifdef __cplusplus
+}
+#endif

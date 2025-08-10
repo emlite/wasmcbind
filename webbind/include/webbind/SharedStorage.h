@@ -2,31 +2,20 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SharedStorageWorklet.h"
 #include "enums.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SharedStorageSetMethodOptions SharedStorageSetMethodOptions;
 typedef struct SharedStorageModifierMethodOptions SharedStorageModifierMethodOptions;
 typedef struct SharedStorageModifierMethod SharedStorageModifierMethod;
+typedef struct SharedStorageUrlWithMetadata SharedStorageUrlWithMetadata;
+typedef struct SharedStorageRunOperationMethodOptions SharedStorageRunOperationMethodOptions;
 typedef struct SharedStorageWorklet SharedStorageWorklet;
 typedef struct SharedStorageWorkletOptions SharedStorageWorkletOptions;
 
-
-DECLARE_EMLITE_TYPE(SharedStorageSetMethodOptions, em_Val);
-
-bool SharedStorageSetMethodOptions_ignoreIfPresent(const SharedStorageSetMethodOptions *self);
-
-void SharedStorageSetMethodOptions_set_ignoreIfPresent(SharedStorageSetMethodOptions* self, bool value);
-DECLARE_EMLITE_TYPE(SharedStorageModifierMethodOptions, em_Val);
-
-jb_String SharedStorageModifierMethodOptions_withLock(const SharedStorageModifierMethodOptions *self);
-
-void SharedStorageModifierMethodOptions_set_withLock(SharedStorageModifierMethodOptions* self, jb_String * value);
-DECLARE_EMLITE_TYPE(SharedStorageWorkletOptions, em_Val);
-
-jb_String SharedStorageWorkletOptions_dataOrigin(const SharedStorageWorkletOptions *self);
-
-void SharedStorageWorkletOptions_set_dataOrigin(SharedStorageWorkletOptions* self, jb_String * value);
 DECLARE_EMLITE_TYPE(SharedStorage, em_Val);
 
 jb_Promise SharedStorage_get(SharedStorage* self , jb_String * key);
@@ -68,3 +57,7 @@ SharedStorageWorklet SharedStorage_worklet(const SharedStorage *self);
 jb_Promise SharedStorage_length(SharedStorage* self );
 
 jb_Promise SharedStorage_remainingBudget(SharedStorage* self );
+
+#ifdef __cplusplus
+}
+#endif

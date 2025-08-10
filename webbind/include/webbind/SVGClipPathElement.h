@@ -2,15 +2,23 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
+
+#include "SVGElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedTransformList SVGAnimatedTransformList;
-
 
 DECLARE_EMLITE_TYPE(SVGClipPathElement, SVGElement);
 
 SVGAnimatedEnumeration SVGClipPathElement_clipPathUnits(const SVGClipPathElement *self);
 
 SVGAnimatedTransformList SVGClipPathElement_transform(const SVGClipPathElement *self);
+
+#ifdef __cplusplus
+}
+#endif

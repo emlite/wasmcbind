@@ -2,16 +2,26 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "AudioNode.h"
 #include "enums.h"
 
-typedef struct AudioParam AudioParam;
+#include "AudioNode.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct BaseAudioContext BaseAudioContext;
+typedef struct DelayOptions DelayOptions;
+typedef struct AudioParam AudioParam;
 
 DECLARE_EMLITE_TYPE(DelayNode, AudioNode);
 
 DelayNode DelayNode_new0(BaseAudioContext * context);
 
-DelayNode DelayNode_new1(BaseAudioContext * context, jb_Any * options);
+DelayNode DelayNode_new1(BaseAudioContext * context, DelayOptions * options);
 
 AudioParam DelayNode_delayTime(const DelayNode *self);
+
+#ifdef __cplusplus
+}
+#endif

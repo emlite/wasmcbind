@@ -1,6 +1,5 @@
 #include <webbind/GPUSampler.h>
 
-
 DEFINE_EMLITE_TYPE(GPUSampler, em_Val);
 
 

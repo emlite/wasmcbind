@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "PerformanceEntry.h"
 #include "enums.h"
 
+#include "PerformanceEntry.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(TaskAttributionTiming, PerformanceEntry);
 
@@ -25,3 +29,7 @@ jb_String TaskAttributionTiming_containerId(const TaskAttributionTiming *self);
 jb_String TaskAttributionTiming_containerName(const TaskAttributionTiming *self);
 
 jb_Object TaskAttributionTiming_toJSON(TaskAttributionTiming* self );
+
+#ifdef __cplusplus
+}
+#endif

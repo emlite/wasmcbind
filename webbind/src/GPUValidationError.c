@@ -1,6 +1,5 @@
 #include <webbind/GPUValidationError.h>
 
-
 DEFINE_EMLITE_TYPE(GPUValidationError, GPUError);
 
 

@@ -1,6 +1,6 @@
 #include <webbind/WorkletGroupEffect.h>
-#include <webbind/WorkletAnimationEffect.h>
 
+#include <webbind/WorkletAnimationEffect.h>
 
 DEFINE_EMLITE_TYPE(WorkletGroupEffect, em_Val);
 

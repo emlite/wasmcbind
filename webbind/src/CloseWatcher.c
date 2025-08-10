@@ -1,5 +1,6 @@
 #include <webbind/CloseWatcher.h>
 
+#include <webbind/CloseWatcherOptions.h>
 
 DEFINE_EMLITE_TYPE(CloseWatcher, EventTarget);
 
@@ -10,7 +11,7 @@ CloseWatcher CloseWatcher_new0() {
       }
 
 
-CloseWatcher CloseWatcher_new1(jb_Any * options) {
+CloseWatcher CloseWatcher_new1(CloseWatcherOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("CloseWatcher") , em_Val_from(options));
         return CloseWatcher_from_val(&vv);
       }

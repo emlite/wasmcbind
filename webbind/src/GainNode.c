@@ -1,7 +1,8 @@
 #include <webbind/GainNode.h>
-#include <webbind/AudioParam.h>
-#include <webbind/BaseAudioContext.h>
 
+#include <webbind/BaseAudioContext.h>
+#include <webbind/GainOptions.h>
+#include <webbind/AudioParam.h>
 
 DEFINE_EMLITE_TYPE(GainNode, AudioNode);
 
@@ -12,7 +13,7 @@ GainNode GainNode_new0(BaseAudioContext * context) {
       }
 
 
-GainNode GainNode_new1(BaseAudioContext * context, jb_Any * options) {
+GainNode GainNode_new1(BaseAudioContext * context, GainOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("GainNode") , em_Val_from(context), em_Val_from(options));
         return GainNode_from_val(&vv);
       }

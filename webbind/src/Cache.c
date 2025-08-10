@@ -1,8 +1,8 @@
 #include <webbind/Cache.h>
-#include <webbind/BackgroundFetchRegistration.h>
+
+#include <webbind/CacheQueryOptions.h>
 #include <webbind/Response.h>
 #include <webbind/Request.h>
-
 
 DEFINE_EMLITE_TYPE(Cache, em_Val);
 

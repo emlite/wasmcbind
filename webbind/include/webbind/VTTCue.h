@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "TextTrackCue.h"
 #include "enums.h"
+
+#include "TextTrackCue.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct VTTRegion VTTRegion;
 typedef struct DocumentFragment DocumentFragment;
-
 
 DECLARE_EMLITE_TYPE(VTTCue, TextTrackCue);
 
@@ -54,3 +58,7 @@ jb_String VTTCue_text(const VTTCue *self);
 void VTTCue_set_text(VTTCue* self, jb_String * value);
 
 DocumentFragment VTTCue_getCueAsHTML(VTTCue* self );
+
+#ifdef __cplusplus
+}
+#endif

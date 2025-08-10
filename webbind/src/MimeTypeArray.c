@@ -1,6 +1,6 @@
 #include <webbind/MimeTypeArray.h>
-#include <webbind/MimeType.h>
 
+#include <webbind/MimeType.h>
 
 DEFINE_EMLITE_TYPE(MimeTypeArray, em_Val);
 

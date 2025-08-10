@@ -1,4 +1,5 @@
 #include <webbind/BaseAudioContext.h>
+
 #include <webbind/AudioDestinationNode.h>
 #include <webbind/AudioListener.h>
 #include <webbind/AudioWorklet.h>
@@ -17,22 +18,10 @@
 #include <webbind/OscillatorNode.h>
 #include <webbind/PannerNode.h>
 #include <webbind/PeriodicWave.h>
+#include <webbind/PeriodicWaveConstraints.h>
 #include <webbind/ScriptProcessorNode.h>
 #include <webbind/StereoPannerNode.h>
 #include <webbind/WaveShaperNode.h>
-
-
-DEFINE_EMLITE_TYPE(PeriodicWaveConstraints, em_Val);
-
-
-bool PeriodicWaveConstraints_disableNormalization(const PeriodicWaveConstraints *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("disableNormalization")));
-}
-
-
-void PeriodicWaveConstraints_set_disableNormalization(PeriodicWaveConstraints* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("disableNormalization"), em_Val_from(value));
-}
 
 DEFINE_EMLITE_TYPE(BaseAudioContext, EventTarget);
 

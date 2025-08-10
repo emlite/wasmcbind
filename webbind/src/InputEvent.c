@@ -1,7 +1,8 @@
 #include <webbind/InputEvent.h>
+
+#include <webbind/InputEventInit.h>
 #include <webbind/DataTransfer.h>
 #include <webbind/StaticRange.h>
-
 
 DEFINE_EMLITE_TYPE(InputEvent, UIEvent);
 
@@ -12,7 +13,7 @@ InputEvent InputEvent_new0(jb_String * type) {
       }
 
 
-InputEvent InputEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+InputEvent InputEvent_new1(jb_String * type, InputEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("InputEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return InputEvent_from_val(&vv);
       }

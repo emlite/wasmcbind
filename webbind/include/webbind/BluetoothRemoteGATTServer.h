@@ -4,10 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct BluetoothDevice BluetoothDevice;
-typedef struct BluetoothRemoteGATTServer BluetoothRemoteGATTServer;
-typedef struct BluetoothRemoteGATTService BluetoothRemoteGATTService;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct BluetoothDevice BluetoothDevice;
+typedef struct BluetoothRemoteGATTService BluetoothRemoteGATTService;
 
 DECLARE_EMLITE_TYPE(BluetoothRemoteGATTServer, em_Val);
 
@@ -24,3 +26,7 @@ jb_Promise BluetoothRemoteGATTServer_getPrimaryService(BluetoothRemoteGATTServer
 jb_Promise BluetoothRemoteGATTServer_getPrimaryServices0(BluetoothRemoteGATTServer* self );
 
 jb_Promise BluetoothRemoteGATTServer_getPrimaryServices1(BluetoothRemoteGATTServer* self , jb_Any * service);
+
+#ifdef __cplusplus
+}
+#endif

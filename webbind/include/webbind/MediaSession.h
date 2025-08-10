@@ -4,23 +4,13 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct MediaMetadata MediaMetadata;
 typedef struct MediaPositionState MediaPositionState;
 
-
-DECLARE_EMLITE_TYPE(MediaPositionState, em_Val);
-
-double MediaPositionState_duration(const MediaPositionState *self);
-
-void MediaPositionState_set_duration(MediaPositionState* self, double value);
-
-double MediaPositionState_playbackRate(const MediaPositionState *self);
-
-void MediaPositionState_set_playbackRate(MediaPositionState* self, double value);
-
-double MediaPositionState_position(const MediaPositionState *self);
-
-void MediaPositionState_set_position(MediaPositionState* self, double value);
 DECLARE_EMLITE_TYPE(MediaSession, em_Val);
 
 MediaMetadata MediaSession_metadata(const MediaSession *self);
@@ -42,3 +32,7 @@ jb_Promise MediaSession_setMicrophoneActive(MediaSession* self , bool active);
 jb_Promise MediaSession_setCameraActive(MediaSession* self , bool active);
 
 jb_Promise MediaSession_setScreenshareActive(MediaSession* self , bool active);
+
+#ifdef __cplusplus
+}
+#endif

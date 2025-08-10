@@ -1,6 +1,7 @@
 #include <webbind/ExtendableCookieChangeEvent.h>
-#include <webbind/CookieStore.h>
 
+#include <webbind/ExtendableCookieChangeEventInit.h>
+#include <webbind/CookieListItem.h>
 
 DEFINE_EMLITE_TYPE(ExtendableCookieChangeEvent, ExtendableEvent);
 
@@ -11,7 +12,7 @@ ExtendableCookieChangeEvent ExtendableCookieChangeEvent_new0(jb_String * type) {
       }
 
 
-ExtendableCookieChangeEvent ExtendableCookieChangeEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+ExtendableCookieChangeEvent ExtendableCookieChangeEvent_new1(jb_String * type, ExtendableCookieChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("ExtendableCookieChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return ExtendableCookieChangeEvent_from_val(&vv);
       }

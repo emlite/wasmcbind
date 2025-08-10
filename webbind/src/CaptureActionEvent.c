@@ -1,5 +1,6 @@
 #include <webbind/CaptureActionEvent.h>
 
+#include <webbind/CaptureActionEventInit.h>
 
 DEFINE_EMLITE_TYPE(CaptureActionEvent, Event);
 
@@ -10,7 +11,7 @@ CaptureActionEvent CaptureActionEvent_new0() {
       }
 
 
-CaptureActionEvent CaptureActionEvent_new1(jb_Any * init) {
+CaptureActionEvent CaptureActionEvent_new1(CaptureActionEventInit * init) {
         em_Val vv = em_Val_new(em_Val_global("CaptureActionEvent") , em_Val_from(init));
         return CaptureActionEvent_from_val(&vv);
       }

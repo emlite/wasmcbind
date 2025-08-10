@@ -1,14 +1,15 @@
 #include <webbind/OffscreenCanvasRenderingContext2D.h>
+
 #include <webbind/OffscreenCanvas.h>
-#include <webbind/CanvasRenderingContext2D.h>
+#include <webbind/CanvasRenderingContext2DSettings.h>
 #include <webbind/DOMMatrix.h>
-#include <webbind/SVGSVGElement.h>
+#include <webbind/DOMMatrix2DInit.h>
 #include <webbind/CanvasGradient.h>
 #include <webbind/CanvasPattern.h>
 #include <webbind/Path2D.h>
 #include <webbind/TextMetrics.h>
 #include <webbind/ImageData.h>
-
+#include <webbind/ImageDataSettings.h>
 
 DEFINE_EMLITE_TYPE(OffscreenCanvasRenderingContext2D, em_Val);
 

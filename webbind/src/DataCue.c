@@ -1,6 +1,5 @@
 #include <webbind/DataCue.h>
 
-
 DEFINE_EMLITE_TYPE(DataCue, TextTrackCue);
 
 

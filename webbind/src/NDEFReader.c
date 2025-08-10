@@ -1,52 +1,8 @@
 #include <webbind/NDEFReader.h>
-#include <webbind/AbortSignal.h>
 
-
-DEFINE_EMLITE_TYPE(NDEFScanOptions, em_Val);
-
-
-AbortSignal NDEFScanOptions_signal(const NDEFScanOptions *self) {
-    return em_Val_as(AbortSignal, em_Val_get(em_Val_as_val(self->inner), em_Val_from("signal")));
-}
-
-
-void NDEFScanOptions_set_signal(NDEFScanOptions* self, AbortSignal * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("signal"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(NDEFWriteOptions, em_Val);
-
-
-bool NDEFWriteOptions_overwrite(const NDEFWriteOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("overwrite")));
-}
-
-
-void NDEFWriteOptions_set_overwrite(NDEFWriteOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("overwrite"), em_Val_from(value));
-}
-
-
-AbortSignal NDEFWriteOptions_signal(const NDEFWriteOptions *self) {
-    return em_Val_as(AbortSignal, em_Val_get(em_Val_as_val(self->inner), em_Val_from("signal")));
-}
-
-
-void NDEFWriteOptions_set_signal(NDEFWriteOptions* self, AbortSignal * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("signal"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(NDEFMakeReadOnlyOptions, em_Val);
-
-
-AbortSignal NDEFMakeReadOnlyOptions_signal(const NDEFMakeReadOnlyOptions *self) {
-    return em_Val_as(AbortSignal, em_Val_get(em_Val_as_val(self->inner), em_Val_from("signal")));
-}
-
-
-void NDEFMakeReadOnlyOptions_set_signal(NDEFMakeReadOnlyOptions* self, AbortSignal * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("signal"), em_Val_from(value));
-}
+#include <webbind/NDEFScanOptions.h>
+#include <webbind/NDEFWriteOptions.h>
+#include <webbind/NDEFMakeReadOnlyOptions.h>
 
 DEFINE_EMLITE_TYPE(NDEFReader, EventTarget);
 

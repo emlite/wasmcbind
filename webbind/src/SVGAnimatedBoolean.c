@@ -1,6 +1,5 @@
 #include <webbind/SVGAnimatedBoolean.h>
 
-
 DEFINE_EMLITE_TYPE(SVGAnimatedBoolean, em_Val);
 
 

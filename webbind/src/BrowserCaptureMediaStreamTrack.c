@@ -1,7 +1,7 @@
 #include <webbind/BrowserCaptureMediaStreamTrack.h>
+
 #include <webbind/CropTarget.h>
 #include <webbind/RestrictionTarget.h>
-
 
 DEFINE_EMLITE_TYPE(BrowserCaptureMediaStreamTrack, MediaStreamTrack);
 

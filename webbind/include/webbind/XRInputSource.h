@@ -4,10 +4,13 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct XRSpace XRSpace;
 typedef struct Gamepad Gamepad;
 typedef struct XRHand XRHand;
-
 
 DECLARE_EMLITE_TYPE(XRInputSource, em_Val);
 
@@ -26,3 +29,7 @@ bool XRInputSource_skipRendering(const XRInputSource *self);
 Gamepad XRInputSource_gamepad(const XRInputSource *self);
 
 XRHand XRInputSource_hand(const XRInputSource *self);
+
+#ifdef __cplusplus
+}
+#endif

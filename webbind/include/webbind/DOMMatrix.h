@@ -2,12 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "DOMMatrixReadOnly.h"
-#include "DOMPointReadOnly.h"
 #include "enums.h"
 
-typedef struct DOMMatrix DOMMatrix;
+#include "DOMMatrixReadOnly.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct DOMMatrixInit DOMMatrixInit;
 
 DECLARE_EMLITE_TYPE(DOMMatrix, DOMMatrixReadOnly);
 
@@ -186,3 +189,7 @@ DOMMatrix DOMMatrix_skewYSelf1(DOMMatrix* self , double sy);
 DOMMatrix DOMMatrix_invertSelf(DOMMatrix* self );
 
 DOMMatrix DOMMatrix_setMatrixValue(DOMMatrix* self , jb_String * transformList);
+
+#ifdef __cplusplus
+}
+#endif

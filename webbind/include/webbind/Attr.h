@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Node.h"
 #include "enums.h"
 
-typedef struct Element Element;
+#include "Node.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct Element Element;
 
 DECLARE_EMLITE_TYPE(Attr, Node);
 
@@ -25,3 +29,7 @@ void Attr_set_value(Attr* self, jb_String * value);
 Element Attr_ownerElement(const Attr *self);
 
 bool Attr_specified(const Attr *self);
+
+#ifdef __cplusplus
+}
+#endif

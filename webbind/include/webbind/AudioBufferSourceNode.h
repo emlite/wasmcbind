@@ -2,18 +2,24 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "AudioScheduledSourceNode.h"
 #include "enums.h"
 
+#include "AudioScheduledSourceNode.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct BaseAudioContext BaseAudioContext;
+typedef struct AudioBufferSourceOptions AudioBufferSourceOptions;
 typedef struct AudioBuffer AudioBuffer;
 typedef struct AudioParam AudioParam;
-
 
 DECLARE_EMLITE_TYPE(AudioBufferSourceNode, AudioScheduledSourceNode);
 
 AudioBufferSourceNode AudioBufferSourceNode_new0(BaseAudioContext * context);
 
-AudioBufferSourceNode AudioBufferSourceNode_new1(BaseAudioContext * context, jb_Any * options);
+AudioBufferSourceNode AudioBufferSourceNode_new1(BaseAudioContext * context, AudioBufferSourceOptions * options);
 
 AudioBuffer AudioBufferSourceNode_buffer(const AudioBufferSourceNode *self);
 
@@ -42,3 +48,7 @@ jb_Undefined AudioBufferSourceNode_start1(AudioBufferSourceNode* self , double w
 jb_Undefined AudioBufferSourceNode_start2(AudioBufferSourceNode* self , double when, double offset);
 
 jb_Undefined AudioBufferSourceNode_start3(AudioBufferSourceNode* self , double when, double offset, double duration);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,5 @@
 #include <webbind/FencedFrameConfig.h>
 
-
 DEFINE_EMLITE_TYPE(FencedFrameConfig, em_Val);
 
 

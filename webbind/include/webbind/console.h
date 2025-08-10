@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 jb_Undefined console_assert0();
 jb_Undefined console_assert1(bool condition);
@@ -36,3 +39,7 @@ jb_Undefined console_timeLog1(jb_String * label);
 jb_Undefined console_timeLog2(jb_String * label, jb_Any * data);
 jb_Undefined console_timeEnd0();
 jb_Undefined console_timeEnd1(jb_String * label);
+
+#ifdef __cplusplus
+}
+#endif

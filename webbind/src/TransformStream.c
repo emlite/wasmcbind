@@ -1,7 +1,8 @@
 #include <webbind/TransformStream.h>
+
+#include <webbind/QueuingStrategy.h>
 #include <webbind/ReadableStream.h>
 #include <webbind/WritableStream.h>
-
 
 DEFINE_EMLITE_TYPE(TransformStream, em_Val);
 
@@ -18,13 +19,13 @@ TransformStream TransformStream_new1(jb_Object * transformer) {
       }
 
 
-TransformStream TransformStream_new2(jb_Object * transformer, jb_Any * writableStrategy) {
+TransformStream TransformStream_new2(jb_Object * transformer, QueuingStrategy * writableStrategy) {
         em_Val vv = em_Val_new(em_Val_global("TransformStream") , em_Val_from(transformer), em_Val_from(writableStrategy));
         return TransformStream_from_val(&vv);
       }
 
 
-TransformStream TransformStream_new3(jb_Object * transformer, jb_Any * writableStrategy, jb_Any * readableStrategy) {
+TransformStream TransformStream_new3(jb_Object * transformer, QueuingStrategy * writableStrategy, QueuingStrategy * readableStrategy) {
         em_Val vv = em_Val_new(em_Val_global("TransformStream") , em_Val_from(transformer), em_Val_from(writableStrategy), em_Val_from(readableStrategy));
         return TransformStream_from_val(&vv);
       }

@@ -1,6 +1,5 @@
 #include <webbind/PermissionsPolicy.h>
 
-
 DEFINE_EMLITE_TYPE(PermissionsPolicy, em_Val);
 
 

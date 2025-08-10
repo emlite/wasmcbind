@@ -1,6 +1,5 @@
 #include <webbind/BluetoothCharacteristicProperties.h>
 
-
 DEFINE_EMLITE_TYPE(BluetoothCharacteristicProperties, em_Val);
 
 

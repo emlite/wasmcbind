@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSGroupingRule.h"
 #include "enums.h"
+
+#include "CSSGroupingRule.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct CSSStyleProperties CSSStyleProperties;
 typedef struct StylePropertyMap StylePropertyMap;
-
 
 DECLARE_EMLITE_TYPE(CSSStyleRule, CSSGroupingRule);
 
@@ -18,3 +22,7 @@ void CSSStyleRule_set_selectorText(CSSStyleRule* self, jb_String * value);
 CSSStyleProperties CSSStyleRule_style(const CSSStyleRule *self);
 
 StylePropertyMap CSSStyleRule_styleMap(const CSSStyleRule *self);
+
+#ifdef __cplusplus
+}
+#endif

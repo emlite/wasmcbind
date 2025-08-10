@@ -1,8 +1,8 @@
 #include <webbind/DataTransferItem.h>
+
 #include <webbind/File.h>
 #include <webbind/FileSystemEntry.h>
 #include <webbind/FileSystemHandle.h>
-
 
 DEFINE_EMLITE_TYPE(DataTransferItem, em_Val);
 
@@ -17,7 +17,7 @@ jb_String DataTransferItem_type(const DataTransferItem *self) {
 }
 
 
-jb_Undefined DataTransferItem_getAsString(DataTransferItem* self , jb_Any * callback) {
+jb_Undefined DataTransferItem_getAsString(DataTransferItem* self , jb_Function * callback) {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "getAsString", em_Val_from(callback)));
 }
 

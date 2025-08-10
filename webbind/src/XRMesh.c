@@ -1,6 +1,6 @@
 #include <webbind/XRMesh.h>
-#include <webbind/XRSpace.h>
 
+#include <webbind/XRSpace.h>
 
 DEFINE_EMLITE_TYPE(XRMesh, em_Val);
 

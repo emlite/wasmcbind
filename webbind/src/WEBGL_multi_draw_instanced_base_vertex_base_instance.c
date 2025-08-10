@@ -1,6 +1,5 @@
 #include <webbind/WEBGL_multi_draw_instanced_base_vertex_base_instance.h>
 
-
 DEFINE_EMLITE_TYPE(WEBGL_multi_draw_instanced_base_vertex_base_instance, em_Val);
 
 

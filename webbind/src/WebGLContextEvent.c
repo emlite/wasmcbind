@@ -1,5 +1,6 @@
 #include <webbind/WebGLContextEvent.h>
 
+#include <webbind/WebGLContextEventInit.h>
 
 DEFINE_EMLITE_TYPE(WebGLContextEvent, Event);
 
@@ -10,7 +11,7 @@ WebGLContextEvent WebGLContextEvent_new0(jb_String * type) {
       }
 
 
-WebGLContextEvent WebGLContextEvent_new1(jb_String * type, jb_Any * eventInit) {
+WebGLContextEvent WebGLContextEvent_new1(jb_String * type, WebGLContextEventInit * eventInit) {
         em_Val vv = em_Val_new(em_Val_global("WebGLContextEvent") , em_Val_from(type), em_Val_from(eventInit));
         return WebGLContextEvent_from_val(&vv);
       }

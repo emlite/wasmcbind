@@ -1,6 +1,5 @@
 #include <webbind/TaskAttributionTiming.h>
 
-
 DEFINE_EMLITE_TYPE(TaskAttributionTiming, PerformanceEntry);
 
 

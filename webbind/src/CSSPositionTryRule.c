@@ -1,6 +1,6 @@
 #include <webbind/CSSPositionTryRule.h>
-#include <webbind/CSSPositionTryDescriptors.h>
 
+#include <webbind/CSSPositionTryDescriptors.h>
 
 DEFINE_EMLITE_TYPE(CSSPositionTryRule, CSSRule);
 

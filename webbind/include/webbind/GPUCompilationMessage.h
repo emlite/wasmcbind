@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(GPUCompilationMessage, em_Val);
 
@@ -18,3 +21,7 @@ long long GPUCompilationMessage_linePos(const GPUCompilationMessage *self);
 long long GPUCompilationMessage_offset(const GPUCompilationMessage *self);
 
 long long GPUCompilationMessage_length(const GPUCompilationMessage *self);
+
+#ifdef __cplusplus
+}
+#endif

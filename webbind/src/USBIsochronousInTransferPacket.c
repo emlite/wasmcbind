@@ -1,6 +1,5 @@
 #include <webbind/USBIsochronousInTransferPacket.h>
 
-
 DEFINE_EMLITE_TYPE(USBIsochronousInTransferPacket, em_Val);
 
 

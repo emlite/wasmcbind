@@ -4,10 +4,15 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct AudioBufferOptions AudioBufferOptions;
 
 DECLARE_EMLITE_TYPE(AudioBuffer, em_Val);
 
-AudioBuffer AudioBuffer_new(jb_Any * options);
+AudioBuffer AudioBuffer_new(AudioBufferOptions * options);
 
 float AudioBuffer_sampleRate(const AudioBuffer *self);
 
@@ -26,3 +31,7 @@ jb_Undefined AudioBuffer_copyFromChannel1(AudioBuffer* self , jb_Float32Array * 
 jb_Undefined AudioBuffer_copyToChannel0(AudioBuffer* self , jb_Float32Array * source, unsigned long channelNumber);
 
 jb_Undefined AudioBuffer_copyToChannel1(AudioBuffer* self , jb_Float32Array * source, unsigned long channelNumber, unsigned long bufferOffset);
+
+#ifdef __cplusplus
+}
+#endif

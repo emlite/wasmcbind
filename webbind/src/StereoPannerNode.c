@@ -1,7 +1,8 @@
 #include <webbind/StereoPannerNode.h>
-#include <webbind/AudioParam.h>
-#include <webbind/BaseAudioContext.h>
 
+#include <webbind/BaseAudioContext.h>
+#include <webbind/StereoPannerOptions.h>
+#include <webbind/AudioParam.h>
 
 DEFINE_EMLITE_TYPE(StereoPannerNode, AudioNode);
 
@@ -12,7 +13,7 @@ StereoPannerNode StereoPannerNode_new0(BaseAudioContext * context) {
       }
 
 
-StereoPannerNode StereoPannerNode_new1(BaseAudioContext * context, jb_Any * options) {
+StereoPannerNode StereoPannerNode_new1(BaseAudioContext * context, StereoPannerOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("StereoPannerNode") , em_Val_from(context), em_Val_from(options));
         return StereoPannerNode_from_val(&vv);
       }

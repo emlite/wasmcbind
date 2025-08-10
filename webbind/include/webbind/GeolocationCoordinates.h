@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(GeolocationCoordinates, em_Val);
 
@@ -22,3 +25,7 @@ double GeolocationCoordinates_heading(const GeolocationCoordinates *self);
 double GeolocationCoordinates_speed(const GeolocationCoordinates *self);
 
 jb_Object GeolocationCoordinates_toJSON(GeolocationCoordinates* self );
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,6 @@
 #include <webbind/CSSRuleList.h>
-#include <webbind/CSSRule.h>
 
+#include <webbind/CSSRule.h>
 
 DEFINE_EMLITE_TYPE(CSSRuleList, em_Val);
 

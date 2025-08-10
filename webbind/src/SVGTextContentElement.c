@@ -1,10 +1,10 @@
 #include <webbind/SVGTextContentElement.h>
+
 #include <webbind/SVGAnimatedLength.h>
 #include <webbind/SVGAnimatedEnumeration.h>
 #include <webbind/DOMPoint.h>
 #include <webbind/DOMRect.h>
-#include <webbind/SVGGeometryElement.h>
-
+#include <webbind/DOMPointInit.h>
 
 DEFINE_EMLITE_TYPE(SVGTextContentElement, SVGGraphicsElement);
 

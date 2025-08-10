@@ -1,6 +1,5 @@
 #include <webbind/ProtectedAudience.h>
 
-
 DEFINE_EMLITE_TYPE(ProtectedAudience, em_Val);
 
 

@@ -1,6 +1,6 @@
 #include <webbind/XRDepthInformation.h>
-#include <webbind/XRRigidTransform.h>
 
+#include <webbind/XRRigidTransform.h>
 
 DEFINE_EMLITE_TYPE(XRDepthInformation, em_Val);
 

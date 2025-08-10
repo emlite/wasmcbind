@@ -1,6 +1,6 @@
 #include <webbind/CSSStyleDeclaration.h>
-#include <webbind/CSSRule.h>
 
+#include <webbind/CSSRule.h>
 
 DEFINE_EMLITE_TYPE(CSSStyleDeclaration, em_Val);
 

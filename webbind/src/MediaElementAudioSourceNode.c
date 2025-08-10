@@ -1,12 +1,13 @@
 #include <webbind/MediaElementAudioSourceNode.h>
-#include <webbind/HTMLMediaElement.h>
-#include <webbind/AudioContext.h>
 
+#include <webbind/AudioContext.h>
+#include <webbind/MediaElementAudioSourceOptions.h>
+#include <webbind/HTMLMediaElement.h>
 
 DEFINE_EMLITE_TYPE(MediaElementAudioSourceNode, AudioNode);
 
 
-MediaElementAudioSourceNode MediaElementAudioSourceNode_new(AudioContext * context, jb_Any * options) {
+MediaElementAudioSourceNode MediaElementAudioSourceNode_new(AudioContext * context, MediaElementAudioSourceOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("MediaElementAudioSourceNode") , em_Val_from(context), em_Val_from(options));
         return MediaElementAudioSourceNode_from_val(&vv);
       }

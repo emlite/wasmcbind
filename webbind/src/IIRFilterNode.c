@@ -1,11 +1,12 @@
 #include <webbind/IIRFilterNode.h>
-#include <webbind/BaseAudioContext.h>
 
+#include <webbind/BaseAudioContext.h>
+#include <webbind/IIRFilterOptions.h>
 
 DEFINE_EMLITE_TYPE(IIRFilterNode, AudioNode);
 
 
-IIRFilterNode IIRFilterNode_new(BaseAudioContext * context, jb_Any * options) {
+IIRFilterNode IIRFilterNode_new(BaseAudioContext * context, IIRFilterOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("IIRFilterNode") , em_Val_from(context), em_Val_from(options));
         return IIRFilterNode_from_val(&vv);
       }

@@ -2,9 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "BaseAudioContext.h"
 #include "enums.h"
 
+#include "BaseAudioContext.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct AudioContextOptions AudioContextOptions;
 typedef struct AudioTimestamp AudioTimestamp;
 typedef struct MediaElementAudioSourceNode MediaElementAudioSourceNode;
 typedef struct HTMLMediaElement HTMLMediaElement;
@@ -14,21 +20,11 @@ typedef struct MediaStreamTrackAudioSourceNode MediaStreamTrackAudioSourceNode;
 typedef struct MediaStreamTrack MediaStreamTrack;
 typedef struct MediaStreamAudioDestinationNode MediaStreamAudioDestinationNode;
 
-
-DECLARE_EMLITE_TYPE(AudioTimestamp, em_Val);
-
-double AudioTimestamp_contextTime(const AudioTimestamp *self);
-
-void AudioTimestamp_set_contextTime(AudioTimestamp* self, double value);
-
-jb_Any AudioTimestamp_performanceTime(const AudioTimestamp *self);
-
-void AudioTimestamp_set_performanceTime(AudioTimestamp* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(AudioContext, BaseAudioContext);
 
 AudioContext AudioContext_new0();
 
-AudioContext AudioContext_new1(jb_Any * contextOptions);
+AudioContext AudioContext_new1(AudioContextOptions * contextOptions);
 
 double AudioContext_baseLatency(const AudioContext *self);
 
@@ -61,3 +57,7 @@ MediaStreamAudioSourceNode AudioContext_createMediaStreamSource(AudioContext* se
 MediaStreamTrackAudioSourceNode AudioContext_createMediaStreamTrackSource(AudioContext* self , MediaStreamTrack * mediaStreamTrack);
 
 MediaStreamAudioDestinationNode AudioContext_createMediaStreamDestination(AudioContext* self );
+
+#ifdef __cplusplus
+}
+#endif

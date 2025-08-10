@@ -1,6 +1,7 @@
 #include <webbind/AnimationTrigger.h>
-#include <webbind/AnimationTimeline.h>
 
+#include <webbind/AnimationTriggerOptions.h>
+#include <webbind/AnimationTimeline.h>
 
 DEFINE_EMLITE_TYPE(AnimationTrigger, em_Val);
 
@@ -11,7 +12,7 @@ AnimationTrigger AnimationTrigger_new0() {
       }
 
 
-AnimationTrigger AnimationTrigger_new1(jb_Any * options) {
+AnimationTrigger AnimationTrigger_new1(AnimationTriggerOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("AnimationTrigger") , em_Val_from(options));
         return AnimationTrigger_from_val(&vv);
       }

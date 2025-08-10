@@ -1,6 +1,6 @@
 #include <webbind/TextTrackCueList.h>
-#include <webbind/TextTrackCue.h>
 
+#include <webbind/TextTrackCue.h>
 
 DEFINE_EMLITE_TYPE(TextTrackCueList, em_Val);
 

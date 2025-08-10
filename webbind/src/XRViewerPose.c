@@ -1,6 +1,6 @@
 #include <webbind/XRViewerPose.h>
-#include <webbind/XRView.h>
 
+#include <webbind/XRView.h>
 
 DEFINE_EMLITE_TYPE(XRViewerPose, XRPose);
 

@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(RemotePlayback, EventTarget);
 
@@ -29,3 +33,7 @@ jb_Any RemotePlayback_ondisconnect(const RemotePlayback *self);
 void RemotePlayback_set_ondisconnect(RemotePlayback* self, jb_Any * value);
 
 jb_Promise RemotePlayback_prompt(RemotePlayback* self );
+
+#ifdef __cplusplus
+}
+#endif

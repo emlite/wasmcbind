@@ -1,6 +1,5 @@
 #include <webbind/CSSScopeRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSScopeRule, CSSGroupingRule);
 
 

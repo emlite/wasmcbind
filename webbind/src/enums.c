@@ -1,6 +1,5 @@
 #include <webbind/enums.h>
 
-
 DEFINE_EMLITE_TYPE(SecurityPolicyViolationEventDisposition, em_Val);
 SecurityPolicyViolationEventDisposition SecurityPolicyViolationEventDisposition_enforce() { return (SecurityPolicyViolationEventDisposition){em_Val_from_string("enforce")}; }
 SecurityPolicyViolationEventDisposition SecurityPolicyViolationEventDisposition_report() { return (SecurityPolicyViolationEventDisposition){em_Val_from_string("report")}; }

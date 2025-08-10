@@ -1,6 +1,6 @@
 #include <webbind/SVGAnimatedTransformList.h>
-#include <webbind/SVGTransformList.h>
 
+#include <webbind/SVGTransformList.h>
 
 DEFINE_EMLITE_TYPE(SVGAnimatedTransformList, em_Val);
 

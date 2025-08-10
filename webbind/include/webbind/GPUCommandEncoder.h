@@ -4,6 +4,10 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct GPURenderPassEncoder GPURenderPassEncoder;
 typedef struct GPURenderPassDescriptor GPURenderPassDescriptor;
 typedef struct GPUComputePassEncoder GPUComputePassEncoder;
@@ -14,58 +18,7 @@ typedef struct GPUTexelCopyTextureInfo GPUTexelCopyTextureInfo;
 typedef struct GPUQuerySet GPUQuerySet;
 typedef struct GPUCommandBuffer GPUCommandBuffer;
 typedef struct GPUCommandBufferDescriptor GPUCommandBufferDescriptor;
-typedef struct GPUTexture GPUTexture;
 
-
-DECLARE_EMLITE_TYPE(GPURenderPassDescriptor, em_Val);
-
-jb_Array GPURenderPassDescriptor_colorAttachments(const GPURenderPassDescriptor *self);
-
-void GPURenderPassDescriptor_set_colorAttachments(GPURenderPassDescriptor* self, jb_Array * value);
-
-jb_Any GPURenderPassDescriptor_depthStencilAttachment(const GPURenderPassDescriptor *self);
-
-void GPURenderPassDescriptor_set_depthStencilAttachment(GPURenderPassDescriptor* self, jb_Any * value);
-
-GPUQuerySet GPURenderPassDescriptor_occlusionQuerySet(const GPURenderPassDescriptor *self);
-
-void GPURenderPassDescriptor_set_occlusionQuerySet(GPURenderPassDescriptor* self, GPUQuerySet * value);
-
-jb_Any GPURenderPassDescriptor_timestampWrites(const GPURenderPassDescriptor *self);
-
-void GPURenderPassDescriptor_set_timestampWrites(GPURenderPassDescriptor* self, jb_Any * value);
-
-jb_Any GPURenderPassDescriptor_maxDrawCount(const GPURenderPassDescriptor *self);
-
-void GPURenderPassDescriptor_set_maxDrawCount(GPURenderPassDescriptor* self, jb_Any * value);
-DECLARE_EMLITE_TYPE(GPUComputePassDescriptor, em_Val);
-
-jb_Any GPUComputePassDescriptor_timestampWrites(const GPUComputePassDescriptor *self);
-
-void GPUComputePassDescriptor_set_timestampWrites(GPUComputePassDescriptor* self, jb_Any * value);
-DECLARE_EMLITE_TYPE(GPUTexelCopyBufferInfo, em_Val);
-
-GPUBuffer GPUTexelCopyBufferInfo_buffer(const GPUTexelCopyBufferInfo *self);
-
-void GPUTexelCopyBufferInfo_set_buffer(GPUTexelCopyBufferInfo* self, GPUBuffer * value);
-DECLARE_EMLITE_TYPE(GPUTexelCopyTextureInfo, em_Val);
-
-GPUTexture GPUTexelCopyTextureInfo_texture(const GPUTexelCopyTextureInfo *self);
-
-void GPUTexelCopyTextureInfo_set_texture(GPUTexelCopyTextureInfo* self, GPUTexture * value);
-
-jb_Any GPUTexelCopyTextureInfo_mipLevel(const GPUTexelCopyTextureInfo *self);
-
-void GPUTexelCopyTextureInfo_set_mipLevel(GPUTexelCopyTextureInfo* self, jb_Any * value);
-
-jb_Any GPUTexelCopyTextureInfo_origin(const GPUTexelCopyTextureInfo *self);
-
-void GPUTexelCopyTextureInfo_set_origin(GPUTexelCopyTextureInfo* self, jb_Any * value);
-
-GPUTextureAspect GPUTexelCopyTextureInfo_aspect(const GPUTexelCopyTextureInfo *self);
-
-void GPUTexelCopyTextureInfo_set_aspect(GPUTexelCopyTextureInfo* self, GPUTextureAspect * value);
-DECLARE_EMLITE_TYPE(GPUCommandBufferDescriptor, em_Val);
 DECLARE_EMLITE_TYPE(GPUCommandEncoder, em_Val);
 
 GPURenderPassEncoder GPUCommandEncoder_beginRenderPass(GPUCommandEncoder* self , GPURenderPassDescriptor * descriptor);
@@ -105,3 +58,7 @@ jb_Undefined GPUCommandEncoder_pushDebugGroup(GPUCommandEncoder* self , jb_Strin
 jb_Undefined GPUCommandEncoder_popDebugGroup(GPUCommandEncoder* self );
 
 jb_Undefined GPUCommandEncoder_insertDebugMarker(GPUCommandEncoder* self , jb_String * markerLabel);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,7 +1,8 @@
 #include <webbind/MouseEvent.h>
+
+#include <webbind/MouseEventInit.h>
 #include <webbind/EventTarget.h>
 #include <webbind/Window.h>
-
 
 DEFINE_EMLITE_TYPE(MouseEvent, UIEvent);
 
@@ -12,7 +13,7 @@ MouseEvent MouseEvent_new0(jb_String * type) {
       }
 
 
-MouseEvent MouseEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+MouseEvent MouseEvent_new1(jb_String * type, MouseEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("MouseEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return MouseEvent_from_val(&vv);
       }

@@ -1,6 +1,6 @@
 #include <webbind/SpeechRecognitionResultList.h>
-#include <webbind/SpeechRecognitionResult.h>
 
+#include <webbind/SpeechRecognitionResult.h>
 
 DEFINE_EMLITE_TYPE(SpeechRecognitionResultList, em_Val);
 

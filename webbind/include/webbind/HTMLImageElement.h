@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLImageElement, HTMLElement);
 
@@ -111,3 +115,7 @@ void HTMLImageElement_set_attributionSrc(HTMLImageElement* self, jb_String * val
 bool HTMLImageElement_sharedStorageWritable(const HTMLImageElement *self);
 
 void HTMLImageElement_set_sharedStorageWritable(HTMLImageElement* self, bool value);
+
+#ifdef __cplusplus
+}
+#endif

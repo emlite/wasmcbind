@@ -1,5 +1,6 @@
 #include <webbind/Magnetometer.h>
 
+#include <webbind/MagnetometerSensorOptions.h>
 
 DEFINE_EMLITE_TYPE(Magnetometer, Sensor);
 
@@ -10,7 +11,7 @@ Magnetometer Magnetometer_new0() {
       }
 
 
-Magnetometer Magnetometer_new1(jb_Any * sensorOptions) {
+Magnetometer Magnetometer_new1(MagnetometerSensorOptions * sensorOptions) {
         em_Val vv = em_Val_new(em_Val_global("Magnetometer") , em_Val_from(sensorOptions));
         return Magnetometer_from_val(&vv);
       }

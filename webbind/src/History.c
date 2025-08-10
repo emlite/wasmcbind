@@ -1,6 +1,5 @@
 #include <webbind/History.h>
 
-
 DEFINE_EMLITE_TYPE(History, em_Val);
 
 

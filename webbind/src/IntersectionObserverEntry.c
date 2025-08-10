@@ -1,12 +1,13 @@
 #include <webbind/IntersectionObserverEntry.h>
+
+#include <webbind/IntersectionObserverEntryInit.h>
 #include <webbind/DOMRectReadOnly.h>
 #include <webbind/Element.h>
-
 
 DEFINE_EMLITE_TYPE(IntersectionObserverEntry, em_Val);
 
 
-IntersectionObserverEntry IntersectionObserverEntry_new(jb_Any * intersectionObserverEntryInit) {
+IntersectionObserverEntry IntersectionObserverEntry_new(IntersectionObserverEntryInit * intersectionObserverEntryInit) {
         em_Val vv = em_Val_new(em_Val_global("IntersectionObserverEntry") , em_Val_from(intersectionObserverEntryInit));
         return IntersectionObserverEntry_from_val(&vv);
       }

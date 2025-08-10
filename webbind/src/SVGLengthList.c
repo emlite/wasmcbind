@@ -1,6 +1,6 @@
 #include <webbind/SVGLengthList.h>
-#include <webbind/SVGLength.h>
 
+#include <webbind/SVGLength.h>
 
 DEFINE_EMLITE_TYPE(SVGLengthList, em_Val);
 

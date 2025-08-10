@@ -2,12 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct MediaStreamTrack MediaStreamTrack;
-typedef struct MediaStream MediaStream;
+#include "EventTarget.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct MediaStreamTrack MediaStreamTrack;
 
 DECLARE_EMLITE_TYPE(MediaStream, EventTarget);
 
@@ -38,3 +41,7 @@ void MediaStream_set_onaddtrack(MediaStream* self, jb_Any * value);
 jb_Any MediaStream_onremovetrack(const MediaStream *self);
 
 void MediaStream_set_onremovetrack(MediaStream* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

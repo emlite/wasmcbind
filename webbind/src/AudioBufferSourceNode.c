@@ -1,8 +1,9 @@
 #include <webbind/AudioBufferSourceNode.h>
+
+#include <webbind/BaseAudioContext.h>
+#include <webbind/AudioBufferSourceOptions.h>
 #include <webbind/AudioBuffer.h>
 #include <webbind/AudioParam.h>
-#include <webbind/BaseAudioContext.h>
-
 
 DEFINE_EMLITE_TYPE(AudioBufferSourceNode, AudioScheduledSourceNode);
 
@@ -13,7 +14,7 @@ AudioBufferSourceNode AudioBufferSourceNode_new0(BaseAudioContext * context) {
       }
 
 
-AudioBufferSourceNode AudioBufferSourceNode_new1(BaseAudioContext * context, jb_Any * options) {
+AudioBufferSourceNode AudioBufferSourceNode_new1(BaseAudioContext * context, AudioBufferSourceOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("AudioBufferSourceNode") , em_Val_from(context), em_Val_from(options));
         return AudioBufferSourceNode_from_val(&vv);
       }

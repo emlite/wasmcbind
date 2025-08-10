@@ -1,6 +1,5 @@
 #include <webbind/AudioScheduledSourceNode.h>
 
-
 DEFINE_EMLITE_TYPE(AudioScheduledSourceNode, AudioNode);
 
 

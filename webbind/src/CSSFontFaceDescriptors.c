@@ -1,6 +1,5 @@
 #include <webbind/CSSFontFaceDescriptors.h>
 
-
 DEFINE_EMLITE_TYPE(CSSFontFaceDescriptors, CSSStyleDeclaration);
 
 

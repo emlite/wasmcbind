@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct DOMTokenList DOMTokenList;
 typedef struct Document Document;
 typedef struct PermissionsPolicy PermissionsPolicy;
-
 
 DECLARE_EMLITE_TYPE(HTMLIFrameElement, HTMLElement);
 
@@ -103,3 +107,7 @@ void HTMLIFrameElement_set_adAuctionHeaders(HTMLIFrameElement* self, bool value)
 bool HTMLIFrameElement_sharedStorageWritable(const HTMLIFrameElement *self);
 
 void HTMLIFrameElement_set_sharedStorageWritable(HTMLIFrameElement* self, bool value);
+
+#ifdef __cplusplus
+}
+#endif

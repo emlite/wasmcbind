@@ -1,5 +1,6 @@
 #include <webbind/BluetoothDataFilter.h>
 
+#include <webbind/BluetoothDataFilterInit.h>
 
 DEFINE_EMLITE_TYPE(BluetoothDataFilter, em_Val);
 
@@ -10,7 +11,7 @@ BluetoothDataFilter BluetoothDataFilter_new0() {
       }
 
 
-BluetoothDataFilter BluetoothDataFilter_new1(jb_Any * init) {
+BluetoothDataFilter BluetoothDataFilter_new1(BluetoothDataFilterInit * init) {
         em_Val vv = em_Val_new(em_Val_global("BluetoothDataFilter") , em_Val_from(init));
         return BluetoothDataFilter_from_val(&vv);
       }

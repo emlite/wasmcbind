@@ -1,0 +1,47 @@
+#pragma once
+
+#include <emlite/emlite.h>
+#include <jsbind/jsbind.h>
+#include "enums.h"
+
+#include "KeySystemTrackConfiguration.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+DECLARE_EMLITE_TYPE(MediaCapabilitiesKeySystemConfiguration, em_Val);
+
+jb_String MediaCapabilitiesKeySystemConfiguration_keySystem(const MediaCapabilitiesKeySystemConfiguration *self);
+
+void MediaCapabilitiesKeySystemConfiguration_set_keySystem(MediaCapabilitiesKeySystemConfiguration* self, jb_String * value);
+
+jb_String MediaCapabilitiesKeySystemConfiguration_initDataType(const MediaCapabilitiesKeySystemConfiguration *self);
+
+void MediaCapabilitiesKeySystemConfiguration_set_initDataType(MediaCapabilitiesKeySystemConfiguration* self, jb_String * value);
+
+MediaKeysRequirement MediaCapabilitiesKeySystemConfiguration_distinctiveIdentifier(const MediaCapabilitiesKeySystemConfiguration *self);
+
+void MediaCapabilitiesKeySystemConfiguration_set_distinctiveIdentifier(MediaCapabilitiesKeySystemConfiguration* self, MediaKeysRequirement * value);
+
+MediaKeysRequirement MediaCapabilitiesKeySystemConfiguration_persistentState(const MediaCapabilitiesKeySystemConfiguration *self);
+
+void MediaCapabilitiesKeySystemConfiguration_set_persistentState(MediaCapabilitiesKeySystemConfiguration* self, MediaKeysRequirement * value);
+
+jb_Array MediaCapabilitiesKeySystemConfiguration_sessionTypes(const MediaCapabilitiesKeySystemConfiguration *self);
+
+void MediaCapabilitiesKeySystemConfiguration_set_sessionTypes(MediaCapabilitiesKeySystemConfiguration* self, jb_Array * value);
+
+KeySystemTrackConfiguration MediaCapabilitiesKeySystemConfiguration_audio(const MediaCapabilitiesKeySystemConfiguration *self);
+
+void MediaCapabilitiesKeySystemConfiguration_set_audio(MediaCapabilitiesKeySystemConfiguration* self, KeySystemTrackConfiguration * value);
+
+KeySystemTrackConfiguration MediaCapabilitiesKeySystemConfiguration_video(const MediaCapabilitiesKeySystemConfiguration *self);
+
+void MediaCapabilitiesKeySystemConfiguration_set_video(MediaCapabilitiesKeySystemConfiguration* self, KeySystemTrackConfiguration * value);
+
+MediaCapabilitiesKeySystemConfiguration MediaCapabilitiesKeySystemConfiguration_new();
+
+#ifdef __cplusplus
+}
+#endif

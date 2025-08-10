@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(NetworkInformation, EventTarget);
 
@@ -23,3 +27,7 @@ jb_Any NetworkInformation_onchange(const NetworkInformation *self);
 void NetworkInformation_set_onchange(NetworkInformation* self, jb_Any * value);
 
 bool NetworkInformation_saveData(const NetworkInformation *self);
+
+#ifdef __cplusplus
+}
+#endif

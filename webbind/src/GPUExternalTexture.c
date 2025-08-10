@@ -1,6 +1,5 @@
 #include <webbind/GPUExternalTexture.h>
 
-
 DEFINE_EMLITE_TYPE(GPUExternalTexture, em_Val);
 
 

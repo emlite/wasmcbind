@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Node Node;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct Node Node;
 
 DECLARE_EMLITE_TYPE(XPathResult, em_Val);
 
@@ -26,3 +29,7 @@ unsigned long XPathResult_snapshotLength(const XPathResult *self);
 Node XPathResult_iterateNext(XPathResult* self );
 
 Node XPathResult_snapshotItem(XPathResult* self , unsigned long index);
+
+#ifdef __cplusplus
+}
+#endif

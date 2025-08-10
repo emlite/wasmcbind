@@ -1,6 +1,5 @@
 #include <webbind/SVGAnimatedEnumeration.h>
 
-
 DEFINE_EMLITE_TYPE(SVGAnimatedEnumeration, em_Val);
 
 

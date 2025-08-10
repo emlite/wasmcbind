@@ -1,10 +1,11 @@
 #include <webbind/PresentationConnectionCloseEvent.h>
 
+#include <webbind/PresentationConnectionCloseEventInit.h>
 
 DEFINE_EMLITE_TYPE(PresentationConnectionCloseEvent, Event);
 
 
-PresentationConnectionCloseEvent PresentationConnectionCloseEvent_new(jb_String * type, jb_Any * eventInitDict) {
+PresentationConnectionCloseEvent PresentationConnectionCloseEvent_new(jb_String * type, PresentationConnectionCloseEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("PresentationConnectionCloseEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return PresentationConnectionCloseEvent_from_val(&vv);
       }

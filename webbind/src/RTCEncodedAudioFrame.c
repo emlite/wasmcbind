@@ -1,27 +1,7 @@
 #include <webbind/RTCEncodedAudioFrame.h>
 
-
-DEFINE_EMLITE_TYPE(RTCEncodedAudioFrameMetadata, em_Val);
-
-
-short RTCEncodedAudioFrameMetadata_sequenceNumber(const RTCEncodedAudioFrameMetadata *self) {
-    return em_Val_as(short, em_Val_get(em_Val_as_val(self->inner), em_Val_from("sequenceNumber")));
-}
-
-
-void RTCEncodedAudioFrameMetadata_set_sequenceNumber(RTCEncodedAudioFrameMetadata* self, short value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("sequenceNumber"), em_Val_from(value));
-}
-
-
-double RTCEncodedAudioFrameMetadata_audioLevel(const RTCEncodedAudioFrameMetadata *self) {
-    return em_Val_as(double, em_Val_get(em_Val_as_val(self->inner), em_Val_from("audioLevel")));
-}
-
-
-void RTCEncodedAudioFrameMetadata_set_audioLevel(RTCEncodedAudioFrameMetadata* self, double value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("audioLevel"), em_Val_from(value));
-}
+#include <webbind/RTCEncodedAudioFrameOptions.h>
+#include <webbind/RTCEncodedAudioFrameMetadata.h>
 
 DEFINE_EMLITE_TYPE(RTCEncodedAudioFrame, em_Val);
 
@@ -32,7 +12,7 @@ RTCEncodedAudioFrame RTCEncodedAudioFrame_new0(RTCEncodedAudioFrame * originalFr
       }
 
 
-RTCEncodedAudioFrame RTCEncodedAudioFrame_new1(RTCEncodedAudioFrame * originalFrame, jb_Any * options) {
+RTCEncodedAudioFrame RTCEncodedAudioFrame_new1(RTCEncodedAudioFrame * originalFrame, RTCEncodedAudioFrameOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("RTCEncodedAudioFrame") , em_Val_from(originalFrame), em_Val_from(options));
         return RTCEncodedAudioFrame_from_val(&vv);
       }

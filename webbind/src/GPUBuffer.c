@@ -1,6 +1,5 @@
 #include <webbind/GPUBuffer.h>
 
-
 DEFINE_EMLITE_TYPE(GPUBuffer, em_Val);
 
 

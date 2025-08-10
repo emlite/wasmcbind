@@ -1,6 +1,6 @@
 #include <webbind/Permissions.h>
-#include <webbind/PermissionStatus.h>
 
+#include <webbind/PermissionStatus.h>
 
 DEFINE_EMLITE_TYPE(Permissions, em_Val);
 

@@ -2,16 +2,22 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CharacterData.h"
-#include "SVGGeometryElement.h"
 #include "enums.h"
 
-typedef struct Text Text;
+#include "CharacterData.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct DOMQuad DOMQuad;
+typedef struct BoxQuadOptions BoxQuadOptions;
+typedef struct DOMQuadInit DOMQuadInit;
+typedef struct ConvertCoordinateOptions ConvertCoordinateOptions;
 typedef struct DOMRectReadOnly DOMRectReadOnly;
 typedef struct DOMPoint DOMPoint;
+typedef struct DOMPointInit DOMPointInit;
 typedef struct HTMLSlotElement HTMLSlotElement;
-
 
 DECLARE_EMLITE_TYPE(Text, CharacterData);
 
@@ -40,3 +46,7 @@ DOMPoint Text_convertPointFromNode0(Text* self , DOMPointInit * point, jb_Any * 
 DOMPoint Text_convertPointFromNode1(Text* self , DOMPointInit * point, jb_Any * from, ConvertCoordinateOptions * options);
 
 HTMLSlotElement Text_assignedSlot(const Text *self);
+
+#ifdef __cplusplus
+}
+#endif

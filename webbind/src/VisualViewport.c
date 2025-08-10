@@ -1,6 +1,5 @@
 #include <webbind/VisualViewport.h>
 
-
 DEFINE_EMLITE_TYPE(VisualViewport, EventTarget);
 
 

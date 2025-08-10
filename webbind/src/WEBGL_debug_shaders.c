@@ -1,6 +1,6 @@
 #include <webbind/WEBGL_debug_shaders.h>
-#include <webbind/WebGLShader.h>
 
+#include <webbind/WebGLShader.h>
 
 DEFINE_EMLITE_TYPE(WEBGL_debug_shaders, em_Val);
 

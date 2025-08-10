@@ -2,14 +2,18 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct TimeRanges TimeRanges;
 typedef struct AudioTrackList AudioTrackList;
 typedef struct VideoTrackList VideoTrackList;
 typedef struct TextTrackList TextTrackList;
-
 
 DECLARE_EMLITE_TYPE(SourceBuffer, EventTarget);
 
@@ -66,3 +70,7 @@ jb_Undefined SourceBuffer_abort(SourceBuffer* self );
 jb_Undefined SourceBuffer_changeType(SourceBuffer* self , jb_String * type);
 
 jb_Undefined SourceBuffer_remove(SourceBuffer* self , double start, double end);
+
+#ifdef __cplusplus
+}
+#endif

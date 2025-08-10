@@ -1,6 +1,5 @@
 #include <webbind/PictureInPictureWindow.h>
 
-
 DEFINE_EMLITE_TYPE(PictureInPictureWindow, EventTarget);
 
 

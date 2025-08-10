@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(GPUQuerySet, em_Val);
 
@@ -16,3 +19,7 @@ jb_Any GPUQuerySet_count(const GPUQuerySet *self);
 jb_String GPUQuerySet_label(const GPUQuerySet *self);
 
 void GPUQuerySet_set_label(GPUQuerySet* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

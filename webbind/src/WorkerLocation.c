@@ -1,6 +1,5 @@
 #include <webbind/WorkerLocation.h>
 
-
 DEFINE_EMLITE_TYPE(WorkerLocation, em_Val);
 
 

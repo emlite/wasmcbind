@@ -1,6 +1,6 @@
 #include <webbind/MediaKeySession.h>
-#include <webbind/MediaKeyStatusMap.h>
 
+#include <webbind/MediaKeyStatusMap.h>
 
 DEFINE_EMLITE_TYPE(MediaKeySession, EventTarget);
 

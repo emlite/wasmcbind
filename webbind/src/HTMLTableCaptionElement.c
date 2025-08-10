@@ -1,6 +1,5 @@
 #include <webbind/HTMLTableCaptionElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLTableCaptionElement, HTMLElement);
 
 

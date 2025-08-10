@@ -1,5 +1,6 @@
 #include <webbind/MIDIMessageEvent.h>
 
+#include <webbind/MIDIMessageEventInit.h>
 
 DEFINE_EMLITE_TYPE(MIDIMessageEvent, Event);
 
@@ -10,7 +11,7 @@ MIDIMessageEvent MIDIMessageEvent_new0(jb_String * type) {
       }
 
 
-MIDIMessageEvent MIDIMessageEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+MIDIMessageEvent MIDIMessageEvent_new1(jb_String * type, MIDIMessageEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("MIDIMessageEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return MIDIMessageEvent_from_val(&vv);
       }

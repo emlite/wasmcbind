@@ -1,6 +1,5 @@
 #include <webbind/VisibilityStateEntry.h>
 
-
 DEFINE_EMLITE_TYPE(VisibilityStateEntry, PerformanceEntry);
 
 

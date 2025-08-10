@@ -2,8 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGComponentTransferFunctionElement.h"
 #include "enums.h"
 
+#include "SVGComponentTransferFunctionElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(SVGFEFuncRElement, SVGComponentTransferFunctionElement);
+
+#ifdef __cplusplus
+}
+#endif

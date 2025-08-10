@@ -1,5 +1,6 @@
 #include <webbind/IDBVersionChangeEvent.h>
 
+#include <webbind/IDBVersionChangeEventInit.h>
 
 DEFINE_EMLITE_TYPE(IDBVersionChangeEvent, Event);
 
@@ -10,7 +11,7 @@ IDBVersionChangeEvent IDBVersionChangeEvent_new0(jb_String * type) {
       }
 
 
-IDBVersionChangeEvent IDBVersionChangeEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+IDBVersionChangeEvent IDBVersionChangeEvent_new1(jb_String * type, IDBVersionChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("IDBVersionChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return IDBVersionChangeEvent_from_val(&vv);
       }

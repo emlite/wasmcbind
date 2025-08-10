@@ -1,5 +1,6 @@
 #include <webbind/ProgressEvent.h>
 
+#include <webbind/ProgressEventInit.h>
 
 DEFINE_EMLITE_TYPE(ProgressEvent, Event);
 
@@ -10,7 +11,7 @@ ProgressEvent ProgressEvent_new0(jb_String * type) {
       }
 
 
-ProgressEvent ProgressEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+ProgressEvent ProgressEvent_new1(jb_String * type, ProgressEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("ProgressEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return ProgressEvent_from_val(&vv);
       }

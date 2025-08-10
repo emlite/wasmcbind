@@ -1,6 +1,6 @@
 #include <webbind/BluetoothRemoteGATTDescriptor.h>
-#include <webbind/BluetoothRemoteGATTCharacteristic.h>
 
+#include <webbind/BluetoothRemoteGATTCharacteristic.h>
 
 DEFINE_EMLITE_TYPE(BluetoothRemoteGATTDescriptor, em_Val);
 

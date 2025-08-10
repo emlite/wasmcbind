@@ -1,6 +1,5 @@
 #include <webbind/OverconstrainedError.h>
 
-
 DEFINE_EMLITE_TYPE(OverconstrainedError, DOMException);
 
 

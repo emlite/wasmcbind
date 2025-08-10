@@ -1,11 +1,12 @@
 #include <webbind/Touch.h>
-#include <webbind/EventTarget.h>
 
+#include <webbind/TouchInit.h>
+#include <webbind/EventTarget.h>
 
 DEFINE_EMLITE_TYPE(Touch, em_Val);
 
 
-Touch Touch_new(jb_Any * touchInitDict) {
+Touch Touch_new(TouchInit * touchInitDict) {
         em_Val vv = em_Val_new(em_Val_global("Touch") , em_Val_from(touchInitDict));
         return Touch_from_val(&vv);
       }

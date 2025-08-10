@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "MessagePort.h"
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct StructuredSerializeOptions StructuredSerializeOptions;
 
 DECLARE_EMLITE_TYPE(Client, em_Val);
 
@@ -21,3 +25,7 @@ jb_Undefined Client_postMessage0(Client* self , jb_Any * message);
 jb_Undefined Client_postMessage1(Client* self , jb_Any * message, StructuredSerializeOptions * options);
 
 ClientLifecycleState Client_lifecycleState(const Client *self);
+
+#ifdef __cplusplus
+}
+#endif

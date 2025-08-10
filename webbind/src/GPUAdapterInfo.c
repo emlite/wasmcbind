@@ -1,6 +1,5 @@
 #include <webbind/GPUAdapterInfo.h>
 
-
 DEFINE_EMLITE_TYPE(GPUAdapterInfo, em_Val);
 
 

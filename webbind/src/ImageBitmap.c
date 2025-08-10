@@ -1,6 +1,5 @@
 #include <webbind/ImageBitmap.h>
 
-
 DEFINE_EMLITE_TYPE(ImageBitmap, em_Val);
 
 

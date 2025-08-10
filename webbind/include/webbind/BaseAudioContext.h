@@ -2,8 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct AudioDestinationNode AudioDestinationNode;
 typedef struct AudioListener AudioListener;
@@ -28,12 +33,6 @@ typedef struct ScriptProcessorNode ScriptProcessorNode;
 typedef struct StereoPannerNode StereoPannerNode;
 typedef struct WaveShaperNode WaveShaperNode;
 
-
-DECLARE_EMLITE_TYPE(PeriodicWaveConstraints, em_Val);
-
-bool PeriodicWaveConstraints_disableNormalization(const PeriodicWaveConstraints *self);
-
-void PeriodicWaveConstraints_set_disableNormalization(PeriodicWaveConstraints* self, bool value);
 DECLARE_EMLITE_TYPE(BaseAudioContext, EventTarget);
 
 AudioDestinationNode BaseAudioContext_destination(const BaseAudioContext *self);
@@ -109,3 +108,7 @@ jb_Promise BaseAudioContext_decodeAudioData0(BaseAudioContext* self , jb_ArrayBu
 jb_Promise BaseAudioContext_decodeAudioData1(BaseAudioContext* self , jb_ArrayBuffer * audioData, jb_Function * successCallback);
 
 jb_Promise BaseAudioContext_decodeAudioData2(BaseAudioContext* self , jb_ArrayBuffer * audioData, jb_Function * successCallback, jb_Function * errorCallback);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,16 +1,17 @@
 #include <webbind/Global.h>
 
+#include <webbind/GlobalDescriptor.h>
 
 DEFINE_EMLITE_TYPE(Global, em_Val);
 
 
-Global Global_new0(jb_Any * descriptor) {
+Global Global_new0(GlobalDescriptor * descriptor) {
         em_Val vv = em_Val_new(em_Val_global("Global") , em_Val_from(descriptor));
         return Global_from_val(&vv);
       }
 
 
-Global Global_new1(jb_Any * descriptor, jb_Any * v) {
+Global Global_new1(GlobalDescriptor * descriptor, jb_Any * v) {
         em_Val vv = em_Val_new(em_Val_global("Global") , em_Val_from(descriptor), em_Val_from(v));
         return Global_from_val(&vv);
       }

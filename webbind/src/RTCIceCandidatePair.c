@@ -1,6 +1,6 @@
 #include <webbind/RTCIceCandidatePair.h>
-#include <webbind/RTCIceCandidate.h>
 
+#include <webbind/RTCIceCandidate.h>
 
 DEFINE_EMLITE_TYPE(RTCIceCandidatePair, em_Val);
 

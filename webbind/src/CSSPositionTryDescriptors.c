@@ -1,6 +1,5 @@
 #include <webbind/CSSPositionTryDescriptors.h>
 
-
 DEFINE_EMLITE_TYPE(CSSPositionTryDescriptors, CSSStyleDeclaration);
 
 

@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct DOMTokenList DOMTokenList;
+#include "HTMLElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct DOMTokenList DOMTokenList;
 
 DECLARE_EMLITE_TYPE(HTMLAreaElement, HTMLElement);
 
@@ -95,3 +99,7 @@ void HTMLAreaElement_set_search(HTMLAreaElement* self, jb_String * value);
 jb_String HTMLAreaElement_hash(const HTMLAreaElement *self);
 
 void HTMLAreaElement_set_hash(HTMLAreaElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

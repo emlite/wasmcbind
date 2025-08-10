@@ -1,5 +1,6 @@
 #include <webbind/DeviceOrientationEvent.h>
 
+#include <webbind/DeviceOrientationEventInit.h>
 
 DEFINE_EMLITE_TYPE(DeviceOrientationEvent, Event);
 
@@ -10,7 +11,7 @@ DeviceOrientationEvent DeviceOrientationEvent_new0(jb_String * type) {
       }
 
 
-DeviceOrientationEvent DeviceOrientationEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+DeviceOrientationEvent DeviceOrientationEvent_new1(jb_String * type, DeviceOrientationEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("DeviceOrientationEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return DeviceOrientationEvent_from_val(&vv);
       }

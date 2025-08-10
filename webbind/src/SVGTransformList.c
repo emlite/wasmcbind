@@ -1,7 +1,7 @@
 #include <webbind/SVGTransformList.h>
-#include <webbind/SVGTransform.h>
-#include <webbind/SVGSVGElement.h>
 
+#include <webbind/SVGTransform.h>
+#include <webbind/DOMMatrix2DInit.h>
 
 DEFINE_EMLITE_TYPE(SVGTransformList, em_Val);
 

@@ -1,7 +1,6 @@
 #include <webbind/WritableStreamDefaultWriter.h>
-#include <webbind/ReadableStream.h>
-#include <webbind/WritableStream.h>
 
+#include <webbind/WritableStream.h>
 
 DEFINE_EMLITE_TYPE(WritableStreamDefaultWriter, em_Val);
 

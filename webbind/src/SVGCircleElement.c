@@ -1,6 +1,6 @@
 #include <webbind/SVGCircleElement.h>
-#include <webbind/SVGAnimatedLength.h>
 
+#include <webbind/SVGAnimatedLength.h>
 
 DEFINE_EMLITE_TYPE(SVGCircleElement, SVGGeometryElement);
 

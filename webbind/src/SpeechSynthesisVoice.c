@@ -1,6 +1,5 @@
 #include <webbind/SpeechSynthesisVoice.h>
 
-
 DEFINE_EMLITE_TYPE(SpeechSynthesisVoice, em_Val);
 
 

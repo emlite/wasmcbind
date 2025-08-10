@@ -1,5 +1,6 @@
 #include <webbind/InputDeviceCapabilities.h>
 
+#include <webbind/InputDeviceCapabilitiesInit.h>
 
 DEFINE_EMLITE_TYPE(InputDeviceCapabilities, em_Val);
 
@@ -10,7 +11,7 @@ InputDeviceCapabilities InputDeviceCapabilities_new0() {
       }
 
 
-InputDeviceCapabilities InputDeviceCapabilities_new1(jb_Any * deviceInitDict) {
+InputDeviceCapabilities InputDeviceCapabilities_new1(InputDeviceCapabilitiesInit * deviceInitDict) {
         em_Val vv = em_Val_new(em_Val_global("InputDeviceCapabilities") , em_Val_from(deviceInitDict));
         return InputDeviceCapabilities_from_val(&vv);
       }

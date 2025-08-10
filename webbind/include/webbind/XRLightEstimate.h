@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct DOMPointReadOnly DOMPointReadOnly;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct DOMPointReadOnly DOMPointReadOnly;
 
 DECLARE_EMLITE_TYPE(XRLightEstimate, em_Val);
 
@@ -14,3 +17,7 @@ jb_Float32Array XRLightEstimate_sphericalHarmonicsCoefficients(const XRLightEsti
 DOMPointReadOnly XRLightEstimate_primaryLightDirection(const XRLightEstimate *self);
 
 DOMPointReadOnly XRLightEstimate_primaryLightIntensity(const XRLightEstimate *self);
+
+#ifdef __cplusplus
+}
+#endif

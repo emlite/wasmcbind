@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
+
+#include "SVGElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedString SVGAnimatedString;
 typedef struct SVGAnimatedNumber SVGAnimatedNumber;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
-
 
 DECLARE_EMLITE_TYPE(SVGFEDiffuseLightingElement, SVGElement);
 
@@ -31,3 +35,7 @@ SVGAnimatedLength SVGFEDiffuseLightingElement_width(const SVGFEDiffuseLightingEl
 SVGAnimatedLength SVGFEDiffuseLightingElement_height(const SVGFEDiffuseLightingElement *self);
 
 SVGAnimatedString SVGFEDiffuseLightingElement_result(const SVGFEDiffuseLightingElement *self);
+
+#ifdef __cplusplus
+}
+#endif

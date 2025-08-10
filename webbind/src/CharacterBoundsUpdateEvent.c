@@ -1,5 +1,6 @@
 #include <webbind/CharacterBoundsUpdateEvent.h>
 
+#include <webbind/CharacterBoundsUpdateEventInit.h>
 
 DEFINE_EMLITE_TYPE(CharacterBoundsUpdateEvent, Event);
 
@@ -10,7 +11,7 @@ CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new0(jb_String * type) {
       }
 
 
-CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new1(jb_String * type, jb_Any * options) {
+CharacterBoundsUpdateEvent CharacterBoundsUpdateEvent_new1(jb_String * type, CharacterBoundsUpdateEventInit * options) {
         em_Val vv = em_Val_new(em_Val_global("CharacterBoundsUpdateEvent") , em_Val_from(type), em_Val_from(options));
         return CharacterBoundsUpdateEvent_from_val(&vv);
       }

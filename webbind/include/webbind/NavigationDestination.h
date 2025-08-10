@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(NavigationDestination, em_Val);
 
@@ -18,3 +21,7 @@ long long NavigationDestination_index(const NavigationDestination *self);
 bool NavigationDestination_sameDocument(const NavigationDestination *self);
 
 jb_Any NavigationDestination_getState(NavigationDestination* self );
+
+#ifdef __cplusplus
+}
+#endif

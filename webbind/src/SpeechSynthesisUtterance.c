@@ -1,6 +1,6 @@
 #include <webbind/SpeechSynthesisUtterance.h>
-#include <webbind/SpeechSynthesisVoice.h>
 
+#include <webbind/SpeechSynthesisVoice.h>
 
 DEFINE_EMLITE_TYPE(SpeechSynthesisUtterance, EventTarget);
 

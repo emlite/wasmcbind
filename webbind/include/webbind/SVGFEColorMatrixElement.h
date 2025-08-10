@@ -2,14 +2,18 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
+
+#include "SVGElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedString SVGAnimatedString;
 typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedNumberList SVGAnimatedNumberList;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
-
 
 DECLARE_EMLITE_TYPE(SVGFEColorMatrixElement, SVGElement);
 
@@ -28,3 +32,7 @@ SVGAnimatedLength SVGFEColorMatrixElement_width(const SVGFEColorMatrixElement *s
 SVGAnimatedLength SVGFEColorMatrixElement_height(const SVGFEColorMatrixElement *self);
 
 SVGAnimatedString SVGFEColorMatrixElement_result(const SVGFEColorMatrixElement *self);
+
+#ifdef __cplusplus
+}
+#endif

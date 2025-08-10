@@ -2,13 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "MediaStreamTrack.h"
 #include "enums.h"
 
-typedef struct CropTarget CropTarget;
-typedef struct BrowserCaptureMediaStreamTrack BrowserCaptureMediaStreamTrack;
-typedef struct RestrictionTarget RestrictionTarget;
+#include "MediaStreamTrack.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct CropTarget CropTarget;
+typedef struct RestrictionTarget RestrictionTarget;
 
 DECLARE_EMLITE_TYPE(BrowserCaptureMediaStreamTrack, MediaStreamTrack);
 
@@ -17,3 +20,7 @@ jb_Promise BrowserCaptureMediaStreamTrack_cropTo(BrowserCaptureMediaStreamTrack*
 BrowserCaptureMediaStreamTrack BrowserCaptureMediaStreamTrack_clone(BrowserCaptureMediaStreamTrack* self );
 
 jb_Promise BrowserCaptureMediaStreamTrack_restrictTo(BrowserCaptureMediaStreamTrack* self , RestrictionTarget * RestrictionTarget);
+
+#ifdef __cplusplus
+}
+#endif

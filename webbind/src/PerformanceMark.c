@@ -1,6 +1,6 @@
 #include <webbind/PerformanceMark.h>
-#include <webbind/Performance.h>
 
+#include <webbind/PerformanceMarkOptions.h>
 
 DEFINE_EMLITE_TYPE(PerformanceMark, PerformanceEntry);
 

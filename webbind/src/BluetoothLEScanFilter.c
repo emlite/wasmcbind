@@ -1,7 +1,8 @@
 #include <webbind/BluetoothLEScanFilter.h>
+
+#include <webbind/BluetoothLEScanFilterInit.h>
 #include <webbind/BluetoothManufacturerDataFilter.h>
 #include <webbind/BluetoothServiceDataFilter.h>
-
 
 DEFINE_EMLITE_TYPE(BluetoothLEScanFilter, em_Val);
 
@@ -12,7 +13,7 @@ BluetoothLEScanFilter BluetoothLEScanFilter_new0() {
       }
 
 
-BluetoothLEScanFilter BluetoothLEScanFilter_new1(jb_Any * init) {
+BluetoothLEScanFilter BluetoothLEScanFilter_new1(BluetoothLEScanFilterInit * init) {
         em_Val vv = em_Val_new(em_Val_global("BluetoothLEScanFilter") , em_Val_from(init));
         return BluetoothLEScanFilter_from_val(&vv);
       }

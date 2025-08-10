@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(ValidityState, em_Val);
 
@@ -28,3 +31,7 @@ bool ValidityState_badInput(const ValidityState *self);
 bool ValidityState_customError(const ValidityState *self);
 
 bool ValidityState_valid(const ValidityState *self);
+
+#ifdef __cplusplus
+}
+#endif

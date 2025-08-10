@@ -1,6 +1,5 @@
 #include <webbind/BroadcastChannel.h>
 
-
 DEFINE_EMLITE_TYPE(BroadcastChannel, EventTarget);
 
 

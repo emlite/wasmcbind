@@ -1,5 +1,6 @@
 #include <webbind/SecurityPolicyViolationEvent.h>
 
+#include <webbind/SecurityPolicyViolationEventInit.h>
 
 DEFINE_EMLITE_TYPE(SecurityPolicyViolationEvent, Event);
 
@@ -10,7 +11,7 @@ SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new0(jb_String * type)
       }
 
 
-SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+SecurityPolicyViolationEvent SecurityPolicyViolationEvent_new1(jb_String * type, SecurityPolicyViolationEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("SecurityPolicyViolationEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return SecurityPolicyViolationEvent_from_val(&vv);
       }

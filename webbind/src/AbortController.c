@@ -1,6 +1,6 @@
 #include <webbind/AbortController.h>
-#include <webbind/AbortSignal.h>
 
+#include <webbind/AbortSignal.h>
 
 DEFINE_EMLITE_TYPE(AbortController, em_Val);
 

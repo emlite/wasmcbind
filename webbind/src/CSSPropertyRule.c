@@ -1,6 +1,5 @@
 #include <webbind/CSSPropertyRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSPropertyRule, CSSRule);
 
 

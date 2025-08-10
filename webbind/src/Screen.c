@@ -1,6 +1,6 @@
 #include <webbind/Screen.h>
-#include <webbind/ScreenOrientation.h>
 
+#include <webbind/ScreenOrientation.h>
 
 DEFINE_EMLITE_TYPE(Screen, em_Val);
 

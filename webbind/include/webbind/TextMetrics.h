@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(TextMetrics, em_Val);
 
@@ -30,3 +33,7 @@ double TextMetrics_hangingBaseline(const TextMetrics *self);
 double TextMetrics_alphabeticBaseline(const TextMetrics *self);
 
 double TextMetrics_ideographicBaseline(const TextMetrics *self);
+
+#ifdef __cplusplus
+}
+#endif

@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(XMLHttpRequestEventTarget, EventTarget);
 
@@ -35,3 +39,7 @@ void XMLHttpRequestEventTarget_set_ontimeout(XMLHttpRequestEventTarget* self, jb
 jb_Any XMLHttpRequestEventTarget_onloadend(const XMLHttpRequestEventTarget *self);
 
 void XMLHttpRequestEventTarget_set_onloadend(XMLHttpRequestEventTarget* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

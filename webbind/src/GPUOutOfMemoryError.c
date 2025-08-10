@@ -1,6 +1,5 @@
 #include <webbind/GPUOutOfMemoryError.h>
 
-
 DEFINE_EMLITE_TYPE(GPUOutOfMemoryError, GPUError);
 
 

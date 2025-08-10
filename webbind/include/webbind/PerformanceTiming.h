@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(PerformanceTiming, em_Val);
 
@@ -50,3 +53,7 @@ long long PerformanceTiming_loadEventStart(const PerformanceTiming *self);
 long long PerformanceTiming_loadEventEnd(const PerformanceTiming *self);
 
 jb_Object PerformanceTiming_toJSON(PerformanceTiming* self );
+
+#ifdef __cplusplus
+}
+#endif

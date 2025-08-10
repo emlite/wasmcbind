@@ -4,12 +4,16 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct EventTarget EventTarget;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct TouchInit TouchInit;
+typedef struct EventTarget EventTarget;
 
 DECLARE_EMLITE_TYPE(Touch, em_Val);
 
-Touch Touch_new(jb_Any * touchInitDict);
+Touch Touch_new(TouchInit * touchInitDict);
 
 long Touch_identifier(const Touch *self);
 
@@ -40,3 +44,7 @@ float Touch_altitudeAngle(const Touch *self);
 float Touch_azimuthAngle(const Touch *self);
 
 TouchType Touch_touchType(const Touch *self);
+
+#ifdef __cplusplus
+}
+#endif

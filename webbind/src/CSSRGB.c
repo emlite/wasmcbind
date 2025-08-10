@@ -1,6 +1,5 @@
 #include <webbind/CSSRGB.h>
 
-
 DEFINE_EMLITE_TYPE(CSSRGB, CSSColorValue);
 
 

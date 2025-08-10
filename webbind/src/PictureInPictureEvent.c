@@ -1,11 +1,12 @@
 #include <webbind/PictureInPictureEvent.h>
-#include <webbind/PictureInPictureWindow.h>
 
+#include <webbind/PictureInPictureEventInit.h>
+#include <webbind/PictureInPictureWindow.h>
 
 DEFINE_EMLITE_TYPE(PictureInPictureEvent, Event);
 
 
-PictureInPictureEvent PictureInPictureEvent_new(jb_String * type, jb_Any * eventInitDict) {
+PictureInPictureEvent PictureInPictureEvent_new(jb_String * type, PictureInPictureEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("PictureInPictureEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return PictureInPictureEvent_from_val(&vv);
       }

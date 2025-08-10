@@ -1,6 +1,7 @@
 #include <webbind/PaymentRequestUpdateEvent.h>
-#include <webbind/PaymentRequest.h>
 
+#include <webbind/PaymentRequestUpdateEventInit.h>
+#include <webbind/PaymentDetailsUpdate.h>
 
 DEFINE_EMLITE_TYPE(PaymentRequestUpdateEvent, Event);
 
@@ -11,7 +12,7 @@ PaymentRequestUpdateEvent PaymentRequestUpdateEvent_new0(jb_String * type) {
       }
 
 
-PaymentRequestUpdateEvent PaymentRequestUpdateEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+PaymentRequestUpdateEvent PaymentRequestUpdateEvent_new1(jb_String * type, PaymentRequestUpdateEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("PaymentRequestUpdateEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return PaymentRequestUpdateEvent_from_val(&vv);
       }

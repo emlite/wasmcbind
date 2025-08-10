@@ -1,6 +1,6 @@
 #include <webbind/CookieStoreManager.h>
-#include <webbind/CookieStore.h>
 
+#include <webbind/CookieStoreGetOptions.h>
 
 DEFINE_EMLITE_TYPE(CookieStoreManager, em_Val);
 

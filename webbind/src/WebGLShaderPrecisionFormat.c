@@ -1,6 +1,5 @@
 #include <webbind/WebGLShaderPrecisionFormat.h>
 
-
 DEFINE_EMLITE_TYPE(WebGLShaderPrecisionFormat, em_Val);
 
 

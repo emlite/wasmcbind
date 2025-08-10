@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct HTMLFormElement HTMLFormElement;
 typedef struct ValidityState ValidityState;
 typedef struct NodeList NodeList;
-
 
 DECLARE_EMLITE_TYPE(HTMLTextAreaElement, HTMLElement);
 
@@ -111,3 +115,7 @@ jb_Undefined HTMLTextAreaElement_setRangeText1(HTMLTextAreaElement* self , jb_St
 jb_Undefined HTMLTextAreaElement_setSelectionRange0(HTMLTextAreaElement* self , unsigned long start, unsigned long end);
 
 jb_Undefined HTMLTextAreaElement_setSelectionRange1(HTMLTextAreaElement* self , unsigned long start, unsigned long end, jb_String * direction);
+
+#ifdef __cplusplus
+}
+#endif

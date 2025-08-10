@@ -1,6 +1,6 @@
 #include <webbind/ChildBreakToken.h>
-#include <webbind/LayoutChild.h>
 
+#include <webbind/LayoutChild.h>
 
 DEFINE_EMLITE_TYPE(ChildBreakToken, em_Val);
 

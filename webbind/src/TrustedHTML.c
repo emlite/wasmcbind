@@ -1,6 +1,5 @@
 #include <webbind/TrustedHTML.h>
 
-
 DEFINE_EMLITE_TYPE(TrustedHTML, em_Val);
 
 

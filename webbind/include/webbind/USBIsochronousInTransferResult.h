@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct USBIsochronousInTransferPacket USBIsochronousInTransferPacket;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct USBIsochronousInTransferPacket USBIsochronousInTransferPacket;
 
 DECLARE_EMLITE_TYPE(USBIsochronousInTransferResult, em_Val);
 
@@ -16,3 +19,7 @@ USBIsochronousInTransferResult USBIsochronousInTransferResult_new1(jb_Array * pa
 jb_DataView USBIsochronousInTransferResult_data(const USBIsochronousInTransferResult *self);
 
 jb_Array USBIsochronousInTransferResult_packets(const USBIsochronousInTransferResult *self);
+
+#ifdef __cplusplus
+}
+#endif

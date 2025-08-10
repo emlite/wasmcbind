@@ -1,6 +1,5 @@
 #include <webbind/SVGPathSegment.h>
 
-
 DEFINE_EMLITE_TYPE(SVGPathSegment, em_Val);
 
 

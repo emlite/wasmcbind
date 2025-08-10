@@ -1,6 +1,5 @@
 #include <webbind/CSSAnimation.h>
 
-
 DEFINE_EMLITE_TYPE(CSSAnimation, Animation);
 
 

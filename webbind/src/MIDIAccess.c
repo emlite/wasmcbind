@@ -1,7 +1,7 @@
 #include <webbind/MIDIAccess.h>
+
 #include <webbind/MIDIInputMap.h>
 #include <webbind/MIDIOutputMap.h>
-
 
 DEFINE_EMLITE_TYPE(MIDIAccess, EventTarget);
 

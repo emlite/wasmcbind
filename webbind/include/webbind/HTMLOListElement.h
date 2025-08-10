@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLOListElement, HTMLElement);
 
@@ -25,3 +29,7 @@ void HTMLOListElement_set_type(HTMLOListElement* self, jb_String * value);
 bool HTMLOListElement_compact(const HTMLOListElement *self);
 
 void HTMLOListElement_set_compact(HTMLOListElement* self, bool value);
+
+#ifdef __cplusplus
+}
+#endif

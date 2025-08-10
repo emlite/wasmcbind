@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(URLSearchParams, em_Val);
 
@@ -30,3 +33,7 @@ bool URLSearchParams_has1(URLSearchParams* self , jb_String * name, jb_String * 
 jb_Undefined URLSearchParams_set(URLSearchParams* self , jb_String * name, jb_String * value);
 
 jb_Undefined URLSearchParams_sort(URLSearchParams* self );
+
+#ifdef __cplusplus
+}
+#endif

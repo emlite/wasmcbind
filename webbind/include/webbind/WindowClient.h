@@ -2,11 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Client.h"
 #include "enums.h"
 
-typedef struct WindowClient WindowClient;
+#include "Client.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(WindowClient, Client);
 
@@ -19,3 +21,7 @@ jb_Array WindowClient_ancestorOrigins(const WindowClient *self);
 jb_Promise WindowClient_focus(WindowClient* self );
 
 jb_Promise WindowClient_navigate(WindowClient* self , jb_String * url);
+
+#ifdef __cplusplus
+}
+#endif

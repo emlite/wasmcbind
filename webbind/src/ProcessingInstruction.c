@@ -1,6 +1,6 @@
 #include <webbind/ProcessingInstruction.h>
-#include <webbind/CSSStyleSheet.h>
 
+#include <webbind/CSSStyleSheet.h>
 
 DEFINE_EMLITE_TYPE(ProcessingInstruction, CharacterData);
 

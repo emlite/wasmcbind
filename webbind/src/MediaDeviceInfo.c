@@ -1,6 +1,5 @@
 #include <webbind/MediaDeviceInfo.h>
 
-
 DEFINE_EMLITE_TYPE(MediaDeviceInfo, em_Val);
 
 

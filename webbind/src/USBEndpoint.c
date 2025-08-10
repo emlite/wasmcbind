@@ -1,6 +1,6 @@
 #include <webbind/USBEndpoint.h>
-#include <webbind/USBAlternateInterface.h>
 
+#include <webbind/USBAlternateInterface.h>
 
 DEFINE_EMLITE_TYPE(USBEndpoint, em_Val);
 

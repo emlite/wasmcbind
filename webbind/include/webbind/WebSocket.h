@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(WebSocket, EventTarget);
 
@@ -49,3 +53,7 @@ BinaryType WebSocket_binaryType(const WebSocket *self);
 void WebSocket_set_binaryType(WebSocket* self, BinaryType * value);
 
 jb_Undefined WebSocket_send(WebSocket* self , jb_Any * data);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,6 @@
 #include <webbind/TimeEvent.h>
-#include <webbind/Window.h>
 
+#include <webbind/Window.h>
 
 DEFINE_EMLITE_TYPE(TimeEvent, Event);
 

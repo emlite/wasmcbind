@@ -1,6 +1,5 @@
 #include <webbind/RadioNodeList.h>
 
-
 DEFINE_EMLITE_TYPE(RadioNodeList, NodeList);
 
 

@@ -2,27 +2,18 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct ServiceWorker ServiceWorker;
 typedef struct ServiceWorkerRegistration ServiceWorkerRegistration;
 typedef struct RegistrationOptions RegistrationOptions;
 
-
-DECLARE_EMLITE_TYPE(RegistrationOptions, em_Val);
-
-jb_String RegistrationOptions_scope(const RegistrationOptions *self);
-
-void RegistrationOptions_set_scope(RegistrationOptions* self, jb_String * value);
-
-WorkerType RegistrationOptions_type(const RegistrationOptions *self);
-
-void RegistrationOptions_set_type(RegistrationOptions* self, WorkerType * value);
-
-ServiceWorkerUpdateViaCache RegistrationOptions_updateViaCache(const RegistrationOptions *self);
-
-void RegistrationOptions_set_updateViaCache(RegistrationOptions* self, ServiceWorkerUpdateViaCache * value);
 DECLARE_EMLITE_TYPE(ServiceWorkerContainer, EventTarget);
 
 ServiceWorker ServiceWorkerContainer_controller(const ServiceWorkerContainer *self);
@@ -52,3 +43,7 @@ void ServiceWorkerContainer_set_onmessage(ServiceWorkerContainer* self, jb_Any *
 jb_Any ServiceWorkerContainer_onmessageerror(const ServiceWorkerContainer *self);
 
 void ServiceWorkerContainer_set_onmessageerror(ServiceWorkerContainer* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

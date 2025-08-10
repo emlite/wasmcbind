@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "WorkletGlobalScope.h"
 #include "enums.h"
 
-typedef struct MessagePort MessagePort;
+#include "WorkletGlobalScope.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct MessagePort MessagePort;
 
 DECLARE_EMLITE_TYPE(AudioWorkletGlobalScope, WorkletGlobalScope);
 
@@ -20,4 +24,8 @@ float AudioWorkletGlobalScope_sampleRate(const AudioWorkletGlobalScope *self);
 
 unsigned long AudioWorkletGlobalScope_renderQuantumSize(const AudioWorkletGlobalScope *self);
 
-jb_Any AudioWorkletGlobalScope_port(const AudioWorkletGlobalScope *self);
+MessagePort AudioWorkletGlobalScope_port(const AudioWorkletGlobalScope *self);
+
+#ifdef __cplusplus
+}
+#endif

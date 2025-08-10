@@ -1,6 +1,6 @@
 #include <webbind/AudioTrack.h>
-#include <webbind/SourceBuffer.h>
 
+#include <webbind/SourceBuffer.h>
 
 DEFINE_EMLITE_TYPE(AudioTrack, em_Val);
 

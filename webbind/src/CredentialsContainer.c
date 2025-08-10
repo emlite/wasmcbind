@@ -1,31 +1,8 @@
 #include <webbind/CredentialsContainer.h>
+
 #include <webbind/Credential.h>
-#include <webbind/PublicKeyCredential.h>
-
-
-DEFINE_EMLITE_TYPE(CredentialRequestOptions, em_Val);
-
-
-PublicKeyCredentialRequestOptions CredentialRequestOptions_publicKey(const CredentialRequestOptions *self) {
-    return em_Val_as(PublicKeyCredentialRequestOptions, em_Val_get(em_Val_as_val(self->inner), em_Val_from("publicKey")));
-}
-
-
-void CredentialRequestOptions_set_publicKey(CredentialRequestOptions* self, PublicKeyCredentialRequestOptions * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("publicKey"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(CredentialCreationOptions, em_Val);
-
-
-PublicKeyCredentialCreationOptions CredentialCreationOptions_publicKey(const CredentialCreationOptions *self) {
-    return em_Val_as(PublicKeyCredentialCreationOptions, em_Val_get(em_Val_as_val(self->inner), em_Val_from("publicKey")));
-}
-
-
-void CredentialCreationOptions_set_publicKey(CredentialCreationOptions* self, PublicKeyCredentialCreationOptions * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("publicKey"), em_Val_from(value));
-}
+#include <webbind/CredentialRequestOptions.h>
+#include <webbind/CredentialCreationOptions.h>
 
 DEFINE_EMLITE_TYPE(CredentialsContainer, em_Val);
 

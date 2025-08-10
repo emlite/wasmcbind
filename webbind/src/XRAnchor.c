@@ -1,6 +1,6 @@
 #include <webbind/XRAnchor.h>
-#include <webbind/XRSpace.h>
 
+#include <webbind/XRSpace.h>
 
 DEFINE_EMLITE_TYPE(XRAnchor, em_Val);
 

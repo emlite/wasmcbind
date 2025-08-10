@@ -1,10 +1,14 @@
 #pragma once
 
-#include "EventTarget.h"
-#include "enums.h"
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
+#include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(AbortSignal, EventTarget);
 
@@ -25,3 +29,7 @@ jb_Undefined AbortSignal_throwIfAborted(AbortSignal* self );
 jb_Any AbortSignal_onabort(const AbortSignal *self);
 
 void AbortSignal_set_onabort(AbortSignal* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

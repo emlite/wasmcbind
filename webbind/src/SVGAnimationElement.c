@@ -1,6 +1,6 @@
 #include <webbind/SVGAnimationElement.h>
-#include <webbind/SVGStringList.h>
 
+#include <webbind/SVGStringList.h>
 
 DEFINE_EMLITE_TYPE(SVGAnimationElement, SVGElement);
 

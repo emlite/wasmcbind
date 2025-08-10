@@ -1,12 +1,13 @@
 #include <webbind/XRInputSourcesChangeEvent.h>
+
+#include <webbind/XRInputSourcesChangeEventInit.h>
 #include <webbind/XRSession.h>
 #include <webbind/XRInputSource.h>
-
 
 DEFINE_EMLITE_TYPE(XRInputSourcesChangeEvent, Event);
 
 
-XRInputSourcesChangeEvent XRInputSourcesChangeEvent_new(jb_String * type, jb_Any * eventInitDict) {
+XRInputSourcesChangeEvent XRInputSourcesChangeEvent_new(jb_String * type, XRInputSourcesChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("XRInputSourcesChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return XRInputSourcesChangeEvent_from_val(&vv);
       }

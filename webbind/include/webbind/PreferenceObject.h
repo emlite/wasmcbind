@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(PreferenceObject, EventTarget);
 
@@ -21,3 +25,7 @@ jb_Promise PreferenceObject_requestOverride(PreferenceObject* self , jb_String *
 jb_Any PreferenceObject_onchange(const PreferenceObject *self);
 
 void PreferenceObject_set_onchange(PreferenceObject* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

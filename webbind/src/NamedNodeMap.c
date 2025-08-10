@@ -1,6 +1,6 @@
 #include <webbind/NamedNodeMap.h>
-#include <webbind/Attr.h>
 
+#include <webbind/Attr.h>
 
 DEFINE_EMLITE_TYPE(NamedNodeMap, em_Val);
 

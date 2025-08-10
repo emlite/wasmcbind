@@ -1,11 +1,13 @@
 #include <webbind/CSSPseudoElement.h>
+
 #include <webbind/Element.h>
 #include <webbind/DOMQuad.h>
-#include <webbind/Document.h>
+#include <webbind/BoxQuadOptions.h>
+#include <webbind/DOMQuadInit.h>
+#include <webbind/ConvertCoordinateOptions.h>
 #include <webbind/DOMRectReadOnly.h>
 #include <webbind/DOMPoint.h>
-#include <webbind/SVGGeometryElement.h>
-
+#include <webbind/DOMPointInit.h>
 
 DEFINE_EMLITE_TYPE(CSSPseudoElement, EventTarget);
 

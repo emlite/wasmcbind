@@ -1,10 +1,11 @@
 #include <webbind/EncodedAudioChunk.h>
 
+#include <webbind/EncodedAudioChunkInit.h>
 
 DEFINE_EMLITE_TYPE(EncodedAudioChunk, em_Val);
 
 
-EncodedAudioChunk EncodedAudioChunk_new(jb_Any * init) {
+EncodedAudioChunk EncodedAudioChunk_new(EncodedAudioChunkInit * init) {
         em_Val vv = em_Val_new(em_Val_global("EncodedAudioChunk") , em_Val_from(init));
         return EncodedAudioChunk_from_val(&vv);
       }

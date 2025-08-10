@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct Module Module;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct Module Module;
 
 DECLARE_EMLITE_TYPE(Instance, em_Val);
 
@@ -14,3 +17,7 @@ Instance Instance_new0(Module * module_);
 Instance Instance_new1(Module * module_, jb_Object * importObject);
 
 jb_Object Instance_exports(const Instance *self);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,16 +1,17 @@
 #include <webbind/RTCError.h>
 
+#include <webbind/RTCErrorInit.h>
 
 DEFINE_EMLITE_TYPE(RTCError, DOMException);
 
 
-RTCError RTCError_new0(jb_Any * init) {
+RTCError RTCError_new0(RTCErrorInit * init) {
         em_Val vv = em_Val_new(em_Val_global("RTCError") , em_Val_from(init));
         return RTCError_from_val(&vv);
       }
 
 
-RTCError RTCError_new1(jb_Any * init, jb_String * message) {
+RTCError RTCError_new1(RTCErrorInit * init, jb_String * message) {
         em_Val vv = em_Val_new(em_Val_global("RTCError") , em_Val_from(init), em_Val_from(message));
         return RTCError_from_val(&vv);
       }

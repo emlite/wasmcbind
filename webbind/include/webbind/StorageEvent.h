@@ -2,17 +2,22 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Event.h"
 #include "enums.h"
 
-typedef struct Storage Storage;
+#include "Event.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct StorageEventInit StorageEventInit;
+typedef struct Storage Storage;
 
 DECLARE_EMLITE_TYPE(StorageEvent, Event);
 
 StorageEvent StorageEvent_new0(jb_String * type);
 
-StorageEvent StorageEvent_new1(jb_String * type, jb_Any * eventInitDict);
+StorageEvent StorageEvent_new1(jb_String * type, StorageEventInit * eventInitDict);
 
 jb_String StorageEvent_key(const StorageEvent *self);
 
@@ -39,3 +44,7 @@ jb_Undefined StorageEvent_initStorageEvent5(StorageEvent* self , jb_String * typ
 jb_Undefined StorageEvent_initStorageEvent6(StorageEvent* self , jb_String * type, bool bubbles, bool cancelable, jb_String * key, jb_String * oldValue, jb_String * newValue, jb_String * url);
 
 jb_Undefined StorageEvent_initStorageEvent7(StorageEvent* self , jb_String * type, bool bubbles, bool cancelable, jb_String * key, jb_String * oldValue, jb_String * newValue, jb_String * url, Storage * storageArea);
+
+#ifdef __cplusplus
+}
+#endif

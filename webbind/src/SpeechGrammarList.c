@@ -1,6 +1,6 @@
 #include <webbind/SpeechGrammarList.h>
-#include <webbind/SpeechGrammar.h>
 
+#include <webbind/SpeechGrammar.h>
 
 DEFINE_EMLITE_TYPE(SpeechGrammarList, em_Val);
 

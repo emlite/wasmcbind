@@ -1,6 +1,5 @@
 #include <webbind/AuthenticatorAttestationResponse.h>
 
-
 DEFINE_EMLITE_TYPE(AuthenticatorAttestationResponse, AuthenticatorResponse);
 
 

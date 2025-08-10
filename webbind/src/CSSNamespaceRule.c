@@ -1,6 +1,5 @@
 #include <webbind/CSSNamespaceRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSNamespaceRule, CSSRule);
 
 

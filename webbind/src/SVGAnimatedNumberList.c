@@ -1,6 +1,6 @@
 #include <webbind/SVGAnimatedNumberList.h>
-#include <webbind/SVGNumberList.h>
 
+#include <webbind/SVGNumberList.h>
 
 DEFINE_EMLITE_TYPE(SVGAnimatedNumberList, em_Val);
 

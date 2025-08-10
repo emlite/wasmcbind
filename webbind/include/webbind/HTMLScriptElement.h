@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
-typedef struct DOMTokenList DOMTokenList;
+#include "HTMLElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct DOMTokenList DOMTokenList;
 
 DECLARE_EMLITE_TYPE(HTMLScriptElement, HTMLElement);
 
@@ -71,3 +75,7 @@ void HTMLScriptElement_set_htmlFor(HTMLScriptElement* self, jb_String * value);
 jb_String HTMLScriptElement_attributionSrc(const HTMLScriptElement *self);
 
 void HTMLScriptElement_set_attributionSrc(HTMLScriptElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

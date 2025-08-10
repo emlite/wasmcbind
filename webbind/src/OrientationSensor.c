@@ -1,6 +1,5 @@
 #include <webbind/OrientationSensor.h>
 
-
 DEFINE_EMLITE_TYPE(OrientationSensor, Sensor);
 
 

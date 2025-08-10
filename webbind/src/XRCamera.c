@@ -1,6 +1,5 @@
 #include <webbind/XRCamera.h>
 
-
 DEFINE_EMLITE_TYPE(XRCamera, em_Val);
 
 

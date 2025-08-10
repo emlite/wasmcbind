@@ -1,6 +1,5 @@
 #include <webbind/OTPCredential.h>
 
-
 DEFINE_EMLITE_TYPE(OTPCredential, Credential);
 
 

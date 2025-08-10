@@ -1,6 +1,6 @@
 #include <webbind/RTCIdentityProviderGlobalScope.h>
-#include <webbind/RTCIdentityProviderRegistrar.h>
 
+#include <webbind/RTCIdentityProviderRegistrar.h>
 
 DEFINE_EMLITE_TYPE(RTCIdentityProviderGlobalScope, WorkerGlobalScope);
 

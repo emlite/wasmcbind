@@ -2,15 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "DOMRectReadOnly.h"
 #include "enums.h"
 
-typedef struct DOMQuad DOMQuad;
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct DOMPointInit DOMPointInit;
+typedef struct DOMRectInit DOMRectInit;
+typedef struct DOMQuadInit DOMQuadInit;
 typedef struct DOMPoint DOMPoint;
 typedef struct DOMRect DOMRect;
-typedef struct DOMQuadInit DOMQuadInit;
-typedef struct DOMPointInit DOMPointInit;
-
 
 DECLARE_EMLITE_TYPE(DOMQuad, em_Val);
 
@@ -43,3 +45,7 @@ DOMPoint DOMQuad_p4(const DOMQuad *self);
 DOMRect DOMQuad_getBounds(DOMQuad* self );
 
 jb_Object DOMQuad_toJSON(DOMQuad* self );
+
+#ifdef __cplusplus
+}
+#endif

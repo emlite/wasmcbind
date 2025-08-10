@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
+
+#include "SVGElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedNumberList SVGAnimatedNumberList;
 typedef struct SVGAnimatedNumber SVGAnimatedNumber;
-
 
 DECLARE_EMLITE_TYPE(SVGComponentTransferFunctionElement, SVGElement);
 
@@ -25,3 +29,7 @@ SVGAnimatedNumber SVGComponentTransferFunctionElement_amplitude(const SVGCompone
 SVGAnimatedNumber SVGComponentTransferFunctionElement_exponent(const SVGComponentTransferFunctionElement *self);
 
 SVGAnimatedNumber SVGComponentTransferFunctionElement_offset(const SVGComponentTransferFunctionElement *self);
+
+#ifdef __cplusplus
+}
+#endif

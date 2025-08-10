@@ -1,4 +1,5 @@
 #include <webbind/WorkerNavigator.h>
+
 #include <webbind/MediaCapabilities.h>
 #include <webbind/Permissions.h>
 #include <webbind/Serial.h>
@@ -12,7 +13,6 @@
 #include <webbind/LockManager.h>
 #include <webbind/GPU.h>
 #include <webbind/ML.h>
-
 
 DEFINE_EMLITE_TYPE(WorkerNavigator, em_Val);
 

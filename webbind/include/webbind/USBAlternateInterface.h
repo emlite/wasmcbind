@@ -4,9 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct USBEndpoint USBEndpoint;
-typedef struct USBInterface USBInterface;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct USBInterface USBInterface;
+typedef struct USBEndpoint USBEndpoint;
 
 DECLARE_EMLITE_TYPE(USBAlternateInterface, em_Val);
 
@@ -23,3 +26,7 @@ unsigned char USBAlternateInterface_interfaceProtocol(const USBAlternateInterfac
 jb_String USBAlternateInterface_interfaceName(const USBAlternateInterface *self);
 
 jb_Array USBAlternateInterface_endpoints(const USBAlternateInterface *self);
+
+#ifdef __cplusplus
+}
+#endif

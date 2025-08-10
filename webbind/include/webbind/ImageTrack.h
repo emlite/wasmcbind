@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(ImageTrack, em_Val);
 
@@ -16,3 +19,7 @@ float ImageTrack_repetitionCount(const ImageTrack *self);
 bool ImageTrack_selected(const ImageTrack *self);
 
 void ImageTrack_set_selected(ImageTrack* self, bool value);
+
+#ifdef __cplusplus
+}
+#endif

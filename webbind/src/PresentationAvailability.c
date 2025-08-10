@@ -1,6 +1,5 @@
 #include <webbind/PresentationAvailability.h>
 
-
 DEFINE_EMLITE_TYPE(PresentationAvailability, EventTarget);
 
 

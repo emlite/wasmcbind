@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGGradientElement.h"
 #include "enums.h"
 
-typedef struct SVGAnimatedLength SVGAnimatedLength;
+#include "SVGGradientElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct SVGAnimatedLength SVGAnimatedLength;
 
 DECLARE_EMLITE_TYPE(SVGLinearGradientElement, SVGGradientElement);
 
@@ -17,3 +21,7 @@ SVGAnimatedLength SVGLinearGradientElement_y1(const SVGLinearGradientElement *se
 SVGAnimatedLength SVGLinearGradientElement_x2(const SVGLinearGradientElement *self);
 
 SVGAnimatedLength SVGLinearGradientElement_y2(const SVGLinearGradientElement *self);
+
+#ifdef __cplusplus
+}
+#endif

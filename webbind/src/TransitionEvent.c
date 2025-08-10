@@ -1,5 +1,6 @@
 #include <webbind/TransitionEvent.h>
 
+#include <webbind/TransitionEventInit.h>
 
 DEFINE_EMLITE_TYPE(TransitionEvent, Event);
 
@@ -10,7 +11,7 @@ TransitionEvent TransitionEvent_new0(jb_String * type) {
       }
 
 
-TransitionEvent TransitionEvent_new1(jb_String * type, jb_Any * transitionEventInitDict) {
+TransitionEvent TransitionEvent_new1(jb_String * type, TransitionEventInit * transitionEventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("TransitionEvent") , em_Val_from(type), em_Val_from(transitionEventInitDict));
         return TransitionEvent_from_val(&vv);
       }

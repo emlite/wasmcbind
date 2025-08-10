@@ -1,6 +1,7 @@
 #include <webbind/FontFaceSetLoadEvent.h>
-#include <webbind/FontFace.h>
 
+#include <webbind/FontFaceSetLoadEventInit.h>
+#include <webbind/FontFace.h>
 
 DEFINE_EMLITE_TYPE(FontFaceSetLoadEvent, Event);
 
@@ -11,7 +12,7 @@ FontFaceSetLoadEvent FontFaceSetLoadEvent_new0(jb_String * type) {
       }
 
 
-FontFaceSetLoadEvent FontFaceSetLoadEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+FontFaceSetLoadEvent FontFaceSetLoadEvent_new1(jb_String * type, FontFaceSetLoadEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("FontFaceSetLoadEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return FontFaceSetLoadEvent_from_val(&vv);
       }

@@ -1,6 +1,5 @@
 #include <webbind/GPUCommandBuffer.h>
 
-
 DEFINE_EMLITE_TYPE(GPUCommandBuffer, em_Val);
 
 

@@ -1,6 +1,6 @@
 #include <webbind/OES_vertex_array_object.h>
-#include <webbind/WebGLVertexArrayObjectOES.h>
 
+#include <webbind/WebGLVertexArrayObjectOES.h>
 
 DEFINE_EMLITE_TYPE(OES_vertex_array_object, em_Val);
 

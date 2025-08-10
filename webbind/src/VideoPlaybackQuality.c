@@ -1,6 +1,5 @@
 #include <webbind/VideoPlaybackQuality.h>
 
-
 DEFINE_EMLITE_TYPE(VideoPlaybackQuality, em_Val);
 
 

@@ -1,6 +1,7 @@
 #include <webbind/DeviceChangeEvent.h>
-#include <webbind/MediaDeviceInfo.h>
 
+#include <webbind/DeviceChangeEventInit.h>
+#include <webbind/MediaDeviceInfo.h>
 
 DEFINE_EMLITE_TYPE(DeviceChangeEvent, Event);
 
@@ -11,7 +12,7 @@ DeviceChangeEvent DeviceChangeEvent_new0(jb_String * type) {
       }
 
 
-DeviceChangeEvent DeviceChangeEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+DeviceChangeEvent DeviceChangeEvent_new1(jb_String * type, DeviceChangeEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("DeviceChangeEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return DeviceChangeEvent_from_val(&vv);
       }

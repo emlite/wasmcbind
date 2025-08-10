@@ -1,6 +1,5 @@
 #include <webbind/Lock.h>
 
-
 DEFINE_EMLITE_TYPE(Lock, em_Val);
 
 

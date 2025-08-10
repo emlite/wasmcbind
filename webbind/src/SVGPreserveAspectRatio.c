@@ -1,6 +1,5 @@
 #include <webbind/SVGPreserveAspectRatio.h>
 
-
 DEFINE_EMLITE_TYPE(SVGPreserveAspectRatio, em_Val);
 
 

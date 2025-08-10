@@ -1,6 +1,6 @@
 #include <webbind/GPURenderPipeline.h>
-#include <webbind/GPUBindGroupLayout.h>
 
+#include <webbind/GPUBindGroupLayout.h>
 
 DEFINE_EMLITE_TYPE(GPURenderPipeline, em_Val);
 

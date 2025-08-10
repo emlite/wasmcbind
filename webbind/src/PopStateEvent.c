@@ -1,5 +1,6 @@
 #include <webbind/PopStateEvent.h>
 
+#include <webbind/PopStateEventInit.h>
 
 DEFINE_EMLITE_TYPE(PopStateEvent, Event);
 
@@ -10,7 +11,7 @@ PopStateEvent PopStateEvent_new0(jb_String * type) {
       }
 
 
-PopStateEvent PopStateEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+PopStateEvent PopStateEvent_new1(jb_String * type, PopStateEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("PopStateEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return PopStateEvent_from_val(&vv);
       }

@@ -1,6 +1,5 @@
 #include <webbind/TimeRanges.h>
 
-
 DEFINE_EMLITE_TYPE(TimeRanges, em_Val);
 
 

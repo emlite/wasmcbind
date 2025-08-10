@@ -4,11 +4,18 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct SVGLengthList SVGLengthList;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct SVGLengthList SVGLengthList;
 
 DECLARE_EMLITE_TYPE(SVGAnimatedLengthList, em_Val);
 
 SVGLengthList SVGAnimatedLengthList_baseVal(const SVGAnimatedLengthList *self);
 
 SVGLengthList SVGAnimatedLengthList_animVal(const SVGAnimatedLengthList *self);
+
+#ifdef __cplusplus
+}
+#endif

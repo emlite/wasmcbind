@@ -1,6 +1,5 @@
 #include <webbind/FileSystemWritableFileStream.h>
 
-
 DEFINE_EMLITE_TYPE(FileSystemWritableFileStream, WritableStream);
 
 

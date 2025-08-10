@@ -1,6 +1,6 @@
 #include <webbind/AnimationNodeList.h>
-#include <webbind/AnimationEffect.h>
 
+#include <webbind/AnimationEffect.h>
 
 DEFINE_EMLITE_TYPE(AnimationNodeList, em_Val);
 

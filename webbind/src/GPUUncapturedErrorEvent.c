@@ -1,11 +1,12 @@
 #include <webbind/GPUUncapturedErrorEvent.h>
-#include <webbind/GPUError.h>
 
+#include <webbind/GPUUncapturedErrorEventInit.h>
+#include <webbind/GPUError.h>
 
 DEFINE_EMLITE_TYPE(GPUUncapturedErrorEvent, Event);
 
 
-GPUUncapturedErrorEvent GPUUncapturedErrorEvent_new(jb_String * type, jb_Any * gpuUncapturedErrorEventInitDict) {
+GPUUncapturedErrorEvent GPUUncapturedErrorEvent_new(jb_String * type, GPUUncapturedErrorEventInit * gpuUncapturedErrorEventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("GPUUncapturedErrorEvent") , em_Val_from(type), em_Val_from(gpuUncapturedErrorEventInitDict));
         return GPUUncapturedErrorEvent_from_val(&vv);
       }

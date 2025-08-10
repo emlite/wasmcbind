@@ -2,8 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Node.h"
 #include "enums.h"
+
+#include "Node.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct DOMImplementation DOMImplementation;
 typedef struct DocumentType DocumentType;
@@ -26,7 +31,6 @@ typedef struct CaretPosition CaretPosition;
 typedef struct CaretPositionFromPointOptions CaretPositionFromPointOptions;
 typedef struct FontMetrics FontMetrics;
 typedef struct StylePropertyMapReadOnly StylePropertyMapReadOnly;
-typedef struct Document Document;
 typedef struct Location Location;
 typedef struct HTMLElement HTMLElement;
 typedef struct HTMLHeadElement HTMLHeadElement;
@@ -43,54 +47,11 @@ typedef struct DOMQuadInit DOMQuadInit;
 typedef struct ConvertCoordinateOptions ConvertCoordinateOptions;
 typedef struct DOMRectReadOnly DOMRectReadOnly;
 typedef struct DOMPoint DOMPoint;
+typedef struct DOMPointInit DOMPointInit;
 typedef struct Animation Animation;
 typedef struct XPathExpression XPathExpression;
 typedef struct XPathResult XPathResult;
-typedef struct ShadowRoot ShadowRoot;
-typedef struct DOMPointInit DOMPointInit;
-typedef struct DOMQuadInit DOMQuadInit;
 
-
-DECLARE_EMLITE_TYPE(CaretPositionFromPointOptions, em_Val);
-
-jb_Array CaretPositionFromPointOptions_shadowRoots(const CaretPositionFromPointOptions *self);
-
-void CaretPositionFromPointOptions_set_shadowRoots(CaretPositionFromPointOptions* self, jb_Array * value);
-DECLARE_EMLITE_TYPE(BoxQuadOptions, em_Val);
-
-CSSBoxType BoxQuadOptions_box(const BoxQuadOptions *self);
-
-void BoxQuadOptions_set_box(BoxQuadOptions* self, CSSBoxType * value);
-
-jb_Any BoxQuadOptions_relativeTo(const BoxQuadOptions *self);
-
-void BoxQuadOptions_set_relativeTo(BoxQuadOptions* self, jb_Any * value);
-DECLARE_EMLITE_TYPE(DOMQuadInit, em_Val);
-
-DOMPointInit DOMQuadInit_p1(const DOMQuadInit *self);
-
-void DOMQuadInit_set_p1(DOMQuadInit* self, DOMPointInit * value);
-
-DOMPointInit DOMQuadInit_p2(const DOMQuadInit *self);
-
-void DOMQuadInit_set_p2(DOMQuadInit* self, DOMPointInit * value);
-
-DOMPointInit DOMQuadInit_p3(const DOMQuadInit *self);
-
-void DOMQuadInit_set_p3(DOMQuadInit* self, DOMPointInit * value);
-
-DOMPointInit DOMQuadInit_p4(const DOMQuadInit *self);
-
-void DOMQuadInit_set_p4(DOMQuadInit* self, DOMPointInit * value);
-DECLARE_EMLITE_TYPE(ConvertCoordinateOptions, em_Val);
-
-CSSBoxType ConvertCoordinateOptions_fromBox(const ConvertCoordinateOptions *self);
-
-void ConvertCoordinateOptions_set_fromBox(ConvertCoordinateOptions* self, CSSBoxType * value);
-
-CSSBoxType ConvertCoordinateOptions_toBox(const ConvertCoordinateOptions *self);
-
-void ConvertCoordinateOptions_set_toBox(ConvertCoordinateOptions* self, CSSBoxType * value);
 DECLARE_EMLITE_TYPE(Document, Node);
 
 Document Document_new();
@@ -203,7 +164,7 @@ void Document_set_onfullscreenerror(Document* self, jb_Any * value);
 
 Document Document_parseHTMLUnsafe(Document* self , jb_Any * html);
 
-jb_Any Document_location(const Document *self);
+Location Document_location(const Document *self);
 
 jb_String Document_domain(const Document *self);
 
@@ -434,3 +395,7 @@ XPathResult Document_evaluate3(Document* self , jb_String * expression, Node * c
 jb_Any Document_onbeforexrselect(const Document *self);
 
 void Document_set_onbeforexrselect(Document* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

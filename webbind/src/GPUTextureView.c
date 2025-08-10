@@ -1,6 +1,5 @@
 #include <webbind/GPUTextureView.h>
 
-
 DEFINE_EMLITE_TYPE(GPUTextureView, em_Val);
 
 

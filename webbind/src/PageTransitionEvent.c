@@ -1,5 +1,6 @@
 #include <webbind/PageTransitionEvent.h>
 
+#include <webbind/PageTransitionEventInit.h>
 
 DEFINE_EMLITE_TYPE(PageTransitionEvent, Event);
 
@@ -10,7 +11,7 @@ PageTransitionEvent PageTransitionEvent_new0(jb_String * type) {
       }
 
 
-PageTransitionEvent PageTransitionEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+PageTransitionEvent PageTransitionEvent_new1(jb_String * type, PageTransitionEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("PageTransitionEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return PageTransitionEvent_from_val(&vv);
       }

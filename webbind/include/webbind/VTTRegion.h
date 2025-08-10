@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(VTTRegion, em_Val);
 
@@ -40,3 +43,7 @@ void VTTRegion_set_viewportAnchorY(VTTRegion* self, double value);
 ScrollSetting VTTRegion_scroll(const VTTRegion *self);
 
 void VTTRegion_set_scroll(VTTRegion* self, ScrollSetting * value);
+
+#ifdef __cplusplus
+}
+#endif

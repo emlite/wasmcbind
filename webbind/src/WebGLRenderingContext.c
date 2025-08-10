@@ -1,6 +1,6 @@
 #include <webbind/WebGLRenderingContext.h>
-#include <webbind/WebGLUniformLocation.h>
 
+#include <webbind/WebGLUniformLocation.h>
 
 DEFINE_EMLITE_TYPE(WebGLRenderingContext, em_Val);
 

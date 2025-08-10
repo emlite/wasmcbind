@@ -1,6 +1,6 @@
 #include <webbind/PreferenceManager.h>
-#include <webbind/PreferenceObject.h>
 
+#include <webbind/PreferenceObject.h>
 
 DEFINE_EMLITE_TYPE(PreferenceManager, em_Val);
 

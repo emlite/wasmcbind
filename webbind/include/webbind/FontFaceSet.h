@@ -2,12 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct FontFaceSet FontFaceSet;
-typedef struct FontFace FontFace;
+#include "EventTarget.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct FontFace FontFace;
 
 DECLARE_EMLITE_TYPE(FontFaceSet, EventTarget);
 
@@ -40,3 +43,7 @@ bool FontFaceSet_check1(FontFaceSet* self , jb_String * font, jb_String * text);
 jb_Promise FontFaceSet_ready(const FontFaceSet *self);
 
 FontFaceSetLoadStatus FontFaceSet_status(const FontFaceSet *self);
+
+#ifdef __cplusplus
+}
+#endif

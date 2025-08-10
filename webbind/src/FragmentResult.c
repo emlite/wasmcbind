@@ -1,5 +1,6 @@
 #include <webbind/FragmentResult.h>
 
+#include <webbind/FragmentResultOptions.h>
 
 DEFINE_EMLITE_TYPE(FragmentResult, em_Val);
 
@@ -10,7 +11,7 @@ FragmentResult FragmentResult_new0() {
       }
 
 
-FragmentResult FragmentResult_new1(jb_Any * options) {
+FragmentResult FragmentResult_new1(FragmentResultOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("FragmentResult") , em_Val_from(options));
         return FragmentResult_from_val(&vv);
       }

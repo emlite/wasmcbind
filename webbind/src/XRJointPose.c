@@ -1,6 +1,5 @@
 #include <webbind/XRJointPose.h>
 
-
 DEFINE_EMLITE_TYPE(XRJointPose, XRPose);
 
 

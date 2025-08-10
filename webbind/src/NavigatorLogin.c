@@ -1,6 +1,5 @@
 #include <webbind/NavigatorLogin.h>
 
-
 DEFINE_EMLITE_TYPE(NavigatorLogin, em_Val);
 
 

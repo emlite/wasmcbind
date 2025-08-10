@@ -4,10 +4,13 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct XPathExpression XPathExpression;
 typedef struct Node Node;
 typedef struct XPathResult XPathResult;
-
 
 DECLARE_EMLITE_TYPE(XPathEvaluator, em_Val);
 
@@ -26,3 +29,7 @@ XPathResult XPathEvaluator_evaluate1(XPathEvaluator* self , jb_String * expressi
 XPathResult XPathEvaluator_evaluate2(XPathEvaluator* self , jb_String * expression, Node * contextNode, jb_Function * resolver, unsigned short type);
 
 XPathResult XPathEvaluator_evaluate3(XPathEvaluator* self , jb_String * expression, Node * contextNode, jb_Function * resolver, unsigned short type, XPathResult * result);
+
+#ifdef __cplusplus
+}
+#endif

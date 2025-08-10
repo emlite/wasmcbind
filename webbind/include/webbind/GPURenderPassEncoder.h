@@ -4,11 +4,14 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct GPURenderBundle GPURenderBundle;
 typedef struct GPUBindGroup GPUBindGroup;
 typedef struct GPURenderPipeline GPURenderPipeline;
 typedef struct GPUBuffer GPUBuffer;
-
 
 DECLARE_EMLITE_TYPE(GPURenderPassEncoder, em_Val);
 
@@ -75,3 +78,7 @@ jb_Undefined GPURenderPassEncoder_drawIndexed4(GPURenderPassEncoder* self , jb_A
 jb_Undefined GPURenderPassEncoder_drawIndirect(GPURenderPassEncoder* self , GPUBuffer * indirectBuffer, jb_Any * indirectOffset);
 
 jb_Undefined GPURenderPassEncoder_drawIndexedIndirect(GPURenderPassEncoder* self , GPUBuffer * indirectBuffer, jb_Any * indirectOffset);
+
+#ifdef __cplusplus
+}
+#endif

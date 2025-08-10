@@ -2,18 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
-#include "MessagePort.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct PortalActivateOptions PortalActivateOptions;
+typedef struct StructuredSerializeOptions StructuredSerializeOptions;
 
-
-DECLARE_EMLITE_TYPE(PortalActivateOptions, em_Val);
-
-jb_Any PortalActivateOptions_data(const PortalActivateOptions *self);
-
-void PortalActivateOptions_set_data(PortalActivateOptions* self, jb_Any * value);
 DECLARE_EMLITE_TYPE(HTMLPortalElement, HTMLElement);
 
 HTMLPortalElement HTMLPortalElement_new();
@@ -41,3 +40,7 @@ void HTMLPortalElement_set_onmessage(HTMLPortalElement* self, jb_Any * value);
 jb_Any HTMLPortalElement_onmessageerror(const HTMLPortalElement *self);
 
 void HTMLPortalElement_set_onmessageerror(HTMLPortalElement* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,6 +1,6 @@
 #include <webbind/SVGNumberList.h>
-#include <webbind/SVGNumber.h>
 
+#include <webbind/SVGNumber.h>
 
 DEFINE_EMLITE_TYPE(SVGNumberList, em_Val);
 

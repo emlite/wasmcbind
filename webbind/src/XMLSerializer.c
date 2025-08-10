@@ -1,6 +1,6 @@
 #include <webbind/XMLSerializer.h>
-#include <webbind/Node.h>
 
+#include <webbind/Node.h>
 
 DEFINE_EMLITE_TYPE(XMLSerializer, em_Val);
 

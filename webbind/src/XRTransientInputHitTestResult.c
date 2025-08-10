@@ -1,7 +1,7 @@
 #include <webbind/XRTransientInputHitTestResult.h>
+
 #include <webbind/XRInputSource.h>
 #include <webbind/XRHitTestResult.h>
-
 
 DEFINE_EMLITE_TYPE(XRTransientInputHitTestResult, em_Val);
 

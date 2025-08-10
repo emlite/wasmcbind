@@ -1,6 +1,6 @@
 #include <webbind/CSSPageRule.h>
-#include <webbind/CSSPageDescriptors.h>
 
+#include <webbind/CSSPageDescriptors.h>
 
 DEFINE_EMLITE_TYPE(CSSPageRule, CSSGroupingRule);
 

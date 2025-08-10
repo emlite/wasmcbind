@@ -1,10 +1,11 @@
 #include <webbind/ContentIndexEvent.h>
 
+#include <webbind/ContentIndexEventInit.h>
 
 DEFINE_EMLITE_TYPE(ContentIndexEvent, ExtendableEvent);
 
 
-ContentIndexEvent ContentIndexEvent_new(jb_String * type, jb_Any * init) {
+ContentIndexEvent ContentIndexEvent_new(jb_String * type, ContentIndexEventInit * init) {
         em_Val vv = em_Val_new(em_Val_global("ContentIndexEvent") , em_Val_from(type), em_Val_from(init));
         return ContentIndexEvent_from_val(&vv);
       }

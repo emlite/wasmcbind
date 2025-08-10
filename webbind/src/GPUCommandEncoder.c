@@ -1,131 +1,15 @@
 #include <webbind/GPUCommandEncoder.h>
+
 #include <webbind/GPURenderPassEncoder.h>
+#include <webbind/GPURenderPassDescriptor.h>
 #include <webbind/GPUComputePassEncoder.h>
+#include <webbind/GPUComputePassDescriptor.h>
 #include <webbind/GPUBuffer.h>
+#include <webbind/GPUTexelCopyBufferInfo.h>
+#include <webbind/GPUTexelCopyTextureInfo.h>
 #include <webbind/GPUQuerySet.h>
 #include <webbind/GPUCommandBuffer.h>
-#include <webbind/GPUTexture.h>
-
-
-DEFINE_EMLITE_TYPE(GPURenderPassDescriptor, em_Val);
-
-
-jb_Array GPURenderPassDescriptor_colorAttachments(const GPURenderPassDescriptor *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("colorAttachments")));
-}
-
-
-void GPURenderPassDescriptor_set_colorAttachments(GPURenderPassDescriptor* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("colorAttachments"), em_Val_from(value));
-}
-
-
-jb_Any GPURenderPassDescriptor_depthStencilAttachment(const GPURenderPassDescriptor *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("depthStencilAttachment")));
-}
-
-
-void GPURenderPassDescriptor_set_depthStencilAttachment(GPURenderPassDescriptor* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("depthStencilAttachment"), em_Val_from(value));
-}
-
-
-GPUQuerySet GPURenderPassDescriptor_occlusionQuerySet(const GPURenderPassDescriptor *self) {
-    return em_Val_as(GPUQuerySet, em_Val_get(em_Val_as_val(self->inner), em_Val_from("occlusionQuerySet")));
-}
-
-
-void GPURenderPassDescriptor_set_occlusionQuerySet(GPURenderPassDescriptor* self, GPUQuerySet * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("occlusionQuerySet"), em_Val_from(value));
-}
-
-
-jb_Any GPURenderPassDescriptor_timestampWrites(const GPURenderPassDescriptor *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("timestampWrites")));
-}
-
-
-void GPURenderPassDescriptor_set_timestampWrites(GPURenderPassDescriptor* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("timestampWrites"), em_Val_from(value));
-}
-
-
-jb_Any GPURenderPassDescriptor_maxDrawCount(const GPURenderPassDescriptor *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("maxDrawCount")));
-}
-
-
-void GPURenderPassDescriptor_set_maxDrawCount(GPURenderPassDescriptor* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("maxDrawCount"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(GPUComputePassDescriptor, em_Val);
-
-
-jb_Any GPUComputePassDescriptor_timestampWrites(const GPUComputePassDescriptor *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("timestampWrites")));
-}
-
-
-void GPUComputePassDescriptor_set_timestampWrites(GPUComputePassDescriptor* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("timestampWrites"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(GPUTexelCopyBufferInfo, em_Val);
-
-
-GPUBuffer GPUTexelCopyBufferInfo_buffer(const GPUTexelCopyBufferInfo *self) {
-    return em_Val_as(GPUBuffer, em_Val_get(em_Val_as_val(self->inner), em_Val_from("buffer")));
-}
-
-
-void GPUTexelCopyBufferInfo_set_buffer(GPUTexelCopyBufferInfo* self, GPUBuffer * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("buffer"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(GPUTexelCopyTextureInfo, em_Val);
-
-
-GPUTexture GPUTexelCopyTextureInfo_texture(const GPUTexelCopyTextureInfo *self) {
-    return em_Val_as(GPUTexture, em_Val_get(em_Val_as_val(self->inner), em_Val_from("texture")));
-}
-
-
-void GPUTexelCopyTextureInfo_set_texture(GPUTexelCopyTextureInfo* self, GPUTexture * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("texture"), em_Val_from(value));
-}
-
-
-jb_Any GPUTexelCopyTextureInfo_mipLevel(const GPUTexelCopyTextureInfo *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("mipLevel")));
-}
-
-
-void GPUTexelCopyTextureInfo_set_mipLevel(GPUTexelCopyTextureInfo* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("mipLevel"), em_Val_from(value));
-}
-
-
-jb_Any GPUTexelCopyTextureInfo_origin(const GPUTexelCopyTextureInfo *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("origin")));
-}
-
-
-void GPUTexelCopyTextureInfo_set_origin(GPUTexelCopyTextureInfo* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("origin"), em_Val_from(value));
-}
-
-
-GPUTextureAspect GPUTexelCopyTextureInfo_aspect(const GPUTexelCopyTextureInfo *self) {
-    return em_Val_as(GPUTextureAspect, em_Val_get(em_Val_as_val(self->inner), em_Val_from("aspect")));
-}
-
-
-void GPUTexelCopyTextureInfo_set_aspect(GPUTexelCopyTextureInfo* self, GPUTextureAspect * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("aspect"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(GPUCommandBufferDescriptor, em_Val);
+#include <webbind/GPUCommandBufferDescriptor.h>
 
 DEFINE_EMLITE_TYPE(GPUCommandEncoder, em_Val);
 

@@ -2,16 +2,22 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
-#include "SVGGeometryElement.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct Element Element;
-typedef struct CSSPseudoElement CSSPseudoElement;
 typedef struct DOMQuad DOMQuad;
+typedef struct BoxQuadOptions BoxQuadOptions;
+typedef struct DOMQuadInit DOMQuadInit;
+typedef struct ConvertCoordinateOptions ConvertCoordinateOptions;
 typedef struct DOMRectReadOnly DOMRectReadOnly;
 typedef struct DOMPoint DOMPoint;
-
+typedef struct DOMPointInit DOMPointInit;
 
 DECLARE_EMLITE_TYPE(CSSPseudoElement, EventTarget);
 
@@ -38,3 +44,7 @@ DOMQuad CSSPseudoElement_convertRectFromNode1(CSSPseudoElement* self , DOMRectRe
 DOMPoint CSSPseudoElement_convertPointFromNode0(CSSPseudoElement* self , DOMPointInit * point, jb_Any * from);
 
 DOMPoint CSSPseudoElement_convertPointFromNode1(CSSPseudoElement* self , DOMPointInit * point, jb_Any * from, ConvertCoordinateOptions * options);
+
+#ifdef __cplusplus
+}
+#endif

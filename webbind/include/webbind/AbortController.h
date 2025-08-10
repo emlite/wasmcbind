@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct AbortSignal AbortSignal;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct AbortSignal AbortSignal;
 
 DECLARE_EMLITE_TYPE(AbortController, em_Val);
 
@@ -16,3 +19,7 @@ AbortSignal AbortController_signal(const AbortController *self);
 jb_Undefined AbortController_abort0(AbortController* self );
 
 jb_Undefined AbortController_abort1(AbortController* self , jb_Any * reason);
+
+#ifdef __cplusplus
+}
+#endif

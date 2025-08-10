@@ -1,7 +1,8 @@
 #include <webbind/EditContext.h>
+
+#include <webbind/EditContextInit.h>
 #include <webbind/DOMRect.h>
 #include <webbind/HTMLElement.h>
-
 
 DEFINE_EMLITE_TYPE(EditContext, EventTarget);
 
@@ -12,7 +13,7 @@ EditContext EditContext_new0() {
       }
 
 
-EditContext EditContext_new1(jb_Any * options) {
+EditContext EditContext_new1(EditContextInit * options) {
         em_Val vv = em_Val_new(em_Val_global("EditContext") , em_Val_from(options));
         return EditContext_from_val(&vv);
       }

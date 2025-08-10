@@ -1,6 +1,7 @@
 #include <webbind/MIDIConnectionEvent.h>
-#include <webbind/MIDIPort.h>
 
+#include <webbind/MIDIConnectionEventInit.h>
+#include <webbind/MIDIPort.h>
 
 DEFINE_EMLITE_TYPE(MIDIConnectionEvent, Event);
 
@@ -11,7 +12,7 @@ MIDIConnectionEvent MIDIConnectionEvent_new0(jb_String * type) {
       }
 
 
-MIDIConnectionEvent MIDIConnectionEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+MIDIConnectionEvent MIDIConnectionEvent_new1(jb_String * type, MIDIConnectionEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("MIDIConnectionEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return MIDIConnectionEvent_from_val(&vv);
       }

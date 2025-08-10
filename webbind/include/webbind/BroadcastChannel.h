@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(BroadcastChannel, EventTarget);
 
@@ -23,3 +27,7 @@ void BroadcastChannel_set_onmessage(BroadcastChannel* self, jb_Any * value);
 jb_Any BroadcastChannel_onmessageerror(const BroadcastChannel *self);
 
 void BroadcastChannel_set_onmessageerror(BroadcastChannel* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

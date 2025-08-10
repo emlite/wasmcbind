@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "AnimationEffect.h"
 #include "enums.h"
 
-typedef struct Element Element;
+#include "AnimationEffect.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct Element Element;
 
 DECLARE_EMLITE_TYPE(KeyframeEffect, AnimationEffect);
 
@@ -31,3 +35,7 @@ jb_Undefined KeyframeEffect_setKeyframes(KeyframeEffect* self , jb_Object * keyf
 IterationCompositeOperation KeyframeEffect_iterationComposite(const KeyframeEffect *self);
 
 void KeyframeEffect_set_iterationComposite(KeyframeEffect* self, IterationCompositeOperation * value);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,94 +1,11 @@
 #include <webbind/GPUQueue.h>
+
 #include <webbind/GPUCommandBuffer.h>
 #include <webbind/GPUBuffer.h>
-#include <webbind/GPUCommandEncoder.h>
-
-
-DEFINE_EMLITE_TYPE(GPUTexelCopyBufferLayout, em_Val);
-
-
-jb_Any GPUTexelCopyBufferLayout_offset(const GPUTexelCopyBufferLayout *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("offset")));
-}
-
-
-void GPUTexelCopyBufferLayout_set_offset(GPUTexelCopyBufferLayout* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("offset"), em_Val_from(value));
-}
-
-
-jb_Any GPUTexelCopyBufferLayout_bytesPerRow(const GPUTexelCopyBufferLayout *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("bytesPerRow")));
-}
-
-
-void GPUTexelCopyBufferLayout_set_bytesPerRow(GPUTexelCopyBufferLayout* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("bytesPerRow"), em_Val_from(value));
-}
-
-
-jb_Any GPUTexelCopyBufferLayout_rowsPerImage(const GPUTexelCopyBufferLayout *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("rowsPerImage")));
-}
-
-
-void GPUTexelCopyBufferLayout_set_rowsPerImage(GPUTexelCopyBufferLayout* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("rowsPerImage"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(GPUCopyExternalImageSourceInfo, em_Val);
-
-
-jb_Any GPUCopyExternalImageSourceInfo_source(const GPUCopyExternalImageSourceInfo *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("source")));
-}
-
-
-void GPUCopyExternalImageSourceInfo_set_source(GPUCopyExternalImageSourceInfo* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("source"), em_Val_from(value));
-}
-
-
-jb_Any GPUCopyExternalImageSourceInfo_origin(const GPUCopyExternalImageSourceInfo *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("origin")));
-}
-
-
-void GPUCopyExternalImageSourceInfo_set_origin(GPUCopyExternalImageSourceInfo* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("origin"), em_Val_from(value));
-}
-
-
-bool GPUCopyExternalImageSourceInfo_flipY(const GPUCopyExternalImageSourceInfo *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("flipY")));
-}
-
-
-void GPUCopyExternalImageSourceInfo_set_flipY(GPUCopyExternalImageSourceInfo* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("flipY"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(GPUCopyExternalImageDestInfo, em_Val);
-
-
-PredefinedColorSpace GPUCopyExternalImageDestInfo_colorSpace(const GPUCopyExternalImageDestInfo *self) {
-    return em_Val_as(PredefinedColorSpace, em_Val_get(em_Val_as_val(self->inner), em_Val_from("colorSpace")));
-}
-
-
-void GPUCopyExternalImageDestInfo_set_colorSpace(GPUCopyExternalImageDestInfo* self, PredefinedColorSpace * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("colorSpace"), em_Val_from(value));
-}
-
-
-bool GPUCopyExternalImageDestInfo_premultipliedAlpha(const GPUCopyExternalImageDestInfo *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("premultipliedAlpha")));
-}
-
-
-void GPUCopyExternalImageDestInfo_set_premultipliedAlpha(GPUCopyExternalImageDestInfo* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("premultipliedAlpha"), em_Val_from(value));
-}
+#include <webbind/GPUTexelCopyTextureInfo.h>
+#include <webbind/GPUTexelCopyBufferLayout.h>
+#include <webbind/GPUCopyExternalImageSourceInfo.h>
+#include <webbind/GPUCopyExternalImageDestInfo.h>
 
 DEFINE_EMLITE_TYPE(GPUQueue, em_Val);
 

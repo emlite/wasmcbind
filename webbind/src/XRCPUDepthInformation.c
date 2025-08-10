@@ -1,6 +1,5 @@
 #include <webbind/XRCPUDepthInformation.h>
 
-
 DEFINE_EMLITE_TYPE(XRCPUDepthInformation, XRDepthInformation);
 
 

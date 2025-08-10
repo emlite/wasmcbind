@@ -1,10 +1,11 @@
 #include <webbind/SpeechRecognitionErrorEvent.h>
 
+#include <webbind/SpeechRecognitionErrorEventInit.h>
 
 DEFINE_EMLITE_TYPE(SpeechRecognitionErrorEvent, Event);
 
 
-SpeechRecognitionErrorEvent SpeechRecognitionErrorEvent_new(jb_String * type, jb_Any * eventInitDict) {
+SpeechRecognitionErrorEvent SpeechRecognitionErrorEvent_new(jb_String * type, SpeechRecognitionErrorEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("SpeechRecognitionErrorEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return SpeechRecognitionErrorEvent_from_val(&vv);
       }

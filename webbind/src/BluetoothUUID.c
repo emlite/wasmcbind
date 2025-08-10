@@ -1,6 +1,5 @@
 #include <webbind/BluetoothUUID.h>
 
-
 DEFINE_EMLITE_TYPE(BluetoothUUID, em_Val);
 
 

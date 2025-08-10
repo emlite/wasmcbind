@@ -1,7 +1,7 @@
 #include <webbind/XRRenderState.h>
+
 #include <webbind/XRWebGLLayer.h>
 #include <webbind/XRLayer.h>
-
 
 DEFINE_EMLITE_TYPE(XRRenderState, em_Val);
 

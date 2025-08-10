@@ -1,6 +1,6 @@
 #include <webbind/GeolocationPosition.h>
-#include <webbind/GeolocationCoordinates.h>
 
+#include <webbind/GeolocationCoordinates.h>
 
 DEFINE_EMLITE_TYPE(GeolocationPosition, em_Val);
 

@@ -1,8 +1,9 @@
 #include <webbind/FontFace.h>
+
+#include <webbind/FontFaceDescriptors.h>
 #include <webbind/FontFaceFeatures.h>
 #include <webbind/FontFaceVariations.h>
 #include <webbind/FontFacePalettes.h>
-
 
 DEFINE_EMLITE_TYPE(FontFace, em_Val);
 
@@ -13,7 +14,7 @@ FontFace FontFace_new0(jb_String * family, jb_Any * source) {
       }
 
 
-FontFace FontFace_new1(jb_String * family, jb_Any * source, jb_Any * descriptors) {
+FontFace FontFace_new1(jb_String * family, jb_Any * source, FontFaceDescriptors * descriptors) {
         em_Val vv = em_Val_new(em_Val_global("FontFace") , em_Val_from(family), em_Val_from(source), em_Val_from(descriptors));
         return FontFace_from_val(&vv);
       }

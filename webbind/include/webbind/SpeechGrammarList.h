@@ -4,8 +4,11 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct SpeechGrammar SpeechGrammar;
+#ifdef __cplusplus
+extern "C" {
+#endif
 
+typedef struct SpeechGrammar SpeechGrammar;
 
 DECLARE_EMLITE_TYPE(SpeechGrammarList, em_Val);
 
@@ -22,3 +25,7 @@ jb_Undefined SpeechGrammarList_addFromURI1(SpeechGrammarList* self , jb_String *
 jb_Undefined SpeechGrammarList_addFromString0(SpeechGrammarList* self , jb_String * string);
 
 jb_Undefined SpeechGrammarList_addFromString1(SpeechGrammarList* self , jb_String * string, float weight);
+
+#ifdef __cplusplus
+}
+#endif

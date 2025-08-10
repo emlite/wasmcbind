@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(PermissionStatus, EventTarget);
 
@@ -15,3 +19,7 @@ jb_String PermissionStatus_name(const PermissionStatus *self);
 jb_Any PermissionStatus_onchange(const PermissionStatus *self);
 
 void PermissionStatus_set_onchange(PermissionStatus* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

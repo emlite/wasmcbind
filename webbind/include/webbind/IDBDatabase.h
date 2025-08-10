@@ -2,8 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct DOMStringList DOMStringList;
 typedef struct IDBTransaction IDBTransaction;
@@ -11,21 +16,6 @@ typedef struct IDBTransactionOptions IDBTransactionOptions;
 typedef struct IDBObjectStore IDBObjectStore;
 typedef struct IDBObjectStoreParameters IDBObjectStoreParameters;
 
-
-DECLARE_EMLITE_TYPE(IDBTransactionOptions, em_Val);
-
-IDBTransactionDurability IDBTransactionOptions_durability(const IDBTransactionOptions *self);
-
-void IDBTransactionOptions_set_durability(IDBTransactionOptions* self, IDBTransactionDurability * value);
-DECLARE_EMLITE_TYPE(IDBObjectStoreParameters, em_Val);
-
-jb_Any IDBObjectStoreParameters_keyPath(const IDBObjectStoreParameters *self);
-
-void IDBObjectStoreParameters_set_keyPath(IDBObjectStoreParameters* self, jb_Any * value);
-
-bool IDBObjectStoreParameters_autoIncrement(const IDBObjectStoreParameters *self);
-
-void IDBObjectStoreParameters_set_autoIncrement(IDBObjectStoreParameters* self, bool value);
 DECLARE_EMLITE_TYPE(IDBDatabase, EventTarget);
 
 jb_String IDBDatabase_name(const IDBDatabase *self);
@@ -63,3 +53,7 @@ void IDBDatabase_set_onerror(IDBDatabase* self, jb_Any * value);
 jb_Any IDBDatabase_onversionchange(const IDBDatabase *self);
 
 void IDBDatabase_set_onversionchange(IDBDatabase* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

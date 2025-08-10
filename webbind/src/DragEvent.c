@@ -1,6 +1,7 @@
 #include <webbind/DragEvent.h>
-#include <webbind/DataTransfer.h>
 
+#include <webbind/DragEventInit.h>
+#include <webbind/DataTransfer.h>
 
 DEFINE_EMLITE_TYPE(DragEvent, MouseEvent);
 
@@ -11,7 +12,7 @@ DragEvent DragEvent_new0(jb_String * type) {
       }
 
 
-DragEvent DragEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+DragEvent DragEvent_new1(jb_String * type, DragEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("DragEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return DragEvent_from_val(&vv);
       }

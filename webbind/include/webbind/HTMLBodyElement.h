@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLBodyElement, HTMLElement);
 
@@ -41,3 +45,7 @@ void HTMLBodyElement_set_background(HTMLBodyElement* self, jb_String * value);
 jb_Any HTMLBodyElement_onportalactivate(const HTMLBodyElement *self);
 
 void HTMLBodyElement_set_onportalactivate(HTMLBodyElement* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

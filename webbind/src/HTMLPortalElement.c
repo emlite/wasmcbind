@@ -1,18 +1,7 @@
 #include <webbind/HTMLPortalElement.h>
-#include <webbind/MessagePort.h>
 
-
-DEFINE_EMLITE_TYPE(PortalActivateOptions, em_Val);
-
-
-jb_Any PortalActivateOptions_data(const PortalActivateOptions *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("data")));
-}
-
-
-void PortalActivateOptions_set_data(PortalActivateOptions* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("data"), em_Val_from(value));
-}
+#include <webbind/PortalActivateOptions.h>
+#include <webbind/StructuredSerializeOptions.h>
 
 DEFINE_EMLITE_TYPE(HTMLPortalElement, HTMLElement);
 

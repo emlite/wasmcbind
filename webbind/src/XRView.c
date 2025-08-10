@@ -1,7 +1,7 @@
 #include <webbind/XRView.h>
+
 #include <webbind/XRCamera.h>
 #include <webbind/XRRigidTransform.h>
-
 
 DEFINE_EMLITE_TYPE(XRView, em_Val);
 

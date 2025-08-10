@@ -2,8 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct HTMLFormElement HTMLFormElement;
 typedef struct FileList FileList;
@@ -12,7 +17,6 @@ typedef struct ValidityState ValidityState;
 typedef struct NodeList NodeList;
 typedef struct FileSystemEntry FileSystemEntry;
 typedef struct Element Element;
-
 
 DECLARE_EMLITE_TYPE(HTMLInputElement, HTMLElement);
 
@@ -237,3 +241,7 @@ void HTMLInputElement_set_popoverTargetElement(HTMLInputElement* self, Element *
 jb_String HTMLInputElement_popoverTargetAction(const HTMLInputElement *self);
 
 void HTMLInputElement_set_popoverTargetAction(HTMLInputElement* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

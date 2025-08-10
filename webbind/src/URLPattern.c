@@ -1,97 +1,7 @@
 #include <webbind/URLPattern.h>
 
-
-DEFINE_EMLITE_TYPE(URLPatternResult, em_Val);
-
-
-jb_Array URLPatternResult_inputs(const URLPatternResult *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("inputs")));
-}
-
-
-void URLPatternResult_set_inputs(URLPatternResult* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("inputs"), em_Val_from(value));
-}
-
-
-jb_Any URLPatternResult_protocol(const URLPatternResult *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("protocol")));
-}
-
-
-void URLPatternResult_set_protocol(URLPatternResult* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("protocol"), em_Val_from(value));
-}
-
-
-jb_Any URLPatternResult_username(const URLPatternResult *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("username")));
-}
-
-
-void URLPatternResult_set_username(URLPatternResult* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("username"), em_Val_from(value));
-}
-
-
-jb_Any URLPatternResult_password(const URLPatternResult *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("password")));
-}
-
-
-void URLPatternResult_set_password(URLPatternResult* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("password"), em_Val_from(value));
-}
-
-
-jb_Any URLPatternResult_hostname(const URLPatternResult *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hostname")));
-}
-
-
-void URLPatternResult_set_hostname(URLPatternResult* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("hostname"), em_Val_from(value));
-}
-
-
-jb_Any URLPatternResult_port(const URLPatternResult *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("port")));
-}
-
-
-void URLPatternResult_set_port(URLPatternResult* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("port"), em_Val_from(value));
-}
-
-
-jb_Any URLPatternResult_pathname(const URLPatternResult *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("pathname")));
-}
-
-
-void URLPatternResult_set_pathname(URLPatternResult* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("pathname"), em_Val_from(value));
-}
-
-
-jb_Any URLPatternResult_search(const URLPatternResult *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("search")));
-}
-
-
-void URLPatternResult_set_search(URLPatternResult* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("search"), em_Val_from(value));
-}
-
-
-jb_Any URLPatternResult_hash(const URLPatternResult *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("hash")));
-}
-
-
-void URLPatternResult_set_hash(URLPatternResult* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("hash"), em_Val_from(value));
-}
+#include <webbind/URLPatternOptions.h>
+#include <webbind/URLPatternResult.h>
 
 DEFINE_EMLITE_TYPE(URLPattern, em_Val);
 
@@ -108,7 +18,7 @@ URLPattern URLPattern_new1(jb_Any * input) {
       }
 
 
-URLPattern URLPattern_new2(jb_Any * input, jb_Any * options) {
+URLPattern URLPattern_new2(jb_Any * input, URLPatternOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("URLPattern") , em_Val_from(input), em_Val_from(options));
         return URLPattern_from_val(&vv);
       }

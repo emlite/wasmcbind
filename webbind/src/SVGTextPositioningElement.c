@@ -1,7 +1,7 @@
 #include <webbind/SVGTextPositioningElement.h>
+
 #include <webbind/SVGAnimatedLengthList.h>
 #include <webbind/SVGAnimatedNumberList.h>
-
 
 DEFINE_EMLITE_TYPE(SVGTextPositioningElement, SVGTextContentElement);
 

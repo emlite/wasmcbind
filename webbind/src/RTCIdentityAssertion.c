@@ -1,6 +1,5 @@
 #include <webbind/RTCIdentityAssertion.h>
 
-
 DEFINE_EMLITE_TYPE(RTCIdentityAssertion, em_Val);
 
 

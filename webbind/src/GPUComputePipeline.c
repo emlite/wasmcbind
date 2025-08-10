@@ -1,6 +1,6 @@
 #include <webbind/GPUComputePipeline.h>
-#include <webbind/GPUBindGroupLayout.h>
 
+#include <webbind/GPUBindGroupLayout.h>
 
 DEFINE_EMLITE_TYPE(GPUComputePipeline, em_Val);
 

@@ -2,12 +2,16 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGGraphicsElement.h"
 #include "enums.h"
+
+#include "SVGGraphicsElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedString SVGAnimatedString;
 typedef struct DOMTokenList DOMTokenList;
-
 
 DECLARE_EMLITE_TYPE(SVGAElement, SVGGraphicsElement);
 
@@ -82,3 +86,7 @@ jb_String SVGAElement_hash(const SVGAElement *self);
 void SVGAElement_set_hash(SVGAElement* self, jb_String * value);
 
 SVGAnimatedString SVGAElement_href(const SVGAElement *self);
+
+#ifdef __cplusplus
+}
+#endif

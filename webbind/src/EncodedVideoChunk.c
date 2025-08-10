@@ -1,10 +1,11 @@
 #include <webbind/EncodedVideoChunk.h>
 
+#include <webbind/EncodedVideoChunkInit.h>
 
 DEFINE_EMLITE_TYPE(EncodedVideoChunk, em_Val);
 
 
-EncodedVideoChunk EncodedVideoChunk_new(jb_Any * init) {
+EncodedVideoChunk EncodedVideoChunk_new(EncodedVideoChunkInit * init) {
         em_Val vv = em_Val_new(em_Val_global("EncodedVideoChunk") , em_Val_from(init));
         return EncodedVideoChunk_from_val(&vv);
       }

@@ -1,6 +1,6 @@
 #include <webbind/Highlight.h>
-#include <webbind/AbstractRange.h>
 
+#include <webbind/AbstractRange.h>
 
 DEFINE_EMLITE_TYPE(Highlight, em_Val);
 

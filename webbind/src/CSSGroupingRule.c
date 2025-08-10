@@ -1,6 +1,6 @@
 #include <webbind/CSSGroupingRule.h>
-#include <webbind/CSSRuleList.h>
 
+#include <webbind/CSSRuleList.h>
 
 DEFINE_EMLITE_TYPE(CSSGroupingRule, CSSRule);
 

@@ -1,4 +1,5 @@
 #include <webbind/Window.h>
+
 #include <webbind/Document.h>
 #include <webbind/Location.h>
 #include <webbind/History.h>
@@ -7,21 +8,26 @@
 #include <webbind/BarProp.h>
 #include <webbind/Element.h>
 #include <webbind/Navigator.h>
+#include <webbind/WindowPostMessageOptions.h>
 #include <webbind/CookieStore.h>
 #include <webbind/Viewport.h>
 #include <webbind/MediaQueryList.h>
 #include <webbind/Screen.h>
 #include <webbind/VisualViewport.h>
-#include <webbind/CSSStyleDeclaration.h>
 #include <webbind/CSSStyleProperties.h>
 #include <webbind/DigitalGoodsService.h>
 #include <webbind/DocumentPictureInPicture.h>
 #include <webbind/Fence.h>
 #include <webbind/FileSystemFileHandle.h>
+#include <webbind/OpenFilePickerOptions.h>
+#include <webbind/SaveFilePickerOptions.h>
 #include <webbind/FileSystemDirectoryHandle.h>
+#include <webbind/DirectoryPickerOptions.h>
 #include <webbind/External.h>
 #include <webbind/FontData.h>
+#include <webbind/QueryOptions.h>
 #include <webbind/PortalHost.h>
+#include <webbind/IdleRequestOptions.h>
 #include <webbind/Selection.h>
 #include <webbind/SharedStorage.h>
 #include <webbind/SpeechSynthesis.h>
@@ -29,99 +35,6 @@
 #include <webbind/ScreenDetails.h>
 #include <webbind/Crypto.h>
 #include <webbind/Storage.h>
-
-
-DEFINE_EMLITE_TYPE(WindowPostMessageOptions, em_Val);
-
-
-jb_String WindowPostMessageOptions_targetOrigin(const WindowPostMessageOptions *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("targetOrigin")));
-}
-
-
-void WindowPostMessageOptions_set_targetOrigin(WindowPostMessageOptions* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("targetOrigin"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(OpenFilePickerOptions, em_Val);
-
-
-bool OpenFilePickerOptions_multiple(const OpenFilePickerOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("multiple")));
-}
-
-
-void OpenFilePickerOptions_set_multiple(OpenFilePickerOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("multiple"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(SaveFilePickerOptions, em_Val);
-
-
-jb_String SaveFilePickerOptions_suggestedName(const SaveFilePickerOptions *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("suggestedName")));
-}
-
-
-void SaveFilePickerOptions_set_suggestedName(SaveFilePickerOptions* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("suggestedName"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(DirectoryPickerOptions, em_Val);
-
-
-jb_String DirectoryPickerOptions_id(const DirectoryPickerOptions *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("id")));
-}
-
-
-void DirectoryPickerOptions_set_id(DirectoryPickerOptions* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("id"), em_Val_from(value));
-}
-
-
-jb_Any DirectoryPickerOptions_startIn(const DirectoryPickerOptions *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("startIn")));
-}
-
-
-void DirectoryPickerOptions_set_startIn(DirectoryPickerOptions* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("startIn"), em_Val_from(value));
-}
-
-
-FileSystemPermissionMode DirectoryPickerOptions_mode(const DirectoryPickerOptions *self) {
-    return em_Val_as(FileSystemPermissionMode, em_Val_get(em_Val_as_val(self->inner), em_Val_from("mode")));
-}
-
-
-void DirectoryPickerOptions_set_mode(DirectoryPickerOptions* self, FileSystemPermissionMode * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("mode"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(QueryOptions, em_Val);
-
-
-jb_Array QueryOptions_postscriptNames(const QueryOptions *self) {
-    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("postscriptNames")));
-}
-
-
-void QueryOptions_set_postscriptNames(QueryOptions* self, jb_Array * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("postscriptNames"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(IdleRequestOptions, em_Val);
-
-
-unsigned long IdleRequestOptions_timeout(const IdleRequestOptions *self) {
-    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("timeout")));
-}
-
-
-void IdleRequestOptions_set_timeout(IdleRequestOptions* self, unsigned long value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("timeout"), em_Val_from(value));
-}
 
 DEFINE_EMLITE_TYPE(Window, EventTarget);
 
@@ -151,8 +64,8 @@ void Window_set_name(Window* self, jb_String * value) {
 }
 
 
-jb_Any Window_location(const Window *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("location")));
+Location Window_location(const Window *self) {
+    return em_Val_as(Location, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("location")));
 }
 
 

@@ -1,6 +1,6 @@
 #include <webbind/XRProjectionLayer.h>
-#include <webbind/XRRigidTransform.h>
 
+#include <webbind/XRRigidTransform.h>
 
 DEFINE_EMLITE_TYPE(XRProjectionLayer, XRCompositionLayer);
 

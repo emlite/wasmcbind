@@ -1,6 +1,6 @@
 #include <webbind/ImageBitmapRenderingContext.h>
-#include <webbind/ImageBitmap.h>
 
+#include <webbind/ImageBitmap.h>
 
 DEFINE_EMLITE_TYPE(ImageBitmapRenderingContext, em_Val);
 

@@ -1,6 +1,6 @@
 #include <webbind/SharedWorker.h>
-#include <webbind/MessagePort.h>
 
+#include <webbind/MessagePort.h>
 
 DEFINE_EMLITE_TYPE(SharedWorker, EventTarget);
 
@@ -17,8 +17,8 @@ SharedWorker SharedWorker_new1(jb_Any * scriptURL, jb_Any * options) {
       }
 
 
-jb_Any SharedWorker_port(const SharedWorker *self) {
-    return em_Val_as(jb_Any, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("port")));
+MessagePort SharedWorker_port(const SharedWorker *self) {
+    return em_Val_as(MessagePort, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("port")));
 }
 
 

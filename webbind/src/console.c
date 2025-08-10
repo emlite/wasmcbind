@@ -1,6 +1,5 @@
 #include <webbind/console.h>
 
-
 jb_Undefined console_assert0() {
     return em_Val_as(jb_Undefined, em_Val_call(em_Val_global("console"), "assert"));
 }

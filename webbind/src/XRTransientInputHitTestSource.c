@@ -1,6 +1,5 @@
 #include <webbind/XRTransientInputHitTestSource.h>
 
-
 DEFINE_EMLITE_TYPE(XRTransientInputHitTestSource, em_Val);
 
 

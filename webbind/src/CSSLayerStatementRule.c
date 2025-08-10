@@ -1,6 +1,5 @@
 #include <webbind/CSSLayerStatementRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSLayerStatementRule, CSSRule);
 
 

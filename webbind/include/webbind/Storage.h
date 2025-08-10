@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(Storage, em_Val);
 
@@ -18,3 +21,7 @@ jb_Undefined Storage_setItem(Storage* self , jb_String * key, jb_String * value)
 jb_Undefined Storage_removeItem(Storage* self , jb_String * key);
 
 jb_Undefined Storage_clear(Storage* self );
+
+#ifdef __cplusplus
+}
+#endif

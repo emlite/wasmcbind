@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(RTCDTMFSender, EventTarget);
 
@@ -21,3 +25,7 @@ void RTCDTMFSender_set_ontonechange(RTCDTMFSender* self, jb_Any * value);
 bool RTCDTMFSender_canInsertDTMF(const RTCDTMFSender *self);
 
 jb_String RTCDTMFSender_toneBuffer(const RTCDTMFSender *self);
+
+#ifdef __cplusplus
+}
+#endif

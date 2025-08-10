@@ -1,6 +1,6 @@
 #include <webbind/TouchList.h>
-#include <webbind/Touch.h>
 
+#include <webbind/Touch.h>
 
 DEFINE_EMLITE_TYPE(TouchList, em_Val);
 

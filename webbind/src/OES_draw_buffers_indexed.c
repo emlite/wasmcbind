@@ -1,6 +1,5 @@
 #include <webbind/OES_draw_buffers_indexed.h>
 
-
 DEFINE_EMLITE_TYPE(OES_draw_buffers_indexed, em_Val);
 
 

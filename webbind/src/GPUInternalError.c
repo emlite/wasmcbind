@@ -1,6 +1,5 @@
 #include <webbind/GPUInternalError.h>
 
-
 DEFINE_EMLITE_TYPE(GPUInternalError, GPUError);
 
 

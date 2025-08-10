@@ -1,5 +1,6 @@
 #include <webbind/AnimationEvent.h>
 
+#include <webbind/AnimationEventInit.h>
 
 DEFINE_EMLITE_TYPE(AnimationEvent, Event);
 
@@ -10,7 +11,7 @@ AnimationEvent AnimationEvent_new0(jb_String * type) {
       }
 
 
-AnimationEvent AnimationEvent_new1(jb_String * type, jb_Any * animationEventInitDict) {
+AnimationEvent AnimationEvent_new1(jb_String * type, AnimationEventInit * animationEventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("AnimationEvent") , em_Val_from(type), em_Val_from(animationEventInitDict));
         return AnimationEvent_from_val(&vv);
       }

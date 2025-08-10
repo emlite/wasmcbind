@@ -1,6 +1,5 @@
 #include <webbind/GamepadButton.h>
 
-
 DEFINE_EMLITE_TYPE(GamepadButton, em_Val);
 
 

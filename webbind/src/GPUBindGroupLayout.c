@@ -1,6 +1,5 @@
 #include <webbind/GPUBindGroupLayout.h>
 
-
 DEFINE_EMLITE_TYPE(GPUBindGroupLayout, em_Val);
 
 

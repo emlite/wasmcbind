@@ -2,23 +2,21 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Element.h"
-#include "SVGElement.h"
 #include "enums.h"
+
+#include "Element.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct ElementInternals ElementInternals;
 typedef struct ShowPopoverOptions ShowPopoverOptions;
 typedef struct EditContext EditContext;
-typedef struct CSSStyleDeclaration CSSStyleDeclaration;
+typedef struct CSSStyleProperties CSSStyleProperties;
 typedef struct DOMStringMap DOMStringMap;
-typedef struct HTMLElement HTMLElement;
+typedef struct FocusOptions FocusOptions;
 
-
-DECLARE_EMLITE_TYPE(ShowPopoverOptions, em_Val);
-
-HTMLElement ShowPopoverOptions_source(const ShowPopoverOptions *self);
-
-void ShowPopoverOptions_set_source(ShowPopoverOptions* self, HTMLElement * value);
 DECLARE_EMLITE_TYPE(HTMLElement, Element);
 
 HTMLElement HTMLElement_new();
@@ -144,3 +142,7 @@ jb_Undefined HTMLElement_focus0(HTMLElement* self );
 jb_Undefined HTMLElement_focus1(HTMLElement* self , FocusOptions * options);
 
 jb_Undefined HTMLElement_blur(HTMLElement* self );
+
+#ifdef __cplusplus
+}
+#endif

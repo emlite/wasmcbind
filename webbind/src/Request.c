@@ -1,10 +1,11 @@
 #include <webbind/Request.h>
+
+#include <webbind/RequestInit.h>
 #include <webbind/Headers.h>
 #include <webbind/AbortSignal.h>
 #include <webbind/ReadableStream.h>
 #include <webbind/Blob.h>
 #include <webbind/FormData.h>
-
 
 DEFINE_EMLITE_TYPE(Request, em_Val);
 
@@ -15,7 +16,7 @@ Request Request_new0(jb_Any * input) {
       }
 
 
-Request Request_new1(jb_Any * input, jb_Any * init) {
+Request Request_new1(jb_Any * input, RequestInit * init) {
         em_Val vv = em_Val_new(em_Val_global("Request") , em_Val_from(input), em_Val_from(init));
         return Request_from_val(&vv);
       }

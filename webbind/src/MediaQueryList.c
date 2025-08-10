@@ -1,6 +1,5 @@
 #include <webbind/MediaQueryList.h>
 
-
 DEFINE_EMLITE_TYPE(MediaQueryList, EventTarget);
 
 

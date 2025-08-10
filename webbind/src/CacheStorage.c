@@ -1,18 +1,7 @@
 #include <webbind/CacheStorage.h>
+
+#include <webbind/MultiCacheQueryOptions.h>
 #include <webbind/Cache.h>
-
-
-DEFINE_EMLITE_TYPE(MultiCacheQueryOptions, em_Val);
-
-
-jb_String MultiCacheQueryOptions_cacheName(const MultiCacheQueryOptions *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("cacheName")));
-}
-
-
-void MultiCacheQueryOptions_set_cacheName(MultiCacheQueryOptions* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("cacheName"), em_Val_from(value));
-}
 
 DEFINE_EMLITE_TYPE(CacheStorage, em_Val);
 

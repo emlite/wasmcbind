@@ -2,8 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
+
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct MediaError MediaError;
 typedef struct TimeRanges TimeRanges;
@@ -14,7 +19,6 @@ typedef struct TextTrack TextTrack;
 typedef struct MediaKeys MediaKeys;
 typedef struct MediaStream MediaStream;
 typedef struct RemotePlayback RemotePlayback;
-
 
 DECLARE_EMLITE_TYPE(HTMLMediaElement, HTMLElement);
 
@@ -143,3 +147,7 @@ RemotePlayback HTMLMediaElement_remote(const HTMLMediaElement *self);
 bool HTMLMediaElement_disableRemotePlayback(const HTMLMediaElement *self);
 
 void HTMLMediaElement_set_disableRemotePlayback(HTMLMediaElement* self, bool value);
+
+#ifdef __cplusplus
+}
+#endif

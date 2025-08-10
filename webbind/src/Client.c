@@ -1,6 +1,6 @@
 #include <webbind/Client.h>
-#include <webbind/MessagePort.h>
 
+#include <webbind/StructuredSerializeOptions.h>
 
 DEFINE_EMLITE_TYPE(Client, em_Val);
 

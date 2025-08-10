@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
+
+#include "SVGElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct SVGAnimatedEnumeration SVGAnimatedEnumeration;
 typedef struct SVGAnimatedLength SVGAnimatedLength;
 typedef struct SVGAnimatedString SVGAnimatedString;
-
 
 DECLARE_EMLITE_TYPE(SVGFilterElement, SVGElement);
 
@@ -25,3 +29,7 @@ SVGAnimatedLength SVGFilterElement_width(const SVGFilterElement *self);
 SVGAnimatedLength SVGFilterElement_height(const SVGFilterElement *self);
 
 SVGAnimatedString SVGFilterElement_href(const SVGFilterElement *self);
+
+#ifdef __cplusplus
+}
+#endif

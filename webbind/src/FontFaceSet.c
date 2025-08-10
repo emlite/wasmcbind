@@ -1,6 +1,6 @@
 #include <webbind/FontFaceSet.h>
-#include <webbind/FontFace.h>
 
+#include <webbind/FontFace.h>
 
 DEFINE_EMLITE_TYPE(FontFaceSet, EventTarget);
 

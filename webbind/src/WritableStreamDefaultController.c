@@ -1,6 +1,6 @@
 #include <webbind/WritableStreamDefaultController.h>
-#include <webbind/AbortSignal.h>
 
+#include <webbind/AbortSignal.h>
 
 DEFINE_EMLITE_TYPE(WritableStreamDefaultController, em_Val);
 

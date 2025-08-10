@@ -4,6 +4,9 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(OES_draw_buffers_indexed, em_Val);
 
@@ -20,3 +23,7 @@ jb_Undefined OES_draw_buffers_indexed_blendFunciOES(OES_draw_buffers_indexed* se
 jb_Undefined OES_draw_buffers_indexed_blendFuncSeparateiOES(OES_draw_buffers_indexed* self , jb_Any * buf, jb_Any * srcRGB, jb_Any * dstRGB, jb_Any * srcAlpha, jb_Any * dstAlpha);
 
 jb_Undefined OES_draw_buffers_indexed_colorMaskiOES(OES_draw_buffers_indexed* self , jb_Any * buf, jb_Any * r, jb_Any * g, jb_Any * b, jb_Any * a);
+
+#ifdef __cplusplus
+}
+#endif

@@ -2,14 +2,23 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Event.h"
 #include "enums.h"
 
-typedef struct RTCError RTCError;
+#include "Event.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct RTCErrorEventInit RTCErrorEventInit;
+typedef struct RTCError RTCError;
 
 DECLARE_EMLITE_TYPE(RTCErrorEvent, Event);
 
-RTCErrorEvent RTCErrorEvent_new(jb_String * type, jb_Any * eventInitDict);
+RTCErrorEvent RTCErrorEvent_new(jb_String * type, RTCErrorEventInit * eventInitDict);
 
 RTCError RTCErrorEvent_error(const RTCErrorEvent *self);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,43 +1,12 @@
 #include <webbind/SharedStorage.h>
+
+#include <webbind/SharedStorageSetMethodOptions.h>
+#include <webbind/SharedStorageModifierMethodOptions.h>
 #include <webbind/SharedStorageModifierMethod.h>
+#include <webbind/SharedStorageUrlWithMetadata.h>
+#include <webbind/SharedStorageRunOperationMethodOptions.h>
 #include <webbind/SharedStorageWorklet.h>
-
-
-DEFINE_EMLITE_TYPE(SharedStorageSetMethodOptions, em_Val);
-
-
-bool SharedStorageSetMethodOptions_ignoreIfPresent(const SharedStorageSetMethodOptions *self) {
-    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("ignoreIfPresent")));
-}
-
-
-void SharedStorageSetMethodOptions_set_ignoreIfPresent(SharedStorageSetMethodOptions* self, bool value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("ignoreIfPresent"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(SharedStorageModifierMethodOptions, em_Val);
-
-
-jb_String SharedStorageModifierMethodOptions_withLock(const SharedStorageModifierMethodOptions *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("withLock")));
-}
-
-
-void SharedStorageModifierMethodOptions_set_withLock(SharedStorageModifierMethodOptions* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("withLock"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(SharedStorageWorkletOptions, em_Val);
-
-
-jb_String SharedStorageWorkletOptions_dataOrigin(const SharedStorageWorkletOptions *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dataOrigin")));
-}
-
-
-void SharedStorageWorkletOptions_set_dataOrigin(SharedStorageWorkletOptions* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("dataOrigin"), em_Val_from(value));
-}
+#include <webbind/SharedStorageWorkletOptions.h>
 
 DEFINE_EMLITE_TYPE(SharedStorage, em_Val);
 

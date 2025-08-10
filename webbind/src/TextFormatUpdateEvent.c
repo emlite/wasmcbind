@@ -1,6 +1,7 @@
 #include <webbind/TextFormatUpdateEvent.h>
-#include <webbind/TextFormat.h>
 
+#include <webbind/TextFormatUpdateEventInit.h>
+#include <webbind/TextFormat.h>
 
 DEFINE_EMLITE_TYPE(TextFormatUpdateEvent, Event);
 
@@ -11,7 +12,7 @@ TextFormatUpdateEvent TextFormatUpdateEvent_new0(jb_String * type) {
       }
 
 
-TextFormatUpdateEvent TextFormatUpdateEvent_new1(jb_String * type, jb_Any * options) {
+TextFormatUpdateEvent TextFormatUpdateEvent_new1(jb_String * type, TextFormatUpdateEventInit * options) {
         em_Val vv = em_Val_new(em_Val_global("TextFormatUpdateEvent") , em_Val_from(type), em_Val_from(options));
         return TextFormatUpdateEvent_from_val(&vv);
       }

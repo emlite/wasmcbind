@@ -1,6 +1,6 @@
 #include <webbind/VideoTrackList.h>
-#include <webbind/VideoTrack.h>
 
+#include <webbind/VideoTrack.h>
 
 DEFINE_EMLITE_TYPE(VideoTrackList, EventTarget);
 

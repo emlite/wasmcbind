@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "HTMLElement.h"
 #include "enums.h"
 
+#include "HTMLElement.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(HTMLDialogElement, HTMLElement);
 
@@ -33,3 +37,7 @@ jb_Undefined HTMLDialogElement_close1(HTMLDialogElement* self , jb_String * retu
 jb_Undefined HTMLDialogElement_requestClose0(HTMLDialogElement* self );
 
 jb_Undefined HTMLDialogElement_requestClose1(HTMLDialogElement* self , jb_String * returnValue);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,10 +1,9 @@
 #include <webbind/PaintWorkletGlobalScope.h>
 
-
 DEFINE_EMLITE_TYPE(PaintWorkletGlobalScope, WorkletGlobalScope);
 
 
-jb_Undefined PaintWorkletGlobalScope_registerPaint(PaintWorkletGlobalScope* self , jb_String * name, jb_Any * paintCtor) {
+jb_Undefined PaintWorkletGlobalScope_registerPaint(PaintWorkletGlobalScope* self , jb_String * name, jb_Function * paintCtor) {
     return em_Val_as(jb_Undefined, em_Val_call(WorkletGlobalScope_as_val(self->inner), "registerPaint", em_Val_from(name), em_Val_from(paintCtor)));
 }
 

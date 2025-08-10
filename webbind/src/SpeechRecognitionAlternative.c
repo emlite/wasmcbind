@@ -1,6 +1,5 @@
 #include <webbind/SpeechRecognitionAlternative.h>
 
-
 DEFINE_EMLITE_TYPE(SpeechRecognitionAlternative, em_Val);
 
 

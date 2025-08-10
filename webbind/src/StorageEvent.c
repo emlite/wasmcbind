@@ -1,6 +1,7 @@
 #include <webbind/StorageEvent.h>
-#include <webbind/Storage.h>
 
+#include <webbind/StorageEventInit.h>
+#include <webbind/Storage.h>
 
 DEFINE_EMLITE_TYPE(StorageEvent, Event);
 
@@ -11,7 +12,7 @@ StorageEvent StorageEvent_new0(jb_String * type) {
       }
 
 
-StorageEvent StorageEvent_new1(jb_String * type, jb_Any * eventInitDict) {
+StorageEvent StorageEvent_new1(jb_String * type, StorageEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("StorageEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return StorageEvent_from_val(&vv);
       }

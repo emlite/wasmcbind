@@ -1,7 +1,7 @@
 #include <webbind/CaretPosition.h>
+
 #include <webbind/Node.h>
 #include <webbind/DOMRect.h>
-
 
 DEFINE_EMLITE_TYPE(CaretPosition, em_Val);
 

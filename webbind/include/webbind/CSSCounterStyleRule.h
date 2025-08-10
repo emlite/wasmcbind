@@ -2,9 +2,13 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "CSSRule.h"
 #include "enums.h"
 
+#include "CSSRule.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 DECLARE_EMLITE_TYPE(CSSCounterStyleRule, CSSRule);
 
@@ -51,3 +55,7 @@ void CSSCounterStyleRule_set_speakAs(CSSCounterStyleRule* self, jb_String * valu
 jb_String CSSCounterStyleRule_fallback(const CSSCounterStyleRule *self);
 
 void CSSCounterStyleRule_set_fallback(CSSCounterStyleRule* self, jb_String * value);
+
+#ifdef __cplusplus
+}
+#endif

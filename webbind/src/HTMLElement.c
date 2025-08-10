@@ -1,23 +1,11 @@
 #include <webbind/HTMLElement.h>
+
 #include <webbind/ElementInternals.h>
+#include <webbind/ShowPopoverOptions.h>
 #include <webbind/EditContext.h>
-#include <webbind/CSSStyleDeclaration.h>
 #include <webbind/CSSStyleProperties.h>
 #include <webbind/DOMStringMap.h>
-#include <webbind/SVGElement.h>
-
-
-DEFINE_EMLITE_TYPE(ShowPopoverOptions, em_Val);
-
-
-HTMLElement ShowPopoverOptions_source(const ShowPopoverOptions *self) {
-    return em_Val_as(HTMLElement, em_Val_get(em_Val_as_val(self->inner), em_Val_from("source")));
-}
-
-
-void ShowPopoverOptions_set_source(ShowPopoverOptions* self, HTMLElement * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("source"), em_Val_from(value));
-}
+#include <webbind/FocusOptions.h>
 
 DEFINE_EMLITE_TYPE(HTMLElement, Element);
 

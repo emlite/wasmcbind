@@ -1,6 +1,7 @@
 #include <webbind/ScrollTimeline.h>
-#include <webbind/Element.h>
 
+#include <webbind/ScrollTimelineOptions.h>
+#include <webbind/Element.h>
 
 DEFINE_EMLITE_TYPE(ScrollTimeline, AnimationTimeline);
 
@@ -11,7 +12,7 @@ ScrollTimeline ScrollTimeline_new0() {
       }
 
 
-ScrollTimeline ScrollTimeline_new1(jb_Any * options) {
+ScrollTimeline ScrollTimeline_new1(ScrollTimelineOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("ScrollTimeline") , em_Val_from(options));
         return ScrollTimeline_from_val(&vv);
       }

@@ -1,10 +1,11 @@
 #include <webbind/ByteLengthQueuingStrategy.h>
 
+#include <webbind/QueuingStrategyInit.h>
 
 DEFINE_EMLITE_TYPE(ByteLengthQueuingStrategy, em_Val);
 
 
-ByteLengthQueuingStrategy ByteLengthQueuingStrategy_new(jb_Any * init) {
+ByteLengthQueuingStrategy ByteLengthQueuingStrategy_new(QueuingStrategyInit * init) {
         em_Val vv = em_Val_new(em_Val_global("ByteLengthQueuingStrategy") , em_Val_from(init));
         return ByteLengthQueuingStrategy_from_val(&vv);
       }

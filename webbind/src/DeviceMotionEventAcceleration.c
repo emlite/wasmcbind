@@ -1,6 +1,5 @@
 #include <webbind/DeviceMotionEventAcceleration.h>
 
-
 DEFINE_EMLITE_TYPE(DeviceMotionEventAcceleration, em_Val);
 
 

@@ -1,60 +1,8 @@
 #include <webbind/PaymentResponse.h>
+
 #include <webbind/ContactAddress.h>
-
-
-DEFINE_EMLITE_TYPE(PaymentCompleteDetails, em_Val);
-
-
-jb_Object PaymentCompleteDetails_data(const PaymentCompleteDetails *self) {
-    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("data")));
-}
-
-
-void PaymentCompleteDetails_set_data(PaymentCompleteDetails* self, jb_Object * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("data"), em_Val_from(value));
-}
-
-DEFINE_EMLITE_TYPE(PaymentValidationErrors, em_Val);
-
-
-jb_Any PaymentValidationErrors_payer(const PaymentValidationErrors *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("payer")));
-}
-
-
-void PaymentValidationErrors_set_payer(PaymentValidationErrors* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("payer"), em_Val_from(value));
-}
-
-
-jb_Any PaymentValidationErrors_shippingAddress(const PaymentValidationErrors *self) {
-    return em_Val_as(jb_Any, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shippingAddress")));
-}
-
-
-void PaymentValidationErrors_set_shippingAddress(PaymentValidationErrors* self, jb_Any * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("shippingAddress"), em_Val_from(value));
-}
-
-
-jb_String PaymentValidationErrors_error(const PaymentValidationErrors *self) {
-    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("error")));
-}
-
-
-void PaymentValidationErrors_set_error(PaymentValidationErrors* self, jb_String * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("error"), em_Val_from(value));
-}
-
-
-jb_Object PaymentValidationErrors_paymentMethod(const PaymentValidationErrors *self) {
-    return em_Val_as(jb_Object, em_Val_get(em_Val_as_val(self->inner), em_Val_from("paymentMethod")));
-}
-
-
-void PaymentValidationErrors_set_paymentMethod(PaymentValidationErrors* self, jb_Object * value) {
-    em_Val_set(em_Val_as_val(self->inner), em_Val_from("paymentMethod"), em_Val_from(value));
-}
+#include <webbind/PaymentCompleteDetails.h>
+#include <webbind/PaymentValidationErrors.h>
 
 DEFINE_EMLITE_TYPE(PaymentResponse, EventTarget);
 

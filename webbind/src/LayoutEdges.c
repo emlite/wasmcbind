@@ -1,6 +1,5 @@
 #include <webbind/LayoutEdges.h>
 
-
 DEFINE_EMLITE_TYPE(LayoutEdges, em_Val);
 
 

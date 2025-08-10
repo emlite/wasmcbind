@@ -2,68 +2,19 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
 
-typedef struct MediaStreamTrack MediaStreamTrack;
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct MediaTrackCapabilities MediaTrackCapabilities;
 typedef struct MediaTrackConstraints MediaTrackConstraints;
 typedef struct MediaTrackSettings MediaTrackSettings;
 typedef struct CaptureHandle CaptureHandle;
 
-
-DECLARE_EMLITE_TYPE(MediaTrackCapabilities, em_Val);
-
-jb_String MediaTrackCapabilities_displaySurface(const MediaTrackCapabilities *self);
-
-void MediaTrackCapabilities_set_displaySurface(MediaTrackCapabilities* self, jb_String * value);
-
-bool MediaTrackCapabilities_logicalSurface(const MediaTrackCapabilities *self);
-
-void MediaTrackCapabilities_set_logicalSurface(MediaTrackCapabilities* self, bool value);
-
-jb_Array MediaTrackCapabilities_cursor(const MediaTrackCapabilities *self);
-
-void MediaTrackCapabilities_set_cursor(MediaTrackCapabilities* self, jb_Array * value);
-DECLARE_EMLITE_TYPE(MediaTrackConstraints, em_Val);
-
-jb_Array MediaTrackConstraints_advanced(const MediaTrackConstraints *self);
-
-void MediaTrackConstraints_set_advanced(MediaTrackConstraints* self, jb_Array * value);
-DECLARE_EMLITE_TYPE(MediaTrackSettings, em_Val);
-
-jb_String MediaTrackSettings_displaySurface(const MediaTrackSettings *self);
-
-void MediaTrackSettings_set_displaySurface(MediaTrackSettings* self, jb_String * value);
-
-bool MediaTrackSettings_logicalSurface(const MediaTrackSettings *self);
-
-void MediaTrackSettings_set_logicalSurface(MediaTrackSettings* self, bool value);
-
-jb_String MediaTrackSettings_cursor(const MediaTrackSettings *self);
-
-void MediaTrackSettings_set_cursor(MediaTrackSettings* self, jb_String * value);
-
-bool MediaTrackSettings_restrictOwnAudio(const MediaTrackSettings *self);
-
-void MediaTrackSettings_set_restrictOwnAudio(MediaTrackSettings* self, bool value);
-
-bool MediaTrackSettings_suppressLocalAudioPlayback(const MediaTrackSettings *self);
-
-void MediaTrackSettings_set_suppressLocalAudioPlayback(MediaTrackSettings* self, bool value);
-
-double MediaTrackSettings_screenPixelRatio(const MediaTrackSettings *self);
-
-void MediaTrackSettings_set_screenPixelRatio(MediaTrackSettings* self, double value);
-DECLARE_EMLITE_TYPE(CaptureHandle, em_Val);
-
-jb_String CaptureHandle_origin(const CaptureHandle *self);
-
-void CaptureHandle_set_origin(CaptureHandle* self, jb_String * value);
-
-jb_String CaptureHandle_handle(const CaptureHandle *self);
-
-void CaptureHandle_set_handle(CaptureHandle* self, jb_String * value);
 DECLARE_EMLITE_TYPE(MediaStreamTrack, EventTarget);
 
 jb_String MediaStreamTrack_kind(const MediaStreamTrack *self);
@@ -125,3 +76,7 @@ bool MediaStreamTrack_isolated(const MediaStreamTrack *self);
 jb_Any MediaStreamTrack_onisolationchange(const MediaStreamTrack *self);
 
 void MediaStreamTrack_set_onisolationchange(MediaStreamTrack* self, jb_Any * value);
+
+#ifdef __cplusplus
+}
+#endif

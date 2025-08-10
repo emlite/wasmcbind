@@ -2,14 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "EventTarget.h"
 #include "enums.h"
+
+#include "EventTarget.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct AnimationEffect AnimationEffect;
 typedef struct AnimationTimeline AnimationTimeline;
-typedef struct Animation Animation;
 typedef struct AnimationTrigger AnimationTrigger;
-
 
 DECLARE_EMLITE_TYPE(Animation, EventTarget);
 
@@ -86,3 +89,7 @@ AnimationTrigger Animation_trigger(const Animation *self);
 void Animation_set_trigger(Animation* self, AnimationTrigger * value);
 
 double Animation_overallProgress(const Animation *self);
+
+#ifdef __cplusplus
+}
+#endif

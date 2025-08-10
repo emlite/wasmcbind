@@ -2,18 +2,23 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "Event.h"
 #include "enums.h"
 
+#include "Event.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct UIEventInit UIEventInit;
 typedef struct Window Window;
 typedef struct InputDeviceCapabilities InputDeviceCapabilities;
-
 
 DECLARE_EMLITE_TYPE(UIEvent, Event);
 
 UIEvent UIEvent_new0(jb_String * type);
 
-UIEvent UIEvent_new1(jb_String * type, jb_Any * eventInitDict);
+UIEvent UIEvent_new1(jb_String * type, UIEventInit * eventInitDict);
 
 Window UIEvent_view(const UIEvent *self);
 
@@ -32,3 +37,7 @@ jb_Undefined UIEvent_initUIEvent3(UIEvent* self , jb_String * typeArg, bool bubb
 jb_Undefined UIEvent_initUIEvent4(UIEvent* self , jb_String * typeArg, bool bubblesArg, bool cancelableArg, Window * viewArg, long detailArg);
 
 unsigned long UIEvent_which(const UIEvent *self);
+
+#ifdef __cplusplus
+}
+#endif

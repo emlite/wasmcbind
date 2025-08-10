@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "XRSubImage.h"
 #include "enums.h"
 
-typedef struct WebGLTexture WebGLTexture;
+#include "XRSubImage.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct WebGLTexture WebGLTexture;
 
 DECLARE_EMLITE_TYPE(XRWebGLSubImage, XRSubImage);
 
@@ -29,3 +33,7 @@ unsigned long XRWebGLSubImage_depthStencilTextureHeight(const XRWebGLSubImage *s
 unsigned long XRWebGLSubImage_motionVectorTextureWidth(const XRWebGLSubImage *self);
 
 unsigned long XRWebGLSubImage_motionVectorTextureHeight(const XRWebGLSubImage *self);
+
+#ifdef __cplusplus
+}
+#endif

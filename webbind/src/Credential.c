@@ -1,6 +1,5 @@
 #include <webbind/Credential.h>
 
-
 DEFINE_EMLITE_TYPE(Credential, em_Val);
 
 

@@ -1,6 +1,5 @@
 #include <webbind/HTMLTitleElement.h>
 
-
 DEFINE_EMLITE_TYPE(HTMLTitleElement, HTMLElement);
 
 

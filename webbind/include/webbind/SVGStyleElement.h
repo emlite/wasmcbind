@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGElement.h"
 #include "enums.h"
 
-typedef struct CSSStyleSheet CSSStyleSheet;
+#include "SVGElement.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct CSSStyleSheet CSSStyleSheet;
 
 DECLARE_EMLITE_TYPE(SVGStyleElement, SVGElement);
 
@@ -23,3 +27,7 @@ jb_String SVGStyleElement_title(const SVGStyleElement *self);
 void SVGStyleElement_set_title(SVGStyleElement* self, jb_String * value);
 
 CSSStyleSheet SVGStyleElement_sheet(const SVGStyleElement *self);
+
+#ifdef __cplusplus
+}
+#endif

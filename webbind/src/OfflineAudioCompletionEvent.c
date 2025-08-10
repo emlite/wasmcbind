@@ -1,11 +1,12 @@
 #include <webbind/OfflineAudioCompletionEvent.h>
-#include <webbind/AudioBuffer.h>
 
+#include <webbind/OfflineAudioCompletionEventInit.h>
+#include <webbind/AudioBuffer.h>
 
 DEFINE_EMLITE_TYPE(OfflineAudioCompletionEvent, Event);
 
 
-OfflineAudioCompletionEvent OfflineAudioCompletionEvent_new(jb_String * type, jb_Any * eventInitDict) {
+OfflineAudioCompletionEvent OfflineAudioCompletionEvent_new(jb_String * type, OfflineAudioCompletionEventInit * eventInitDict) {
         em_Val vv = em_Val_new(em_Val_global("OfflineAudioCompletionEvent") , em_Val_from(type), em_Val_from(eventInitDict));
         return OfflineAudioCompletionEvent_from_val(&vv);
       }

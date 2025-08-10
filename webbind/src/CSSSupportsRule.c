@@ -1,6 +1,5 @@
 #include <webbind/CSSSupportsRule.h>
 
-
 DEFINE_EMLITE_TYPE(CSSSupportsRule, CSSConditionRule);
 
 

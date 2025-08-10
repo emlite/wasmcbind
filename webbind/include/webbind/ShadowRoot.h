@@ -2,13 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "DocumentFragment.h"
-#include "Element.h"
 #include "enums.h"
 
-typedef struct Element Element;
-typedef struct Animation Animation;
+#include "DocumentFragment.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct Element Element;
+typedef struct GetHTMLOptions GetHTMLOptions;
+typedef struct Animation Animation;
 
 DECLARE_EMLITE_TYPE(ShadowRoot, DocumentFragment);
 
@@ -39,3 +43,7 @@ jb_Any ShadowRoot_innerHTML(const ShadowRoot *self);
 void ShadowRoot_set_innerHTML(ShadowRoot* self, jb_Any * value);
 
 jb_Array ShadowRoot_getAnimations(ShadowRoot* self );
+
+#ifdef __cplusplus
+}
+#endif

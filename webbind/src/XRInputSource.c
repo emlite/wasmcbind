@@ -1,8 +1,8 @@
 #include <webbind/XRInputSource.h>
+
 #include <webbind/XRSpace.h>
 #include <webbind/Gamepad.h>
 #include <webbind/XRHand.h>
-
 
 DEFINE_EMLITE_TYPE(XRInputSource, em_Val);
 

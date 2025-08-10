@@ -4,9 +4,12 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct XRWebGLLayer XRWebGLLayer;
 typedef struct XRLayer XRLayer;
-
 
 DECLARE_EMLITE_TYPE(XRRenderState, em_Val);
 
@@ -21,3 +24,7 @@ double XRRenderState_inlineVerticalFieldOfView(const XRRenderState *self);
 XRWebGLLayer XRRenderState_baseLayer(const XRRenderState *self);
 
 jb_Array XRRenderState_layers(const XRRenderState *self);
+
+#ifdef __cplusplus
+}
+#endif

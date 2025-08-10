@@ -2,14 +2,17 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "SVGSVGElement.h"
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct DOMMatrix DOMMatrix;
+typedef struct DOMMatrix2DInit DOMMatrix2DInit;
 typedef struct CanvasGradient CanvasGradient;
 typedef struct CanvasPattern CanvasPattern;
 typedef struct Path2D Path2D;
-
 
 DECLARE_EMLITE_TYPE(PaintRenderingContext2D, em_Val);
 
@@ -160,3 +163,7 @@ jb_Undefined PaintRenderingContext2D_arc1(PaintRenderingContext2D* self , double
 jb_Undefined PaintRenderingContext2D_ellipse0(PaintRenderingContext2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle);
 
 jb_Undefined PaintRenderingContext2D_ellipse1(PaintRenderingContext2D* self , double x, double y, double radiusX, double radiusY, double rotation, double startAngle, double endAngle, bool counterclockwise);
+
+#ifdef __cplusplus
+}
+#endif

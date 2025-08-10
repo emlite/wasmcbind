@@ -1,6 +1,6 @@
 #include <webbind/LayoutShift.h>
-#include <webbind/LayoutShiftAttribution.h>
 
+#include <webbind/LayoutShiftAttribution.h>
 
 DEFINE_EMLITE_TYPE(LayoutShift, PerformanceEntry);
 

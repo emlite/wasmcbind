@@ -1,6 +1,6 @@
 #include <webbind/CSSMathInvert.h>
-#include <webbind/CSSNumericValue.h>
 
+#include <webbind/CSSNumericValue.h>
 
 DEFINE_EMLITE_TYPE(CSSMathInvert, CSSMathValue);
 

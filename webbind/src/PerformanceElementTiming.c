@@ -1,7 +1,7 @@
 #include <webbind/PerformanceElementTiming.h>
+
 #include <webbind/DOMRectReadOnly.h>
 #include <webbind/Element.h>
-
 
 DEFINE_EMLITE_TYPE(PerformanceElementTiming, PerformanceEntry);
 

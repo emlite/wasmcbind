@@ -1,6 +1,5 @@
 #include <webbind/ScreenOrientation.h>
 
-
 DEFINE_EMLITE_TYPE(ScreenOrientation, EventTarget);
 
 

@@ -1,5 +1,6 @@
 #include <webbind/IdentityCredentialError.h>
 
+#include <webbind/IdentityCredentialErrorInit.h>
 
 DEFINE_EMLITE_TYPE(IdentityCredentialError, DOMException);
 
@@ -16,7 +17,7 @@ IdentityCredentialError IdentityCredentialError_new1(jb_String * message) {
       }
 
 
-IdentityCredentialError IdentityCredentialError_new2(jb_String * message, jb_Any * options) {
+IdentityCredentialError IdentityCredentialError_new2(jb_String * message, IdentityCredentialErrorInit * options) {
         em_Val vv = em_Val_new(em_Val_global("IdentityCredentialError") , em_Val_from(message), em_Val_from(options));
         return IdentityCredentialError_from_val(&vv);
       }

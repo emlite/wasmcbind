@@ -1,6 +1,7 @@
 #include <webbind/WaveShaperNode.h>
-#include <webbind/BaseAudioContext.h>
 
+#include <webbind/BaseAudioContext.h>
+#include <webbind/WaveShaperOptions.h>
 
 DEFINE_EMLITE_TYPE(WaveShaperNode, AudioNode);
 
@@ -11,7 +12,7 @@ WaveShaperNode WaveShaperNode_new0(BaseAudioContext * context) {
       }
 
 
-WaveShaperNode WaveShaperNode_new1(BaseAudioContext * context, jb_Any * options) {
+WaveShaperNode WaveShaperNode_new1(BaseAudioContext * context, WaveShaperOptions * options) {
         em_Val vv = em_Val_new(em_Val_global("WaveShaperNode") , em_Val_from(context), em_Val_from(options));
         return WaveShaperNode_from_val(&vv);
       }

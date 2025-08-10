@@ -4,22 +4,16 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct DOMStringList DOMStringList;
 typedef struct IDBTransaction IDBTransaction;
 typedef struct IDBRequest IDBRequest;
 typedef struct IDBIndex IDBIndex;
 typedef struct IDBIndexParameters IDBIndexParameters;
 
-
-DECLARE_EMLITE_TYPE(IDBIndexParameters, em_Val);
-
-bool IDBIndexParameters_unique(const IDBIndexParameters *self);
-
-void IDBIndexParameters_set_unique(IDBIndexParameters* self, bool value);
-
-bool IDBIndexParameters_multiEntry(const IDBIndexParameters *self);
-
-void IDBIndexParameters_set_multiEntry(IDBIndexParameters* self, bool value);
 DECLARE_EMLITE_TYPE(IDBObjectStore, em_Val);
 
 jb_String IDBObjectStore_name(const IDBObjectStore *self);
@@ -85,3 +79,7 @@ IDBIndex IDBObjectStore_createIndex0(IDBObjectStore* self , jb_String * name, jb
 IDBIndex IDBObjectStore_createIndex1(IDBObjectStore* self , jb_String * name, jb_Any * keyPath, IDBIndexParameters * options);
 
 jb_Undefined IDBObjectStore_deleteIndex(IDBObjectStore* self , jb_String * name);
+
+#ifdef __cplusplus
+}
+#endif

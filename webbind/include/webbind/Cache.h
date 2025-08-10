@@ -2,12 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "BackgroundFetchRegistration.h"
 #include "enums.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct CacheQueryOptions CacheQueryOptions;
 typedef struct Response Response;
 typedef struct Request Request;
-
 
 DECLARE_EMLITE_TYPE(Cache, em_Val);
 
@@ -36,3 +39,7 @@ jb_Promise Cache_keys0(Cache* self );
 jb_Promise Cache_keys1(Cache* self , jb_Any * request);
 
 jb_Promise Cache_keys2(Cache* self , jb_Any * request, CacheQueryOptions * options);
+
+#ifdef __cplusplus
+}
+#endif

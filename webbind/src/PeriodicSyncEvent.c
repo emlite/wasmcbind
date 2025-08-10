@@ -1,10 +1,11 @@
 #include <webbind/PeriodicSyncEvent.h>
 
+#include <webbind/PeriodicSyncEventInit.h>
 
 DEFINE_EMLITE_TYPE(PeriodicSyncEvent, ExtendableEvent);
 
 
-PeriodicSyncEvent PeriodicSyncEvent_new(jb_String * type, jb_Any * init) {
+PeriodicSyncEvent PeriodicSyncEvent_new(jb_String * type, PeriodicSyncEventInit * init) {
         em_Val vv = em_Val_new(em_Val_global("PeriodicSyncEvent") , em_Val_from(type), em_Val_from(init));
         return PeriodicSyncEvent_from_val(&vv);
       }

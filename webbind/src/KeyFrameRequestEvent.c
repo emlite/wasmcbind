@@ -1,6 +1,5 @@
 #include <webbind/KeyFrameRequestEvent.h>
 
-
 DEFINE_EMLITE_TYPE(KeyFrameRequestEvent, Event);
 
 

@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "XRCompositionLayer.h"
 #include "enums.h"
 
-typedef struct XRRigidTransform XRRigidTransform;
+#include "XRCompositionLayer.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct XRRigidTransform XRRigidTransform;
 
 DECLARE_EMLITE_TYPE(XRProjectionLayer, XRCompositionLayer);
 
@@ -25,3 +29,7 @@ void XRProjectionLayer_set_fixedFoveation(XRProjectionLayer* self, float value);
 XRRigidTransform XRProjectionLayer_deltaPose(const XRProjectionLayer *self);
 
 void XRProjectionLayer_set_deltaPose(XRProjectionLayer* self, XRRigidTransform * value);
+
+#ifdef __cplusplus
+}
+#endif

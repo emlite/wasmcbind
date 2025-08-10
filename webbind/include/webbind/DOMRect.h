@@ -2,11 +2,15 @@
 
 #include <emlite/emlite.h>
 #include <jsbind/jsbind.h>
-#include "DOMRectReadOnly.h"
 #include "enums.h"
 
-typedef struct DOMRect DOMRect;
+#include "DOMRectReadOnly.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct DOMRectInit DOMRectInit;
 
 DECLARE_EMLITE_TYPE(DOMRect, DOMRectReadOnly);
 
@@ -39,3 +43,7 @@ void DOMRect_set_width(DOMRect* self, double value);
 double DOMRect_height(const DOMRect *self);
 
 void DOMRect_set_height(DOMRect* self, double value);
+
+#ifdef __cplusplus
+}
+#endif

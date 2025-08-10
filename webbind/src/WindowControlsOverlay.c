@@ -1,6 +1,6 @@
 #include <webbind/WindowControlsOverlay.h>
-#include <webbind/DOMRect.h>
 
+#include <webbind/DOMRect.h>
 
 DEFINE_EMLITE_TYPE(WindowControlsOverlay, EventTarget);
 

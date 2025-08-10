@@ -1,6 +1,5 @@
 #include <webbind/ForDebuggingOnly.h>
 
-
 DEFINE_EMLITE_TYPE(ForDebuggingOnly, em_Val);
 
 

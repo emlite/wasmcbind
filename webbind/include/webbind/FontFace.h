@@ -4,17 +4,20 @@
 #include <jsbind/jsbind.h>
 #include "enums.h"
 
-typedef struct FontFace FontFace;
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef struct FontFaceDescriptors FontFaceDescriptors;
 typedef struct FontFaceFeatures FontFaceFeatures;
 typedef struct FontFaceVariations FontFaceVariations;
 typedef struct FontFacePalettes FontFacePalettes;
-
 
 DECLARE_EMLITE_TYPE(FontFace, em_Val);
 
 FontFace FontFace_new0(jb_String * family, jb_Any * source);
 
-FontFace FontFace_new1(jb_String * family, jb_Any * source, jb_Any * descriptors);
+FontFace FontFace_new1(jb_String * family, jb_Any * source, FontFaceDescriptors * descriptors);
 
 jb_String FontFace_family(const FontFace *self);
 
@@ -71,3 +74,7 @@ FontFaceFeatures FontFace_features(const FontFace *self);
 FontFaceVariations FontFace_variations(const FontFace *self);
 
 FontFacePalettes FontFace_palettes(const FontFace *self);
+
+#ifdef __cplusplus
+}
+#endif
