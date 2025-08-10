@@ -9,6 +9,8 @@ import {
 } from "./ignored.js";
 import { enums, typedefs, callbacks } from "./globals.js";
 
+let dictionaryRegistry = null;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -23,14 +25,16 @@ function pair(name) {
 }
 
 export function writePair(name, hdrLines, srcLines) {
-  // if (name !== "AbortSignal") return;
   const { h, c } = pair(name);
   if (IGNOREDFILES.has(path.basename(h)) || IGNOREDFILES.has(path.basename(c)))
-    return; 
+    return;
+
+  // Use writeFileSync for complete, clean files (modern approach)
   const header = hdrLines.join("\n");
-  fs.appendFileSync(h, header + "\n", "utf8");
-  fs.appendFileSync(c, srcLines.join("\n") + "\n", "utf8");
-  //   console.log(`Parsed ${name}`);
+  const source = srcLines.join("\n");
+  
+  fs.writeFileSync(h, header + "\n", "utf8");
+  fs.writeFileSync(c, source + "\n", "utf8");
 }
 
 export function flat(t) {
@@ -89,7 +93,6 @@ export function cpp(idlType) {
 
   if (missingDictFallback.has(n) || builtinNominals.has(n))
     return "jb_Any";
-  if (n.includes("EventInit")) return "jb_Any";
 
   if (jsbindMap[n]) return jsbindMap[n];
 
@@ -131,6 +134,9 @@ export function cpp(idlType) {
   if (enums.has(n)) return n;
   if (callbacks.has(n)) return "jb_Function";
   if (typedefs.has(n) || n === "__union") return "jb_Any";
+  
+  // Check if it's a dictionary
+  if (dictionaryRegistry && dictionaryRegistry.has(n)) return n;
 
   return n;
 }
@@ -164,4 +170,58 @@ export function argDecl(args, withNames = true) {
       return withNames ? `${t} ${fixIdent(a.name)}` : t;
     })
     .join(", ");
+}
+
+export function setDictionaryRegistry(dicts) {
+  dictionaryRegistry = dicts;
+}
+
+export function getHeaderPreamble(customIncludes = []) {
+  const preamble = [
+    "#pragma once",
+    "",
+    "#include <emlite/emlite.h>",
+    "#include <jsbind/jsbind.h>",
+    '#include "enums.h"',
+    "",
+  ];
+  
+  // Add custom includes (dependency includes are already formatted)
+  if (customIncludes.length > 0) {
+    preamble.push(...customIncludes);
+    preamble.push("");
+  }
+  
+  preamble.push(
+    "#ifdef __cplusplus",
+    "extern \"C\" {", 
+    "#endif",
+    ""
+  );
+  
+  return preamble;
+}
+
+export function getHeaderPostamble() {
+  return [
+    "",
+    "#ifdef __cplusplus",
+    "}",
+    "#endif"
+  ];
+}
+
+export function getSourcePreamble(headerName, customIncludes = []) {
+  const preamble = [
+    `#include <webbind/${headerName}.h>`,
+    ""
+  ];
+  
+  // Add custom includes for source files (already formatted)
+  if (customIncludes.length > 0) {
+    preamble.push(...customIncludes);
+    preamble.push("");
+  }
+  
+  return preamble;
 }
