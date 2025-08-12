@@ -59,74 +59,74 @@ jb_BigInt jb_BigInt_clone(const jb_BigInt *bi) { return (jb_BigInt){.inner = bi-
 
 // Arithmetic operations - BigInt arithmetic needs JavaScript evaluation
 jb_BigInt jb_BigInt_add(const jb_BigInt *a, const jb_BigInt *b) {
-    em_Val result = emlite_eval_v("(%0 + %1)", a->inner, b->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) + EMLITE_VALMAP(%d))", a->inner.h, b->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 jb_BigInt jb_BigInt_subtract(const jb_BigInt *a, const jb_BigInt *b) {
-    em_Val result = emlite_eval_v("(%0 - %1)", a->inner, b->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) - EMLITE_VALMAP(%d))", a->inner.h, b->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 jb_BigInt jb_BigInt_multiply(const jb_BigInt *a, const jb_BigInt *b) {
-    em_Val result = emlite_eval_v("(%0 * %1)", a->inner, b->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) * EMLITE_VALMAP(%d))", a->inner.h, b->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 jb_BigInt jb_BigInt_divide(const jb_BigInt *a, const jb_BigInt *b) {
-    em_Val result = emlite_eval_v("(%0 / %1)", a->inner, b->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) / EMLITE_VALMAP(%d))", a->inner.h, b->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 jb_BigInt jb_BigInt_modulo(const jb_BigInt *a, const jb_BigInt *b) {
-    em_Val result = emlite_eval_v("(%0 % %1)", a->inner, b->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) % EMLITE_VALMAP(%d))", a->inner.h, b->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 jb_BigInt jb_BigInt_pow(const jb_BigInt *base, const jb_BigInt *exp) {
-    em_Val result = emlite_eval_v("(%0 ** %1)", base->inner, exp->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) ** EMLITE_VALMAP(%d))", base->inner.h, exp->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 // Bitwise operations
 jb_BigInt jb_BigInt_and(const jb_BigInt *a, const jb_BigInt *b) {
-    em_Val result = emlite_eval_v("(%0 & %1)", a->inner, b->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) & EMLITE_VALMAP(%d))", a->inner.h, b->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 jb_BigInt jb_BigInt_or(const jb_BigInt *a, const jb_BigInt *b) {
-    em_Val result = emlite_eval_v("(%0 | %1)", a->inner, b->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) | EMLITE_VALMAP(%d))", a->inner.h, b->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 jb_BigInt jb_BigInt_xor(const jb_BigInt *a, const jb_BigInt *b) {
-    em_Val result = emlite_eval_v("(%0 ^ %1)", a->inner, b->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) ^ EMLITE_VALMAP(%d))", a->inner.h, b->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 jb_BigInt jb_BigInt_left_shift(const jb_BigInt *a, const jb_BigInt *shift) {
-    em_Val result = emlite_eval_v("(%0 << %1)", a->inner, shift->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) << EMLITE_VALMAP(%d))", a->inner.h, shift->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 jb_BigInt jb_BigInt_right_shift(const jb_BigInt *a, const jb_BigInt *shift) {
-    em_Val result = emlite_eval_v("(%0 >> %1)", a->inner, shift->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) >> EMLITE_VALMAP(%d))", a->inner.h, shift->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 // Unary operations
 jb_BigInt jb_BigInt_negate(const jb_BigInt *a) {
-    em_Val result = emlite_eval_v("(-%0)", a->inner);
+    em_Val result = emlite_eval_v("(-EMLITE_VALMAP(%d))", a->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 jb_BigInt jb_BigInt_not(const jb_BigInt *a) {
-    em_Val result = emlite_eval_v("(~%0)", a->inner);
+    em_Val result = emlite_eval_v("(~EMLITE_VALMAP(%d))", a->inner.h);
     return (jb_BigInt){.inner = result};
 }
 
 jb_BigInt jb_BigInt_abs(const jb_BigInt *a) {
-    em_Val result = emlite_eval_v("(%0 < 0n ? -%0 : %0)", a->inner);
+    em_Val result = emlite_eval_v("(EMLITE_VALMAP(%d) < 0n ? -EMLITE_VALMAP(%d) : EMLITE_VALMAP(%d))", a->inner.h);
     return (jb_BigInt){.inner = result};
 }
 

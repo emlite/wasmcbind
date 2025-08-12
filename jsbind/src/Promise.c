@@ -35,22 +35,5 @@ jb_Promise jb_Promise_reject(const jb_Any *reason) {
 }
 
 jb_Any jb_Promise_await(const jb_Promise *p) {
-    // Note: In C, we cannot implement true async/await like C++20 coroutines
-    // This is a synchronous wait using a basic polling approach
-    // In a real implementation, this would need proper async runtime support
-
-    // For now, use a simple approach that tries to resolve the promise immediately
-    // This won't work for all promises but provides the interface
-    em_Val try_code =
-        em_Val_from_string("const promise = arguments[0];"
-                           "let result = undefined;"
-                           "let resolved = false;"
-                           "promise.then(value => { result = value; resolved = true; })"
-                           "      .catch(error => { result = error; resolved = true; });"
-                           "// In a proper implementation, we would wait here"
-                           "// For now, just return the promise itself as a fallback"
-                           "return promise;");
-    em_Val func   = em_Val_call(em_Val_global("Function"), "constructor", try_code);
-    em_Val result = em_Val_call(func, "call", em_Val_null(), p->inner);
-    return (jb_Any){.inner = result};
+    return (jb_Any){.inner = em_Val_await(p->inner) };
 }
