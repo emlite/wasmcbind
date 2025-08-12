@@ -9,21 +9,11 @@ extern "C" {
 DECLARE_EMLITE_TYPE(jb_URLSearchParams, em_Val);
 DECLARE_EMLITE_TYPE(jb_URL, em_Val);
 
-bool jb_URLSearchParams_get(
-    const jb_URLSearchParams *params,
-    const char *key,
-    jb_String *out
-);
-void jb_URLSearchParams_append(
-    jb_URLSearchParams *params,
-    const char *key,
-    const char *value
-);
+bool jb_URLSearchParams_get(const jb_URLSearchParams *params, const char *key, jb_String *out);
+void jb_URLSearchParams_append(jb_URLSearchParams *params, const char *key, const char *value);
 
 jb_URL jb_URL_new(const char *input);
-jb_URL jb_URL_new_with_base(
-    const char *input, const char *base
-);
+jb_URL jb_URL_new_with_base(const char *input, const char *base);
 
 jb_String jb_URL_href(const jb_URL *url);
 void jb_URL_set_href(jb_URL *url, const char *v);

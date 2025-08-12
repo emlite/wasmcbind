@@ -1,6 +1,6 @@
 set(DEFAULT_LINK_FLAGS "-Wl,--no-entry,--allow-undefined,--export-dynamic,--export=main,--export-table,--import-memory,--export-memory,--strip-all")
 
-set(JSBIND_EXAMPLES jsbind_example)
+set(JSBIND_EXAMPLES jsbind_example typedarray_example)
 foreach(item IN LISTS JSBIND_EXAMPLES)
   add_executable(${item} ${item}.c)
   target_link_libraries(${item} PRIVATE jsbind::jsbind)

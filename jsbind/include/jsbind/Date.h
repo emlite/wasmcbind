@@ -20,16 +20,10 @@ int64_t jb_Date_get_time(const jb_Date *date);
 jb_String jb_Date_to_iso_string(const jb_Date *date);
 jb_String jb_Date_to_utc_string(const jb_Date *date);
 jb_String jb_Date_to_locale_string(
-    const jb_Date *date,
-    const jb_Any *locales,
-    const jb_Any *options
+    const jb_Date *date, const jb_Any *locales, const jb_Any *options
 );
-jb_Date jb_Date_add_millis(
-    const jb_Date *date, int64_t delta
-);
-int64_t jb_Date_diff_millis(
-    const jb_Date *date, const jb_Date *other
-);
+jb_Date jb_Date_add_millis(const jb_Date *date, int64_t delta);
+int64_t jb_Date_diff_millis(const jb_Date *date, const jb_Date *other);
 
 #ifdef __cplusplus
 }

@@ -22,6 +22,12 @@ set(JSBIND_SOURCES
     src/url.c
     src/Map.c
     src/Set.c
+    src/BigInt.c
+    src/BigIntArray.c
+    src/Number.c
+    src/Symbol.c
+    src/RegExp.c
+    src/global.c
 )
 
 set(JSBIND_HEADERS
@@ -47,6 +53,12 @@ set(JSBIND_HEADERS
     include/jsbind/Response.h
     include/jsbind/url.h
     include/jsbind/text.h
+    include/jsbind/BigInt.h
+    include/jsbind/BigIntArray.h
+    include/jsbind/Number.h
+    include/jsbind/Symbol.h
+    include/jsbind/RegExp.h
+    include/jsbind/global.h
 )
 
 target_sources(jsbind 

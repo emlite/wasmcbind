@@ -26,13 +26,12 @@ jb_String jb_Error_stack(const jb_Error *err) {
     return (jb_String){.inner = v};
 }
 
-#define DEFINE_ERROR_TYPE(NAME)                            \
-    DEFINE_EMLITE_TYPE(jb_##NAME, em_Val);                 \
-    jb_##NAME jb_##NAME##_new(const char *msg) {           \
-        em_Val ctor = em_Val_global(#NAME);                \
-        em_Val v =                                         \
-            em_Val_new(ctor, em_Val_from_string(msg));     \
-        return (jb_##NAME){.inner = v};                    \
+#define DEFINE_ERROR_TYPE(NAME)                                                                    \
+    DEFINE_EMLITE_TYPE(jb_##NAME, em_Val);                                                         \
+    jb_##NAME jb_##NAME##_new(const char *msg) {                                                   \
+        em_Val ctor = em_Val_global(#NAME);                                                        \
+        em_Val v    = em_Val_new(ctor, em_Val_from_string(msg));                                   \
+        return (jb_##NAME){.inner = v};                                                            \
     }
 
 DEFINE_ERROR_TYPE(EvalError)

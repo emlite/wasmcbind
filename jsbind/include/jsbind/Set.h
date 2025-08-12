@@ -21,13 +21,9 @@ DECLARE_EMLITE_TYPE(jb_WeakSet, em_Val);
 
 jb_WeakSet jb_WeakSet_new();
 size_t jb_WeakSet_size(const jb_WeakSet *set);
-bool jb_WeakSet_has(
-    const jb_WeakSet *set, const jb_Any *value
-);
+bool jb_WeakSet_has(const jb_WeakSet *set, const jb_Any *value);
 void jb_WeakSet_add(jb_WeakSet *set, const jb_Any *value);
-bool jb_WeakSet_delete(
-    jb_WeakSet *set, const jb_Any *value
-);
+bool jb_WeakSet_delete(jb_WeakSet *set, const jb_Any *value);
 void jb_WeakSet_clear(jb_WeakSet *set);
 
 #ifdef __cplusplus

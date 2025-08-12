@@ -3,11 +3,9 @@
 
 static em_Val MATH() { return em_Val_global("Math"); }
 
-#define DEF_MATH_UNARY(name)                               \
-    double jb_Math_##name(double x) {                      \
-        return em_Val_as_double(em_Val_call(               \
-            MATH(), #name, em_Val_from_double(x)           \
-        ));                                                \
+#define DEF_MATH_UNARY(name)                                                                       \
+    double jb_Math_##name(double x) {                                                              \
+        return em_Val_as_double(em_Val_call(MATH(), #name, em_Val_from_double(x)));                \
     }
 
 DEF_MATH_UNARY(abs)
@@ -42,35 +40,21 @@ DEF_MATH_UNARY(trunc)
 #undef DEF_MATH_UNARY
 
 double jb_Math_atan2(double y, double x) {
-    return em_Val_as_double(em_Val_call(
-        MATH(),
-        "atan2",
-        em_Val_from_double(y),
-        em_Val_from_double(x)
-    ));
+    return em_Val_as_double(
+        em_Val_call(MATH(), "atan2", em_Val_from_double(y), em_Val_from_double(x))
+    );
 }
 
 double jb_Math_pow(double x, double y) {
-    return em_Val_as_double(em_Val_call(
-        MATH(),
-        "pow",
-        em_Val_from_double(x),
-        em_Val_from_double(y)
-    ));
+    return em_Val_as_double(em_Val_call(MATH(), "pow", em_Val_from_double(x), em_Val_from_double(y))
+    );
 }
 
 int32_t jb_Math_imul(int32_t a, int32_t b) {
-    return em_Val_as_int(em_Val_call(
-        MATH(),
-        "imul",
-        em_Val_from_int(a),
-        em_Val_from_int(b)
-    ));
+    return em_Val_as_int(em_Val_call(MATH(), "imul", em_Val_from_int(a), em_Val_from_int(b)));
 }
 
-double jb_Math_random() {
-    return em_Val_as_double(em_Val_call(MATH(), "random"));
-}
+double jb_Math_random() { return em_Val_as_double(em_Val_call(MATH(), "random")); }
 
 double jb_Math_max(size_t n, ...) {
     va_list args;
