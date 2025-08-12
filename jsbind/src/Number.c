@@ -221,10 +221,8 @@ jb_String jb_Number_toPrecision(const jb_Number *num, int precision) {
 jb_Any jb_Number_toBigInt(const jb_Number *num) {
     if (!jb_Number_isInteger(num)) {
         // Return error - cannot convert non-integer to BigInt
-        em_Val error = em_Val_call(
-            em_Val_global("Error"),
-            "constructor",
-            em_Val_from_string("Cannot convert non-integer to BigInt")
+        em_Val error = em_Val_new(
+            em_Val_global("Error"), em_Val_from_string("Cannot convert non-integer to BigInt")
         );
         return (jb_Any){.inner = error};
     }
@@ -237,7 +235,7 @@ jb_Any jb_Number_toBigInt(const jb_Number *num) {
 
 jb_Number jb_Number_fromBigInt(const jb_BigInt *bigint) {
     em_Val number_ctor = em_Val_global("Number");
-    em_Val result      = em_Val_call(number_ctor, "constructor", bigint->inner);
+    em_Val result      = em_Val_new(number_ctor, bigint->inner);
     return (jb_Number){.inner = result};
 }
 

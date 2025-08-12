@@ -18,7 +18,7 @@ jb_BigInt64Array jb_BigInt64Array_create(void) {
 jb_BigInt64Array jb_BigInt64Array_create_with_length(size_t length) {
     em_Val ctor       = em_Val_global("BigInt64Array");
     em_Val length_val = em_Val_from_int((int)length);
-    em_Val result     = em_Val_call(ctor, "constructor", length_val);
+    em_Val result     = em_Val_new(ctor, length_val);
     return (jb_BigInt64Array){.inner = result};
 }
 
@@ -31,9 +31,9 @@ jb_BigInt64Array jb_BigInt64Array_create_from_buffer(
 
     em_Val result;
     if (em_Val_is_undefined(length_val)) {
-        result = em_Val_call(ctor, "constructor", buffer->inner, offset_val);
+        result = em_Val_new(ctor, buffer->inner, offset_val);
     } else {
-        result = em_Val_call(ctor, "constructor", buffer->inner, offset_val, length_val);
+        result = em_Val_new(ctor, buffer->inner, offset_val, length_val);
     }
     return (jb_BigInt64Array){.inner = result};
 }
@@ -41,7 +41,7 @@ jb_BigInt64Array jb_BigInt64Array_create_from_buffer(
 // BigInt64Array Clone/copy
 jb_BigInt64Array jb_BigInt64Array_clone(const jb_BigInt64Array *arr) {
     em_Val ctor   = em_Val_global("BigInt64Array");
-    em_Val result = em_Val_call(ctor, "constructor", arr->inner);
+    em_Val result = em_Val_new(ctor, arr->inner);
     return (jb_BigInt64Array){.inner = result};
 }
 
@@ -209,7 +209,7 @@ jb_BigUint64Array jb_BigUint64Array_create(void) {
 jb_BigUint64Array jb_BigUint64Array_create_with_length(size_t length) {
     em_Val ctor       = em_Val_global("BigUint64Array");
     em_Val length_val = em_Val_from_int((int)length);
-    em_Val result     = em_Val_call(ctor, "constructor", length_val);
+    em_Val result     = em_Val_new(ctor, length_val);
     return (jb_BigUint64Array){.inner = result};
 }
 
@@ -222,9 +222,9 @@ jb_BigUint64Array jb_BigUint64Array_create_from_buffer(
 
     em_Val result;
     if (em_Val_is_undefined(length_val)) {
-        result = em_Val_call(ctor, "constructor", buffer->inner, offset_val);
+        result = em_Val_new(ctor, buffer->inner, offset_val);
     } else {
-        result = em_Val_call(ctor, "constructor", buffer->inner, offset_val, length_val);
+        result = em_Val_new(ctor, buffer->inner, offset_val, length_val);
     }
     return (jb_BigUint64Array){.inner = result};
 }
@@ -232,7 +232,7 @@ jb_BigUint64Array jb_BigUint64Array_create_from_buffer(
 // BigUint64Array Clone/copy
 jb_BigUint64Array jb_BigUint64Array_clone(const jb_BigUint64Array *arr) {
     em_Val ctor   = em_Val_global("BigUint64Array");
-    em_Val result = em_Val_call(ctor, "constructor", arr->inner);
+    em_Val result = em_Val_new(ctor, arr->inner);
     return (jb_BigUint64Array){.inner = result};
 }
 

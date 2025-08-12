@@ -5,20 +5,20 @@ DEFINE_EMLITE_TYPE(jb_Symbol, em_Val);
 // Factory methods
 jb_Symbol jb_Symbol_create(void) {
     em_Val symbol_ctor = em_Val_global("Symbol");
-    em_Val result      = em_Val_call(symbol_ctor, "constructor");
+    em_Val result      = em_Val_new(symbol_ctor);
     return (jb_Symbol){.inner = result};
 }
 
 jb_Symbol jb_Symbol_create_with_description(const jb_String *description) {
     em_Val symbol_ctor = em_Val_global("Symbol");
-    em_Val result      = em_Val_call(symbol_ctor, "constructor", description->inner);
+    em_Val result      = em_Val_new(symbol_ctor, description->inner);
     return (jb_Symbol){.inner = result};
 }
 
 jb_Symbol jb_Symbol_create_with_cstring(const char *description) {
     em_Val symbol_ctor = em_Val_global("Symbol");
     em_Val desc_val    = em_Val_from_string(description);
-    em_Val result      = em_Val_call(symbol_ctor, "constructor", desc_val);
+    em_Val result      = em_Val_new(symbol_ctor, desc_val);
     return (jb_Symbol){.inner = result};
 }
 

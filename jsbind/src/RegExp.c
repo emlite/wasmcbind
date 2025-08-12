@@ -5,7 +5,7 @@ DEFINE_EMLITE_TYPE(jb_RegExp, em_Val);
 // Factory methods
 jb_RegExp jb_RegExp_create(void) {
     em_Val regexp_ctor = em_Val_global("RegExp");
-    em_Val result      = em_Val_call(regexp_ctor, "constructor");
+    em_Val result      = em_Val_new(regexp_ctor);
     return (jb_RegExp){.inner = result};
 }
 
@@ -133,9 +133,8 @@ jb_Any jb_RegExp_literal(const jb_String *text) {
     // Escape special regex characters
     em_Val escape_code =
         em_Val_from_string("return arguments[0].replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&')");
-    em_Val escape_func  = em_Val_call(em_Val_global("Function"), "constructor", escape_code);
+    em_Val escape_func  = em_Val_new(em_Val_global("Function"), escape_code);
     em_Val escaped_text = em_Val_call(escape_func, "call", em_Val_null(), text->inner);
-
     return jb_RegExp_create_from_pattern(&(jb_String){.inner = escaped_text});
 }
 
