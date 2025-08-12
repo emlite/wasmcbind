@@ -3,14 +3,14 @@
 DEFINE_EMLITE_TYPE(jb_StructuredSerializeOptions, em_Val);
 
 // Global parsing functions with error handling
-jb_Any jb_parseInt_safe(const char *src) {
+jb_Any jb_parseInt(const char *src) {
     em_Val src_val         = em_Val_from_string(src);
     em_Val global_parseint = em_Val_global("parseInt");
     em_Val result          = em_Val_invoke(global_parseint, src_val);
     return (jb_Any){.inner = result};
 }
 
-jb_Any jb_parseInt_radix_safe(const char *src, int32_t radix) {
+jb_Any jb_parseInt_radix(const char *src, int32_t radix) {
     em_Val src_val         = em_Val_from_string(src);
     em_Val radix_val       = em_Val_from_int(radix);
     em_Val global_parseint = em_Val_global("parseInt");
@@ -18,34 +18,11 @@ jb_Any jb_parseInt_radix_safe(const char *src, int32_t radix) {
     return (jb_Any){.inner = result};
 }
 
-jb_Any jb_parseFloat_safe(const char *src) {
+jb_Any jb_parseFloat(const char *src) {
     em_Val src_val           = em_Val_from_string(src);
     em_Val global_parsefloat = em_Val_global("parseFloat");
     em_Val result            = em_Val_invoke(global_parsefloat, src_val);
     return (jb_Any){.inner = result};
-}
-
-// Legacy global parsing functions (may return NaN)
-int32_t jb_parseInt(const char *src) {
-    em_Val global_parseint = em_Val_global("parseInt");
-    em_Val src_val         = em_Val_from_string(src);
-    em_Val result          = em_Val_call(global_parseint, "call", em_Val_null(), src_val);
-    return em_Val_as_int(result);
-}
-
-int32_t jb_parseInt_radix(const char *src, int32_t radix) {
-    em_Val global_parseint = em_Val_global("parseInt");
-    em_Val src_val         = em_Val_from_string(src);
-    em_Val radix_val       = em_Val_from_int(radix);
-    em_Val result = em_Val_call(global_parseint, "call", em_Val_null(), src_val, radix_val);
-    return em_Val_as_int(result);
-}
-
-double jb_parseFloat(const char *src) {
-    em_Val global_parsefloat = em_Val_global("parseFloat");
-    em_Val src_val           = em_Val_from_string(src);
-    em_Val result            = em_Val_call(global_parsefloat, "call", em_Val_null(), src_val);
-    return em_Val_as_double(result);
 }
 
 // Base64 encoding/decoding with error handling

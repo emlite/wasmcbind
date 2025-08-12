@@ -23,20 +23,11 @@ extern "C" {
 // Global parsing functions with error handling
 
 /** @brief Parses a string and returns an integer. */
-jb_Any jb_parseInt_safe(const char *src); // Returns Number or Error
+jb_Any jb_parseInt(const char *src); // Returns Number or Error
 /** @brief Parses a string and returns an integer of the specified radix. */
-jb_Any jb_parseInt_radix_safe(const char *src, int32_t radix); // Returns Number or Error
+jb_Any jb_parseInt_radix(const char *src, int32_t radix); // Returns Number or Error
 /** @brief Parses a string and returns a floating-point number. */
-jb_Any jb_parseFloat_safe(const char *src); // Returns Number or Error
-
-// Legacy global parsing functions (may return NaN)
-
-/** @brief Parses a string and returns an integer. */
-int32_t jb_parseInt(const char *src);
-/** @brief Parses a string and returns an integer of the specified radix. */
-int32_t jb_parseInt_radix(const char *src, int32_t radix);
-/** @brief Parses a string and returns a floating-point number. */
-double jb_parseFloat(const char *src);
+jb_Any jb_parseFloat(const char *src); // Returns Number or Error
 
 // Base64 encoding/decoding with error handling
 

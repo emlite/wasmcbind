@@ -41,20 +41,6 @@ extern "C" {
 #include "url.h"
 #include "utils.h"
 
-// Legacy functions (kept for backwards compatibility)
-
-/**
- * @brief Parses a string and returns an integer of the specified radix.
- * @deprecated Use `jb_parseInt_safe` or `jb_parseInt_radix_safe` instead.
- */
-int32_t jb_parse_int(const char *src, int32_t radix);
-
-/**
- * @brief Parses a string and returns a floating-point number.
- * @deprecated Use `jb_parseFloat_safe` instead.
- */
-double jb_parse_float(const char *src);
-
 #ifdef __cplusplus
 }
 #endif
