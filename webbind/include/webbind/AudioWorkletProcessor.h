@@ -10,10 +10,21 @@ extern "C" {
 
 typedef struct MessagePort MessagePort;
 
+
+/**
+ * @brief Interface AudioWorkletProcessor
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletProcessor)
+ */
 DECLARE_EMLITE_TYPE(AudioWorkletProcessor, em_Val);
 
+/**
+ * @brief Creates a new `AudioWorkletProcessor` object. 
+*/
 AudioWorkletProcessor AudioWorkletProcessor_new();
 
+/**
+ * @brief Gets the `port` property. 
+*/
 MessagePort AudioWorkletProcessor_port(const AudioWorkletProcessor *self);
 
 #ifdef __cplusplus

@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface XRSpace
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/XRSpace)
+ */
 DECLARE_EMLITE_TYPE(XRSpace, EventTarget);
 
 #ifdef __cplusplus

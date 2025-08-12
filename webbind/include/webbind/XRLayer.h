@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface XRLayer
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/XRLayer)
+ */
 DECLARE_EMLITE_TYPE(XRLayer, EventTarget);
 
 #ifdef __cplusplus

@@ -10,8 +10,10 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type GPUCommandEncoderDescriptor */
 DECLARE_EMLITE_TYPE(GPUCommandEncoderDescriptor, GPUObjectDescriptorBase);
 
+/** @brief Constructor of the GPUCommandEncoderDescriptor dictionary type */
 GPUCommandEncoderDescriptor GPUCommandEncoderDescriptor_new();
 
 #ifdef __cplusplus

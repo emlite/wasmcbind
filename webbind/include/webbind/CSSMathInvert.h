@@ -12,10 +12,21 @@ extern "C" {
 
 typedef struct CSSNumericValue CSSNumericValue;
 
+
+/**
+ * @brief Interface CSSMathInvert
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/CSSMathInvert)
+ */
 DECLARE_EMLITE_TYPE(CSSMathInvert, CSSMathValue);
 
+/**
+ * @brief Creates a new `CSSMathInvert` object. 
+*/
 CSSMathInvert CSSMathInvert_new(jb_Any * arg);
 
+/**
+ * @brief Gets the `value` property. 
+*/
 CSSNumericValue CSSMathInvert_value(const CSSMathInvert *self);
 
 #ifdef __cplusplus

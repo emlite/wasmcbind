@@ -8,6 +8,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface BluetoothManufacturerDataMap
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/BluetoothManufacturerDataMap)
+ */
 DECLARE_EMLITE_TYPE(BluetoothManufacturerDataMap, em_Val);
 
 #ifdef __cplusplus

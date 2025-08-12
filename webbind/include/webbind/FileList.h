@@ -10,10 +10,21 @@ extern "C" {
 
 typedef struct File File;
 
+
+/**
+ * @brief Interface FileList
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/FileList)
+ */
 DECLARE_EMLITE_TYPE(FileList, em_Val);
 
+/**
+ * @brief Calls the `item` method. 
+*/
 File FileList_item(FileList* self , unsigned long index);
 
+/**
+ * @brief Gets the `length` property. 
+*/
 unsigned long FileList_length(const FileList *self);
 
 #ifdef __cplusplus

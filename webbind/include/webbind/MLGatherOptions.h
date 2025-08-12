@@ -10,12 +10,16 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type MLGatherOptions */
 DECLARE_EMLITE_TYPE(MLGatherOptions, MLOperatorOptions);
 
+/** @brief Getter of the axis property */
 unsigned long MLGatherOptions_axis(const MLGatherOptions *self);
 
+/** @brief Setter of the axis property */
 void MLGatherOptions_set_axis(MLGatherOptions* self, unsigned long value);
 
+/** @brief Constructor of the MLGatherOptions dictionary type */
 MLGatherOptions MLGatherOptions_new();
 
 #ifdef __cplusplus

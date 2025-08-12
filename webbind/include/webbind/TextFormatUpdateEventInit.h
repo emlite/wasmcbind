@@ -12,12 +12,16 @@ extern "C" {
 
 typedef struct TextFormat TextFormat;
 
+/** @brief Dictionary type TextFormatUpdateEventInit */
 DECLARE_EMLITE_TYPE(TextFormatUpdateEventInit, EventInit);
 
+/** @brief Getter of the textFormats property */
 jb_Array TextFormatUpdateEventInit_textFormats(const TextFormatUpdateEventInit *self);
 
+/** @brief Setter of the textFormats property */
 void TextFormatUpdateEventInit_set_textFormats(TextFormatUpdateEventInit* self, jb_Array * value);
 
+/** @brief Constructor of the TextFormatUpdateEventInit dictionary type */
 TextFormatUpdateEventInit TextFormatUpdateEventInit_new();
 
 #ifdef __cplusplus

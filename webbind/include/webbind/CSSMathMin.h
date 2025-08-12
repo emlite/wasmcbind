@@ -12,10 +12,21 @@ extern "C" {
 
 typedef struct CSSNumericArray CSSNumericArray;
 
+
+/**
+ * @brief Interface CSSMathMin
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/CSSMathMin)
+ */
 DECLARE_EMLITE_TYPE(CSSMathMin, CSSMathValue);
 
+/**
+ * @brief Creates a new `CSSMathMin` object. 
+*/
 CSSMathMin CSSMathMin_new(jb_Any * args);
 
+/**
+ * @brief Gets the `values` property. 
+*/
 CSSNumericArray CSSMathMin_values(const CSSMathMin *self);
 
 #ifdef __cplusplus

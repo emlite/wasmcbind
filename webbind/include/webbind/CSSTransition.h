@@ -10,8 +10,16 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface CSSTransition
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/CSSTransition)
+ */
 DECLARE_EMLITE_TYPE(CSSTransition, Animation);
 
+/**
+ * @brief Gets the `transitionProperty` property. 
+*/
 jb_String CSSTransition_transitionProperty(const CSSTransition *self);
 
 #ifdef __cplusplus

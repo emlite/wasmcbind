@@ -10,12 +10,16 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type MLTransposeOptions */
 DECLARE_EMLITE_TYPE(MLTransposeOptions, MLOperatorOptions);
 
+/** @brief Getter of the permutation property */
 jb_Array MLTransposeOptions_permutation(const MLTransposeOptions *self);
 
+/** @brief Setter of the permutation property */
 void MLTransposeOptions_set_permutation(MLTransposeOptions* self, jb_Array * value);
 
+/** @brief Constructor of the MLTransposeOptions dictionary type */
 MLTransposeOptions MLTransposeOptions_new();
 
 #ifdef __cplusplus

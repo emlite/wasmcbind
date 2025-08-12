@@ -12,12 +12,26 @@ extern "C" {
 
 typedef struct PromiseRejectionEventInit PromiseRejectionEventInit;
 
+
+/**
+ * @brief Interface PromiseRejectionEvent
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/PromiseRejectionEvent)
+ */
 DECLARE_EMLITE_TYPE(PromiseRejectionEvent, Event);
 
+/**
+ * @brief Creates a new `PromiseRejectionEvent` object. 
+*/
 PromiseRejectionEvent PromiseRejectionEvent_new(jb_String * type, PromiseRejectionEventInit * eventInitDict);
 
+/**
+ * @brief Gets the `promise` property. 
+*/
 jb_Object PromiseRejectionEvent_promise(const PromiseRejectionEvent *self);
 
+/**
+ * @brief Gets the `reason` property. 
+*/
 jb_Any PromiseRejectionEvent_reason(const PromiseRejectionEvent *self);
 
 #ifdef __cplusplus

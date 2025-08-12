@@ -10,8 +10,10 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type GeolocationSensorOptions */
 DECLARE_EMLITE_TYPE(GeolocationSensorOptions, SensorOptions);
 
+/** @brief Constructor of the GeolocationSensorOptions dictionary type */
 GeolocationSensorOptions GeolocationSensorOptions_new();
 
 #ifdef __cplusplus

@@ -8,6 +8,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface FragmentDirective
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/FragmentDirective)
+ */
 DECLARE_EMLITE_TYPE(FragmentDirective, em_Val);
 
 #ifdef __cplusplus

@@ -12,12 +12,16 @@ extern "C" {
 
 typedef struct HIDDevice HIDDevice;
 
+/** @brief Dictionary type HIDConnectionEventInit */
 DECLARE_EMLITE_TYPE(HIDConnectionEventInit, EventInit);
 
+/** @brief Getter of the device property */
 HIDDevice HIDConnectionEventInit_device(const HIDConnectionEventInit *self);
 
+/** @brief Setter of the device property */
 void HIDConnectionEventInit_set_device(HIDConnectionEventInit* self, HIDDevice * value);
 
+/** @brief Constructor of the HIDConnectionEventInit dictionary type */
 HIDConnectionEventInit HIDConnectionEventInit_new();
 
 #ifdef __cplusplus

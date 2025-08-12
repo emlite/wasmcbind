@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface SVGMetadataElement
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/SVGMetadataElement)
+ */
 DECLARE_EMLITE_TYPE(SVGMetadataElement, SVGElement);
 
 #ifdef __cplusplus

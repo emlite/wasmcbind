@@ -10,12 +10,16 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type AesKeyGenParams */
 DECLARE_EMLITE_TYPE(AesKeyGenParams, Algorithm);
 
+/** @brief Getter of the length property */
 unsigned short AesKeyGenParams_length(const AesKeyGenParams *self);
 
+/** @brief Setter of the length property */
 void AesKeyGenParams_set_length(AesKeyGenParams* self, unsigned short value);
 
+/** @brief Constructor of the AesKeyGenParams dictionary type */
 AesKeyGenParams AesKeyGenParams_new();
 
 #ifdef __cplusplus

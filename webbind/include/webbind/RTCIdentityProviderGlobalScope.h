@@ -12,8 +12,16 @@ extern "C" {
 
 typedef struct RTCIdentityProviderRegistrar RTCIdentityProviderRegistrar;
 
+
+/**
+ * @brief Interface RTCIdentityProviderGlobalScope
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/RTCIdentityProviderGlobalScope)
+ */
 DECLARE_EMLITE_TYPE(RTCIdentityProviderGlobalScope, WorkerGlobalScope);
 
+/**
+ * @brief Gets the `rtcIdentityProvider` property. 
+*/
 RTCIdentityProviderRegistrar RTCIdentityProviderGlobalScope_rtcIdentityProvider(const RTCIdentityProviderGlobalScope *self);
 
 #ifdef __cplusplus

@@ -10,8 +10,10 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type GPURenderBundleDescriptor */
 DECLARE_EMLITE_TYPE(GPURenderBundleDescriptor, GPUObjectDescriptorBase);
 
+/** @brief Constructor of the GPURenderBundleDescriptor dictionary type */
 GPURenderBundleDescriptor GPURenderBundleDescriptor_new();
 
 #ifdef __cplusplus

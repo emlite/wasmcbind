@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface SVGTextElement
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/SVGTextElement)
+ */
 DECLARE_EMLITE_TYPE(SVGTextElement, SVGTextPositioningElement);
 
 #ifdef __cplusplus

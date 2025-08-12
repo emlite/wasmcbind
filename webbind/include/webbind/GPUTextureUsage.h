@@ -9,6 +9,11 @@ extern "C" {
 #endif
 
 
+/**
+ * @brief Namespace GPUTextureUsage
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/GPUTextureUsage)
+ */
+
 #ifdef __cplusplus
 }
 #endif

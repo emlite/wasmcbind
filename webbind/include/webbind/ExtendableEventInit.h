@@ -10,8 +10,10 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type ExtendableEventInit */
 DECLARE_EMLITE_TYPE(ExtendableEventInit, EventInit);
 
+/** @brief Constructor of the ExtendableEventInit dictionary type */
 ExtendableEventInit ExtendableEventInit_new();
 
 #ifdef __cplusplus

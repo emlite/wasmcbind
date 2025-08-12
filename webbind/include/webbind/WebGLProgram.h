@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface WebGLProgram
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/WebGLProgram)
+ */
 DECLARE_EMLITE_TYPE(WebGLProgram, WebGLObject);
 
 #ifdef __cplusplus

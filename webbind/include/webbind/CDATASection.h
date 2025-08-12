@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface CDATASection
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/CDATASection)
+ */
 DECLARE_EMLITE_TYPE(CDATASection, Text);
 
 #ifdef __cplusplus

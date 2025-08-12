@@ -12,8 +12,16 @@ extern "C" {
 
 typedef struct SVGAnimatedString SVGAnimatedString;
 
+
+/**
+ * @brief Interface SVGMPathElement
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/SVGMPathElement)
+ */
 DECLARE_EMLITE_TYPE(SVGMPathElement, SVGElement);
 
+/**
+ * @brief Gets the `href` property. 
+*/
 SVGAnimatedString SVGMPathElement_href(const SVGMPathElement *self);
 
 #ifdef __cplusplus

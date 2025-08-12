@@ -12,8 +12,16 @@ extern "C" {
 
 typedef struct DOMPointReadOnly DOMPointReadOnly;
 
+
+/**
+ * @brief Interface XRBoundedReferenceSpace
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/XRBoundedReferenceSpace)
+ */
 DECLARE_EMLITE_TYPE(XRBoundedReferenceSpace, XRReferenceSpace);
 
+/**
+ * @brief Gets the `boundsGeometry` property. 
+*/
 jb_Array XRBoundedReferenceSpace_boundsGeometry(const XRBoundedReferenceSpace *self);
 
 #ifdef __cplusplus

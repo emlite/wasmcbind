@@ -12,10 +12,21 @@ extern "C" {
 
 typedef struct SharedStorageModifierMethodOptions SharedStorageModifierMethodOptions;
 
+
+/**
+ * @brief Interface SharedStorageClearMethod
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/SharedStorageClearMethod)
+ */
 DECLARE_EMLITE_TYPE(SharedStorageClearMethod, SharedStorageModifierMethod);
 
+/**
+ * @brief Creates a new `SharedStorageClearMethod` object. 
+*/
 SharedStorageClearMethod SharedStorageClearMethod_new0();
 
+/**
+ * @brief Creates a new `SharedStorageClearMethod` object. 
+*/
 SharedStorageClearMethod SharedStorageClearMethod_new1(SharedStorageModifierMethodOptions * options);
 
 #ifdef __cplusplus

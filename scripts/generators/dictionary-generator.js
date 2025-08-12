@@ -13,7 +13,8 @@ function emitDictAttr(attr, dictName, parent) {
   const type = cpp(attr.idlType);
 
   H.push(
-    `\n${type} ${dictName}_${fixIdent(attr.name)}(const ${dictName} *self);`
+    `\n/** @brief Getter of the ${attr.name} property */`,
+    `${type} ${dictName}_${fixIdent(attr.name)}(const ${dictName} *self);`
   );
 
   S.push(
@@ -25,7 +26,8 @@ function emitDictAttr(attr, dictName, parent) {
 
   // Add setter if not required (dictionaries have setters by default)
   H.push(
-    `\nvoid ${dictName}_set_${fixIdent(
+    `\n/** @brief Setter of the ${attr.name} property */`,
+    `void ${dictName}_set_${fixIdent(
       attr.name
     )}(${dictName}* self, ${argtypeFix(type)} value);`
   );
@@ -60,6 +62,7 @@ export function generateDictionary(dictName, dict, dependencies) {
     : "em_Val";
 
   // Generate the main dictionary declaration
+  hdr.push(`/** @brief Dictionary type ${dict.name} */`);
   hdr.push(`DECLARE_EMLITE_TYPE(${dictName}, ${parent});`);
   src.push(`DEFINE_EMLITE_TYPE(${dictName}, ${parent});`, "");
 
@@ -73,7 +76,8 @@ export function generateDictionary(dictName, dict, dependencies) {
   });
 
   // Add constructor
-  hdr.push(`\n${dictName} ${dictName}_new();`);
+  hdr.push(`\n/** @brief Constructor of the ${dictName} dictionary type */`);
+  hdr.push(`${dictName} ${dictName}_new();`);
   src.push(
     `\n${dictName} ${dictName}_new() {`,
     `    em_Val obj = em_Val_object();`,

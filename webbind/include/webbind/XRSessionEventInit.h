@@ -12,12 +12,16 @@ extern "C" {
 
 typedef struct XRSession XRSession;
 
+/** @brief Dictionary type XRSessionEventInit */
 DECLARE_EMLITE_TYPE(XRSessionEventInit, EventInit);
 
+/** @brief Getter of the session property */
 XRSession XRSessionEventInit_session(const XRSessionEventInit *self);
 
+/** @brief Setter of the session property */
 void XRSessionEventInit_set_session(XRSessionEventInit* self, XRSession * value);
 
+/** @brief Constructor of the XRSessionEventInit dictionary type */
 XRSessionEventInit XRSessionEventInit_new();
 
 #ifdef __cplusplus

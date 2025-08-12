@@ -10,8 +10,16 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface CSSConditionRule
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/CSSConditionRule)
+ */
 DECLARE_EMLITE_TYPE(CSSConditionRule, CSSGroupingRule);
 
+/**
+ * @brief Gets the `conditionText` property. 
+*/
 jb_String CSSConditionRule_conditionText(const CSSConditionRule *self);
 
 #ifdef __cplusplus

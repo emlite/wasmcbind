@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface WebGLBuffer
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/WebGLBuffer)
+ */
 DECLARE_EMLITE_TYPE(WebGLBuffer, WebGLObject);
 
 #ifdef __cplusplus

@@ -8,6 +8,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface AttributionAggregationServices
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/AttributionAggregationServices)
+ */
 DECLARE_EMLITE_TYPE(AttributionAggregationServices, em_Val);
 
 #ifdef __cplusplus

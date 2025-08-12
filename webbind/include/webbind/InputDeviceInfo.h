@@ -12,8 +12,16 @@ extern "C" {
 
 typedef struct MediaTrackCapabilities MediaTrackCapabilities;
 
+
+/**
+ * @brief Interface InputDeviceInfo
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/InputDeviceInfo)
+ */
 DECLARE_EMLITE_TYPE(InputDeviceInfo, MediaDeviceInfo);
 
+/**
+ * @brief Calls the `getCapabilities` method. 
+*/
 MediaTrackCapabilities InputDeviceInfo_getCapabilities(InputDeviceInfo* self );
 
 #ifdef __cplusplus

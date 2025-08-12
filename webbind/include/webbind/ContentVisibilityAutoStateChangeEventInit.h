@@ -10,12 +10,16 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type ContentVisibilityAutoStateChangeEventInit */
 DECLARE_EMLITE_TYPE(ContentVisibilityAutoStateChangeEventInit, EventInit);
 
+/** @brief Getter of the skipped property */
 bool ContentVisibilityAutoStateChangeEventInit_skipped(const ContentVisibilityAutoStateChangeEventInit *self);
 
+/** @brief Setter of the skipped property */
 void ContentVisibilityAutoStateChangeEventInit_set_skipped(ContentVisibilityAutoStateChangeEventInit* self, bool value);
 
+/** @brief Constructor of the ContentVisibilityAutoStateChangeEventInit dictionary type */
 ContentVisibilityAutoStateChangeEventInit ContentVisibilityAutoStateChangeEventInit_new();
 
 #ifdef __cplusplus

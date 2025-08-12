@@ -12,12 +12,16 @@ extern "C" {
 
 typedef struct RTCDataChannel RTCDataChannel;
 
+/** @brief Dictionary type RTCDataChannelEventInit */
 DECLARE_EMLITE_TYPE(RTCDataChannelEventInit, EventInit);
 
+/** @brief Getter of the channel property */
 RTCDataChannel RTCDataChannelEventInit_channel(const RTCDataChannelEventInit *self);
 
+/** @brief Setter of the channel property */
 void RTCDataChannelEventInit_set_channel(RTCDataChannelEventInit* self, RTCDataChannel * value);
 
+/** @brief Constructor of the RTCDataChannelEventInit dictionary type */
 RTCDataChannelEventInit RTCDataChannelEventInit_new();
 
 #ifdef __cplusplus

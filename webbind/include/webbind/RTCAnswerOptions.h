@@ -10,8 +10,10 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type RTCAnswerOptions */
 DECLARE_EMLITE_TYPE(RTCAnswerOptions, RTCOfferAnswerOptions);
 
+/** @brief Constructor of the RTCAnswerOptions dictionary type */
 RTCAnswerOptions RTCAnswerOptions_new();
 
 #ifdef __cplusplus

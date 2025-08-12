@@ -8,6 +8,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface GPUSupportedFeatures
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/GPUSupportedFeatures)
+ */
 DECLARE_EMLITE_TYPE(GPUSupportedFeatures, em_Val);
 
 #ifdef __cplusplus

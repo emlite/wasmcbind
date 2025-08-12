@@ -8,6 +8,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface WEBGL_clip_cull_distance
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_clip_cull_distance)
+ */
 DECLARE_EMLITE_TYPE(WEBGL_clip_cull_distance, em_Val);
 
 #ifdef __cplusplus

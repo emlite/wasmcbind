@@ -10,8 +10,10 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type GPUQueueDescriptor */
 DECLARE_EMLITE_TYPE(GPUQueueDescriptor, GPUObjectDescriptorBase);
 
+/** @brief Constructor of the GPUQueueDescriptor dictionary type */
 GPUQueueDescriptor GPUQueueDescriptor_new();
 
 #ifdef __cplusplus

@@ -10,12 +10,16 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type CompositionEventInit */
 DECLARE_EMLITE_TYPE(CompositionEventInit, UIEventInit);
 
+/** @brief Getter of the data property */
 jb_String CompositionEventInit_data(const CompositionEventInit *self);
 
+/** @brief Setter of the data property */
 void CompositionEventInit_set_data(CompositionEventInit* self, jb_String * value);
 
+/** @brief Constructor of the CompositionEventInit dictionary type */
 CompositionEventInit CompositionEventInit_new();
 
 #ifdef __cplusplus

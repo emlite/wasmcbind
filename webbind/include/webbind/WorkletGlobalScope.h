@@ -8,6 +8,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface WorkletGlobalScope
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/WorkletGlobalScope)
+ */
 DECLARE_EMLITE_TYPE(WorkletGlobalScope, em_Val);
 
 #ifdef __cplusplus

@@ -12,12 +12,16 @@ extern "C" {
 
 typedef struct USBDevice USBDevice;
 
+/** @brief Dictionary type USBConnectionEventInit */
 DECLARE_EMLITE_TYPE(USBConnectionEventInit, EventInit);
 
+/** @brief Getter of the device property */
 USBDevice USBConnectionEventInit_device(const USBConnectionEventInit *self);
 
+/** @brief Setter of the device property */
 void USBConnectionEventInit_set_device(USBConnectionEventInit* self, USBDevice * value);
 
+/** @brief Constructor of the USBConnectionEventInit dictionary type */
 USBConnectionEventInit USBConnectionEventInit_new();
 
 #ifdef __cplusplus

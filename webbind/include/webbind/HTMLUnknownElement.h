@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface HTMLUnknownElement
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/HTMLUnknownElement)
+ */
 DECLARE_EMLITE_TYPE(HTMLUnknownElement, HTMLElement);
 
 #ifdef __cplusplus

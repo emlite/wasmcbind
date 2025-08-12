@@ -10,8 +10,16 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface GPUOutOfMemoryError
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/GPUOutOfMemoryError)
+ */
 DECLARE_EMLITE_TYPE(GPUOutOfMemoryError, GPUError);
 
+/**
+ * @brief Creates a new `GPUOutOfMemoryError` object. 
+*/
 GPUOutOfMemoryError GPUOutOfMemoryError_new(jb_String * message);
 
 #ifdef __cplusplus

@@ -22,6 +22,10 @@ export function generateNamespace(nsRec, dependencies) {
     hdr.push("");
   }
 
+  hdr.push(
+    `\n/**\n * @brief Namespace ${nsRec.name}\n * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/${nsRec.name})\n */`
+  );
+
   // Generate namespace functions - now includes partial namespace merging
   nsRec.members
     .filter((m) => m.type === "operation")
@@ -40,6 +44,7 @@ export function generateNamespace(nsRec, dependencies) {
           .join(", ");
 
         hdr.push(
+          `\n/**\n * @brief Calls the \\\`${op.name}\\\u0060 method. \n*/`,
           `${ret} ${nsRec.name}_${cppName}${sz === 1 ? "" : i}(${declHdr});`
         );
 

@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface WebGLVertexArrayObjectOES
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/WebGLVertexArrayObjectOES)
+ */
 DECLARE_EMLITE_TYPE(WebGLVertexArrayObjectOES, WebGLObject);
 
 #ifdef __cplusplus

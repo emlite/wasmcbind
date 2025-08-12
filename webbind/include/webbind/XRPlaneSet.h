@@ -8,6 +8,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface XRPlaneSet
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/XRPlaneSet)
+ */
 DECLARE_EMLITE_TYPE(XRPlaneSet, em_Val);
 
 #ifdef __cplusplus

@@ -12,8 +12,16 @@ extern "C" {
 
 typedef struct RTCRtpScriptTransformer RTCRtpScriptTransformer;
 
+
+/**
+ * @brief Interface RTCTransformEvent
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/RTCTransformEvent)
+ */
 DECLARE_EMLITE_TYPE(RTCTransformEvent, Event);
 
+/**
+ * @brief Gets the `transformer` property. 
+*/
 RTCRtpScriptTransformer RTCTransformEvent_transformer(const RTCTransformEvent *self);
 
 #ifdef __cplusplus

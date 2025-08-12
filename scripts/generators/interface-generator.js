@@ -1,9 +1,9 @@
-import { 
-  writePair, 
-  fixIdent, 
-  cpp, 
-  argtypeFix, 
-  variantsOf, 
+import {
+  writePair,
+  fixIdent,
+  cpp,
+  argtypeFix,
+  variantsOf,
   argDecl,
   getHeaderPreamble,
   getHeaderPostamble,
@@ -16,7 +16,8 @@ function emitAttr(attr, owner, isStatic = false, parent0) {
   const parent = parent0 ? parent0 : "em_Val";
 
   H.push(
-    `\n${type} ${owner}_${fixIdent(attr.name)}(const ${owner} *self);`
+    `\n/**\n * @brief Gets the \`${attr.name}\` property. \n*/`,
+    `${type} ${owner}_${fixIdent(attr.name)}(const ${owner} *self);`
   );
 
   if (isStatic) {
@@ -38,7 +39,8 @@ function emitAttr(attr, owner, isStatic = false, parent0) {
 
     if (!attr.readonly) {
       H.push(
-        `\nvoid ${owner}_set_${fixIdent(
+        `\n/**\n * @brief Sets the \`${attr.name}\` property. \n*/`,
+        `void ${owner}_set_${fixIdent(
           attr.name
         )}(${owner}* self, ${argtypeFix(type)} value);`
       );
@@ -81,7 +83,8 @@ function emitOp(op, owner, isStatic = false, parent0) {
         })`;
 
     H.push(
-      `\n${ret} ${owner}_${cppName}${sz === 1 ? "" : i}(${owner}* self ${
+      `\n/**\n * @brief Calls the \`${op.name}\` method. \n*/`,
+      `${ret} ${owner}_${cppName}${sz === 1 ? "" : i}(${owner}* self ${
         declHdr.length === 0 ? "" : ", " + declHdr
       });`
     );
@@ -113,7 +116,10 @@ function emitCtor(ctor, owner, parent) {
       .map((a) => `em_Val_from(${fixIdent(a.name)})`)
       .join(", ");
 
-    H.push(`\n${owner} ${owner}_new${sz === 1 ? "" : i}(${declHdr});`);
+    H.push(
+      `\n/**\n * @brief Creates a new \`${owner}\` object. \n*/`,
+      `${owner} ${owner}_new${sz === 1 ? "" : i}(${declHdr});`
+    );
 
     S.push(
       `\n${owner} ${owner}_new${sz === 1 ? "" : i}(${declSrc}) {
@@ -146,6 +152,9 @@ export function generateInterface(interfaceName, interfaceRec, dependencies) {
 
   // Generate the main interface declaration
   hdr.push(
+    `\n/**\n * @brief Interface ${interfaceName}
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/${interfaceName})
+ */`,
     `DECLARE_EMLITE_TYPE(${interfaceName}, ${parent ? `${parent}` : "em_Val"});`
   );
   src.push(
@@ -157,7 +166,10 @@ export function generateInterface(interfaceName, interfaceRec, dependencies) {
 
   // Generate constants
   interfaceRec.consts?.forEach((c) =>
-    hdr.push(`const ${cpp(c.idlType)} ${interfaceName}_${c.name} = ${c.value.value};`)
+    hdr.push(
+      `\n/**\n * @brief Constant \`${c.name}\` \n*/`,
+      `const ${cpp(c.idlType)} ${interfaceName}_${c.name} = ${c.value.value};`
+    )
   );
 
   // Generate members

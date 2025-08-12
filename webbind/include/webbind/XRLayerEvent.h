@@ -13,10 +13,21 @@ extern "C" {
 typedef struct XRLayerEventInit XRLayerEventInit;
 typedef struct XRLayer XRLayer;
 
+
+/**
+ * @brief Interface XRLayerEvent
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/XRLayerEvent)
+ */
 DECLARE_EMLITE_TYPE(XRLayerEvent, Event);
 
+/**
+ * @brief Creates a new `XRLayerEvent` object. 
+*/
 XRLayerEvent XRLayerEvent_new(jb_String * type, XRLayerEventInit * eventInitDict);
 
+/**
+ * @brief Gets the `layer` property. 
+*/
 XRLayer XRLayerEvent_layer(const XRLayerEvent *self);
 
 #ifdef __cplusplus

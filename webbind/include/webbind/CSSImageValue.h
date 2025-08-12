@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface CSSImageValue
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/CSSImageValue)
+ */
 DECLARE_EMLITE_TYPE(CSSImageValue, CSSStyleValue);
 
 #ifdef __cplusplus

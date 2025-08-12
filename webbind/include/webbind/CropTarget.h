@@ -10,8 +10,16 @@ extern "C" {
 
 typedef struct Element Element;
 
+
+/**
+ * @brief Interface CropTarget
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/CropTarget)
+ */
 DECLARE_EMLITE_TYPE(CropTarget, em_Val);
 
+/**
+ * @brief Calls the `fromElement` method. 
+*/
 jb_Promise CropTarget_fromElement(CropTarget* self , Element * element);
 
 #ifdef __cplusplus

@@ -9,6 +9,11 @@ extern "C" {
 #endif
 
 
+/**
+ * @brief Namespace GPUShaderStage
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/GPUShaderStage)
+ */
+
 #ifdef __cplusplus
 }
 #endif

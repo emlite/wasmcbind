@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface WebGLSync
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/WebGLSync)
+ */
 DECLARE_EMLITE_TYPE(WebGLSync, WebGLObject);
 
 #ifdef __cplusplus

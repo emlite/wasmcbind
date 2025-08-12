@@ -10,12 +10,26 @@ extern "C" {
 
 typedef struct GPUCompilationInfo GPUCompilationInfo;
 
+
+/**
+ * @brief Interface GPUShaderModule
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/GPUShaderModule)
+ */
 DECLARE_EMLITE_TYPE(GPUShaderModule, em_Val);
 
+/**
+ * @brief Calls the `getCompilationInfo` method. 
+*/
 jb_Promise GPUShaderModule_getCompilationInfo(GPUShaderModule* self );
 
+/**
+ * @brief Gets the `label` property. 
+*/
 jb_String GPUShaderModule_label(const GPUShaderModule *self);
 
+/**
+ * @brief Sets the `label` property. 
+*/
 void GPUShaderModule_set_label(GPUShaderModule* self, jb_String * value);
 
 #ifdef __cplusplus

@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface InterestGroupScoringScriptRunnerGlobalScope
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/InterestGroupScoringScriptRunnerGlobalScope)
+ */
 DECLARE_EMLITE_TYPE(InterestGroupScoringScriptRunnerGlobalScope, InterestGroupBiddingAndScoringScriptRunnerGlobalScope);
 
 #ifdef __cplusplus

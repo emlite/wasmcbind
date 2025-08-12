@@ -12,8 +12,16 @@ extern "C" {
 
 typedef struct SVGAnimatedNumber SVGAnimatedNumber;
 
+
+/**
+ * @brief Interface SVGStopElement
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/SVGStopElement)
+ */
 DECLARE_EMLITE_TYPE(SVGStopElement, SVGElement);
 
+/**
+ * @brief Gets the `offset` property. 
+*/
 SVGAnimatedNumber SVGStopElement_offset(const SVGStopElement *self);
 
 #ifdef __cplusplus

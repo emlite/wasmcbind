@@ -10,8 +10,16 @@ extern "C" {
 
 typedef struct FontFacePalette FontFacePalette;
 
+
+/**
+ * @brief Interface FontFacePalettes
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/FontFacePalettes)
+ */
 DECLARE_EMLITE_TYPE(FontFacePalettes, em_Val);
 
+/**
+ * @brief Gets the `length` property. 
+*/
 unsigned long FontFacePalettes_length(const FontFacePalettes *self);
 
 #ifdef __cplusplus

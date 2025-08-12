@@ -12,12 +12,16 @@ extern "C" {
 
 typedef struct PresentationConnection PresentationConnection;
 
+/** @brief Dictionary type PresentationConnectionAvailableEventInit */
 DECLARE_EMLITE_TYPE(PresentationConnectionAvailableEventInit, EventInit);
 
+/** @brief Getter of the connection property */
 PresentationConnection PresentationConnectionAvailableEventInit_connection(const PresentationConnectionAvailableEventInit *self);
 
+/** @brief Setter of the connection property */
 void PresentationConnectionAvailableEventInit_set_connection(PresentationConnectionAvailableEventInit* self, PresentationConnection * value);
 
+/** @brief Constructor of the PresentationConnectionAvailableEventInit dictionary type */
 PresentationConnectionAvailableEventInit PresentationConnectionAvailableEventInit_new();
 
 #ifdef __cplusplus

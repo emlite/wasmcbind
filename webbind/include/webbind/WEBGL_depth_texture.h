@@ -8,6 +8,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface WEBGL_depth_texture
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_depth_texture)
+ */
 DECLARE_EMLITE_TYPE(WEBGL_depth_texture, em_Val);
 
 #ifdef __cplusplus

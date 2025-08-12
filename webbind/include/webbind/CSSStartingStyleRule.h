@@ -10,6 +10,11 @@
 extern "C" {
 #endif
 
+
+/**
+ * @brief Interface CSSStartingStyleRule
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/CSSStartingStyleRule)
+ */
 DECLARE_EMLITE_TYPE(CSSStartingStyleRule, CSSGroupingRule);
 
 #ifdef __cplusplus

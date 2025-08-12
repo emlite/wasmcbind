@@ -12,12 +12,16 @@ extern "C" {
 
 typedef struct DOMException DOMException;
 
+/** @brief Dictionary type SensorErrorEventInit */
 DECLARE_EMLITE_TYPE(SensorErrorEventInit, EventInit);
 
+/** @brief Getter of the error property */
 DOMException SensorErrorEventInit_error(const SensorErrorEventInit *self);
 
+/** @brief Setter of the error property */
 void SensorErrorEventInit_set_error(SensorErrorEventInit* self, DOMException * value);
 
+/** @brief Constructor of the SensorErrorEventInit dictionary type */
 SensorErrorEventInit SensorErrorEventInit_new();
 
 #ifdef __cplusplus

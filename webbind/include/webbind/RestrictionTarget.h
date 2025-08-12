@@ -10,8 +10,16 @@ extern "C" {
 
 typedef struct Element Element;
 
+
+/**
+ * @brief Interface RestrictionTarget
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/RestrictionTarget)
+ */
 DECLARE_EMLITE_TYPE(RestrictionTarget, em_Val);
 
+/**
+ * @brief Calls the `fromElement` method. 
+*/
 jb_Promise RestrictionTarget_fromElement(RestrictionTarget* self , Element * element);
 
 #ifdef __cplusplus

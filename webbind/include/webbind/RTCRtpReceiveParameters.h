@@ -10,8 +10,10 @@
 extern "C" {
 #endif
 
+/** @brief Dictionary type RTCRtpReceiveParameters */
 DECLARE_EMLITE_TYPE(RTCRtpReceiveParameters, RTCRtpParameters);
 
+/** @brief Constructor of the RTCRtpReceiveParameters dictionary type */
 RTCRtpReceiveParameters RTCRtpReceiveParameters_new();
 
 #ifdef __cplusplus

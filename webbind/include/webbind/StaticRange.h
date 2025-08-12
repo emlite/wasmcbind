@@ -12,8 +12,16 @@ extern "C" {
 
 typedef struct StaticRangeInit StaticRangeInit;
 
+
+/**
+ * @brief Interface StaticRange
+ * [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/API/StaticRange)
+ */
 DECLARE_EMLITE_TYPE(StaticRange, AbstractRange);
 
+/**
+ * @brief Creates a new `StaticRange` object. 
+*/
 StaticRange StaticRange_new(StaticRangeInit * init);
 
 #ifdef __cplusplus
