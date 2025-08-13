@@ -38,6 +38,8 @@ DECLARE_EMLITE_TYPE(jb_Float32Array, em_Val);
 DECLARE_EMLITE_TYPE(jb_Float64Array, em_Val);
 /** @brief An opaque type representing a JavaScript `ArrayBuffer` object. */
 DECLARE_EMLITE_TYPE(jb_ArrayBuffer, em_Val);
+/** @brief An opaque type representing a JavaScript `SharedArrayBuffer` object. */
+DECLARE_EMLITE_TYPE(jb_SharedArrayBuffer, em_Val);
 /** @brief An opaque type representing a JavaScript `DataView` object. */
 DECLARE_EMLITE_TYPE(jb_DataView, em_Val);
 
@@ -163,6 +165,16 @@ size_t jb_ArrayBuffer_byteLength(const jb_ArrayBuffer *buf);
 jb_ArrayBuffer jb_ArrayBuffer_slice(const jb_ArrayBuffer *buf, size_t begin, size_t end);
 /** @brief Determines if a value is a view on an `ArrayBuffer`. */
 bool jb_ArrayBuffer_isView(const jb_Any *v);
+
+/** @brief Creates a new `SharedArrayBuffer` object. */
+jb_SharedArrayBuffer jb_SharedArrayBuffer_new(size_t byteLen);
+/** @brief Gets the size, in bytes, of the array. */
+size_t jb_SharedArrayBuffer_byteLength(const jb_SharedArrayBuffer *buf);
+/** @brief Returns a new `SharedArrayBuffer` whose contents are a copy of this `SharedArrayBuffer`'s bytes from
+ * `begin` (inclusive) up to `end` (exclusive). */
+jb_SharedArrayBuffer jb_SharedArrayBuffer_slice(const jb_SharedArrayBuffer *buf, size_t begin, size_t end);
+/** @brief Determines if a value is a view on an `SharedArrayBuffer`. */
+bool jb_SharedArrayBuffer_isView(const jb_Any *v);
 
 /** @brief Creates a new `DataView` object. */
 jb_DataView jb_DataView_new(const jb_ArrayBuffer *buf, size_t byteOffset, size_t byteLen);

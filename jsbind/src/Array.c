@@ -13,6 +13,7 @@ DEFINE_EMLITE_TYPE(jb_Float32Array, em_Val);
 DEFINE_EMLITE_TYPE(jb_Float64Array, em_Val);
 
 DEFINE_EMLITE_TYPE(jb_ArrayBuffer, em_Val);
+DEFINE_EMLITE_TYPE(jb_SharedArrayBuffer, em_Val);
 
 DEFINE_EMLITE_TYPE(jb_DataView, em_Val);
 
@@ -151,6 +152,24 @@ jb_ArrayBuffer jb_ArrayBuffer_slice(const jb_ArrayBuffer *buf, size_t begin, siz
 
 bool jb_ArrayBuffer_isView(const jb_Any *v) {
     return em_Val_as_bool(em_Val_call(em_Val_global("ArrayBuffer"), "isView", v->inner));
+}
+
+jb_SharedArrayBuffer jb_SharedArrayBuffer_new(size_t byteLen) {
+    return (jb_SharedArrayBuffer
+    ){.inner = em_Val_new(em_Val_global("SharedArrayBuffer"), em_Val_from_int(byteLen))};
+}
+
+size_t jb_SharedArrayBuffer_byteLength(const jb_SharedArrayBuffer *buf) {
+    return em_Val_as_int(em_Val_get(buf->inner, em_Val_from("byteLength")));
+}
+
+jb_SharedArrayBuffer jb_SharedArrayBuffer_slice(const jb_SharedArrayBuffer *buf, size_t begin, size_t end) {
+    return (jb_SharedArrayBuffer
+    ){.inner = em_Val_call(buf->inner, "slice", em_Val_from_int(begin), em_Val_from_int(end))};
+}
+
+bool jb_SharedArrayBuffer_isView(const jb_Any *v) {
+    return em_Val_as_bool(em_Val_call(em_Val_global("SharedArrayBuffer"), "isView", v->inner));
 }
 
 jb_DataView jb_DataView_new(const jb_ArrayBuffer *buf, size_t byteOffset, size_t byteLen) {
