@@ -5,10 +5,10 @@ DEFINE_EMLITE_TYPE(jb_String, em_Val);
 
 #define DEFINE_STRING_FUNCS(name)                                                                  \
     size_t jb_##name##_byte_len(const jb_##name *s) {                                              \
-        const char *str = em_Val_as_string(s->inner);                                              \
-        size_t len      = 0;                                                                       \
-        while (str && str[len] != '\0')                                                            \
-            ++len;                                                                                 \
+        char *str = em_Val_as_string(s->inner);                                                    \
+        if (!str) return 0;                                                                        \
+        size_t len = strlen(str);                                                                  \
+        free(str);                                                                                 \
         return len;                                                                                \
     }                                                                                              \
     bool jb_##name##_is_empty(const jb_##name *s) { return jb_##name##_length(s) == 0; }           \
@@ -17,16 +17,22 @@ DEFINE_EMLITE_TYPE(jb_String, em_Val);
         em_Val v   = em_Val_call(s->inner, "charAt", idx);                                         \
         return (jb_##name){.inner = v};                                                            \
     }                                                                                              \
-    const char *jb_##name##_as_str(const jb_##name *s) { return em_Val_as_string(s->inner); }      \
+    char *jb_##name##_as_str(const jb_##name *s) { \
+        if (!s) return NULL; \
+        return em_Val_as_string(s->inner); \
+    }      \
     size_t jb_##name##_length(const jb_##name *s) {                                                \
+        if (!s) return 0;                                                                          \
         em_Val prop = em_Val_from_string("length");                                                \
         em_Val v    = em_Val_get(s->inner, prop);                                                  \
+        if (em_Val_is_error(v) || em_Val_is_undefined(v)) return 0;                                \
         return (size_t)em_Val_as_int(v);                                                           \
     }                                                                                              \
     int jb_##name##_char_code_at(const jb_##name *s, size_t idx) {                                 \
+        if (!s) return -1;                                                                         \
         em_Val idxv = em_Val_from_int((int)idx);                                                   \
         em_Val v    = em_Val_call(s->inner, "charCodeAt", idxv);                                   \
-        if (em_Val_is_undefined(v))                                                                \
+        if (em_Val_is_undefined(v) || em_Val_is_error(v))                                          \
             return -1;                                                                             \
         return em_Val_as_int(v);                                                                   \
     }                                                                                              \
@@ -41,9 +47,10 @@ DEFINE_EMLITE_TYPE(jb_String, em_Val);
         return (jb_##name){.inner = v};                                                            \
     }                                                                                              \
     int jb_##name##_code_point_at(const jb_##name *s, size_t idx) {                                \
+        if (!s) return -1;                                                                         \
         em_Val idxv = em_Val_from_int((int)idx);                                                   \
         em_Val v    = em_Val_call(s->inner, "codePointAt", idxv);                                  \
-        if (em_Val_is_undefined(v))                                                                \
+        if (em_Val_is_undefined(v) || em_Val_is_error(v))                                          \
             return -1;                                                                             \
         return em_Val_as_int(v);                                                                   \
     }                                                                                              \
@@ -191,8 +198,9 @@ DEFINE_EMLITE_TYPE(jb_String, em_Val);
 
 DEFINE_STRING_FUNCS(String);
 
-const char *jb_String_c_str(const jb_String *s) {
-    // Return the C string representation
+char *jb_String_c_str(const jb_String *s) {
+    // Return the allocated C string representation - caller must free()
+    if (!s) return NULL;
     return em_Val_as_string(s->inner);
 }
 

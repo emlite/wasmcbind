@@ -56,9 +56,9 @@ jb_String jb_String_char_at(const jb_String *s, size_t i);
  * @brief Gets the string as a C-style string.
  *
  * @param s A pointer to the `jb_String` instance.
- * @return A pointer to the underlying C string.
+ * @return A pointer to the allocated C string. Caller must free() this.
  */
-const char *jb_String_as_str(const jb_String *s);
+char *jb_String_as_str(const jb_String *s);
 
 /**
  * @brief Gets the length of the string.
@@ -383,9 +383,9 @@ jb_String jb_String_valueOf(const jb_String *s);
  * @brief Gets the string as a C-style string.
  *
  * @param s A pointer to the `jb_String` instance.
- * @return A pointer to the underlying C string.
+ * @return A pointer to the allocated C string. Caller must free() this.
  */
-const char *jb_String_c_str(const jb_String *s);
+char *jb_String_c_str(const jb_String *s);
 
 /**
  * @brief Returns the string itself.
