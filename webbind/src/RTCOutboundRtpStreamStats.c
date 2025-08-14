@@ -333,6 +333,16 @@ void RTCOutboundRtpStreamStats_set_scalabilityMode(RTCOutboundRtpStreamStats* se
 }
 
 
+long long RTCOutboundRtpStreamStats_packetsSentWithEct1(const RTCOutboundRtpStreamStats *self) {
+    return em_Val_as(long long, em_Val_get(RTCSentRtpStreamStats_as_val(self->inner), em_Val_from("packetsSentWithEct1")));
+}
+
+
+void RTCOutboundRtpStreamStats_set_packetsSentWithEct1(RTCOutboundRtpStreamStats* self, long long value) {
+    em_Val_set(RTCSentRtpStreamStats_as_val(self->inner), em_Val_from("packetsSentWithEct1"), em_Val_from(value));
+}
+
+
 RTCOutboundRtpStreamStats RTCOutboundRtpStreamStats_new() {
     em_Val obj = em_Val_object();
     return RTCOutboundRtpStreamStats_from_val(&obj);

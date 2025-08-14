@@ -23,16 +23,6 @@ void RTCSentRtpStreamStats_set_bytesSent(RTCSentRtpStreamStats* self, long long 
 }
 
 
-long long RTCSentRtpStreamStats_packetsSentWithEct1(const RTCSentRtpStreamStats *self) {
-    return em_Val_as(long long, em_Val_get(RTCRtpStreamStats_as_val(self->inner), em_Val_from("packetsSentWithEct1")));
-}
-
-
-void RTCSentRtpStreamStats_set_packetsSentWithEct1(RTCSentRtpStreamStats* self, long long value) {
-    em_Val_set(RTCRtpStreamStats_as_val(self->inner), em_Val_from("packetsSentWithEct1"), em_Val_from(value));
-}
-
-
 RTCSentRtpStreamStats RTCSentRtpStreamStats_new() {
     em_Val obj = em_Val_object();
     return RTCSentRtpStreamStats_from_val(&obj);

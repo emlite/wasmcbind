@@ -31,6 +31,12 @@ jb_String NotificationOptions_body(const NotificationOptions *self);
 /** @brief Setter of the body property */
 void NotificationOptions_set_body(NotificationOptions* self, jb_String * value);
 
+/** @brief Getter of the navigate property */
+jb_String NotificationOptions_navigate(const NotificationOptions *self);
+
+/** @brief Setter of the navigate property */
+void NotificationOptions_set_navigate(NotificationOptions* self, jb_String * value);
+
 /** @brief Getter of the tag property */
 jb_String NotificationOptions_tag(const NotificationOptions *self);
 

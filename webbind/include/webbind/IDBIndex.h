@@ -10,6 +10,7 @@ extern "C" {
 
 typedef struct IDBObjectStore IDBObjectStore;
 typedef struct IDBRequest IDBRequest;
+typedef struct IDBGetAllOptions IDBGetAllOptions;
 
 
 /**
@@ -66,12 +67,12 @@ IDBRequest IDBIndex_getAll0(IDBIndex* self );
 /**
  * @brief Calls the `getAll` method. 
 */
-IDBRequest IDBIndex_getAll1(IDBIndex* self , jb_Any * query);
+IDBRequest IDBIndex_getAll1(IDBIndex* self , jb_Any * queryOrOptions);
 
 /**
  * @brief Calls the `getAll` method. 
 */
-IDBRequest IDBIndex_getAll2(IDBIndex* self , jb_Any * query, unsigned long count);
+IDBRequest IDBIndex_getAll2(IDBIndex* self , jb_Any * queryOrOptions, unsigned long count);
 
 /**
  * @brief Calls the `getAllKeys` method. 
@@ -81,12 +82,22 @@ IDBRequest IDBIndex_getAllKeys0(IDBIndex* self );
 /**
  * @brief Calls the `getAllKeys` method. 
 */
-IDBRequest IDBIndex_getAllKeys1(IDBIndex* self , jb_Any * query);
+IDBRequest IDBIndex_getAllKeys1(IDBIndex* self , jb_Any * queryOrOptions);
 
 /**
  * @brief Calls the `getAllKeys` method. 
 */
-IDBRequest IDBIndex_getAllKeys2(IDBIndex* self , jb_Any * query, unsigned long count);
+IDBRequest IDBIndex_getAllKeys2(IDBIndex* self , jb_Any * queryOrOptions, unsigned long count);
+
+/**
+ * @brief Calls the `getAllRecords` method. 
+*/
+IDBRequest IDBIndex_getAllRecords0(IDBIndex* self );
+
+/**
+ * @brief Calls the `getAllRecords` method. 
+*/
+IDBRequest IDBIndex_getAllRecords1(IDBIndex* self , IDBGetAllOptions * options);
 
 /**
  * @brief Calls the `count` method. 

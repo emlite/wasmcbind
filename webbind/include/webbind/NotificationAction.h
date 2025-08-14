@@ -23,6 +23,12 @@ jb_String NotificationAction_title(const NotificationAction *self);
 /** @brief Setter of the title property */
 void NotificationAction_set_title(NotificationAction* self, jb_String * value);
 
+/** @brief Getter of the navigate property */
+jb_String NotificationAction_navigate(const NotificationAction *self);
+
+/** @brief Setter of the navigate property */
+void NotificationAction_set_navigate(NotificationAction* self, jb_String * value);
+
 /** @brief Getter of the icon property */
 jb_String NotificationAction_icon(const NotificationAction *self);
 

@@ -211,6 +211,12 @@ jb_String RTCOutboundRtpStreamStats_scalabilityMode(const RTCOutboundRtpStreamSt
 /** @brief Setter of the scalabilityMode property */
 void RTCOutboundRtpStreamStats_set_scalabilityMode(RTCOutboundRtpStreamStats* self, jb_String * value);
 
+/** @brief Getter of the packetsSentWithEct1 property */
+long long RTCOutboundRtpStreamStats_packetsSentWithEct1(const RTCOutboundRtpStreamStats *self);
+
+/** @brief Setter of the packetsSentWithEct1 property */
+void RTCOutboundRtpStreamStats_set_packetsSentWithEct1(RTCOutboundRtpStreamStats* self, long long value);
+
 /** @brief Constructor of the RTCOutboundRtpStreamStats dictionary type */
 RTCOutboundRtpStreamStats RTCOutboundRtpStreamStats_new();
 

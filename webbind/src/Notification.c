@@ -98,6 +98,11 @@ jb_String Notification_body(const Notification *self) {
 }
 
 
+jb_String Notification_navigate(const Notification *self) {
+    return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("navigate")));
+}
+
+
 jb_String Notification_tag(const Notification *self) {
     return em_Val_as(jb_String, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("tag")));
 }

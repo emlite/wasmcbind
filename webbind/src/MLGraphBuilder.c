@@ -419,6 +419,16 @@ MLOperand MLGraphBuilder_reciprocal1(MLGraphBuilder* self , MLOperand * input, M
 }
 
 
+MLOperand MLGraphBuilder_roundEven0(MLGraphBuilder* self , MLOperand * input) {
+    return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "roundEven", em_Val_from(input)));
+}
+
+
+MLOperand MLGraphBuilder_roundEven1(MLGraphBuilder* self , MLOperand * input, MLOperatorOptions * options) {
+    return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "roundEven", em_Val_from(input), em_Val_from(options)));
+}
+
+
 MLOperand MLGraphBuilder_sin0(MLGraphBuilder* self , MLOperand * input) {
     return em_Val_as(MLOperand, em_Val_call(em_Val_as_val(self->inner), "sin", em_Val_from(input)));
 }

@@ -33,6 +33,16 @@ void NotificationOptions_set_body(NotificationOptions* self, jb_String * value) 
 }
 
 
+jb_String NotificationOptions_navigate(const NotificationOptions *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("navigate")));
+}
+
+
+void NotificationOptions_set_navigate(NotificationOptions* self, jb_String * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("navigate"), em_Val_from(value));
+}
+
+
 jb_String NotificationOptions_tag(const NotificationOptions *self) {
     return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("tag")));
 }

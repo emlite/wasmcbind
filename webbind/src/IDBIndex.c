@@ -2,6 +2,7 @@
 
 #include <webbind/IDBObjectStore.h>
 #include <webbind/IDBRequest.h>
+#include <webbind/IDBGetAllOptions.h>
 
 DEFINE_EMLITE_TYPE(IDBIndex, em_Val);
 
@@ -51,13 +52,13 @@ IDBRequest IDBIndex_getAll0(IDBIndex* self ) {
 }
 
 
-IDBRequest IDBIndex_getAll1(IDBIndex* self , jb_Any * query) {
-    return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAll", em_Val_from(query)));
+IDBRequest IDBIndex_getAll1(IDBIndex* self , jb_Any * queryOrOptions) {
+    return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAll", em_Val_from(queryOrOptions)));
 }
 
 
-IDBRequest IDBIndex_getAll2(IDBIndex* self , jb_Any * query, unsigned long count) {
-    return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAll", em_Val_from(query), em_Val_from(count)));
+IDBRequest IDBIndex_getAll2(IDBIndex* self , jb_Any * queryOrOptions, unsigned long count) {
+    return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAll", em_Val_from(queryOrOptions), em_Val_from(count)));
 }
 
 
@@ -66,13 +67,23 @@ IDBRequest IDBIndex_getAllKeys0(IDBIndex* self ) {
 }
 
 
-IDBRequest IDBIndex_getAllKeys1(IDBIndex* self , jb_Any * query) {
-    return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAllKeys", em_Val_from(query)));
+IDBRequest IDBIndex_getAllKeys1(IDBIndex* self , jb_Any * queryOrOptions) {
+    return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAllKeys", em_Val_from(queryOrOptions)));
 }
 
 
-IDBRequest IDBIndex_getAllKeys2(IDBIndex* self , jb_Any * query, unsigned long count) {
-    return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAllKeys", em_Val_from(query), em_Val_from(count)));
+IDBRequest IDBIndex_getAllKeys2(IDBIndex* self , jb_Any * queryOrOptions, unsigned long count) {
+    return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAllKeys", em_Val_from(queryOrOptions), em_Val_from(count)));
+}
+
+
+IDBRequest IDBIndex_getAllRecords0(IDBIndex* self ) {
+    return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAllRecords"));
+}
+
+
+IDBRequest IDBIndex_getAllRecords1(IDBIndex* self , IDBGetAllOptions * options) {
+    return em_Val_as(IDBRequest, em_Val_call(em_Val_as_val(self->inner), "getAllRecords", em_Val_from(options)));
 }
 
 

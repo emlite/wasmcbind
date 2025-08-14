@@ -18,6 +18,8 @@
 #include <webbind/DigitalGoodsService.h>
 #include <webbind/DocumentPictureInPicture.h>
 #include <webbind/Fence.h>
+#include <webbind/FetchLaterResult.h>
+#include <webbind/DeferredRequestInit.h>
 #include <webbind/FileSystemFileHandle.h>
 #include <webbind/OpenFilePickerOptions.h>
 #include <webbind/SaveFilePickerOptions.h>
@@ -441,6 +443,16 @@ jb_Any Window_event(const Window *self) {
 
 Fence Window_fence(const Window *self) {
     return em_Val_as(Fence, em_Val_get(EventTarget_as_val(self->inner), em_Val_from("fence")));
+}
+
+
+FetchLaterResult Window_fetchLater0(Window* self , jb_Any * input) {
+    return em_Val_as(FetchLaterResult, em_Val_call(EventTarget_as_val(self->inner), "fetchLater", em_Val_from(input)));
+}
+
+
+FetchLaterResult Window_fetchLater1(Window* self , jb_Any * input, DeferredRequestInit * init) {
+    return em_Val_as(FetchLaterResult, em_Val_call(EventTarget_as_val(self->inner), "fetchLater", em_Val_from(input), em_Val_from(init)));
 }
 
 

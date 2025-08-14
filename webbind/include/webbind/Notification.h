@@ -111,6 +111,11 @@ jb_String Notification_lang(const Notification *self);
 jb_String Notification_body(const Notification *self);
 
 /**
+ * @brief Gets the `navigate` property. 
+*/
+jb_String Notification_navigate(const Notification *self);
+
+/**
  * @brief Gets the `tag` property. 
 */
 jb_String Notification_tag(const Notification *self);

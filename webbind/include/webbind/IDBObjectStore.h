@@ -11,6 +11,7 @@ extern "C" {
 typedef struct DOMStringList DOMStringList;
 typedef struct IDBTransaction IDBTransaction;
 typedef struct IDBRequest IDBRequest;
+typedef struct IDBGetAllOptions IDBGetAllOptions;
 typedef struct IDBIndex IDBIndex;
 typedef struct IDBIndexParameters IDBIndexParameters;
 
@@ -99,12 +100,12 @@ IDBRequest IDBObjectStore_getAll0(IDBObjectStore* self );
 /**
  * @brief Calls the `getAll` method. 
 */
-IDBRequest IDBObjectStore_getAll1(IDBObjectStore* self , jb_Any * query);
+IDBRequest IDBObjectStore_getAll1(IDBObjectStore* self , jb_Any * queryOrOptions);
 
 /**
  * @brief Calls the `getAll` method. 
 */
-IDBRequest IDBObjectStore_getAll2(IDBObjectStore* self , jb_Any * query, unsigned long count);
+IDBRequest IDBObjectStore_getAll2(IDBObjectStore* self , jb_Any * queryOrOptions, unsigned long count);
 
 /**
  * @brief Calls the `getAllKeys` method. 
@@ -114,12 +115,22 @@ IDBRequest IDBObjectStore_getAllKeys0(IDBObjectStore* self );
 /**
  * @brief Calls the `getAllKeys` method. 
 */
-IDBRequest IDBObjectStore_getAllKeys1(IDBObjectStore* self , jb_Any * query);
+IDBRequest IDBObjectStore_getAllKeys1(IDBObjectStore* self , jb_Any * queryOrOptions);
 
 /**
  * @brief Calls the `getAllKeys` method. 
 */
-IDBRequest IDBObjectStore_getAllKeys2(IDBObjectStore* self , jb_Any * query, unsigned long count);
+IDBRequest IDBObjectStore_getAllKeys2(IDBObjectStore* self , jb_Any * queryOrOptions, unsigned long count);
+
+/**
+ * @brief Calls the `getAllRecords` method. 
+*/
+IDBRequest IDBObjectStore_getAllRecords0(IDBObjectStore* self );
+
+/**
+ * @brief Calls the `getAllRecords` method. 
+*/
+IDBRequest IDBObjectStore_getAllRecords1(IDBObjectStore* self , IDBGetAllOptions * options);
 
 /**
  * @brief Calls the `count` method. 

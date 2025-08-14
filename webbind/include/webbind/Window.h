@@ -28,6 +28,8 @@ typedef struct CSSStyleProperties CSSStyleProperties;
 typedef struct DigitalGoodsService DigitalGoodsService;
 typedef struct DocumentPictureInPicture DocumentPictureInPicture;
 typedef struct Fence Fence;
+typedef struct FetchLaterResult FetchLaterResult;
+typedef struct DeferredRequestInit DeferredRequestInit;
 typedef struct FileSystemFileHandle FileSystemFileHandle;
 typedef struct OpenFilePickerOptions OpenFilePickerOptions;
 typedef struct SaveFilePickerOptions SaveFilePickerOptions;
@@ -457,6 +459,16 @@ jb_Any Window_event(const Window *self);
  * @brief Gets the `fence` property. 
 */
 Fence Window_fence(const Window *self);
+
+/**
+ * @brief Calls the `fetchLater` method. 
+*/
+FetchLaterResult Window_fetchLater0(Window* self , jb_Any * input);
+
+/**
+ * @brief Calls the `fetchLater` method. 
+*/
+FetchLaterResult Window_fetchLater1(Window* self , jb_Any * input, DeferredRequestInit * init);
 
 /**
  * @brief Calls the `showOpenFilePicker` method. 

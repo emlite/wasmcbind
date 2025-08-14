@@ -431,6 +431,16 @@ MLOperand MLGraphBuilder_reciprocal0(MLGraphBuilder* self , MLOperand * input);
 MLOperand MLGraphBuilder_reciprocal1(MLGraphBuilder* self , MLOperand * input, MLOperatorOptions * options);
 
 /**
+ * @brief Calls the `roundEven` method. 
+*/
+MLOperand MLGraphBuilder_roundEven0(MLGraphBuilder* self , MLOperand * input);
+
+/**
+ * @brief Calls the `roundEven` method. 
+*/
+MLOperand MLGraphBuilder_roundEven1(MLGraphBuilder* self , MLOperand * input, MLOperatorOptions * options);
+
+/**
  * @brief Calls the `sin` method. 
 */
 MLOperand MLGraphBuilder_sin0(MLGraphBuilder* self , MLOperand * input);

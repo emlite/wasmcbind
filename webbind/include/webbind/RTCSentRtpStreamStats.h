@@ -25,12 +25,6 @@ long long RTCSentRtpStreamStats_bytesSent(const RTCSentRtpStreamStats *self);
 /** @brief Setter of the bytesSent property */
 void RTCSentRtpStreamStats_set_bytesSent(RTCSentRtpStreamStats* self, long long value);
 
-/** @brief Getter of the packetsSentWithEct1 property */
-long long RTCSentRtpStreamStats_packetsSentWithEct1(const RTCSentRtpStreamStats *self);
-
-/** @brief Setter of the packetsSentWithEct1 property */
-void RTCSentRtpStreamStats_set_packetsSentWithEct1(RTCSentRtpStreamStats* self, long long value);
-
 /** @brief Constructor of the RTCSentRtpStreamStats dictionary type */
 RTCSentRtpStreamStats RTCSentRtpStreamStats_new();
 
