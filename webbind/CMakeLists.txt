@@ -19,7 +19,7 @@ set(WEBBIND_HTMLSOURCES
     src/PointerEvent.c
     src/CSSStyleDeclaration.c
     src/CSSStyleProperties.c
-    src/window.c
+    src/WindowProxy.c
 )
 
 add_library(webbind)

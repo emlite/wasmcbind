@@ -1,7 +1,7 @@
 #pragma once
 
 /**
- * @file window.h
+ * @file windowProxy.h
  * @brief Bindings for the global `window` object.
  */
 
