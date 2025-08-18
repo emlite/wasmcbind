@@ -1121,4 +1121,4 @@
 #include "XSLTProcessor.h"
 #include "console.h"
 #include "enums.h"
-#include "window.h"
+#include "WindowProxy.h"
