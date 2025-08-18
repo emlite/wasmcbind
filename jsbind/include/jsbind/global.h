@@ -145,6 +145,17 @@ void jb_clearTimeout(const jb_Any *timeoutId);
 /** @brief Clears a timer set with `setInterval()`. */
 void jb_clearInterval(const jb_Any *intervalId);
 
+// Module loading functions
+
+/** @brief Dynamically imports a module. */
+jb_Any jb_import(const char *specifier); // Returns Promise<Object> or Error
+
+/** @brief Requires a CommonJS module. */
+jb_Any jb_require(const char *specifier); // Returns Object or Error
+
+/** @brief Creates a require function using import.meta.url. */
+jb_Any jb_createRequire(const jb_Any *importMetaUrl); // Returns Function or Error
+
 #ifdef __cplusplus
 }
 #endif

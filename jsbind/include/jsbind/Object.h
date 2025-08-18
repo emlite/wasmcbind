@@ -64,6 +64,39 @@ void jb_Object_set(jb_Object *o, const char *prop, const jb_Any *v);
  */
 int jb_Object_has_own_property(const jb_Object *o, const char *prop);
 
+/**
+ * @brief Gets the Object constructor function.
+ *
+ * @return The Object constructor function as em_Val.
+ */
+em_Val jb_Object_instance();
+
+/**
+ * @brief Creates an object with the specified prototype object.
+ *
+ * @param prototype The object to use as the prototype, or null for no prototype.
+ * @return A new object with the specified prototype.
+ */
+em_Val jb_Object_create(em_Val prototype);
+
+/**
+ * @brief Creates an object with the specified prototype object and properties.
+ *
+ * @param prototype The object to use as the prototype, or null for no prototype.
+ * @param properties An object whose enumerable own properties specify property descriptors.
+ * @return A new object with the specified prototype and properties.
+ */
+em_Val jb_Object_create_with_properties(em_Val prototype, em_Val properties);
+
+/**
+ * @brief Sets the prototype (i.e., the internal [[Prototype]] property) of a specified object.
+ *
+ * @param obj The object which is to have its prototype set.
+ * @param prototype The object's new prototype (an object or null).
+ * @return The specified object.
+ */
+em_Val jb_Object_setPrototypeOf(em_Val obj, em_Val prototype);
+
 #ifdef __cplusplus
 }
 #endif

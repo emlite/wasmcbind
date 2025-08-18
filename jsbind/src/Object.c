@@ -21,3 +21,22 @@ void jb_Object_set(jb_Object *o, const char *prop, const jb_Any *v) {
 int jb_Object_has_own_property(const jb_Object *o, const char *prop) {
     return em_Val_has_own_property(o->inner, prop);
 }
+
+em_Val jb_Object_instance() {
+    return em_Val_global("Object");
+}
+
+em_Val jb_Object_create(em_Val prototype) {
+    em_Val object_ctor = em_Val_global("Object");
+    return em_Val_call(object_ctor, "create", prototype);
+}
+
+em_Val jb_Object_create_with_properties(em_Val prototype, em_Val properties) {
+    em_Val object_ctor = em_Val_global("Object");
+    return em_Val_call(object_ctor, "create", prototype, properties);
+}
+
+em_Val jb_Object_setPrototypeOf(em_Val obj, em_Val prototype) {
+    em_Val object_ctor = em_Val_global("Object");
+    return em_Val_call(object_ctor, "setPrototypeOf", obj, prototype);
+}

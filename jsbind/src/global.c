@@ -190,3 +190,52 @@ void jb_clearInterval(const jb_Any *intervalId) {
     em_Val global_clearinterval = em_Val_global("clearInterval");
     em_Val_call(global_clearinterval, "call", em_Val_null(), intervalId->inner);
 }
+
+// Module loading functions
+jb_Any jb_import(const char *specifier) {
+    em_Val specifier_val = em_Val_from_string(specifier);
+    em_Val global_import = em_Val_global("import");
+    em_Val result = em_Val_invoke(global_import, specifier_val);
+    return (jb_Any){.inner = result};
+}
+
+jb_Any jb_require(const char *specifier) {
+    em_Val specifier_val = em_Val_from_string(specifier);
+    em_Val global_require = em_Val_global("require");
+    
+    if (em_Val_is_undefined(global_require)) {
+        // Return an error - require is not available
+        em_Val error_msg = em_Val_from_string("require is not available in this environment");
+        em_Val error_ctor = em_Val_global("Error");
+        em_Val error_obj = em_Val_new(error_ctor, error_msg);
+        return (jb_Any){.inner = error_obj};
+    }
+    
+    em_Val result = em_Val_invoke(global_require, specifier_val);
+    return (jb_Any){.inner = result};
+}
+
+jb_Any jb_createRequire(const jb_Any *importMetaUrl) {
+    em_Val module_obj = em_Val_global("module");
+    
+    if (em_Val_is_undefined(module_obj)) {
+        // Return an error - module.createRequire is not available
+        em_Val error_msg = em_Val_from_string("module.createRequire not supported in this environment");
+        em_Val error_ctor = em_Val_global("Error");
+        em_Val error_obj = em_Val_new(error_ctor, error_msg);
+        return (jb_Any){.inner = error_obj};
+    }
+    
+    em_Val createRequire_fn = em_Val_get(module_obj, em_Val_from_string("createRequire"));
+    
+    if (em_Val_is_undefined(createRequire_fn)) {
+        // Return an error - module.createRequire is not available
+        em_Val error_msg = em_Val_from_string("module.createRequire not available");
+        em_Val error_ctor = em_Val_global("Error");
+        em_Val error_obj = em_Val_new(error_ctor, error_msg);
+        return (jb_Any){.inner = error_obj};
+    }
+    
+    em_Val result = em_Val_invoke(createRequire_fn, importMetaUrl->inner);
+    return (jb_Any){.inner = result};
+}
