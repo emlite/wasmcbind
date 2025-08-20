@@ -2,7 +2,10 @@ cmake_minimum_required(VERSION 3.20)
 project(wasmcbind LANGUAGES C VERSION 0.1.0)
 
 set(EMLITE_CLIB_ONLY ON CACHE BOOL " " FORCE)
-add_subdirectory(emlite-cpp)
+find_package(emlite CONFIG QUIET)
+if (NOT emlite_FOUND)
+    add_subdirectory(emlite-cpp)
+endif()
 
 option(WASMCBIND_BUILD_WEBBIND  "Build webbind library"  ON)
 
