@@ -1,14 +1,14 @@
 {
-  "name": "wasm-cbind",
+  "name": "wasmcbind",
   "version": "0.1.0",
-  "description": "wasm-cbind is a C project that offers bindngs to Web APIs for use with wasm.",
+  "description": "wasmcbind is a C project that offers bindngs to Web APIs for use with wasm.",
   "main": "scripts/index.js",
   "type": "module",
   "directories": {
     "example": "examples"
   },
   "scripts": {
-    "cmake:config": "cmake -Bbin -GNinja -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DWASMBIND_BUILD_EXAMPLES=ON -DEMLITE_USE_DLMALLOC=ON -DCMAKE_TOOLCHAIN_FILE=./cmake/freestanding.cmake",
+    "cmake:config": "cmake -Bbin -GNinja -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DWASMCBIND_BUILD_EXAMPLES=ON -DEMLITE_USE_DLMALLOC=ON -DCMAKE_TOOLCHAIN_FILE=./cmake/freestanding.cmake",
     "cmake:build": "cmake --build bin",
     "regen": "node scripts/index.js",
     "test:all": "npm run regen && npm run cmake:config && npm run cmake:build",

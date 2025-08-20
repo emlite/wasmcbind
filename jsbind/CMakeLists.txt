@@ -76,19 +76,13 @@ set_target_properties(jsbind PROPERTIES
     LINKER_LANGUAGE C
 )
 
-add_library(jsbind::jsbind ALIAS jsbind)
+add_library(wasmcbind::jsbind ALIAS jsbind)
 
 include(GNUInstallDirs)
 
 install(
     TARGETS   jsbind
-    EXPORT    jsbindTargets
+    EXPORT    wasmcbindTargets
     FILE_SET  HEADERS
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
-)
-
-install(EXPORT jsbindTargets
-    FILE jsbindTargets.cmake
-    NAMESPACE jsbind::
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/jsbind
 )

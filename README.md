@@ -1,4 +1,4 @@
-# Wasm-cbind
+# Wasmcbind
 
 C bindings to the web API.
 (Still a work in progress)
@@ -64,8 +64,8 @@ project(projname)
 include(FetchContent)
 
 FetchContent_Declare(
-    wasm-cbind
-    GIT_REPOSITORY https://github.com/emlite/wasm-cbind.git
+    wasmcbind
+    GIT_REPOSITORY https://github.com/emlite/wasmcbind.git
     GIT_TAG main
     GIT_SHALLOW True
 )
