@@ -7,7 +7,7 @@ if (NOT emlite_FOUND)
     add_subdirectory(emlite-cpp)
 endif()
 
-option(WASMCBIND_BUILD_WEBBIND  "Build webcbind library"  ON)
+option(WASMCBIND_BUILD_WEBCBIND  "Build webcbind library"  ON)
 
 if (PROJECT_IS_TOP_LEVEL)
   option(WASMCBIND_BUILD_EXAMPLES "Build examples" OFF)
@@ -15,7 +15,7 @@ endif()
 
 add_subdirectory(jscbind)
 
-if (WASMCBIND_BUILD_WEBBIND)
+if (WASMCBIND_BUILD_WEBCBIND)
     add_subdirectory(webcbind)
 endif()
 

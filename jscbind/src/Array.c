@@ -194,13 +194,13 @@ jb_ArrayBuffer jb_DataView_buffer(const jb_DataView *view) {
     return (jb_ArrayBuffer){.inner = em_Val_get(view->inner, em_Val_from("buffer"))};
 }
 
-#define JSBIND_DV_GET(Name, Cpp)                                                                   \
+#define JSCBIND_DV_GET(Name, Cpp)                                                                   \
     Cpp jb_DataView_##Name(const jb_DataView *view, size_t off, bool le) {                         \
         return em_Val_as_int(                                                                      \
             em_Val_call(view->inner, #Name, em_Val_from_int(off), em_Val_from_int(le))             \
         );                                                                                         \
     }
-#define JSBIND_DV_SET(Name, Cpp)                                                                   \
+#define JSCBIND_DV_SET(Name, Cpp)                                                                   \
     void jb_DataView_##Name(jb_DataView *view, size_t off, Cpp v, bool le) {                       \
         em_Val_call(                                                                               \
             view->inner, #Name, em_Val_from_int(off), em_Val_from_int(v), em_Val_from_int(le)      \
@@ -220,22 +220,22 @@ void jb_DataView_setInt8(jb_DataView *view, size_t o, int8_t v) {
     em_Val_call(view->inner, "setInt8", em_Val_from_int(o), em_Val_from_int(v));
 }
 
-JSBIND_DV_GET(getUint16, uint16_t)
-JSBIND_DV_GET(getInt16, int16_t)
-JSBIND_DV_GET(getUint32, uint32_t)
-JSBIND_DV_GET(getInt32, int32_t)
-JSBIND_DV_GET(getFloat32, float)
-JSBIND_DV_GET(getFloat64, double)
+JSCBIND_DV_GET(getUint16, uint16_t)
+JSCBIND_DV_GET(getInt16, int16_t)
+JSCBIND_DV_GET(getUint32, uint32_t)
+JSCBIND_DV_GET(getInt32, int32_t)
+JSCBIND_DV_GET(getFloat32, float)
+JSCBIND_DV_GET(getFloat64, double)
 
-JSBIND_DV_SET(setUint16, uint16_t)
-JSBIND_DV_SET(setInt16, int16_t)
-JSBIND_DV_SET(setUint32, uint32_t)
-JSBIND_DV_SET(setInt32, int32_t)
-JSBIND_DV_SET(setFloat32, float)
-JSBIND_DV_SET(setFloat64, double)
+JSCBIND_DV_SET(setUint16, uint16_t)
+JSCBIND_DV_SET(setInt16, int16_t)
+JSCBIND_DV_SET(setUint32, uint32_t)
+JSCBIND_DV_SET(setInt32, int32_t)
+JSCBIND_DV_SET(setFloat32, float)
+JSCBIND_DV_SET(setFloat64, double)
 
-#undef JSBIND_DV_GET
-#undef JSBIND_DV_SET
+#undef JSCBIND_DV_GET
+#undef JSCBIND_DV_SET
 
 // TypedArray implementations using macros
 #define DEFINE_TYPED_ARRAY_FUNCS(name, elem_type, elem_type_name)                                  \
