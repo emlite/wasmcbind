@@ -1,4 +1,4 @@
-#include <jsbind/jsbind.h>
+#include <jscbind/jscbind.h>
 
 int main() {
     // Test Uint8Array

@@ -1,4 +1,0 @@
-#include <webbind/InterestGroupScoringScriptRunnerGlobalScope.h>
-
-DEFINE_EMLITE_TYPE(InterestGroupScoringScriptRunnerGlobalScope, InterestGroupBiddingAndScoringScriptRunnerGlobalScope);
-

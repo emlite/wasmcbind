@@ -1,0 +1,4 @@
+#include <webcbind/XRSpace.h>
+
+DEFINE_EMLITE_TYPE(XRSpace, EventTarget);
+

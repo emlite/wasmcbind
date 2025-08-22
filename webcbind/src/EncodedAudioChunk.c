@@ -1,0 +1,37 @@
+#include <webcbind/EncodedAudioChunk.h>
+
+#include <webcbind/EncodedAudioChunkInit.h>
+
+DEFINE_EMLITE_TYPE(EncodedAudioChunk, em_Val);
+
+
+EncodedAudioChunk EncodedAudioChunk_new(EncodedAudioChunkInit * init) {
+        em_Val vv = em_Val_new(em_Val_global("EncodedAudioChunk") , em_Val_from(init));
+        return EncodedAudioChunk_from_val(&vv);
+      }
+
+
+EncodedAudioChunkType EncodedAudioChunk_type(const EncodedAudioChunk *self) {
+    return em_Val_as(EncodedAudioChunkType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("type")));
+}
+
+
+long long EncodedAudioChunk_timestamp(const EncodedAudioChunk *self) {
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("timestamp")));
+}
+
+
+long long EncodedAudioChunk_duration(const EncodedAudioChunk *self) {
+    return em_Val_as(long long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("duration")));
+}
+
+
+unsigned long EncodedAudioChunk_byteLength(const EncodedAudioChunk *self) {
+    return em_Val_as(unsigned long, em_Val_get(em_Val_as_val(self->inner), em_Val_from("byteLength")));
+}
+
+
+jb_Undefined EncodedAudioChunk_copyTo(EncodedAudioChunk* self , jb_Any * destination) {
+    return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "copyTo", em_Val_from(destination)));
+}
+

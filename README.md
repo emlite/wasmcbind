@@ -6,8 +6,8 @@ C bindings to the web API.
 ## Example
 
 ```c
-#include <jsbind/jsbind.h>
-#include <webbind/webbind.h>
+#include <jscbind/jscbind.h>
+#include <webcbind/webcbind.h>
 
 jb_Any button_cb(const jb_Array *args, const jb_Any *data) {
     jb_Any ev0    = jb_Array_get(args, 0);
@@ -75,7 +75,7 @@ set(EMLITE_USE_DLMALLOC ON CACHE BOOL " " FORCE)
 FetchContent_MakeAvailable(wasmbind)
 
 add_executable(main src/main.c)
-target_link_libraries(main PRIVATE webbind::webbind)
+target_link_libraries(main PRIVATE webcbind::webcbind)
 set_target_properties(main PROPERTIES LINKER_LANGUAGE C SUFFIX .wasm LINK_FLAGS "-Wl,--no-entry,--allow-undefined,--export=main,--export-table,--import-memory,--export-memory,--strip-all")
 ```
 

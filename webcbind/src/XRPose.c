@@ -1,0 +1,27 @@
+#include <webcbind/XRPose.h>
+
+#include <webcbind/XRRigidTransform.h>
+#include <webcbind/DOMPointReadOnly.h>
+
+DEFINE_EMLITE_TYPE(XRPose, em_Val);
+
+
+XRRigidTransform XRPose_transform(const XRPose *self) {
+    return em_Val_as(XRRigidTransform, em_Val_get(em_Val_as_val(self->inner), em_Val_from("transform")));
+}
+
+
+DOMPointReadOnly XRPose_linearVelocity(const XRPose *self) {
+    return em_Val_as(DOMPointReadOnly, em_Val_get(em_Val_as_val(self->inner), em_Val_from("linearVelocity")));
+}
+
+
+DOMPointReadOnly XRPose_angularVelocity(const XRPose *self) {
+    return em_Val_as(DOMPointReadOnly, em_Val_get(em_Val_as_val(self->inner), em_Val_from("angularVelocity")));
+}
+
+
+bool XRPose_emulatedPosition(const XRPose *self) {
+    return em_Val_as(bool, em_Val_get(em_Val_as_val(self->inner), em_Val_from("emulatedPosition")));
+}
+

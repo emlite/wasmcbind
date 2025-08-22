@@ -14,8 +14,8 @@ let dictionaryRegistry = null;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export const OUT_INC = path.resolve(__dirname, "../webbind/include/webbind");
-export const OUT_SRC = path.resolve(__dirname, "../webbind/src");
+export const OUT_INC = path.resolve(__dirname, "../webcbind/include/webcbind");
+export const OUT_SRC = path.resolve(__dirname, "../webcbind/src");
 
 function pair(name) {
   return {
@@ -73,7 +73,7 @@ export function flat(t) {
 
 export function cpp(idlType) {
   const { n, unsigned } = flat(idlType);
-  const jsbindMap = {
+  const jscbindMap = {
     undefined: "jb_Undefined",
     DOMString: "jb_String",
     USVString: "jb_String",
@@ -94,7 +94,7 @@ export function cpp(idlType) {
   if (missingDictFallback.has(n) || builtinNominals.has(n))
     return "jb_Any";
 
-  if (jsbindMap[n]) return jsbindMap[n];
+  if (jscbindMap[n]) return jscbindMap[n];
 
   if (typeof idlType === "object" && idlType.generic) {
     const inner = idlType.idlType;
@@ -181,7 +181,7 @@ export function getHeaderPreamble(customIncludes = []) {
     "#pragma once",
     "",
     "#include <emlite/emlite.h>",
-    "#include <jsbind/jsbind.h>",
+    "#include <jscbind/jscbind.h>",
     '#include "enums.h"',
     "",
   ];
@@ -213,7 +213,7 @@ export function getHeaderPostamble() {
 
 export function getSourcePreamble(headerName, customIncludes = []) {
   const preamble = [
-    `#include <webbind/${headerName}.h>`,
+    `#include <webcbind/${headerName}.h>`,
     ""
   ];
   

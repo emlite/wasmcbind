@@ -95,7 +95,7 @@ export class DependencyResolver {
         }
       } else if (this.interfaces.has(ref)) {
         forwardDecls.add(ref);
-        srcIncludes.add(`#include <webbind/${ref}.h>`);
+        srcIncludes.add(`#include <webcbind/${ref}.h>`);
       }
     });
 
@@ -125,13 +125,13 @@ export class DependencyResolver {
         const dictFile = dictOwner.get(ref);
         if (dictFile) {
           forwardDecls.add(ref);
-          srcIncludes.add(`#include <webbind/${dictFile}>`);
+          srcIncludes.add(`#include <webcbind/${dictFile}>`);
         } else {
           forwardDecls.add(ref);
         }
       } else if (this.interfaces.has(ref) && ref !== parent && ref !== interfaceName) {
         forwardDecls.add(ref);
-        srcIncludes.add(`#include <webbind/${ref}.h>`);
+        srcIncludes.add(`#include <webcbind/${ref}.h>`);
       }
     });
 

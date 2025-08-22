@@ -1,0 +1,49 @@
+#include <webcbind/SVGLength.h>
+
+DEFINE_EMLITE_TYPE(SVGLength, em_Val);
+
+
+unsigned short SVGLength_unitType(const SVGLength *self) {
+    return em_Val_as(unsigned short, em_Val_get(em_Val_as_val(self->inner), em_Val_from("unitType")));
+}
+
+
+float SVGLength_value(const SVGLength *self) {
+    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), em_Val_from("value")));
+}
+
+
+void SVGLength_set_value(SVGLength* self, float value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("value"), em_Val_from(value));
+}
+
+
+float SVGLength_valueInSpecifiedUnits(const SVGLength *self) {
+    return em_Val_as(float, em_Val_get(em_Val_as_val(self->inner), em_Val_from("valueInSpecifiedUnits")));
+}
+
+
+void SVGLength_set_valueInSpecifiedUnits(SVGLength* self, float value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("valueInSpecifiedUnits"), em_Val_from(value));
+}
+
+
+jb_String SVGLength_valueAsString(const SVGLength *self) {
+    return em_Val_as(jb_String, em_Val_get(em_Val_as_val(self->inner), em_Val_from("valueAsString")));
+}
+
+
+void SVGLength_set_valueAsString(SVGLength* self, jb_String * value) {
+    em_Val_set(em_Val_as_val(self->inner), em_Val_from("valueAsString"), em_Val_from(value));
+}
+
+
+jb_Undefined SVGLength_newValueSpecifiedUnits(SVGLength* self , unsigned short unitType, float valueInSpecifiedUnits) {
+    return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "newValueSpecifiedUnits", em_Val_from(unitType), em_Val_from(valueInSpecifiedUnits)));
+}
+
+
+jb_Undefined SVGLength_convertToSpecifiedUnits(SVGLength* self , unsigned short unitType) {
+    return em_Val_as(jb_Undefined, em_Val_call(em_Val_as_val(self->inner), "convertToSpecifiedUnits", em_Val_from(unitType)));
+}
+

@@ -1,0 +1,29 @@
+#include <webcbind/RTCPeerConnectionIceEvent.h>
+
+#include <webcbind/RTCPeerConnectionIceEventInit.h>
+#include <webcbind/RTCIceCandidate.h>
+
+DEFINE_EMLITE_TYPE(RTCPeerConnectionIceEvent, Event);
+
+
+RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new0(jb_String * type) {
+        em_Val vv = em_Val_new(em_Val_global("RTCPeerConnectionIceEvent") , em_Val_from(type));
+        return RTCPeerConnectionIceEvent_from_val(&vv);
+      }
+
+
+RTCPeerConnectionIceEvent RTCPeerConnectionIceEvent_new1(jb_String * type, RTCPeerConnectionIceEventInit * eventInitDict) {
+        em_Val vv = em_Val_new(em_Val_global("RTCPeerConnectionIceEvent") , em_Val_from(type), em_Val_from(eventInitDict));
+        return RTCPeerConnectionIceEvent_from_val(&vv);
+      }
+
+
+RTCIceCandidate RTCPeerConnectionIceEvent_candidate(const RTCPeerConnectionIceEvent *self) {
+    return em_Val_as(RTCIceCandidate, em_Val_get(Event_as_val(self->inner), em_Val_from("candidate")));
+}
+
+
+jb_String RTCPeerConnectionIceEvent_url(const RTCPeerConnectionIceEvent *self) {
+    return em_Val_as(jb_String, em_Val_get(Event_as_val(self->inner), em_Val_from("url")));
+}
+

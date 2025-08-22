@@ -1,0 +1,14 @@
+#include <webcbind/MLOperand.h>
+
+DEFINE_EMLITE_TYPE(MLOperand, em_Val);
+
+
+MLOperandDataType MLOperand_dataType(const MLOperand *self) {
+    return em_Val_as(MLOperandDataType, em_Val_get(em_Val_as_val(self->inner), em_Val_from("dataType")));
+}
+
+
+jb_Array MLOperand_shape(const MLOperand *self) {
+    return em_Val_as(jb_Array, em_Val_get(em_Val_as_val(self->inner), em_Val_from("shape")));
+}
+
