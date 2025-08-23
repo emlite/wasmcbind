@@ -71,7 +71,7 @@ target_sources(jscbind
 )
 
 target_compile_features(jscbind PUBLIC c_std_11)
-target_link_libraries(jscbind PUBLIC emlite::emlite)
+target_link_libraries(jscbind PUBLIC emlitec::emlitec)
 set_target_properties(jscbind PROPERTIES
     LINKER_LANGUAGE C
 )

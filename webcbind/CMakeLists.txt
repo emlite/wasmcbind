@@ -33,7 +33,7 @@ target_sources(webcbind
         FILES ${WEBCBIND_HEADERS}
 )
 
-target_link_libraries(webcbind PUBLIC emlite::emlite wasmcbind::jscbind)
+target_link_libraries(webcbind PUBLIC wasmcbind::jscbind)
 target_compile_features(webcbind PUBLIC c_std_11)
 set_target_properties(webcbind PROPERTIES
     LINKER_LANGUAGE C
