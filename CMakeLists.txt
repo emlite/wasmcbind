@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(wasmcbind LANGUAGES C VERSION 0.1.3)
+project(wasmcbind LANGUAGES C VERSION 0.1.4)
 
 set(EMLITE_CLIB_ONLY ON CACHE BOOL " " FORCE)
 find_package(emlitec CONFIG QUIET)
