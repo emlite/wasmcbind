@@ -78,6 +78,10 @@ set_target_properties(jscbind PROPERTIES
 
 add_library(wasmcbind::jscbind ALIAS jscbind)
 
+if (WASMCBIND_BUILD_EXAMPLES)
+    add_subdirectory(examples)
+endif()
+
 include(GNUInstallDirs)
 
 install(

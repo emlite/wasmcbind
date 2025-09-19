@@ -8,19 +8,12 @@ if (NOT emlitec_FOUND)
 endif()
 
 option(WASMCBIND_BUILD_WEBCBIND  "Build webcbind library"  ON)
-
-if (PROJECT_IS_TOP_LEVEL)
-  option(WASMCBIND_BUILD_EXAMPLES "Build examples" OFF)
-endif()
+option(WASMCBIND_BUILD_EXAMPLES "Build examples" OFF)
 
 add_subdirectory(jscbind)
 
 if (WASMCBIND_BUILD_WEBCBIND)
     add_subdirectory(webcbind)
-endif()
-
-if (WASMCBIND_BUILD_EXAMPLES)
-    add_subdirectory(examples)
 endif()
 
 include(GNUInstallDirs)

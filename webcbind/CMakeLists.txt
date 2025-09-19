@@ -43,6 +43,10 @@ target_precompile_headers(webcbind PRIVATE
 )
 add_library(wasmcbind::webcbind ALIAS webcbind)
 
+if (WASMCBIND_BUILD_EXAMPLES)
+    add_subdirectory(examples)
+endif()
+
 include(GNUInstallDirs)
 
 install(
